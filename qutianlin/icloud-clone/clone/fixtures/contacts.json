@@ -1,0 +1,167 @@
+[
+  {
+    "id": "contact-01",
+    "order": 1,
+    "name": "联系人01",
+    "phones": [
+      {
+        "label": "phone",
+        "value": "00000000"
+      }
+    ],
+    "emails": [],
+    "company": "",
+    "note": "",
+    "privacy_transformed": true
+  },
+  {
+    "id": "contact-02",
+    "order": 2,
+    "name": "联系人02",
+    "phones": [
+      {
+        "label": "phone",
+        "value": "00000000"
+      }
+    ],
+    "emails": [],
+    "company": "",
+    "note": "",
+    "privacy_transformed": true
+  },
+  {
+    "id": "contact-03",
+    "order": 3,
+    "name": "联系人03",
+    "phones": [
+      {
+        "label": "phone",
+        "value": "00000000000"
+      }
+    ],
+    "emails": [],
+    "company": "",
+    "note": "",
+    "privacy_transformed": true
+  },
+  {
+    "id": "contact-04",
+    "order": 4,
+    "name": "联系人04",
+    "phones": [
+      {
+        "label": "MOBILE",
+        "value": "000 0000 0000"
+      }
+    ],
+    "emails": [],
+    "company": "",
+    "note": "",
+    "privacy_transformed": true
+  },
+  {
+    "id": "contact-05",
+    "order": 5,
+    "name": "联系人05",
+    "phones": [
+      {
+        "label": "phone",
+        "value": "00000000000"
+      }
+    ],
+    "emails": [],
+    "company": "",
+    "note": "",
+    "privacy_transformed": true
+  },
+  {
+    "id": "contact-06",
+    "order": 6,
+    "name": "联系人06",
+    "phones": [
+      {
+        "label": "phone",
+        "value": "00000000000"
+      }
+    ],
+    "emails": [],
+    "company": "",
+    "note": "",
+    "privacy_transformed": true
+  },
+  {
+    "id": "contact-07",
+    "order": 7,
+    "name": "联系人07",
+    "phones": [
+      {
+        "label": "phone",
+        "value": "00000000000"
+      }
+    ],
+    "emails": [],
+    "company": "",
+    "note": "",
+    "privacy_transformed": true
+  },
+  {
+    "id": "contact-08",
+    "order": 8,
+    "name": "联系人08",
+    "phones": [
+      {
+        "label": "MOBILE",
+        "value": "000 0000 0000"
+      }
+    ],
+    "emails": [],
+    "company": "",
+    "note": "",
+    "privacy_transformed": true
+  },
+  {
+    "id": "contact-09",
+    "order": 9,
+    "name": "联系人09",
+    "phones": [
+      {
+        "label": "MOBILE",
+        "value": "000 0000 0000"
+      }
+    ],
+    "emails": [],
+    "company": "",
+    "note": "",
+    "privacy_transformed": true
+  },
+  {
+    "id": "contact-10",
+    "order": 10,
+    "name": "联系人10",
+    "phones": [
+      {
+        "label": "phone",
+        "value": "00000000000"
+      }
+    ],
+    "emails": [],
+    "company": "",
+    "note": "",
+    "privacy_transformed": true
+  },
+  {
+    "id": "contact-11",
+    "order": 11,
+    "name": "联系人11",
+    "phones": [
+      {
+        "label": "phone",
+        "value": "00000000000"
+      }
+    ],
+    "emails": [],
+    "company": "",
+    "note": "",
+    "privacy_transformed": true
+  }
+]

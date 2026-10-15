@@ -1,0 +1,48 @@
+[
+  {
+    "id": "device-1",
+    "order": 2,
+    "name": "设备 1",
+    "model": "AirPods Pro (2nd generation)",
+    "device_class": "Accessory",
+    "status": "201",
+    "battery": 0.0,
+    "location_available": true,
+    "location_redacted": true,
+    "is_mac": false,
+    "lost_mode": false,
+    "activation_locked": false,
+    "capabilities": {
+      "play_sound": true,
+      "lost_mode": false,
+      "erase": false,
+      "remove": false,
+      "repair": false,
+      "sound_sides": true
+    },
+    "privacy_transformed": true
+  },
+  {
+    "id": "device-2",
+    "order": 1,
+    "name": "设备 2",
+    "model": "iPhone 15 Pro",
+    "device_class": "iPhone",
+    "status": "200",
+    "battery": 0.949999988079071,
+    "location_available": true,
+    "location_redacted": true,
+    "is_mac": false,
+    "lost_mode": false,
+    "activation_locked": true,
+    "capabilities": {
+      "play_sound": true,
+      "lost_mode": true,
+      "erase": true,
+      "remove": true,
+      "repair": true,
+      "sound_sides": false
+    },
+    "privacy_transformed": true
+  }
+]

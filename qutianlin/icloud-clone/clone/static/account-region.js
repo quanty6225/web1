@@ -1,0 +1,1 @@
+document.querySelector('input').addEventListener('input',event=>{const q=event.target.value.trim().toLocaleLowerCase();document.querySelectorAll('.region-list a').forEach(link=>link.hidden=!link.textContent.toLocaleLowerCase().includes(q))});

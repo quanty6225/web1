@@ -1,0 +1,16 @@
+{
+  "files": [
+    {
+      "bytes": 874,
+      "path": "__init__.py",
+      "sha256": "9e18ff95592a82b9104a4429140094669a5bf2cb5f58df747e1dc7188f6cd043"
+    },
+    {
+      "bytes": 96549,
+      "path": "store.py",
+      "sha256": "02189f847b059031a40770f7c5ed6520b99b3043bb5af31d07afdb6226190758"
+    }
+  ],
+  "schema_version": "websitebench.local-clone-auth.vendor.v1",
+  "source": "src/websitebench/local_clone_auth"
+}

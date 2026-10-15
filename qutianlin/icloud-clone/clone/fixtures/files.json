@@ -1,0 +1,44 @@
+[
+  {
+    "id": "file-1",
+    "order": 1,
+    "name": "Document 01.pdf",
+    "blob": "file-1.pdf",
+    "type": "application/pdf",
+    "size": 1031864,
+    "deleted": false,
+    "folder": false,
+    "parent": "downloads",
+    "privacy_transformed": true
+  },
+  {
+    "id": "file-2",
+    "order": 2,
+    "name": "Document 02.pdf",
+    "blob": "file-2.pdf",
+    "type": "application/pdf",
+    "size": 7129855,
+    "deleted": false,
+    "folder": false,
+    "parent": "downloads",
+    "privacy_transformed": true
+  },
+  {
+    "id": "file-3",
+    "order": 3,
+    "name": "Image 03.jpg",
+    "blob": "file-3.jpg",
+    "type": "image/jpeg",
+    "size": 368902,
+    "deleted": false,
+    "folder": false,
+    "parent": "downloads",
+    "privacy_transformed": true
+  },
+  {
+    "id": "downloads",
+    "name": "Downloads",
+    "folder": true,
+    "deleted": false
+  }
+]

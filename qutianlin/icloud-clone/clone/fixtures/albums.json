@@ -1,0 +1,14 @@
+[
+  {
+    "id": "album-1",
+    "name": "QQ",
+    "order": 1,
+    "photos": []
+  },
+  {
+    "id": "album-2",
+    "name": "QQ浏览器",
+    "order": 2,
+    "photos": []
+  }
+]

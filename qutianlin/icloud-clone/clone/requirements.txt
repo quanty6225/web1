@@ -1,0 +1,5 @@
+fastapi==0.141.1
+uvicorn==0.52.3
+
+# Offline calendar/timezone dependencies are vendored in vendor/; versions,
+# upstream wheel URLs and SHA-256 values are recorded in vendor/MANIFEST.json.

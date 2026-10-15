@@ -1,0 +1,15 @@
+@font-face {
+	font-family:'SF Mono';
+	font-style:normal;
+	font-weight:400;
+	src:url("data:,") format('woff'), url("data:,") format('truetype');
+	/* (C) 2015 Apple Inc. All rights reserved. */
+}
+
+@font-face {
+	font-family:'SF Mono';
+	font-style:italic;
+	font-weight:400;
+	src:url("data:,") format('woff'), url("data:,") format('truetype');
+	/* (C) 2015 Apple Inc. All rights reserved. */
+}

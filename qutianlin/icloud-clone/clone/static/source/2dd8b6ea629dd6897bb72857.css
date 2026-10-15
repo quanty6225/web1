@@ -1,0 +1,174 @@
+@font-face {
+  font-family: 'SF Pro Text';
+  font-weight: 400;
+  font-style: normal;
+  src: url("data:,") format('woff2');
+  unicode-range: U+0980-09FF;
+  ascent-override: 131.9%;
+  descent-override: 63.1%;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  font-weight: 400;
+  font-style: normal;
+  src: url("data:,") format('woff2');
+  unicode-range: U+0900-097F, U+A8E0-A8FF;
+  ascent-override: 108.6%;
+  descent-override: 51.9%;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  font-weight: 400;
+  font-style: normal;
+  src: url("data:,") format('woff2');
+  unicode-range: U+0A80-0AFF;
+  ascent-override: 108.6%;
+  descent-override: 48.9%;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  font-weight: 400;
+  font-style: normal;
+  src: url("data:,") format('woff2');
+  unicode-range: U+0A00-0A7F;
+  ascent-override: 108.6%;
+  descent-override: 45.5%;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  font-weight: 400;
+  font-style: normal;
+  src: url("data:,") format('woff2');
+  unicode-range: U+0C80-0CFF;
+  ascent-override: 108.6%;
+  descent-override: 54.9%;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  font-weight: 400;
+  font-style: normal;
+  src: url("data:,") format('woff2');
+  unicode-range: U+0D00-0D7F;
+  ascent-override: 108.6%;
+  descent-override: 41.4%;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  font-weight: 400;
+  font-style: normal;
+  src: url("data:,") format('woff2');
+  unicode-range: U+AAE0-AAFF, U+ABC0-ABFF;
+  ascent-override: 108.6%;
+  descent-override: 41.4%;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  font-weight: 400;
+  font-style: normal;
+  src: url("data:,") format('woff2');
+  unicode-range: U+0B00-0B7F;
+  ascent-override: 108.6%;
+  descent-override: 56.8%;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  font-weight: 400;
+  font-style: normal;
+  src: url("data:,") format('woff2');
+  unicode-range: U+1C50-1C7F;
+  ascent-override: 108.6%;
+  descent-override: 41.4%;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  font-weight: 400;
+  font-style: normal;
+  src: url("data:,") format('woff2');
+  unicode-range: U+0D80-0DFF;
+  ascent-override: 128.4%;
+  descent-override: 41.4%;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  font-weight: 400;
+  font-style: normal;
+  src: url("data:,") format('woff2');
+  unicode-range: U+0B80-0BFF;
+  ascent-override: 108.6%;
+  descent-override: 41.4%;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  font-weight: 400;
+  font-style: normal;
+  src: url("data:,") format('woff2');
+  unicode-range: U+0C00-0C7F;
+  ascent-override: 119.2%;
+  descent-override: 69.2%;
+}
+
+/* Scripts whose ascenders/descenders exceed the Latin-sized line box.
+   overflow:visible prevents clipping in elements with a fixed line-height (labels, buttons).
+   line-height:normal lets the browser use the actual font metrics instead of the Latin-sized value.
+   font-synthesis-weight:auto re-enables bold synthesis because these fonts only ship at weight 400
+   and IdMS apps set font-synthesis:none on <body>.
+
+   Listing a language here grants the metric overrides ONLY - it does not select a font. Font
+   selection is driven by the unicode-range on the @font-face rules above, so a language whose
+   script this package ships no font for (Urdu) keeps whatever font the platform resolves and
+   still gets the line box it needs. */
+:lang(bn), /* Bengali */
+:lang(hi), :lang(mr), :lang(ne), /* Devanagari */
+:lang(gu), /* Gujarati */
+:lang(pa), /* Gurmukhi */
+:lang(kn), /* Kannada */
+:lang(ml), /* Malayalam */
+:lang(mni), /* Meetei Mayek */
+:lang(or), /* Odia */
+:lang(sat), /* Ol Chiki */
+:lang(si), /* Sinhala */
+:lang(ta), /* Tamil */
+:lang(te), /* Telugu */
+:lang(ur) /* Urdu - Arabic script, no font shipped here; metrics only (rdar://185218756) */ {
+  font-synthesis-weight: auto;
+
+  /* `.form-dropdown-label` added for rdar://185218756: the dropdown's label was clipped at
+     the descender — iForgot's DOB month field (Gujarati, Kannada, Odia, Telugu) and the
+     Apple Account create form's month/year fields, so it is not app-specific. Same cause as
+     `.form-textbox-label` above and the fix was simply missing its dropdown counterpart:
+     ac-forms pins `line-height: 1.2353641176` on it
+     (`.form-dropdown-select.form-dropdown-selectnone ~ .form-dropdown-label`), reserving
+     ~123.5% of the em where these scripts need 150%-195% per the overrides declared above.
+     A fixed numeric line-height is also what stops those overrides applying, since the
+     browser only reads the font's own metrics when the line box is not pinned. */
+  .form-dropdown-label,
+  .form-textbox-label,
+  button,
+  h1,
+  h2 {
+    overflow: visible !important;
+    line-height: normal !important;
+  }
+
+  /* The selected value renders in the control itself, not in the label above it, and ac-forms
+     pins the line box there too (`typography(form-default-text)`, alongside `height: 3.3em`
+     and `overflow: hidden`). `!important` matches the sibling override above: our
+     `:lang() .form-dropdown-select` out-specifies ac-forms' `.form-dropdown` today, but an
+     equal-specificity declaration inside a breakpoint would win on source order - and the
+     reported failures include MWeb. */
+  .form-dropdown-select {
+    height: 3.5rem !important;
+    line-height: normal !important;
+  }
+}
