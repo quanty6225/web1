@@ -1,0 +1,102 @@
+{
+  "checked_at": "2026-10-15",
+  "scope": "Fresh local data and independent Python environments; GET / with redirects only. Not a full functional re-acceptance.",
+  "results": [
+    {
+      "site": "basecamp-clone",
+      "passed": true,
+      "status": 200,
+      "bytes": 238276,
+      "final_path": "/",
+      "seconds": 3.3
+    },
+    {
+      "site": "cal-clone",
+      "passed": true,
+      "status": 200,
+      "bytes": 25604,
+      "final_path": "/auth/login",
+      "seconds": 2.2
+    },
+    {
+      "site": "icloud-clone",
+      "passed": true,
+      "status": 200,
+      "bytes": 16300,
+      "final_path": "/",
+      "seconds": 10.3
+    },
+    {
+      "site": "ifttt-clone",
+      "passed": true,
+      "status": 200,
+      "bytes": 393439,
+      "final_path": "/",
+      "seconds": 2.1
+    },
+    {
+      "site": "linear-clone",
+      "passed": true,
+      "status": 200,
+      "bytes": 711662,
+      "final_path": "/",
+      "seconds": 2.3
+    },
+    {
+      "site": "make-clone",
+      "passed": true,
+      "status": 200,
+      "bytes": 562,
+      "final_path": "/",
+      "seconds": 2.2
+    },
+    {
+      "site": "onedrive-clone",
+      "passed": true,
+      "status": 200,
+      "bytes": 677255,
+      "final_path": "/",
+      "seconds": 4.3
+    },
+    {
+      "site": "photopea-clone",
+      "passed": true,
+      "status": 200,
+      "bytes": 11573,
+      "final_path": "/",
+      "seconds": 1.3
+    },
+    {
+      "site": "reclaim-clone",
+      "passed": true,
+      "status": 200,
+      "bytes": 36844,
+      "final_path": "/login",
+      "seconds": 2.3
+    },
+    {
+      "site": "surveymonkey-clone",
+      "passed": true,
+      "status": 200,
+      "bytes": 745904,
+      "final_path": "/",
+      "seconds": 2.3
+    },
+    {
+      "site": "teamwork-clone",
+      "passed": true,
+      "status": 200,
+      "bytes": 513965,
+      "final_path": "/",
+      "seconds": 3.3
+    },
+    {
+      "site": "ticktick-clone",
+      "passed": true,
+      "status": 200,
+      "bytes": 130929,
+      "final_path": "/",
+      "seconds": 3.4
+    }
+  ]
+}
