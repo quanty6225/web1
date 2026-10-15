@@ -1,0 +1,10 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="202" height="34">
+    <rect x="0.5" y="0.5" width="201" height="33"  fill="#ffffff" stroke="transparent" stroke-width="1" rx="4" ry="4" />
+      <text x="8" y="50%" dominant-baseline="middle"
+            font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace" font-size="12" font-weight="600" fill="#374151">
+        All Systems Operational
+      </text>
+      <circle cx="190" cy="17" r="4" fill="#10b981"/>
+    </svg>
+  
