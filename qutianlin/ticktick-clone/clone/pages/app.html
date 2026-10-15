@@ -1,0 +1,184 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" >
+    <!--<![endif]-->
+
+    <head><script src="/offline.js"></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="Cache-Control" content="no-siteapp" />
+        <meta name="viewport"
+          content="width=device-width , initial-scale=1.0, minimum-scale=0.5, maximum-scale=1.5,user-scalable=yes, viewport-fit=cover">
+        <meta name="keywords" content="TickTick,todo,gtd,to do,list,task manager,checklist,share,tasks,note,notes,android,app,iphone,ipad,ios,">
+        <meta name="description" content="TickTick: Your all-in-one productivity app. Manage tasks, calendars, habits, and more. Sync across all devices. Start for free!">
+        <meta name="author" content="TickTick">
+        <meta name="robots" content="index,follow">
+        <meta property="qc:admins" content="24614436777641413656375" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-title" content="TickTick">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        
+        <meta name="apple-itunes-app" content="app-id=626144601, ct=smart-banner-tt&pt=544309">
+        <link rel="shortcut icon" href="/web/static/img/favicon.ico">
+        <link rel="apple-touch-icon" sizes="60x60" href="/web/static/img/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/web/static/img/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/web/static/img/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/web/static/img/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/web/static/img/apple-touch-icon-180x180.png">
+        <link rel="apple-touch-icon" href="/web/static/img/apple-touch-icon.png">
+        <!-- Android Lollipop -->
+          <meta name="theme-color" content="#ffffff">
+        <!-- win8 -->
+        <meta name="msapplication-TileColor" content="#4772fa" />
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="msapplication-config" content="none" />
+        <!-- old mobile -->
+        <meta name="HandheldFriendly" content="true">
+        <meta name="MobileOptimized" content="320">
+        <!-- uc -->
+        <meta name="screen-orientation" content="portrait">
+        <meta name="full-screen" content="yes">
+        <meta name="browsermode" content="application">
+        <!-- QQ -->
+        <meta name="x5-orientation" content="portrait">
+        <meta name="x5-fullscreen" content="true">
+        <meta name="x5-page-mode" content="app">        <title>TickTick</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="manifest" href="/static/manifest-tick.json">
+
+    <link href="/web/static/build/app/css/tt_modules.ap-3dec6c71.css" rel="stylesheet"><link href="/web/static/build/app/css/tt_commons.ap-f63b7ae8.css" rel="stylesheet"><link href="/web/static/build/app/css/web.ap-c1853542.css" rel="stylesheet"></head>
+
+    <style>
+      body.theme-dark {
+        background-color: #1c1c1c;
+      }
+      body.theme-dark.loading-theme-darkcyan {
+        background-color: #171a23;
+      }
+      body.theme-dark.loading-theme-darkgreen {
+        background-color: #1c2123;
+      }
+      body.theme-dark.loading-theme-darkyellow {
+        background-color: #23201e;
+      }
+      body.theme-dark.loading-theme-darkpink {
+        background-color: #1d191c;
+      }
+      body.theme-dark.loading-theme-darkpurple {
+        background-color: #1c191d;
+      }
+    </style>
+    <script type="text/javascript">
+      (function() {
+          var loadingTheme = {
+              isNightTheme: false,
+              currentTheme: ""
+          };
+          try {
+              var darkThemeScreenBackgroundColors = {
+                  night: "#1c1c1c",
+                  darkcyan: "#171a23",
+                  darkgreen: "#1c2123",
+                  darkyellow: "#23201e",
+                  darkpink: "#1d191c",
+                  darkpurple: "#1c191d",
+                  darkcustom: "#1c1c1c"
+              };
+              var currentTheme = "grey";
+              var autoDarkThemeSetting = "true";
+              try {
+                  if (autoDarkThemeSetting === "true") {
+                      if (
+                          typeof window.matchMedia === "function" &&
+                          window.matchMedia("(prefers-color-scheme: dark)").matches
+                      ) {
+                          currentTheme = "night" || "night";
+                      }
+                  } else if (window.localStorage) {
+                      var appTheme = window.localStorage.getItem("appTheme");
+                      if (appTheme) {
+                          currentTheme = appTheme;
+                      }
+                  }
+              } catch (error) {
+                  // 浏览器禁止访问系统主题或本地存储时，使用服务端返回的主题。
+              }
+              var screenBackgroundColor = darkThemeScreenBackgroundColors[currentTheme];
+              if (screenBackgroundColor) {
+                  loadingTheme.isNightTheme = true;
+                  loadingTheme.currentTheme = currentTheme;
+              }
+          } catch (error) {
+              // 主题初始化异常时保留默认浅色 loading，不影响应用脚本加载。
+          }
+          window.__webappLoadingTheme = loadingTheme;
+      })();
+    </script>
+
+    <body class="sidebar-focus tick" >
+        <script>
+          (function() {
+              try {
+                  var loadingTheme = window.__webappLoadingTheme;
+                  if (loadingTheme && loadingTheme.isNightTheme) {
+                      document.body.className +=
+                          " theme-dark loading-theme-" + loadingTheme.currentTheme;
+                  }
+              } catch (error) {
+                  // 首屏主题设置失败不能影响后续应用脚本加载。
+              }
+          })();
+        </script>
+        <!-- loading view start -->
+        <div id="loading-view" class="loading-view">
+            <div class="logo">
+                <i class="loading-logo"></i>
+                <div>
+                    <ul class="css-loading">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- loading view end-->
+
+        <div id="root" class="container-fill"></div>
+
+        <script type="text/javascript">
+          window.Appest = __APPEST__;
+</script>
+        <script>
+          var serverSide = typeof module !== 'undefined' && module.exports;
+          if (!!serverSide) {
+            var nodeRequire = window.require
+            var ipc = nodeRequire && nodeRequire('electron').ipcRenderer
+            if(ipc) {
+                ipc.send('signin-from-web', window.Appest)
+                window.close()
+            }
+          }
+        </script>        <script type="text/javascript" src="/web/static/build/repeat/common-ap-3c275c92dba30db501fa.js"></script>
+        
+            <!-- Google Analytics -->
+            
+            
+            <!-- End Google Analytics -->
+
+        <!--[if lt IE 9 ]>
+<script type="text/javascript" src="/web/static/build/resources/scripts/ie/index.js?v=20151118"></script>
+<![endif]-->
+        <!--[if IE 9 ]>
+<script type="text/javascript" src="/web/static/build/resources/scripts/ie/index.js?v=20151118"></script>
+<![endif]-->
+
+    <script src="/web/static/build/app/runtime-web.ap-2990cdfb5cfccb677faf.js"></script><script src="/web/static/build/app/external_vendors.ap-72ed178e208cf9afe78b.js"></script><script src="/web/static/build/app/react_lib.ap-01cb1c5ba421407e064d.js"></script><script src="/web/static/build/app/core_vendors.ap-c317f5bba958eb13d703.js"></script><script src="/web/static/build/app/graphic_vendors.ap-e4bcb9133ccf740f8904.js"></script><script src="/web/static/build/app/tt_modules.ap-a816391d156aa029711e.js"></script><script src="/web/static/build/app/tt_libs.ap-369bd9a8bbfba932739a.js"></script><script src="/web/static/build/app/vendor.ap-71e5f7763b72e9f9b528.js"></script><script src="/web/static/build/app/tt_commons.ap-e692270600aa02bd22f8.js"></script><script src="/web/static/build/app/web.ap-76dccd5b4ac5828f8bc3.js"></script></body>
+
+    </html>
+    <!-- version: 2015120211 -->

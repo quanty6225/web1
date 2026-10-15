@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  src: url("/blog-assets/212ed85bd6e1de21e82449785933a4650d52760c8bcf1f33c790b4223fada910") format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  src: url("/blog-assets/98b910f0208e132f8fc60ce26fe11ad9fd9ed78ad177613d0843bcd09960d2e8") format('truetype');
+}

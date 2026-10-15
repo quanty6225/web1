@@ -1,0 +1,10 @@
+from local_helpers import *
+c,_,_=actor();other,_,_=actor();pid=c.post('/api/v2/project',json={'name':'Calendar and files'}).json()['id'];tid=secrets.token_hex(12);fid=secrets.token_hex(12)
+assert c.post('/api/v2/batch/task',json={'add':[{'id':tid,'projectId':pid,'title':'Scheduled work','status':0,'startDate':'2026-10-20T12:00:00+00:00'}]}).is_success
+r=c.post('/api/v1/attachment/upload/'+pid+'/'+tid+'/'+fid,files={'file':('notes.txt',b'Persistent attachment','text/plain')});assert r.is_success,r.text
+path=r.json()['path'];assert c.get(path).content==b'Persistent attachment';assert other.get(path).status_code==404;passed.append('Attachment upload/download persists and requires task access')
+backup=c.get('/api/v2/data/export');assert other.post('/api/v1/import/restore',files={'file':('backup.json',backup.content,'application/json')}).is_success;assert other.get(path).content==b'Persistent attachment';passed.append('Backup restores attachment bytes')
+r=c.post('/api/v2/calendar/feeds/code/new/'+pid+'?includeDone=false');assert r.is_success,r.text;feed='/pub/calendar/feeds/'+r.json()['code']+'/basic.ics';ics=httpx.get(BASE+feed);assert ics.is_success and 'SUMMARY:Scheduled work' in ics.text;assert other.get('/api/v2/calendar/feeds/code').json()==[];passed.append('Calendar feed contains owned dated tasks and private feed settings')
+assert c.delete('/api/v2/calendar/feeds/cancel/'+pid).is_success;assert httpx.get(BASE+feed).status_code==404;passed.append('Revoked calendar URL immediately stops serving data')
+id=secrets.token_hex(12);assert c.post('/api/v1/countdown/batch',json={'add':[{'id':id,'title':'Milestone','date':'2026-11-01'}]}).is_success;assert any(x['id']==id for x in c.get('/api/v1/countdown/list').json());assert other.post('/api/v1/countdown/batch',json={'update':[{'id':id,'title':'Wrong owner'}]}).status_code==404;passed.append('Countdown CRUD persists with ownership')
+Path('artifacts/files-calendar.json').write_text(json.dumps({'passed':passed},indent=2));print('PASS',len(passed),'file/calendar checks')
