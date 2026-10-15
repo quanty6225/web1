@@ -1,0 +1,6 @@
+[data-carouseltype="appSourceMostViewed"].appsource-grid-container{width:100%;min-height:622px}
+[data-carouseltype="appSourceMostViewed"] .carousel.carousel--type-promo{height:100%;align-items:stretch}
+[data-carouseltype="appSourceMostViewed"] .carousel-product-card{position:relative}
+[data-carouseltype="appSourceMostViewed"] .appsource-cards-container{min-height:530px}
+.appsource-spinner-container{width:100%;height:100%;backdrop-filter:blur(3px);position:absolute;top:0}
+.appsource-spinner-container .spinner{z-index:2;margin:auto;position:absolute;top:0;left:0;bottom:0;right:0}

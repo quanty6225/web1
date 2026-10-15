@@ -1,0 +1,350 @@
+{
+  "5626798": {
+    "route": "/help/article-b0750a0321ad",
+    "forms": {
+      "comment": {
+        "kind": "comment",
+        "answer_id": null,
+        "label": "Comment",
+        "minimum": 5,
+        "required": true,
+        "max_attachments": 20,
+        "navigation": "?comment=question&translated=false#newest-question-comment",
+        "errors": {
+          "content-has-changed": "Content has changed, please reload the page to get the latest changes.",
+          "input-max-length": "{inputLabel} cannot be longer than {maxLength} characters.",
+          "input-min-length": "{inputLabel} must be at least {minLength} characters.",
+          "input-required": "{inputLabel} is required.",
+          "not-authenticated": "You are not authenticated. Please refresh the page and try again. If this issue persists, please log out and log back in.",
+          "not-authorized": "You are not authorized to make this response. If you believe this to be in error, please refresh the page and try again.",
+          "please-fix-the-following-issues": "Please fix the following issues to continue:",
+          "there-are-no-edits-to-submit": "There are no edits to submit.",
+          "too-many-requests": "You have sent too many requests. Please wait a few minutes and try again.",
+          "we-encountered-an-unexpected-error": "We encountered an unexpected error. Please try again later. If this issue continues, please open a ticket at https://sitehelp.microsoft.com."
+        }
+      },
+      "answerComment:12365789": {
+        "kind": "answerComment",
+        "answer_id": "12365789",
+        "label": "Comment",
+        "minimum": 5,
+        "required": true,
+        "max_attachments": 20,
+        "navigation": "?page=1&orderby=Helpful&comment=answer-12365789&translated=false#newest-answer-comment",
+        "errors": {
+          "content-has-changed": "Content has changed, please reload the page to get the latest changes.",
+          "input-max-length": "{inputLabel} cannot be longer than {maxLength} characters.",
+          "input-min-length": "{inputLabel} must be at least {minLength} characters.",
+          "input-required": "{inputLabel} is required.",
+          "not-authenticated": "You are not authenticated. Please refresh the page and try again. If this issue persists, please log out and log back in.",
+          "not-authorized": "You are not authorized to make this response. If you believe this to be in error, please refresh the page and try again.",
+          "please-fix-the-following-issues": "Please fix the following issues to continue:",
+          "there-are-no-edits-to-submit": "There are no edits to submit.",
+          "too-many-requests": "You have sent too many requests. Please wait a few minutes and try again.",
+          "we-encountered-an-unexpected-error": "We encountered an unexpected error. Please try again later. If this issue continues, please open a ticket at https://sitehelp.microsoft.com."
+        }
+      },
+      "answer": {
+        "kind": "answer",
+        "answer_id": null,
+        "label": "Answer",
+        "minimum": 10,
+        "required": true,
+        "max_attachments": 20,
+        "navigation": "?page=1&orderby=Helpful&translated=false#answers",
+        "errors": {
+          "content-has-changed": "Content has changed, please reload the page to get the latest changes.",
+          "input-max-length": "{inputLabel} cannot be longer than {maxLength} characters.",
+          "input-min-length": "{inputLabel} must be at least {minLength} characters.",
+          "input-required": "{inputLabel} is required.",
+          "not-authenticated": "You are not authenticated. Please refresh the page and try again. If this issue persists, please log out and log back in.",
+          "not-authorized": "You are not authorized to make this response. If you believe this to be in error, please refresh the page and try again.",
+          "please-fix-the-following-issues": "Please fix the following issues to continue:",
+          "there-are-no-edits-to-submit": "There are no edits to submit.",
+          "too-many-requests": "You have sent too many requests. Please wait a few minutes and try again.",
+          "we-encountered-an-unexpected-error": "We encountered an unexpected error. Please try again later. If this issue continues, please open a ticket at https://sitehelp.microsoft.com."
+        }
+      }
+    }
+  },
+  "5706186": {
+    "route": "/help/article-a9205a411208",
+    "forms": {
+      "comment": {
+        "kind": "comment",
+        "answer_id": null,
+        "label": "Comment",
+        "minimum": 5,
+        "required": true,
+        "max_attachments": 20,
+        "navigation": "?comment=question&translated=false#newest-question-comment",
+        "errors": {
+          "content-has-changed": "Content has changed, please reload the page to get the latest changes.",
+          "input-max-length": "{inputLabel} cannot be longer than {maxLength} characters.",
+          "input-min-length": "{inputLabel} must be at least {minLength} characters.",
+          "input-required": "{inputLabel} is required.",
+          "not-authenticated": "You are not authenticated. Please refresh the page and try again. If this issue persists, please log out and log back in.",
+          "not-authorized": "You are not authorized to make this response. If you believe this to be in error, please refresh the page and try again.",
+          "please-fix-the-following-issues": "Please fix the following issues to continue:",
+          "there-are-no-edits-to-submit": "There are no edits to submit.",
+          "too-many-requests": "You have sent too many requests. Please wait a few minutes and try again.",
+          "we-encountered-an-unexpected-error": "We encountered an unexpected error. Please try again later. If this issue continues, please open a ticket at https://sitehelp.microsoft.com."
+        }
+      },
+      "answerComment:12498061": {
+        "kind": "answerComment",
+        "answer_id": "12498061",
+        "label": "Comment",
+        "minimum": 5,
+        "required": true,
+        "max_attachments": 20,
+        "navigation": "?page=1&orderby=Helpful&comment=answer-12498061&translated=false#newest-answer-comment",
+        "errors": {
+          "content-has-changed": "Content has changed, please reload the page to get the latest changes.",
+          "input-max-length": "{inputLabel} cannot be longer than {maxLength} characters.",
+          "input-min-length": "{inputLabel} must be at least {minLength} characters.",
+          "input-required": "{inputLabel} is required.",
+          "not-authenticated": "You are not authenticated. Please refresh the page and try again. If this issue persists, please log out and log back in.",
+          "not-authorized": "You are not authorized to make this response. If you believe this to be in error, please refresh the page and try again.",
+          "please-fix-the-following-issues": "Please fix the following issues to continue:",
+          "there-are-no-edits-to-submit": "There are no edits to submit.",
+          "too-many-requests": "You have sent too many requests. Please wait a few minutes and try again.",
+          "we-encountered-an-unexpected-error": "We encountered an unexpected error. Please try again later. If this issue continues, please open a ticket at https://sitehelp.microsoft.com."
+        }
+      },
+      "answerComment:12497975": {
+        "kind": "answerComment",
+        "answer_id": "12497975",
+        "label": "Comment",
+        "minimum": 5,
+        "required": true,
+        "max_attachments": 20,
+        "navigation": "?page=1&orderby=Helpful&comment=answer-12497975&translated=false#newest-answer-comment",
+        "errors": {
+          "content-has-changed": "Content has changed, please reload the page to get the latest changes.",
+          "input-max-length": "{inputLabel} cannot be longer than {maxLength} characters.",
+          "input-min-length": "{inputLabel} must be at least {minLength} characters.",
+          "input-required": "{inputLabel} is required.",
+          "not-authenticated": "You are not authenticated. Please refresh the page and try again. If this issue persists, please log out and log back in.",
+          "not-authorized": "You are not authorized to make this response. If you believe this to be in error, please refresh the page and try again.",
+          "please-fix-the-following-issues": "Please fix the following issues to continue:",
+          "there-are-no-edits-to-submit": "There are no edits to submit.",
+          "too-many-requests": "You have sent too many requests. Please wait a few minutes and try again.",
+          "we-encountered-an-unexpected-error": "We encountered an unexpected error. Please try again later. If this issue continues, please open a ticket at https://sitehelp.microsoft.com."
+        }
+      },
+      "answer": {
+        "kind": "answer",
+        "answer_id": null,
+        "label": "Answer",
+        "minimum": 10,
+        "required": true,
+        "max_attachments": 20,
+        "navigation": "?page=1&orderby=Helpful&translated=false#answers",
+        "errors": {
+          "content-has-changed": "Content has changed, please reload the page to get the latest changes.",
+          "input-max-length": "{inputLabel} cannot be longer than {maxLength} characters.",
+          "input-min-length": "{inputLabel} must be at least {minLength} characters.",
+          "input-required": "{inputLabel} is required.",
+          "not-authenticated": "You are not authenticated. Please refresh the page and try again. If this issue persists, please log out and log back in.",
+          "not-authorized": "You are not authorized to make this response. If you believe this to be in error, please refresh the page and try again.",
+          "please-fix-the-following-issues": "Please fix the following issues to continue:",
+          "there-are-no-edits-to-submit": "There are no edits to submit.",
+          "too-many-requests": "You have sent too many requests. Please wait a few minutes and try again.",
+          "we-encountered-an-unexpected-error": "We encountered an unexpected error. Please try again later. If this issue continues, please open a ticket at https://sitehelp.microsoft.com."
+        }
+      }
+    }
+  },
+  "5873021": {
+    "route": "/help/article-a9cdfc990b93",
+    "forms": {
+      "comment": {
+        "kind": "comment",
+        "answer_id": null,
+        "label": "Comment",
+        "minimum": 5,
+        "required": true,
+        "max_attachments": 20,
+        "navigation": "?comment=question&translated=false#newest-question-comment",
+        "errors": {
+          "content-has-changed": "Content has changed, please reload the page to get the latest changes.",
+          "input-max-length": "{inputLabel} cannot be longer than {maxLength} characters.",
+          "input-min-length": "{inputLabel} must be at least {minLength} characters.",
+          "input-required": "{inputLabel} is required.",
+          "not-authenticated": "You are not authenticated. Please refresh the page and try again. If this issue persists, please log out and log back in.",
+          "not-authorized": "You are not authorized to make this response. If you believe this to be in error, please refresh the page and try again.",
+          "please-fix-the-following-issues": "Please fix the following issues to continue:",
+          "there-are-no-edits-to-submit": "There are no edits to submit.",
+          "too-many-requests": "You have sent too many requests. Please wait a few minutes and try again.",
+          "we-encountered-an-unexpected-error": "We encountered an unexpected error. Please try again later. If this issue continues, please open a ticket at https://sitehelp.microsoft.com."
+        }
+      },
+      "answerComment:12750930": {
+        "kind": "answerComment",
+        "answer_id": "12750930",
+        "label": "Comment",
+        "minimum": 5,
+        "required": true,
+        "max_attachments": 20,
+        "navigation": "?page=1&orderby=Helpful&comment=answer-12750930&translated=false#newest-answer-comment",
+        "errors": {
+          "content-has-changed": "Content has changed, please reload the page to get the latest changes.",
+          "input-max-length": "{inputLabel} cannot be longer than {maxLength} characters.",
+          "input-min-length": "{inputLabel} must be at least {minLength} characters.",
+          "input-required": "{inputLabel} is required.",
+          "not-authenticated": "You are not authenticated. Please refresh the page and try again. If this issue persists, please log out and log back in.",
+          "not-authorized": "You are not authorized to make this response. If you believe this to be in error, please refresh the page and try again.",
+          "please-fix-the-following-issues": "Please fix the following issues to continue:",
+          "there-are-no-edits-to-submit": "There are no edits to submit.",
+          "too-many-requests": "You have sent too many requests. Please wait a few minutes and try again.",
+          "we-encountered-an-unexpected-error": "We encountered an unexpected error. Please try again later. If this issue continues, please open a ticket at https://sitehelp.microsoft.com."
+        }
+      },
+      "answer": {
+        "kind": "answer",
+        "answer_id": null,
+        "label": "Answer",
+        "minimum": 10,
+        "required": true,
+        "max_attachments": 20,
+        "navigation": "?page=1&orderby=Helpful&translated=false#answers",
+        "errors": {
+          "content-has-changed": "Content has changed, please reload the page to get the latest changes.",
+          "input-max-length": "{inputLabel} cannot be longer than {maxLength} characters.",
+          "input-min-length": "{inputLabel} must be at least {minLength} characters.",
+          "input-required": "{inputLabel} is required.",
+          "not-authenticated": "You are not authenticated. Please refresh the page and try again. If this issue persists, please log out and log back in.",
+          "not-authorized": "You are not authorized to make this response. If you believe this to be in error, please refresh the page and try again.",
+          "please-fix-the-following-issues": "Please fix the following issues to continue:",
+          "there-are-no-edits-to-submit": "There are no edits to submit.",
+          "too-many-requests": "You have sent too many requests. Please wait a few minutes and try again.",
+          "we-encountered-an-unexpected-error": "We encountered an unexpected error. Please try again later. If this issue continues, please open a ticket at https://sitehelp.microsoft.com."
+        }
+      }
+    }
+  },
+  "5675272": {
+    "route": "/help/article-56cf0ddab4ac",
+    "forms": {
+      "comment": {
+        "kind": "comment",
+        "answer_id": null,
+        "label": "Comment",
+        "minimum": 5,
+        "required": true,
+        "max_attachments": 20,
+        "navigation": "?comment=question&translated=false#newest-question-comment",
+        "errors": {
+          "content-has-changed": "Content has changed, please reload the page to get the latest changes.",
+          "input-max-length": "{inputLabel} cannot be longer than {maxLength} characters.",
+          "input-min-length": "{inputLabel} must be at least {minLength} characters.",
+          "input-required": "{inputLabel} is required.",
+          "not-authenticated": "You are not authenticated. Please refresh the page and try again. If this issue persists, please log out and log back in.",
+          "not-authorized": "You are not authorized to make this response. If you believe this to be in error, please refresh the page and try again.",
+          "please-fix-the-following-issues": "Please fix the following issues to continue:",
+          "there-are-no-edits-to-submit": "There are no edits to submit.",
+          "too-many-requests": "You have sent too many requests. Please wait a few minutes and try again.",
+          "we-encountered-an-unexpected-error": "We encountered an unexpected error. Please try again later. If this issue continues, please open a ticket at https://sitehelp.microsoft.com."
+        }
+      },
+      "answerComment:12450421": {
+        "kind": "answerComment",
+        "answer_id": "12450421",
+        "label": "Comment",
+        "minimum": 5,
+        "required": true,
+        "max_attachments": 20,
+        "navigation": "?page=1&orderby=Helpful&comment=answer-12450421&translated=false#newest-answer-comment",
+        "errors": {
+          "content-has-changed": "Content has changed, please reload the page to get the latest changes.",
+          "input-max-length": "{inputLabel} cannot be longer than {maxLength} characters.",
+          "input-min-length": "{inputLabel} must be at least {minLength} characters.",
+          "input-required": "{inputLabel} is required.",
+          "not-authenticated": "You are not authenticated. Please refresh the page and try again. If this issue persists, please log out and log back in.",
+          "not-authorized": "You are not authorized to make this response. If you believe this to be in error, please refresh the page and try again.",
+          "please-fix-the-following-issues": "Please fix the following issues to continue:",
+          "there-are-no-edits-to-submit": "There are no edits to submit.",
+          "too-many-requests": "You have sent too many requests. Please wait a few minutes and try again.",
+          "we-encountered-an-unexpected-error": "We encountered an unexpected error. Please try again later. If this issue continues, please open a ticket at https://sitehelp.microsoft.com."
+        }
+      },
+      "answer": {
+        "kind": "answer",
+        "answer_id": null,
+        "label": "Answer",
+        "minimum": 10,
+        "required": true,
+        "max_attachments": 20,
+        "navigation": "?page=1&orderby=Helpful&translated=false#answers",
+        "errors": {
+          "content-has-changed": "Content has changed, please reload the page to get the latest changes.",
+          "input-max-length": "{inputLabel} cannot be longer than {maxLength} characters.",
+          "input-min-length": "{inputLabel} must be at least {minLength} characters.",
+          "input-required": "{inputLabel} is required.",
+          "not-authenticated": "You are not authenticated. Please refresh the page and try again. If this issue persists, please log out and log back in.",
+          "not-authorized": "You are not authorized to make this response. If you believe this to be in error, please refresh the page and try again.",
+          "please-fix-the-following-issues": "Please fix the following issues to continue:",
+          "there-are-no-edits-to-submit": "There are no edits to submit.",
+          "too-many-requests": "You have sent too many requests. Please wait a few minutes and try again.",
+          "we-encountered-an-unexpected-error": "We encountered an unexpected error. Please try again later. If this issue continues, please open a ticket at https://sitehelp.microsoft.com."
+        }
+      }
+    }
+  },
+  "5237545": {
+    "route": "/help/article-ac7cccefe2cc",
+    "forms": {}
+  },
+  "5984503": {
+    "route": "/help/article-7f329f5a3c55",
+    "forms": {
+      "comment": {
+        "kind": "comment",
+        "answer_id": null,
+        "label": "Comment",
+        "minimum": 5,
+        "required": true,
+        "max_attachments": 20,
+        "navigation": "?comment=question&translated=false#newest-question-comment",
+        "errors": {
+          "content-has-changed": "Content has changed, please reload the page to get the latest changes.",
+          "input-max-length": "{inputLabel} cannot be longer than {maxLength} characters.",
+          "input-min-length": "{inputLabel} must be at least {minLength} characters.",
+          "input-required": "{inputLabel} is required.",
+          "not-authenticated": "You are not authenticated. Please refresh the page and try again. If this issue persists, please log out and log back in.",
+          "not-authorized": "You are not authorized to make this response. If you believe this to be in error, please refresh the page and try again.",
+          "please-fix-the-following-issues": "Please fix the following issues to continue:",
+          "there-are-no-edits-to-submit": "There are no edits to submit.",
+          "too-many-requests": "You have sent too many requests. Please wait a few minutes and try again.",
+          "we-encountered-an-unexpected-error": "We encountered an unexpected error. Please try again later. If this issue continues, please open a ticket at https://sitehelp.microsoft.com."
+        }
+      },
+      "answer": {
+        "kind": "answer",
+        "answer_id": null,
+        "label": "Answer",
+        "minimum": 10,
+        "required": true,
+        "max_attachments": 20,
+        "navigation": "?page=1&orderby=Helpful&translated=false#answers",
+        "errors": {
+          "content-has-changed": "Content has changed, please reload the page to get the latest changes.",
+          "input-max-length": "{inputLabel} cannot be longer than {maxLength} characters.",
+          "input-min-length": "{inputLabel} must be at least {minLength} characters.",
+          "input-required": "{inputLabel} is required.",
+          "not-authenticated": "You are not authenticated. Please refresh the page and try again. If this issue persists, please log out and log back in.",
+          "not-authorized": "You are not authorized to make this response. If you believe this to be in error, please refresh the page and try again.",
+          "please-fix-the-following-issues": "Please fix the following issues to continue:",
+          "there-are-no-edits-to-submit": "There are no edits to submit.",
+          "too-many-requests": "You have sent too many requests. Please wait a few minutes and try again.",
+          "we-encountered-an-unexpected-error": "We encountered an unexpected error. Please try again later. If this issue continues, please open a ticket at https://sitehelp.microsoft.com."
+        }
+      }
+    }
+  },
+  "5257930": {
+    "route": "/help/article-3fa87d4c6670",
+    "forms": {}
+  }
+}

@@ -1,0 +1,52 @@
+[hidden]{display:none!important}.local-open{display:block!important;visibility:visible!important;opacity:1!important}.local-modal-backdrop{position:fixed;inset:0;background:#0006;z-index:9990;display:flex;align-items:center;justify-content:center}.local-dialog{background:white;color:#222;width:min(560px,94vw);max-height:88vh;overflow:auto;padding:30px;border-radius:8px;font:15px/1.6 "Segoe UI",Arial,sans-serif;box-shadow:0 15px 50px #0004}.local-dialog button{border:1px solid #666;background:white;padding:8px 18px;margin:8px;cursor:pointer}.local-dialog input{padding:9px;border:1px solid #777;width:100%;margin:10px 0}.local-dialog .local-close{float:right}.uhf-dropdown.local-open{position:absolute;z-index:150;background:#fff;border:1px solid #ddd;box-shadow:0 4px 12px #0002}.local-cookie{position:relative;z-index:300;background:#eee;padding:18px 5%;display:flex;gap:20px;align-items:center;color:#222;font:13px/1.6 "Segoe UI",Arial,sans-serif}.local-cookie p{margin:0;flex:1}.local-cookie button{padding:9px 17px;border:1px solid #111;background:#fff;white-space:nowrap;cursor:pointer}.local-cookie button:first-of-type{background:#111;color:#fff}.local-carousel-scroll{scroll-behavior:smooth;overflow-x:auto!important;transform:none!important}.local-popper{position:fixed!important;z-index:9000!important;left:50%!important;top:30%!important;transform:translateX(-50%)!important;max-width:90vw;background:white!important;box-shadow:0 5px 30px #0005;border-radius:6px;padding:25px;color:#111}.local-search-box{display:flex;gap:10px;padding:15px;background:#fff;position:absolute;right:5%;top:55px;z-index:300;border:1px solid #ddd}.local-search-box input{padding:9px;border:1px solid #666}.local-search-box button{padding:9px 15px;background:#0067b8;color:#fff;border:0}.local-search-box .cancel{background:#eee;color:#222}@media(max-width:700px){.local-cookie{flex-wrap:wrap;gap:10px}.local-cookie p{min-width:100%}}
+
+video{aspect-ratio:16/9}.local-popper{max-height:80vh;overflow:auto}.local-popper video{min-width:320px}
+
+.local-mobile-menu{display:none}
+reimagine-announcement{display:block;position:relative;background:#07082c;color:white;text-align:center;padding:12px 45px;font:15px/1.5 "Segoe UI",Arial,sans-serif}
+reimagine-announcement p{margin:0}reimagine-announcement a{color:white!important;text-decoration:underline}
+.local-announcement-close{position:absolute;right:15px;top:14px;background:transparent;border:0;color:white;font-size:25px;cursor:pointer}
+@media(max-width:700px){
+ .local-cookie{padding:10px 15px 20px;gap:12px;font:13px/16px "Segoe UI",Arial,sans-serif}
+ .local-cookie p{padding-left:48px;position:relative;min-width:0;flex-basis:100%;box-sizing:border-box}
+ .local-cookie p:before{content:"ⓘ";position:absolute;left:12px;top:10px;font-size:24px}
+ .local-cookie button,.local-cookie button:first-of-type{width:100%;height:36px;padding:6px 12px;border:0;background:#e9e9e9;color:#111;font-size:14px}
+ .uhf-header__container{display:flex!important;flex-wrap:wrap;position:relative;padding:0 15px!important;width:100%;box-sizing:border-box}
+ .uhf-header uhf-brand{display:block;width:100%;height:54px;border-bottom:1px solid #e5e5e5;text-align:center}
+ .uhf-header .uhf-microsoft-logo{display:inline-block!important;margin:14px auto!important;padding:0!important}
+ .uhf-header .uhf-site-logo-container{display:none!important}
+ .local-mobile-menu{display:block;text-align:left;width:100%;height:34px;background:white;border:0;border-bottom:1px solid #ddd;font:600 14px "Segoe UI",sans-serif;padding:0 4px}
+ .uhf-header uhf-actions{position:absolute;left:15px;top:10px}
+ .uhf-header uhf-contextual-nav{display:none!important;width:100%;flex-basis:100%;background:white}
+ .uhf-header.local-mobile-open uhf-contextual-nav{display:block!important}
+ .uhf-header .uhf-overflow-menu-items,.uhf-header .uhf-contextual-nav{display:flex!important;flex-direction:column;align-items:stretch!important;width:100%}
+ .uhf-header .uhf-dropdown-menu{max-width:calc(100vw - 40px)}
+ .section-master__layout-header{padding-left:16px;padding-right:16px}
+ .block-heading__title h1{font-size:32px!important;line-height:1.2!important}
+}
+@media(max-width:700px){.uhf-header,.uhf-header__container{height:auto!important;min-height:88px}.uhf-header{position:relative;z-index:301}.uhf-header.local-mobile-open .uhf-header__container{min-height:88px}}
+@media(max-width:700px){.local-cookie{padding-bottom:42px}reimagine-announcement{padding-top:10px;padding-bottom:10px}}
+uhf-dropdown-desktop{display:contents!important}
+@media(max-width:700px){.local-cookie p{font:13px/16px "Segoe UI",Arial,sans-serif;padding-right:24px}.local-cookie p:before{content:"i";width:21px;height:21px;border:1px solid #222;border-radius:50%;font:16px/21px Arial,sans-serif;text-align:center}.local-cookie{padding-bottom:20px}}
+reimagine-announcement{isolation:isolate}reimagine-announcement reimagine-media[slot=media]{position:absolute;inset:0;z-index:-1;display:block}reimagine-announcement reimagine-media[slot=media] img{width:100%;height:100%;object-fit:cover}
+@media(max-width:700px){.uhf-header__container{row-gap:0!important}.uhf-header{margin-bottom:0!important}reimagine-announcement{padding-left:25px;padding-right:25px}}
+
+/* Source consent typography is explicit so OS font configuration cannot change banner height. */
+@font-face{font-family:"OneDrive Consent";src:url("/static/assets/e6b26b3a2b534b7a9d5b.woff") format("woff");font-style:normal;font-weight:400}
+[data-local-cookie] p,[data-local-cookie] button,[data-local-cookie] a{font-family:"OneDrive Consent",sans-serif!important}
+[data-local-cookie]{letter-spacing:normal!important}
+
+/* Keep real navigation reachable across keyboard and touch layouts. */
+.uhf-skip-link,.sr-only-focusable{position:relative!important;display:inline-block!important;clip:auto!important;clip-path:none!important;width:auto!important;height:auto!important;overflow:visible!important;transform:none!important;top:auto!important;left:auto!important;margin:0!important;padding:4px 8px!important}
+.uhf-footer{padding-bottom:90px!important}
+.local-modal-backdrop{z-index:10050}.local-popper{z-index:10040!important}
+.local-search-box{position:fixed;z-index:10020;left:50%;right:auto;transform:translateX(-50%);width:min(560px,calc(100vw - 32px));box-sizing:border-box}
+.local-search-box input{min-width:0;flex:1}.local-search-box button{flex-shrink:0}
+.carousel__window{scroll-snap-type:none!important;scroll-behavior:auto!important}
+
+/* Source-hidden carousel helpers stay hidden when navigation is not present. */
+.carousel__back-to-controls.d-none{display:none!important}
+
+/* Match the captured card-grid fix: empty arrow overlay must not cover product details. */
+.carousel--card-grid .carousel__controls{pointer-events:none!important}
+.carousel--card-grid .carousel__controls>button{pointer-events:auto!important}

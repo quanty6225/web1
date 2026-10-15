@@ -1,0 +1,9 @@
+{
+  "discard_title": "Discard saved draft",
+  "discard_description": "This draft will be deleted and cannot be recovered once you confirm.",
+  "ok": "OK",
+  "cancel": "Cancel",
+  "whitespace_required": "Please fill out this field.",
+  "external_images": "External images can only be linked from certain websites. These image urls are not allowed: {urls}. Click to see full domain allowlist.",
+  "attachment_limit": "Maximum number of attachments exceeded. Please select up to {maximumCount} attachments."
+}

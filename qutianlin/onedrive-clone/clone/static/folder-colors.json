@@ -1,0 +1,66 @@
+[
+  {
+    "label": "黄色",
+    "color": "#FFCE3C"
+  },
+  {
+    "label": "深红色",
+    "color": "#E73E29"
+  },
+  {
+    "label": "深橙色",
+    "color": "#EE7110"
+  },
+  {
+    "label": "深绿色",
+    "color": "#3F9F4A"
+  },
+  {
+    "label": "深青色",
+    "color": "#27938E"
+  },
+  {
+    "label": "深蓝色",
+    "color": "#1E84D0"
+  },
+  {
+    "label": "深紫色",
+    "color": "#9A61C7"
+  },
+  {
+    "label": "深粉色",
+    "color": "#CC53B4"
+  },
+  {
+    "label": "灰色",
+    "color": "#B0B7BA"
+  },
+  {
+    "label": "浅红色",
+    "color": "#FFBCB2"
+  },
+  {
+    "label": "浅橙色",
+    "color": "#FFBF84"
+  },
+  {
+    "label": "浅绿色",
+    "color": "#8ED290"
+  },
+  {
+    "label": "浅青色",
+    "color": "#7AD1CD"
+  },
+  {
+    "label": "浅蓝色",
+    "color": "#86C8F7"
+  },
+  {
+    "label": "淡紫色",
+    "color": "#D4AFF6"
+  },
+  {
+    "label": "浅粉色",
+    "color": "#F7AAE7"
+  }
+]

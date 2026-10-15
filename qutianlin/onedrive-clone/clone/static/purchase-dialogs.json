@@ -1,0 +1,134 @@
+{
+  "FamilyAnnualPaidMonthly": {
+    "title": "Next step: Sign in or sign up",
+    "description": "You'll need an account to download and update apps, set up recurring billing, and work seamlessly across multiple devices.",
+    "selection_html": "<p><b>You have selected:</b></p>\n<p><b>Microsoft 365 Family<br/>\n  CAD $145.00/year  (billed yearly)</b></p>\n",
+    "continue_label": "Continue",
+    "continue_aria": "Continue to sign-in",
+    "continue_route": "/checkout/offer-8ae1af89cb5d",
+    "cancel_label": "Cancel",
+    "cancel_aria": "Cancel and close informational window",
+    "close_aria": "Close dialogue window"
+  },
+  "FamilyAnnualPaidYearly": {
+    "title": "Next step: Sign in or sign up",
+    "description": "You'll need an account to download and update apps, set up recurring billing, and work seamlessly across multiple devices.",
+    "selection_html": "<p><b>You have selected:</b></p>\n<p><b>Microsoft 365 Family<br/>\n  CAD $145.00/year  (billed yearly)</b></p>\n",
+    "continue_label": "Continue",
+    "continue_aria": "Continue to sign-in",
+    "continue_route": "/checkout/offer-8ae1af89cb5d",
+    "cancel_label": "Cancel",
+    "cancel_aria": "Cancel and close informational window",
+    "close_aria": "Close dialogue window"
+  },
+  "FamilyMonthlyPaidMonthly": {
+    "title": "Next step: Sign in or sign up",
+    "description": "You'll need an account to download and update apps, set up recurring billing, and work seamlessly across multiple devices.",
+    "selection_html": "<p><b>You have selected:</b></p>\n<p><b>Microsoft 365 Family<br/>\n  CAD $14.50/month  (billed monthly)</b></p>\n",
+    "continue_label": "Continue",
+    "continue_aria": "Continue to sign-in",
+    "continue_route": "/checkout/offer-4a7736695065",
+    "cancel_label": "Cancel",
+    "cancel_aria": "Cancel and close informational window",
+    "close_aria": "Close dialogue window"
+  },
+  "FamilyMonthlyPaidYearly": {
+    "title": "Next step: Sign in or sign up",
+    "description": "You'll need an account to download and update apps, set up recurring billing, and work seamlessly across multiple devices.",
+    "selection_html": "<p><b>You have selected:</b></p>\n<p><b>Microsoft 365 Family<br/>\n  CAD $14.50/month  (billed monthly)</b></p>\n",
+    "continue_label": "Continue",
+    "continue_aria": "Continue to sign-in",
+    "continue_route": "/checkout/offer-4a7736695065",
+    "cancel_label": "Cancel",
+    "cancel_aria": "Cancel and close informational window",
+    "close_aria": "Close dialogue window"
+  },
+  "PersonalAnnualPaidMonthly": {
+    "title": "Next step: Sign in or sign up",
+    "description": "You'll need an account to download and update apps, set up recurring billing, and work seamlessly across multiple devices.",
+    "selection_html": "<p><b>You have selected:</b></p>\n<p><b>Microsoft 365 Personal<br/>\n  CAD $115.00/year  (billed yearly)</b></p>\n",
+    "continue_label": "Continue",
+    "continue_aria": "Continue to sign-in",
+    "continue_route": "/checkout/offer-ce70d932201e",
+    "cancel_label": "Cancel",
+    "cancel_aria": "Cancel and close informational window",
+    "close_aria": "Close dialogue window"
+  },
+  "PersonalAnnualPaidYearly": {
+    "title": "Next step: Sign in or sign up",
+    "description": "You'll need an account to download and update apps, set up recurring billing, and work seamlessly across multiple devices.",
+    "selection_html": "<p><b>You have selected:</b></p>\n<p><b>Microsoft 365 Personal<br/>\n  CAD $115.00/year  (billed yearly)</b></p>\n",
+    "continue_label": "Continue",
+    "continue_aria": "Continue to sign-in",
+    "continue_route": "/checkout/offer-ce70d932201e",
+    "cancel_label": "Cancel",
+    "cancel_aria": "Cancel and close informational window",
+    "close_aria": "Close dialogue window"
+  },
+  "PersonalMonthlyPaidMonthly": {
+    "title": "Next step: Sign in or sign up",
+    "description": "You'll need an account to download and update apps, set up recurring billing, and work seamlessly across multiple devices.",
+    "selection_html": "<p><b>You have selected:</b></p>\n<p><b>Microsoft 365 Personal<br/>\n  CAD $11.50/month  (billed monthly)</b></p>\n",
+    "continue_label": "Continue",
+    "continue_aria": "Continue to sign-in",
+    "continue_route": "/checkout/offer-042dbb6b7f9b",
+    "cancel_label": "Cancel",
+    "cancel_aria": "Cancel and close informational window",
+    "close_aria": "Close dialogue window"
+  },
+  "PersonalMonthlyPaidYearly": {
+    "title": "Next step: Sign in or sign up",
+    "description": "You'll need an account to download and update apps, set up recurring billing, and work seamlessly across multiple devices.",
+    "selection_html": "<p><b>You have selected:</b></p>\n<p><b>Microsoft 365 Personal<br/>\n  CAD $11.50/month  (billed monthly)</b></p>\n",
+    "continue_label": "Continue",
+    "continue_aria": "Continue to sign-in",
+    "continue_route": "/checkout/offer-042dbb6b7f9b",
+    "cancel_label": "Cancel",
+    "cancel_aria": "Cancel and close informational window",
+    "close_aria": "Close dialogue window"
+  },
+  "PremiumAnnualPaidMonthly": {
+    "title": "Next step: Sign in or sign up",
+    "description": "You'll need an account to download and update apps, set up recurring billing, and work seamlessly across multiple devices.",
+    "selection_html": "<p><b>You have selected:</b></p>\n<p><b>Microsoft 365 Premium<br/>\n  CAD $270.00/year  (billed yearly)</b></p>\n",
+    "continue_label": "Continue",
+    "continue_aria": "Continue to sign-in",
+    "continue_route": "/checkout/offer-9fd74441cc53",
+    "cancel_label": "Cancel",
+    "cancel_aria": "Cancel and close informational window",
+    "close_aria": "Close dialogue window"
+  },
+  "PremiumAnnualPaidYearly": {
+    "title": "Next step: Sign in or sign up",
+    "description": "You'll need an account to download and update apps, set up recurring billing, and work seamlessly across multiple devices.",
+    "selection_html": "<p><b>You have selected:</b></p>\n<p><b>Microsoft 365 Premium<br/>\n  CAD $270.00/year  (billed yearly)</b></p>\n",
+    "continue_label": "Continue",
+    "continue_aria": "Continue to sign-in",
+    "continue_route": "/checkout/offer-9fd74441cc53",
+    "cancel_label": "Cancel",
+    "cancel_aria": "Cancel and close informational window",
+    "close_aria": "Close dialogue window"
+  },
+  "PremiumMonthlyPaidMonthly": {
+    "title": "Next step: Sign in or sign up",
+    "description": "You'll need an account to download and update apps, set up recurring billing, and work seamlessly across multiple devices.",
+    "selection_html": "<p><b>You have selected:</b></p>\n<p><b>Microsoft 365 Premium<br/>\n  CAD $27.00/month  (billed monthly)</b></p>\n",
+    "continue_label": "Continue",
+    "continue_aria": "Continue to sign-in",
+    "continue_route": "/checkout/offer-bc7354ca2a6d",
+    "cancel_label": "Cancel",
+    "cancel_aria": "Cancel and close informational window",
+    "close_aria": "Close dialogue window"
+  },
+  "PremiumMonthlyPaidYearly": {
+    "title": "Next step: Sign in or sign up",
+    "description": "You'll need an account to download and update apps, set up recurring billing, and work seamlessly across multiple devices.",
+    "selection_html": "<p><b>You have selected:</b></p>\n<p><b>Microsoft 365 Premium<br/>\n  CAD $27.00/month  (billed monthly)</b></p>\n",
+    "continue_label": "Continue",
+    "continue_aria": "Continue to sign-in",
+    "continue_route": "/checkout/offer-bc7354ca2a6d",
+    "cancel_label": "Cancel",
+    "cancel_aria": "Cancel and close informational window",
+    "close_aria": "Close dialogue window"
+  }
+}

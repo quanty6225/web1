@@ -1,0 +1,2 @@
+body div[data-geo-country="US"] .us-hidden:not([data-isenvauthor="true"]){display:none}
+body div[data-geo-country]:not([data-geo-country="US"]) .non-us-hidden:not([data-isenvauthor="true"]){display:none}

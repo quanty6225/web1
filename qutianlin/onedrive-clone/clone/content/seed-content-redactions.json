@@ -1,0 +1,20 @@
+[
+  {
+    "source_id": "intro-ppt",
+    "content_file": "intro-ppt.txt",
+    "previous_sha256": "14b0da0984b06d3b80190cb7c2ffaa25148efa8a83ff1c7a2585e9b6d917a1d6",
+    "redacted_sha256": "5f14b3b656db182a2857fc9ef7e1c76f27dc982474946db5f19829fce71057d9"
+  },
+  {
+    "source_id": "presentation1",
+    "content_file": "presentation1.txt",
+    "previous_sha256": "db969f26c5d808c677ee28893656d0a173a783a392bafef4e2d0a7e49392d71d",
+    "redacted_sha256": "745f02dfad23c4c28ee39f9f73ab05cfcd2e29ed604c868f7efecae5d3117dc4"
+  },
+  {
+    "source_id": "untitled-video-file",
+    "content_file": "untitled-video-file.clipchamp",
+    "previous_sha256": "c758a73962240ed53cfcd6e58dd0937467df5d0525223140082e1aabe2990032",
+    "redacted_sha256": "f1f7e3296deeb729ca93e9980661171acfedf23b55926f9df855db875a02916b"
+  }
+]

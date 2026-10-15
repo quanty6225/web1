@@ -1,0 +1,197 @@
+{
+  "https://learn-video.azurefd.net/vod/player?id=11d7ec92-a8bf-4414-b6d1-4184aeb8986c": {
+    "title": "Powering Microsoft Speech Recognition",
+    "source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-11d7ec92-a8bf-4414-b6d1-4184aeb8986c/video_1001_1731969828285_1280x720.mp4",
+    "poster_source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-11d7ec92-a8bf-4414-b6d1-4184aeb8986c/thumbnail_w1120.jpeg",
+    "captions": [
+      {
+        "language": "en-us",
+        "url": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-11d7ec92-a8bf-4414-b6d1-4184aeb8986c/en_us_en-us.vtt",
+        "src": "/static/assets/4e48697ddbfbe10c20be.vtt"
+      }
+    ],
+    "evidence": "recon/help-video-rendered-11d7ec92-a8bf-4414-b6d1-4184aeb8986c.json",
+    "src": "/static/assets/f4d88cb1fa090bd38bf3.mp4",
+    "poster": "/static/assets/dc2c949edd3fce8b90ed.png"
+  },
+  "https://learn-video.azurefd.net/vod/player?id=0ad76cd3-88d7-4476-836f-cb0e6cf6b916": {
+    "title": "Unlink and relink OneDrive",
+    "source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-0ad76cd3-88d7-4476-836f-cb0e6cf6b916/video_1001_1730179440180_1280x720.mp4",
+    "poster_source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-0ad76cd3-88d7-4476-836f-cb0e6cf6b916/thumbnail_w1120.png",
+    "captions": [
+      {
+        "language": "en-us",
+        "url": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-0ad76cd3-88d7-4476-836f-cb0e6cf6b916/en_us_en-us.vtt",
+        "src": "/static/assets/c3c7b594937529101ab1.vtt"
+      }
+    ],
+    "evidence": "recon/help-video-rendered-0ad76cd3-88d7-4476-836f-cb0e6cf6b916.json",
+    "src": "/static/assets/cbd38ab4955f024c0497.mp4",
+    "poster": "/static/assets/e4ab2d98b4e0f2725761.png"
+  },
+  "https://learn-video.azurefd.net/vod/player?id=b93aa922-54ee-498d-a363-e79678af6125": {
+    "title": "Sign and send docs",
+    "source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-b93aa922-54ee-498d-a363-e79678af6125/video_1001_1731968732564_1280x720.mp4",
+    "poster_source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-b93aa922-54ee-498d-a363-e79678af6125/thumbnail_w1120.jpeg",
+    "captions": [
+      {
+        "language": "en-us",
+        "url": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-b93aa922-54ee-498d-a363-e79678af6125/en_us_en-us.vtt",
+        "src": "/static/assets/bcd00f29d6905b99ca58.vtt"
+      }
+    ],
+    "evidence": "recon/help-video-rendered-b93aa922-54ee-498d-a363-e79678af6125.json",
+    "src": "/static/assets/550a2ee7509ab3f2e8fe.mp4",
+    "poster": "/static/assets/fd35f0673819a30642d5.png"
+  },
+  "https://learn-video.azurefd.net/vod/player?id=7e1ec5d8-d528-4b7b-b1de-f6d9f84bd35b": {
+    "title": "How to recover your Microsoft Account",
+    "source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-7e1ec5d8-d528-4b7b-b1de-f6d9f84bd35b/video_1001_1730349000071_1280x720.mp4",
+    "poster_source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-7e1ec5d8-d528-4b7b-b1de-f6d9f84bd35b/thumbnail_w1120.jpeg",
+    "captions": [
+      {
+        "language": "en-us",
+        "url": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-7e1ec5d8-d528-4b7b-b1de-f6d9f84bd35b/en_us_en-us.vtt",
+        "src": "/static/assets/5f807b3d933f432bc5a3.vtt"
+      }
+    ],
+    "evidence": "recon/help-video-rendered-7e1ec5d8-d528-4b7b-b1de-f6d9f84bd35b.json",
+    "src": "/static/assets/b4ecef98f9c3626287df.mp4",
+    "poster": "/static/assets/051c0e2df672e7362648.png"
+  },
+  "https://learn-video.azurefd.net/vod/player?id=661e30ad-ce7f-46bc-97da-f4b008463d68": {
+    "title": "Turn on OneDrive PC Folder Backup",
+    "source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-661e30ad-ce7f-46bc-97da-f4b008463d68/video_1001_1730102104366_1280x720.mp4",
+    "poster_source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-661e30ad-ce7f-46bc-97da-f4b008463d68/thumbnail_w1120.jpeg",
+    "captions": [
+      {
+        "language": "en-us",
+        "url": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-661e30ad-ce7f-46bc-97da-f4b008463d68/en_us_en-us.vtt",
+        "src": "/static/assets/46bce348f8bf924352eb.vtt"
+      }
+    ],
+    "evidence": "recon/help-video-rendered-661e30ad-ce7f-46bc-97da-f4b008463d68.json",
+    "src": "/static/assets/b812f800003d16167ece.mp4",
+    "poster": "/static/assets/eb88cfbf3a2b6e1211fb.png"
+  },
+  "https://learn-video.azurefd.net/vod/player?id=d19795d2-c456-4918-a7e1-24fc02d61632": {
+    "title": "Use Storage Sense and OneDrive to manage disk space",
+    "source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-d19795d2-c456-4918-a7e1-24fc02d61632/video_1001_1730431957950_1280x720.mp4",
+    "poster_source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-d19795d2-c456-4918-a7e1-24fc02d61632/thumbnail_w1120.png",
+    "captions": [
+      {
+        "language": "en-us",
+        "url": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-d19795d2-c456-4918-a7e1-24fc02d61632/en_us_en-us.vtt",
+        "src": "/static/assets/913b6ae2464c3bc1e9d4.vtt"
+      }
+    ],
+    "evidence": "recon/help-video-rendered-d19795d2-c456-4918-a7e1-24fc02d61632.json",
+    "src": "/static/assets/1295f795c6cba64fdc90.mp4",
+    "poster": "/static/assets/00029a3dd4097a2a6f1f.png"
+  },
+  "https://learn-video.azurefd.net/vod/player?id=3b35d34b-1c9d-4457-a92e-a857b9c1b8f3": {
+    "title": "Set up OneDrive for Business on your phone or tablet",
+    "source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-3b35d34b-1c9d-4457-a92e-a857b9c1b8f3/video_1001_1731981783361_1280x720.mp4",
+    "poster_source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-3b35d34b-1c9d-4457-a92e-a857b9c1b8f3/thumbnail_w1120.png",
+    "captions": [
+      {
+        "language": "en-us",
+        "url": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-3b35d34b-1c9d-4457-a92e-a857b9c1b8f3/en_us_en-us.vtt",
+        "src": "/static/assets/a863cdbc92816e5b4042.vtt"
+      }
+    ],
+    "evidence": "recon/help-video-rendered-3b35d34b-1c9d-4457-a92e-a857b9c1b8f3.json",
+    "src": "/static/assets/ea9d1b681f74cbdbdb2b.mp4",
+    "poster": "/static/assets/d559fa13aeb54b1c1cc7.png"
+  },
+  "https://learn-video.azurefd.net/vod/player?id=0f3c0bb9-ae7f-4922-8af5-47ad838963c7": {
+    "title": "Use Scan to quickly capture items",
+    "source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-0f3c0bb9-ae7f-4922-8af5-47ad838963c7/video_1001_1730398115500_1280x720.mp4",
+    "poster_source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-0f3c0bb9-ae7f-4922-8af5-47ad838963c7/thumbnail_w1120.jpeg",
+    "captions": [
+      {
+        "language": "en-us",
+        "url": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-0f3c0bb9-ae7f-4922-8af5-47ad838963c7/en_us_en-us.vtt",
+        "src": "/static/assets/cfce39d35df769951cf9.vtt"
+      }
+    ],
+    "evidence": "recon/help-video-rendered-0f3c0bb9-ae7f-4922-8af5-47ad838963c7.json",
+    "src": "/static/assets/5108d105de529d39a79e.mp4",
+    "poster": "/static/assets/06c875787c2ac006490e.png"
+  },
+  "https://learn-video.azurefd.net/vod/player?id=463b55c5-3651-483d-b645-f31b5e8d7932": {
+    "title": "Upload files and folders to OneDrive",
+    "source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-463b55c5-3651-483d-b645-f31b5e8d7932/video_1001_1731967806738_1280x720.mp4",
+    "poster_source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-463b55c5-3651-483d-b645-f31b5e8d7932/thumbnail_w1120.png",
+    "captions": [
+      {
+        "language": "en-us",
+        "url": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-463b55c5-3651-483d-b645-f31b5e8d7932/en_us_en-us.vtt",
+        "src": "/static/assets/d053015b5252253a5c43.vtt"
+      }
+    ],
+    "evidence": "recon/help-video-rendered-463b55c5-3651-483d-b645-f31b5e8d7932.json",
+    "src": "/static/assets/2b4f6c502232be9cf77c.mp4",
+    "poster": "/static/assets/a725436f5a9da428fcf3.png"
+  },
+  "https://learn-video.azurefd.net/vod/player?id=ac7fc5ca-3e7c-41aa-84e7-4cd2300e82d2": {
+    "title": "Move users to a different subscription",
+    "source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-ac7fc5ca-3e7c-41aa-84e7-4cd2300e82d2/video_1001_1731949815257_1280x720.mp4",
+    "poster_source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-ac7fc5ca-3e7c-41aa-84e7-4cd2300e82d2/thumbnail_w1120.jpeg",
+    "captions": [
+      {
+        "language": "en-us",
+        "url": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-ac7fc5ca-3e7c-41aa-84e7-4cd2300e82d2/en_us_en-us.vtt",
+        "src": "/static/assets/23b8e3df421dee53c476.vtt"
+      }
+    ],
+    "evidence": "recon/help-video-rendered-ac7fc5ca-3e7c-41aa-84e7-4cd2300e82d2.json",
+    "src": "/static/assets/c7cdcc040e39b257960c.mp4",
+    "poster": "/static/assets/de9d3957222cfbc36775.png"
+  },
+  "https://learn-video.azurefd.net/vod/player?id=470edf48-3b59-4538-9c05-5518960bed02": {
+    "title": "Get help or support as an admin",
+    "source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-470edf48-3b59-4538-9c05-5518960bed02/Get_help_or_support_as_an_admin_1733944733101_1280x720.mp4",
+    "poster_source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-470edf48-3b59-4538-9c05-5518960bed02/Get_help_or_support_as_an_admin_w1120.jpg",
+    "captions": [
+      {
+        "language": "en-us",
+        "url": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-470edf48-3b59-4538-9c05-5518960bed02/Get_help_or_support_as_an_admin_en-us.vtt",
+        "src": "/static/assets/c067751fcf732f2f6191.vtt"
+      }
+    ],
+    "evidence": "recon/help-video-rendered-470edf48-3b59-4538-9c05-5518960bed02.json",
+    "src": "/static/assets/014181e09f65964e4623.mp4",
+    "poster": "/static/assets/ba76e51ab048270e9cd5.png"
+  },
+  "https://learn-video.azurefd.net/vod/player?id=470edf48-3b59-4538-9c05-5518960bed02&locale=en-us&embedUrl=%2Fmicrosoft-365%2Fadmin%2Fget-help-support": {
+    "title": "Get help or support as an admin",
+    "source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-470edf48-3b59-4538-9c05-5518960bed02/Get_help_or_support_as_an_admin_1733944733101_1280x720.mp4",
+    "poster_source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-470edf48-3b59-4538-9c05-5518960bed02/Get_help_or_support_as_an_admin_w1120.jpg",
+    "captions": [
+      {
+        "language": "en-us",
+        "url": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-470edf48-3b59-4538-9c05-5518960bed02/Get_help_or_support_as_an_admin_en-us.vtt",
+        "src": "/static/assets/c067751fcf732f2f6191.vtt"
+      }
+    ],
+    "evidence": "recon/help-video-rendered-470edf48-3b59-4538-9c05-5518960bed02.json",
+    "src": "/static/assets/014181e09f65964e4623.mp4",
+    "poster": "/static/assets/ba76e51ab048270e9cd5.png"
+  },
+  "https://learn-video.azurefd.net/vod/player?id=ac7fc5ca-3e7c-41aa-84e7-4cd2300e82d2&locale=en-us&embedUrl=%2Fmicrosoft-365%2Fcommerce%2Ftry-or-buy-microsoft-365": {
+    "title": "Move users to a different subscription",
+    "source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-ac7fc5ca-3e7c-41aa-84e7-4cd2300e82d2/video_1001_1731949815257_1280x720.mp4",
+    "poster_source": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-ac7fc5ca-3e7c-41aa-84e7-4cd2300e82d2/thumbnail_w1120.jpeg",
+    "captions": [
+      {
+        "language": "en-us",
+        "url": "https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-ac7fc5ca-3e7c-41aa-84e7-4cd2300e82d2/en_us_en-us.vtt",
+        "src": "/static/assets/23b8e3df421dee53c476.vtt"
+      }
+    ],
+    "evidence": "recon/help-video-rendered-ac7fc5ca-3e7c-41aa-84e7-4cd2300e82d2.json",
+    "src": "/static/assets/c7cdcc040e39b257960c.mp4",
+    "poster": "/static/assets/de9d3957222cfbc36775.png"
+  }
+}

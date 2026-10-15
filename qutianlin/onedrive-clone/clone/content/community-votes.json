@@ -1,0 +1,162 @@
+{
+  "5626798": {
+    "route": "/help/article-b0750a0321ad",
+    "targets": {
+      "question:5626798": {
+        "kind": "question",
+        "id": "5626798",
+        "source_count": 1
+      },
+      "comment:2345955": {
+        "kind": "comment",
+        "id": "2345955",
+        "source_count": 0
+      },
+      "comment:2346207": {
+        "kind": "comment",
+        "id": "2346207",
+        "source_count": 0
+      },
+      "comment:2346240": {
+        "kind": "comment",
+        "id": "2346240",
+        "source_count": 0
+      },
+      "comment:2346256": {
+        "kind": "comment",
+        "id": "2346256",
+        "source_count": 0
+      },
+      "answer:12365789": {
+        "kind": "answer",
+        "id": "12365789",
+        "source_count": 0
+      }
+    }
+  },
+  "5706186": {
+    "route": "/help/article-a9205a411208",
+    "targets": {
+      "question:5706186": {
+        "kind": "question",
+        "id": "5706186",
+        "source_count": 0
+      },
+      "comment:2837133": {
+        "kind": "comment",
+        "id": "2837133",
+        "source_count": 0
+      },
+      "answer:12498061": {
+        "kind": "answer",
+        "id": "12498061",
+        "source_count": 0
+      },
+      "answer:12497975": {
+        "kind": "answer",
+        "id": "12497975",
+        "source_count": 0
+      }
+    }
+  },
+  "5873021": {
+    "route": "/help/article-a9cdfc990b93",
+    "targets": {
+      "question:5873021": {
+        "kind": "question",
+        "id": "5873021",
+        "source_count": 10
+      },
+      "comment:2788953": {
+        "kind": "comment",
+        "id": "2788953",
+        "source_count": 0
+      },
+      "answer:12750930": {
+        "kind": "answer",
+        "id": "12750930",
+        "source_count": 2
+      },
+      "answer:12744179": {
+        "kind": "answer",
+        "id": "12744179",
+        "source_count": 1
+      }
+    }
+  },
+  "5675272": {
+    "route": "/help/article-56cf0ddab4ac",
+    "targets": {
+      "question:5675272": {
+        "kind": "question",
+        "id": "5675272",
+        "source_count": 7
+      },
+      "answer:12450386": {
+        "kind": "answer",
+        "id": "12450386",
+        "source_count": 1
+      },
+      "answer:12450421": {
+        "kind": "answer",
+        "id": "12450421",
+        "source_count": 0
+      }
+    }
+  },
+  "5237545": {
+    "route": "/help/article-ac7cccefe2cc",
+    "targets": {
+      "question:5237545": {
+        "kind": "question",
+        "id": "5237545",
+        "source_count": 24
+      },
+      "answer:11521374": {
+        "kind": "answer",
+        "id": "11521374",
+        "source_count": 8
+      }
+    }
+  },
+  "5984503": {
+    "route": "/help/article-7f329f5a3c55",
+    "targets": {
+      "question:5984503": {
+        "kind": "question",
+        "id": "5984503",
+        "source_count": 0
+      },
+      "comment:2790231": {
+        "kind": "comment",
+        "id": "2790231",
+        "source_count": 0
+      },
+      "answer:12928910": {
+        "kind": "answer",
+        "id": "12928910",
+        "source_count": 0
+      }
+    }
+  },
+  "5257930": {
+    "route": "/help/article-3fa87d4c6670",
+    "targets": {
+      "question:5257930": {
+        "kind": "question",
+        "id": "5257930",
+        "source_count": 115
+      },
+      "answer:11531126": {
+        "kind": "answer",
+        "id": "11531126",
+        "source_count": 15
+      },
+      "answer:11528235": {
+        "kind": "answer",
+        "id": "11528235",
+        "source_count": 13
+      }
+    }
+  }
+}

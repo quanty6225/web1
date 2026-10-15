@@ -1,0 +1,22 @@
+/* Source visibility rules are in learn-source-visibility.css. Local layout only. */
+.learn-document [hidden],.learn-document .content-header-controls { display:none!important }
+.learn-document .popover { position:relative }
+.learn-document .popover > summary { cursor:pointer;list-style:none;min-width:32px;min-height:32px }
+.learn-document .popover-content { padding:12px;border:1px solid #ccc;background:var(--surface,#fff) }
+.learn-document .popover-content > button,.learn-document .popover-content > a { margin:2px 0;gap:8px }
+.learn-document #article-header-page-actions-overflow { margin-left:auto;width:max-content }
+.learn-document #article-header-page-actions-overflow .popover-content { position:absolute;right:0;z-index:5;min-width:230px }
+.learn-document #article-header-page-actions-overflow .popover-content > button { width:100%;text-align:left }
+.learn-document [role=tablist] { display:flex;gap:16px;border-bottom:1px solid #aaa }
+.learn-document [role=tab] { padding:12px }
+.learn-document [role=tab][aria-selected=true] { border-bottom:3px solid #0067b8 }
+.learn-document table { border-collapse:collapse;max-width:100% }
+.learn-document th,.learn-document td { padding:10px;border:1px solid #ccc }
+.learn-document .table-wrapper { overflow:auto }
+.learn-document video { width:100%;max-height:600px }
+.learn-document .visually-hidden { position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%) }
+body:has(.learn-reading-mode) > #app > header,body:has(.learn-reading-mode) .boundary > h1,body:has(.learn-reading-mode) .boundary > footer { display:none }
+.boundary:has(.learn-reading-mode) { max-width:1000px;margin:auto }
+.learn-expanded-table { max-width:95vw;max-height:90vh;overflow:auto;padding:20px;border:1px solid #888 }
+.learn-expanded-table > button { display:block;margin:0 0 16px auto }
+@media print { body:has(.learn-document) #app > header,body:has(.learn-document) .boundary > h1,body:has(.learn-document) .boundary > footer,.learn-document #article-header,.learn-document .content-header,.learn-document .feedback-section { display:none!important } }

@@ -1,0 +1,277 @@
+---
+layout: Conceptual
+monikers:
+- o365-21vianet
+- o365-worldwide
+defaultMoniker: o365-worldwide
+versioningType: Ranged
+title: Get support - Microsoft 365 admin | Microsoft Learn
+canonicalUrl: https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-support?view=o365-worldwide
+config_moniker_range: =o365-worldwide || =o365-21vianet
+feedback_system: Standard
+feedback_product_url: https://admin.microsoft.com/adminportal/home?showfeedback=DocsMacCampaign
+breadcrumb_path: /microsoft-365/breadcrumb/toc.json
+recommendations: false
+uhfHeaderId: MSDocsHeader-M365-IT
+f1.keywords:
+- NOCSH
+ms.author: frankroj
+author: frankroj
+manager: dansimp
+audience: Admin
+ms.topic: how-to
+ms.service: microsoft-365-business
+ms.localizationpriority: high
+ms.collection:
+- Tier1
+- scotvorg
+- highpri
+- Adm_O365
+- Adm_TOC
+- ContentEnagagementFY25
+- operations-pod
+ms.custom:
+- VSBFY23
+- AdminSurgePortfolio
+- adminvideo
+- AdminTemplateSet
+- admindeeplinkMAC
+search.appverid:
+- BCS160
+- MET150
+- MOE150
+description: Learn how to get online or phone support for your Microsoft 365 for business subscription. You must be an admin for a business subscription to get support.
+ms.date: 2026-01-26T00:00:00.0000000Z
+locale: en-us
+document_id: f065d0d8-9047-2f9f-38cd-7a990c470b51
+document_version_independent_id: 2f157d24-6c30-42f0-92a4-77927cf70abe
+updated_at: 2026-08-20T15:37:00.0000000Z
+original_content_git_url: https://github.com/MicrosoftDocs/microsoft-365-docs-pr/blob/live/microsoft-365/admin/get-help-support.md
+gitcommit: https://github.com/MicrosoftDocs/microsoft-365-docs-pr/blob/01f0666e259134829e26129691fa2897e0d9d072/microsoft-365/admin/get-help-support.md
+git_commit_id: 01f0666e259134829e26129691fa2897e0d9d072
+default_moniker: o365-worldwide
+site_name: Docs
+depot_name: office.Microsoft-365-docs
+page_type: conceptual
+toc_rel: toc.json
+pdf_url_template: https://learn.microsoft.com/pdfstore/en-us/office.Microsoft-365-docs/{branchName}{pdfName}
+feedback_help_link_type: ''
+feedback_help_link_url: ''
+word_count: 2080
+asset_id: admin/get-help-support
+moniker_range_name: 626dcefb463b053bbc5c86fb8d873ef6
+monikers:
+- o365-21vianet
+- o365-worldwide
+item_type: Content
+source_path: microsoft-365/admin/get-help-support.md
+cmProducts:
+- https://authoring-docs-microsoft.poolparty.biz/devrel/1dd701e0-441f-4b0a-9806-aa47decc4e35
+- https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/68e4b2d8-b70c-4019-b49a-d1f8881e2aea
+spProducts:
+- https://authoring-docs-microsoft.poolparty.biz/devrel/0a2fc935-5977-4aa6-9f55-0be03bd2acb8
+- https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/67b2ba1a-6f74-4044-a48a-f0f8ad076b8f
+platformId: d8a16139-ec6e-af6c-46ed-b36ea31347d9
+---
+
+# Get support - Microsoft 365 admin | Microsoft Learn
+
+::: moniker range="o365-worldwide"
+
+Check out all of our small business content on [Small business help & learning](https://go.microsoft.com/fwlink/?linkid=2224585).
+
+Check out [Microsoft 365 small business help](https://go.microsoft.com/fwlink/?linkid=2197659) on YouTube.
+
+## Watch: Get help or support
+
+Check out this video and others on our [YouTube channel](https://go.microsoft.com/fwlink/?linkid=2197598).
+
+Need to speak to someone right away? Admins have your account details ready when you call Support.
+
+Important
+
+You must be an admin for a business subscription to use these support methods. [Find out more about admin roles for the Microsoft 365 admin center](add-users/about-admin-roles). If you're not a business admin, use [this support page](https://support.microsoft.com/contactus).
+
+Start by [checking the current health of your services](../enterprise/view-service-health). You can view detailed information about current and past issues on the [Service health dashboard](https://go.microsoft.com/fwlink/p/?linkid=842900). If you're experiencing an issue that isn't listed, you can get support in one of the following ways:
+
+## Online support
+
+Save time by starting your service request online. We can help you find a solution or connect you to technical support.
+
+Important
+
+You must have at least one subscription bought through Microsoft to access Microsoft support. If you bought all your subscriptions through a partner, contact your partner for support.
+
+1. Go to the admin center at [https://admin.cloud.microsoft](https://go.microsoft.com/fwlink/p/?linkid=2024339). If you get a message that says you don't have permission to access this page or perform this action, you aren't an admin. For more information, see [Who has admin permissions in my business?](admin-overview/admin-center-overview#who-has-admin-permissions-in-my-business).
+2. On the bottom right side of the page, select **Help & support**.
+3. On the Support Assistant page, type your message or question into the text box. You will get a set of results to your question or message.
+4. If the results don't help, select the **Contact Support (headset)** icon at the top of the page or bottom left on the page.
+5. Choose your contact method, phone or email. Add and confirm your contact details and select **Contact me**. The expected wait time is indicated in the **Contact support** pane.
+
+Note
+
+For a smoother support experience, we recommend that you open separate support requests for each issue.
+
+## Phone support
+
+Important
+
+Please note that our phone numbers have changed. For the most current support phone number in your country/region, see the [global phone numbers list](https://support.microsoft.com/topic/customer-service-phone-numbers-c0389ade-5640-e588-8b0e-28de8afeb3f2#ID0EBBD=signinorgid). If your country/region isn't listed, select a neighboring country/region or dial the United States support phone number.
+
+In most countries/regions, billing support for Microsoft 365 for business products and services is provided in English from 9 AM-5 PM, Monday through Friday. Local language support varies by country/region.
+
+Technical support is provided in English 24 hours a day, 7 days a week, and in some cases, in local languages as noted.
+
+Admins have your account details ready when you call.
+
+Note
+
+To better protect your organization, we added a PIN-based verification step to our existing phone-based verification process. If you contact us from a number that isn't registered with your organization profile, the Microsoft support representative sends a verification code to the registered email or phone number in your Microsoft 365 admin center profile. You must provide this code to the support representative to grant them access to your organization's account.
+
+## Volume licensing support
+
+There's a dedicated support team for users who access volume licensing (VL) contracts in the Microsoft 365 admin center. To request support for volume licensing, use the following steps:
+
+1. In the Microsoft 365 admin center, select **Help & support**.
+2. In the query box, type "manage volume licensing" together with your question to help target your query more accurately. If you see a drop-down list, select the item closest to your question, or continue typing your question, then press **Enter**.
+3. If the results don't help, at the bottom, select **Contact Support**.
+4. Enter a description of your issue, specify the License ID or VL agreement number your issue relates to, confirm your contact number and email address, select your preferred contact method, and then select **Contact me**.
+
+If you're a volume licensing admin but are unable to access the admin center, go to the [volume licensing online support request](https://engagecenter.microsoft.com/#view/Microsoft_AzureCXP_EngageHub/EngageHubMenu.MenuView/%7E/helpSupport/targetExperience/sfb/sapId/2afa6f15-b710-db46-909a-8346017c802f) page in the Engage Center.
+
+::: moniker-end
+
+::: moniker range="o365-21vianet"
+
+With every subscription of Microsoft 365 operated by 21Vianet, 21Vianet support provides technical, presales, billing, and subscription support. Support is available both online through the Microsoft 365 operated by 21Vianet portal, and by telephone for both paid and trial subscriptions.
+
+Authorized administrators can use the Microsoft 365 operated by 21Vianet portal to submit service requests online and access support telephone numbers. For instructions, see Contact support.
+
+The Microsoft 365 operated by 21Vianet technical support team troubleshoots only those issues that are related to Microsoft 365 operated by 21Vianet. Issues that originate in customer networks fall outside of the Microsoft 365 support boundaries, and in these cases, customers must work with their networking team for assistance.
+
+## Community and self-service support options
+
+Self-service support is available for all Microsoft 365 operated by 21Vianet users, and includes troubleshooting tools and videos, help articles and videos, as well as forums and wikis in the [Microsoft 365 community](https://go.microsoft.com/fwlink/p/?linkid=842838). For more self-help resources, see [Microsoft 365 operated by 21Vianet](/en-us/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-operated-by-21vianet).
+
+## Presales support
+
+Presales support for Microsoft 365 operated by 21Vianet provides assistance on subscription features and benefits, plan comparisons, pricing and licensing, and helps to identify the right solution to meet your business needs. In addition, presales support can help you find a Partner, and purchase and sign up for a trial. You can call during local business hours, Monday through Friday. Presales support can be accessed using the same phone number as with technical support. For instructions, see Contact support.
+
+## Billing and subscription management support
+
+Assistance for billing and subscription management issues is available online or by telephone during China business hours (Beijing Time), Monday through Friday. Billing and subscription management support can be accessed using the same phone number and online service request process as with technical support. The support telephone number can be found on the Microsoft 365 operated by 21Vianet portal. For instructions, see Contact support.
+
+Here are some examples of billing and subscription management issues:
+
+- Signing up for a trial or purchasing a subscription
+- Converting from a trial subscription to a paid subscription
+- Understanding the bill
+- Renewing a subscription
+- Adding or removing licenses
+- Canceling a paid subscription
+
+## Technical support
+
+Technical support for Microsoft 365 operated by 21Vianet subscriptions provides assistance with basic installation, setup, and general technical usage. Some examples of these issues are listed in the following table.
+
+| Support category | Examples |
+| --- | --- |
+| Installation and setup | Exchange Online<br>- Microsoft 365 mailbox migration<br>- Recipient configuration (mailbox permissions, configuring mail forwarding, configuring shared mailbox)<br>- Autodiscover configuration<br><br> SharePoint<br>- Permissions and user groups<br>- Configuration of external users (guests)<br><br>Skype for Business Online<br>- Installation and creating contacts<br><br>Microsoft 365 Apps for enterprise<br>- Installation and setup |
+| Configuration | Service configuration issues<br>- Single sign-on (SSO)<br>- Active Directory synchronization |
+
+Note
+
+You can learn how to contact technical support here: Contact support. Technical support doesn't include troubleshooting third-party services or add-ins. Learn about finding answers from other customers in the [Community](https://go.microsoft.com/fwlink/p/?linkid=842838).
+
+## Technical support case handling
+
+21Vianet assigns a severity level to a case when it's opened, based on an assessment of the issue type and customer impact. Examples of issue types and severity levels are shown in the following table.
+
+| Severity level | Operations and support description | Examples |
+| --- | --- | --- |
+| Sev A (Critical) | One or more services aren't accessible or are unusable. Production, operations, or deployment deadlines are severely affected, or there will be a severe impact on production or profitability. Multiple users or services are affected. | - Widespread problems sending or receiving mail.<br>- SharePoint site down.<br>- All users can't send instant messages, join or schedule Skype for Business Meetings, or make Skype for Business calls. |
+| Sev B (High) | The service is usable but in an impaired fashion. The situation has moderate business impact and can be dealt with during business hours. A single user, customer, or service is partially affected. | - Send button in Outlook is garbled.<br>- Setting is impossible from EAC (Exchange admin center) but possible in Exchange Online PowerShell. |
+| Sev C (Non-critical) | The situation has minimal business impact. The issue is important but doesn't have a significant current service or productivity impact for the customer. A single user is experiencing partial disruption, but an acceptable workaround exists. | - How to set user password that never expires.<br>- User can't delete contact information in Exchange Online. |
+
+## Technical support initial response times
+
+Initial response time is based on the severity levels described in Technical support case handling. 21Vianet customer service team follows up with investigation and customer communication in reasonable rhythm according to severity levels. 21Vianet also expect customer to collaborate at reasonable level accordingly.
+
+| Security level^1^ | 21Vianet customer support team Initial response | Customer responsibility |
+| --- | --- | --- |
+| Sev A ^2^ (Critical) | Initial Response: 1 hour or less.Follow up: continues effort until problem resolution. | - Provide solid business impact statement (see the severity A description and examples in Technical support case handling)<br>- Allocate resource to ensure continues collaboration with 21Vianet customer support agent for the joint investigation and necessary communication<br>- Provide accurate contact information and ensure reliable communication throughout the service request lifecycle. |
+| Sev B (High) | Initial Response: 1 business day or less. | Provide accurate contact information and ensure reliable communication throughout the service request lifecycle. |
+| Sev C (Medium) | Initial Response: 3 business days or less. | Provide accurate contact information and ensure reliable communication throughout the service request lifecycle. |
+
+^1^ If the customer can't provide required resource or make response for collaboration with 21Vianet customer support agent investigation in reasonable time, 21Vianet support team might lower down the severity level of a service request.
+
+^2^ Severity A is only available to customers who signed an advanced online service agreement with 21Vianet through a sales account manager. Severity A is available only for technical support. For billing and subscription management support, the highest severity level is B.
+
+## Technical support working hours
+
+Severity A: 24\*7 continuous service
+
+Severity B/C: 9:00 ~24:00 (Beijing Time) a day, 365 days.
+
+## Contact support
+
+Note
+
+Assisted support options are for admins of Microsoft 365 subscribed organizations only. If you use Microsoft 365 but you're not an admin, you can still get support in the community forums, or by contacting your admin.
+
+### Open an online request
+
+Save time by starting your service request online. Go to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=850627), then select **Support** &gt; **New service request**.
+
+### Call support
+
+Call support. If you encounter any problem with online request, phone support is available at (86) 400-089-0365.
+
+### Shared support responsibilities
+
+21Vianet understands that receiving timely technical support from qualified professionals is a key aspect of cloud services. Equally important is the critical role that the customer's IT department plays in the support of its users.
+
+### Administrator roles and responsibilities
+
+People with administrator roles are the only ones in the customer's organization authorized to access the Admin section of the Microsoft 365 operated by 21Vianet portal and to communicate directly with 21Vianet about Microsoft 365 service requests.
+
+With Microsoft 365, you can designate several types of administrators who serve different functions. This service description uses the generic title administrator to refer to all categories of administrators. For more information about the types of administrator roles, see [Assign admin roles in Microsoft 365 for business](add-users/assign-admin-roles).
+
+The administrator is:
+
+- Responsible for service administration and account maintenance.
+- The primary contact that sets up and supports each service user.
+- Authorized to submit service requests to 21Vianet.
+
+The administrator's role is to:
+
+- Provide user account setup and configuration to allow users access to the services.
+- Address client connectivity, client software, and mobility installation issues.
+- Address service availability issues within the customer's organizational span of control.
+- Use self-service support resources to resolve support issues.
+
+The administrator is expected to provide initial assistance for the customer's users. However, if the administrator is unable to resolve issues with the help of self-service support resources, they should Contact support.
+
+### 21Vianet support role
+
+21Vianet's support role is to:
+
+- Troubleshoot and provide technical guidance for customer issues and escalations.
+- Gather and validate information related to specific service requests.
+- Provide issue coordination and resolution management.
+- Maintain communication with the administrators to help ensure that issues are addressed on an ongoing basis.
+- Provide assistance with licensing, invoicing, and subscription inquiries.
+- Provide assistance with purchasing and trial inquiries.
+- Continually gather customer feedback on how to improve the service through surveys.
+
+## Feature availability
+
+To view feature availability across Microsoft 365 plans, see [Microsoft 365 Service Description](/en-us/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-operated-by-21vianet).
+
+## Follow us on WeChat
+
+Scan this QR code to follow us on WeChat and get the latest updates for Microsoft 365 operated by 21Vianet.
+
+![QR Code for updates for Microsoft 365 operated by 21Vianet.](../media/4d8fe09c-1a11-4cd8-be4c-75add8dccddd.jpg)
+
+::: moniker-end
