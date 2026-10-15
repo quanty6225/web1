@@ -1,0 +1,39 @@
+{
+  "/nest": {
+    "route": "/nest",
+    "reason": "Source HTTP 404; source availability is not an external-site boundary."
+  },
+  "/salesforce_old": {
+    "route": "/salesforce_old",
+    "reason": "Source HTTP 404; source availability is not an external-site boundary."
+  },
+  "/hc/en-us/requests/new": {
+    "route": "/hc/en-us/requests/new",
+    "reason": "Help web UI security challenge; no source support request submitted."
+  },
+  "/android_sms": {
+    "route": "/android_sms",
+    "reason": "The referenced source address returned HTTP 404 during the supplemental read-only capture.",
+    "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0002-public-android_sms-default.json"
+  },
+  "/fitbit/actions/log-weight": {
+    "route": "/fitbit/actions/log-weight",
+    "reason": "The referenced source address returned HTTP 404 during the supplemental read-only capture.",
+    "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0021-public-fitbit-actions-log-weight-default.json"
+  },
+  "/fitbit/triggers/new-daily-activity-summary": {
+    "route": "/fitbit/triggers/new-daily-activity-summary",
+    "reason": "The referenced source address returned HTTP 404 during the supplemental read-only capture.",
+    "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0022-public-fitbit-triggers-new-daily-activity-summary-default.json"
+  },
+  "/fitbit/triggers/new-sleep-logged": {
+    "route": "/fitbit/triggers/new-sleep-logged",
+    "reason": "The referenced source address returned HTTP 404 during the supplemental read-only capture.",
+    "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0023-public-fitbit-triggers-new-sleep-logged-default.json"
+  },
+  "/fitbit/triggers/new-weight-logged": {
+    "route": "/fitbit/triggers/new-weight-logged",
+    "reason": "The referenced source address returned HTTP 404 during the supplemental read-only capture.",
+    "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0024-public-fitbit-triggers-new-weight-logged-default.json"
+  }
+}

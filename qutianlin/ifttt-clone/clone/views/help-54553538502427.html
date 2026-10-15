@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>How to migrate from the old Buffer service to the new Buffer service on IFTTT - IFTTT Help</title><link rel="stylesheet" href="/local.css"></head><body class="local-shell help-page" data-local-route="/hc/en-us/articles/54553538502427" data-local-actor="anonymous" data-local-state="default"><header><a class="brand" href="/hc/en-us">IFTTT</a><nav><a href="/hc/en-us">Explore</a> <a href="/hc/en-us">My Applets</a></nav></header><main><a href="/hc/en-us">Help Center</a><h1>How to migrate from the old Buffer service to the new Buffer service on IFTTT</h1><article><h2 id="h_01M08YR5DPY1TF8QBZBHJ56W9P">Background</h2><p>IFTTT and Buffer teamed up to build something better: a whole new Buffer integration on IFTTT. If you've got Applets running on the old Buffer service, you'll need to connect the new service and rebuild them, since they won't carry over automatically. </p><p>Don't worry though, you won't have to do it all manually. Just ask IFTTT to rebuild them for you (<a href="/hc/en-us/articles/54553538502427"><span class="wysiwyg-underline">we'll show you how below</span></a>).</p><h2 id="h_01M08YV5C5CZQ9TCBWK0H0V8VQ">Whats changing</h2><p>Buffer will be retiring the older version of its API that the legacy IFTTT Buffer service relies on. Once that happens, Applets built on the legacy Buffer service will stop working, so now’s the time to make the switch.</p><p>This isn't just a replacement, it's an upgrade. You can now schedule posts for a specific date and time, publish immediately instead of just queuing, and get pinged if a post fails to send.</p><p>The new triggers and actions also come packed with more details to play with, like which social network a post went to or why it didn't send, so you can build Applets that are even more specific and personalized.</p><h2 id="h_01M08YVQR5SNXABJ78PH8Z45YE">How to connect the new Buffer service</h2><ol>
+<li data-list-item-id="ed8db5afd31c675cadf077c5c8fd58dc9">Go to <a href="/buffer" target="_blank" rel="noopener noreferrer">ifttt.com/buffer</a>, or search for "Buffer" in the IFTTT app</li>
+<li data-list-item-id="eec2aabe9e4b1b3ad7822cca29278e122">Tap <strong>Connect</strong>
+</li>
+<li data-list-item-id="e1fb2a51834612dac774fda565a10f377">Log in to your Buffer account if prompted, and authorize IFTTT to access it</li>
+<li data-list-item-id="e8361bdba388f289ec0c438a6b435f057">Once connected, you're ready to start building or recreating Applets</li>
+</ol><h2 id="h_01M08YZPTTMDPAP77KE2RZD549">How to recreate your Applets</h2><p><strong>The fastest way:</strong> just ask IFTTT to do it for you, using either:</p><ul>
+<li data-list-item-id="e5554883903e2bb7e436719767b46d738">Our new <a href="/create" target="_blank" rel="noopener noreferrer">Chat feature</a>
+</li>
+<li data-list-item-id="e84ec3d7f9bb7920abf72f9784bec1d95">
+<a href="/mcp" target="_blank" rel="noopener noreferrer">IFTTT MCP</a> in your favorite AI tool</li>
+</ul><p>Ask IFTTT to recreate your existing Buffer Applets on the new service, and it will rebuild them automatically with the new triggers and actions.<br><br>Still prefer to do it yourself, or have an Applet that needs a closer look? Follow these steps:</p><ol>
+<li data-list-item-id="e703b22483cc974f3b45b64f43ee70d65">Make a note of each Applet, including which trigger it uses and which action it takes.</li>
+<li data-list-item-id="e03e4f355071a28936d37bf0e2582c915">Create a new Applet using the equivalent trigger and action from the new Buffer service (see the mapping below).</li>
+<li data-list-item-id="e9180b87fcec2c04eedb8cc52fcecae87">Enable your new Applet, then disable or archive the old one.</li>
+</ol><p>Tip: Once you've recreated the Applets you want to keep, you're all set to disconnect the legacy Buffer service. Just make sure you've rebuilt everything you rely on first, since disconnecting from the legacy Buffer service will remove any Applets still tied to it.</p><h2 id="h_01M08Z2ENSXTCM18HJQEGZMV0Q">Old vs new: what maps to what</h2><h4 id="h_01M08Z3GMF2VVK2VXYY9927P27"><strong>Triggers:</strong></h4><figure class="wysiwyg-table" style="width: 100%;"><table class="wysiwyg-table-resized">
+<colgroup>
+<col style="width: 49%;">
+<col style="width: 51%;">
+</colgroup>
+<tbody>
+<tr>
+<td><strong>Legacy Buffer service</strong></td>
+<td><strong>New Buffer service</strong></td>
+</tr>
+<tr>
+<td><strong>Any new post in Buffer</strong></td>
+<td>
+<strong>New post sent</strong> — fires when a post is successfully published to a social network. Choose a specific channel or "Any channel" to cover all of them. Works for both text and photo posts.</td>
+</tr>
+<tr>
+<td><strong>Any new photo post in Buffer</strong></td>
+<td>Covered by <strong>New post sent</strong> (see above) — the new trigger applies to any post type, so there's no separate photo-only trigger.</td>
+</tr>
+<tr>
+<td><em>(not available before)</em></td>
+<td>
+<strong>Post failed to send</strong> — new trigger that fires if a post doesn't publish, so you can catch and respond to failures.</td>
+</tr>
+</tbody>
+</table></figure><h4 id="h_01M08Z9ANWDVBW21PENJSDE7A5"><strong>Actions:</strong></h4><div>
+<figure class="wysiwyg-table" style="width: 100%;"><table class="wysiwyg-table-resized">
+<colgroup>
+<col style="width: NaN%;">
+<col style="width: NaN%;">
+</colgroup>
+<tbody>
+<tr>
+<td><strong>Legacy Buffer service</strong></td>
+<td><strong>New Buffer service</strong></td>
+</tr>
+<tr>
+<td><strong>Add to Buffer</strong></td>
+<td>
+<strong>Add a post to the queue</strong> — adds a post to the queue for the channel you choose; Buffer schedules it automatically based on that channel's posting schedule.</td>
+</tr>
+<tr>
+<td><strong>Add photo to Buffer</strong></td>
+<td>Covered by <strong>Add a post to the queue</strong> (see above).</td>
+</tr>
+<tr>
+<td><em>(not available before)</em></td>
+<td>
+<strong>Schedule a post</strong> — schedules a post to publish at a specific date and time on the channel you choose.</td>
+</tr>
+<tr>
+<td><em>(not available before)</em></td>
+<td>
+<strong>Share a post now</strong> — publishes a post to the channel you choose immediately, skipping the queue.</td>
+</tr>
+</tbody>
+</table></figure><h2 id="h_01M08Z5JZA8RGBKZDAN7KZDJ66"><strong>Good to know before you rebuild</strong></h2>
+<ul>
+<li data-list-item-id="eb1634e8f919d2d3cc3eb4147678d1d65">
+<strong>For triggers, you can now choose a specific channel, or select "Any channel" </strong>to fire across all of your connected accounts</li>
+<li data-list-item-id="ebe0bc26919524907ae0bbe5c104dbae4">
+<strong>For actions, you'll now choose exactly which Buffer channel a post goes to.</strong> The legacy service didn't ask — now you have that control, which is especially handy if you manage more than one social account through Buffer.</li>
+<li data-list-item-id="e4dc3e457c515182a8d118996fd7b3293">
+<strong>Text and photo posts are now handled together.</strong> One trigger ("New post sent") and one set of actions cover any post type, so there's less to build and maintain overall. Just leave the image field blank for a text-only post. And if you do want to act only on photo posts, you can add a Filter Code step to check for an image before continuing, giving you that same fine-grained control if you need it.</li>
+<li data-list-item-id="e5be4d5433d2a7e0155231aeedfc8223f">
+<strong>Two brand-new actions</strong>: <em>Schedule a post</em> (pick an exact date and time) and <em>Share a post now</em> (publish immediately, bypassing the queue).</li>
+</ul>
+<h2 id="h_01M08Z655452RZ14QWFDW4QEPZ"><strong>Need help?</strong></h2>
+<p>If you run into any issues connecting the new Buffer service or recreating your Applets, <a href="/hc/en-us/articles/360021683013" target="_blank" rel="noopener noreferrer">contact IFTTT support.</a></p>
+</div></article><p>Comments: 0</p></main><footer><a href="/hc/en-us">Help Center</a> · <a href="/hc/en-us">Contact</a></footer><script src="/local.js" defer></script></body></html>

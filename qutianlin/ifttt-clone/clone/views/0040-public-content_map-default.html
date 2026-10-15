@@ -1,0 +1,4547 @@
+<!doctype html>
+<html lang="en"><head>
+  <link rel="preload" href="/assets/asset-000002.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000004.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000003.woff2" as="font" type="font/woff2">
+
+<style>
+/* IFTTT.ai rebrand — Museo Sans Rounded (site-wide base font). One @font-face per Museo cut; */
+/* CSS font-weight == the cut number (300 Light / 500 Regular / 700 body / 900 headings). */
+/* NB: map by cut name, not the weight Figma's inspect panel shows — a designer's desktop copy */
+/* may report ~200 less (700 for the 900 cut); these files carry OS/2 weight == cut number. */
+
+/* Museo Sans Rounded 300 (light) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 300;
+  src: url("/assets/dependency-000100.woff2") format("woff2"),
+    url("/assets/dependency-000101.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 500 (regular) — covers CSS 400–600 */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 500 600;
+  src: url("/assets/asset-000002.woff2") format("woff2"),
+    url("/assets/dependency-000102.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 700 (body) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 700;
+  src: url("/assets/asset-000004.woff2") format("woff2"),
+    url("/assets/dependency-000104.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 900 (black) — display headings */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 900;
+  src: url("/assets/asset-000003.woff2") format("woff2"),
+    url("/assets/dependency-000106.woff") format("woff");
+  font-display: swap;
+}
+
+/* Metric-matched fallback for the swap window: Avenir Next scaled to the Museo advance widths, with */
+/* the Museo line box (hhea 940/-260 divided by size-adjust), so the change to Museo moves no layout. */
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 500 600;
+  src: local("Avenir Next Medium"), local("AvenirNext-Medium");
+  size-adjust: 98.0%;
+  ascent-override: 95.92%;
+  descent-override: 26.53%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 700;
+  src: local("Avenir Next Bold"), local("AvenirNext-Bold");
+  size-adjust: 94.5%;
+  ascent-override: 99.47%;
+  descent-override: 27.51%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 900;
+  src: local("Avenir Next Heavy"), local("AvenirNext-Heavy");
+  size-adjust: 90.2%;
+  ascent-override: 104.21%;
+  descent-override: 28.82%;
+  line-gap-override: 0%;
+}
+
+/* Museo Sans Rounded 500 / 700 italic — fetched only by pages that set font-style: italic. */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 500 600;
+  src: url("/assets/asset-000981.woff2") format("woff2"),
+    url("/assets/dependency-000103.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/asset-001589.woff2") format("woff2"),
+    url("/assets/dependency-000105.woff") format("woff");
+  font-display: swap;
+}
+</style>
+
+  <!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+
+  
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0">
+<meta name="mobile-web-app-capable" content="yes">
+
+
+
+
+  <title>Content map - IFTTT</title>
+<meta name="description" content="Explore our most popular content, top services, most useful Applets and more.">
+<meta name="keywords" content="ifttt applets connect connections integrate integration automate automation services recipes trigger action ifthisthenthat free">
+<meta property="al:ios:url" content="ifttt://">
+<meta property="al:ios:app_store_id" content="660944635">
+<meta property="al:ios:app_name" content="IFTTT">
+<meta property="fb:app_id" content="122259781154546">
+<meta property="fb:admins" content="7302486">
+<meta property="og:title" content="Content map - IFTTT">
+<meta property="og:description" content="Explore our most popular content, top services, most useful Applets and more.">
+<meta property="og:site_name" content="IFTTT">
+<meta property="og:url" content="https://ifttt.com/content_map">
+<meta property="og:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@IFTTT">
+<meta name="twitter:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta name="twitter:app:id:iphone" content="660944635">
+<meta name="twitter:app:id:ipad" content="660944635">
+<meta name="twitter:app:id:googleplay" content="com.ifttt.ifttt">
+<meta name="twitter:app:url:iphone" content="ifttt://">
+<meta name="twitter:app:url:ipad" content="ifttt://">
+<meta name="twitter:app:url:googleplay" content="ifttt://">
+<meta name="twitter:app:name:googleplay" content="IFTTT">
+<meta name="author" content="IFTTT">
+<meta name="copyright" content="Copyright 2026 IFTTT Inc.">
+<meta name="theme-color" content="">
+<meta name="facebook-domain-verification" content="tapueff3rri63aug9c5b7hapbv3mkv">
+
+<!-- Standard SVG Favicon -->
+<link rel="icon" href="/assets/dependency-000091.svg" type="image/svg+xml">
+
+<!-- For all Apple Devices: -->
+<link rel="apple-touch-icon" href="/assets/dependency-000081.png">
+
+<!-- For Windows 8: -->
+<meta name="msapplication-TileImage" content="https://web-assets.ifttt.com/builds/assets/pinned-Dpomu1wG.png">
+<meta name="msapplication-TileColor" content="#111">
+
+
+
+
+  
+  <link rel="stylesheet" href="/assets/asset-000969.css">
+<link rel="stylesheet" href="/assets/asset-000117.css">
+<link rel="stylesheet" href="/assets/asset-000134.css">
+<link rel="stylesheet" href="/assets/asset-000135.css">
+<link rel="stylesheet" href="/assets/asset-000119.css">
+<link rel="stylesheet" href="/assets/asset-000120.css">
+  
+<link rel="stylesheet" href="/local.css"></head>
+
+<body class="home-body content-map-action   web-body" style="background-color: rgb(255, 255, 255);" data-local-route="/content_map" data-local-actor="anonymous" data-local-state="default">
+    <!-- Google Tag Manager (noscript) -->
+  <noscript></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  
+
+
+  
+
+
+
+  
+
+  
+
+    
+<header class="unified-header signed-out" style="background-color: #fff">
+  <div class="container header">
+    <section class="left-group">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/">
+  <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt" style="fill: #111"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>
+        <div class="search-container">
+          <div id="universal-search" class="ifttt-search ">
+<input id="universal-search-input" class="ifttt-search-input" type="search" aria-label="Search" placeholder="Search for Applets, services, etc." maxlength="1024" autocomplete="off" spellcheck="false">
+  <span class="icon search">
+    <svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" title="Search"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.299 10.571C17.299 8.71905 16.64 7.13505 15.324 5.81905C14.008 4.50205 12.424 3.84405 10.571 3.84405C8.71905 3.84405 7.13505 4.50205 5.81905 5.81905C4.50205 7.13505 3.84405 8.71905 3.84405 10.571C3.84405 12.423 4.50205 14.008 5.81905 15.324C7.13505 16.64 8.71905 17.299 10.571 17.299C12.423 17.299 14.008 16.64 15.324 15.324C16.64 14.008 17.299 12.424 17.299 10.571ZM24.987 23.065C24.987 23.585 24.797 24.035 24.417 24.416C24.036 24.796 23.585 24.986 23.065 24.986C22.525 24.986 22.074 24.796 21.713 24.416L16.563 19.281C14.771 20.522 12.773 21.143 10.571 21.143C9.14005 21.143 7.77105 20.865 6.46405 20.309C5.15805 19.754 4.03205 19.003 3.08605 18.057C2.14005 17.111 1.38905 15.985 0.833046 14.678C0.279261 13.3799 -0.00417164 11.9824 4.63958e-05 10.571C4.63958e-05 9.14005 0.278046 7.77105 0.833046 6.46405C1.38905 5.15805 2.14005 4.03205 3.08605 3.08605C4.03205 2.14005 5.15805 1.38905 6.46405 0.833046C7.76224 0.279261 9.15967 -0.00417164 10.571 4.63958e-05C12.003 4.63958e-05 13.371 0.278046 14.678 0.833046C15.985 1.38905 17.111 2.14005 18.057 3.08605C19.003 4.03205 19.754 5.15805 20.309 6.46405C20.865 7.77105 21.143 9.14005 21.143 10.571C21.143 12.774 20.523 14.771 19.281 16.563L24.431 21.713C24.801 22.083 24.987 22.534 24.987 23.065V23.065Z" fill="#111"></path></svg>
+  </span>
+  <span class="icon clean-search">
+    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-x"><rect width="24" height="24" rx="8" fill="#111" fill-opacity="0.06"></rect><path d="M15.2803 7.30566C15.6637 6.90826 16.2969 6.89686 16.6943 7.28027C17.0917 7.66374 17.1031 8.2969 16.7197 8.69433L13.3892 12.145L16.439 15.3057C16.8225 15.7031 16.8115 16.3362 16.4141 16.7197C16.0166 17.1032 15.3835 17.0918 15 16.6943L12 13.585L9 16.6943C8.6165 17.0918 7.98336 17.1032 7.58594 16.7197C7.18851 16.3362 7.17754 15.7031 7.56103 15.3057L10.6104 12.145L7.28027 8.69433C6.89686 8.2969 6.90826 7.66374 7.30566 7.28027C7.7031 6.89686 8.33626 6.90826 8.71973 7.30566L12 10.7051L15.2803 7.30566Z" fill="#666"></path></svg>
+  </span>
+
+  
+            <section class="universal-search-helper">
+  <div class="default-recommendations">
+    <section class="recent-searches hide">
+      <span class="universal-search-helper-title">Recent</span>
+      <ul class="universal-search-helper-list">
+        <li class="loading-dots"><img loading="lazy" fetchpriority="low" width="150" height="343" title="Loading-dots" alt="Loading-dots icon" src="/assets/asset-000006.gif"></li>
+      </ul>
+    </section>
+
+      <section class="recommended-services">
+        <span class="universal-search-helper-title">Recommendations</span>
+        <ul class="universal-search-helper-list">
+            <li>
+              <a href="/maker_webhooks">
+                <div class="recent-search-icon" style="background-color: #0099ff">
+                  <img alt="Webhooks" title="Webhooks" width="24" height="24" loading="lazy" src="/assets/asset-000035.bin">
+                </div>
+                <span class="recent-search-text">Webhooks</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/twitter">
+                <div class="recent-search-icon" style="background-color: #000000">
+                  <img alt="X (Twitter)" title="X (Twitter)" width="24" height="24" loading="lazy" src="/assets/asset-000036.bin">
+                </div>
+                <span class="recent-search-text">X (Twitter)</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/youtube">
+                <div class="recent-search-icon" style="background-color: #FF0000">
+                  <img alt="YouTube" title="YouTube" width="24" height="24" loading="lazy" src="/assets/asset-000037.bin">
+                </div>
+                <span class="recent-search-text">YouTube</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/discord">
+                <div class="recent-search-icon" style="background-color: #5865f2">
+                  <img alt="Discord" title="Discord" width="24" height="24" loading="lazy" src="/assets/asset-000038.bin">
+                </div>
+                <span class="recent-search-text">Discord</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/google_sheets">
+                <div class="recent-search-icon" style="background-color: #23448b">
+                  <img alt="Google Sheets" title="Google Sheets" width="24" height="24" loading="lazy" src="/assets/asset-000039.bin">
+                </div>
+                <span class="recent-search-text">Google Sheets</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/myq_devices">
+                <div class="recent-search-icon" style="background-color: #009CDE">
+                  <img alt="MyQ" title="MyQ" width="24" height="24" loading="lazy" src="/assets/asset-000040.bin">
+                </div>
+                <span class="recent-search-text">MyQ</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/gmail">
+                <div class="recent-search-icon" style="background-color: #23448b">
+                  <img alt="Gmail" title="Gmail" width="24" height="24" loading="lazy" src="/assets/asset-000041.bin">
+                </div>
+                <span class="recent-search-text">Gmail</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/instagram">
+                <div class="recent-search-icon" style="background-color: #e4405f">
+                  <img alt="Instagram" title="Instagram" width="24" height="24" loading="lazy" src="/assets/asset-000042.bin">
+                </div>
+                <span class="recent-search-text">Instagram</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+        </ul>
+      </section>
+  </div>
+
+  <section class="search-preview">
+    <ul class="universal-search-helper-list">
+      <li class="loading-dots"><img loading="lazy" fetchpriority="low" width="150" height="343" title="Loading-dots" alt="Loading-dots icon" src="/assets/asset-000006.gif"></li>
+    </ul>
+  </section>
+
+  <a class="search-navigation" href="#">
+    <span>See all results</span>
+    <svg width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg" title="Arrow-right"><g clip-path="url(#clip0_52729_108402)"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.42027 0.46167L12.0564 5.84166L6.42027 11.2216L4.86156 9.73378L7.83645 6.8941H0.984375V4.78921H7.83645L4.86155 1.94954L6.42027 0.46167Z" fill="#09F"></path></g><defs><clippath id="clip0_52729_108402"><rect width="12" height="12" fill="#fff" transform="translate(0.5)"></rect></clippath></defs></svg>
+</a></section>
+
+
+</div>          <div class="mobile-close-search-icon">
+            <svg width="24" height="25" viewbox="0 0 11 11" xmlns="http://www.w3.org/2000/svg" class="close-icon">
+              <title>Close menu</title>
+              <g stroke="#111" stroke-width="2.5" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                <path d="M1.598 1.598l7.717 7.717M9.447 1.598L1.73 9.315"></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+    </section>
+
+      <section class="right-group signed-out">
+        <a class="nav-link link-menu" title="Explore" href="/explore">
+          Explore
+</a>
+        <a class="nav-link link-menu" title="Plans" href="/plans">
+          Plans
+</a>
+        <a class="sign-in button-tertiary button-outlined " href="/login">Log in</a>
+
+          <a title="Get started" class="button-tertiary  sign-up signed-out" href="/join?source=site-header">
+            Get started
+</a>          <span class="mobile-icon-search">
+            <svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" title="Search"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.299 10.571C17.299 8.71905 16.64 7.13505 15.324 5.81905C14.008 4.50205 12.424 3.84405 10.571 3.84405C8.71905 3.84405 7.13505 4.50205 5.81905 5.81905C4.50205 7.13505 3.84405 8.71905 3.84405 10.571C3.84405 12.423 4.50205 14.008 5.81905 15.324C7.13505 16.64 8.71905 17.299 10.571 17.299C12.423 17.299 14.008 16.64 15.324 15.324C16.64 14.008 17.299 12.424 17.299 10.571ZM24.987 23.065C24.987 23.585 24.797 24.035 24.417 24.416C24.036 24.796 23.585 24.986 23.065 24.986C22.525 24.986 22.074 24.796 21.713 24.416L16.563 19.281C14.771 20.522 12.773 21.143 10.571 21.143C9.14005 21.143 7.77105 20.865 6.46405 20.309C5.15805 19.754 4.03205 19.003 3.08605 18.057C2.14005 17.111 1.38905 15.985 0.833046 14.678C0.279261 13.3799 -0.00417164 11.9824 4.63958e-05 10.571C4.63958e-05 9.14005 0.278046 7.77105 0.833046 6.46405C1.38905 5.15805 2.14005 4.03205 3.08605 3.08605C4.03205 2.14005 5.15805 1.38905 6.46405 0.833046C7.76224 0.279261 9.15967 -0.00417164 10.571 4.63958e-05C12.003 4.63958e-05 13.371 0.278046 14.678 0.833046C15.985 1.38905 17.111 2.14005 18.057 3.08605C19.003 4.03205 19.754 5.15805 20.309 6.46405C20.865 7.77105 21.143 9.14005 21.143 10.571C21.143 12.774 20.523 14.771 19.281 16.563L24.431 21.713C24.801 22.083 24.987 22.534 24.987 23.065V23.065Z" fill="#111"></path></svg>
+          </span>
+      </section>
+      <section class="mobile-icon">
+        
+<span id="unified_mobile_menu" role="button" class="closed" tabindex="0">
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hamburger-icon">
+    <title>Mobile menu</title>
+    <g fill="#111" id="mobile-hamburger-icon">
+      <path d="M19.6504 15C20.5617 15 21.3008 15.7391 21.3008 16.6504C21.3008 17.5617 20.5617 18.3008 19.6504 18.3008H1.65039C0.739121 18.3008 0 17.5617 0 16.6504C0 15.7391 0.739121 15 1.65039 15H19.6504ZM19.6504 7.5C20.5617 7.5 21.3008 8.23912 21.3008 9.15039C21.3008 10.0617 20.5617 10.8008 19.6504 10.8008H1.65039C0.739121 10.8008 0 10.0617 0 9.15039C0 8.23912 0.739121 7.5 1.65039 7.5H19.6504ZM19.6504 0C20.5617 0 21.3008 0.739121 21.3008 1.65039C21.3008 2.56166 20.5617 3.30078 19.6504 3.30078H1.65039C0.739121 3.30078 0 2.56166 0 1.65039C0 0.739121 0.739121 0 1.65039 0H19.6504Z" transform="translate(1.35 2.85)"></path>
+    </g>
+  </svg>
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="close-icon">
+    <title>Close menu</title>
+    <path fill="#111" d="M16.4901 0.535065C17.1612 -0.160319 18.2692 -0.180639 18.9648 0.490143C19.66 1.16128 19.6797 2.26933 19.0087 2.96475L12.1815 10.0399L18.4482 16.5351C19.1189 17.2305 19.0993 18.3377 18.4042 19.0087C17.7088 19.6797 16.6007 19.66 15.9296 18.9648L9.74991 12.5595L3.57022 18.9648C2.89918 19.6602 1.79112 19.6796 1.09561 19.0087C0.400326 18.3376 0.380671 17.2305 1.05167 16.5351L7.31729 10.0399L0.490143 2.96475C-0.180639 2.26923 -0.160319 1.16115 0.535065 0.490143C1.23058 -0.180569 2.3377 -0.16026 3.0087 0.535065L9.74893 7.52042L16.4901 0.535065Z" transform="translate(2.25 2.25)"></path>
+  </svg>
+</span>
+
+
+      </section>
+  </div>
+
+</header>
+
+
+  <div id="flash-messages">
+    
+  </div>
+
+  <div class="after-header-content">
+    
+  </div>
+
+  <div class="page-canvas">
+    <main class="container web">
+        
+
+<section class="intro">
+  <div class="container">
+    <h1>Content map</h1>
+    <p class="txt-body-1 tagline">Explore our most popular content, top services, most useful Applets and more.</p>
+    <div class="sign-up-cta">
+      <a class="button-tertiary" href="/join">Get started</a>
+    </div>
+</div></section>
+
+<section class="content-list services">
+  <h2>General</h2>
+  <ul>
+      <li>
+        <a href="/about">About</a>
+      </li>
+      <li>
+        <a href="/careers">Careers</a>
+      </li>
+      <li>
+        <a href="/contact">Contact</a>
+      </li>
+      <li>
+        <a href="/developers">Developers</a>
+      </li>
+      <li>
+        <a href="/docs">Developer Docs</a>
+      </li>
+      <li>
+        <a href="/explore">Explore all</a>
+      </li>
+      <li>
+        <a href="/explore/applets">Explore Applets</a>
+      </li>
+      <li>
+        <a href="/explore/stories">Explore posts</a>
+      </li>
+      <li>
+        <a href="/explore/stories.rss">Explore posts RSS</a>
+      </li>
+      <li>
+        <a href="/explore/services">Explore Services</a>
+      </li>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/help">Help</a>
+      </li>
+      <li>
+        <a href="/mcp">IFTTT MCP</a>
+      </li>
+      <li>
+        <a href="/plans">Plans</a>
+      </li>
+      <li>
+        <a href="/terms">Privacy</a>
+      </li>
+      <li>
+        <a href="/search">Search</a>
+      </li>
+  </ul>
+</section>
+
+<section class="content-list services">
+  <h2>All services</h2>
+  <ul>
+      <li>
+        <a href="/5_minute_crafts"> 5-Minute Crafts</a>
+      </li>
+      <li>
+        <a href="/the_verge"> The Verge on YouTube</a>
+      </li>
+      <li>
+        <a href="/1shotapi">1Shot API</a>
+      </li>
+      <li>
+        <a href="/2smart_cloud">2Smart Cloud</a>
+      </li>
+      <li>
+        <a href="/99_percent_invisible">99% Invisible</a>
+      </li>
+      <li>
+        <a href="/abode">abode</a>
+      </li>
+      <li>
+        <a href="/intesishome">AC Cloud Control</a>
+      </li>
+      <li>
+        <a href="/aclu">ACLU</a>
+      </li>
+      <li>
+        <a href="/active_campaign">ActiveCampaign</a>
+      </li>
+      <li>
+        <a href="/acuity_scheduling">Acuity Scheduling</a>
+      </li>
+      <li>
+        <a href="/adafruit">Adafruit</a>
+      </li>
+      <li>
+        <a href="/AduroSmart">AduroSmart</a>
+      </li>
+      <li>
+        <a href="/AerialTechnologies">Aerial Technologies</a>
+      </li>
+      <li>
+        <a href="/agile_octopus">Agile Octopus</a>
+      </li>
+      <li>
+        <a href="/ai_content_creator">AI Content Creator</a>
+      </li>
+      <li>
+        <a href="/ai_facebook_assistant">AI Facebook Assistant</a>
+      </li>
+      <li>
+        <a href="/ai_grammar_assistant">AI Grammar Assistant</a>
+      </li>
+      <li>
+        <a href="/ai_linkedin_assistant">AI LinkedIn Assistant</a>
+      </li>
+      <li>
+        <a href="/ai_prompt">AI Prompt</a>
+      </li>
+      <li>
+        <a href="/ai_social_creator">AI Social Creator</a>
+      </li>
+      <li>
+        <a href="/ai_summarizer">AI Summarizer</a>
+      </li>
+      <li>
+        <a href="/ai_translation">AI Translation</a>
+      </li>
+      <li>
+        <a href="/ai_twitter_assistant">AI Twitter Assistant</a>
+      </li>
+      <li>
+        <a href="/ai_youtube_assistant">AI YouTube Assistant</a>
+      </li>
+      <li>
+        <a href="/aisync">Ai-Sync</a>
+      </li>
+      <li>
+        <a href="/LDS_AiDot">AiDot</a>
+      </li>
+      <li>
+        <a href="/aimore">Aimore Smart</a>
+      </li>
+      <li>
+        <a href="/Air_Monitor">Air Monitor</a>
+      </li>
+      <li>
+        <a href="/air_q">air-Q</a>
+      </li>
+      <li>
+        <a href="/theairbolt">AirBolt</a>
+      </li>
+      <li>
+        <a href="/airmenu">AirMenu</a>
+      </li>
+      <li>
+        <a href="/airnow">AirNow</a>
+      </li>
+      <li>
+        <a href="/airpatrol">AirPatrol WiFi</a>
+      </li>
+      <li>
+        <a href="/airtable">Airtable</a>
+      </li>
+      <li>
+        <a href="/airthings">Airthings</a>
+      </li>
+      <li>
+        <a href="/airtouch">AirTouch</a>
+      </li>
+      <li>
+        <a href="/airzone">Airzone Cloud</a>
+      </li>
+      <li>
+        <a href="/akari_ai">Akari</a>
+      </li>
+      <li>
+        <a href="/akiflow">Akiflow</a>
+      </li>
+      <li>
+        <a href="/alko_smart_garden">AL-KO Smart Garden</a>
+      </li>
+      <li>
+        <a href="/AlexaActionsByMkzense">Alexa Actions by mkZense</a>
+      </li>
+      <li>
+        <a href="/alexa_doorbell">Alexa Doorbell by IJPUK Solutions</a>
+      </li>
+      <li>
+        <a href="/voicemonkey">Alexa Voice Monkey</a>
+      </li>
+      <li>
+        <a href="/allo_info_algorand">Algorand blockchain</a>
+      </li>
+      <li>
+        <a href="/all_things_considered_podcast">All Things Considered Podcast</a>
+      </li>
+      <li>
+        <a href="/alpaca">Alpaca</a>
+      </li>
+      <li>
+        <a href="/Amba">Amba</a>
+      </li>
+      <li>
+        <a href="/ambiclimate">Ambi Climate</a>
+      </li>
+      <li>
+        <a href="/ambient_weather">Ambient Weather</a>
+      </li>
+      <li>
+        <a href="/apa">American Psychological Association</a>
+      </li>
+      <li>
+        <a href="/american_standard_home">American Standard® Home</a>
+      </li>
+      <li>
+        <a href="/aminiti">Aminiti</a>
+      </li>
+      <li>
+        <a href="/amplenote">Amplenote</a>
+      </li>
+      <li>
+        <a href="/android_activity">Android Activity</a>
+      </li>
+      <li>
+        <a href="/android_battery">Android Battery</a>
+      </li>
+      <li>
+        <a href="/android_device">Android Device</a>
+      </li>
+      <li>
+        <a href="/android_phone">Android Phone Call</a>
+      </li>
+      <li>
+        <a href="/android_photos">Android Photos</a>
+      </li>
+      <li>
+        <a href="/android_messages">Android SMS</a>
+      </li>
+      <li>
+        <a href="/angelcam">Angelcam</a>
+      </li>
+      <li>
+        <a href="/claude">Anthropic Claude</a>
+      </li>
+      <li>
+        <a href="/ialarmxr">Antifurto365 iALARM-MK</a>
+      </li>
+      <li>
+        <a href="/AnywareServices">Anyware Services</a>
+      </li>
+      <li>
+        <a href="/apify">Apify</a>
+      </li>
+      <li>
+        <a href="/apilio">Apilio</a>
+      </li>
+      <li>
+        <a href="/apollo">Apollo</a>
+      </li>
+      <li>
+        <a href="/app_store">Apple App Store</a>
+      </li>
+      <li>
+        <a href="/apple_itunes">Apple News and Music</a>
+      </li>
+      <li>
+        <a href="/ios_reminders">Apple Reminders</a>
+      </li>
+      <li>
+        <a href="/Aqara_Home_EU">Aqara Home for EU </a>
+      </li>
+      <li>
+        <a href="/Aqara_Home_RU">Aqara Home for RU</a>
+      </li>
+      <li>
+        <a href="/Aqara_Home">Aqara Home for US</a>
+      </li>
+      <li>
+        <a href="/aquanta">Aquanta</a>
+      </li>
+      <li>
+        <a href="/arattai">Arattai</a>
+      </li>
+      <li>
+        <a href="/arlo">Arlo</a>
+      </li>
+      <li>
+        <a href="/asana">Asana</a>
+      </li>
+      <li>
+        <a href="/assemblyai">AssemblyAI</a>
+      </li>
+      <li>
+        <a href="/asukaiot">Asuka IoT</a>
+      </li>
+      <li>
+        <a href="/asusrouter">ASUS Router</a>
+      </li>
+      <li>
+        <a href="/asuszeneye">ASUS ZenEye</a>
+      </li>
+      <li>
+        <a href="/attm2x">AT&amp;T M2X</a>
+      </li>
+      <li>
+        <a href="/ATLANTIC_Cozytouch">ATLANTIC Cozytouch</a>
+      </li>
+      <li>
+        <a href="/augusthome">August</a>
+      </li>
+      <li>
+        <a href="/auphonic">Auphonic</a>
+      </li>
+      <li>
+        <a href="/aura">Aura</a>
+      </li>
+      <li>
+        <a href="/aura_air">Aura Air </a>
+      </li>
+      <li>
+        <a href="/automateshades">Automate Shades</a>
+      </li>
+      <li>
+        <a href="/automateshades_v2">Automate Shades V2</a>
+      </li>
+      <li>
+        <a href="/automate_your_life">Automate Your Life</a>
+      </li>
+      <li>
+        <a href="/aweber">AWeber</a>
+      </li>
+      <li>
+        <a href="/aypro">AYPRO</a>
+      </li>
+      <li>
+        <a href="/brainstorm9">B9</a>
+      </li>
+      <li>
+        <a href="/ballotpedia">Ballotpedia</a>
+      </li>
+      <li>
+        <a href="/bamboo_hr">BambooHR</a>
+      </li>
+      <li>
+        <a href="/bart_delay">BART </a>
+      </li>
+      <li>
+        <a href="/basecamp">Basecamp</a>
+      </li>
+      <li>
+        <a href="/WattuneedBatteryUP">Battery UP</a>
+      </li>
+      <li>
+        <a href="/bbc_news">BBC News</a>
+      </li>
+      <li>
+        <a href="/bbc_sport_cricket">BBC Sport - Cricket</a>
+      </li>
+      <li>
+        <a href="/BBC_Sport_Football">BBC Sport - Football</a>
+      </li>
+      <li>
+        <a href="/bbc_sport_rugby">BBC Sport - Rugby</a>
+      </li>
+      <li>
+        <a href="/bbox_miami">Bbox Miami</a>
+      </li>
+      <li>
+        <a href="/beam">beam</a>
+      </li>
+      <li>
+        <a href="/beds24">Beds24</a>
+      </li>
+      <li>
+        <a href="/beehiiv">Beehiiv</a>
+      </li>
+      <li>
+        <a href="/beeminder">Beeminder</a>
+      </li>
+      <li>
+        <a href="/craft_beer_brewing">Beer &amp; Brewing</a>
+      </li>
+      <li>
+        <a href="/bang_olufsens_beo_link_gateway">BeoLiving Intelligence</a>
+      </li>
+      <li>
+        <a href="/beseye">Beseye</a>
+      </li>
+      <li>
+        <a href="/BG_HOME">BG Home</a>
+      </li>
+      <li>
+        <a href="/big_think">Big Think</a>
+      </li>
+      <li>
+        <a href="/Birds_Bloom">Birds &amp; Bloom</a>
+      </li>
+      <li>
+        <a href="/bitly">Bitly</a>
+      </li>
+      <li>
+        <a href="/blickdomi_compact">Blickdomi Compact</a>
+      </li>
+      <li>
+        <a href="/blink">Blink</a>
+      </li>
+      <li>
+        <a href="/blink_eu">Blink (Europe)</a>
+      </li>
+      <li>
+        <a href="/blink1">blink(1)</a>
+      </li>
+      <li>
+        <a href="/blogger">Blogger</a>
+      </li>
+      <li>
+        <a href="/blooio">Blooio</a>
+      </li>
+      <li>
+        <a href="/blueconnect">Blue Connect</a>
+      </li>
+      <li>
+        <a href="/bluelink">BlueLink Smart Connect</a>
+      </li>
+      <li>
+        <a href="/bluesky">Bluesky</a>
+      </li>
+      <li>
+        <a href="/blurams">Blurams</a>
+      </li>
+      <li>
+        <a href="/bocco">BOCCO</a>
+      </li>
+      <li>
+        <a href="/bocco_emo">BOCCO emo</a>
+      </li>
+      <li>
+        <a href="/bon_appetit">Bon Appétit</a>
+      </li>
+      <li>
+        <a href="/boondock_tech">Boondock Echo</a>
+      </li>
+      <li>
+        <a href="/bosma">BOSMA</a>
+      </li>
+      <li>
+        <a href="/botghost">BotGhost</a>
+      </li>
+      <li>
+        <a href="/Botslab_Asia">Botslab (Asia)</a>
+      </li>
+      <li>
+        <a href="/Botslab_Europe">Botslab (Europe)</a>
+      </li>
+      <li>
+        <a href="/Botslab_NorthAmerica">Botslab (North America)</a>
+      </li>
+      <li>
+        <a href="/bouncie">Bouncie</a>
+      </li>
+      <li>
+        <a href="/boundary">Boundary</a>
+      </li>
+      <li>
+        <a href="/box">Box</a>
+      </li>
+      <li>
+        <a href="/boxcar_2">Boxcar 2</a>
+      </li>
+      <li>
+        <a href="/brainyquote">BrainyQuote</a>
+      </li>
+      <li>
+        <a href="/brevo">Brevo</a>
+      </li>
+      <li>
+        <a href="/brilliant_nexus">Brilliant Nexus</a>
+      </li>
+      <li>
+        <a href="/brilliant_smart">Brilliant Smart</a>
+      </li>
+      <li>
+        <a href="/broadlink">BroadLink</a>
+      </li>
+      <li>
+        <a href="/buffer">Buffer</a>
+      </li>
+      <li>
+        <a href="/bulkpublish">BulkPublish</a>
+      </li>
+      <li>
+        <a href="/bullseye_podcast">Bullseye Podcast</a>
+      </li>
+      <li>
+        <a href="/bea">Bureau of Economic Analysis</a>
+      </li>
+      <li>
+        <a href="/busybox">BusyBox</a>
+      </li>
+      <li>
+        <a href="/do_button">Button widget</a>
+      </li>
+      <li>
+        <a href="/buymeacoffee">Buy Me a Coffee</a>
+      </li>
+      <li>
+        <a href="/buzzfeed_news">BuzzFeed</a>
+      </li>
+      <li>
+        <a href="/buzzsprout">Buzzsprout</a>
+      </li>
+      <li>
+        <a href="/ch_remote">C&amp;H Remote AC</a>
+      </li>
+      <li>
+        <a href="/CHRemoteA1">C&amp;H Remote Dehumidifier</a>
+      </li>
+      <li>
+        <a href="/caavo">Caavo</a>
+      </li>
+      <li>
+        <a href="/cal_com">Cal.com</a>
+      </li>
+      <li>
+        <a href="/calendly">Calendly</a>
+      </li>
+      <li>
+        <a href="/callmebot">CallMeBot Phone Call</a>
+      </li>
+      <li>
+        <a href="/caltrain">Caltrain</a>
+      </li>
+      <li>
+        <a href="/do_camera">Camera widget</a>
+      </li>
+      <li>
+        <a href="/camio">Camio</a>
+      </li>
+      <li>
+        <a href="/campaign_monitor">Campaign Monitor</a>
+      </li>
+      <li>
+        <a href="/captivate">Captivate</a>
+      </li>
+      <li>
+        <a href="/castmagic">Castmagic</a>
+      </li>
+      <li>
+        <a href="/celebright">Celebright</a>
+      </li>
+      <li>
+        <a href="/cdc">Centers for Disease Control and Prevention</a>
+      </li>
+      <li>
+        <a href="/cgp_grey">CGP Grey</a>
+      </li>
+      <li>
+        <a href="/chacon_dio">Chacon / DiO</a>
+      </li>
+      <li>
+        <a href="/chatgpt">ChatGPT</a>
+      </li>
+      <li>
+        <a href="/chatwork">Chatwork</a>
+      </li>
+      <li>
+        <a href="/cta">Chicago Transit Authority</a>
+      </li>
+      <li>
+        <a href="/chiekoo_bell">Chiekoo Bell</a>
+      </li>
+      <li>
+        <a href="/cicero">Cicero</a>
+      </li>
+      <li>
+        <a href="/cielo_home">Cielo Home</a>
+      </li>
+      <li>
+        <a href="/circle">Circle</a>
+      </li>
+      <li>
+        <a href="/cityofbeverlyhills">City of Beverly Hills</a>
+      </li>
+      <li>
+        <a href="/tampa">City of Tampa, Florida</a>
+      </li>
+      <li>
+        <a href="/clickfunnels">ClickFunnels</a>
+      </li>
+      <li>
+        <a href="/clicksend">ClickSend SMS</a>
+      </li>
+      <li>
+        <a href="/clickup">ClickUp</a>
+      </li>
+      <li>
+        <a href="/clinicaltrials">ClinicalTrials.gov</a>
+      </li>
+      <li>
+        <a href="/clockify">Clockify</a>
+      </li>
+      <li>
+        <a href="/cloud_bot">Cloud BOT</a>
+      </li>
+      <li>
+        <a href="/link_smart_home">Cloud Intelligence</a>
+      </li>
+      <li>
+        <a href="/cloudflare">Cloudflare</a>
+      </li>
+      <li>
+        <a href="/cloudrain">CloudRain Smart Garden Irrigation</a>
+      </li>
+      <li>
+        <a href="/cnbc">CNBC</a>
+      </li>
+      <li>
+        <a href="/cnet">CNET on YouTube</a>
+      </li>
+      <li>
+        <a href="/coda">Coda</a>
+      </li>
+      <li>
+        <a href="/code_switch_podcast">Code Switch Podcast</a>
+      </li>
+      <li>
+        <a href="/codeqr">CodeQR - Link and QR Analytics</a>
+      </li>
+      <li>
+        <a href="/coinbase">Coinbase</a>
+      </li>
+      <li>
+        <a href="/cololight">Cololight</a>
+      </li>
+      <li>
+        <a href="/ComEd">ComEd</a>
+      </li>
+      <li>
+        <a href="/Confio">Confio</a>
+      </li>
+      <li>
+        <a href="/congress_gov">Congress.gov</a>
+      </li>
+      <li>
+        <a href="/dooya_connector">Connector</a>
+      </li>
+      <li>
+        <a href="/consider_this_podcast">Consider This Podcast</a>
+      </li>
+      <li>
+        <a href="/constant_contact">Constant Contact</a>
+      </li>
+      <li>
+        <a href="/convo">Convo</a>
+      </li>
+      <li>
+        <a href="/convo_ai">Convo AI</a>
+      </li>
+      <li>
+        <a href="/copper">Copper</a>
+      </li>
+      <li>
+        <a href="/coqon">coqon</a>
+      </li>
+      <li>
+        <a href="/coresmarthome">Core Smart Home</a>
+      </li>
+      <li>
+        <a href="/cosmopolitan">Cosmopolitan</a>
+      </li>
+      <li>
+        <a href="/crashcourse">CrashCourse on YouTube</a>
+      </li>
+      <li>
+        <a href="/creator_science_podcast">Creator Science Podcast</a>
+      </li>
+      <li>
+        <a href="/crime_junkie_podcast">Crime Junkie Podcast</a>
+      </li>
+      <li>
+        <a href="/csvbox">CSVbox</a>
+      </li>
+      <li>
+        <a href="/cursor">Cursor</a>
+      </li>
+      <li>
+        <a href="/customer_io">Customer.io</a>
+      </li>
+      <li>
+        <a href="/dlink_wifi_router">D-Link Wi-Fi Router</a>
+      </li>
+      <li>
+        <a href="/dailymotion">Dailymotion</a>
+      </li>
+      <li>
+        <a href="/daring_fireball">Daring Fireball</a>
+      </li>
+      <li>
+        <a href="/darknet_diaries_podcast">Darknet Diaries Podcast</a>
+      </li>
+      <li>
+        <a href="/dart">DART</a>
+      </li>
+      <li>
+        <a href="/daskeyboardq">Das Keyboard Q</a>
+      </li>
+      <li>
+        <a href="/datadotworld">data.world</a>
+      </li>
+      <li>
+        <a href="/date_and_time">Date &amp; Time</a>
+      </li>
+      <li>
+        <a href="/DawnHouse">Dawn House</a>
+      </li>
+      <li>
+        <a href="/dawnHouseIftttBR">Dawn House  BR</a>
+      </li>
+      <li>
+        <a href="/dawnHouseIftttAUS">Dawn House AUS</a>
+      </li>
+      <li>
+        <a href="/dawnHouseIftttCAN">Dawn House CAN</a>
+      </li>
+      <li>
+        <a href="/day_one">Day One</a>
+      </li>
+      <li>
+        <a href="/deep_dive">Deep Dive with Ali Abdaal</a>
+      </li>
+      <li>
+        <a href="/deepseek">DeepSeek</a>
+      </li>
+      <li>
+        <a href="/defector">Defector</a>
+      </li>
+      <li>
+        <a href="/delphy">Delphy Automation</a>
+      </li>
+      <li>
+        <a href="/usda">Department of Agriculture</a>
+      </li>
+      <li>
+        <a href="/dod">Department of Defense</a>
+      </li>
+      <li>
+        <a href="/dol">Department of Labor</a>
+      </li>
+      <li>
+        <a href="/dos">Department of State</a>
+      </li>
+      <li>
+        <a href="/destiny_2">Destiny 2</a>
+      </li>
+      <li>
+        <a href="/diablo_iii">Diablo III</a>
+      </li>
+      <li>
+        <a href="/discord">Discord</a>
+      </li>
+      <li>
+        <a href="/disec_tronic">Disec Tronic</a>
+      </li>
+      <li>
+        <a href="/disqus">Disqus</a>
+      </li>
+      <li>
+        <a href="/dobiss">Dobiss NXT</a>
+      </li>
+      <li>
+        <a href="/docsend">DocSend</a>
+      </li>
+      <li>
+        <a href="/docusign">DocuSign</a>
+      </li>
+      <li>
+        <a href="/domovea">domovea</a>
+      </li>
+      <li>
+        <a href="/donation_manager">Donation Manager RedCloud™</a>
+      </li>
+      <li>
+        <a href="/dondeesta">dondeEsta Family</a>
+      </li>
+      <li>
+        <a href="/dormakabaTAS">dormakaba TAS</a>
+      </li>
+      <li>
+        <a href="/dota_2">Dota 2</a>
+      </li>
+      <li>
+        <a href="/dothub">DotHub</a>
+      </li>
+      <li>
+        <a href="/dozens">Dozens</a>
+      </li>
+      <li>
+        <a href="/dribbble_job_board">Dribbble Job Board</a>
+      </li>
+      <li>
+        <a href="/drip">Drip</a>
+      </li>
+      <li>
+        <a href="/dropbox">Dropbox</a>
+      </li>
+      <li>
+        <a href="/duct_tape_marketing">Duct Tape Marketing</a>
+      </li>
+      <li>
+        <a href="/dude_perfect">Dude Perfect</a>
+      </li>
+      <li>
+        <a href="/econnect">e-Connect</a>
+      </li>
+      <li>
+        <a href="/earthone">EarthOne</a>
+      </li>
+      <li>
+        <a href="/earzz">EARZZ</a>
+      </li>
+      <li>
+        <a href="/easycontrol_bosch">EasyControl of Bosch</a>
+      </li>
+      <li>
+        <a href="/easycsv">EasyCSV</a>
+      </li>
+      <li>
+        <a href="/easyftp">EasyFTP</a>
+      </li>
+      <li>
+        <a href="/eater">Eater</a>
+      </li>
+      <li>
+        <a href="/ebay">eBay</a>
+      </li>
+      <li>
+        <a href="/ebird">eBird</a>
+      </li>
+      <li>
+        <a href="/eclosion">Eclosion</a>
+      </li>
+      <li>
+        <a href="/ecobee">ecobee</a>
+      </li>
+      <li>
+        <a href="/ecosense">Ecosense</a>
+      </li>
+      <li>
+        <a href="/edutopia">Edutopia on YouTube</a>
+      </li>
+      <li>
+        <a href="/elastic_email">Elastic Email</a>
+      </li>
+      <li>
+        <a href="/eff">Electronic Frontier Foundation</a>
+      </li>
+      <li>
+        <a href="/elektrum">Elektrum</a>
+      </li>
+      <li>
+        <a href="/elevenlabs">ElevenLabs</a>
+      </li>
+      <li>
+        <a href="/email">Email</a>
+      </li>
+      <li>
+        <a href="/email_digest">Email Digest</a>
+      </li>
+      <li>
+        <a href="/emfit">Emfit QS</a>
+      </li>
+      <li>
+        <a href="/energeasyconnect">energeasy connect</a>
+      </li>
+      <li>
+        <a href="/energenie_mi_home">Energenie Mi|Home</a>
+      </li>
+      <li>
+        <a href="/eia">Energy Information Administration</a>
+      </li>
+      <li>
+        <a href="/Premier_League_news">English Premier League News</a>
+      </li>
+      <li>
+        <a href="/entrepreneur">Entrepreneur</a>
+      </li>
+      <li>
+        <a href="/epa">Environmental Protection Agency</a>
+      </li>
+      <li>
+        <a href="/envoy">Envoy</a>
+      </li>
+      <li>
+        <a href="/epion">Epion</a>
+      </li>
+      <li>
+        <a href="/era">Equal Rights Advocates</a>
+      </li>
+      <li>
+        <a href="/equiwatt">equiwatt</a>
+      </li>
+      <li>
+        <a href="/ergosmartbed">Ergomotion Smart Bed</a>
+      </li>
+      <li>
+        <a href="/ergomotionSmartBedBR">Ergomotion Smart Bed BR</a>
+      </li>
+      <li>
+        <a href="/espn_news">ESPN News</a>
+      </li>
+      <li>
+        <a href="/etsy">Etsy for Sellers</a>
+      </li>
+      <li>
+        <a href="/eventbrite">Eventbrite</a>
+      </li>
+      <li>
+        <a href="/evernote">Evernote</a>
+      </li>
+      <li>
+        <a href="/everykit">EveryKit</a>
+      </li>
+      <li>
+        <a href="/evolviot">EvolvIOT</a>
+      </li>
+      <li>
+        <a href="/ewelink">eWeLink Smart Home</a>
+      </li>
+      <li>
+        <a href="/eyeopen">EyeOpen</a>
+      </li>
+      <li>
+        <a href="/eztech">EZTECH</a>
+      </li>
+      <li>
+        <a href="/ezviz">EZVIZ</a>
+      </li>
+      <li>
+        <a href="/facebook">Facebook</a>
+      </li>
+      <li>
+        <a href="/facebook_lead_ads">Facebook Lead Ads</a>
+      </li>
+      <li>
+        <a href="/facebook_pages">Facebook Pages</a>
+      </li>
+      <li>
+        <a href="/family_handyman">Family Handyman</a>
+      </li>
+      <li>
+        <a href="/fansync">Fanimation</a>
+      </li>
+      <li>
+        <a href="/fathom">Fathom</a>
+      </li>
+      <li>
+        <a href="/fcc">Federal Communications Commission</a>
+      </li>
+      <li>
+        <a href="/feedly">Feedly</a>
+      </li>
+      <li>
+        <a href="/festina_watches">Festina Watches</a>
+      </li>
+      <li>
+        <a href="/fibaro">FIBARO</a>
+      </li>
+      <li>
+        <a href="/figma">Figma</a>
+      </li>
+      <li>
+        <a href="/filtrete">Filtrete™ Smart</a>
+      </li>
+      <li>
+        <a href="/finance">Finance</a>
+      </li>
+      <li>
+        <a href="/financial_audit">Financial Audit with Caleb Hammer</a>
+      </li>
+      <li>
+        <a href="/finder_yesly">Finder Yesly</a>
+      </li>
+      <li>
+        <a href="/fing">Fing</a>
+      </li>
+      <li>
+        <a href="/firedesk">Firedesk</a>
+      </li>
+      <li>
+        <a href="/fireflies_ai">Fireflies.ai</a>
+      </li>
+      <li>
+        <a href="/fl_1000_leak_detector">FL-1000 Leak Detector</a>
+      </li>
+      <li>
+        <a href="/flapz_board">Flapz</a>
+      </li>
+      <li>
+        <a href="/fleep">Fleep</a>
+      </li>
+      <li>
+        <a href="/fletti">Fletti</a>
+      </li>
+      <li>
+        <a href="/flic">Flic</a>
+      </li>
+      <li>
+        <a href="/flickr">Flickr</a>
+      </li>
+      <li>
+        <a href="/flodesk">Flodesk</a>
+      </li>
+      <li>
+        <a href="/flutin">Flutin</a>
+      </li>
+      <li>
+        <a href="/follow_up_boss">Follow Up Boss</a>
+      </li>
+      <li>
+        <a href="/followupcc">FollowUp.cc</a>
+      </li>
+      <li>
+        <a href="/foobot">Foobot</a>
+      </li>
+      <li>
+        <a href="/forbes">Forbes</a>
+      </li>
+      <li>
+        <a href="/formula_1">Formula 1 </a>
+      </li>
+      <li>
+        <a href="/fcu_tod">Fort Collins Utilities Time of Day Pricing</a>
+      </li>
+      <li>
+        <a href="/foundr_stories">Foundr Stories</a>
+      </li>
+      <li>
+        <a href="/foursquare">Foursquare</a>
+      </li>
+      <li>
+        <a href="/freakonomics_radio_podcast">Freakonomics Radio Podcast</a>
+      </li>
+      <li>
+        <a href="/freecodecamp">freeCodeCamp.org on YouTube</a>
+      </li>
+      <li>
+        <a href="/freedompro">Freedompro</a>
+      </li>
+      <li>
+        <a href="/Fresh_Air_Podcast">Fresh Air Podcast</a>
+      </li>
+      <li>
+        <a href="/freshbooks">FreshBooks</a>
+      </li>
+      <li>
+        <a href="/fulltime_fullarm">Fullarm</a>
+      </li>
+      <li>
+        <a href="/nimbus_note">FuseBase (Formerly Nimbus Note)</a>
+      </li>
+      <li>
+        <a href="/fyta">FYTA</a>
+      </li>
+      <li>
+        <a href="/gamma">Gamma</a>
+      </li>
+      <li>
+        <a href="/garadget">Garadget</a>
+      </li>
+      <li>
+        <a href="/garageio">Garageio</a>
+      </li>
+      <li>
+        <a href="/garagewifi">GarageWiFi &amp; Gates</a>
+      </li>
+      <li>
+        <a href="/gary_vaynerchuk">Gary Vaynerchuk Blogs</a>
+      </li>
+      <li>
+        <a href="/GatewayAPI">GatewayAPI SMS</a>
+      </li>
+      <li>
+        <a href="/ge_appliances_cooking">GE Appliances Cooking</a>
+      </li>
+      <li>
+        <a href="/ge_appliances_dishwasher">GE Appliances Dishwasher</a>
+      </li>
+      <li>
+        <a href="/ge_appliances_dryer">GE Appliances Dryer</a>
+      </li>
+      <li>
+        <a href="/ge_appliances_geospring">GE Appliances GeoSpring™</a>
+      </li>
+      <li>
+        <a href="/ge_appliances_refrigerator">GE Appliances Refrigerator</a>
+      </li>
+      <li>
+        <a href="/ge_appliances_washer">GE Appliances Washer</a>
+      </li>
+      <li>
+        <a href="/ge_appliances_wac">GE Appliances Window AC</a>
+      </li>
+      <li>
+        <a href="/gemini">Gemini</a>
+      </li>
+      <li>
+        <a href="/genius_hub">Genius Hub</a>
+      </li>
+      <li>
+        <a href="/getresponse">GetResponse</a>
+      </li>
+      <li>
+        <a href="/gewiss_home_gateway">Gewiss Home Gateway</a>
+      </li>
+      <li>
+        <a href="/gewiss_home">Gewiss Smart Home IoT</a>
+      </li>
+      <li>
+        <a href="/ghost">Ghost</a>
+      </li>
+      <li>
+        <a href="/gideon">Gideon Smart Home</a>
+      </li>
+      <li>
+        <a href="/giphy">Giphy</a>
+      </li>
+      <li>
+        <a href="/github">GitHub</a>
+      </li>
+      <li>
+        <a href="/gmail">Gmail</a>
+      </li>
+      <li>
+        <a href="/gnbly">Gnbly - AI Caller</a>
+      </li>
+      <li>
+        <a href="/go_raylogic">GO by Raylogic </a>
+      </li>
+      <li>
+        <a href="/goeCharger">go-e Charger</a>
+      </li>
+      <li>
+        <a href="/godaddy">GoDaddy</a>
+      </li>
+      <li>
+        <a href="/gogogate">Gogogate</a>
+      </li>
+      <li>
+        <a href="/semsportal">GoodWe SemsPortal</a>
+      </li>
+      <li>
+        <a href="/google_ads">Google Ads</a>
+      </li>
+      <li>
+        <a href="/google_assistant_v2">Google Assistant</a>
+      </li>
+      <li>
+        <a href="/google_my_business">Google Business Profile</a>
+      </li>
+      <li>
+        <a href="/google_calendar">Google Calendar</a>
+      </li>
+      <li>
+        <a href="/google_chat">Google Chat</a>
+      </li>
+      <li>
+        <a href="/google_civic_information">Google Civic Information</a>
+      </li>
+      <li>
+        <a href="/google_contacts">Google Contacts</a>
+      </li>
+      <li>
+        <a href="/google_docs">Google Docs</a>
+      </li>
+      <li>
+        <a href="/google_drive">Google Drive</a>
+      </li>
+      <li>
+        <a href="/google_forms">Google Forms</a>
+      </li>
+      <li>
+        <a href="/google_health">Google Health</a>
+      </li>
+      <li>
+        <a href="/google_meet">Google Meet</a>
+      </li>
+      <li>
+        <a href="/google_nest_thermostat">Google Nest Thermostat</a>
+      </li>
+      <li>
+        <a href="/google_photos">Google Photos</a>
+      </li>
+      <li>
+        <a href="/google_sheets">Google Sheets</a>
+      </li>
+      <li>
+        <a href="/google_slides">Google Slides</a>
+      </li>
+      <li>
+        <a href="/google_tasks">Google Tasks</a>
+      </li>
+      <li>
+        <a href="/google_wifi">Google Wifi</a>
+      </li>
+      <li>
+        <a href="/govee">Govee Home</a>
+      </li>
+      <li>
+        <a href="/gq_magazine">GQ </a>
+      </li>
+      <li>
+        <a href="/grants">Grants.gov</a>
+      </li>
+      <li>
+        <a href="/graspio">GraspIO</a>
+      </li>
+      <li>
+        <a href="/gravity_forms">Gravity Forms</a>
+      </li>
+      <li>
+        <a href="/green_light_signal">Green Light Signal</a>
+      </li>
+      <li>
+        <a href="/greip">Greip - Fraud Prevention</a>
+      </li>
+      <li>
+        <a href="/grok">Grok</a>
+      </li>
+      <li>
+        <a href="/group_location">Group Location</a>
+      </li>
+      <li>
+        <a href="/groupme">GroupMe</a>
+      </li>
+      <li>
+        <a href="/gumroad">Gumroad</a>
+      </li>
+      <li>
+        <a href="/habitify">Habitify</a>
+      </li>
+      <li>
+        <a href="/hacker_news">Hacker News</a>
+      </li>
+      <li>
+        <a href="/hager_iot">Hager IoT</a>
+      </li>
+      <li>
+        <a href="/hard_fork_podcast">Hard Fork Podcast</a>
+      </li>
+      <li>
+        <a href="/harmony">Harmony</a>
+      </li>
+      <li>
+        <a href="/harvest">Harvest</a>
+      </li>
+      <li>
+        <a href="/haven_iaq">HAVEN IAQ</a>
+      </li>
+      <li>
+        <a href="/hearthstone">Hearthstone</a>
+      </li>
+      <li>
+        <a href="/heatmiser">Heatmiser</a>
+      </li>
+      <li>
+        <a href="/heatzy">Heatzy</a>
+      </li>
+      <li>
+        <a href="/heimanhome">Heiman Home</a>
+      </li>
+      <li>
+        <a href="/hella_onyx">HELLA ONYX</a>
+      </li>
+      <li>
+        <a href="/here_and_now_anytime">Here &amp; Now Anytime</a>
+      </li>
+      <li>
+        <a href="/heygen">HeyGen</a>
+      </li>
+      <li>
+        <a href="/hidrive">HiDrive</a>
+      </li>
+      <li>
+        <a href="/histre">Histre</a>
+      </li>
+      <li>
+        <a href="/dollin_smart_ac">HolaBrain AC (formerly Dollin Smart AC)</a>
+      </li>
+      <li>
+        <a href="/dollin_smart_ap">HolaBrain Air Purifier</a>
+      </li>
+      <li>
+        <a href="/hc_coffee_machine">Home Connect Coffee Machine</a>
+      </li>
+      <li>
+        <a href="/hc_cook_processor">Home Connect Cookit</a>
+      </li>
+      <li>
+        <a href="/hc_hob">Home Connect Cooktop</a>
+      </li>
+      <li>
+        <a href="/hc_dishwasher">Home Connect Dishwasher</a>
+      </li>
+      <li>
+        <a href="/hc_dryer">Home Connect Dryer</a>
+      </li>
+      <li>
+        <a href="/hc_fridge">Home Connect Fridge Freezer</a>
+      </li>
+      <li>
+        <a href="/hc_hood">Home Connect Hood</a>
+      </li>
+      <li>
+        <a href="/hc_oven">Home Connect Oven</a>
+      </li>
+      <li>
+        <a href="/hc_cleaning_robot">Home Connect Roxxter</a>
+      </li>
+      <li>
+        <a href="/hc_washer">Home Connect Washer</a>
+      </li>
+      <li>
+        <a href="/hc_wine_cooler">Home Connect Wine Cooler</a>
+      </li>
+      <li>
+        <a href="/homelyenergy">Homely Smart Thermostat</a>
+      </li>
+      <li>
+        <a href="/homeseer">HomeSeer</a>
+      </li>
+      <li>
+        <a href="/homey">Homey</a>
+      </li>
+      <li>
+        <a href="/notion">Honey Smart Home</a>
+      </li>
+      <li>
+        <a href="/honeywell_evohome">Honeywell evohome</a>
+      </li>
+      <li>
+        <a href="/honeywell_lyric">Honeywell Home</a>
+      </li>
+      <li>
+        <a href="/honeywell_round">Honeywell Single-zone Thermostat</a>
+      </li>
+      <li>
+        <a href="/honeywell_total_connect_comfort">Honeywell Total Connect Comfort</a>
+      </li>
+      <li>
+        <a href="/hootsuite">Hootsuite</a>
+      </li>
+      <li>
+        <a href="/hopscotch">Hopscotch Social Media Management</a>
+      </li>
+      <li>
+        <a href="/horoscope">Horoscope</a>
+      </li>
+      <li>
+        <a href="/hosttools">Host Tools</a>
+      </li>
+      <li>
+        <a href="/housingwire">HousingWire</a>
+      </li>
+      <li>
+        <a href="/huberman_lab_podcast">Huberman Lab Podcast</a>
+      </li>
+      <li>
+        <a href="/hubitat">Hubitat</a>
+      </li>
+      <li>
+        <a href="/hubspot">HubSpot</a>
+      </li>
+      <li>
+        <a href="/hubspot_blogs">HubSpot Strategy Blogs</a>
+      </li>
+      <li>
+        <a href="/huffpost">HuffPost</a>
+      </li>
+      <li>
+        <a href="/hugging_face">Hugging Face</a>
+      </li>
+      <li>
+        <a href="/Huma_i">Huma-i</a>
+      </li>
+      <li>
+        <a href="/humanunited">Human United By Porall</a>
+      </li>
+      <li>
+        <a href="/automower">Husqvarna Automower®</a>
+      </li>
+      <li>
+        <a href="/hypebeast">HYPEBEAST</a>
+      </li>
+      <li>
+        <a href="/i_will_teach_you_to_be_rich_podcast">I Will Teach You To Be Rich </a>
+      </li>
+      <li>
+        <a href="/idevices">iDevices</a>
+      </li>
+      <li>
+        <a href="/IDOs_news">IDOs News</a>
+      </li>
+      <li>
+        <a href="/ifttt">IFTTT</a>
+      </li>
+      <li>
+        <a href="/ign">IGN</a>
+      </li>
+      <li>
+        <a href="/ihaus_smoke_detector">iHaus smoke detector</a>
+      </li>
+      <li>
+        <a href="/ihome_enhance">iHome Enhance</a>
+      </li>
+      <li>
+        <a href="/photon_codes">iMessage by Photon</a>
+      </li>
+      <li>
+        <a href="/imwork">Imwork</a>
+      </li>
+      <li>
+        <a href="/indegoconnect">Indego Connect</a>
+      </li>
+      <li>
+        <a href="/inohom">inohom</a>
+      </li>
+      <li>
+        <a href="/inoreader">Inoreader</a>
+      </li>
+      <li>
+        <a href="/inout_wa">InOut WhatsApp Receive/Send Message</a>
+      </li>
+      <li>
+        <a href="/inspinia">Inspinia Technology</a>
+      </li>
+      <li>
+        <a href="/instagram">Instagram</a>
+      </li>
+      <li>
+        <a href="/instapaper">Instapaper</a>
+      </li>
+      <li>
+        <a href="/instar">INSTAR</a>
+      </li>
+      <li>
+        <a href="/intellithings">Intellithings</a>
+      </li>
+      <li>
+        <a href="/intercom">Intercom</a>
+      </li>
+      <li>
+        <a href="/imf">International Monetary Fund</a>
+      </li>
+      <li>
+        <a href="/intuiface">Intuiface</a>
+      </li>
+      <li>
+        <a href="/inventor">Inventor</a>
+      </li>
+      <li>
+        <a href="/invoxia_tracker">Invoxia GPS Tracker</a>
+      </li>
+      <li>
+        <a href="/invoxia_triby">Invoxia Triby</a>
+      </li>
+      <li>
+        <a href="/ios_calendar">iOS Calendar</a>
+      </li>
+      <li>
+        <a href="/ios_contacts">iOS Contacts</a>
+      </li>
+      <li>
+        <a href="/ios_health">iOS Health</a>
+      </li>
+      <li>
+        <a href="/ios_photos">iOS Photos</a>
+      </li>
+      <li>
+        <a href="/ios_reading_list">iOS Reading List</a>
+      </li>
+      <li>
+        <a href="/ios_shortcuts">iOS Shortcuts</a>
+      </li>
+      <li>
+        <a href="/iot_podcast">IoT Podcast</a>
+      </li>
+      <li>
+        <a href="/iotics">iotics</a>
+      </li>
+      <li>
+        <a href="/iottysmarthome">iotty Smart Home</a>
+      </li>
+      <li>
+        <a href="/irobot">iRobot</a>
+      </li>
+      <li>
+        <a href="/irsap_now_heating">IRSAP NOW Heating</a>
+      </li>
+      <li>
+        <a href="/isitchristmas">Is It Christmas?</a>
+      </li>
+      <li>
+        <a href="/isecurityplus">iSecurity+</a>
+      </li>
+      <li>
+        <a href="/ispy_agent">iSpy Agent</a>
+      </li>
+      <li>
+        <a href="/its_been_a_minute_podcast">It's Been a Minute Podcast</a>
+      </li>
+      <li>
+        <a href="/itchio">Itch.io</a>
+      </li>
+      <li>
+        <a href="/ivideon">Ivideon</a>
+      </li>
+      <li>
+        <a href="/i_zone">iZone</a>
+      </li>
+      <li>
+        <a href="/jaguar_watches">Jaguar Watches</a>
+      </li>
+      <li>
+        <a href="/jira">Jira</a>
+      </li>
+      <li>
+        <a href="/job">Jobicy</a>
+      </li>
+      <li>
+        <a href="/jokes_of_the_day">Jokes of the day</a>
+      </li>
+      <li>
+        <a href="/jotform">Jotform</a>
+      </li>
+      <li>
+        <a href="/kaiterra">Kaiterra</a>
+      </li>
+      <li>
+        <a href="/kalshi">Kalshi</a>
+      </li>
+      <li>
+        <a href="/kennedy_mighell_report_podcast">Kennedy-Mighell Report Podcast</a>
+      </li>
+      <li>
+        <a href="/khan_academy">Khan Academy</a>
+      </li>
+      <li>
+        <a href="/king_county_metro">King County Metro</a>
+      </li>
+      <li>
+        <a href="/kit">Kit</a>
+      </li>
+      <li>
+        <a href="/kme_smart">KME Smart</a>
+      </li>
+      <li>
+        <a href="/knocki">Knocki</a>
+      </li>
+      <li>
+        <a href="/konkasmart">Konka Smart</a>
+      </li>
+      <li>
+        <a href="/kotaku">Kotaku</a>
+      </li>
+      <li>
+        <a href="/kronaby">Kronaby</a>
+      </li>
+      <li>
+        <a href="/kubu_smart">Kubu Smart</a>
+      </li>
+      <li>
+        <a href="/kurator">Kurator by Optimal Access</a>
+      </li>
+      <li>
+        <a href="/kwikset">Kwikset Smart Locks</a>
+      </li>
+      <li>
+        <a href="/lametric">LaMetric</a>
+      </li>
+      <li>
+        <a href="/llinklockcn">Langolink Lock (China)</a>
+      </li>
+      <li>
+        <a href="/lasagna_marketing">Lasagna Marketing</a>
+      </li>
+      <li>
+        <a href="/latwy">Latwy</a>
+      </li>
+      <li>
+        <a href="/lektrico_charger">Lektrico Charger</a>
+      </li>
+      <li>
+        <a href="/lemon_squeezy">Lemon Squeezy</a>
+      </li>
+      <li>
+        <a href="/lennoxicomfort">Lennox iComfort</a>
+      </li>
+      <li>
+        <a href="/leonardo_ai">Leonardo AI</a>
+      </li>
+      <li>
+        <a href="/lex_fridman_podcast">Lex Fridman Podcast</a>
+      </li>
+      <li>
+        <a href="/lexi">Lexi</a>
+      </li>
+      <li>
+        <a href="/loc">Library of Congress</a>
+      </li>
+      <li>
+        <a href="/life_hacker">LifeHacker</a>
+      </li>
+      <li>
+        <a href="/lifx">LIFX</a>
+      </li>
+      <li>
+        <a href="/lightform_cloud">Lightform Cloud</a>
+      </li>
+      <li>
+        <a href="/lightwaverf_events">LightwaveRF Events</a>
+      </li>
+      <li>
+        <a href="/lightwaverf_heating">LightwaveRF Heating</a>
+      </li>
+      <li>
+        <a href="/lightwaverf_lighting">LightwaveRF Lighting</a>
+      </li>
+      <li>
+        <a href="/lightwaverf_power">LightwaveRF Power</a>
+      </li>
+      <li>
+        <a href="/line_v2">LINE</a>
+      </li>
+      <li>
+        <a href="/linear">Linear</a>
+      </li>
+      <li>
+        <a href="/LinkMyPet">Link My Pet</a>
+      </li>
+      <li>
+        <a href="/LinkShades">Link Shades</a>
+      </li>
+      <li>
+        <a href="/linkdesk">LinkDesk</a>
+      </li>
+      <li>
+        <a href="/linkedin">LinkedIn</a>
+      </li>
+      <li>
+        <a href="/linkhut">linkhut</a>
+      </li>
+      <li>
+        <a href="/LinkJapan_eHome">LinkJapan eHome</a>
+      </li>
+      <li>
+        <a href="/linus_tech_tips">Linus Tech Tips on YouTube</a>
+      </li>
+      <li>
+        <a href="/linxura_server">Linxura</a>
+      </li>
+      <li>
+        <a href="/whisker">Litter-Robot by Whisker</a>
+      </li>
+      <li>
+        <a href="/livesmart">LiveSmart</a>
+      </li>
+      <li>
+        <a href="/livewebinar">LiveWebinar</a>
+      </li>
+      <li>
+        <a href="/livy_protect">Livy</a>
+      </li>
+      <li>
+        <a href="/lnkbio">Lnk.Bio</a>
+      </li>
+      <li>
+        <a href="/location">Location</a>
+      </li>
+      <li>
+        <a href="/logitech_circle">Logitech Circle </a>
+      </li>
+      <li>
+        <a href="/logitech_pop">Logitech POP</a>
+      </li>
+      <li>
+        <a href="/longreads">Longreads</a>
+      </li>
+      <li>
+        <a href="/los_angeles_times">Los Angeles Times</a>
+      </li>
+      <li>
+        <a href="/lotus_watches">Lotus Watches</a>
+      </li>
+      <li>
+        <a href="/louder_than_a_riot_podcast">Louder Than A Riot Podcast</a>
+      </li>
+      <li>
+        <a href="/lutron_caseta_wireless">Lutron Caséta and RA2 Select</a>
+      </li>
+      <li>
+        <a href="/luxafor">Luxafor</a>
+      </li>
+      <li>
+        <a href="/luxorliving">LUXORliving</a>
+      </li>
+      <li>
+        <a href="/Lytmi">Lytmi</a>
+      </li>
+      <li>
+        <a href="/m2m_services">M2M Services</a>
+      </li>
+      <li>
+        <a href="/magicwonders">Magic Wonders</a>
+      </li>
+      <li>
+        <a href="/magichue">MagicHue</a>
+      </li>
+      <li>
+        <a href="/MagicLight">MagicLight WiFi</a>
+      </li>
+      <li>
+        <a href="/mailchimp">Mailchimp</a>
+      </li>
+      <li>
+        <a href="/mailerlite">MailerLite</a>
+      </li>
+      <li>
+        <a href="/mailersend">MailerSend</a>
+      </li>
+      <li>
+        <a href="/major_league_baseball">Major League Baseball</a>
+      </li>
+      <li>
+        <a href="/Mapei_Mapeheat">Mapeheat Thermo Connect</a>
+      </li>
+      <li>
+        <a href="/mark_rober">Mark Rober</a>
+      </li>
+      <li>
+        <a href="/marques_brownlee">Marques Brownlee on YouTube</a>
+      </li>
+      <li>
+        <a href="/vf_maskreminder">MaskReminder</a>
+      </li>
+      <li>
+        <a href="/mastodon_social">Mastodon.social</a>
+      </li>
+      <li>
+        <a href="/motorline_mconnect">MCONNECT</a>
+      </li>
+      <li>
+        <a href="/medium">Medium</a>
+      </li>
+      <li>
+        <a href="/meistertask">MeisterTask</a>
+      </li>
+      <li>
+        <a href="/mens_health">Men's Health</a>
+      </li>
+      <li>
+        <a href="/merik">Merik</a>
+      </li>
+      <li>
+        <a href="/mesh">MESH</a>
+      </li>
+      <li>
+        <a href="/meshtek_labs">MeshTek</a>
+      </li>
+      <li>
+        <a href="/metronet">Metronet</a>
+      </li>
+      <li>
+        <a href="/calendar365">Microsoft 365 Calendar</a>
+      </li>
+      <li>
+        <a href="/excel_365">Microsoft 365 Excel</a>
+      </li>
+      <li>
+        <a href="/onedrive">Microsoft OneDrive</a>
+      </li>
+      <li>
+        <a href="/outlook">Microsoft Outlook</a>
+      </li>
+      <li>
+        <a href="/sharepoint">Microsoft SharePoint</a>
+      </li>
+      <li>
+        <a href="/microsoft_teams">Microsoft Teams</a>
+      </li>
+      <li>
+        <a href="/microsoft_todo">Microsoft To Do</a>
+      </li>
+      <li>
+        <a href="/MideaAirAC">Midea Air AC</a>
+      </li>
+      <li>
+        <a href="/MideaAirA1">Midea Air Dehumidifier</a>
+      </li>
+      <li>
+        <a href="/mighty_bills">Mighty Bills</a>
+      </li>
+      <li>
+        <a href="/miyo">MIYO</a>
+      </li>
+      <li>
+        <a href="/mobilinc">MobiLinc</a>
+      </li>
+      <li>
+        <a href="/monday">monday</a>
+      </li>
+      <li>
+        <a href="/moneytalks_news">Money Talks News</a>
+      </li>
+      <li>
+        <a href="/moneysense">MoneySense</a>
+      </li>
+      <li>
+        <a href="/monzo">Monzo</a>
+      </li>
+      <li>
+        <a href="/moodo">Moodo &amp; Moodo AIR</a>
+      </li>
+      <li>
+        <a href="/moonside">Moonside Light</a>
+      </li>
+      <li>
+        <a href="/moonto_app">MOONTO Shopping Lists - Checkpad</a>
+      </li>
+      <li>
+        <a href="/morning_edition_podcast">Morning Edition Podcast</a>
+      </li>
+      <li>
+        <a href="/motion">Motion</a>
+      </li>
+      <li>
+        <a href="/movieclips">Movieclips</a>
+      </li>
+      <li>
+        <a href="/mr_beast">MrBeast</a>
+      </li>
+      <li>
+        <a href="/muilab">mui</a>
+      </li>
+      <li>
+        <a href="/musaic">Musaic</a>
+      </li>
+      <li>
+        <a href="/muslim_prayer_time">Muslim Prayer Time</a>
+      </li>
+      <li>
+        <a href="/my_first_million">My First Million</a>
+      </li>
+      <li>
+        <a href="/my_leviton">My Leviton</a>
+      </li>
+      <li>
+        <a href="/my_smart">My Smart+</a>
+      </li>
+      <li>
+        <a href="/mybackupsguru">myBackups.guru</a>
+      </li>
+      <li>
+        <a href="/MyCurtains">MyCurtains</a>
+      </li>
+      <li>
+        <a href="/mydlink">mydlink</a>
+      </li>
+      <li>
+        <a href="/myHue">myHue</a>
+      </li>
+      <li>
+        <a href="/mymilan">MyMilan</a>
+      </li>
+      <li>
+        <a href="/mynice">MyNice</a>
+      </li>
+      <li>
+        <a href="/myq_devices">MyQ</a>
+      </li>
+      <li>
+        <a href="/mysmartwindow">mySmartWindow</a>
+      </li>
+      <li>
+        <a href="/mystrom">myStrom</a>
+      </li>
+      <li>
+        <a href="/myuplink">myUplink</a>
+      </li>
+      <li>
+        <a href="/naacp">NAACP</a>
+      </li>
+      <li>
+        <a href="/nano_lol">nano.lol</a>
+      </li>
+      <li>
+        <a href="/nanoleaf">Nanoleaf Smarter Series</a>
+      </li>
+      <li>
+        <a href="/national_geographic">National Geographic on YouTube</a>
+      </li>
+      <li>
+        <a href="/nsf">National Science Foundation</a>
+      </li>
+      <li>
+        <a href="/nefit_easy">Nefit Easy</a>
+      </li>
+      <li>
+        <a href="/nemy">nemy</a>
+      </li>
+      <li>
+        <a href="/neosmartblinds">Neo Smart Blinds</a>
+      </li>
+      <li>
+        <a href="/nerdwallet">NerdWallet</a>
+      </li>
+      <li>
+        <a href="/netatmo">Netatmo Weather Station</a>
+      </li>
+      <li>
+        <a href="/NethomePlusAC">NetHome Plus AC</a>
+      </li>
+      <li>
+        <a href="/NethomePlusA1">NetHome Plus Dehumidifier</a>
+      </li>
+      <li>
+        <a href="/netlify">Netlify</a>
+      </li>
+      <li>
+        <a href="/netro">Netro</a>
+      </li>
+      <li>
+        <a href="/newsblur">NewsBlur</a>
+      </li>
+      <li>
+        <a href="/nexia">Nexia</a>
+      </li>
+      <li>
+        <a href="/nexx">Nexx</a>
+      </li>
+      <li>
+        <a href="/nibe_uplink">NIBE Uplink</a>
+      </li>
+      <li>
+        <a href="/nibo">Nibo Empresa</a>
+      </li>
+      <li>
+        <a href="/nice">Nice</a>
+      </li>
+      <li>
+        <a href="/nj_transit">NJ Transit</a>
+      </li>
+      <li>
+        <a href="/no_stupid_questions_podcast">No Stupid Questions Podcast</a>
+      </li>
+      <li>
+        <a href="/noonhome">Noon Home</a>
+      </li>
+      <li>
+        <a href="/safetrek">Noonlight</a>
+      </li>
+      <li>
+        <a href="/do_note">Note widget</a>
+      </li>
+      <li>
+        <a href="/if_notifications">Notifications</a>
+      </li>
+      <li>
+        <a href="/notifymyecho">Notify My Echo</a>
+      </li>
+      <li>
+        <a href="/notifyapp">Notify!</a>
+      </li>
+      <li>
+        <a href="/notion_so">Notion.so</a>
+      </li>
+      <li>
+        <a href="/npr">NPR</a>
+      </li>
+      <li>
+        <a href="/book_of_the_day_podcast">NPR's Book of the Day Podcast</a>
+      </li>
+      <li>
+        <a href="/nuelink">Nuelink</a>
+      </li>
+      <li>
+        <a href="/nVent_Nuheat">nVent Nuheat Signature Thermostat</a>
+      </li>
+      <li>
+        <a href="/oco_camera">Oco Camera</a>
+      </li>
+      <li>
+        <a href="/octopus_ercot">Octopus Energy ERCOT</a>
+      </li>
+      <li>
+        <a href="/office_ladies_podcast">Office Ladies Podcast</a>
+      </li>
+      <li>
+        <a href="/ohmconnect">OhmConnect</a>
+      </li>
+      <li>
+        <a href="/omninewlab">Omni Newlab</a>
+      </li>
+      <li>
+        <a href="/onenote">OneNote</a>
+      </li>
+      <li>
+        <a href="/op3">OP3</a>
+      </li>
+      <li>
+        <a href="/openhab">openHAB</a>
+      </li>
+      <li>
+        <a href="/Optoma">Optoma</a>
+      </li>
+      <li>
+        <a href="/optus_smart_living">Optus Smart Living</a>
+      </li>
+      <li>
+        <a href="/ora_control">Ora Control</a>
+      </li>
+      <li>
+        <a href="/orro">Orro</a>
+      </li>
+      <li>
+        <a href="/smartliving_osum">OSUM </a>
+      </li>
+      <li>
+        <a href="/osumsmart">OSUM SMART</a>
+      </li>
+      <li>
+        <a href="/otiom">Otiom</a>
+      </li>
+      <li>
+        <a href="/oura_ring">Oura Ring</a>
+      </li>
+      <li>
+        <a href="/oval_smart_home">OVAL</a>
+      </li>
+      <li>
+        <a href="/overlord">Overlord - AI accountability partner</a>
+      </li>
+      <li>
+        <a href="/owlhome">Owl Home</a>
+      </li>
+      <li>
+        <a href="/packpack_ai">PackPack AI</a>
+      </li>
+      <li>
+        <a href="/pagerduty">PagerDuty</a>
+      </li>
+      <li>
+        <a href="/miraie">Panasonic MirAIe</a>
+      </li>
+      <li>
+        <a href="/pandadoc">PandaDoc</a>
+      </li>
+      <li>
+        <a href="/patreon">Patreon</a>
+      </li>
+      <li>
+        <a href="/pavlok">PAVLOK</a>
+      </li>
+      <li>
+        <a href="/pdf_co">PDF.co</a>
+      </li>
+      <li>
+        <a href="/pebblebee">Pebblebee</a>
+      </li>
+      <li>
+        <a href="/perfect_home_comfort">Perfect Home Comfort</a>
+      </li>
+      <li>
+        <a href="/perplexity">Perplexity</a>
+      </li>
+      <li>
+        <a href="/pew_research">Pew Research Center</a>
+      </li>
+      <li>
+        <a href="/pewdiepie">PewDiePie</a>
+      </li>
+      <li>
+        <a href="/pg_e">PG&amp;E</a>
+      </li>
+      <li>
+        <a href="/hue">Philips Hue</a>
+      </li>
+      <li>
+        <a href="/phone_call">Phone Call (US only)</a>
+      </li>
+      <li>
+        <a href="/phyn">Phyn</a>
+      </li>
+      <li>
+        <a href="/picsart">Picsart Programmable Image</a>
+      </li>
+      <li>
+        <a href="/pinboard">Pinboard</a>
+      </li>
+      <li>
+        <a href="/pinterest">Pinterest</a>
+      </li>
+      <li>
+        <a href="/pipedrive">Pipedrive</a>
+      </li>
+      <li>
+        <a href="/PIXIEPLUS">PIXIE PLUS</a>
+      </li>
+      <li>
+        <a href="/Pixoo_16">Pixoo-16</a>
+      </li>
+      <li>
+        <a href="/Pixoo_64">Pixoo-64</a>
+      </li>
+      <li>
+        <a href="/placid">Placid</a>
+      </li>
+      <li>
+        <a href="/planet_money_podcast">Planet Money Podcast</a>
+      </li>
+      <li>
+        <a href="/planex">Planex</a>
+      </li>
+      <li>
+        <a href="/pmmi_lighting">PMMI Lighting</a>
+      </li>
+      <li>
+        <a href="/pod_save_america_podcast">Pod Save America</a>
+      </li>
+      <li>
+        <a href="/podio">Podio</a>
+      </li>
+      <li>
+        <a href="/politico">POLITICO</a>
+      </li>
+      <li>
+        <a href="/polygon">Polygon</a>
+      </li>
+      <li>
+        <a href="/polymarket">Polymarket</a>
+      </li>
+      <li>
+        <a href="/pop_culture_happy_hour_podcast">Pop Culture Happy Hour Podcast</a>
+      </li>
+      <li>
+        <a href="/popcast">Popcast</a>
+      </li>
+      <li>
+        <a href="/posterity">Posterity</a>
+      </li>
+      <li>
+        <a href="/powahome">Powahome</a>
+      </li>
+      <li>
+        <a href="/viva">Powered by Viva</a>
+      </li>
+      <li>
+        <a href="/powerview">PowerView® Automation (Legacy)</a>
+      </li>
+      <li>
+        <a href="/presence">Presence</a>
+      </li>
+      <li>
+        <a href="/printful">Printful</a>
+      </li>
+      <li>
+        <a href="/printify">Printify</a>
+      </li>
+      <li>
+        <a href="/product_hunt_new">Product Hunt </a>
+      </li>
+      <li>
+        <a href="/proscenic">Proscenic</a>
+      </li>
+      <li>
+        <a href="/publora">Publora</a>
+      </li>
+      <li>
+        <a href="/pushbullet">Pushbullet</a>
+      </li>
+      <li>
+        <a href="/pushcut">Pushcut</a>
+      </li>
+      <li>
+        <a href="/pushover">Pushover</a>
+      </li>
+      <li>
+        <a href="/pushsafer">Pushsafer</a>
+      </li>
+      <li>
+        <a href="/putio">put.io</a>
+      </li>
+      <li>
+        <a href="/qapital">Qapital</a>
+      </li>
+      <li>
+        <a href="/qnap">QNAP</a>
+      </li>
+      <li>
+        <a href="/qualitytime">QualityTime</a>
+      </li>
+      <li>
+        <a href="/quanta_science_podcast">Quanta Science Podcast</a>
+      </li>
+      <li>
+        <a href="/quickbooks_online">QuickBooks Online</a>
+      </li>
+      <li>
+        <a href="/quortlr">Quotlr</a>
+      </li>
+      <li>
+        <a href="/racer">RACER</a>
+      </li>
+      <li>
+        <a href="/rachio_iro">Rachio Irrigation Controller</a>
+      </li>
+      <li>
+        <a href="/rachio_smart_hose_timer">Rachio Smart Hose Timer</a>
+      </li>
+      <li>
+        <a href="/rachio_smart_lighting_controller">Rachio Smart Lighting Controller</a>
+      </li>
+      <li>
+        <a href="/radio_lab_podcast">Radiolab Podcast</a>
+      </li>
+      <li>
+        <a href="/ragic">Ragic</a>
+      </li>
+      <li>
+        <a href="/raindrop">Raindrop.io</a>
+      </li>
+      <li>
+        <a href="/rain_machine">RainMachine</a>
+      </li>
+      <li>
+        <a href="/readwise">Readwise</a>
+      </li>
+      <li>
+        <a href="/realtor_dot_com">Realtor.com</a>
+      </li>
+      <li>
+        <a href="/reddit">Reddit</a>
+      </li>
+      <li>
+        <a href="/redfin_blog">Redfin Blog</a>
+      </li>
+      <li>
+        <a href="/relatel">Relatel</a>
+      </li>
+      <li>
+        <a href="/rememberthemilk">Remember The Milk</a>
+      </li>
+      <li>
+        <a href="/remoplus">remo+</a>
+      </li>
+      <li>
+        <a href="/remotelync">RemoteLync</a>
+      </li>
+      <li>
+        <a href="/reolink_smart_home">Reolink</a>
+      </li>
+      <li>
+        <a href="/reposit">Reposit Power</a>
+      </li>
+      <li>
+        <a href="/rescuetime">RescueTime</a>
+      </li>
+      <li>
+        <a href="/ring">Ring</a>
+      </li>
+      <li>
+        <a href="/auroome">ROOME</a>
+      </li>
+      <li>
+        <a href="/roomme">RoomMe</a>
+      </li>
+      <li>
+        <a href="/roostermoney">RoosterMoney</a>
+      </li>
+      <li>
+        <a href="/rotten_mango_podcast">Rotten Mango Podcast</a>
+      </li>
+      <li>
+        <a href="/routee">Routee</a>
+      </li>
+      <li>
+        <a href="/feed">RSS Feed</a>
+      </li>
+      <li>
+        <a href="/rssground">RSS Ground</a>
+      </li>
+      <li>
+        <a href="/rust">Rust</a>
+      </li>
+      <li>
+        <a href="/ryse">RYSE</a>
+      </li>
+      <li>
+        <a href="/samproof">SamProof</a>
+      </li>
+      <li>
+        <a href="/SAUTER_Cozytouch">SAUTER Cozytouch</a>
+      </li>
+      <li>
+        <a href="/savetheproof">SaveTheProof</a>
+      </li>
+      <li>
+        <a href="/scotusblog">SCOTUSblog</a>
+      </li>
+      <li>
+        <a href="/scoutalarm">Scout Alarm</a>
+      </li>
+      <li>
+        <a href="/sea_breeze">Sea Breeze Plus AC</a>
+      </li>
+      <li>
+        <a href="/sea_breeze_a1">Sea Breeze Plus Dehumidifier</a>
+      </li>
+      <li>
+        <a href="/sec">Securities and Exchange Commission</a>
+      </li>
+      <li>
+        <a href="/seeburg">Seeburg</a>
+      </li>
+      <li>
+        <a href="/segs">SEG.Smart Door</a>
+      </li>
+      <li>
+        <a href="/seitronsmart">Seitron Smart</a>
+      </li>
+      <li>
+        <a href="/selock">Selock</a>
+      </li>
+      <li>
+        <a href="/sendgrid">SendGrid</a>
+      </li>
+      <li>
+        <a href="/sendowl">SendOwl</a>
+      </li>
+      <li>
+        <a href="/sendsmsro">sendSMS</a>
+      </li>
+      <li>
+        <a href="/sengled">Sengled</a>
+      </li>
+      <li>
+        <a href="/sensate">Sensatio</a>
+      </li>
+      <li>
+        <a href="/sense_energy_monitor">Sense Energy Monitor</a>
+      </li>
+      <li>
+        <a href="/sensibo">Sensibo</a>
+      </li>
+      <li>
+        <a href="/sesame">Sesame by CANDY HOUSE</a>
+      </li>
+      <li>
+        <a href="/sfgate">SFGATE</a>
+      </li>
+      <li>
+        <a href="/sfmta">SFMTA</a>
+      </li>
+      <li>
+        <a href="/sharpr">Sharpr</a>
+      </li>
+      <li>
+        <a href="/shippo">Shippo</a>
+      </li>
+      <li>
+        <a href="/shopyourway">ShopYourWay</a>
+      </li>
+      <li>
+        <a href="/shortcut">Shortcut</a>
+      </li>
+      <li>
+        <a href="/sighthound">Sighthound Video</a>
+      </li>
+      <li>
+        <a href="/simcam">SimCam</a>
+      </li>
+      <li>
+        <a href="/simple_programmer_podcast">Simple Programmer Podcast</a>
+      </li>
+      <li>
+        <a href="/simplehuman">simplehuman</a>
+      </li>
+      <li>
+        <a href="/sintonico">Sintonico on YouTube</a>
+      </li>
+      <li>
+        <a href="/skooteco">SkootEco</a>
+      </li>
+      <li>
+        <a href="/skybell_gen5">SkyBell Gen5</a>
+      </li>
+      <li>
+        <a href="/skylinknet">SkylinkNet</a>
+      </li>
+      <li>
+        <a href="/slbus">SL-BUS Technology</a>
+      </li>
+      <li>
+        <a href="/slack">Slack</a>
+      </li>
+      <li>
+        <a href="/slashdot">Slashdot</a>
+      </li>
+      <li>
+        <a href="/sleeptracker_tsi">Sleeptracker-AI®</a>
+      </li>
+      <li>
+        <a href="/slickdeals">Slickdeals</a>
+      </li>
+      <li>
+        <a href="/slide_by_iim">Slide by IIM</a>
+      </li>
+      <li>
+        <a href="/small_business_trends">Small Business Trends</a>
+      </li>
+      <li>
+        <a href="/smanos">smanos connect</a>
+      </li>
+      <li>
+        <a href="/smappee">Smappee</a>
+      </li>
+      <li>
+        <a href="/smart_home_solution">Smart Home Solution</a>
+      </li>
+      <li>
+        <a href="/smartlife">Smart Life</a>
+      </li>
+      <li>
+        <a href="/smartap_shower">SmarTap Shower</a>
+      </li>
+      <li>
+        <a href="/smarter">Smarter</a>
+      </li>
+      <li>
+        <a href="/MSmartAC">SmartHome AC</a>
+      </li>
+      <li>
+        <a href="/MsmartSitAF">SmartHome Air Fryer</a>
+      </li>
+      <li>
+        <a href="/MsmartAP">SmartHome Air Purifier</a>
+      </li>
+      <li>
+        <a href="/MSmartA1">SmartHome Dehumidifier</a>
+      </li>
+      <li>
+        <a href="/MSmartDC">SmartHome Dryer</a>
+      </li>
+      <li>
+        <a href="/MsmartFA">SmartHome Fan</a>
+      </li>
+      <li>
+        <a href="/MsmartFB">SmartHome Heater</a>
+      </li>
+      <li>
+        <a href="/MsmartFD">SmartHome Humidifier</a>
+      </li>
+      <li>
+        <a href="/MsmartMicrowave">SmartHome Microwave</a>
+      </li>
+      <li>
+        <a href="/MSmartHomeFridge">SmartHome Refrigerator</a>
+      </li>
+      <li>
+        <a href="/SmartVacuum">SmartHome Vacuum Cleaner</a>
+      </li>
+      <li>
+        <a href="/MSmartDB">SmartHome Washer</a>
+      </li>
+      <li>
+        <a href="/smarthon">Smarthon IoT (micro:bit)</a>
+      </li>
+      <li>
+        <a href="/smartliving">SmartLiving Home Automation</a>
+      </li>
+      <li>
+        <a href="/smartnest">Smartnest</a>
+      </li>
+      <li>
+        <a href="/smartsheet">Smartsheet</a>
+      </li>
+      <li>
+        <a href="/smartthings">SmartThings</a>
+      </li>
+      <li>
+        <a href="/Smitch">Smitch</a>
+      </li>
+      <li>
+        <a href="/sms">SMS</a>
+      </li>
+      <li>
+        <a href="/sevenio">SMS &amp; Text-To-Speech by seven</a>
+      </li>
+      <li>
+        <a href="/solarcharts">Solar Charts</a>
+      </li>
+      <li>
+        <a href="/soma">SOMA Smart Home</a>
+      </li>
+      <li>
+        <a href="/somfy_mylink">Somfy myLink</a>
+      </li>
+      <li>
+        <a href="/sonilo">Sonilo</a>
+      </li>
+      <li>
+        <a href="/sonos">Sonos</a>
+      </li>
+      <li>
+        <a href="/soundcloud">SoundCloud</a>
+      </li>
+      <li>
+        <a href="/sowee">Sowee</a>
+      </li>
+      <li>
+        <a href="/space">Space</a>
+      </li>
+      <li>
+        <a href="/spoki">Spoki</a>
+      </li>
+      <li>
+        <a href="/spotcam">SpotCam</a>
+      </li>
+      <li>
+        <a href="/spotify">Spotify</a>
+      </li>
+      <li>
+        <a href="/spreaker">Spreaker</a>
+      </li>
+      <li>
+        <a href="/square">Square</a>
+      </li>
+      <li>
+        <a href="/squarespace">Squarespace</a>
+      </li>
+      <li>
+        <a href="/sRemo">sRemo</a>
+      </li>
+      <li>
+        <a href="/starcraft_ii">StarCraft II</a>
+      </li>
+      <li>
+        <a href="/state_of_the_world_podcast">State of the World Podcast</a>
+      </li>
+      <li>
+        <a href="/steam">Steam</a>
+      </li>
+      <li>
+        <a href="/stoat">Stoat</a>
+      </li>
+      <li>
+        <a href="/stockimo">Stockimo</a>
+      </li>
+      <li>
+        <a href="/strava">Strava</a>
+      </li>
+      <li>
+        <a href="/streamerbot">Streamer.bot</a>
+      </li>
+      <li>
+        <a href="/streamr_network">Streamr Network</a>
+      </li>
+      <li>
+        <a href="/stripe">Stripe</a>
+      </li>
+      <li>
+        <a href="/substack">Substack</a>
+      </li>
+      <li>
+        <a href="/sunrise_sunset_org">SunriseSunset.org</a>
+      </li>
+      <li>
+        <a href="/SURFboard">SURFboard</a>
+      </li>
+      <li>
+        <a href="/surveymonkey">SurveyMonkey</a>
+      </li>
+      <li>
+        <a href="/surveysparrow">SurveySparrow</a>
+      </li>
+      <li>
+        <a href="/swannsecurity">Swann Security</a>
+      </li>
+      <li>
+        <a href="/swidget">Swidget</a>
+      </li>
+      <li>
+        <a href="/switchbot">SwitchBot</a>
+      </li>
+      <li>
+        <a href="/switchur">Switchur App</a>
+      </li>
+      <li>
+        <a href="/tailwind">Tailwind</a>
+      </li>
+      <li>
+        <a href="/talk_python">Talk Python To Me</a>
+      </li>
+      <li>
+        <a href="/tally">Tally</a>
+      </li>
+      <li>
+        <a href="/taste_of_home">Taste of Home</a>
+      </li>
+      <li>
+        <a href="/taylor_swift">Taylor Swift</a>
+      </li>
+      <li>
+        <a href="/team_fortress_2">Team Fortress 2</a>
+      </li>
+      <li>
+        <a href="/tecan_connect">Tecan Connect</a>
+      </li>
+      <li>
+        <a href="/techcrunch">TechCrunch</a>
+      </li>
+      <li>
+        <a href="/tecla">tecla</a>
+      </li>
+      <li>
+        <a href="/ted_talks">TED on YouTube</a>
+      </li>
+      <li>
+        <a href="/ted_radio_hour_podcast">TED Radio Hour Podcast</a>
+      </li>
+      <li>
+        <a href="/teebly_business">Teebly For Business</a>
+      </li>
+      <li>
+        <a href="/telegram">Telegram</a>
+      </li>
+      <li>
+        <a href="/teletrac">Teletrac Navman</a>
+      </li>
+      <li>
+        <a href="/telldus">Telldus Live!</a>
+      </li>
+      <li>
+        <a href="/tempstick">Temp Stick</a>
+      </li>
+      <li>
+        <a href="/weatherflow">Tempest Weather System </a>
+      </li>
+      <li>
+        <a href="/texas_legislature">Texas Legislature</a>
+      </li>
+      <li>
+        <a href="/1a_podcast">The 1A Podcast</a>
+      </li>
+      <li>
+        <a href="/the_accidental_tech_podcast">The Accidental Tech Podcast</a>
+      </li>
+      <li>
+        <a href="/the_all_in_podcast">The All-In Podcast</a>
+      </li>
+      <li>
+        <a href="/the_best_of_car_talk_podcast">The Best of Car Talk Podcast</a>
+      </li>
+      <li>
+        <a href="/bible">The Bible In A Year</a>
+      </li>
+      <li>
+        <a href="/bootstrapped">The Bootstrapped Founder Podcast</a>
+      </li>
+      <li>
+        <a href="/codenewbie">The CodeNewbie Podcast</a>
+      </li>
+      <li>
+        <a href="/colin_and_samir">The Colin and Samir Show</a>
+      </li>
+      <li>
+        <a href="/the_college_investor">The College Investor</a>
+      </li>
+      <li>
+        <a href="/the_daily_podcast">The Daily Podcast</a>
+      </li>
+      <li>
+        <a href="/the_ezra_klein_show">The Ezra Klein Show</a>
+      </li>
+      <li>
+        <a href="/the_financial_diet">The Financial Diet</a>
+      </li>
+      <li>
+        <a href="/the_gray_area_podcast">The Gray Area Podcast</a>
+      </li>
+      <li>
+        <a href="/hill">THE HILL</a>
+      </li>
+      <li>
+        <a href="/the_hustle">The Hustle</a>
+      </li>
+      <li>
+        <a href="/the_iced_coffee_hour">The Iced Coffee Hour Podcast</a>
+      </li>
+      <li>
+        <a href="/the_indicator_podcast">The Indicator Podcast</a>
+      </li>
+      <li>
+        <a href="/the_joy_of_why_podcast">The Joy of Why Podcast</a>
+      </li>
+      <li>
+        <a href="/the_money_guy_show">The Money Guy Show</a>
+      </li>
+      <li>
+        <a href="/the_moz">The Moz Blog</a>
+      </li>
+      <li>
+        <a href="/the_nfl">The National Football League</a>
+      </li>
+      <li>
+        <a href="/nytimes">The New York Times</a>
+      </li>
+      <li>
+        <a href="/the_npr_politics_podcast">The NPR Politics Podcast</a>
+      </li>
+      <li>
+        <a href="/the_pulse_podcast">The Pulse Podcast</a>
+      </li>
+      <li>
+        <a href="/the_ramsey_show">The Ramsey Show</a>
+      </li>
+      <li>
+        <a href="/the_real_python_podcast">The Real Python Podcast</a>
+      </li>
+      <li>
+        <a href="/the_savvy_social_podcast">The Savvy Social Podcast</a>
+      </li>
+      <li>
+        <a href="/startup_mag">The Startup Magazine</a>
+      </li>
+      <li>
+        <a href="/the_wall_street_journal">The Wall Street Journal</a>
+      </li>
+      <li>
+        <a href="/THERMOR_Cozytouch">THERMOR Cozytouch</a>
+      </li>
+      <li>
+        <a href="/thermosmart">ThermoSmart</a>
+      </li>
+      <li>
+        <a href="/TheSorryGirls">TheSorryGirls on YouTube </a>
+      </li>
+      <li>
+        <a href="/thinga">Thinga</a>
+      </li>
+      <li>
+        <a href="/tantiv4">ThingaOS</a>
+      </li>
+      <li>
+        <a href="/think_media_podcast">Think Media Podcast</a>
+      </li>
+      <li>
+        <a href="/thinka">Thinka Integration</a>
+      </li>
+      <li>
+        <a href="/thinkific">Thinkific</a>
+      </li>
+      <li>
+        <a href="/this_american_life_podcast">This American Life Podcast</a>
+      </li>
+      <li>
+        <a href="/threads">Threads</a>
+      </li>
+      <li>
+        <a href="/thrive_blogger_podcast">Thrive Blogger Podcast</a>
+      </li>
+      <li>
+        <a href="/throughline_podcast">Throughline Podcast</a>
+      </li>
+      <li>
+        <a href="/ti_do">Ti-Do by T-LAB</a>
+      </li>
+      <li>
+        <a href="/TickTick">TickTick</a>
+      </li>
+      <li>
+        <a href="/tidycal">TidyCal</a>
+      </li>
+      <li>
+        <a href="/tiktok">TikTok</a>
+      </li>
+      <li>
+        <a href="/tiktok_lead_ads">TikTok Lead Ads</a>
+      </li>
+      <li>
+        <a href="/timberwolf_server">Timberwolf Server</a>
+      </li>
+      <li>
+        <a href="/timelines">Timelines</a>
+      </li>
+      <li>
+        <a href="/TimesFrame">Times Frame</a>
+      </li>
+      <li>
+        <a href="/TimesGate">Times Gate</a>
+      </li>
+      <li>
+        <a href="/tiny_buddha">Tiny Buddha</a>
+      </li>
+      <li>
+        <a href="/tis_smart_home">TIS Control</a>
+      </li>
+      <li>
+        <a href="/tmt_chow">TMT Chow</a>
+      </li>
+      <li>
+        <a href="/tny_app">Tny</a>
+      </li>
+      <li>
+        <a href="/tochie_speaker">Tochie Speaker</a>
+      </li>
+      <li>
+        <a href="/today_explained_podcast">Today, Explained Podcast</a>
+      </li>
+      <li>
+        <a href="/todoist">Todoist</a>
+      </li>
+      <li>
+        <a href="/toggl_track">Toggl Track</a>
+      </li>
+      <li>
+        <a href="/toodledo">Toodledo</a>
+      </li>
+      <li>
+        <a href="/resideo_total_connect">Total Connect 2.0</a>
+      </li>
+      <li>
+        <a href="/TPorig">TPorig</a>
+      </li>
+      <li>
+        <a href="/tracmo">Tracmo</a>
+      </li>
+      <li>
+        <a href="/trakt">Trakt</a>
+      </li>
+      <li>
+        <a href="/trane_home">Trane® Home</a>
+      </li>
+      <li>
+        <a href="/transistor">Transistor</a>
+      </li>
+      <li>
+        <a href="/trello">Trello</a>
+      </li>
+      <li>
+        <a href="/tricklestar">TrickleStar Connected Products</a>
+      </li>
+      <li>
+        <a href="/trigger_cmd">TRIGGERcmd</a>
+      </li>
+      <li>
+        <a href="/tripadvisor">TripAdvisor</a>
+      </li>
+      <li>
+        <a href="/True_Energy_DK">True Energy Smart Home Denmark</a>
+      </li>
+      <li>
+        <a href="/True_Energy_NO">True Energy Smart Home Norway</a>
+      </li>
+      <li>
+        <a href="/TSmartLifeDryer">TSmartLife Dryer</a>
+      </li>
+      <li>
+        <a href="/TMicrowave">TSmartLife Microwave</a>
+      </li>
+      <li>
+        <a href="/toshibaHAOven">TSmartLife Toaster Oven</a>
+      </li>
+      <li>
+        <a href="/TSmartWasher">TSmartLife Washer</a>
+      </li>
+      <li>
+        <a href="/tumblr">Tumblr</a>
+      </li>
+      <li>
+        <a href="/turbotax_blog">Turbotax Blog</a>
+      </li>
+      <li>
+        <a href="/turntouch">Turn Touch</a>
+      </li>
+      <li>
+        <a href="/tuxmailer">TuxMailer</a>
+      </li>
+      <li>
+        <a href="/twinu">twinu</a>
+      </li>
+      <li>
+        <a href="/twitch">Twitch</a>
+      </li>
+      <li>
+        <a href="/typeform">Typeform</a>
+      </li>
+      <li>
+        <a href="/typing_feedback">typing.feedback</a>
+      </li>
+      <li>
+        <a href="/u_tec_smart_switch">U-tec Smart Switch</a>
+      </li>
+      <li>
+        <a href="/u_tec_ultraloq">U-tec Ultraloq Smart Lock</a>
+      </li>
+      <li>
+        <a href="/us_independence_day">U.S. Independence Day</a>
+      </li>
+      <li>
+        <a href="/ubibot">UbiBot</a>
+      </li>
+      <li>
+        <a href="/ultenic">Ultenic</a>
+      </li>
+      <li>
+        <a href="/unforgettable_me">Unforgettable Me</a>
+      </li>
+      <li>
+        <a href="/united_nations_news">United Nations</a>
+      </li>
+      <li>
+        <a href="/unodc">United Nations Office on Drugs and Crime</a>
+      </li>
+      <li>
+        <a href="/up_first_podcast">Up First Podcast</a>
+      </li>
+      <li>
+        <a href="/updraft">Updraft</a>
+      </li>
+      <li>
+        <a href="/uplinkremote">Uplink Remote</a>
+      </li>
+      <li>
+        <a href="/uscert">US-CERT</a>
+      </li>
+      <li>
+        <a href="/usagov">USA.gov</a>
+      </li>
+      <li>
+        <a href="/usign">uSign</a>
+      </li>
+      <li>
+        <a href="/vactidy">Vactidy</a>
+      </li>
+      <li>
+        <a href="/vechain">vechain.energy</a>
+      </li>
+      <li>
+        <a href="/veezy_air_conditioner">VeeZy Air Conditioner</a>
+      </li>
+      <li>
+        <a href="/veezy_dishwasher">VeeZy Dishwasher</a>
+      </li>
+      <li>
+        <a href="/veezy_french_door">VeeZy French Door</a>
+      </li>
+      <li>
+        <a href="/veezy_oven">VeeZy Oven</a>
+      </li>
+      <li>
+        <a href="/veezy_refrigerator">VeeZy Refrigerator</a>
+      </li>
+      <li>
+        <a href="/veezy_tumble_dryer">VeeZy Tumble Dryer</a>
+      </li>
+      <li>
+        <a href="/veezy_washing_machine">VeeZy Washing Machine</a>
+      </li>
+      <li>
+        <a href="/jiecang_blindzoom">VelaSmart</a>
+      </li>
+      <li>
+        <a href="/venice_ai">Venice AI</a>
+      </li>
+      <li>
+        <a href="/veritasium">Veritasium - YouTube Channel</a>
+      </li>
+      <li>
+        <a href="/verizon_cloud">Verizon Cloud</a>
+      </li>
+      <li>
+        <a href="/vestaboard">Vestaboard</a>
+      </li>
+      <li>
+        <a href="/view_prod">Vimar VIEW</a>
+      </li>
+      <li>
+        <a href="/vimeo">Vimeo</a>
+      </li>
+      <li>
+        <a href="/virtualbuttons">Virtual Buttons</a>
+      </li>
+      <li>
+        <a href="/visualizer_coffee">Visualizer Coffee</a>
+      </li>
+      <li>
+        <a href="/vmc_italia">VMC Italia</a>
+      </li>
+      <li>
+        <a href="/voip_calls">VoIP Calls</a>
+      </li>
+      <li>
+        <a href="/voyp">Voyp</a>
+      </li>
+      <li>
+        <a href="/vybit">Vybit Push Notifications</a>
+      </li>
+      <li>
+        <a href="/wait_wait_dont_tell_me_podcast">Wait Wait... Don't Tell Me! Podcast</a>
+      </li>
+      <li>
+        <a href="/warmup_smart_thermostat">Warmup Smart Thermostat</a>
+      </li>
+      <li>
+        <a href="/watchmojo">WatchMojo</a>
+      </li>
+      <li>
+        <a href="/wattio_smarthome">Wattio SmartHome</a>
+      </li>
+      <li>
+        <a href="/watts">Watts</a>
+      </li>
+      <li>
+        <a href="/watttime">WattTime</a>
+      </li>
+      <li>
+        <a href="/wave">Wave</a>
+      </li>
+      <li>
+        <a href="/we_are_teachers">We Are Teachers</a>
+      </li>
+      <li>
+        <a href="/we_work_remotely">We Work Remotely</a>
+      </li>
+      <li>
+        <a href="/android_wear">Wear OS</a>
+      </li>
+      <li>
+        <a href="/weara">weara</a>
+      </li>
+      <li>
+        <a href="/weather">Weather Underground</a>
+      </li>
+      <li>
+        <a href="/webehome">WeBeHome - Security and Smart Home</a>
+      </li>
+      <li>
+        <a href="/webflow">Webflow</a>
+      </li>
+      <li>
+        <a href="/maker_webhooks">Webhooks</a>
+      </li>
+      <li>
+        <a href="/weebly">Weebly</a>
+      </li>
+      <li>
+        <a href="/weekend_edition_saturday_podcast">Weekend Edition Saturday Podcast</a>
+      </li>
+      <li>
+        <a href="/weekend_edition_sunday_podcast">Weekend Edition Sunday Podcast</a>
+      </li>
+      <li>
+        <a href="/whoop">Whoop</a>
+      </li>
+      <li>
+        <a href="/wifiplug">WIFIPLUG</a>
+      </li>
+      <li>
+        <a href="/wine_spectator">Wine Spectator</a>
+      </li>
+      <li>
+        <a href="/winet_stove">WiNET for Pellet Stove</a>
+      </li>
+      <li>
+        <a href="/relay">Wink Relay</a>
+      </li>
+      <li>
+        <a href="/aros">Wink: Aros</a>
+      </li>
+      <li>
+        <a href="/eggminder">Wink: Egg Minder</a>
+      </li>
+      <li>
+        <a href="/nimbus">Wink: Nimbus</a>
+      </li>
+      <li>
+        <a href="/pivot_power_genius">Wink: Pivot Power Genius</a>
+      </li>
+      <li>
+        <a href="/porkfolio">Wink: Porkfolio</a>
+      </li>
+      <li>
+        <a href="/wink_shortcuts">Wink: Shortcuts</a>
+      </li>
+      <li>
+        <a href="/spotter">Wink: Spotter</a>
+      </li>
+      <li>
+        <a href="/wired">WIRED</a>
+      </li>
+      <li>
+        <a href="/wirelesstag">Wireless Tag</a>
+      </li>
+      <li>
+        <a href="/wisdom_from_the_top">Wisdom From The Top</a>
+      </li>
+      <li>
+        <a href="/wiser_heat">Wiser</a>
+      </li>
+      <li>
+        <a href="/wiser_air">Wiser Air</a>
+      </li>
+      <li>
+        <a href="/wistia">Wistia</a>
+      </li>
+      <li>
+        <a href="/withings">Withings</a>
+      </li>
+      <li>
+        <a href="/withingshome">Withings Home</a>
+      </li>
+      <li>
+        <a href="/WithingsSleep">Withings Sleep</a>
+      </li>
+      <li>
+        <a href="/wix">Wix</a>
+      </li>
+      <li>
+        <a href="/wiz">WiZ</a>
+      </li>
+      <li>
+        <a href="/wolfram_data_drop">Wolfram Data Drop</a>
+      </li>
+      <li>
+        <a href="/woocommerce">WooCommerce</a>
+      </li>
+      <li>
+        <a href="/woopla">woopla phone calls</a>
+      </li>
+      <li>
+        <a href="/wordpress">WordPress</a>
+      </li>
+      <li>
+        <a href="/works_with_cavius">Works With Cavius</a>
+      </li>
+      <li>
+        <a href="/works_with_cavius_livisense">Works With Cavius LiviSense</a>
+      </li>
+      <li>
+        <a href="/who">World Health Organization</a>
+      </li>
+      <li>
+        <a href="/world_of_warcraft">World of Warcraft</a>
+      </li>
+      <li>
+        <a href="/wwf">World Wildlife Fund</a>
+      </li>
+      <li>
+        <a href="/wrike">Wrike</a>
+      </li>
+      <li>
+        <a href="/wtf_with_marc_maron">WTF with Marc Maron</a>
+      </li>
+      <li>
+        <a href="/WUUK">WUUK</a>
+      </li>
+      <li>
+        <a href="/wyzecam">Wyze</a>
+      </li>
+      <li>
+        <a href="/twitter">X (Twitter)</a>
+      </li>
+      <li>
+        <a href="/XHouseIOT">X-House smart home</a>
+      </li>
+      <li>
+        <a href="/xero">Xero</a>
+      </li>
+      <li>
+        <a href="/xtactor">Xtactor</a>
+      </li>
+      <li>
+        <a href="/yardforce">Yard Force smart garden</a>
+      </li>
+      <li>
+        <a href="/yardian">Yardian</a>
+      </li>
+      <li>
+        <a href="/yeelight">Yeelight</a>
+      </li>
+      <li>
+        <a href="/yelp">Yelp</a>
+      </li>
+      <li>
+        <a href="/yolink">YoLink</a>
+      </li>
+      <li>
+        <a href="/youtube">YouTube</a>
+      </li>
+      <li>
+        <a href="/zense_home">ZenseHome</a>
+      </li>
+      <li>
+        <a href="/zohocliq">Zoho Cliq</a>
+      </li>
+      <li>
+        <a href="/zohocliq_au">Zoho Cliq (Australia)</a>
+      </li>
+      <li>
+        <a href="/zohocliq_cn">Zoho Cliq (China)</a>
+      </li>
+      <li>
+        <a href="/zohocliq_eu">Zoho Cliq (Europe)</a>
+      </li>
+      <li>
+        <a href="/zohocliq_in">Zoho Cliq (India)</a>
+      </li>
+      <li>
+        <a href="/zoho_mail">Zoho Mail</a>
+      </li>
+      <li>
+        <a href="/zohomail_eu">Zoho Mail (Europe)</a>
+      </li>
+      <li>
+        <a href="/zohomail_in">Zoho Mail (India)</a>
+      </li>
+      <li>
+        <a href="/notebook">Zoho Notebook</a>
+      </li>
+      <li>
+        <a href="/notebook_au">Zoho Notebook (Australia)</a>
+      </li>
+      <li>
+        <a href="/notebook_cn">Zoho Notebook (China)</a>
+      </li>
+      <li>
+        <a href="/notebook_eu">Zoho Notebook (Europe)</a>
+      </li>
+      <li>
+        <a href="/notebook_in">Zoho Notebook (India)</a>
+      </li>
+      <li>
+        <a href="/notebook_jp">Zoho Notebook (Japan)</a>
+      </li>
+      <li>
+        <a href="/zoom">Zoom</a>
+      </li>
+      <li>
+        <a href="/zoom_phone">Zoom Phone</a>
+      </li>
+      <li>
+        <a href="/zubie">Zubie</a>
+      </li>
+      <li>
+        <a href="/zuluhood">Zuluhood</a>
+      </li>
+      <li>
+        <a href="/zynect_sensors">Zynect Sensors</a>
+      </li>
+  </ul>
+</section>
+
+<section class="content-list categories">
+  <h2>Service categories</h2>
+  <ul>
+      <li>
+        <a href="/explore/services/all">All</a>
+      </li>
+      <li>
+        <a href="/explore/services/new">New</a>
+      </li>
+      <li>
+        <a href="/explore/services/popular">Popular</a>
+      </li>
+      <li>
+        <a href="/explore/services/ai">AI</a>
+      </li>
+      <li>
+        <a href="/explore/services/business-tools">Business tools</a>
+      </li>
+      <li>
+        <a href="/explore/services/contacts">Contacts</a>
+      </li>
+      <li>
+        <a href="/explore/services/developer-tools">Developer tools</a>
+      </li>
+      <li>
+        <a href="/explore/services/finance-payments">Finance &amp; payments</a>
+      </li>
+      <li>
+        <a href="/explore/services/gaming-entertainment">Gaming &amp; Entertainment</a>
+      </li>
+      <li>
+        <a href="/explore/services/health-fitness">Health &amp; fitness</a>
+      </li>
+      <li>
+        <a href="/explore/services/journaling-personal-data">Journaling &amp; personal data</a>
+      </li>
+      <li>
+        <a href="/explore/services/location">Location</a>
+      </li>
+      <li>
+        <a href="/explore/services/mobile-devices-accessories">Mobile devices &amp; accessories</a>
+      </li>
+      <li>
+        <a href="/explore/services/music">Music</a>
+      </li>
+      <li>
+        <a href="/explore/services/news-information">News &amp; information</a>
+      </li>
+      <li>
+        <a href="/explore/services/notifications">Notifications</a>
+      </li>
+      <li>
+        <a href="/explore/services/photo-video">Photo &amp; video</a>
+      </li>
+      <li>
+        <a href="/explore/services/podcasts">Podcasts</a>
+      </li>
+      <li>
+        <a href="/explore/services/project-management-to-dos">Project management &amp; to-dos</a>
+      </li>
+      <li>
+        <a href="/explore/services/shopping">Shopping</a>
+      </li>
+      <li>
+        <a href="/explore/services/smart-home-iot">Smart home &amp; IoT</a>
+      </li>
+      <li>
+        <a href="/explore/services/social-media">Social media</a>
+      </li>
+      <li>
+        <a href="/explore/services/website-blog">Website &amp; blog</a>
+      </li>
+      <li>
+        <a href="/explore/services/youtube-channels">YouTube Channels</a>
+      </li>
+  </ul>
+</section>
+
+<section class="content-list applets">
+  <h2>Popular Applets</h2>
+  <ul>
+      <li>
+        <a href="/applets/cQBJqyhu-add-ecobee-smart-home-away-events-to-weekly-email-digest">Add ecobee Smart Home/Away events to weekly email digest</a>
+      </li>
+      <li>
+        <a href="/applets/PNxRag8D-add-new-ifttt-blog-updates-to-your-weekly-email-digest">Add new IFTTT blog updates to your weekly email digest</a>
+      </li>
+      <li>
+        <a href="/applets/kUmTYgCy-add-new-rss-feed-items-as-trello-cards">Add new RSS feed items as Trello cards</a>
+      </li>
+      <li>
+        <a href="/applets/QrdtFv5E-automatically-back-up-your-new-ios-photos-to-google-drive">Automatically back up your new iOS photos to Google Drive</a>
+      </li>
+      <li>
+        <a href="/applets/b5zt9dWA-automatically-sync-new-files-added-to-dropbox-to-your-google-drive">Automatically sync new files added to Dropbox to your Google Drive</a>
+      </li>
+      <li>
+        <a href="/applets/eiNUGkv4-automatically-turn-up-your-android-phone-s-ringer-when-you-leave-work">Automatically turn up your Android phone's ringer when you leave work</a>
+      </li>
+      <li>
+        <a href="/applets/PVkgiLYy-automatically-turn-your-lights-on-at-sunset">Automatically turn your lights on at sunset</a>
+      </li>
+      <li>
+        <a href="/applets/Xy9JPDtg-do-more-with-your-discover-weekly-playlist">Do more with your Discover Weekly playlist</a>
+      </li>
+      <li>
+        <a href="/applets/cfWBwK7R-email-nasa-s-astronomy-picture-of-the-day">Email NASA's Astronomy Picture of the Day</a>
+      </li>
+      <li>
+        <a href="/applets/KM8bz2Xs-email-a-weekly-digest-of-your-camera-widget-photos">Email a weekly digest of your Camera Widget photos</a>
+      </li>
+      <li>
+        <a href="/applets/AT5RLEvz-forward-new-sms-messages-to-your-email">Forward new SMS messages to your email</a>
+      </li>
+      <li>
+        <a href="/applets/XPv3fCjQ-get-ifttt-notification-when-an-astronaut-enters-space">Get IFTTT notification when an astronaut enters space</a>
+      </li>
+      <li>
+        <a href="/applets/MJYWdKUy-get-weather-underground-updates-by-notification-email-and-calendar-event">Get Weather Underground updates by notification, email, and calendar event</a>
+      </li>
+      <li>
+        <a href="/applets/DQcLTDVt-get-a-motivational-quote-by-email-every-monday">Get a motivational quote by Email every Monday</a>
+      </li>
+      <li>
+        <a href="/applets/biVDbm5N-get-an-email-when-there-s-breaking-nasa-news">Get an email when there's breaking NASA news</a>
+      </li>
+      <li>
+        <a href="/applets/QrMmsbz3-get-daily-finance-exchange-rate-via-notification">Get daily Finance exchange rate via notification</a>
+      </li>
+      <li>
+        <a href="/applets/ZTvsefp2-get-tomorrow-s-weather-forecast-before-bedtime">Get tomorrow’s weather forecast before bedtime</a>
+      </li>
+      <li>
+        <a href="/applets/bQFdqxHz-get-weekly-rss-feed-updates-via-email-digest">Get weekly RSS feed updates via Email Digest</a>
+      </li>
+      <li>
+        <a href="/applets/XYgMLijW-get-weekly-who-news-updates-via-email-digest">Get weekly WHO news updates via Email Digest</a>
+      </li>
+      <li>
+        <a href="/applets/DEz9XLCh-get-yourself-out-of-an-awkward-situation-international">Get yourself out of an awkward situation (International)</a>
+      </li>
+      <li>
+        <a href="/applets/kfTaZFsG-hear-your-note-widget-message-via-voip-call">Hear your Note widget message via VoIP call</a>
+      </li>
+      <li>
+        <a href="/applets/ZiLGhwtZ-if-a-webhook-is-triggered-get-a-mobile-notification">If a webhook is triggered, get a mobile notification</a>
+      </li>
+      <li>
+        <a href="/applets/WzacKGsT-log-daily-stock-closing-prices-to-google-sheets">Log daily stock closing prices to Google Sheets</a>
+      </li>
+      <li>
+        <a href="/applets/XN9H6acu-mute-android-ringtone-automatically-at-bedtime">Mute Android ringtone automatically at bedtime</a>
+      </li>
+      <li>
+        <a href="/applets/KLJbpBxX-mute-android-ringtone-automatically-at-bedtime">Mute Android ringtone automatically at bedtime</a>
+      </li>
+      <li>
+        <a href="/applets/yfaY7BnX-post-your-facebook-status-to-x-twitter">Post your Facebook status to X (Twitter)</a>
+      </li>
+      <li>
+        <a href="/applets/BZHQwRiN-post-your-new-facebook-status-to-x-twitter">Post your new Facebook status to X (Twitter)</a>
+      </li>
+      <li>
+        <a href="/applets/CrhspkRx-quickly-create-events-in-a-google-calendar">Quickly create events in a Google Calendar</a>
+      </li>
+      <li>
+        <a href="/applets/LEbinUvF-rain-tomorrow-get-a-mobile-notification">Rain tomorrow? Get a mobile notification</a>
+      </li>
+      <li>
+        <a href="/applets/jeEvmbsh-save-facebook-link-posts-to-google-sheets">Save Facebook link posts to Google Sheets</a>
+      </li>
+      <li>
+        <a href="/applets/HVaQjptn-save-new-camera-widget-photos-to-google-drive">Save new Camera widget photos to Google Drive</a>
+      </li>
+      <li>
+        <a href="/applets/jMyfaDWt-save-new-facebook-status-updates-to-day-one">Save new Facebook status updates to Day One</a>
+      </li>
+      <li>
+        <a href="/applets/WKiQF6bC-save-new-rss-feed-items-to-google-docs">Save new RSS feed items to Google Docs</a>
+      </li>
+      <li>
+        <a href="/applets/DefE5SkF-send-brainyquote-daily-quote-as-phone-notification">Send BrainyQuote daily quote as phone notification</a>
+      </li>
+      <li>
+        <a href="/applets/CVc9hs3R-send-a-webhooks-request-for-new-youtube-search-videos">Send a Webhooks request for new YouTube search videos</a>
+      </li>
+      <li>
+        <a href="/applets/rM26WU5Y-share-instagram-photos-on-twitter-only-when-you-include-a-specific-hashtag-in-the-caption">Share Instagram photos on Twitter only when you include a specific #hashtag in the caption</a>
+      </li>
+      <li>
+        <a href="/applets/rnvTEjV9-share-new-facebook-link-posts-to-x-twitter">Share new Facebook link posts to X (Twitter)</a>
+      </li>
+      <li>
+        <a href="/applets/XnveYFDL-track-time-at-locations-with-google-sheets">Track time at locations with Google Sheets</a>
+      </li>
+      <li>
+        <a href="/applets/HTak4X5f-turn-on-philips-hue-lights-when-you-arrive-home">Turn on Philips Hue lights when you arrive home</a>
+      </li>
+      <li>
+        <a href="/applets/Xg6K7DGY-turn-ringer-volume-up-after-a-missed-call">Turn ringer volume up after a missed call</a>
+      </li>
+  </ul>
+</section>
+
+<section class="content-list stories">
+  <h2>Explore posts</h2>
+    <h3><a href="/explore/stories/business">Business automation stories</a></h3>
+    <ul>
+        <li>
+          <a href="/explore/run-your-business-tools">10 new tools for the work that keeps your business moving</a>
+        </li>
+        <li>
+          <a href="/explore/new-business-tools-to-grow-your-business">10 new tools to help your small business get more customers</a>
+        </li>
+        <li>
+          <a href="/explore/20-new-business-integrations">20 business tools to automatically run and scale your business</a>
+        </li>
+        <li>
+          <a href="/explore/automate-your-email-marketing">5 ways to automate your email marketing with IFTTT</a>
+        </li>
+        <li>
+          <a href="/explore/automate-your-side-hustle">Automate your side hustle in 10 minutes</a>
+        </li>
+        <li>
+          <a href="/explore/classroom-automations">Automations for teachers</a>
+        </li>
+        <li>
+          <a href="/explore/how-to-share-google-calendar-with-iphone">Connect Google Calendar to your iPhone (and more) with IFTTT</a>
+        </li>
+        <li>
+          <a href="/explore/how-to-get-a-following-twitch">Grow your Twitch following with these easy and free automation tips</a>
+        </li>
+        <li>
+          <a href="/explore/how-to-use-workflow-automation">How small business owners and entrepreneurs can use workflow automation</a>
+        </li>
+        <li>
+          <a href="/explore/how-to-automate-youtube-scripts">How to automate YouTube scripts with AI: Announcing the IFTTT AI YouTube Assistant</a>
+        </li>
+        <li>
+          <a href="/explore/best-note-taking-apps">How to automate any notes app with IFTTT</a>
+        </li>
+        <li>
+          <a href="/explore/how-to-automate-with-ai">How to automate with AI in 2026</a>
+        </li>
+        <li>
+          <a href="/explore/how-to-use-rss-feeds">How to use and automate RSS Feeds</a>
+        </li>
+        <li>
+          <a href="/explore/google-calendar-integrations-automations">Optimize Google Calendar automations with IFTTT </a>
+        </li>
+        <li>
+          <a href="/explore/best-project-management-for-solopreneurs">Project management automations for solopreneurs</a>
+        </li>
+        <li>
+          <a href="/explore/7-tasks-small-business-automation">Small business automation: 7 tasks to automate in 2026 (with workflow examples)</a>
+        </li>
+        <li>
+          <a href="/explore/best-social-media-management-tools">The best social media management tools in 2026</a>
+        </li>
+        <li>
+          <a href="/explore/what-are-webhooks">What is a Webhook? A simple guide to real-time automation</a>
+        </li>
+    </ul>
+    <h3><a href="/explore/stories/gaming">Gaming automation stories</a></h3>
+    <ul>
+        <li>
+          <a href="/explore/guide-to-gaming-automation">The gamer's guide to automating everything (2026)</a>
+        </li>
+    </ul>
+    <h3><a href="/explore/stories/holiday">Holiday automation stories</a></h3>
+    <ul>
+        <li>
+          <a href="/explore/automate-new-years-resolution">Automate New Year’s Resolutions</a>
+        </li>
+        <li>
+          <a href="/explore/automate-out-of-office">Out of Office automation tips to help you relax</a>
+        </li>
+        <li>
+          <a href="/explore/six-automations-to-start-2026-strong">Six automations for a stronger start to 2026</a>
+        </li>
+        <li>
+          <a href="/explore/six-productivity-hacks-for-2026">Six productivity hacks that'll save you time in 2026</a>
+        </li>
+        <li>
+          <a href="/explore/the-lazy-persons-guide-to-productivity">The lazy person's guide to productivity</a>
+        </li>
+    </ul>
+    <h3><a href="/explore/stories/lifestyle">Lifestyle automation stories</a></h3>
+    <ul>
+        <li>
+          <a href="/explore/how-digital-nomads-use-automation">8 ways digital nomads are putting automation to work (so they can actually enjoy the view)</a>
+        </li>
+        <li>
+          <a href="/explore/automate-family-routines">Automate family routines: Time-saving hacks (2026)</a>
+        </li>
+        <li>
+          <a href="/explore/automation-olympics">Automation Olympics</a>
+        </li>
+        <li>
+          <a href="/explore/best-time-management-apps-strategies-and-tools">Best time management apps and tools</a>
+        </li>
+        <li>
+          <a href="/explore/weather-automations">Build custom weather automations in minutes</a>
+        </li>
+        <li>
+          <a href="/explore/sneaker-drop-alerts">Get custom notifications for sneaker drops the moment they're announced</a>
+        </li>
+        <li>
+          <a href="/explore/automate-bedtime-routine-smart-home">How to automate your bedtime routine with smart lights, thermostat, and music</a>
+        </li>
+        <li>
+          <a href="/explore/silence-phone-bedtime-android">How to automatically silence your phone at bedtime and turn it back on in the morning</a>
+        </li>
+        <li>
+          <a href="/explore/integrate-outlook-google-calendar">How to integrate Outlook Calendar with Google Calendar</a>
+        </li>
+        <li>
+          <a href="/explore/Journal_with_Day_One">Journal daily with Day One</a>
+        </li>
+        <li>
+          <a href="/explore/location-applets">Location Applets</a>
+        </li>
+        <li>
+          <a href="/explore/outsource-your-adulting-with-ifttt">Outsource your adulting with automation</a>
+        </li>
+        <li>
+          <a href="/explore/the-chill-automation-collection">Take it easy: automations for a calmer day</a>
+        </li>
+        <li>
+          <a href="/explore/never-miss-a-drop">The collector's edition: never miss a drop</a>
+        </li>
+        <li>
+          <a href="/explore/best-habit-tracking-apps">Top habit tracking apps to achieve your 2026 goals</a>
+        </li>
+        <li>
+          <a href="/explore/widgets-collection">Top widget Applets</a>
+        </li>
+        <li>
+          <a href="/explore/what-is-telegram-used-for">What is Telegram used for? A comprehensive automation guide</a>
+        </li>
+        <li>
+          <a href="/explore/what-is-geofencing">What is geofencing and how to make location-based reminders with IFTTT</a>
+        </li>
+    </ul>
+    <h3><a href="/explore/stories/music">Music automation stories</a></h3>
+    <ul>
+        <li>
+          <a href="/explore/ifttt-spotify-essential-automations">IFTTT + Spotify: every automation music lovers actually need</a>
+        </li>
+    </ul>
+    <h3><a href="/explore/stories/popular">Popular automation stories</a></h3>
+    <ul>
+        <li>
+          <a href="/explore/seven-morning-automations">7 automations for people who hate mornings</a>
+        </li>
+        <li>
+          <a href="/explore/building-a-second-brain-with-automations">7 ways to build a second brain with automations</a>
+        </li>
+        <li>
+          <a href="/explore/discord-automation">Automate your Discord server with IFTTT</a>
+        </li>
+        <li>
+          <a href="/explore/celebrating-15-years-ifttt">Celebrating 15 years of IFTTT</a>
+        </li>
+        <li>
+          <a href="/explore/google-sheets-automation">Google Sheets automation: The complete guide (2026)</a>
+        </li>
+        <li>
+          <a href="/explore/home-screen-inspiration-with-widgets">Home screen inspiration: seven widget setups to transform your day</a>
+        </li>
+        <li>
+          <a href="/explore/how-to-automate-project-management">How an IFTTTer is automating their project management</a>
+        </li>
+        <li>
+          <a href="/explore/how-an-ifttter-simplifies-their-daily-life">How an IFTTTer simplifies their daily life</a>
+        </li>
+        <li>
+          <a href="/explore/how-to-connect-your-first-applet">How to connect your first Applet</a>
+        </li>
+        <li>
+          <a href="/explore/how-to-use-ifttt-mcp-with-claude">How to use IFTTT MCP with Claude</a>
+        </li>
+        <li>
+          <a href="/explore/welcome_to_ifttt">How to use IFTTT: everything you need to get started</a>
+        </li>
+        <li>
+          <a href="/explore/camera-collection">Photo automation with the Camera widget</a>
+        </li>
+        <li>
+          <a href="/explore/automate-the-annoying-things">Six ways to automate these annoying tasks</a>
+        </li>
+        <li>
+          <a href="/explore/automations-for-university-students">Students get 90% off IFTTT</a>
+        </li>
+        <li>
+          <a href="/explore/the-best-automations-for-every-enneagram-type">The best automations for every enneagram type</a>
+        </li>
+        <li>
+          <a href="/explore/apps-category-ai">Top AI apps on IFTTT</a>
+        </li>
+        <li>
+          <a href="/explore/top-applets-on-ifttt">Top Applets on IFTTT: our yearly review </a>
+        </li>
+        <li>
+          <a href="/explore/we-tested-24-applets">We tested these 24 Applets so you don't have to</a>
+        </li>
+        <li>
+          <a href="/explore/new_to_ifttt">Welcome to IFTTT</a>
+        </li>
+        <li>
+          <a href="/explore/welcome_to_pro">Welcome to Pro</a>
+        </li>
+        <li>
+          <a href="/explore/welcome_to_pro+">Welcome to Pro+</a>
+        </li>
+        <li>
+          <a href="/explore/what-is-ifttt-mcp">What is IFTTT MCP?</a>
+        </li>
+        <li>
+          <a href="/explore/what-is-workflow-automation">What is workflow automation? A complete guide and real examples</a>
+        </li>
+        <li>
+          <a href="/explore/your-2026-automation-aesthetic">What your automations say about your aesthetic</a>
+        </li>
+        <li>
+          <a href="/explore/what-your-coffee-order-says-about-your-workflow">What your coffee order says about your workflow</a>
+        </li>
+        <li>
+          <a href="/explore/youtube-automation">YouTube automation: The complete guide (2026)</a>
+        </li>
+    </ul>
+    <h3><a href="/explore/stories/productivity">Productivity automation stories</a></h3>
+    <ul>
+        <li>
+          <a href="/explore/10-automation-prompts-to-try">10 automation prompts you need to try</a>
+        </li>
+        <li>
+          <a href="/explore/10-back-to-school-prompts-to-try">10 back-to-school automations to try</a>
+        </li>
+        <li>
+          <a href="/explore/10-prompts-for-a-calmer-morning">10 prompts for a calmer morning</a>
+        </li>
+        <li>
+          <a href="/explore/10-small-moments-people-want-back">10 small moments people actually want back</a>
+        </li>
+        <li>
+          <a href="/explore/automations-for-trackers">10 ways to automate life for the people who track everything</a>
+        </li>
+        <li>
+          <a href="/explore/apps-work-better-together">14 apps that work better together (and take 2 minutes to set up)</a>
+        </li>
+        <li>
+          <a href="/explore/20-new-ways-to-automate-gmail">20 new ways to automate Gmail on IFTTT</a>
+        </li>
+        <li>
+          <a href="/explore/automations-for-the-chronically-curious">26 automations for the chronically curious</a>
+        </li>
+        <li>
+          <a href="/explore/the-ultimate-social-media-automation-stack">5 ways to build the ultimate social media automation stack</a>
+        </li>
+        <li>
+          <a href="/explore/q4-finances-ready">5 ways to get your finances Q4-ready before the year sprints away</a>
+        </li>
+        <li>
+          <a href="/explore/never-miss-a-message-with-automations">5 ways to never miss a message across Discord, Telegram, and beyond</a>
+        </li>
+        <li>
+          <a href="/explore/calendar-automations">6 calendar automations your week needs</a>
+        </li>
+        <li>
+          <a href="/explore/7-prompts-to-automate-your-job-search">7 automation prompts to make your job search easier</a>
+        </li>
+        <li>
+          <a href="/explore/google-slides-automations">Automate Google Slides with IFTTT and let your decks build themselves</a>
+        </li>
+        <li>
+          <a href="/explore/automations-for-every-kind-of-host">Automations for hosts of every kind</a>
+        </li>
+        <li>
+          <a href="/explore/student-collection">Automations for students</a>
+        </li>
+        <li>
+          <a href="/explore/automating-task-management">Best task management automation tools (2026)</a>
+        </li>
+        <li>
+          <a href="/explore/pinterest-automations-better-pins">Better pins with IFTTT Pinterest automation </a>
+        </li>
+        <li>
+          <a href="/explore/notifications-use-cases">Building custom notification automations with IFTTT </a>
+        </li>
+        <li>
+          <a href="/explore/ifttt-gmail-essential-automations">Connect Gmail to your life with IFTTT automations</a>
+        </li>
+        <li>
+          <a href="/explore/easy-email-automations">Easy inbox management with IFTTT email automations</a>
+        </li>
+        <li>
+          <a href="/explore/every-way-to-automate-notion">Every way to automate Notion with IFTTT</a>
+        </li>
+        <li>
+          <a href="/explore/google-collection">Everything you can automate with Google on IFTTT</a>
+        </li>
+        <li>
+          <a href="/explore/idea-to-automation-in-1-minute">From idea to automation in 1 minute</a>
+        </li>
+        <li>
+          <a href="/explore/automate-your-curiosity">Fuel your curiosity with AI and automation</a>
+        </li>
+        <li>
+          <a href="/explore/how-to-scale-guest-satisfaction-with-automation">How IFTTT helped automate short-term rental check-ins and scale guest satisfaction</a>
+        </li>
+        <li>
+          <a href="/explore/keeping-your-digital-life-in-sync">How an IFTTTer uses 85+ Applets to keep their digital life in sync</a>
+        </li>
+        <li>
+          <a href="/explore/aggregate-customize-news">How to aggregate and customize news</a>
+        </li>
+        <li>
+          <a href="/explore/best-bookmark-manager-tools">How to bookmark and manage articles</a>
+        </li>
+        <li>
+          <a href="/explore/team-sports-news-alerts">How to get custom sports alerts for your team the moment news breaks</a>
+        </li>
+        <li>
+          <a href="/explore/ifttt-alternatives">IFTTT Alternatives: Comparing Zapier, Make, n8n, Pipedream, and Tasklet.ai</a>
+        </li>
+        <li>
+          <a href="/explore/ifttt-vs-make">IFTTT vs Make: which to choose?</a>
+        </li>
+        <li>
+          <a href="/explore/ifttt-vs-n8n">IFTTT vs n8n: features, pricing, and user comparison</a>
+        </li>
+        <li>
+          <a href="/explore/ifttt-vs-apple-shortcuts">IFTTT vs. Apple Shortcuts: The iPhone automation that actually works</a>
+        </li>
+        <li>
+          <a href="/explore/let-ai-handle-monday">Let AI handle Monday in 5 steps</a>
+        </li>
+        <li>
+          <a href="/explore/webhook-automation-use-cases">Six ways to use webhooks with IFTTT</a>
+        </li>
+        <li>
+          <a href="/explore/10-new-ai-tools">The 10 AI tools taking over your feed just joined your workflow</a>
+        </li>
+        <li>
+          <a href="/explore/new-rules-productivity">The 5 new rules of productivity</a>
+        </li>
+        <li>
+          <a href="/explore/best-free-automation-tools">The best free automation tools in 2026 to boost your workflow</a>
+        </li>
+        <li>
+          <a href="/explore/your-2026-automation-stack">The ultimate automation stack in 2026</a>
+        </li>
+        <li>
+          <a href="/explore/what-is-your-notification-personality">What is your notification personality?</a>
+        </li>
+        <li>
+          <a href="/explore/what-kind-of-automator-are-you">What kind of automator are you?</a>
+        </li>
+        <li>
+          <a href="/explore/your-ai-prompt-style">What your AI prompt style says about you</a>
+        </li>
+        <li>
+          <a href="/explore/desk-setup-productivity-style">What your desk setup says about your productivity style</a>
+        </li>
+        <li>
+          <a href="/explore/which-generation-are-you-according-to-your-applets">Which generation are you according to your Applets?</a>
+        </li>
+        <li>
+          <a href="/explore/update-your-way">Your updates, your way</a>
+        </li>
+        <li>
+          <a href="/explore/zapier-vs-ifttt-ai-tools">Zapier vs IFTTT: Who’s got the best AI tools?</a>
+        </li>
+    </ul>
+    <h3><a href="/explore/stories/smart-home">Smart home automation stories</a></h3>
+    <ul>
+        <li>
+          <a href="/explore/6-philips-hue-ideas-to-automate-your-home">6 Philips Hue ideas to automate your home</a>
+        </li>
+        <li>
+          <a href="/explore/applets-for-gardening">Automate your garden and lawn care</a>
+        </li>
+        <li>
+          <a href="/explore/smart-home-manager">Best AI smart home automation ideas in 2026: Connected homes with IFTTT</a>
+        </li>
+        <li>
+          <a href="/explore/best-smart-locks-vacation-rentals">Best smart locks for vacation rentals: Airbnb-friendly picks for remote hosts</a>
+        </li>
+        <li>
+          <a href="/explore/go-green">Eco-friendly automations to go green (2026)</a>
+        </li>
+        <li>
+          <a href="/explore/home-security-integrations">Home security integrations</a>
+        </li>
+        <li>
+          <a href="/explore/how-to-automate-your-smart-home">How to automate your smart home</a>
+        </li>
+        <li>
+          <a href="/explore/wake-up-routine-smart-lights-thermostat">How to build a gentle wake-up routine with smart lights and your thermostat</a>
+        </li>
+        <li>
+          <a href="/explore/arrival-geofence-bedroom-routine">How to get your bedroom ready the moment you get home</a>
+        </li>
+        <li>
+          <a href="/explore/sync-smart-home-airbnb-calendar">How to sync your Airbnb calendar with smart devices via IFTTT</a>
+        </li>
+        <li>
+          <a href="/explore/sunset-synced-wind-down-routine">How to sync your wind-down routine to actual sunset, not a fixed time</a>
+        </li>
+        <li>
+          <a href="/explore/motion-sensor-nightlight-hue">How to turn any light into a motion sensor light for nighttime</a>
+        </li>
+        <li>
+          <a href="/explore/ifttt-vs-google-home-routines">IFTTT vs. Google Home Routines: the best smart home automation pair?</a>
+        </li>
+        <li>
+          <a href="/explore/philips-hue-applets">Philips Hue Applets</a>
+        </li>
+        <li>
+          <a href="/explore/preventing-airbnb-disasters-sensors">Preventing Airbnb disasters: smart smoke, CO2 &amp; water leak sensors</a>
+        </li>
+        <li>
+          <a href="/explore/smart-thermostat-automations-vacation-rentals">Save on utilities: smart thermostat automations for vacation rentals</a>
+        </li>
+        <li>
+          <a href="/explore/smart-garage-set-up-myq">Smart garage set up with MyQ</a>
+        </li>
+        <li>
+          <a href="/explore/smart-home-automation-ideas">Smart home automation ideas that'll make your life easier</a>
+        </li>
+        <li>
+          <a href="/explore/best-smart-home-apps-2026">The 5 best smart home apps for iPhone and Android</a>
+        </li>
+        <li>
+          <a href="/explore/ultimate-airbnb-smart-home-guide">The ultimate Airbnb smart home guide: best devices to automate your rental</a>
+        </li>
+        <li>
+          <a href="/explore/weatherproofing-rental-freezing-pipes-storm-prep">Weather-proofing your rental: smart automation for freezing pipes and storm prep</a>
+        </li>
+        <li>
+          <a href="/explore/smart-home-personality">What does your smart home say about you?</a>
+        </li>
+    </ul>
+    <h3><a href="/explore/stories/social-media">Social media automation stories</a></h3>
+    <ul>
+        <li>
+          <a href="/explore/automate-community-announcements">Automate your community announcements across Discord, X, and newsletter</a>
+        </li>
+        <li>
+          <a href="/explore/every-way-to-automate-reddit">Every way to automate Reddit with IFTTT</a>
+        </li>
+        <li>
+          <a href="/explore/every-way-to-automate-tiktok">Every way to automate TikTok with IFTTT</a>
+        </li>
+        <li>
+          <a href="/explore/every-way-to-automate-x-twitter">Every way to automate X (Twitter) with IFTTT</a>
+        </li>
+        <li>
+          <a href="/explore/guide-to-social-media-automation">Guide to social media automation</a>
+        </li>
+        <li>
+          <a href="/explore/algorithm-penalty-inconsistent-posting">How social media algorithms punish inconsistent posting</a>
+        </li>
+        <li>
+          <a href="/explore/automate-discord-moderation">How to automate Discord moderation for spam, raids, and rule-breakers without watching 24/7</a>
+        </li>
+        <li>
+          <a href="/explore/discord-welcome-and-roles">How to automate Discord onboarding with welcome messages and reaction roles (without feeling robotic)</a>
+        </li>
+        <li>
+          <a href="/explore/automate-instagram">How to automate Instagram (2026)</a>
+        </li>
+        <li>
+          <a href="/explore/automate-youtube-reddit-discord">How to automate YouTube and Reddit posts to Discord</a>
+        </li>
+        <li>
+          <a href="/explore/automate-community-event-end-to-end">How to automate a community event end to end: announcement, reminders, go-live ping, and recap</a>
+        </li>
+        <li>
+          <a href="/explore/automate-podcast-social-distribution">How to automate your podcast social distribution with IFTTT</a>
+        </li>
+        <li>
+          <a href="/explore/post-everywhere-reformatted-natively">How to post one piece of content to every platform, reformatted for each one</a>
+        </li>
+        <li>
+          <a href="/explore/one-inbox-for-replies">How to put mentions, DMs, and flagged questions from every app into one inbox</a>
+        </li>
+        <li>
+          <a href="/explore/repurpose-content-week-posts">How to repurpose one piece of content into a week of community posts</a>
+        </li>
+        <li>
+          <a href="/explore/blog-post-content-pillar-week">How to turn one blog post into a week of content across every platform</a>
+        </li>
+        <li>
+          <a href="/explore/keep-your-communty-active">Top ways to keep your community active when a social media scheduler isn't enough</a>
+        </li>
+        <li>
+          <a href="/explore/ultimate-cross-posting-applet">Ultimate social media cross-posting Applet</a>
+        </li>
+        <li>
+          <a href="/explore/content-ideas-never-lose-one">Where to find your next 30 content ideas (and how to never lose one again, with IFTTT)</a>
+        </li>
+    </ul>
+    <h3><a href="/explore/stories/wellness">Wellness automation stories</a></h3>
+    <ul>
+        <li>
+          <a href="/explore/10-prompts-to-improve-your-sleep">10 prompts to improve your sleep</a>
+        </li>
+        <li>
+          <a href="/explore/heathy-habits-collection">8 ways to make healthy habits automatic in 2026</a>
+        </li>
+        <li>
+          <a href="/explore/oura-ring-automatic-sleep-report">How to get an automatic sleep report every morning from your Oura Ring</a>
+        </li>
+    </ul>
+</section>
+
+    </main>
+  </div>
+
+  
+
+  
+
+    <footer class="site-footer ifttt_next_bucket">
+    <a class="pro-upsell pro-ad" title="Try IFTTT Pro" href="/subscriptions/pro">
+        <div class="pro-upsell-text">
+          <span class="logo">
+            <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+            <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#111"></path></svg>
+          </span>
+          <span class="pro-upsell-heading">Automate more, effortlessly.</span>
+        </div>
+
+        <div class="button-secondary button-on-color">
+            Try it free
+        </div>
+</a>  <div class="footer-top-container">
+    <div class="logo-container">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/">
+        <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="ifttt-logo" title="IFTTT" style="fill: white"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>    </div>
+
+    <div class="footer-sections">
+      <div class="footer-section explore">
+        <div class="section-header">
+          <a title="Explore" href="/explore">Explore</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="Services" title="Services" href="/explore/services">Services</a>
+              </li>
+              <li>
+                <a alt="Stories" title="Stories" href="/explore/stories">Stories</a>
+              </li>
+              <li>
+                <a alt="Applets" title="Applets" href="/explore/applets">Applets</a>
+              </li>
+              <li>
+                <a alt="IFTTT MCP" title="IFTTT MCP" href="/mcp">IFTTT MCP</a>
+              </li>
+              <li>
+                <a alt="Help Center" title="Help Center" href="/hc/en-us">Help Center</a>
+              </li>
+              <li>
+                <a alt="Content Map" title="Content Map" href="/content_map">Content Map</a>
+              </li>
+              <li>
+                <a alt="Search" title="Search" href="/explore">Search</a>
+              </li>
+              <li>
+                <a alt="Plans" title="Plans" href="/plans">Plans</a>
+              </li>
+              <li>
+                <a alt="Developer docs" title="Developer docs" href="/docs/api_reference">Developer docs</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section top-integrations">
+        <div class="section-header">
+          Top Integrations
+        </div>
+          <ul>
+              <li>
+                <a alt="Discord and Instagram" title="Discord and Instagram" href="/connect/discord/instagram">Discord and Instagram</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Notion" title="iOS Calendar and Notion" href="/connect/ios_calendar/notion_so">iOS Calendar and Notion</a>
+              </li>
+              <li>
+                <a alt="Google Calendar and Google Sheets" title="Google Calendar and Google Sheets" href="/connect/google_calendar/google_sheets">Google Calendar and Google Sheets</a>
+              </li>
+              <li>
+                <a alt="Google Assistant and My Q" title="Google Assistant and My Q" href="/connect/google_assistant_v2/myq_devices">Google Assistant and My Q</a>
+              </li>
+              <li>
+                <a alt="BotGhost and Spotify" title="BotGhost and Spotify" href="/connect/botghost/spotify">BotGhost and Spotify</a>
+              </li>
+              <li>
+                <a alt="SMS and Twitter" title="SMS and Twitter" href="/connect/sms/twitter">SMS and Twitter</a>
+              </li>
+              <li>
+                <a alt="iOS Reminders and Notion" title="iOS Reminders and Notion" href="/connect/ios_reminders/notion_so">iOS Reminders and Notion</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Todoist" title="iOS Calendar and Todoist" href="/connect/ios_calendar/todoist">iOS Calendar and Todoist</a>
+              </li>
+              <li>
+                <a alt="Telegram and Twitter" title="Telegram and Twitter" href="/connect/telegram/twitter">Telegram and Twitter</a>
+              </li>
+              <li>
+                <a alt="Discord and Twitter" title="Discord and Twitter" href="/connect/discord/twitter">Discord and Twitter</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section latest-stories">
+        <div class="section-header">
+          <a title="Latest Stories" href="/explore/stories">Latest Stories</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="How to automate with AI" title="How to automate with AI" href="/explore/how-to-automate-with-ai">How to automate with AI</a>
+              </li>
+              <li>
+                <a alt="Best Twitter automation tools" title="Best Twitter automation tools" href="/explore/best-twitter-automation-tools">Best Twitter automation tools</a>
+              </li>
+              <li>
+                <a alt="Best time management apps and tools" title="Best time management apps and tools" href="/explore/best-time-management-apps-strategies-and-tools">Best time management apps and tools</a>
+              </li>
+              <li>
+                <a alt="What is workflow automation?" title="What is workflow automation?" href="/explore/what-is-workflow-automation">What is workflow automation?</a>
+              </li>
+              <li>
+                <a alt="How to use RSS Feeds" title="How to use RSS Feeds" href="/explore/how-to-use-rss-feeds">How to use RSS Feeds</a>
+              </li>
+              <li>
+                <a alt="What are webhooks?" title="What are webhooks?" href="/explore/what-are-webhooks">What are webhooks?</a>
+              </li>
+              <li>
+                <a alt="11 best Pomodoro productivity apps" title="11 best Pomodoro productivity apps" href="/explore/best-pomodoro-productivity-apps">11 best Pomodoro productivity apps</a>
+              </li>
+              <li>
+                <a alt="How to automate Threads" title="How to automate Threads" href="/explore/how-to-automate-threads">How to automate Threads</a>
+              </li>
+              <li>
+                <a alt="How to automate social media posts" title="How to automate social media posts" href="/explore/how-to-automate-social-media-posts">How to automate social media posts</a>
+              </li>
+              <li>
+                <a alt="Best social media tools for automation" title="Best social media tools for automation" href="/explore/best-automation-tools-social-media">Best social media tools for automation</a>
+              </li>
+          </ul>
+      </div>
+    <div class="footer-section company">
+      <div class="section-header">Company</div>
+      <ul>
+        <li><a alt="Developers" title="Developers" href="/developers">Developers</a></li>
+        <li><a alt="Partner program" title="Partner program" href="/partners">Partner program</a></li>
+        <li><a alt="Careers" title="Careers" href="/careers">Careers</a></li>
+        <li><a alt="Contact" title="Contact" href="/contact">Contact</a></li>
+        <li><a alt="About" title="About" href="/about">About</a></li>
+        <li><a alt="Privacy" title="Privacy" href="/privacy">Privacy</a></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer-section download">
+      <ul class="download-buttons">
+        <li>
+          <a title="Download on the App Store" aria-label="The Apple App Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fitunes.apple.com%2Fapp%2Fapple-store%2Fid660944635%3Fpt%3D1752682%26ct%3D%2Fcontent_map%26mt%3D8">
+            <img alt="" title="Download on the App Store" loading="lazy" width="136" height="40" src="/assets/asset-000099.svg">
+</a>        </li>
+        <li>
+          <a title="Get it on Google Play" aria-label="The Google Play Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.ifttt.ifttt%26utm_source%3D%2Fcontent_map%26utm_medium%3Dweb">
+            <img alt="" title="Get it on Google Play" loading="lazy" width="136" height="42" src="/assets/asset-000100.svg">
+</a>        </li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom-container">
+      <div class="group group-social">
+        <a class="social-icon" alt="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.facebook.com%2Fifttt">
+          <img alt="Facebook" title="Facebook" loading="lazy" width="28" height="28" src="/assets/asset-000102.svg">
+</a>
+        <a class="social-icon" alt="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fifttt%2F">
+          <img alt="LinkedIn" title="LinkedIn" loading="lazy" width="28" height="28" src="/assets/asset-000101.svg">
+</a>
+        <a class="social-icon" alt="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.instagram.com%2Fiftttapp%2F">
+          <img alt="Instagram" title="Instagram" loading="lazy" width="28" height="28" src="/assets/asset-000103.svg">
+</a>
+        <a class="social-icon" alt="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.youtube.com%2F%40IFTTT">
+          <img alt="YouTube" title="YouTube" loading="lazy" width="28" height="28" src="/assets/asset-000104.svg">
+</a>
+        <a class="social-icon" alt="Twitter" title="Twitter" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Ftwitter.com%2FIFTTT">
+          <img alt="Twitter" title="Twitter" loading="lazy" width="28" height="28" src="/assets/asset-000105.svg">
+</a>
+        <a class="social-icon" alt="TikTok" title="TikTok" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.tiktok.com%2F%40iftttapp">
+          <img alt="TikTok" title="TikTok" loading="lazy" width="28" height="28" src="/assets/asset-000106.svg">
+</a>
+        <a class="social-icon" alt="Reddit" title="Reddit" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fifttt%2F">
+          <img alt="Reddit" title="Reddit" loading="lazy" width="28" height="28" src="/assets/asset-000107.svg">
+</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+  
+
+  <div id="react-portal-container"></div>
+
+  
+
+  
+  
+
+
+
+    
+
+  
+
+
+
+<div style="position: absolute; top: 50vh; height: 1px; width: 100%;"></div><script src="/local.js" defer></script></body></html>

@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="en"><head>
+    <link rel="preload" href="/assets/asset-000002.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000004.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000003.woff2" as="font" type="font/woff2">
+
+<style>
+/* IFTTT.ai rebrand — Museo Sans Rounded (site-wide base font). One @font-face per Museo cut; */
+/* CSS font-weight == the cut number (300 Light / 500 Regular / 700 body / 900 headings). */
+/* NB: map by cut name, not the weight Figma's inspect panel shows — a designer's desktop copy */
+/* may report ~200 less (700 for the 900 cut); these files carry OS/2 weight == cut number. */
+
+/* Museo Sans Rounded 300 (light) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 300;
+  src: url("/assets/dependency-000100.woff2") format("woff2"),
+    url("/assets/dependency-000101.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 500 (regular) — covers CSS 400–600 */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 500 600;
+  src: url("/assets/asset-000002.woff2") format("woff2"),
+    url("/assets/dependency-000102.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 700 (body) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 700;
+  src: url("/assets/asset-000004.woff2") format("woff2"),
+    url("/assets/dependency-000104.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 900 (black) — display headings */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 900;
+  src: url("/assets/asset-000003.woff2") format("woff2"),
+    url("/assets/dependency-000106.woff") format("woff");
+  font-display: swap;
+}
+
+/* Metric-matched fallback for the swap window: Avenir Next scaled to the Museo advance widths, with */
+/* the Museo line box (hhea 940/-260 divided by size-adjust), so the change to Museo moves no layout. */
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 500 600;
+  src: local("Avenir Next Medium"), local("AvenirNext-Medium");
+  size-adjust: 98.0%;
+  ascent-override: 95.92%;
+  descent-override: 26.53%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 700;
+  src: local("Avenir Next Bold"), local("AvenirNext-Bold");
+  size-adjust: 94.5%;
+  ascent-override: 99.47%;
+  descent-override: 27.51%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 900;
+  src: local("Avenir Next Heavy"), local("AvenirNext-Heavy");
+  size-adjust: 90.2%;
+  ascent-override: 104.21%;
+  descent-override: 28.82%;
+  line-gap-override: 0%;
+}
+
+/* Museo Sans Rounded 500 / 700 italic — fetched only by pages that set font-style: italic. */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 500 600;
+  src: url("/assets/asset-000981.woff2") format("woff2"),
+    url("/assets/dependency-000103.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/asset-001589.woff2") format("woff2"),
+    url("/assets/dependency-000105.woff") format("woff");
+  font-display: swap;
+}
+</style>
+
+    <!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0">
+<meta name="mobile-web-app-capable" content="yes">
+
+
+
+
+  <title>Contact sales - IFTTT</title>
+<meta name="description" content="Make connectivity your competitive edge. Power the connections your customers want by working with IFTTT. Contact us to learn more and to get started.">
+<meta name="keywords" content="ifttt applets connect connections integrate integration automate automation services recipes trigger action ifthisthenthat free">
+<meta property="al:ios:url" content="ifttt://">
+<meta property="al:ios:app_store_id" content="660944635">
+<meta property="al:ios:app_name" content="IFTTT">
+<meta property="fb:app_id" content="122259781154546">
+<meta property="fb:admins" content="7302486">
+<meta property="og:title" content="Contact sales - IFTTT">
+<meta property="og:description" content="Make connectivity your competitive edge. Power the connections your customers want by working with IFTTT. Contact us to learn more and to get started.">
+<meta property="og:site_name" content="IFTTT">
+<meta property="og:url" content="https://ifttt.com/contact_sales">
+<meta property="og:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:image:alt" content="Contact sales - IFTTT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@IFTTT">
+<meta name="twitter:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta name="twitter:app:id:iphone" content="660944635">
+<meta name="twitter:app:id:ipad" content="660944635">
+<meta name="twitter:app:id:googleplay" content="com.ifttt.ifttt">
+<meta name="twitter:app:url:iphone" content="ifttt://">
+<meta name="twitter:app:url:ipad" content="ifttt://">
+<meta name="twitter:app:url:googleplay" content="ifttt://">
+<meta name="twitter:app:name:googleplay" content="IFTTT">
+<meta name="twitter:image:alt" content="Contact sales - IFTTT">
+<meta name="author" content="IFTTT">
+<meta name="copyright" content="Copyright 2026 IFTTT Inc.">
+<meta name="theme-color" content="">
+<meta name="facebook-domain-verification" content="tapueff3rri63aug9c5b7hapbv3mkv">
+
+<!-- Standard SVG Favicon -->
+<link rel="icon" href="/assets/dependency-000091.svg" type="image/svg+xml">
+
+<!-- For all Apple Devices: -->
+<link rel="apple-touch-icon" href="/assets/dependency-000081.png">
+
+<!-- For Windows 8: -->
+<meta name="msapplication-TileImage" content="https://web-assets.ifttt.com/builds/assets/pinned-Dpomu1wG.png">
+<meta name="msapplication-TileColor" content="#111">
+
+
+
+<link rel="stylesheet" href="/assets/asset-000979.css">
+<link rel="stylesheet" href="/assets/asset-000117.css">
+<link rel="stylesheet" href="/assets/asset-000134.css">
+
+    
+  <link rel="stylesheet" href="/local.css"></head>
+  <body id="contact-sales-body" class="partners-body contact-sales-body new-action  false" style="background-color: rgb(255, 255, 255);" data-local-route="/contact_sales" data-local-actor="anonymous" data-local-state="default"><div id="flash-messages"></div>
+  
+      <!-- Google Tag Manager (noscript) -->
+  <noscript></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+    
+
+
+  
+
+
+
+      
+<header class="unified-header signed-out" style="background-color: #fff">
+  <div class="container header">
+    <section class="left-group">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/">
+  <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt" style="fill: #111"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>
+    </section>
+
+      <section class="right-group signed-out">
+        <a class="nav-link link-menu" title="Explore" href="/explore">
+          Explore
+</a>
+        <a class="nav-link link-menu" title="Plans" href="/plans">
+          Plans
+</a>
+        <a class="sign-in button-tertiary button-outlined " href="/login">Log in</a>
+
+          <a title="Get started" class="button-tertiary  sign-up signed-out" href="/join?source=site-header">
+            Get started
+</a>      </section>
+      <section class="mobile-icon">
+        
+<span id="unified_mobile_menu" role="button" class="closed" tabindex="0">
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hamburger-icon">
+    <title>Mobile menu</title>
+    <g fill="#111" id="mobile-hamburger-icon">
+      <path d="M19.6504 15C20.5617 15 21.3008 15.7391 21.3008 16.6504C21.3008 17.5617 20.5617 18.3008 19.6504 18.3008H1.65039C0.739121 18.3008 0 17.5617 0 16.6504C0 15.7391 0.739121 15 1.65039 15H19.6504ZM19.6504 7.5C20.5617 7.5 21.3008 8.23912 21.3008 9.15039C21.3008 10.0617 20.5617 10.8008 19.6504 10.8008H1.65039C0.739121 10.8008 0 10.0617 0 9.15039C0 8.23912 0.739121 7.5 1.65039 7.5H19.6504ZM19.6504 0C20.5617 0 21.3008 0.739121 21.3008 1.65039C21.3008 2.56166 20.5617 3.30078 19.6504 3.30078H1.65039C0.739121 3.30078 0 2.56166 0 1.65039C0 0.739121 0.739121 0 1.65039 0H19.6504Z" transform="translate(1.35 2.85)"></path>
+    </g>
+  </svg>
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="close-icon">
+    <title>Close menu</title>
+    <path fill="#111" d="M16.4901 0.535065C17.1612 -0.160319 18.2692 -0.180639 18.9648 0.490143C19.66 1.16128 19.6797 2.26933 19.0087 2.96475L12.1815 10.0399L18.4482 16.5351C19.1189 17.2305 19.0993 18.3377 18.4042 19.0087C17.7088 19.6797 16.6007 19.66 15.9296 18.9648L9.74991 12.5595L3.57022 18.9648C2.89918 19.6602 1.79112 19.6796 1.09561 19.0087C0.400326 18.3376 0.380671 17.2305 1.05167 16.5351L7.31729 10.0399L0.490143 2.96475C-0.180639 2.26923 -0.160319 1.16115 0.535065 0.490143C1.23058 -0.180569 2.3377 -0.16026 3.0087 0.535065L9.74893 7.52042L16.4901 0.535065Z" transform="translate(2.25 2.25)"></path>
+  </svg>
+</span>
+
+
+      </section>
+  </div>
+
+</header>
+
+
+    <div class="platform-bg_color-container">
+      
+
+<div class="main-content">
+  <div class="container web">
+    <section class="contact-sales-form">
+      <header class="page-header">
+        <h1>Self-service not for you?</h1>
+      </header>
+      <p>If the feature rich, self-service Pro+ Plan is not right for you, tell us more about
+your business. Due to high volume, our team will review your information and reach out accordingly.</p>
+      <form class="form" action="/contact_sales" accept-charset="UTF-8" method="post"><section class="section">
+          <br>
+
+          <div class="field">
+            <div class="label">
+              <label for="name">Full name</label>
+            </div>
+            <div class="input">
+              <input type="text" name="name" id="name" placeholder="Jane Doe" required="required">
+            </div>
+            <p class="note"></p>
+          </div>
+
+          <div class="field">
+            <div class="label">
+              <label for="title">Job title</label>
+            </div>
+            <div class="input">
+              <input type="text" name="title" id="title" placeholder="Founder" required="required">
+            </div>
+            <p class="note"></p>
+          </div>
+
+          <div class="field">
+            <div class="label">
+              <label for="email">Work email</label>
+            </div>
+            <div class="input">
+              <input type="text" name="email" id="email" placeholder="jane@example.com" required="required" pattern="^\S+@\S+\.\S+$">
+            </div>
+            <p class="note"></p>
+          </div>
+
+          <div class="field">
+            <div class="label">
+              <label for="phone">Work phone</label>
+            </div>
+            <div class="input">
+              <input type="tel" name="phone" id="phone" placeholder="123-456-7890" required="required" pattern="^[\d \(\)\-+]+$">
+            </div>
+            <p class="note"></p>
+          </div>
+
+          <div class="field">
+            <div class="label">
+              <label for="company_name">Company name</label>
+            </div>
+            <div class="input">
+              <input type="text" name="company_name" id="company_name" placeholder="Example Inc." required="required">
+            </div>
+            <p class="note"></p>
+          </div>
+
+          <div class="field">
+            <div class="label">
+              <label for="company_size">Company size</label>
+            </div>
+            <div class="input">
+              <select name="company_size" id="company_size"><option value="1-10">1-10</option>
+<option value="11-50">11-50</option>
+<option value="51-200">51-200</option>
+<option value="201-1000">201-1000</option>
+<option value="1001-5000">1001-5000</option>
+<option value="5000+">5000+</option></select>
+            </div>
+            <p class="note"></p>
+          </div>
+
+          <div class="field">
+            <div class="label">
+              <label for="country">Company country</label>
+            </div>
+            <div class="input">
+              <select name="country" id="country"><option value="Andorra">Andorra</option>
+<option value="United Arab Emirates">United Arab Emirates</option>
+<option value="Afghanistan">Afghanistan</option>
+<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+<option value="Anguilla">Anguilla</option>
+<option value="Albania">Albania</option>
+<option value="Armenia">Armenia</option>
+<option value="Angola">Angola</option>
+<option value="Antarctica">Antarctica</option>
+<option value="Argentina">Argentina</option>
+<option value="American Samoa">American Samoa</option>
+<option value="Austria">Austria</option>
+<option value="Australia">Australia</option>
+<option value="Aruba">Aruba</option>
+<option value="Åland Islands">Åland Islands</option>
+<option value="Azerbaijan">Azerbaijan</option>
+<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+<option value="Barbados">Barbados</option>
+<option value="Bangladesh">Bangladesh</option>
+<option value="Belgium">Belgium</option>
+<option value="Burkina Faso">Burkina Faso</option>
+<option value="Bulgaria">Bulgaria</option>
+<option value="Bahrain">Bahrain</option>
+<option value="Burundi">Burundi</option>
+<option value="Benin">Benin</option>
+<option value="Saint Barthélemy">Saint Barthélemy</option>
+<option value="Bermuda">Bermuda</option>
+<option value="Brunei Darussalam">Brunei Darussalam</option>
+<option value="Bolivia">Bolivia</option>
+<option value="Bonaire, Sint Eustatius and Saba">Bonaire, Sint Eustatius and Saba</option>
+<option value="Brazil">Brazil</option>
+<option value="Bahamas">Bahamas</option>
+<option value="Bhutan">Bhutan</option>
+<option value="Bouvet Island">Bouvet Island</option>
+<option value="Botswana">Botswana</option>
+<option value="Belarus">Belarus</option>
+<option value="Belize">Belize</option>
+<option value="Canada">Canada</option>
+<option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+<option value="Congo, The Democratic Republic of the">Congo, The Democratic Republic of the</option>
+<option value="Central African Republic">Central African Republic</option>
+<option value="Congo">Congo</option>
+<option value="Switzerland">Switzerland</option>
+<option value="Côte d'Ivoire">Côte d'Ivoire</option>
+<option value="Cook Islands">Cook Islands</option>
+<option value="Chile">Chile</option>
+<option value="Cameroon">Cameroon</option>
+<option value="China">China</option>
+<option value="Colombia">Colombia</option>
+<option value="Costa Rica">Costa Rica</option>
+<option value="Cuba">Cuba</option>
+<option value="Cabo Verde">Cabo Verde</option>
+<option value="Curaçao">Curaçao</option>
+<option value="Christmas Island">Christmas Island</option>
+<option value="Cyprus">Cyprus</option>
+<option value="Czechia">Czechia</option>
+<option value="Germany">Germany</option>
+<option value="Djibouti">Djibouti</option>
+<option value="Denmark">Denmark</option>
+<option value="Dominica">Dominica</option>
+<option value="Dominican Republic">Dominican Republic</option>
+<option value="Algeria">Algeria</option>
+<option value="Ecuador">Ecuador</option>
+<option value="Estonia">Estonia</option>
+<option value="Egypt">Egypt</option>
+<option value="Western Sahara">Western Sahara</option>
+<option value="Eritrea">Eritrea</option>
+<option value="Spain">Spain</option>
+<option value="Ethiopia">Ethiopia</option>
+<option value="Finland">Finland</option>
+<option value="Fiji">Fiji</option>
+<option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+<option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+<option value="Faroe Islands">Faroe Islands</option>
+<option value="France">France</option>
+<option value="Gabon">Gabon</option>
+<option value="United Kingdom">United Kingdom</option>
+<option value="Grenada">Grenada</option>
+<option value="Georgia">Georgia</option>
+<option value="French Guiana">French Guiana</option>
+<option value="Guernsey">Guernsey</option>
+<option value="Ghana">Ghana</option>
+<option value="Gibraltar">Gibraltar</option>
+<option value="Greenland">Greenland</option>
+<option value="Gambia">Gambia</option>
+<option value="Guinea">Guinea</option>
+<option value="Guadeloupe">Guadeloupe</option>
+<option value="Equatorial Guinea">Equatorial Guinea</option>
+<option value="Greece">Greece</option>
+<option value="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option>
+<option value="Guatemala">Guatemala</option>
+<option value="Guam">Guam</option>
+<option value="Guinea-Bissau">Guinea-Bissau</option>
+<option value="Guyana">Guyana</option>
+<option value="Hong Kong">Hong Kong</option>
+<option value="Heard Island and McDonald Islands">Heard Island and McDonald Islands</option>
+<option value="Honduras">Honduras</option>
+<option value="Croatia">Croatia</option>
+<option value="Haiti">Haiti</option>
+<option value="Hungary">Hungary</option>
+<option value="Indonesia">Indonesia</option>
+<option value="Ireland">Ireland</option>
+<option value="Israel">Israel</option>
+<option value="Isle of Man">Isle of Man</option>
+<option value="India">India</option>
+<option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+<option value="Iraq">Iraq</option>
+<option value="Iran">Iran</option>
+<option value="Iceland">Iceland</option>
+<option value="Italy">Italy</option>
+<option value="Jersey">Jersey</option>
+<option value="Jamaica">Jamaica</option>
+<option value="Jordan">Jordan</option>
+<option value="Japan">Japan</option>
+<option value="Kenya">Kenya</option>
+<option value="Kyrgyzstan">Kyrgyzstan</option>
+<option value="Cambodia">Cambodia</option>
+<option value="Kiribati">Kiribati</option>
+<option value="Comoros">Comoros</option>
+<option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+<option value="North Korea">North Korea</option>
+<option value="South Korea">South Korea</option>
+<option value="Kuwait">Kuwait</option>
+<option value="Cayman Islands">Cayman Islands</option>
+<option value="Kazakhstan">Kazakhstan</option>
+<option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+<option value="Lebanon">Lebanon</option>
+<option value="Saint Lucia">Saint Lucia</option>
+<option value="Liechtenstein">Liechtenstein</option>
+<option value="Sri Lanka">Sri Lanka</option>
+<option value="Liberia">Liberia</option>
+<option value="Lesotho">Lesotho</option>
+<option value="Lithuania">Lithuania</option>
+<option value="Luxembourg">Luxembourg</option>
+<option value="Latvia">Latvia</option>
+<option value="Libya">Libya</option>
+<option value="Morocco">Morocco</option>
+<option value="Monaco">Monaco</option>
+<option value="Moldova">Moldova</option>
+<option value="Montenegro">Montenegro</option>
+<option value="Saint Martin (French part)">Saint Martin (French part)</option>
+<option value="Madagascar">Madagascar</option>
+<option value="Marshall Islands">Marshall Islands</option>
+<option value="North Macedonia">North Macedonia</option>
+<option value="Mali">Mali</option>
+<option value="Myanmar">Myanmar</option>
+<option value="Mongolia">Mongolia</option>
+<option value="Macao">Macao</option>
+<option value="Northern Mariana Islands">Northern Mariana Islands</option>
+<option value="Martinique">Martinique</option>
+<option value="Mauritania">Mauritania</option>
+<option value="Montserrat">Montserrat</option>
+<option value="Malta">Malta</option>
+<option value="Mauritius">Mauritius</option>
+<option value="Maldives">Maldives</option>
+<option value="Malawi">Malawi</option>
+<option value="Mexico">Mexico</option>
+<option value="Malaysia">Malaysia</option>
+<option value="Mozambique">Mozambique</option>
+<option value="Namibia">Namibia</option>
+<option value="New Caledonia">New Caledonia</option>
+<option value="Niger">Niger</option>
+<option value="Norfolk Island">Norfolk Island</option>
+<option value="Nigeria">Nigeria</option>
+<option value="Nicaragua">Nicaragua</option>
+<option value="Netherlands">Netherlands</option>
+<option value="Norway">Norway</option>
+<option value="Nepal">Nepal</option>
+<option value="Nauru">Nauru</option>
+<option value="Niue">Niue</option>
+<option value="New Zealand">New Zealand</option>
+<option value="Oman">Oman</option>
+<option value="Panama">Panama</option>
+<option value="Peru">Peru</option>
+<option value="French Polynesia">French Polynesia</option>
+<option value="Papua New Guinea">Papua New Guinea</option>
+<option value="Philippines">Philippines</option>
+<option value="Pakistan">Pakistan</option>
+<option value="Poland">Poland</option>
+<option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+<option value="Pitcairn">Pitcairn</option>
+<option value="Puerto Rico">Puerto Rico</option>
+<option value="Palestine, State of">Palestine, State of</option>
+<option value="Portugal">Portugal</option>
+<option value="Palau">Palau</option>
+<option value="Paraguay">Paraguay</option>
+<option value="Qatar">Qatar</option>
+<option value="Réunion">Réunion</option>
+<option value="Romania">Romania</option>
+<option value="Serbia">Serbia</option>
+<option value="Russian Federation">Russian Federation</option>
+<option value="Rwanda">Rwanda</option>
+<option value="Saudi Arabia">Saudi Arabia</option>
+<option value="Solomon Islands">Solomon Islands</option>
+<option value="Seychelles">Seychelles</option>
+<option value="Sudan">Sudan</option>
+<option value="Sweden">Sweden</option>
+<option value="Singapore">Singapore</option>
+<option value="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</option>
+<option value="Slovenia">Slovenia</option>
+<option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+<option value="Slovakia">Slovakia</option>
+<option value="Sierra Leone">Sierra Leone</option>
+<option value="San Marino">San Marino</option>
+<option value="Senegal">Senegal</option>
+<option value="Somalia">Somalia</option>
+<option value="Suriname">Suriname</option>
+<option value="South Sudan">South Sudan</option>
+<option value="Sao Tome and Principe">Sao Tome and Principe</option>
+<option value="El Salvador">El Salvador</option>
+<option value="Sint Maarten (Dutch part)">Sint Maarten (Dutch part)</option>
+<option value="Syrian Arab Republic">Syrian Arab Republic</option>
+<option value="Eswatini">Eswatini</option>
+<option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+<option value="Chad">Chad</option>
+<option value="French Southern Territories">French Southern Territories</option>
+<option value="Togo">Togo</option>
+<option value="Thailand">Thailand</option>
+<option value="Tajikistan">Tajikistan</option>
+<option value="Tokelau">Tokelau</option>
+<option value="Timor-Leste">Timor-Leste</option>
+<option value="Turkmenistan">Turkmenistan</option>
+<option value="Tunisia">Tunisia</option>
+<option value="Tonga">Tonga</option>
+<option value="Türkiye">Türkiye</option>
+<option value="Trinidad and Tobago">Trinidad and Tobago</option>
+<option value="Tuvalu">Tuvalu</option>
+<option value="Taiwan">Taiwan</option>
+<option value="Tanzania">Tanzania</option>
+<option value="Ukraine">Ukraine</option>
+<option value="Uganda">Uganda</option>
+<option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+<option selected value="United States">United States</option>
+<option value="Uruguay">Uruguay</option>
+<option value="Uzbekistan">Uzbekistan</option>
+<option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+<option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+<option value="Venezuela">Venezuela</option>
+<option value="Virgin Islands, British">Virgin Islands, British</option>
+<option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+<option value="Vietnam">Vietnam</option>
+<option value="Vanuatu">Vanuatu</option>
+<option value="Wallis and Futuna">Wallis and Futuna</option>
+<option value="Samoa">Samoa</option>
+<option value="Yemen">Yemen</option>
+<option value="Mayotte">Mayotte</option>
+<option value="South Africa">South Africa</option>
+<option value="Zambia">Zambia</option>
+<option value="Zimbabwe">Zimbabwe</option></select>
+            </div>
+            <p class="note"></p>
+          </div>
+
+          <div class="action-buttons">
+            <input type="submit" name="commit" value="Send" class="button-primary verify-with-recaptcha">
+          </div>
+        </section>
+</form>    </section>
+  </div>
+</div>
+
+<noscript><h2 class="text-h1">JS is required here, please enable it and reload to continue</h2></noscript>
+
+
+
+    </div>
+
+    <footer class="site-footer ifttt_next_bucket">
+    <a class="pro-upsell pro-ad" title="Try IFTTT Pro" href="/subscriptions/pro">
+        <div class="pro-upsell-text">
+          <span class="logo">
+            <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+            <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#111"></path></svg>
+          </span>
+          <span class="pro-upsell-heading">Automate more, effortlessly.</span>
+        </div>
+
+        <div class="button-secondary button-on-color">
+            Try it free
+        </div>
+</a>  <div class="footer-top-container">
+    <div class="logo-container">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/">
+        <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="ifttt-logo" title="IFTTT" style="fill: white"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>    </div>
+
+    <div class="footer-sections">
+      <div class="footer-section explore">
+        <div class="section-header">
+          <a title="Explore" href="/explore">Explore</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="Services" title="Services" href="/explore/services">Services</a>
+              </li>
+              <li>
+                <a alt="Stories" title="Stories" href="/explore/stories">Stories</a>
+              </li>
+              <li>
+                <a alt="Applets" title="Applets" href="/explore/applets">Applets</a>
+              </li>
+              <li>
+                <a alt="IFTTT MCP" title="IFTTT MCP" href="/mcp">IFTTT MCP</a>
+              </li>
+              <li>
+                <a alt="Help Center" title="Help Center" href="/hc/en-us">Help Center</a>
+              </li>
+              <li>
+                <a alt="Content Map" title="Content Map" href="/content_map">Content Map</a>
+              </li>
+              <li>
+                <a alt="Search" title="Search" href="/explore">Search</a>
+              </li>
+              <li>
+                <a alt="Plans" title="Plans" href="/plans">Plans</a>
+              </li>
+              <li>
+                <a alt="Developer docs" title="Developer docs" href="/docs/api_reference">Developer docs</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section top-integrations">
+        <div class="section-header">
+          Top Integrations
+        </div>
+          <ul>
+              <li>
+                <a alt="Discord and Instagram" title="Discord and Instagram" href="/connect/discord/instagram">Discord and Instagram</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Notion" title="iOS Calendar and Notion" href="/connect/ios_calendar/notion_so">iOS Calendar and Notion</a>
+              </li>
+              <li>
+                <a alt="Google Calendar and Google Sheets" title="Google Calendar and Google Sheets" href="/connect/google_calendar/google_sheets">Google Calendar and Google Sheets</a>
+              </li>
+              <li>
+                <a alt="Google Assistant and My Q" title="Google Assistant and My Q" href="/connect/google_assistant_v2/myq_devices">Google Assistant and My Q</a>
+              </li>
+              <li>
+                <a alt="BotGhost and Spotify" title="BotGhost and Spotify" href="/connect/botghost/spotify">BotGhost and Spotify</a>
+              </li>
+              <li>
+                <a alt="SMS and Twitter" title="SMS and Twitter" href="/connect/sms/twitter">SMS and Twitter</a>
+              </li>
+              <li>
+                <a alt="iOS Reminders and Notion" title="iOS Reminders and Notion" href="/connect/ios_reminders/notion_so">iOS Reminders and Notion</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Todoist" title="iOS Calendar and Todoist" href="/connect/ios_calendar/todoist">iOS Calendar and Todoist</a>
+              </li>
+              <li>
+                <a alt="Telegram and Twitter" title="Telegram and Twitter" href="/connect/telegram/twitter">Telegram and Twitter</a>
+              </li>
+              <li>
+                <a alt="Discord and Twitter" title="Discord and Twitter" href="/connect/discord/twitter">Discord and Twitter</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section latest-stories">
+        <div class="section-header">
+          <a title="Latest Stories" href="/explore/stories">Latest Stories</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="How to automate with AI" title="How to automate with AI" href="/explore/how-to-automate-with-ai">How to automate with AI</a>
+              </li>
+              <li>
+                <a alt="Best Twitter automation tools" title="Best Twitter automation tools" href="/explore/best-twitter-automation-tools">Best Twitter automation tools</a>
+              </li>
+              <li>
+                <a alt="Best time management apps and tools" title="Best time management apps and tools" href="/explore/best-time-management-apps-strategies-and-tools">Best time management apps and tools</a>
+              </li>
+              <li>
+                <a alt="What is workflow automation?" title="What is workflow automation?" href="/explore/what-is-workflow-automation">What is workflow automation?</a>
+              </li>
+              <li>
+                <a alt="How to use RSS Feeds" title="How to use RSS Feeds" href="/explore/how-to-use-rss-feeds">How to use RSS Feeds</a>
+              </li>
+              <li>
+                <a alt="What are webhooks?" title="What are webhooks?" href="/explore/what-are-webhooks">What are webhooks?</a>
+              </li>
+              <li>
+                <a alt="11 best Pomodoro productivity apps" title="11 best Pomodoro productivity apps" href="/explore/best-pomodoro-productivity-apps">11 best Pomodoro productivity apps</a>
+              </li>
+              <li>
+                <a alt="How to automate Threads" title="How to automate Threads" href="/explore/how-to-automate-threads">How to automate Threads</a>
+              </li>
+              <li>
+                <a alt="How to automate social media posts" title="How to automate social media posts" href="/explore/how-to-automate-social-media-posts">How to automate social media posts</a>
+              </li>
+              <li>
+                <a alt="Best social media tools for automation" title="Best social media tools for automation" href="/explore/best-automation-tools-social-media">Best social media tools for automation</a>
+              </li>
+          </ul>
+      </div>
+    <div class="footer-section company">
+      <div class="section-header">Company</div>
+      <ul>
+        <li><a alt="Developers" title="Developers" href="/developers">Developers</a></li>
+        <li><a alt="Partner program" title="Partner program" href="/partners">Partner program</a></li>
+        <li><a alt="Careers" title="Careers" href="/careers">Careers</a></li>
+        <li><a alt="Contact" title="Contact" href="/contact">Contact</a></li>
+        <li><a alt="About" title="About" href="/about">About</a></li>
+        <li><a alt="Privacy" title="Privacy" href="/privacy">Privacy</a></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer-section download">
+      <ul class="download-buttons">
+        <li>
+          <a title="Download on the App Store" aria-label="The Apple App Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fitunes.apple.com%2Fapp%2Fapple-store%2Fid660944635%3Fpt%3D1752682%26ct%3D%2Fcontact_sales%26mt%3D8">
+            <img alt="" title="Download on the App Store" loading="lazy" width="136" height="40" src="/assets/asset-000099.svg">
+</a>        </li>
+        <li>
+          <a title="Get it on Google Play" aria-label="The Google Play Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.ifttt.ifttt%26utm_source%3D%2Fcontact_sales%26utm_medium%3Dweb">
+            <img alt="" title="Get it on Google Play" loading="lazy" width="136" height="42" src="/assets/asset-000100.svg">
+</a>        </li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom-container">
+      <div class="group group-social">
+        <a class="social-icon" alt="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.facebook.com%2Fifttt">
+          <img alt="Facebook" title="Facebook" loading="lazy" width="28" height="28" src="/assets/asset-000102.svg">
+</a>
+        <a class="social-icon" alt="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fifttt%2F">
+          <img alt="LinkedIn" title="LinkedIn" loading="lazy" width="28" height="28" src="/assets/asset-000101.svg">
+</a>
+        <a class="social-icon" alt="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.instagram.com%2Fiftttapp%2F">
+          <img alt="Instagram" title="Instagram" loading="lazy" width="28" height="28" src="/assets/asset-000103.svg">
+</a>
+        <a class="social-icon" alt="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.youtube.com%2F%40IFTTT">
+          <img alt="YouTube" title="YouTube" loading="lazy" width="28" height="28" src="/assets/asset-000104.svg">
+</a>
+        <a class="social-icon" alt="Twitter" title="Twitter" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Ftwitter.com%2FIFTTT">
+          <img alt="Twitter" title="Twitter" loading="lazy" width="28" height="28" src="/assets/asset-000105.svg">
+</a>
+        <a class="social-icon" alt="TikTok" title="TikTok" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.tiktok.com%2F%40iftttapp">
+          <img alt="TikTok" title="TikTok" loading="lazy" width="28" height="28" src="/assets/asset-000106.svg">
+</a>
+        <a class="social-icon" alt="Reddit" title="Reddit" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fifttt%2F">
+          <img alt="Reddit" title="Reddit" loading="lazy" width="28" height="28" src="/assets/asset-000107.svg">
+</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+<div style="position: absolute; top: 50vh; height: 1px; width: 100%;"></div><script src="/local.js" defer></script></body></html>

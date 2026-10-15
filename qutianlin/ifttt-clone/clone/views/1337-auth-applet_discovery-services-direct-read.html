@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en"><head>
+  <link rel="preload" href="/assets/asset-000002.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000004.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000003.woff2" as="font" type="font/woff2">
+
+<style>
+/* IFTTT.ai rebrand — Museo Sans Rounded (site-wide base font). One @font-face per Museo cut; */
+/* CSS font-weight == the cut number (300 Light / 500 Regular / 700 body / 900 headings). */
+/* NB: map by cut name, not the weight Figma's inspect panel shows — a designer's desktop copy */
+/* may report ~200 less (700 for the 900 cut); these files carry OS/2 weight == cut number. */
+
+/* Museo Sans Rounded 300 (light) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 300;
+  src: url("/assets/dependency-000100.woff2") format("woff2"),
+    url("/assets/dependency-000101.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 500 (regular) — covers CSS 400–600 */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 500 600;
+  src: url("/assets/asset-000002.woff2") format("woff2"),
+    url("/assets/dependency-000102.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 700 (body) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 700;
+  src: url("/assets/asset-000004.woff2") format("woff2"),
+    url("/assets/dependency-000104.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 900 (black) — display headings */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 900;
+  src: url("/assets/asset-000003.woff2") format("woff2"),
+    url("/assets/dependency-000106.woff") format("woff");
+  font-display: swap;
+}
+
+/* Metric-matched fallback for the swap window: Avenir Next scaled to the Museo advance widths, with */
+/* the Museo line box (hhea 940/-260 divided by size-adjust), so the change to Museo moves no layout. */
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 500 600;
+  src: local("Avenir Next Medium"), local("AvenirNext-Medium");
+  size-adjust: 98.0%;
+  ascent-override: 95.92%;
+  descent-override: 26.53%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 700;
+  src: local("Avenir Next Bold"), local("AvenirNext-Bold");
+  size-adjust: 94.5%;
+  ascent-override: 99.47%;
+  descent-override: 27.51%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 900;
+  src: local("Avenir Next Heavy"), local("AvenirNext-Heavy");
+  size-adjust: 90.2%;
+  ascent-override: 104.21%;
+  descent-override: 28.82%;
+  line-gap-override: 0%;
+}
+
+/* Museo Sans Rounded 500 / 700 italic — fetched only by pages that set font-style: italic. */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 500 600;
+  src: url("/assets/asset-000981.woff2") format("woff2"),
+    url("/assets/dependency-000103.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/asset-001589.woff2") format("woff2"),
+    url("/assets/dependency-000105.woff") format("woff");
+  font-display: swap;
+}
+</style>
+
+  <!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+
+  
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0">
+<meta name="mobile-web-app-capable" content="yes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>Applet Wizard - IFTTT</title>
+<meta name="description" content="Applet Wizard - IFTTT">
+<meta name="keywords" content="ifttt applets connect connections integrate integration automate automation services recipes trigger action ifthisthenthat free">
+<meta property="al:ios:url" content="ifttt://">
+<meta property="al:ios:app_store_id" content="660944635">
+<meta property="al:ios:app_name" content="IFTTT">
+<meta property="fb:app_id" content="122259781154546">
+<meta property="fb:admins" content="7302486">
+<meta property="og:title" content="Applet Wizard - IFTTT">
+<meta property="og:description" content="Applet Wizard - IFTTT">
+<meta property="og:site_name" content="IFTTT">
+<meta property="og:url" content="https://ifttt.com/applet_discovery/services">
+<meta property="og:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@IFTTT">
+<meta name="twitter:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta name="twitter:app:id:iphone" content="660944635">
+<meta name="twitter:app:id:ipad" content="660944635">
+<meta name="twitter:app:id:googleplay" content="com.ifttt.ifttt">
+<meta name="twitter:app:url:iphone" content="ifttt://">
+<meta name="twitter:app:url:ipad" content="ifttt://">
+<meta name="twitter:app:url:googleplay" content="ifttt://">
+<meta name="twitter:app:name:googleplay" content="IFTTT">
+<meta name="author" content="IFTTT">
+<meta name="copyright" content="Copyright 2026 IFTTT Inc.">
+<meta name="theme-color" content="">
+<meta name="facebook-domain-verification" content="tapueff3rri63aug9c5b7hapbv3mkv">
+
+<!-- Standard SVG Favicon -->
+<link rel="icon" href="/assets/dependency-000091.svg" type="image/svg+xml">
+
+<!-- For all Apple Devices: -->
+<link rel="apple-touch-icon" href="/assets/dependency-000081.png">
+
+<!-- For Windows 8: -->
+<meta name="msapplication-TileImage" content="https://web-assets.ifttt.com/builds/assets/pinned-Dpomu1wG.png">
+<meta name="msapplication-TileColor" content="#111">
+
+
+
+
+  
+  <link rel="stylesheet" href="/assets/asset-001038.css">
+<link rel="stylesheet" href="/assets/asset-000135.css">
+<link rel="stylesheet" href="/assets/asset-000119.css">
+  
+<link rel="stylesheet" href="/local.css"></head>
+
+<body class="onboarding-body repeat-action   web-body" data-local-route="/applet_discovery/services" data-local-actor="member" data-local-state="direct-read">
+    <!-- Google Tag Manager (noscript) -->
+  <noscript></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  
+
+
+  
+
+
+
+  
+
+  
+
+      <span></span>
+
+
+  <div id="flash-messages">
+    
+  </div>
+
+  <div class="after-header-content">
+    
+  </div>
+
+  <div class="page-canvas">
+    <main class="container web">
+        
+
+
+<div><header class="header__onboarding-header___1_c6R"><button type="submit" aria-label="Back button" class="header__back___1_c6R button-tertiary button-outlined button-with-icon only-icon-on-mobile"><span class="button-icon"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.63995 0.497476C9.30364 -0.166035 10.3804 -0.165615 11.0442 0.497476C11.708 1.16132 11.7079 2.23791 11.0442 2.90177L4.08233 9.86271L10.5052 16.519C11.157 17.1946 11.1367 18.2714 10.4612 18.9233C9.78569 19.5747 8.71072 19.5553 8.05889 18.8803L0.476862 11.0238C-0.166495 10.3567 -0.158088 9.29551 0.49737 8.64005L8.63995 0.497476Z" fill="#111" transform="translate(6.3 2.3)"></path></svg></span><span class="hide-on-xs">Back</span></button><div class="header__progress-bar-container___1_c6R"><div class="header__dot___1_c6R"></div><div class="header__dot___1_c6R header__active___1_c6R"></div></div><a aria-label="Skip button" class="header__skip___1_c6R">Skip</a><h1>Choose one of your favorite services</h1></header><div class="index__container___D2ArO"><div><p class="txt-body-3">You've already connected all of our recommended services.</p><ul class="index__service-list___D2ArO"></ul></div></div></div>
+
+
+    </main>
+  </div>
+
+  
+
+  
+
+      <span></span>
+
+
+
+  
+
+  <div id="react-portal-container"></div>
+
+  
+
+  
+  
+
+
+  <div id="zendesk-widget-button" class="chat-style">
+    <span class="button help-button">
+      <span class="icon icon-upper-right">
+          <svg width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" title="Help-bg-white"><circle cx="20" cy="20" r="19.5" fill="#fff"></circle><path d="M20 0C8.95419 0 0 8.95419 0 20C0 31.0455 8.95419 40 20 40C31.0457 40 40 31.0455 40 20C40 8.95419 31.0457 0 20 0ZM22.1248 29.1933C22.1248 30.8129 20.877 32.0604 19.1902 32.0604C17.5031 32.0604 16.2553 30.8129 16.2553 29.1933V29.1258C16.2553 27.5062 17.5031 26.258 19.1902 26.258C20.877 26.258 22.1248 27.5062 22.1248 29.1258V29.1933ZM28.0296 14.9898C28.0296 19.2743 25.0605 21.0294 21.3839 21.7716L21.2827 22.9958C21.147 23.8724 20.4385 24.6485 19.4603 24.6485H18.3301C17.3515 24.6485 16.6429 23.9068 16.5085 22.9958V20.0844C16.3397 18.971 17.5031 18.1944 18.5837 18.0596C21.5183 17.6891 22.8678 16.7782 22.8678 15.125V15.0574C22.8678 13.5395 21.7207 12.6621 19.7636 12.6621C18.3133 12.6621 17.065 13.101 15.8508 14.0116C15.4455 14.3153 14.9058 14.5517 14.3321 14.5517C13.0502 14.5517 11.9704 13.4715 11.9704 12.1904C11.9704 11.5487 12.2404 10.8742 12.8482 10.3681C14.6361 8.88418 16.8962 7.93879 19.8648 7.93879C24.7233 7.93879 28.0296 10.4353 28.0296 14.9222V14.9898Z" fill="#111"></path></svg>
+      </span>
+      <span class="icon icon-default">
+        <svg width="20" height="20" viewbox="0 0 20 20" aria-hidden="true"><g id="Layer_4"><path d="M11,12.3V13c0,0-1.8,0-2,0v-0.6c0-0.6,0.1-1.4,0.8-2.1c0.7-0.7,1.6-1.2,1.6-2.1c0-0.9-0.7-1.4-1.4-1.4 c-1.3,0-1.4,1.4-1.5,1.7H6.6C6.6,7.1,7.2,5,10,5c2.4,0,3.4,1.6,3.4,3C13.4,10.4,11,10.8,11,12.3z"></path><circle cx="10" cy="15" r="1"></circle><path d="M10,2c4.4,0,8,3.6,8,8s-3.6,8-8,8s-8-3.6-8-8S5.6,2,10,2 M10,0C4.5,0,0,4.5,0,10s4.5,10,10,10s10-4.5,10-10S15.5,0,10,0 L10,0z"></path></g></svg>
+      </span>
+      <span class="title has-bottom-nav">
+        Help
+      </span>
+    </span>
+  </div>
+
+    
+
+  
+
+
+
+<script src="/local.js" defer></script></body></html>

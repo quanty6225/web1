@@ -1,0 +1,950 @@
+{
+  "America/Adak": {
+    "offset_minutes": -600,
+    "iana": "America/Adak",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Hawaii": {
+    "offset_minutes": -600,
+    "iana": "Pacific/Honolulu",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Alaska": {
+    "offset_minutes": -540,
+    "iana": "America/Anchorage",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "America/Anchorage": {
+    "offset_minutes": -540,
+    "iana": "America/Anchorage",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "America/Metlakatla": {
+    "offset_minutes": -540,
+    "iana": "America/Metlakatla",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "America/Nome": {
+    "offset_minutes": -540,
+    "iana": "America/Nome",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "America/Sitka": {
+    "offset_minutes": -540,
+    "iana": "America/Sitka",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "America/Yakutat": {
+    "offset_minutes": -540,
+    "iana": "America/Yakutat",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Pacific Time (US & Canada)": {
+    "offset_minutes": -480,
+    "iana": "America/Los_Angeles",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "America/Boise": {
+    "offset_minutes": -420,
+    "iana": "America/Boise",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Arizona": {
+    "offset_minutes": -420,
+    "iana": "America/Phoenix",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Mountain Time (US & Canada)": {
+    "offset_minutes": -420,
+    "iana": "America/Denver",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "America/Indiana/Knox": {
+    "offset_minutes": -360,
+    "iana": "America/Indiana/Knox",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "America/Indiana/Tell_City": {
+    "offset_minutes": -360,
+    "iana": "America/Indiana/Tell_City",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "America/Menominee": {
+    "offset_minutes": -360,
+    "iana": "America/Menominee",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "America/North_Dakota/Beulah": {
+    "offset_minutes": -360,
+    "iana": "America/North_Dakota/Beulah",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "America/North_Dakota/Center": {
+    "offset_minutes": -360,
+    "iana": "America/North_Dakota/Center",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "America/North_Dakota/New_Salem": {
+    "offset_minutes": -360,
+    "iana": "America/North_Dakota/New_Salem",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Central Time (US & Canada)": {
+    "offset_minutes": -360,
+    "iana": "America/Chicago",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "America/Detroit": {
+    "offset_minutes": -300,
+    "iana": "America/Detroit",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "America/Indiana/Marengo": {
+    "offset_minutes": -300,
+    "iana": "America/Indiana/Marengo",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "America/Indiana/Petersburg": {
+    "offset_minutes": -300,
+    "iana": "America/Indiana/Petersburg",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "America/Indiana/Vevay": {
+    "offset_minutes": -300,
+    "iana": "America/Indiana/Vevay",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "America/Indiana/Vincennes": {
+    "offset_minutes": -300,
+    "iana": "America/Indiana/Vincennes",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "America/Indiana/Winamac": {
+    "offset_minutes": -300,
+    "iana": "America/Indiana/Winamac",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "America/Kentucky/Louisville": {
+    "offset_minutes": -300,
+    "iana": "America/Kentucky/Louisville",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "America/Kentucky/Monticello": {
+    "offset_minutes": -300,
+    "iana": "America/Kentucky/Monticello",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Eastern Time (US & Canada)": {
+    "offset_minutes": -300,
+    "iana": "America/New_York",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Indiana (East)": {
+    "offset_minutes": -300,
+    "iana": "America/Indiana/Indianapolis",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "International Date Line West": {
+    "offset_minutes": -720,
+    "iana": "Etc/GMT+12",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "American Samoa": {
+    "offset_minutes": -660,
+    "iana": "Pacific/Pago_Pago",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Midway Island": {
+    "offset_minutes": -660,
+    "iana": "Pacific/Midway",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Tijuana": {
+    "offset_minutes": -480,
+    "iana": "America/Tijuana",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Mazatlan": {
+    "offset_minutes": -420,
+    "iana": "America/Mazatlan",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Central America": {
+    "offset_minutes": -360,
+    "iana": "America/Guatemala",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Chihuahua": {
+    "offset_minutes": -360,
+    "iana": "America/Chihuahua",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Mexico City": {
+    "offset_minutes": -360,
+    "iana": "America/Mexico_City",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Monterrey": {
+    "offset_minutes": -360,
+    "iana": "America/Monterrey",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Saskatchewan": {
+    "offset_minutes": -360,
+    "iana": "Canada/Saskatchewan",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Bogota": {
+    "offset_minutes": -300,
+    "iana": "America/Bogota",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Lima": {
+    "offset_minutes": -300,
+    "iana": "America/Lima",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Atlantic Time (Canada)": {
+    "offset_minutes": -240,
+    "iana": "America/Halifax",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Caracas": {
+    "offset_minutes": -240,
+    "iana": "America/Caracas",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Georgetown": {
+    "offset_minutes": -240,
+    "iana": "America/Guyana",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "La Paz": {
+    "offset_minutes": -240,
+    "iana": "America/La_Paz",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Puerto Rico": {
+    "offset_minutes": -240,
+    "iana": "America/Puerto_Rico",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Santiago": {
+    "offset_minutes": -240,
+    "iana": "America/Santiago",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Newfoundland": {
+    "offset_minutes": -210,
+    "iana": "Canada/Newfoundland",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Asuncion": {
+    "offset_minutes": -180,
+    "iana": "America/Asuncion",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Brasilia": {
+    "offset_minutes": -180,
+    "iana": "America/Sao_Paulo",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Buenos Aires": {
+    "offset_minutes": -180,
+    "iana": "America/Argentina/Buenos_Aires",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Montevideo": {
+    "offset_minutes": -180,
+    "iana": "America/Montevideo",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Greenland": {
+    "offset_minutes": -120,
+    "iana": "America/Nuuk",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Mid-Atlantic": {
+    "offset_minutes": -120,
+    "iana": "Atlantic/South_Georgia",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Azores": {
+    "offset_minutes": -60,
+    "iana": "Atlantic/Azores",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Cape Verde Is.": {
+    "offset_minutes": -60,
+    "iana": "Atlantic/Cape_Verde",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Casablanca": {
+    "offset_minutes": 0,
+    "iana": "Africa/Casablanca",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "London": {
+    "offset_minutes": 0,
+    "iana": "Europe/London",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Lisbon": {
+    "offset_minutes": 0,
+    "iana": "Europe/Lisbon",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Monrovia": {
+    "offset_minutes": 0,
+    "iana": "Africa/Monrovia",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "UTC": {
+    "offset_minutes": 0,
+    "iana": "UTC",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Amsterdam": {
+    "offset_minutes": 60,
+    "iana": "Europe/Amsterdam",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Belgrade": {
+    "offset_minutes": 60,
+    "iana": "Europe/Belgrade",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Berlin": {
+    "offset_minutes": 60,
+    "iana": "Europe/Berlin",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Zurich": {
+    "offset_minutes": 60,
+    "iana": "Europe/Zurich",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Bratislava": {
+    "offset_minutes": 60,
+    "iana": "Europe/Bratislava",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Brussels": {
+    "offset_minutes": 60,
+    "iana": "Europe/Brussels",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Budapest": {
+    "offset_minutes": 60,
+    "iana": "Europe/Budapest",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Copenhagen": {
+    "offset_minutes": 60,
+    "iana": "Europe/Copenhagen",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Dublin": {
+    "offset_minutes": 60,
+    "iana": "Europe/Dublin",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Ljubljana": {
+    "offset_minutes": 60,
+    "iana": "Europe/Ljubljana",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Madrid": {
+    "offset_minutes": 60,
+    "iana": "Europe/Madrid",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Paris": {
+    "offset_minutes": 60,
+    "iana": "Europe/Paris",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Prague": {
+    "offset_minutes": 60,
+    "iana": "Europe/Prague",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Rome": {
+    "offset_minutes": 60,
+    "iana": "Europe/Rome",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Sarajevo": {
+    "offset_minutes": 60,
+    "iana": "Europe/Sarajevo",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Skopje": {
+    "offset_minutes": 60,
+    "iana": "Europe/Skopje",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Stockholm": {
+    "offset_minutes": 60,
+    "iana": "Europe/Stockholm",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Vienna": {
+    "offset_minutes": 60,
+    "iana": "Europe/Vienna",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Warsaw": {
+    "offset_minutes": 60,
+    "iana": "Europe/Warsaw",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "West Central Africa": {
+    "offset_minutes": 60,
+    "iana": "Africa/Lagos",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Zagreb": {
+    "offset_minutes": 60,
+    "iana": "Europe/Zagreb",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Athens": {
+    "offset_minutes": 120,
+    "iana": "Europe/Athens",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Bucharest": {
+    "offset_minutes": 120,
+    "iana": "Europe/Bucharest",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Cairo": {
+    "offset_minutes": 120,
+    "iana": "Africa/Cairo",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Harare": {
+    "offset_minutes": 120,
+    "iana": "Africa/Harare",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Helsinki": {
+    "offset_minutes": 120,
+    "iana": "Europe/Helsinki",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Jerusalem": {
+    "offset_minutes": 120,
+    "iana": "Asia/Jerusalem",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Kaliningrad": {
+    "offset_minutes": 120,
+    "iana": "Europe/Kaliningrad",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Kyiv": {
+    "offset_minutes": 120,
+    "iana": "Europe/Kyiv",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Pretoria": {
+    "offset_minutes": 120,
+    "iana": "Africa/Johannesburg",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Riga": {
+    "offset_minutes": 120,
+    "iana": "Europe/Riga",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Sofia": {
+    "offset_minutes": 120,
+    "iana": "Europe/Sofia",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Tallinn": {
+    "offset_minutes": 120,
+    "iana": "Europe/Tallinn",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Vilnius": {
+    "offset_minutes": 120,
+    "iana": "Europe/Vilnius",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Baghdad": {
+    "offset_minutes": 180,
+    "iana": "Asia/Baghdad",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Istanbul": {
+    "offset_minutes": 180,
+    "iana": "Europe/Istanbul",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Kuwait": {
+    "offset_minutes": 180,
+    "iana": "Asia/Kuwait",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Minsk": {
+    "offset_minutes": 180,
+    "iana": "Europe/Minsk",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Moscow": {
+    "offset_minutes": 180,
+    "iana": "Europe/Moscow",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Nairobi": {
+    "offset_minutes": 180,
+    "iana": "Africa/Nairobi",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Riyadh": {
+    "offset_minutes": 180,
+    "iana": "Asia/Riyadh",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Volgograd": {
+    "offset_minutes": 180,
+    "iana": "Europe/Volgograd",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Tehran": {
+    "offset_minutes": 210,
+    "iana": "Asia/Tehran",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Muscat": {
+    "offset_minutes": 240,
+    "iana": "Asia/Muscat",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Baku": {
+    "offset_minutes": 240,
+    "iana": "Asia/Baku",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Samara": {
+    "offset_minutes": 240,
+    "iana": "Europe/Samara",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Tbilisi": {
+    "offset_minutes": 240,
+    "iana": "Asia/Tbilisi",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Yerevan": {
+    "offset_minutes": 240,
+    "iana": "Asia/Yerevan",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Kabul": {
+    "offset_minutes": 270,
+    "iana": "Asia/Kabul",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Almaty": {
+    "offset_minutes": 300,
+    "iana": "Asia/Almaty",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Ekaterinburg": {
+    "offset_minutes": 300,
+    "iana": "Asia/Yekaterinburg",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Karachi": {
+    "offset_minutes": 300,
+    "iana": "Asia/Karachi",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Tashkent": {
+    "offset_minutes": 300,
+    "iana": "Asia/Tashkent",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Kolkata": {
+    "offset_minutes": 330,
+    "iana": "Asia/Kolkata",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Sri Jayawardenepura": {
+    "offset_minutes": 330,
+    "iana": "Asia/Colombo",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Kathmandu": {
+    "offset_minutes": 345,
+    "iana": "Asia/Kathmandu",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Dhaka": {
+    "offset_minutes": 360,
+    "iana": "Asia/Dhaka",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Urumqi": {
+    "offset_minutes": 360,
+    "iana": "Asia/Urumqi",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Rangoon": {
+    "offset_minutes": 390,
+    "iana": "Asia/Yangon",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Bangkok": {
+    "offset_minutes": 420,
+    "iana": "Asia/Bangkok",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Jakarta": {
+    "offset_minutes": 420,
+    "iana": "Asia/Jakarta",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Krasnoyarsk": {
+    "offset_minutes": 420,
+    "iana": "Asia/Krasnoyarsk",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Novosibirsk": {
+    "offset_minutes": 420,
+    "iana": "Asia/Novosibirsk",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Beijing": {
+    "offset_minutes": 480,
+    "iana": "Asia/Shanghai",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Chongqing": {
+    "offset_minutes": 480,
+    "iana": "Asia/Shanghai",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Hong Kong": {
+    "offset_minutes": 480,
+    "iana": "Asia/Hong_Kong",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Irkutsk": {
+    "offset_minutes": 480,
+    "iana": "Asia/Irkutsk",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Kuala Lumpur": {
+    "offset_minutes": 480,
+    "iana": "Asia/Kuala_Lumpur",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Perth": {
+    "offset_minutes": 480,
+    "iana": "Australia/Perth",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Singapore": {
+    "offset_minutes": 480,
+    "iana": "Singapore",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Taipei": {
+    "offset_minutes": 480,
+    "iana": "Asia/Taipei",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Ulaanbaatar": {
+    "offset_minutes": 480,
+    "iana": "Asia/Ulaanbaatar",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Tokyo": {
+    "offset_minutes": 540,
+    "iana": "Asia/Tokyo",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Seoul": {
+    "offset_minutes": 540,
+    "iana": "Asia/Seoul",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Yakutsk": {
+    "offset_minutes": 540,
+    "iana": "Asia/Yakutsk",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Adelaide": {
+    "offset_minutes": 570,
+    "iana": "Australia/Adelaide",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Darwin": {
+    "offset_minutes": 570,
+    "iana": "Australia/Darwin",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Brisbane": {
+    "offset_minutes": 600,
+    "iana": "Australia/Brisbane",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Canberra": {
+    "offset_minutes": 600,
+    "iana": "Australia/Canberra",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Guam": {
+    "offset_minutes": 600,
+    "iana": "Pacific/Guam",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Hobart": {
+    "offset_minutes": 600,
+    "iana": "Australia/Hobart",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Melbourne": {
+    "offset_minutes": 600,
+    "iana": "Australia/Melbourne",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Port Moresby": {
+    "offset_minutes": 600,
+    "iana": "Pacific/Port_Moresby",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Sydney": {
+    "offset_minutes": 600,
+    "iana": "Australia/Sydney",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Vladivostok": {
+    "offset_minutes": 600,
+    "iana": "Asia/Vladivostok",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Magadan": {
+    "offset_minutes": 660,
+    "iana": "Asia/Magadan",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "New Caledonia": {
+    "offset_minutes": 660,
+    "iana": "Pacific/Noumea",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Solomon Is.": {
+    "offset_minutes": 660,
+    "iana": "Pacific/Guadalcanal",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Srednekolymsk": {
+    "offset_minutes": 660,
+    "iana": "Asia/Srednekolymsk",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Auckland": {
+    "offset_minutes": 720,
+    "iana": "Pacific/Auckland",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Fiji": {
+    "offset_minutes": 720,
+    "iana": "Pacific/Fiji",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Kamchatka": {
+    "offset_minutes": 720,
+    "iana": "Asia/Kamchatka",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Marshall Is.": {
+    "offset_minutes": 720,
+    "iana": "Pacific/Majuro",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Chatham Is.": {
+    "offset_minutes": 765,
+    "iana": "Pacific/Chatham",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Nuku'alofa": {
+    "offset_minutes": 780,
+    "iana": "Pacific/Tongatapu",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Samoa": {
+    "offset_minutes": 780,
+    "iana": "Pacific/Apia",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  },
+  "Tokelau Is.": {
+    "offset_minutes": 780,
+    "iana": "Pacific/Fakaofo",
+    "source_evidence": "0013-auth-settings",
+    "basis": "source select; IANA zone where resolvable, otherwise captured UTC offset"
+  }
+}

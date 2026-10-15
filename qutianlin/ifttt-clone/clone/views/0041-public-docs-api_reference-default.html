@@ -1,0 +1,3928 @@
+<!doctype html>
+<html lang="en"><head>
+    <link rel="preload" href="/assets/asset-000002.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000004.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000003.woff2" as="font" type="font/woff2">
+
+<style>
+/* IFTTT.ai rebrand — Museo Sans Rounded (site-wide base font). One @font-face per Museo cut; */
+/* CSS font-weight == the cut number (300 Light / 500 Regular / 700 body / 900 headings). */
+/* NB: map by cut name, not the weight Figma's inspect panel shows — a designer's desktop copy */
+/* may report ~200 less (700 for the 900 cut); these files carry OS/2 weight == cut number. */
+
+/* Museo Sans Rounded 300 (light) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 300;
+  src: url("/assets/dependency-000100.woff2") format("woff2"),
+    url("/assets/dependency-000101.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 500 (regular) — covers CSS 400–600 */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 500 600;
+  src: url("/assets/asset-000002.woff2") format("woff2"),
+    url("/assets/dependency-000102.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 700 (body) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 700;
+  src: url("/assets/asset-000004.woff2") format("woff2"),
+    url("/assets/dependency-000104.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 900 (black) — display headings */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 900;
+  src: url("/assets/asset-000003.woff2") format("woff2"),
+    url("/assets/dependency-000106.woff") format("woff");
+  font-display: swap;
+}
+
+/* Metric-matched fallback for the swap window: Avenir Next scaled to the Museo advance widths, with */
+/* the Museo line box (hhea 940/-260 divided by size-adjust), so the change to Museo moves no layout. */
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 500 600;
+  src: local("Avenir Next Medium"), local("AvenirNext-Medium");
+  size-adjust: 98.0%;
+  ascent-override: 95.92%;
+  descent-override: 26.53%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 700;
+  src: local("Avenir Next Bold"), local("AvenirNext-Bold");
+  size-adjust: 94.5%;
+  ascent-override: 99.47%;
+  descent-override: 27.51%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 900;
+  src: local("Avenir Next Heavy"), local("AvenirNext-Heavy");
+  size-adjust: 90.2%;
+  ascent-override: 104.21%;
+  descent-override: 28.82%;
+  line-gap-override: 0%;
+}
+
+/* Museo Sans Rounded 500 / 700 italic — fetched only by pages that set font-style: italic. */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 500 600;
+  src: url("/assets/asset-000981.woff2") format("woff2"),
+    url("/assets/dependency-000103.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/asset-001589.woff2") format("woff2"),
+    url("/assets/dependency-000105.woff") format("woff");
+  font-display: swap;
+}
+</style>
+
+    <!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0">
+<meta name="mobile-web-app-capable" content="yes">
+
+
+
+
+  <title>Service API requirements - IFTTT</title>
+<meta name="description" content="Learn how to implement an API for your service according to the IFTTT Service Protocol.">
+<meta name="keywords" content="ifttt applets connect connections integrate integration automate automation services recipes trigger action ifthisthenthat free">
+<meta property="al:ios:url" content="ifttt://">
+<meta property="al:ios:app_store_id" content="660944635">
+<meta property="al:ios:app_name" content="IFTTT">
+<meta property="fb:app_id" content="122259781154546">
+<meta property="fb:admins" content="7302486">
+<meta property="og:title" content="Service API requirements - IFTTT">
+<meta property="og:description" content="Learn how to implement an API for your service according to the IFTTT Service Protocol.">
+<meta property="og:site_name" content="IFTTT">
+<meta property="og:url" content="https://ifttt.com/docs/api_reference">
+<meta property="og:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@IFTTT">
+<meta name="twitter:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta name="twitter:app:id:iphone" content="660944635">
+<meta name="twitter:app:id:ipad" content="660944635">
+<meta name="twitter:app:id:googleplay" content="com.ifttt.ifttt">
+<meta name="twitter:app:url:iphone" content="ifttt://">
+<meta name="twitter:app:url:ipad" content="ifttt://">
+<meta name="twitter:app:url:googleplay" content="ifttt://">
+<meta name="twitter:app:name:googleplay" content="IFTTT">
+<meta name="author" content="IFTTT">
+<meta name="copyright" content="Copyright 2026 IFTTT Inc.">
+<meta name="theme-color" content="">
+<meta name="facebook-domain-verification" content="tapueff3rri63aug9c5b7hapbv3mkv">
+
+<!-- Standard SVG Favicon -->
+<link rel="icon" href="/assets/dependency-000091.svg" type="image/svg+xml">
+
+<!-- For all Apple Devices: -->
+<link rel="apple-touch-icon" href="/assets/dependency-000081.png">
+
+<!-- For Windows 8: -->
+<meta name="msapplication-TileImage" content="https://web-assets.ifttt.com/builds/assets/pinned-Dpomu1wG.png">
+<meta name="msapplication-TileColor" content="#111">
+
+
+
+<link rel="stylesheet" href="/assets/asset-000979.css">
+<link rel="stylesheet" href="/assets/asset-000117.css">
+<link rel="stylesheet" href="/assets/asset-000134.css">
+
+    
+  <link rel="stylesheet" href="/local.css"></head>
+  <body id="docs-body" class="partners-body docs-body api-reference-action  false" style="background-color: rgb(255, 255, 255);" data-local-route="/docs/api_reference" data-local-actor="anonymous" data-local-state="default"><div id="flash-messages"></div>
+  
+      <!-- Google Tag Manager (noscript) -->
+  <noscript></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+    
+
+
+  
+
+  
+
+
+      
+<header class="unified-header signed-out" style="background-color: #fff">
+  <div class="container header">
+    <section class="left-group">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/">
+  <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt" style="fill: #111"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>
+    </section>
+
+      <section class="right-group signed-out">
+        <a class="nav-link link-menu" title="Explore" href="/explore">
+          Explore
+</a>
+        <a class="nav-link link-menu" title="Plans" href="/plans">
+          Plans
+</a>
+        <a class="sign-in button-tertiary button-outlined " href="/login">Log in</a>
+
+          <a title="Get started" class="button-tertiary  sign-up signed-out" href="/join?source=site-header">
+            Get started
+</a>      </section>
+      <section class="mobile-icon">
+        
+<span id="unified_mobile_menu" role="button" class="closed" tabindex="0">
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hamburger-icon">
+    <title>Mobile menu</title>
+    <g fill="#111" id="mobile-hamburger-icon">
+      <path d="M19.6504 15C20.5617 15 21.3008 15.7391 21.3008 16.6504C21.3008 17.5617 20.5617 18.3008 19.6504 18.3008H1.65039C0.739121 18.3008 0 17.5617 0 16.6504C0 15.7391 0.739121 15 1.65039 15H19.6504ZM19.6504 7.5C20.5617 7.5 21.3008 8.23912 21.3008 9.15039C21.3008 10.0617 20.5617 10.8008 19.6504 10.8008H1.65039C0.739121 10.8008 0 10.0617 0 9.15039C0 8.23912 0.739121 7.5 1.65039 7.5H19.6504ZM19.6504 0C20.5617 0 21.3008 0.739121 21.3008 1.65039C21.3008 2.56166 20.5617 3.30078 19.6504 3.30078H1.65039C0.739121 3.30078 0 2.56166 0 1.65039C0 0.739121 0.739121 0 1.65039 0H19.6504Z" transform="translate(1.35 2.85)"></path>
+    </g>
+  </svg>
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="close-icon">
+    <title>Close menu</title>
+    <path fill="#111" d="M16.4901 0.535065C17.1612 -0.160319 18.2692 -0.180639 18.9648 0.490143C19.66 1.16128 19.6797 2.26933 19.0087 2.96475L12.1815 10.0399L18.4482 16.5351C19.1189 17.2305 19.0993 18.3377 18.4042 19.0087C17.7088 19.6797 16.6007 19.66 15.9296 18.9648L9.74991 12.5595L3.57022 18.9648C2.89918 19.6602 1.79112 19.6796 1.09561 19.0087C0.400326 18.3376 0.380671 17.2305 1.05167 16.5351L7.31729 10.0399L0.490143 2.96475C-0.180639 2.26923 -0.160319 1.16115 0.535065 0.490143C1.23058 -0.180569 2.3377 -0.16026 3.0087 0.535065L9.74893 7.52042L16.4901 0.535065Z" transform="translate(2.25 2.25)"></path>
+  </svg>
+</span>
+
+
+      </section>
+  </div>
+
+</header>
+
+
+    <div class="platform-bg_color-container">
+        <nav class="tabbed-nav kb-nav">
+    <div class="container">
+      
+        
+        
+        
+        
+        
+<ul><li class="first"><a class="link-menu" href="/docs">Get started</a></li><li class="active"><a class="link-menu" href="/docs/api_reference">Service API</a></li><li><a class="link-menu" href="/docs/connect_api">Connect API</a></li><li><a class="link-menu" href="/docs/example_services">Example Services</a></li><li class="last"><a class="link-menu" href="/docs/faq">FAQ</a></li></ul>    </div>
+  </nav>
+
+  <div class="container">
+    <div class="docs-content">
+
+        <div class="toc-sidebar link-menu">
+          <nav class="sidebar-nav">
+            <ul>
+<li><a href="#general-api-requirements" class="active">General API requirements</a></li>
+<li><a href="#service-authentication">Service authentication</a>
+
+<ul>
+<li><a href="#authentication-flow">Authentication flow</a></li>
+<li><a href="#refresh-tokens">Refresh Tokens</a></li>
+<li><a href="#user-information">User information</a></li>
+</ul></li>
+<li><a href="#triggers">Triggers</a>
+
+<ul>
+<li><a href="#trigger-identity">Trigger Identity</a></li>
+<li><a href="#realtime-api">Realtime API</a></li>
+</ul></li>
+<li><a href="#trigger-fields">Trigger fields</a>
+
+<ul>
+<li><a href="#trigger-field-dynamic-options">Dynamic options</a></li>
+<li><a href="#trigger-field-dynamic-validation">Dynamic validation</a></li>
+<li><a href="#trigger-field-contextual-validation">Contextual validation</a></li>
+<li><a href="#location-based-input">Location-based input</a></li>
+</ul></li>
+<li><a href="#applet-templates">Applet templates</a></li>
+<li><a href="#actions">Actions</a></li>
+<li><a href="#action-fields">Action fields</a>
+
+<ul>
+<li><a href="#action-field-dynamic-options">Dynamic options</a></li>
+</ul></li>
+<li><a href="#queries">Queries</a>
+
+<ul>
+<li><a href="#pagination">Pagination</a></li>
+<li><a href="#trigger-based-queries">Trigger-based queries</a></li>
+</ul></li>
+<li><a href="#query-fields">Query fields</a>
+
+<ul>
+<li><a href="#query-field-dynamic-options">Dynamic options</a></li>
+</ul></li>
+<li><a href="#ingredients">Ingredients</a>
+
+<ul>
+<li><a href="#string-ingredients">String ingredients</a></li>
+<li><a href="#date-and-time-ingredients">Date and time ingredients</a></li>
+<li><a href="#nested-ingredients">Nested ingredients</a></li>
+</ul></li>
+<li><a href="#service-status">Service status</a></li>
+<li><a href="#openapi-definition">OpenAPI definition</a></li>
+</ul>
+
+            <br>
+          </nav>
+        </div>
+
+      <div class="docs-main-content">
+        <h1 id="general-api-requirements">General API requirements</h1>
+
+<p>This document specifies how to implement an API for your service according to the IFTTT Service Protocol.
+It is recommended that you treat this document as a reference and follow the workflow outlined in our <a href="/docs">overview</a>.</p>
+
+<p>We also provide an OpenAPI definition file that describes the IFTTT Service API.
+You can use this file to generate some of your server code. This should save you time and effort implementing your service. See <a href="#openapi-definition">OpenAPI definition</a> for more details.</p>
+
+<h6 id="https">HTTPS</h6>
+
+<p>The production version of your service API must be served over HTTPS.</p>
+
+<h6 id="api-url-prefix">API URL prefix</h6>
+
+<p>Designate an <strong>API URL prefix</strong> for all of your API endpoints in your service configuration.</p>
+
+<div class="example-list">
+  <h6>Examples</h6>
+
+  <ul>
+    <li>https://api.service.com</li>
+    <li>https://service.com/api</li>
+  </ul>
+</div>
+
+<h6 id="endpoint-paths">Endpoint paths</h6>
+
+<p>Endpoints are scoped to the current version of the IFTTT Service Protocol by appending your API URL prefix with <code>/ifttt/v1</code> for all requests.</p>
+
+<div class="example-list">
+  <h6>Examples</h6>
+
+  <ul>
+    <li>{{api_url_prefix}}/ifttt/v1/triggers/any_new_photo</li>
+    <li>{{api_url_prefix}}/ifttt/v1/actions/post_photo</li>
+  </ul>
+</div>
+
+<h6 id="headers">Headers</h6>
+
+<p>Use <strong>UTF-8</strong> as the response encoding and support HTTP-level <strong>compression</strong>. Requests from IFTTT to your service API have the following headers:</p>
+
+<div class="example-list">
+  <h6>Headers</h6>
+
+  <ul>
+    <li>
+      <pre><code>
+Accept:          application/json
+Accept-Charset:  utf-8
+Accept-Encoding: gzip, deflate
+Content-Type:    application/json
+</code></pre>
+    </li>
+  </ul>
+</div>
+
+<h6 id="http-status-codes">HTTP status codes</h6>
+
+<p>Use the following set of HTTP response status codes:</p>
+
+<table><thead>
+<tr>
+<th>status</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>200</code></td>
+<td>The request was a success.</td>
+</tr>
+<tr>
+<td><code>400</code></td>
+<td>There was something wrong with incoming data from IFTTT. Provide an error response body to clarify what went wrong.</td>
+</tr>
+<tr>
+<td><code>401</code></td>
+<td>IFTTT sent an OAuth2 access token that isn’t valid.</td>
+</tr>
+<tr>
+<td><code>404</code></td>
+<td>IFTTT is trying to reach a URL that doesn’t exist.</td>
+</tr>
+<tr>
+<td><code>500</code></td>
+<td>There was an error in your application logic.</td>
+</tr>
+<tr>
+<td><code>503</code></td>
+<td>Your service is not available at the moment, but IFTTT should try again later.</td>
+</tr>
+</tbody></table>
+
+<h6 id="response-body-format">Response body format</h6>
+
+<p>Provide response bodies as <strong>JSON objects</strong>. Success responses have a top-level wrapper object called <code>data</code>.</p>
+
+<div class="example-list">
+  <h6>Raw body on success</h6>
+
+  <ul>
+    <li>
+      <code>
+<pre>{
+  "data": {
+    // The value of `data` varies, but is typically
+    // either an object or array
+    ...
+  }
+}
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+<p>Error responses have a top-level <code>errors</code> array. Each element of <code>errors</code> is an object with a <code>message</code> property whose value is a user-friendly error message.</p>
+
+<div class="example-list">
+  <h6>Raw body on error</h6>
+
+  <ul>
+    <li>
+      <code>
+<pre>{
+  "errors": [
+    {
+      "message": "Something went wrong!"
+    }
+  ]
+}
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+<p>All errors matching this format will be passed through to users in their activity feeds.</p>
+
+<h3 id="service-authentication">Service authentication</h3>
+
+<p>If your service requires user authentication, users must connect your service before they can use its Applets.</p>
+
+<p>Service authentication has two steps:</p>
+
+<ol>
+<li> <a href="#authentication-flow">Authentication flow</a>. This step authorizes IFTTT to make requests to your service API on behalf of the user.</li>
+<li> Fetching and storing basic <a href="#user-information">user information</a> from your service API.</li>
+</ol>
+
+<p><strong>Note:</strong> If your service interacts with user data, authentication is required. Trigger/query/action fields designed to circumvent that requirement (ex. a user's API key) will not be approved.</p>
+
+<h5 id="authentication-flow">Authentication flow</h5>
+
+<p>IFTTT’s protocol supports <a href="/external?url=http%3A%2F%2Ftools.ietf.org%2Fhtml%2Frfc6749">OAuth2</a> authentication, including support for <a href="#refresh-tokens">refresh tokens</a> if so desired.</p>
+
+<p>Your service API should use access tokens for authentication <em>and</em> as a source of identity. A single access token should correspond to a single user account or resource owner on your service.</p>
+
+<p>If refresh tokens are used, they must be <strong>non-expiring</strong>. If refresh tokens are not used, access tokens must be <strong>non-expiring</strong>.</p>
+
+<h6 id="ifttt-client-credentials">IFTTT client credentials</h6>
+
+<p>When configuring your service, provide IFTTT with a <strong>client ID</strong> and <strong>client secret</strong> for authentication-related requests.</p>
+
+<h6 id="ifttt-authorization">IFTTT authorization</h6>
+
+<h6 id="request">Request</h6>
+
+<p>To begin authentication, IFTTT redirects the user to your <strong>OAuth2 Authorization URL</strong>, specified in the Service Authentication settings, and makes the following request:</p>
+
+<div class="example-list">
+  <h6>Request</h6>
+
+  <ul>
+    <li>
+      <dl>
+        <dt>Method</dt>
+        <dd>GET</dd>
+      </dl>
+      <dl>
+        <dt>URL</dt>
+        <dd>Your OAuth2 Authorization URL</dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Parameters</h6>
+
+  <ul>
+    <li>
+      <dl>
+        <dt>client_id</dt>
+        <dd>IFTTT’s client ID for your service as set in your service configuration.</dd>
+      </dl>
+
+      <dl>
+        <dt>response_type</dt>
+        <dd>code</dd>
+      </dl>
+
+      <dl>
+        <dt>scope</dt>
+        <dd>
+          <p>ifttt</p>
+          <p>The ifttt scope should provide access to resources for every trigger and action in your service. This way, users will not need to repeat the authentication flow to use all of your queries, triggers, and actions.</p>
+          <p>You may override this parameter by specifying your own scope in the OAuth2 Authorization URL specified in the Service Authentication settings.</p>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt>state</dt>
+        <dd>An anti-forgery token provided by IFTTT.</dd>
+      </dl>
+
+      <dl>
+        <dt>redirect_uri</dt>
+        <dd>
+          <p><code>https://ifttt.com/channels/{{service_id}}/authorize</code></p>
+          <p><code>service_id</code> is a string used to represent your service in URLs. You can set in your service configuration.</p>
+          <p>Though we provide the <code>redirect_uri</code> parameter, we encourage you to always use the redirect URL provided in <a href="/mkt/api%2Fauthentication">Authentication settings</a> over simply redirecting users to the parameter’s value.</p>
+        </dd>
+      </dl>
+
+    </li>
+
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+
+  <ul>
+    <li>
+      <pre><code>https://api.example-service.org/oauth2/authorize?client_id=94b26e58a3a88d5c&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Fifttt.com%2Fchannels%2Fexample_channel%2Fauthorize&amp;scope=ifttt&amp;state=a00caec8dbd08e50</code></pre>
+    </li>
+  </ul>
+</div>
+
+<h6 id="response">Response</h6>
+
+<p>After the user is redirected to your authorization request endpoint, you should authenticate the user and prompt to grant IFTTT access to the user’s resources on your service.</p>
+
+<h6 id="authorization-grant">Authorization grant</h6>
+
+<p>Once a user authorizes IFTTT, you should redirect the user to IFTTT’s <strong>channel authorization URL</strong> along with an authorization code which IFTTT can exchange for a bearer token in the next step.</p>
+
+<h6 id="redirect">Redirect</h6>
+
+<div class="example-list">
+  <h6>URL</h6>
+
+  <ul>
+    <li>
+      <code>https://ifttt.com/channels/{{service_id}}/authorize</code> <br>
+      The <code>service_id</code> is a string used to represent your service in URLs. You can set it in your service configuration.
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Parameters</h6>
+
+  <ul>
+    <li>
+      <dl>
+        <dt>code</dt>
+        <dd>The authorization code you generated.</dd>
+      </dl>
+      <dl>
+        <dt>state</dt>
+        <dd>The anti-forgery token provided by IFTTT in the original request.</dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+
+  <ul>
+    <li>
+      <pre><code>https://ifttt.com/channels/example_channel/authorize?code=67a8ad40341224c1&amp;state=a00caec8dbd08e50</code></pre>
+    </li>
+  </ul>
+</div>
+
+<h6 id="user-denies-ifttt">User denies IFTTT</h6>
+
+<p>Should the user deny IFTTT access to your service, you should redirect them to IFTTT indicating access was denied.</p>
+
+<div class="example-list">
+  <h6>Request</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>URL</dt>
+        <dd>
+          <code>https://ifttt.com/channels/{{service_id}}/authorize</code> <br>
+          <code>service_id</code> is a string used to represent your service in URLs. You can set it in your service configuration.
+        </dd>
+      </dl>
+
+      <dl>
+        <dt>Parameters</dt>
+        <dd>
+          <p><code>error</code> access_denied</p>
+        </dd>
+      </dl>
+    </li>
+
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+
+  <ul>
+    <li>
+      <pre><code>https://ifttt.com/channels/example_channel/authorize?error=access_denied</code></pre>
+    </li>
+  </ul>
+</div>
+
+<h6 id="token-exchange">Token exchange</h6>
+
+<h6 id="request">Request</h6>
+
+<p>After IFTTT has received an authorization code for the user, it will make a <code>POST</code> request to your <strong>OAuth2 Token URL</strong>, specified in the Service Authentication settings, and exchange the code for an access token.</p>
+
+<div class="example-list">
+  <h6>Body Parameters</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>grant_type</dt>
+        <dd>authorization_code</dd>
+      </dl>
+      <dl>
+        <dt>code</dt>
+        <dd>The authorization code generated earlier in this flow.</dd>
+      </dl>
+
+      <dl>
+        <dt>client_id</dt>
+        <dd>IFTTT’s client ID for your service as set in your service configuration.</dd>
+      </dl>
+
+      <dl>
+        <dt>client_secret</dt>
+        <dd>IFTTT’s client secret for your service as set in your service configuration.</dd>
+      </dl>
+
+      <dl>
+        <dt>redirect_uri</dt>
+        <dd>
+          https://ifttt.com/channels/{{service_id}}/authorize <br>
+          <code>service_id</code> is a string used to represent your service in URLs. You can set it in your service configuration.
+        </dd>
+      </dl>
+    </li>
+
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+
+  <ul>
+    <li>
+<pre><code>
+POST /oauth2/token HTTP/1.1
+Host: api.example-service.com
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=authorization_code&amp;code=67a8ad40341224c1&amp;client_id=83465ab42&amp;client_secret=c4f7defe91df9b23&amp;redirect_uri=https%3A//ifttt.com/channels/service_id/authorize
+</code>
+
+</pre>
+    </li>
+  </ul>
+</div>
+
+<h6 id="response">Response</h6>
+
+<p>If the authorization code is <strong>valid</strong>, provide the following response:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Status</dt>
+        <dd>200</dd>
+      </dl>
+
+      <dl>
+        <dt>Headers</dt>
+        <dd><code>Content-Type  application/json; charset=utf-8</code></dd>
+      </dl>
+    </li>
+
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt><code>token_type</code></dt>
+        <dd>Bearer</dd>
+      </dl>
+
+      <dl>
+        <dt><code>access_token</code></dt>
+        <dd>A token IFTTT will use to make authenticated calls to your API.</dd>
+      </dl>
+
+      <dl>
+        <dt><code>refresh_token</code></dt>
+        <dd>(optional) If enabled, refresh token IFTTT will use to refresh access tokens.</dd>
+      </dl>
+
+    </li>
+
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "token_type": "Bearer",
+  "access_token": "b29a71b4c58c22af116578a6be6402d2"
+}
+</code>
+
+</pre>
+    </li>
+  </ul>
+</div>
+
+<p>If the authorization code is <strong>not valid</strong>, respond with a 400 status code and body as shown in the following example:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Status</dt>
+        <dd>400</dd>
+      </dl>
+
+      <dl>
+        <dt>Headers</dt>
+        <dd><code>Content-Type  application/json; charset=utf-8</code></dd>
+      </dl>
+    </li>
+
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt><code>error</code></dt>
+        <dd>invalid_grant</dd>
+      </dl>
+
+      <dl>
+        <dt><code>error_description</code></dt>
+        <dd>(optional) Description of the error. Do not disclose specific tokens or authentication codes here</dd>
+      </dl>
+
+    </li>
+
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 400 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "error": "invalid_grant",
+  "error_description": "The code or token used is not valid"
+}
+</code>
+
+</pre>
+    </li>
+  </ul>
+</div>
+
+<h3 id="refresh-tokens">Refresh Tokens</h3>
+
+<p>You can indicate that your API uses refresh tokens under the “Authentication” tab. IFTTT will continue to use an access token until a 401 is received indicating the token is no longer valid. Once this occurs IFTTT will attempt to obtain a new access token using a refresh token via the <a href="#token-refresh">token refresh</a> endpoint before attempting the request again.</p>
+
+<p>Please note that refresh tokens cannot have a time-based expiry. The only time it is technically permissible for a refresh token to expire is after an access token has been refreshed. At that time, it is acceptable to return a new refresh token; however, we require that the previous refresh token not immediately expire.</p>
+
+<h6 id="token-refresh">Token refresh</h6>
+
+<h6 id="request">Request</h6>
+
+<p>After token expiry, IFTTT will make a <code>POST</code> request to your <strong>OAuth2 Token Endpoint</strong>, specified in the Service Authentication settings, and use the refresh token to retrieve a new access token.</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Method</dt>
+        <dd>POST</dd>
+      </dl>
+
+      <dl>
+        <dt>URL</dt>
+        <dd>OAuth2 Token Endpoint</dd>
+      </dl>
+
+      <dl>
+        <dt>Headers</dt>
+        <dd><code>Content-Type application/x-www-form-urlencoded</code></dd>
+      </dl>
+    </li>
+
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt><code>grant_type</code></dt>
+        <dd>refresh_token</dd>
+      </dl>
+
+      <dl>
+        <dt><code>client_id</code></dt>
+        <dd>IFTTT’s client ID for your service as set in your service configuration.</dd>
+      </dl>
+
+      <dl>
+        <dt><code>client_secret</code></dt>
+        <dd>IFTTT’s client secret for your service as set in your service configuration.</dd>
+      </dl>
+
+      <dl>
+        <dt><code>refresh_token</code></dt>
+        <dd>The refresh token retrieved in the <a href="#token-exchange">token exchange</a> step of the <a href="#authentication-flow">Authentication Flow</a></dd>
+      </dl>
+
+    </li>
+
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+
+  <ul>
+    <li>
+<pre><code>
+POST /oauth2/token HTTP/1.1
+Host: api.example-service.com
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=refresh_token&amp;client_id=83465ab42&amp;client_secret=c4f7defe91df9b23&amp;refresh_token=c8764378d9879ffeadfcc233effafb23bbdbfe
+</code>
+
+</pre>
+    </li>
+  </ul>
+</div>
+
+<h6 id="response">Response</h6>
+
+<p>If the refresh token is <strong>valid</strong>, provide the following response:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Status</dt>
+        <dd>200</dd>
+      </dl>
+
+      <dl>
+        <dt>Headers</dt>
+        <dd><code>Content-Type: application/json; charset=utf-8</code></dd>
+      </dl>
+    </li>
+
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt><code>access_token</code></dt>
+        <dd>The updated access token.</dd>
+      </dl>
+      <dl>
+        <dt><code>refresh_token</code></dt>
+        <dd>The updated refresh token.</dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "access_token": "c547cdfecf7e86cde678bc87de6fc87",
+  "refresh_token": "d7676beda76c38762349bac98cba799"
+}
+</code>
+
+</pre>
+    </li>
+  </ul>
+</div>
+
+<p>If the refresh token is <strong>not valid</strong>, respond with a 400 status code and body as shown in the following example:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Status</dt>
+        <dd>400</dd>
+      </dl>
+
+      <dl>
+        <dt>Headers</dt>
+        <dd><code>Content-Type  application/json; charset=utf-8</code></dd>
+      </dl>
+    </li>
+
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt><code>error</code></dt>
+        <dd>invalid_grant</dd>
+      </dl>
+
+      <dl>
+        <dt><code>error_description</code></dt>
+        <dd>(optional) Description of the error. Do not disclose specific tokens or authentication codes here</dd>
+      </dl>
+
+    </li>
+
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 400 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "error": "invalid_grant",
+  "error_description": "The code or token used is not valid"
+}
+</code>
+
+</pre>
+    </li>
+  </ul>
+</div>
+
+<h3 id="user-information">User information</h3>
+
+<h6 id="request">Request</h6>
+
+<p>After acquiring an access token, IFTTT will make a request to your <strong>user information endpoint</strong>. This information is considered private, and will only be displayed to the user who activated your service.</p>
+
+<p>Occasionally, IFTTT will make requests to this endpoint to verify that the user’s access token is still valid.</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Method</dt>
+        <dd>GET</dd>
+      </dl>
+
+      <dl>
+        <dt>URL</dt>
+        <dd><code>{{api_url_prefix}}/ifttt/v1/user/info</code></dd>
+      </dl>
+
+      <dl>
+        <dt>Headers</dt>
+        <dd>
+
+<pre><code>
+Authorization: Bearer {{user_access_token}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: {{random_uuid}}
+</code></pre>
+        </dd>
+      </dl>
+    </li>
+
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+
+  <ul>
+    <li>
+<pre><code>
+GET /ifttt/v1/user/info HTTP/1.1
+Host: api.example-service.com
+Authorization: Bearer b29a71b4c58c22af116578a6be6402d2
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: 434d757081c94013b1b28f2087d28a98
+</code>
+</pre>
+    </li>
+  </ul>
+</div>
+
+<h6 id="response">Response</h6>
+
+<p>Requests to the user information endpoint should generate the following response:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Status</dt>
+        <dd>200</dd>
+      </dl>
+
+      <dl>
+        <dt>Headers</dt>
+        <dd>
+          <code>Content-Type: application/json; charset=utf-8</code>
+        </dd>
+      </dl>
+    </li>
+
+  </ul>
+</div>
+
+<p>The body of the response is a JSON object with one top-level field, <code>data</code>, with three fields:</p>
+
+<div class="example-list">
+  <h6>Body</h6>
+
+  <ul>
+    <li>
+      <dl>
+        <dt><code>name</code></dt>
+        <dd>(string) Full name, username, email, or other identification to display to the user.</dd>
+      </dl>
+
+      <dl>
+        <dt><code>id</code></dt>
+        <dd>(string) An unchangeable, permanent identifier to uniquely identify the resource owner within your service. We advise against using access tokens, emails, usernames, or phone numbers for this as the identifier cannot be changed. **Up to 200 characters.**</dd>
+      </dl>
+
+      <dl>
+        <dt><code>url</code></dt>
+        <dd>(optional string) URL to user’s dashboard or configuration page on your service’s website.</dd>
+      </dl>
+    </li>
+
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "data": {
+    "name": "Walter White",
+    "id": "heisenberg",
+    "url": "http://example.com/users/heisenberg"
+  }
+}
+</code>
+
+</pre>
+    </li>
+  </ul>
+</div>
+
+<p>As with all other endpoints which require authentication via access token, you should return a <a href="#http-status-codes">401 status</a> to indicate that the access token is invalid or expired.</p>
+
+<h3 id="triggers">Triggers</h3>
+
+<p>Each trigger requires a unique API endpoint. For each Applet using a given trigger, IFTTT will poll that trigger’s endpoint once about every hour. For each <strong>new</strong> item returned by the trigger, IFTTT will fire the Applet’s associated action.</p>
+
+<p><strong>Note</strong>: To ensure a great Applet experience for your users, triggers are required to use the <a href="#realtime-api">Realtime API</a> if a user would expect its Applets to run in realtime.</p>
+
+<p>A trigger endpoint should return (by default) the 50 most recent <em>events</em>, regardless of whether or not we have seen them before. The number of returned items can be overridden by IFTTT when a <code>limit</code> parameter is present in the request. Please do not limit the number of events returned except as specified by the <code>limit</code> parameter in the request. Events should remain on the timeline indefinitely and should not expire, although they may roll off the bottom of the list once the timeline exceeds 50 items.</p>
+
+<h6 id="request">Request</h6>
+
+<p>To fetch new items IFTTT will make the following request to your <strong>trigger endpoints</strong>:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Method</dt>
+        <dd>POST</dd>
+      </dl>
+
+      <dl>
+        <dt>URL</dt>
+        <dd>
+          <code>{{api_url_prefix}}/ifttt/v1/triggers/{{trigger_slug}}</code>
+        </dd>
+      </dl>
+    </li>
+
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+Authorization: Bearer {{user_access_token}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (non-authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+IFTTT-Service-Key: {{ifttt_service_key}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt><code>trigger_identity</code></dt>
+        <dd>(string) A unique identifier for this set of trigger fields for a given Applet (see <a href="#trigger-identity">Trigger Identity</a>).</dd>
+      </dl>
+
+      <dl>
+        <dt><code>triggerFields</code></dt>
+        <dd>(object) Map of trigger field slugs to values.</dd>
+      </dl>
+
+      <dl>
+        <dt><code>limit</code></dt>
+        <dd>(optional integer) Maximum number of items to be returned, default 50.</dd>
+      </dl>
+
+      <dl>
+        <dt><code>user</code></dt>
+        <dd>(object) Information about the IFTTT user related to this request.</dd>
+      </dl>
+
+      <dl>
+        <dt><code>ifttt_source</code></dt>
+        <dd>(optional object) Information about the personal Applet on IFTTT that triggered this request. If present, this will have an id uniquely identifying the Applet and a url pointing to a web page describing it. Note that only the user will be able to see this page, since personal Applets are private. In the future, these fields may point to an entity other than a personal Applet.</dd>
+      </dl>
+    </li>
+
+  </ul>
+</div>
+
+<p>This example excludes the optional limit parameter. Only the 50 most recent items should be returned, in descending chronological order.</p>
+
+<div class="example-list">
+  <h6>EXAMPLE: default limit</h6>
+  <ul>
+    <li>
+<pre><code>
+POST /ifttt/v1/triggers/new_photo_in_album_with_hashtag HTTP/1.1
+Host: api.example-service.com
+Authorization: Bearer b29a71b4c58c22af116578a6be6402d2
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Request-ID: 7f7cd9e0d8154531bbf36da8fe24b449
+
+{
+  "trigger_identity": "92429d82a41e93048",
+  "triggerFields": {
+    "album_name": "Street Art",
+    "hashtag": "banksy"
+  },
+  "ifttt_source": {
+    "id": "2",
+    "url": "https://ifttt.com/myrecipes/personal/2"
+  },
+  "user": {
+    "timezone": "America/Los_Angeles"
+  }
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<p>This example provides the limit parameter.</p>
+
+<div class="example-list">
+  <h6>EXAMPLE: explicit limit</h6>
+  <ul>
+    <li>
+<pre><code>
+POST /ifttt/v1/triggers/new_photo_in_album_with_hashtag HTTP/1.1
+Host: api.example-service.com
+Authorization: Bearer b29a71b4c58c22af116578a6be6402d2
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Request-ID: 7f7cd9e0d8154531bbf36da8fe24b449
+
+{
+  "triggerFields": {
+    "album_name": "Street Art",
+    "hashtag": "banksy"
+  },
+  "limit": 10,
+  "ifttt_source": {
+    "id": "2",
+    "url": "https://ifttt.com/myrecipes/personal/2"
+  },
+  "user": {
+    "timezone": "America/Los_Angeles"
+  }
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h6 id="response">Response</h6>
+
+<p>Responses contain an array of item objects. Items are <strong>a stream of unique events on a timeline</strong>, and each item has:</p>
+
+<ul>
+<li>One field for every <a href="#ingredients">ingredient</a> in the trigger.</li>
+<li>A <strong>unique identifier</strong> used to prevent Applets from firing more than once on the same item.</li>
+<li>A <strong>timestamp</strong> in Unix seconds. Items in the stream must be in <strong>descending</strong> order by the timestamp.</li>
+</ul>
+
+<p>Responses should be structured as follows:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl><dt>Status</dt><dd>200</dd></dl>
+      <dl><dt>Headers</dt><dd><code>Content-Type    application/json; charset=utf-8</code></dd></dl>
+    </li>
+  </ul>
+</div>
+
+<p>For the Body you get a JSON object which contains an array, data, of item objects. Items have one key-value pair for each ingredient slug and value, and a meta object with two fields:</p>
+
+<div class="example-list">
+  <h6>BODY</h6>
+  <ul>
+    <li>
+<pre><code>
+  "data": [
+    {
+      "slug 1": "value for ingredient 1",
+      "slug 2": "value for ingredient 2",
+      ...
+      "slug n": "value for ingredient n",
+      "meta": {
+        "id": "14b9-1fd2-acaa-5df5", //(string) a unique identifier for the item.
+        "timestamp": 1383597267 // (integer) a Unix timestamp in seconds.
+      }
+    }
+  ]
+</code></pre>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Response Example</h6>
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "data": [
+    {
+      "image_url": "http://example.com/images/128",
+      "tags": "banksy, brooklyn",
+      "posted_at": "2013-11-04T09:23:00-07:00",
+      "meta": {
+        "id": "14b9-1fd2-acaa-5df5",
+        "timestamp": 1383597267
+      }
+    },
+    {
+      "image_url": "http://example.com/images/125",
+      "tags": "banksy, nyc",
+      "posted_at": "2013-11-04T03:23:00-07:00",
+      "meta": {
+        "id": "ffb27-a63e-18e0-18ad",
+        "timestamp": 1383596355
+      }
+    }
+  ]
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h3 id="trigger-identity">Trigger Identity</h3>
+
+<p>A <code>trigger_identity</code> field is sent when an Applet is enabled and then with every subsequent trigger endpoint request. The <code>trigger_identity</code> can be thought of as a unique signature of a specific user, trigger, and trigger fields. You should recieve a trigger check request with a <code>trigger_identity</code> in the first minute after an Applet is enabled.</p>
+
+<p>For example, if a user has multiple Applets with the same trigger fields/values they will each have the same <code>trigger_identity</code>. We recommend that your service stores the relationship between a <code>trigger_identity</code> and the specific user, trigger, and trigger fields to assist in troubleshooting.</p>
+
+<p>Note that this field can safely be ignored. However, it becomes powerful when used to notify your API that a user no longer has any Applets with a given <code>trigger_identity</code>.</p>
+
+<h6 id="example">Example</h6>
+
+<p>Consider the following hypothetical publish/subscribe scenario for a connected car product:</p>
+
+<ol>
+<li>A user creates an Applet (or many Applets) that trigger on “Check Engine Light”.</li>
+<li>The trigger endpoint is immediately called and the API stores the <code>trigger_identity</code> for that user and associates that value with a “Check Engine Light” event on their vehicle.</li>
+<li>The API notifies the vehicle that it wants to subscribe to “Check Engine Light” events and the vehicle begins sending this data to the cloud.</li>
+<li>At some point in the future, a user deletes or updates their Applet(s) such that they no longer have any Applets that trigger on the event “Check Engine Light”.</li>
+<li>IFTTT calls the <code>DELETE</code> endpoint (example below).</li>
+<li>The API does a lookup on <code>trigger_identity</code> for that user and notifies the associated vehicle to stop sending “Check Engine Light” events.</li>
+<li>The API may then clean up or remove the storage of all the events associated with “Check Engine Light” for that user.</li>
+</ol>
+
+<h6 id="request">Request</h6>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl><dt>Method</dt><dd>DELETE</dd></dl>
+      <dl>
+        <dt>URL</dt>
+        <dd>
+          <pre><code>{{api_url_prefix}}/ifttt/v1/triggers/{{trigger_slug}}/trigger_identity/{{trigger_identity}}</code></pre>
+        </dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+Authorization: Bearer {{user_access_token}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>
+DELETE /ifttt/v1/triggers/new_photo_in_album_with_hashtag/trigger_identity/92429d82a41e93048 HTTP/1.1
+Host: api.example-service.com
+Authorization: Bearer b29a71b4c58c22af116578a6be6402d2
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Request-ID: 7f7cd9e0d8154531bbf36da8fe24b449
+</code></pre>
+    </li>
+  </ul>
+</div>
+
+<h6 id="response">Response</h6>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Status</dt>
+        <dd>200</dd>
+      </dl>
+
+      <dl>
+        <dt>Headers</dt>
+        <dd>
+          <code>Content-Type: application/json; charset=utf-8</code>
+        </dd>
+      </dl>
+    </li>
+
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+</code>
+
+</pre>
+    </li>
+  </ul>
+</div>
+
+<h3 id="realtime-api">Realtime API</h3>
+
+<p>With IFTTT’s Realtime API, you can have Applets involving user-oriented triggers from your service run near-instantly. Simply write a hook to notify IFTTT of any changes related to a given user which would correspond to a trigger they <strong>may</strong> be using. Rather than sending data directly, the Realtime API is used to <em>notify</em> IFTTT that there are new events available at your service for a specific <code>user_id</code> or <code>trigger_identity</code> that we can then fetch through polling.</p>
+
+<p>If your API does not support user authentication you can still leverage the Realtime API by relying on trigger identities alone.</p>
+
+<p><strong>Note:</strong> You still should return the <code>limit</code> (50 by default) number of most recent <em>events</em>, not just the ones related to the Realtime notification you sent, regardless of whether or not we have seen them before.</p>
+
+<p>If you are utilizing the Realtime API, we will limit the load on your service by performing trigger checks less frequently.</p>
+
+<p>Note that you will be able to tell that a trigger was checked by a Realtime notification by the presence of the <code>X-IFTTT-Realtime: 1</code> header in the trigger check request.</p>
+
+<h6 id="request">Request</h6>
+
+<p>You can find your Service Key under the “Details” tab. Include it in your <code>IFTTT-Service-Key</code> header to immediately start making Realtime requests.</p>
+
+<p>We also recommend that you send an <code>X-Request-ID</code> header with a UUID. Should the need to debug arise in the future, this will help reconcile server logs.</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl><dt>Method</dt><dd>POST</dd></dl>
+      <dl><dt>URL</dt><dd><code>https://realtime.ifttt.com/v1/notifications</code></dd></dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+IFTTT-Service-Key: {{ifttt_service_key}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<p>A JSON object which contains an array, <code>data</code>, of objects which each have a <code>user_id</code> or <code>trigger_identity</code>:</p>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>
+          data[user_id]
+        </dt>
+        <dd>
+          (string) The same id for the user that is returned by your user information endpoint.
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          data[trigger_identity]
+        </dt>
+        <dd>
+          (string) A unique identifier for a given set of trigger fields, sent to your API with every trigger endpoint request.
+        </dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<p><strong>Using <code>trigger_identity</code> will improve the performance of your integration with IFTTT</strong>. When the IFTTT Realtime API receives a <code>user_id</code> each of that user's triggers must be polled for, even though likely only a few of them have fresh data. For example, if a user had 100 Applets using your service's triggers, when that <code>user_id</code> is sent to the Realtime API IFTTT will need to run 100 checks for fresh data. This is a lot of extra time spent processing for both you and IFTTT, and reducing this time means your users' Applets will run faster. By using <code>trigger_identity</code>, IFTTT can poll your service for only the relevant fresh data.</p>
+
+<p>The Realtime request can contain up to 1000 user_ids and/or trigger_identities, although generally one would send either all <code>user_id</code>s or all <code>trigger_identity</code>s:</p>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>
+POST /v1/notifications HTTP/1.1
+Host: realtime.ifttt.com
+IFTTT-Service-Key: WlWFGKXFsXBaFMt8yZ7aLOafdqo7mAhY
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Request-ID: 619fd42930f74b78abc4394ca7bfec5b
+
+{
+  "data": [
+    {
+      "user_id": "23489759"
+    },
+    {
+      "user_id": "77956024"
+    },
+    {
+      "trigger_identity": "c5559d12d393b25c140364d891292e02233933a5"
+    },
+    ...
+  ]
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h3 id="trigger-fields">Trigger fields</h3>
+
+<p>Trigger fields can have a <a href="#trigger-field-dynamic-validation"><strong>dynamic validation of a text input</strong></a>, <a href="#location-based-input"><strong>location-based input</strong></a>, or <a href="#trigger-field-dynamic-options"><strong>dynamic options via a drop-down</strong></a>.</p>
+
+<p>With a drop-down, we provide two different choices:</p>
+
+<ol>
+<li>A dynamic drop-down selector. We provide you with a unique API endpoint based on the trigger field's name you can use to dynamically grab the list of options from your server.</li>
+<li>A manual drop-down to manually add a list of options that the user can select from.</li>
+</ol>
+
+<p>It is possible to validate all trigger fields using a single unique endpoint using <a href="#trigger-field-contextual-validation"><strong>contextual validation</strong></a>.</p>
+
+<h4 id="trigger-field-dynamic-options">Trigger field dynamic options</h4>
+
+<h5 id="dynamic-dropdowns">Dynamic dropdowns</h5>
+
+<p>Options have a label, which the user sees, and a value, which is sent when the trigger is executed. If you're using the dynamic drop-down instead of the manual drop-down, options can be placed into categories one level deep. Users may select categorized options but may not select the category itself.</p>
+
+<h6 id="request">Request</h6>
+
+<p>For <strong>drop-down selector</strong> trigger fields, you can dynamically provide user-specific options. Each time the drop-down is displayed, IFTTT will fetch a list of options from your trigger field’s <strong>dynamic options endpoint</strong>.</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl><dt>Method</dt><dd>POST</dd></dl>
+      <dl><dt>URL</dt><dd><code>{{api_url_prefix}}/ifttt/v1/triggers/{{trigger_slug}}/fields/{{trigger_field_slug}}/options</code></dd></dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+Authorization: Bearer {{user_access_token}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (non-authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+IFTTT-Service-Key: {{ifttt_service_key}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>
+POST /ifttt/v1/triggers/new_photo_in_album_with_hashtag/fields/album_name/options HTTP/1.1
+Host: api.example-service.com
+Authorization: Bearer b29a71b4c58c22af116578a6be6402d2
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: 37ccb881af5542fe8c5534e9744b6116
+
+{}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h6 id="response">Response</h6>
+
+<p>Your trigger field’s dynamic options endpoint should generate the following response:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl><dt>Status</dt><dd>200</dd></dl>
+      <dl><dt>Headers</dt><dd><code>Content-Type: application/json; charset=utf-8</code></dd></dl>
+    </li>
+  </ul>
+</div>
+
+<p>A JSON object which contains an array, <code>data</code>, of option objects:</p>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl><dt>label</dt><dd>(string) A user-facing label.</dd></dl>
+      <dl><dt>value</dt><dd>(string) The actual field value.</dd></dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "data": [
+    {
+      "label": "Street Art",
+      "value": "12345"
+    },
+    {
+      "label": "Technology",
+      "value": "43245"
+    },
+    {
+      "label": "Animals",
+      "values": [
+        {
+          "label": "Cats",
+          "value": "32143"
+        },
+        {
+          "label": "Dogs",
+          "value": "51231"
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h5 id="dynamic-checkboxes">Dynamic checkboxes</h5>
+
+<p>Options have a label, which the user sees, and a value, which is sent when the trigger is executed.</p>
+
+<h6 id="request">Request</h6>
+
+<p>For <strong>checkbox</strong> trigger fields, you can dynamically provide user-specific options. Each time the checkbox list is displayed, IFTTT will fetch a list of options from your trigger field’s <strong>dynamic options endpoint</strong>.</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl><dt>Method</dt><dd>POST</dd></dl>
+      <dl><dt>URL</dt><dd><code>{{api_url_prefix}}/ifttt/v1/triggers/{{trigger_slug}}/fields/{{trigger_field_slug}}/options</code></dd></dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+Authorization: Bearer {{user_access_token}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (non-authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+IFTTT-Service-Key: {{ifttt_service_key}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>
+POST /ifttt/v1/triggers/new_photo_in_album_with_hashtag/fields/album_name/options HTTP/1.1
+Host: api.example-service.com
+Authorization: Bearer b29a71b4c58c22af116578a6be6402d2
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: 37ccb881af5542fe8c5534e9744b6116
+
+{}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h6 id="response">Response</h6>
+
+<p>Your trigger field’s dynamic options endpoint should generate the following response:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl><dt>Status</dt><dd>200</dd></dl>
+      <dl><dt>Headers</dt><dd><code>Content-Type: application/json; charset=utf-8</code></dd></dl>
+    </li>
+  </ul>
+</div>
+
+<p>A JSON object which contains an array, <code>data</code>, of option objects:</p>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl><dt>label</dt><dd>(string) A user-facing label.</dd></dl>
+      <dl><dt>value</dt><dd>(string) The actual field value.</dd></dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "data": [
+    {
+      "label": "Street Art",
+      "value": "12345"
+    },
+    {
+      "label": "Technology",
+      "value": "43245"
+    },
+    {
+      "label": "Animals",
+      "values": [
+        {
+          "label": "Cats",
+          "value": "32143"
+        },
+        {
+          "label": "Dogs",
+          "value": "51231"
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h5 id="trigger-field-dynamic-validation">Trigger field dynamic validation</h5>
+
+<h6 id="request">Request</h6>
+
+<p>For <strong>text</strong> trigger fields, you can dynamically validate user input. IFTTT will make the following request to your service API:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl><dt>Method</dt><dd>POST</dd></dl>
+      <dl><dt>URL</dt><dd><code>{{api_url_prefix}}/ifttt/v1/triggers/{{trigger_slug}}/fields/{{trigger_field_slug}}/validate</code></dd></dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+  <pre><code>
+Authorization: Bearer {{user_access_token}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (non-authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+IFTTT-Service-Key: {{ifttt_service_key}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>value</dt>
+        <dd>(string) User input to be validated</dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>
+POST /ifttt/v1/triggers/new_photo_in_album_with_hashtag/fields/album_name/validate HTTP/1.1
+Host: api.example-service.com
+Authorization: Bearer b29a71b4c58c22af116578a6be6402d2
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Request-ID: b959f481ef4f4a8ab0ec414f58991674
+
+{
+  "value": "Street Art"
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h6 id="response">Response</h6>
+
+<p>Your trigger field’s dynamic validation endpoint should generate the following response:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Status</dt>
+        <dd>200, regardless of whether or not the user input is valid</dd>
+      </dl>
+      <dl>
+        <dt>Headers</dt>
+        <dd><code>Content-Type: application/json; charset=utf-8</code></dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<p>For the body you get a JSON object which contains an object, <code>data</code>:</p>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>data[valid]</dt>
+        <dd>(boolean) Validity of user’s input.</dd>
+      </dl>
+      <dl>
+        <dt>data[message]</dt>
+        <dd>(optional string) Explanation to display to user if input was invalid.</dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example: Valid Input</h6>
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "data": {
+    "valid": true
+  }
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example: Invalid Input</h6>
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "data": {
+    "valid": false,
+    "message": "Sorry, no album exists with the name \"Street Art\"."
+  }
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h5 id="trigger-field-contextual-validation">Trigger field contextual validation</h5>
+
+<p>Contextual Validation allows you to validate a trigger field based on the values of other trigger fields. It is incredibly useful for validating multiple trigger fields in a single API call. Because Contextual Validation is a trigger setting, validation will be available to every trigger field. When Contextual Validation is enabled, all trigger field <a href="#trigger-field-dynamic-validation"><strong>dynamic validation</strong></a> endpoints for the trigger will not be used in favor of the single validate endpoint.</p>
+
+<p>To enable this option for your trigger, please contact support.</p>
+
+<h6 id="request">Request</h6>
+
+<p>IFTTT will make the following request to your service API:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl><dt>Method</dt><dd>POST</dd></dl>
+      <dl><dt>URL</dt><dd><code>{{api_url_prefix}}/ifttt/v1/triggers/{{trigger_slug}}/validate</code></dd></dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+  <pre><code>
+Authorization: Bearer {{user_access_token}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (non-authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+IFTTT-Service-Key: {{ifttt_service_key}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>values</dt>
+        <dd>(object) Trigger fields with their values</dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>
+POST /ifttt/v1/triggers/new_comment_on_card/validate HTTP/1.1
+Host: api.example-service.com
+Authorization: Bearer b29a71b4c58c22af116578a6be6402d2
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Request-ID: b959f481ef4f4a8ab0ec414f58991674
+
+{
+  "values": {
+    "board": "New Features",
+    "card": "Potential Ideas"
+  }
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h6 id="example">Example</h6>
+
+<p>The use of contextual validation comes in handy when a trigger field needs to be validated, but the validation depends on another trigger field. Take the following scenario:</p>
+
+<ol>
+<li> The trigger has two trigger fields, <code>board</code> and <code>card</code>.</li>
+<li> The <code>board</code> name is unique, and a <code>card</code> exists within a <code>board</code>. However, cards can have the same name across different boards.</li>
+<li> Validating that the <code>card</code> exists becomes simple because the value of <code>board</code> is known.</li>
+</ol>
+
+<p>If <a href="#trigger-field-dynamic-validation"><strong>dynamic validation</strong></a> is used for the <code>card</code> trigger field, it is difficult to know which <code>card</code>
+the user intends to trigger on during validation if the user has multiple <code>cards</code> with the same name.</p>
+
+<h6 id="response">Response</h6>
+
+<p>Your trigger’s contextual validation endpoint should generate the following response:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Status</dt>
+        <dd>200, regardless of whether or not the user input is valid</dd>
+      </dl>
+      <dl>
+        <dt>Headers</dt>
+        <dd><code>Content-Type: application/json; charset=utf-8</code></dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<p>For the body you get a JSON object which contains an object, <code>data</code>:</p>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>data</dt>
+        <dd>(object) <a href="#trigger-field-dynamic-validation">dynamic validation</a> objects for each trigger field.</dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example: Valid Input</h6>
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "data": {
+    "board": {
+      "valid": true
+    },
+    "card": {
+      "valid": true
+    }
+  }
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example: Invalid Input</h6>
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "data": {
+    "board": {
+      "valid": true
+    },
+    "card": {
+      "valid": false,
+      "message": "Sorry, no card exists with the name \"Potential Ideas\" in the \"New Features\" board."
+    }
+  }
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h5 id="location-based-input">Location-based input</h5>
+
+<p>Location-based trigger fields enable users to specify whether Applets should run based on <em>a point</em>, <em>an area</em>, <em>entering an area</em>, <em>exiting an area</em>, or <em>entering or exiting an area</em>. These fields can be <a href="#trigger-field-dynamic-validation"><strong>dynamically validated</strong></a>. Below is an example of how location-based fields are represented.</p>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>"triggerFields": {
+  "location": {
+    "lat": 37.783923707779095,
+    "lng": -122.40864549999998,
+    "radius": 0,
+    "address": "923 Market St, San Francisco, CA 94103, USA",
+    "description": "923 Market St, San Francisco, CA 94103, USA",
+    "zoom": 16
+  },
+}
+</code></pre>
+    </li>
+  </ul>
+</div>
+
+<h3 id="applet-templates">Applet Templates</h3>
+
+<p>When you create a new trigger and define the data the trigger will make available via ingredients, we'll ask you to provide examples of how the trigger would be best used in various categories of actions. These examples should guide users to create powerful Applets more efficiently from helpful defaults instead of empty fields.</p>
+
+<p>Below you'll find helpful tips for each of the action categories:</p>
+
+<h4 id="mobile-push-notification-tips">📱 Mobile push notification tips:</h4>
+
+<ul>
+<li>Should be friendly and personal! Use 'you' instead of 'my'.</li>
+<li>Don't make the content too dense. Inform the user of the most important information about the event.</li>
+<li>Avoid ingredients that point to URLs.</li>
+</ul>
+
+<h4 id="short-message-tips">💬 Short message tips:</h4>
+
+<ul>
+<li>Provide the most important information using ingredients that keep the message contextual to the event.</li>
+<li>Keep in mind that the message might be truncated based on character restrictions.</li>
+<li>Include a URL ingredient if one is available.</li>
+</ul>
+
+<h4 id="long-post-tips">📜 Long post tips:</h4>
+
+<ul>
+<li>Use the 'Post body' field to craft a delightful message for users. HTML is accepted, so be sure to add formatting that might enhance the message.</li>
+<li>Keep in mind that this content is used in email actions, which are widely used. 'Post title' is the subject and 'Post body' is the body of the email.</li>
+</ul>
+
+<h4 id="plaintext-file-tips">📃 Plaintext file tips:</h4>
+
+<ul>
+<li>Plaintext files are great for record keeping. Be sure to use all relevant ingredients in the 'Plaintext body'.</li>
+<li>If the 'Filename' is static (ex. Saved tracks on Spotify), one document will be created and then appended to for each subsequent event.</li>
+<li>If the 'Filename' contains a dynamic ingredient (ex. Track saved on <code>{{SavedAt}}</code>), a new file will be created with each event because it will have a unique filename.</li>
+<li>The 'Folder path' specified will be created if it does not yet exist for the user.</li>
+</ul>
+
+<h4 id="spreadsheet-tips">📊 Spreadsheet tips:</h4>
+
+<ul>
+<li>Spreadsheets are great for record keeping. Be sure to use all relevant ingredients.</li>
+<li>Use ||| to separate cells in a row of a spreadsheet (ex. "<code>{{Ingredient1}}</code>|||<code>{{Ingredient2}}</code>|||<code>{{Ingredient3}}</code>")</li>
+<li>If you would like to use an image in one of the cells use =IMAGE("<code>{{ingredient}}</code>";1).</li>
+</ul>
+
+<h4 id="phone-call-tips">🗣 Phone call tips:</h4>
+
+<ul>
+<li>The contents here will be read aloud when the phone call action runs. Keep that in mind when formatting the template.</li>
+<li>A good starting place for this template is to reference the contents you wrote for the notification template.</li>
+</ul>
+
+<h4 id="calendar-event-tips">📅 Calendar event tips:</h4>
+
+<ul>
+<li>You need to have at least one timestamp ingredient included in the 'Quick add text' so that the calendar action knows when to create the event.</li>
+<li>If your trigger produces the start time and end time of the event, be sure to use both ingredients in the template (ex. "Some event occurred from <code>{{StartTime}}</code> to <code>{{EndTime}}</code>")</li>
+</ul>
+
+<h3 id="actions">Actions</h3>
+
+<p>Each action requires a unique API endpoint.</p>
+
+<h6 id="request">Request</h6>
+
+<p>For each new trigger item, IFTTT will push data to your <strong>action endpoint</strong> with the following request structure:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Method</dt>
+        <dd>POST</dd>
+      </dl>
+      <dl>
+        <dt>URL</dt>
+        <dd><code>{{api_url_prefix}}/ifttt/v1/actions/{{action_slug}}</code></dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+Authorization: Bearer {{user_access_token}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (non-authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+IFTTT-Service-Key: {{ifttt_service_key}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>actionFields</dt>
+        <dd>(object) Map of action field slugs to values.</dd>
+      </dl>
+      <dl>
+        <dt>user</dt>
+        <dd>(object) Information about the IFTTT user related to this request.</dd>
+      </dl>
+      <dl>
+        <dt>ifttt_source</dt>
+        <dd>(optional object) Information about the personal Applet on IFTTT that triggered this request. If present, this will have an id uniquely identifying the Applet and a url pointing to a web page describing it. Note that only the user will be able to see this page, since personal Applets are private. In the future, these fields may point to an entity other than a personal Applet.</dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>
+POST /ifttt/v1/actions/new_status_update HTTP/1.1
+Host: api.example-service.com
+Authorization: Bearer b29a71b4c58c22af116578a6be6402d2
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Request-ID: 1d21c3cd2ed8441ea269dd554d2c8e54
+
+{
+  "actionFields": {
+    "title": "New Banksy photo!",
+    "body": "Check out a new Bansky photo: http://example.com/images/125"
+  },
+  "ifttt_source": {
+    "id": "2",
+    "url": "https://ifttt.com/myrecipes/personal/2"
+  },
+  "user": {
+    "timezone": "America/Los_Angeles"
+  }
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h6 id="response">Response</h6>
+
+<p>Your action endpoint should generate the response below:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Status</dt>
+        <dd>200</dd>
+      </dl>
+      <dl>
+        <dt>Headers</dt>
+        <dd><code>Content-Type: application/json; charset=utf-8</code></dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<p>A JSON object which contains an array, <code>data</code>, of a single item object:</p>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt><code>data[0][id]</code></dt>
+        <dd>(string) A database ID, timestamp, URL, or other value which uniquely identifies the resource created or modified during action execution.</dd>
+      </dl>
+      <dl>
+        <dt><code>data[0][url]</code></dt>
+        <dd>(optional string) URL to the created or modified resource.</dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "data": [
+    {
+      "id": "234325",
+      "url": "http://example.com/posts/234325"
+    }
+  ]
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h3 id="action-fields">Action fields</h3>
+
+<p>Action fields can be populated via a static text input or a drop-down. Unlike trigger fields, action fields do not currently support dynamic validation.</p>
+
+<p>With a drop-down, we provide two different choices:</p>
+
+<ol>
+<li>A dynamic drop-down selector. We provide you with a unique API endpoint based on the action field's name you can use to dynamically grab the list of options from your server.</li>
+<li>A manual drop-down to manually add a list of options that the user can select from.</li>
+</ol>
+
+<h4 id="action-field-dynamic-options">Action field dynamic options</h4>
+
+<h5 id="dynamic-dropdowns">Dynamic dropdowns</h5>
+
+<p>Options have a label, which the user sees, and a value, which is sent when the action is executed. If you're using the dynamic drop-down instead of the manual drop-down, options can be placed into categories one level deep. Users may select categorized options but may not select the category itself.</p>
+
+<h6 id="request">Request</h6>
+
+<p>For action fields using the <strong>dynamic drop-down selector</strong>, you can dynamically provide user-specific options. Each time the action field is displayed, IFTTT will fetch a list of options from your action field’s <strong>dynamic options endpoint</strong>:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Method</dt>
+        <dd>POST</dd>
+      </dl>
+      <dl>
+        <dt>URL</dt>
+        <dd><code>{{api_url_prefix}}/ifttt/v1/actions/{{action_slug}}/fields/{{action_field_slug}}/options</code></dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+Authorization: Bearer {{user_access_token}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (non-authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+IFTTT-Service-Key: {{ifttt_service_key}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<p>An empty JSON object</p>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt> </dt>
+        <dd><code>{}</code></dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>
+POST /ifttt/v1/actions/post_photo_to_album/fields/album_name/options HTTP/1.1
+Host: api.example-service.com
+Authorization: Bearer b29a71b4c58c22af116578a6be6402d2
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: 9f99e73452cd40198cb6ce9c1cde83d6
+
+{}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h6 id="response">Response</h6>
+
+<p>Your action field’s dynamic options endpoints should generate the following response:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Status</dt>
+        <dd>200</dd>
+      </dl>
+      <dl>
+        <dt>Headers</dt>
+        <dd><code>Content-Type: application/json; charset=utf-8</code></dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<p>For the body you will get a JSON object which contains an array, data, of option objects:</p>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>data[label]</dt>
+        <dd>(string) A user-facing label.</dd>
+      </dl>
+      <dl>
+        <dt>data[value]</dt>
+        <dd>(string) The actual field value.</dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "data": [
+    {
+      "label": "Street Art",
+      "value": "12345"
+    },
+    {
+      "label": "Technology",
+      "value": "43245"
+    },
+    {
+      "label": "Animals",
+      "values": [
+        {
+          "label": "Cats",
+          "value": "32143"
+        },
+        {
+          "label": "Dogs",
+          "value": "51231"
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h5 id="dynamic-checkboxes">Dynamic checkboxes</h5>
+
+<p>Options have a label, which the user sees, and a value, which is sent when the action is executed.</p>
+
+<h6 id="request">Request</h6>
+
+<p>For <strong>checkbox</strong> action fields, you can dynamically provide user-specific options. Each time the checkbox list is displayed, IFTTT will fetch a list of options from your action field’s <strong>dynamic options endpoint</strong>.</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Method</dt>
+        <dd>POST</dd>
+      </dl>
+      <dl>
+        <dt>URL</dt>
+        <dd><code>{{api_url_prefix}}/ifttt/v1/actions/{{action_slug}}/fields/{{action_field_slug}}/options</code></dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+Authorization: Bearer {{user_access_token}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (non-authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+IFTTT-Service-Key: {{ifttt_service_key}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<p>An empty JSON object</p>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt> </dt>
+        <dd><code>{}</code></dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>
+POST /ifttt/v1/actions/post_photo_to_album/fields/album_name/options HTTP/1.1
+Host: api.example-service.com
+Authorization: Bearer b29a71b4c58c22af116578a6be6402d2
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: 9f99e73452cd40198cb6ce9c1cde83d6
+
+{}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h6 id="response">Response</h6>
+
+<p>Your action field’s dynamic options endpoints should generate the following response:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Status</dt>
+        <dd>200</dd>
+      </dl>
+      <dl>
+        <dt>Headers</dt>
+        <dd><code>Content-Type: application/json; charset=utf-8</code></dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<p>For the body you will get a JSON object which contains an array, data, of option objects:</p>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>data[label]</dt>
+        <dd>(string) A user-facing label.</dd>
+      </dl>
+      <dl>
+        <dt>data[value]</dt>
+        <dd>(string) The actual field value.</dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "data": [
+    {
+      "label": "Street Art",
+      "value": "12345"
+    },
+    {
+      "label": "Technology",
+      "value": "43245"
+    },
+    {
+      "label": "Animals",
+      "values": [
+        {
+          "label": "Cats",
+          "value": "32143"
+        },
+        {
+          "label": "Dogs",
+          "value": "51231"
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h3 id="queries">Queries</h3>
+
+<p>Each query requires a unique API endpoint.</p>
+
+<h6 id="request">Request</h6>
+
+<p>To fetch new query data IFTTT will make the following request to your <strong>query endpoint</strong> with the following request structure:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Method</dt>
+        <dd>POST</dd>
+      </dl>
+      <dl>
+        <dt>URL</dt>
+        <dd><code>{{api_url_prefix}}/ifttt/v1/queries/{{query_slug}}</code></dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+Authorization: Bearer {{user_access_token}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (non-authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+IFTTT-Service-Key: {{ifttt_service_key}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>queryFields</dt>
+        <dd>(object) Map of query field slugs to values.</dd>
+      </dl>
+      <dl>
+        <dt>cursor</dt>
+        <dd>(optional string) Reference to the next page of the result set.</dd>
+      </dl>
+      <dl>
+        <dt>limit</dt>
+        <dd>(optional number) Max number of rows to return in a response, default 50.</dd>
+      </dl>
+      <dl>
+        <dt>user</dt>
+        <dd>(object) Information about the IFTTT user related to this request.</dd>
+      </dl>
+      <dl>
+        <dt>ifttt_source</dt>
+        <dd>(optional object) Information about the personal Applet on IFTTT that triggered this request. If present, this will have an id uniquely identifying the Applet and a url pointing to a web page describing it. Note that only the user will be able to see this page, since personal Applets are private. In the future, these fields may point to an entity other than a personal Applet.</dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>
+POST /ifttt/v1/queries/list_album_photos HTTP/1.1
+Host: api.example-service.com
+Authorization: Bearer b29a71b4c58c22af116578a6be6402d2
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Request-ID: 1d21c3cd2ed8441ea269dd554d2c8e54
+
+{
+  "queryFields": {
+    "album_name": "Street Art"
+  },
+  "ifttt_source": {
+    "id": "2",
+    "url": "https://ifttt.com/myrecipes/personal/2"
+  },
+  "user": {
+    "timezone": "America/Los_Angeles"
+  }
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h6 id="response">Response</h6>
+
+<p>Your query endpont should generate the response below:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl><dt>Status</dt><dd>200</dd></dl>
+      <dl><dt>Headers</dt><dd><code>Content-Type    application/json; charset=utf-8</code></dd></dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>BODY</h6>
+  <ul>
+    <li>
+<pre><code>
+  "data": [
+    {
+      "slug 1": "value for row 1 ingredient 1",
+      "slug 2": "value for row 1 ingredient 2",
+      ...
+      "slug n": "value for row 1 ingredient n"
+    },
+    ...
+    {
+      "slug 1": "value for row n ingredient 1",
+      "slug 2": "value for row n ingredient 2",
+      ...
+      "slug n": "value for row n ingredient n"
+    },
+  ]
+</code></pre>
+    </li>
+  </ul>
+</div>
+
+<p>Responses should contain an array of rows. Each row should have one attribute for every ingredient in the query.</p>
+
+<div class="example-list">
+  <h6>Response Example</h6>
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "data": [
+    {
+      "image_url": "http://example.com/images/128",
+      "tags": "banksy, brooklyn",
+      "posted_at": "2013-11-04T09:23:00-07:00"
+    },
+    {
+      "image_url": "http://example.com/images/125",
+      "tags": "banksy, nyc",
+      "posted_at": "2013-11-04T03:23:00-07:00"
+    }
+  ]
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h5 id="pagination">Pagination</h5>
+
+<p>Queries should support pagination. A query request can have <code>cursor</code> and/or <code>limit</code> attributes that control pagination.</p>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>
+POST /ifttt/v1/queries/list_album_photos HTTP/1.1
+Host: api.example-service.com
+Authorization: Bearer b29a71b4c58c22af116578a6be6402d2
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Request-ID: 1d21c3cd2ed8441ea269dd554d2c8e54
+
+{
+  "queryFields": {
+    "album_name": "Street Art"
+  },
+  "limit": 1,
+  "ifttt_source": {
+    "id": "2",
+    "url": "https://ifttt.com/myrecipes/personal/2"
+  },
+  "user": {
+    "timezone": "America/Los_Angeles"
+  }
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<p>The response should contain <code>limit</code> rows (default 50). If the result set is larger than the <code>limit</code>, a <code>cursor</code> should be present and reference the next page.</p>
+
+<div class="example-list">
+  <h6>Paginated Response Example: page 1</h6>
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "data": [
+    {
+      "image_url": "http://example.com/images/128",
+      "tags": "banksy, brooklyn",
+      "posted_at": "2013-11-04T09:23:00-07:00"
+    }
+  ],
+  "cursor": "seijjh24ks"
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<p>If used in a subsequent query request, <code>cursor</code> should reference the next page of the result set.</p>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>
+POST /ifttt/v1/queries/list_album_photos HTTP/1.1
+Host: api.example-service.com
+Authorization: Bearer b29a71b4c58c22af116578a6be6402d2
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Request-ID: 1d21c3cd2ed8441ea269dd554d2c8e54
+
+{
+  "queryFields": {
+    "album_name": "Street Art"
+  },
+  "limit": 1,
+  "cursor": "seijjh24ks",
+  "ifttt_source": {
+    "id": "2",
+    "url": "https://ifttt.com/myrecipes/personal/2"
+  },
+  "user": {
+    "timezone": "America/Los_Angeles"
+  }
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<p>The response should contain the next <code>limit</code> rows of the result set. The last page should not have the <code>cursor</code> attribute.</p>
+
+<div class="example-list">
+  <h6>Paginated Response Example: page 2</h6>
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "data": [
+    {
+      "image_url": "http://example.com/images/125",
+      "tags": "banksy, nyc",
+      "posted_at": "2013-11-04T03:23:00-07:00"
+    }
+  ]
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h5 id="trigger-based-queries">Trigger-based queries</h5>
+
+<p>If your service was published before August 2020, trigger-based queries may have been added to your service. These queries use the response from your <a href="/docs/api_reference#triggers">trigger endpoint</a> and translates it to a query that can be used in Applets and connections.</p>
+
+<p>For example, if you had a trigger named <strong>New event added</strong>, the query based on this trigger would be <strong>History of new events added</strong>.</p>
+
+<h3 id="query-fields">Query fields</h3>
+
+<p>Query fields can have <a href="#query-field-dynamic-options"><strong>dynamic options via a drop-down</strong></a> or static text input. Each dynamic option requires a unique endpoint.</p>
+
+<h4 id="query-field-dynamic-options">Query field dynamic options</h4>
+
+<p>Options have both a label, which the user sees, and a value, which is sent when the query is executed. Options can be placed into categories; users may select categorized options but may not select the category itself. See the example exchange below for more information on how to present the options to IFTTT.</p>
+
+<h6 id="request">Request</h6>
+
+<p>For <strong>drop-down selector</strong> query fields, you can dynamically provide user-specific options. Each time the query field is displayed, IFTTT will fetch a list of options from your query field’s <strong>dynamic options endpoint</strong>:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Method</dt>
+        <dd>POST</dd>
+      </dl>
+      <dl>
+        <dt>URL</dt>
+        <dd><code>{{api_url_prefix}}/ifttt/v1/queries/{{query_slug}}/fields/{{query_field_slug}}/options</code></dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+Authorization: Bearer {{user_access_token}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers (non-authenticated services)</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+IFTTT-Service-Key: {{ifttt_service_key}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<p>An empty JSON object</p>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt> </dt>
+        <dd><code>{}</code></dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>
+POST /ifttt/v1/queries/list_album_photos/fields/album_name/options HTTP/1.1
+Host: api.example-service.com
+Authorization: Bearer b29a71b4c58c22af116578a6be6402d2
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: 9f99e73452cd40198cb6ce9c1cde83d6
+
+{}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h6 id="response">Response</h6>
+
+<p>Your query field’s dynamic options endpoints should generate the following response:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Status</dt>
+        <dd>200</dd>
+      </dl>
+      <dl>
+        <dt>Headers</dt>
+        <dd><code>Content-Type: application/json; charset=utf-8</code></dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<p>For the body you will get a JSON object which contains an array, data, of option objects:</p>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>data[label]</dt>
+        <dd>(string) A user-facing label.</dd>
+      </dl>
+      <dl>
+        <dt>data[value]</dt>
+        <dd>(string) The actual field value.</dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "data": [
+    {
+      "label": "Street Art",
+      "value": "12345"
+    },
+    {
+      "label": "Technology",
+      "value": "43245"
+    },
+    {
+      "label": "Animals",
+      "values": [
+        {
+          "label": "Cats",
+          "value": "32143"
+        },
+        {
+          "label": "Dogs",
+          "value": "51231"
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h3 id="ingredients">Ingredients</h3>
+
+<p>An ingredient is a data point returned by a trigger or a query. Typically a response will have multiple sets of data points. You can think of a response as a tabular data set with items of the <code>data</code> attribute as rows, and ingredients as columns.</p>
+
+<div class="example-list">
+  <h6>BODY</h6>
+  <ul>
+    <li>
+<pre><code>
+  "data": [
+    {
+      "ingredient 1": "value for row 1 ingredient 1",
+      "ingredient 2": "value for row 1 ingredient 2",
+      ...
+      "ingredient n": "value for row 1 ingredient n"
+    },
+    ...
+    {
+      "ingredient 1": "value for row n ingredient 1",
+      "ingredient 2": "value for row n ingredient 2",
+      ...
+      "ingredient n": "value for row n ingredient n"
+    },
+  ]
+</code></pre>
+    </li>
+  </ul>
+</div>
+
+<p>The response above can be represented as a table</p>
+
+<table><thead>
+<tr>
+<th>ingredient 1</th>
+<th>ingredient 2</th>
+<th>...</th>
+<th>ingredient n</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>value for row 1 ingredient 1</td>
+<td>value for row 1 ingredient 2</td>
+<td>...</td>
+<td>value for row 1 ingredient n</td>
+</tr>
+<tr>
+<td>value for row 2 ingredient 1</td>
+<td>value for row 2 ingredient 2</td>
+<td>...</td>
+<td>value for row 2 ingredient n</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>value for row n ingredient 1</td>
+<td>value for row n ingredient 2</td>
+<td>...</td>
+<td>value for row n ingredient n</td>
+</tr>
+</tbody></table>
+
+<h4 id="string-ingredients">String ingredients</h4>
+
+<p>Ingredients that use the <strong>String</strong>, <strong>Image URL</strong>, <strong>Web URL</strong>, or <strong>File URL</strong> are simple strings.</p>
+
+<h4 id="date-and-time-ingredients">Date and time ingredients</h4>
+
+<p>Ingredients that use the <strong>Date</strong> or <strong>Date with time</strong> are timestamps in the <a href="/external?url=http%3A%2F%2Fwww.w3.org%2FTR%2FNOTE-datetime">W3 flavor</a> of ISO8601 formats.</p>
+
+<div class="example-list">
+  <h6>Example: Date only</h6>
+  <ul>
+    <li>
+      <code>2013-12-31</code><br>
+      <code>2014-01-01</code>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example: Date &amp; Time</h6>
+  <ul>
+    <li>
+      <code>2013-11-04T09:23:00Z</code><br>
+      <code>2013-11-04T09:23:00-07:00</code>
+    </li>
+  </ul>
+</div>
+
+<h4 id="nested-ingredients">Nested ingredients</h4>
+
+<p>Ingredients that use the <strong>Query</strong> are queries themselves. They are available in queries only and described in more detail in <a href="#nested-results">Nested results</a>.</p>
+
+<h3 id="service-status">Service status</h3>
+
+<p>Provide an API endpoint which IFTTT can periodically check for your service’s availability. This endpoint is not user-specific, and thus does not require an access token.</p>
+
+<h6 id="request">Request</h6>
+
+<p>IFTTT will make the following request to check your service’s API status:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Method</dt>
+        <dd>GET</dd>
+      </dl>
+      <dl>
+        <dt>URL</dt>
+        <dd><code>{{api_url_prefix}}/ifttt/v1/status</code></dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+IFTTT-Service-Key: {{ifttt_service_key}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example</h6>
+  <ul>
+    <li>
+<pre><code>
+GET /ifttt/v1/status HTTP/1.1
+Host api.example-service.com
+IFTTT-Service-Key: vFRqPGZBmZjB8JPp3mBFqOdt
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+X-Request-ID: 0715f98e65f749aba2fc243eac1e3c09
+</code></pre>
+    </li>
+  </ul>
+</div>
+
+<h6 id="response">Response</h6>
+
+<p>The service status endpoint should generate the following response:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Status</dt>
+        <dd>200 or 503</dd>
+      </dl>
+      <dl>
+        <dt>Body</dt>
+        <dd>none</dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example: service OK</h6>
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 200 OK
+</code></pre>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example: service unavailable</h6>
+  <ul>
+    <li>
+<pre><code>
+HTTP/1.1 503 Unavailable
+</code></pre>
+    </li>
+  </ul>
+</div>
+
+<hr>
+
+<h3 id="openapi-definition">OpenAPI definition</h3>
+
+<p>We provide an OpenAPI definition file that describes the IFTTT Service API.
+You can use this file to generate some of your server code. This should save you time and effort implementing your service.</p>
+
+<h4 id="what-is-openapi">What is OpenAPI</h4>
+
+<p><a href="/external?url=https%3A%2F%2Fswagger.io%2Fdocs%2Fspecification%2Fabout%2F">OpenAPI</a> (formerly Swagger) is a standard used to describe an API.</p>
+
+<h4 id="how-to-use-it">How to use it</h4>
+
+<p>There are multiple tools that can generate server code from an OpenAPI definition file. The choice of tool will depend on your tech stack and requirements. <a href="/external?url=https%3A%2F%2Fopenapi-generator.tech%2F">OpenAPI Generator</a> and <a href="/external?url=https%3A%2F%2Fswagger.io%2Ftools%2Fswagger-codegen%2F">Swagger Codegen</a> are the most popular ones.</p>
+
+<p>For this example we'll use <a href="/external?url=https%3A%2F%2Fgithub.com%2FOpenAPITools%2Fopenapi-generator%2Ftree%2Fmaster%2Fmodules%2Fopenapi-generator-gradle-plugin">OpenAPI Generator Gradle Plugin</a> to generate server stubs for a <a href="/external?url=https%3A%2F%2Fspring.io%2Fprojects%2Fspring-boot">Spring Boot</a> application.</p>
+
+<p>Initialize a gradle project</p>
+
+<div class="example-list">
+  <ul>
+    <li>
+      <pre>        <code>
+$ mkdir service-api-example
+$ cd service-api-example
+$ gradle wrapper --gradle-version 6.7.1
+$ mkdir -p src/main/resources
+$ mkdir -p src/main/java/com/example/service/
+          </code>
+        </pre>
+    </li>
+  </ul>
+</div>
+
+<p>Create <code>build.gradle</code></p>
+
+<div class="example-list">
+  <ul>
+    <li>
+      <pre>        <code>
+plugins {
+  id 'org.openapi.generator' version '4.3.1'
+  id 'org.springframework.boot' version '2.3.4.RELEASE'
+  id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+  id 'java'
+}
+
+group = 'com.example.service'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+  mavenCentral()
+}
+
+// Configuration for the OpenAPI Generate Gradle Plugin
+openApiGenerate {
+  // OpenAPI definition file location
+  inputSpec = "${projectDir}/src/main/resources/service-api.yaml"
+  // Which generator to use (see https://openapi-generator.tech/docs/generators#server-generators)
+  generatorName = 'spring'
+  // https://openapi-generator.tech/docs/generators/spring
+  configOptions = [
+    dateLibrary         : "java8",
+    interfaceOnly       : "true",
+    skipDefaultInterface: "false",
+    openApiNullable     : "false",
+    apiPackage          : "${group}.${name}",
+    modelPackage        : "${group}.${name}.model",
+  ]
+}
+
+sourceSets.main.java.srcDirs += 'build/generate-resources/main/src/main/java'
+
+dependencies {
+  implementation 'org.springframework.boot:spring-boot-starter-web'
+  annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+  implementation 'org.springframework:spring-webmvc:5.2.9.RELEASE'
+  implementation 'io.swagger:swagger-annotations:1.6.2'
+  implementation 'javax.validation:validation-api:2.0.1.Final'
+  implementation 'com.fasterxml.jackson.core:jackson-annotations:2.11.3'
+  implementation 'org.openapitools:jackson-databind-nullable:0.2.1'
+  implementation 'javax.annotation:javax.annotation-api:1.3.2'
+  compileOnly 'javax.servlet:javax.servlet-api:4.0.1'
+}
+          </code>
+        </pre>
+    </li>
+  </ul>
+</div>
+
+<p>Download <a href="/external?url=https%3A%2F%2Fgithub.com%2FIFTTT%2Fservice-api%2Fblob%2Fmain%2Fservice-api.yaml">OpenAPI definition for IFTTT Service API</a> into <code>src/main/resources/service-api.yaml</code>.</p>
+
+<p>Generate server stubs <code>./gradlew openApiGenerate</code>.</p>
+
+<p>You should be able to find generated code at <code>build/generate-resources/main/src/main/java/com/example/service/service_api_example/IftttApi.java</code>.</p>
+
+<p>Now we can add our own implementation. For this example we'll implement just one endpoint: <code>/ifttt/v1/status</code>.</p>
+
+<p>Create API implementation <code>src/main/java/com/example/service/IftttApiController.java</code></p>
+
+<div class="example-list">
+  <ul>
+    <li>
+      <pre>        <code>
+package com.example.service;
+
+import com.example.service.service_api_example.IftttApi;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class IftttApiController implements IftttApi {
+    @Override
+    public ResponseEntity<void> getStatus() {
+        return ResponseEntity.ok().build();
+    }
+}
+        </void></code>
+      </pre>
+    </li>
+  </ul>
+</div>
+
+<p>Create the main class <code>src/main/java/com/example/service/Application.java</code></p>
+
+<div class="example-list">
+  <ul>
+    <li>
+      <pre>        <code>
+package com.example.service;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Application {
+  public static void main(String[] args) {
+    SpringApplication.run(Application.class, args);
+  }
+}
+        </code>
+      </pre>
+    </li>
+  </ul>
+</div>
+
+<p>Run the app <code>./gradlew bootRun</code>.</p>
+
+<p>Check the app status <code>curl --verbose localhost:8080/ifttt/v1/status</code>. You should see a successful 200 response with no body.</p>
+
+<h4 id="next-steps">Next steps:</h4>
+
+<ul>
+<li>Learn about <a href="/docs/testing">testing your service</a>.</li>
+<li>Explore the <a href="/docs/connect_api">Connect API</a>.</li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+    </div>
+
+    <footer class="site-footer ifttt_next_bucket">
+    <a class="pro-upsell pro-ad" title="Try IFTTT Pro" href="/subscriptions/pro">
+        <div class="pro-upsell-text">
+          <span class="logo">
+            <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+            <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#111"></path></svg>
+          </span>
+          <span class="pro-upsell-heading">Automate more, effortlessly.</span>
+        </div>
+
+        <div class="button-secondary button-on-color">
+            Try it free
+        </div>
+</a>  <div class="footer-top-container">
+    <div class="logo-container">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/">
+        <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="ifttt-logo" title="IFTTT" style="fill: white"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>    </div>
+
+    <div class="footer-sections">
+      <div class="footer-section explore">
+        <div class="section-header">
+          <a title="Explore" href="/explore">Explore</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="Services" title="Services" href="/explore/services">Services</a>
+              </li>
+              <li>
+                <a alt="Stories" title="Stories" href="/explore/stories">Stories</a>
+              </li>
+              <li>
+                <a alt="Applets" title="Applets" href="/explore/applets">Applets</a>
+              </li>
+              <li>
+                <a alt="IFTTT MCP" title="IFTTT MCP" href="/mcp">IFTTT MCP</a>
+              </li>
+              <li>
+                <a alt="Help Center" title="Help Center" href="/hc/en-us">Help Center</a>
+              </li>
+              <li>
+                <a alt="Content Map" title="Content Map" href="/content_map">Content Map</a>
+              </li>
+              <li>
+                <a alt="Search" title="Search" href="/explore">Search</a>
+              </li>
+              <li>
+                <a alt="Plans" title="Plans" href="/plans">Plans</a>
+              </li>
+              <li>
+                <a alt="Developer docs" title="Developer docs" href="/docs/api_reference">Developer docs</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section top-integrations">
+        <div class="section-header">
+          Top Integrations
+        </div>
+          <ul>
+              <li>
+                <a alt="Discord and Instagram" title="Discord and Instagram" href="/connect/discord/instagram">Discord and Instagram</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Notion" title="iOS Calendar and Notion" href="/connect/ios_calendar/notion_so">iOS Calendar and Notion</a>
+              </li>
+              <li>
+                <a alt="Google Calendar and Google Sheets" title="Google Calendar and Google Sheets" href="/connect/google_calendar/google_sheets">Google Calendar and Google Sheets</a>
+              </li>
+              <li>
+                <a alt="Google Assistant and My Q" title="Google Assistant and My Q" href="/connect/google_assistant_v2/myq_devices">Google Assistant and My Q</a>
+              </li>
+              <li>
+                <a alt="BotGhost and Spotify" title="BotGhost and Spotify" href="/connect/botghost/spotify">BotGhost and Spotify</a>
+              </li>
+              <li>
+                <a alt="SMS and Twitter" title="SMS and Twitter" href="/connect/sms/twitter">SMS and Twitter</a>
+              </li>
+              <li>
+                <a alt="iOS Reminders and Notion" title="iOS Reminders and Notion" href="/connect/ios_reminders/notion_so">iOS Reminders and Notion</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Todoist" title="iOS Calendar and Todoist" href="/connect/ios_calendar/todoist">iOS Calendar and Todoist</a>
+              </li>
+              <li>
+                <a alt="Telegram and Twitter" title="Telegram and Twitter" href="/connect/telegram/twitter">Telegram and Twitter</a>
+              </li>
+              <li>
+                <a alt="Discord and Twitter" title="Discord and Twitter" href="/connect/discord/twitter">Discord and Twitter</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section latest-stories">
+        <div class="section-header">
+          <a title="Latest Stories" href="/explore/stories">Latest Stories</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="How to automate with AI" title="How to automate with AI" href="/explore/how-to-automate-with-ai">How to automate with AI</a>
+              </li>
+              <li>
+                <a alt="Best Twitter automation tools" title="Best Twitter automation tools" href="/explore/best-twitter-automation-tools">Best Twitter automation tools</a>
+              </li>
+              <li>
+                <a alt="Best time management apps and tools" title="Best time management apps and tools" href="/explore/best-time-management-apps-strategies-and-tools">Best time management apps and tools</a>
+              </li>
+              <li>
+                <a alt="What is workflow automation?" title="What is workflow automation?" href="/explore/what-is-workflow-automation">What is workflow automation?</a>
+              </li>
+              <li>
+                <a alt="How to use RSS Feeds" title="How to use RSS Feeds" href="/explore/how-to-use-rss-feeds">How to use RSS Feeds</a>
+              </li>
+              <li>
+                <a alt="What are webhooks?" title="What are webhooks?" href="/explore/what-are-webhooks">What are webhooks?</a>
+              </li>
+              <li>
+                <a alt="11 best Pomodoro productivity apps" title="11 best Pomodoro productivity apps" href="/explore/best-pomodoro-productivity-apps">11 best Pomodoro productivity apps</a>
+              </li>
+              <li>
+                <a alt="How to automate Threads" title="How to automate Threads" href="/explore/how-to-automate-threads">How to automate Threads</a>
+              </li>
+              <li>
+                <a alt="How to automate social media posts" title="How to automate social media posts" href="/explore/how-to-automate-social-media-posts">How to automate social media posts</a>
+              </li>
+              <li>
+                <a alt="Best social media tools for automation" title="Best social media tools for automation" href="/explore/best-automation-tools-social-media">Best social media tools for automation</a>
+              </li>
+          </ul>
+      </div>
+    <div class="footer-section company">
+      <div class="section-header">Company</div>
+      <ul>
+        <li><a alt="Developers" title="Developers" href="/developers">Developers</a></li>
+        <li><a alt="Partner program" title="Partner program" href="/partners">Partner program</a></li>
+        <li><a alt="Careers" title="Careers" href="/careers">Careers</a></li>
+        <li><a alt="Contact" title="Contact" href="/contact">Contact</a></li>
+        <li><a alt="About" title="About" href="/about">About</a></li>
+        <li><a alt="Privacy" title="Privacy" href="/privacy">Privacy</a></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer-section download">
+      <ul class="download-buttons">
+        <li>
+          <a title="Download on the App Store" aria-label="The Apple App Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fitunes.apple.com%2Fapp%2Fapple-store%2Fid660944635%3Fpt%3D1752682%26ct%3D%2Fdocs%2Fapi_reference%26mt%3D8">
+            <img alt="" title="Download on the App Store" loading="lazy" width="136" height="40" src="/assets/asset-000099.svg">
+</a>        </li>
+        <li>
+          <a title="Get it on Google Play" aria-label="The Google Play Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.ifttt.ifttt%26utm_source%3D%2Fdocs%2Fapi_reference%26utm_medium%3Dweb">
+            <img alt="" title="Get it on Google Play" loading="lazy" width="136" height="42" src="/assets/asset-000100.svg">
+</a>        </li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom-container">
+      <div class="group group-social">
+        <a class="social-icon" alt="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.facebook.com%2Fifttt">
+          <img alt="Facebook" title="Facebook" loading="lazy" width="28" height="28" src="/assets/asset-000102.svg">
+</a>
+        <a class="social-icon" alt="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fifttt%2F">
+          <img alt="LinkedIn" title="LinkedIn" loading="lazy" width="28" height="28" src="/assets/asset-000101.svg">
+</a>
+        <a class="social-icon" alt="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.instagram.com%2Fiftttapp%2F">
+          <img alt="Instagram" title="Instagram" loading="lazy" width="28" height="28" src="/assets/asset-000103.svg">
+</a>
+        <a class="social-icon" alt="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.youtube.com%2F%40IFTTT">
+          <img alt="YouTube" title="YouTube" loading="lazy" width="28" height="28" src="/assets/asset-000104.svg">
+</a>
+        <a class="social-icon" alt="Twitter" title="Twitter" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Ftwitter.com%2FIFTTT">
+          <img alt="Twitter" title="Twitter" loading="lazy" width="28" height="28" src="/assets/asset-000105.svg">
+</a>
+        <a class="social-icon" alt="TikTok" title="TikTok" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.tiktok.com%2F%40iftttapp">
+          <img alt="TikTok" title="TikTok" loading="lazy" width="28" height="28" src="/assets/asset-000106.svg">
+</a>
+        <a class="social-icon" alt="Reddit" title="Reddit" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fifttt%2F">
+          <img alt="Reddit" title="Reddit" loading="lazy" width="28" height="28" src="/assets/asset-000107.svg">
+</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+<div style="position: absolute; top: 50vh; height: 1px; width: 100%;"></div><script src="/local.js" defer></script></body></html>

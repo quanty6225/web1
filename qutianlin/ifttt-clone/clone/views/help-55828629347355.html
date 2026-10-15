@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Important updates to the Fitbit service on IFTTT - IFTTT Help</title><link rel="stylesheet" href="/local.css"></head><body class="local-shell help-page" data-local-route="/hc/en-us/articles/55828629347355" data-local-actor="anonymous" data-local-state="default"><header><a class="brand" href="/hc/en-us">IFTTT</a><nav><a href="/hc/en-us">Explore</a> <a href="/hc/en-us">My Applets</a></nav></header><main><a href="/hc/en-us">Help Center</a><h1>Important updates to the Fitbit service on IFTTT</h1><article><h2 id="h_01M2GHHYBFJKK45C86601P2X3R">Background</h2><p>Google is retiring the legacy Fitbit Web API, which powers the Fitbit service on IFTTT. After <strong>September 30, 2026</strong>, the Fitbit service will no longer be available on IFTTT, and Applets using Fitbit Triggers, Queries, or Actions will stop running.</p><p>Fitbit data is now available through the Google Health API, which IFTTT supports through the new <a href="/google_health" target="_blank" rel="noopener noreferrer"><strong>Google Health</strong></a> service. Because Google Health uses a different sign-in system, you'll need to connect your Google Health account and update your Fitbit Applets.</p><h2 id="h_01M2GHHYBFGYB0RAXCKA2ZMGDQ">Connect the Google Health service</h2><ol>
+<li data-list-item-id="ed86e1020d672ee775d49286419b95825">Go to the <a href="/google_health" target="_blank" rel="noopener noreferrer">Google Health Service page</a>, or search for "Google Health" in the IFTTT app.</li>
+<li data-list-item-id="eaa1b249d7b80309aa1261a9cb812b7d1">Select <strong>Sign in with Google.</strong>
+</li>
+<li data-list-item-id="e4de55f5dce93b313a72a8b16729eb1f9">Sign in with the Google account linked to your Fitbit data and follow the prompts to authorize IFTTT.</li>
+</ol><p>Note: You sign in with your Google account, not your Fitbit login. If you're still on a legacy Fitbit account, you'll need to move to a Google Account first. Legacy Fitbit accounts can't access the Google Health API.</p><h2 id="h_01M2K0BVSP3M2VVRQJF24M2B50">Update your Applets</h2><p>Prior to September 30, you can edit your existing Fitbit Applets to use Google Health instead. We recommend doing this before September 30 so you can update your Applets while they're still available. After September 30, Fitbit Applets will no longer be available and you'll need to recreate them using Google Health.</p><h3 id="h_01M2K0BVSQHZ4S00WQES5G8P4W">Option 1: Update using IFTTT chat</h3><p>IFTTT Chat can help update your Applets for you. Open <a href="/create" target="_blank" rel="noopener noreferrer"><strong>IFTTT Chat</strong> </a>and describe what you want to change, for example:</p><blockquote>
+<p>I would like to swap every Fitbit (https://ifttt.com/fitbit) TQA that exists in my current Applets for the equivalent TQA from the Google Health (https://ifttt.com/google_health).</p>
+<p>Can you do a systematic search of every Applet I have using the Fitbit service, and edit the Applets for me, so they use the the Google Health version.</p>
+</blockquote><p>Review the Applet it builds and confirm the account and fields are correct before saving.</p><h3 id="h_01M2K0BVSSC76G6GKQ5RX12DE6">Option 2: Update manually</h3><ol data-spread="false">
+<li data-list-item-id="ea3407807f5f8a04402c5f484a7da6036">Open an Applet that uses a Fitbit Trigger, Query, or Action.</li>
+<li data-list-item-id="ec6f85fe525bb083be1f3111d3c1773ae">Edit the Fitbit Trigger, Query, or Action and select the equivalent Google Health option.</li>
+<li data-list-item-id="efe31f026f9d26a26a69689f4fa025faa">Choose your Google Health account and configure the fields as needed.</li>
+<li data-list-item-id="ebc17b949ff251ab8370d2250e749b2be">If your Applet uses an <a href="/hc/en-us/articles/4411016949403" target="_blank" rel="noopener noreferrer">ingredient</a> from a Fitbit Trigger or Query, update any Query or Action fields that use that ingredient. Replace it with the corresponding ingredient from the Google Health Trigger or Query.</li>
+<li data-list-item-id="ed5e050f27e2d6382cc16e98ec2b8f87b">Review your Applet to make sure everything is configured correctly, then save your changes.</li>
+<li data-list-item-id="e141498848bed0d9a25e0804414243e8e">Repeat these steps for each Applet that uses Fitbit.</li>
+</ol><h2 id="h_01M2GHHYBFQSEP7P2WG7G4S9PB">What's available on Google Health</h2><p>See below for a reference of the Triggers and Actions available in Google Health and their Fitbit service equivalents.</p><figure class="wysiwyg-table" style="width: 100%;"><table class="wysiwyg-table-resized">
+<colgroup>
+<col style="width: 49%;">
+<col style="width: 51%;">
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Google Health</strong></td>
+<td style="text-align: center;"><strong>Fitbit</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="/google_health/triggers/new_daily_activity_summary" target="_blank" rel="noopener noreferrer">Daily activity summary</a></td>
+<td style="text-align: center;"><a href="/fitbit/triggers/new-daily-activity-summary" target="_blank" rel="noopener noreferrer">Daily activity summary</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="/google_health/triggers/new_sleep_logged" target="_blank" rel="noopener noreferrer">New sleep logged</a></td>
+<td style="text-align: center;"><a href="/fitbit/triggers/new-sleep-logged" target="_blank" rel="noopener noreferrer">New sleep logged</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="/google_health/triggers/new_weight_logged" target="_blank" rel="noopener noreferrer">New weight logged</a></td>
+<td style="text-align: center;"><a href="/fitbit/triggers/new-weight-logged" target="_blank" rel="noopener noreferrer">New weight logged</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="/google_health/triggers/new_exercise_logged" target="_blank" rel="noopener noreferrer">New exercise logged</a></td>
+<td style="text-align: center;"><a href="/fitbit" target="_blank" rel="noopener noreferrer">Various goal achieved Triggers</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="/google_health/actions/log_weight" target="_blank" rel="noopener noreferrer">Log weight</a></td>
+<td style="text-align: center;"><a href="/fitbit/actions/log-weight" target="_blank" rel="noopener noreferrer">Log your weight</a></td>
+</tr>
+</tbody>
+</table></figure><h4 id="h_01M2K17MZMES6AZRB61D5JDBY6">What's changed</h4><p>Some Fitbit functionality isn't available through Google Health. The Google Health API doesn't expose Fitbit goal data, so the <strong>Daily activity summary</strong> won't include goal information. The Fitbit <strong>goal-achievement Triggers</strong> also don't have a direct equivalent in Google Health.</p><p>However, Applets using a goal-achievement Trigger may be recreated with a similar setup using the <strong>New exercise logged</strong> Trigger.</p></article><p>Comments: 0</p></main><footer><a href="/hc/en-us">Help Center</a> · <a href="/hc/en-us">Contact</a></footer><script src="/local.js" defer></script></body></html>

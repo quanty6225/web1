@@ -1,0 +1,206 @@
+{
+  "/archive": {
+    "member": "/my_applets"
+  },
+  "/my_applets?tab=archived": {
+    "member": "/my_applets"
+  },
+  "/privacy": {
+    "anonymous": "/terms"
+  },
+  "/applet_discovery": {
+    "member": "/applet_discovery/goals"
+  },
+  "/subscriptions/pro?interval=year": {
+    "member": "/subscriptions/pro"
+  },
+  "/subscriptions/pro_plus?interval=year": {
+    "member": "/subscriptions/pro_plus"
+  },
+  "/search": {
+    "anonymous": "/explore"
+  },
+  "/developer_sign_up/new": {
+    "anonymous": "/join?return_to=https%3A%2F%2Fifttt.com%2Fdeveloper_sign_up%2Fnew"
+  },
+  "/developer_dashboard": {
+    "anonymous": "/join?return_to=https%3A%2F%2Fifttt.com%2Fdeveloper_dashboard",
+    "member": "/developer_sign_up/new"
+  },
+  "/services": {
+    "anonymous": "/explore/services"
+  },
+  "/fitbit": {
+    "anonymous": "/explore"
+  },
+  "/amazon_alexa": {
+    "anonymous": "/explore"
+  },
+  "/gardena_smart_system": {
+    "anonymous": "/explore"
+  },
+  "/kasa": {
+    "anonymous": "/explore"
+  },
+  "/smartthings_v2": {
+    "anonymous": "/smartthings"
+  },
+  "/welltory": {
+    "anonymous": "/explore"
+  },
+  "/mkt/api": {
+    "anonymous": "/join?return_to=https%3A%2F%2Fifttt.com%2Fmkt%2Fapi"
+  },
+  "/mkt/api%2Fauthentication": {
+    "anonymous": "/join?return_to=https%3A%2F%2Fifttt.com%2Fmkt%2Fapi%2Fauthentication"
+  },
+  "/mkt/%2Fapi%2Fendpoint_tests": {
+    "anonymous": "/join?return_to=https%3A%2F%2Fifttt.com%2Fmkt%2Fapi%2Fendpoint_tests"
+  },
+  "/mkt/applets%2Fnew": {
+    "anonymous": "/join?return_to=https%3A%2F%2Fifttt.com%2Fmkt%2Fapplets%2Fnew"
+  },
+  "/mkt/embedded_redirects": {
+    "anonymous": "/join?return_to=https%3A%2F%2Fifttt.com%2Fmkt%2Fembedded_redirects"
+  },
+  "/mkt/general": {
+    "anonymous": "/join?return_to=https%3A%2F%2Fifttt.com%2Fmkt%2Fgeneral"
+  },
+  "/mkt/tools": {
+    "anonymous": "/join?return_to=https%3A%2F%2Fifttt.com%2Fmkt%2Ftools"
+  },
+  "/products": {
+    "anonymous": "/explore"
+  },
+  "/glanceclock": {
+    "anonymous": "/explore"
+  },
+  "/google_assistant": {
+    "anonymous": "/google_assistant_v2"
+  },
+  "/tumblr_legacy": {
+    "anonymous": "/explore"
+  },
+  "/mkt/connections%2Fnew": {
+    "anonymous": "/join?return_to=https%3A%2F%2Fifttt.com%2Fmkt%2Fconnections%2Fnew"
+  },
+  "/explore/best-twitter-automation-tools": {
+    "anonymous": "/explore/every-way-to-automate-x-twitter"
+  },
+  "/applets/177143p-automatically-post-a-reminder-to-a-slack-channel-15-minutes-before-a-calendar-event-starts": {
+    "anonymous": "/explore",
+    "member": "/explore"
+  },
+  "/applets/BDs2LxBY-schedule-ai-generated-twitter-posts-from-google-calendar": {
+    "anonymous": "/applets/BDs2LxBY-post-x-twitter-updates-from-google-calendar-events",
+    "member": "/applets/BDs2LxBY-post-x-twitter-updates-from-google-calendar-events"
+  },
+  "/applets/GB2TQWhv-save-your-new-instagram-photos-to-dropbox": {
+    "anonymous": "/applets/GB2TQWhv-save-new-instagram-photos-to-dropbox",
+    "member": "/applets/GB2TQWhv-save-new-instagram-photos-to-dropbox"
+  },
+  "/applets/HTak4X5f-turn-your-lights-on-automatically-as-you-arrive-home": {
+    "anonymous": "/applets/HTak4X5f-turn-on-philips-hue-lights-when-you-arrive-home",
+    "member": "/applets/HTak4X5f-turn-on-philips-hue-lights-when-you-arrive-home"
+  },
+  "/applets/Sv9QMBPc-youtube-comment": {
+    "anonymous": "/explore",
+    "member": "/explore"
+  },
+  "/applets/YUxMfCDS-save-tweets-that-include-a-specific-hashtag-to-google-sheets": {
+    "anonymous": "/explore",
+    "member": "/explore"
+  },
+  "/applets/YsLdfKMg-use-your-voice-to-find-or-call-your-device": {
+    "anonymous": "/applets/YsLdfKMg-ask-google-assistant-to-call-your-phone-with-voip-calls",
+    "member": "/applets/YsLdfKMg-ask-google-assistant-to-call-your-phone-with-voip-calls"
+  },
+  "/applets/bW8bYhUD-add-tweets-that-include-a-specific-hashtag-to-a-daily-email-digest": {
+    "anonymous": "/applets/bW8bYhUD-save-new-x-tweets-with-a-hashtag-to-a-daily-email-digest",
+    "member": "/applets/bW8bYhUD-save-new-x-tweets-with-a-hashtag-to-a-daily-email-digest"
+  },
+  "/applets/ftSzef7K-if-a-new-status-added-with-a-search-term-plumber-needed-then-send-me-an-email-at-michael-ifttt-com": {
+    "anonymous": "/explore",
+    "member": "/explore"
+  },
+  "/applets/mDyuazxY-schedule-twitter-posts-from-google-calendar": {
+    "anonymous": "/applets/mDyuazxY-post-tweets-from-google-calendar-events",
+    "member": "/applets/mDyuazxY-post-tweets-from-google-calendar-events"
+  },
+  "/applets/mmeLwUBE-looking-for-a-______-twitter": {
+    "anonymous": "/explore",
+    "member": "/explore"
+  },
+  "/applets/ucaYBNyu-schedule-twitter-and-facebook-pages-posts-from-google-calendar": {
+    "anonymous": "/applets/ucaYBNyu-post-to-facebook-pages-and-x-from-google-calendar-events",
+    "member": "/applets/ucaYBNyu-post-to-facebook-pages-and-x-from-google-calendar-events"
+  },
+  "/applets/w9HVuagD-close-your-myq-garage-door-with-your-voice": {
+    "anonymous": "/applets/w9HVuagD-close-your-myq-garage-door-with-google-assistant",
+    "member": "/applets/w9HVuagD-close-your-myq-garage-door-with-google-assistant"
+  },
+  "/applets/wCtU3SYM-looking-for-a-______-reddit": {
+    "anonymous": "/explore",
+    "member": "/explore"
+  },
+  "/applets/xrdyz95v-get-a-notification-if-there-s-breaking-news-about-the-bay-area": {
+    "anonymous": "/applets/xrdyz95v-get-an-ifttt-notification-for-sfgate-breaking-news",
+    "member": "/applets/xrdyz95v-get-an-ifttt-notification-for-sfgate-breaking-news"
+  },
+  "/applets/ziAfHuwq-turn-your-hue-lights-on-and-off-with-your-voice": {
+    "anonymous": "/applets/ziAfHuwq-toggle-philips-hue-lights-with-google-assistant-voice-command",
+    "member": "/applets/ziAfHuwq-toggle-philips-hue-lights-with-google-assistant-voice-command"
+  },
+  "/line": {
+    "anonymous": "/line_v2",
+    "member": "/line_v2"
+  },
+  "/pocket": {
+    "anonymous": "/explore",
+    "member": "/explore"
+  },
+  "/telegram/": {
+    "anonymous": "/telegram",
+    "member": "/telegram"
+  },
+  "/wemo_switch": {
+    "anonymous": "/explore",
+    "member": "/explore"
+  },
+  "/discord/settings": {
+    "member": "/discord"
+  },
+  "/email/details": {
+    "member": "/email"
+  },
+  "/feed/details": {
+    "member": "/feed"
+  },
+  "/finance/details": {
+    "member": "/finance"
+  },
+  "/gmail/settings": {
+    "member": "/gmail"
+  },
+  "/google_drive/settings": {
+    "member": "/google_drive"
+  },
+  "/home": {
+    "member": "/explore"
+  },
+  "/maker_webhooks/documentation": {
+    "member": "/maker_webhooks"
+  },
+  "/maker_webhooks/settings": {
+    "member": "/maker_webhooks"
+  },
+  "/sms/settings": {
+    "member": "/sms"
+  },
+  "/sonos/settings": {
+    "member": "/sonos"
+  },
+  "/services/create_default": {
+    "member": "/developer_sign_up/new"
+  }
+}

@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="en"><head>
+    <link rel="preload" href="/assets/asset-000002.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000004.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000003.woff2" as="font" type="font/woff2">
+
+<style>
+/* IFTTT.ai rebrand — Museo Sans Rounded (site-wide base font). One @font-face per Museo cut; */
+/* CSS font-weight == the cut number (300 Light / 500 Regular / 700 body / 900 headings). */
+/* NB: map by cut name, not the weight Figma's inspect panel shows — a designer's desktop copy */
+/* may report ~200 less (700 for the 900 cut); these files carry OS/2 weight == cut number. */
+
+/* Museo Sans Rounded 300 (light) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 300;
+  src: url("/assets/dependency-000100.woff2") format("woff2"),
+    url("/assets/dependency-000101.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 500 (regular) — covers CSS 400–600 */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 500 600;
+  src: url("/assets/asset-000002.woff2") format("woff2"),
+    url("/assets/dependency-000102.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 700 (body) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 700;
+  src: url("/assets/asset-000004.woff2") format("woff2"),
+    url("/assets/dependency-000104.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 900 (black) — display headings */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 900;
+  src: url("/assets/asset-000003.woff2") format("woff2"),
+    url("/assets/dependency-000106.woff") format("woff");
+  font-display: swap;
+}
+
+/* Metric-matched fallback for the swap window: Avenir Next scaled to the Museo advance widths, with */
+/* the Museo line box (hhea 940/-260 divided by size-adjust), so the change to Museo moves no layout. */
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 500 600;
+  src: local("Avenir Next Medium"), local("AvenirNext-Medium");
+  size-adjust: 98.0%;
+  ascent-override: 95.92%;
+  descent-override: 26.53%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 700;
+  src: local("Avenir Next Bold"), local("AvenirNext-Bold");
+  size-adjust: 94.5%;
+  ascent-override: 99.47%;
+  descent-override: 27.51%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 900;
+  src: local("Avenir Next Heavy"), local("AvenirNext-Heavy");
+  size-adjust: 90.2%;
+  ascent-override: 104.21%;
+  descent-override: 28.82%;
+  line-gap-override: 0%;
+}
+
+/* Museo Sans Rounded 500 / 700 italic — fetched only by pages that set font-style: italic. */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 500 600;
+  src: url("/assets/asset-000981.woff2") format("woff2"),
+    url("/assets/dependency-000103.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/asset-001589.woff2") format("woff2"),
+    url("/assets/dependency-000105.woff") format("woff");
+  font-display: swap;
+}
+</style>
+
+    <!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0">
+<meta name="mobile-web-app-capable" content="yes">
+
+
+
+
+  <title>Applets - IFTTT</title>
+<meta name="description" content="Applets help increase touchpoints with your customers from within your existing branded properties.">
+<meta name="keywords" content="ifttt applets connect connections integrate integration automate automation services recipes trigger action ifthisthenthat free">
+<meta property="al:ios:url" content="ifttt://">
+<meta property="al:ios:app_store_id" content="660944635">
+<meta property="al:ios:app_name" content="IFTTT">
+<meta property="fb:app_id" content="122259781154546">
+<meta property="fb:admins" content="7302486">
+<meta property="og:title" content="Applets - IFTTT">
+<meta property="og:description" content="Applets help increase touchpoints with your customers from within your existing branded properties.">
+<meta property="og:site_name" content="IFTTT">
+<meta property="og:url" content="https://ifttt.com/docs/applets">
+<meta property="og:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@IFTTT">
+<meta name="twitter:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta name="twitter:app:id:iphone" content="660944635">
+<meta name="twitter:app:id:ipad" content="660944635">
+<meta name="twitter:app:id:googleplay" content="com.ifttt.ifttt">
+<meta name="twitter:app:url:iphone" content="ifttt://">
+<meta name="twitter:app:url:ipad" content="ifttt://">
+<meta name="twitter:app:url:googleplay" content="ifttt://">
+<meta name="twitter:app:name:googleplay" content="IFTTT">
+<meta name="author" content="IFTTT">
+<meta name="copyright" content="Copyright 2026 IFTTT Inc.">
+<meta name="theme-color" content="">
+<meta name="facebook-domain-verification" content="tapueff3rri63aug9c5b7hapbv3mkv">
+
+<!-- Standard SVG Favicon -->
+<link rel="icon" href="/assets/dependency-000091.svg" type="image/svg+xml">
+
+<!-- For all Apple Devices: -->
+<link rel="apple-touch-icon" href="/assets/dependency-000081.png">
+
+<!-- For Windows 8: -->
+<meta name="msapplication-TileImage" content="https://web-assets.ifttt.com/builds/assets/pinned-Dpomu1wG.png">
+<meta name="msapplication-TileColor" content="#111">
+
+
+
+<link rel="stylesheet" href="/assets/asset-001808.css">
+<link rel="stylesheet" href="/assets/asset-000117.css">
+<link rel="stylesheet" href="/assets/asset-000134.css">
+
+    
+  <link rel="stylesheet" href="/local.css"></head>
+  <body id="docs-body" class="partners-body docs-body applets-action  false" style="background-color: rgb(255, 255, 255);" data-local-route="/docs/applets" data-local-actor="anonymous" data-local-state="default"><div id="flash-messages"></div>
+  
+      <!-- Google Tag Manager (noscript) -->
+  <noscript></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+    
+
+
+  
+
+  
+
+
+      
+<header class="unified-header signed-out" style="background-color: #fff">
+  <div class="container header">
+    <section class="left-group">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/">
+  <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt" style="fill: #111"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>
+    </section>
+
+      <section class="right-group signed-out">
+        <a class="nav-link link-menu" title="Explore" href="/explore">
+          Explore
+</a>
+        <a class="nav-link link-menu" title="Plans" href="/plans">
+          Plans
+</a>
+        <a class="sign-in button-tertiary button-outlined " href="/login">Log in</a>
+
+          <a title="Get started" class="button-tertiary  sign-up signed-out" href="/join?source=site-header">
+            Get started
+</a>      </section>
+      <section class="mobile-icon">
+        
+<span id="unified_mobile_menu" role="button" class="closed" tabindex="0">
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hamburger-icon">
+    <title>Mobile menu</title>
+    <g fill="#111" id="mobile-hamburger-icon">
+      <path d="M19.6504 15C20.5617 15 21.3008 15.7391 21.3008 16.6504C21.3008 17.5617 20.5617 18.3008 19.6504 18.3008H1.65039C0.739121 18.3008 0 17.5617 0 16.6504C0 15.7391 0.739121 15 1.65039 15H19.6504ZM19.6504 7.5C20.5617 7.5 21.3008 8.23912 21.3008 9.15039C21.3008 10.0617 20.5617 10.8008 19.6504 10.8008H1.65039C0.739121 10.8008 0 10.0617 0 9.15039C0 8.23912 0.739121 7.5 1.65039 7.5H19.6504ZM19.6504 0C20.5617 0 21.3008 0.739121 21.3008 1.65039C21.3008 2.56166 20.5617 3.30078 19.6504 3.30078H1.65039C0.739121 3.30078 0 2.56166 0 1.65039C0 0.739121 0.739121 0 1.65039 0H19.6504Z" transform="translate(1.35 2.85)"></path>
+    </g>
+  </svg>
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="close-icon">
+    <title>Close menu</title>
+    <path fill="#111" d="M16.4901 0.535065C17.1612 -0.160319 18.2692 -0.180639 18.9648 0.490143C19.66 1.16128 19.6797 2.26933 19.0087 2.96475L12.1815 10.0399L18.4482 16.5351C19.1189 17.2305 19.0993 18.3377 18.4042 19.0087C17.7088 19.6797 16.6007 19.66 15.9296 18.9648L9.74991 12.5595L3.57022 18.9648C2.89918 19.6602 1.79112 19.6796 1.09561 19.0087C0.400326 18.3376 0.380671 17.2305 1.05167 16.5351L7.31729 10.0399L0.490143 2.96475C-0.180639 2.26923 -0.160319 1.16115 0.535065 0.490143C1.23058 -0.180569 2.3377 -0.16026 3.0087 0.535065L9.74893 7.52042L16.4901 0.535065Z" transform="translate(2.25 2.25)"></path>
+  </svg>
+</span>
+
+
+      </section>
+  </div>
+
+</header>
+
+
+    <div class="platform-bg_color-container">
+        <nav class="tabbed-nav kb-nav">
+    <div class="container">
+      
+        
+        
+        
+        
+        
+<ul><li class="first"><a class="link-menu" href="/docs">Get started</a></li><li class="active"><a class="link-menu" href="/docs/api_reference">Service API</a></li><li><a class="link-menu" href="/docs/connect_api">Connect API</a></li><li><a class="link-menu" href="/docs/example_services">Example Services</a></li><li class="last"><a class="link-menu" href="/docs/faq">FAQ</a></li></ul>    </div>
+  </nav>
+
+  <div class="container">
+    <div class="docs-content">
+
+        <div class="toc-sidebar link-menu">
+          <nav class="sidebar-nav">
+            <ul>
+<li><a href="#creating-applets" class="active">Creating Applets</a>
+
+<ul>
+<li><a href="#some-tips-on-using-the-tool">Some tips on using the tool</a></li>
+<li><a href="#using-filter-code">Using filter code</a></li>
+<li><a href="#testing-and-publishing-your-applets">Testing and publishing your Applets</a></li>
+<li><a href="#applets-cookbook">Applets Cookbook</a></li>
+</ul></li>
+<li><a href="#troubleshooting-applets">Troubleshooting Applets</a>
+
+<ul>
+<li><a href="#asking-users-for-further-information">Asking users for further information</a></li>
+<li><a href="#tools-available-to-help-troubleshoot">Tools available to help troubleshoot</a></li>
+<li><a href="#understanding-ifttt-error-codes">Understanding IFTTT error codes</a></li>
+</ul></li>
+</ul>
+
+            <br>
+          </nav>
+        </div>
+
+      <div class="docs-main-content">
+        <h1 id="creating-applets">Creating Applets</h1>
+
+<p>The Applet creation tool is designed to help you build valuable Applets and publish them for the world to use. Your Applets can have multiple actions and <a href="#using-filter-code">custom filter code</a> to go beyond the basic “if this, then that” paradigm. If there are terms below that you don't understand, check out the <a href="/docs/glossary">glossary</a>.</p>
+
+<h4 id="some-tips-on-using-the-tool">Some tips on using the tool</h4>
+
+<ul>
+<li><p><strong>Applet title:</strong> Be specific. This is your chance to tell the user what they should expect this Applet to do for them — approach it like you would writing an instruction manual, instead of a catchy headline. Keep it short and to the point.</p></li>
+<li><p><strong>Applet description:</strong> This is where you can add in details about triggers and actions, and any information the user should customize, such as location or a hashtag.</p></li>
+<li><p><strong>Trigger:</strong> Select the trigger that you’d like to use for the Applet. The tool allows you to select from all services on IFTTT that have at least one trigger.</p></li>
+<li><p><strong>Trigger fields:</strong> The tool allows you to either hide or show trigger fields to the user when turning on the Applet. If the value for the field should be the same for all users, fill out the field and mark it as hidden. For example, if your Applet is “Tweet new technology articles from the New York Times”, you would select “Technology” for the NY Times “Section” trigger field and then hide it. If your Applet is “Tweet new articles from a section of the New York Times” you would mark the “Section” field to be chosen by the user.</p></li>
+<li><p><strong>Queries:</strong> Coming soon is the ability to query for information to be used as filtering conditions or to provide more data to be used in an action run.</p></li>
+<li><p><strong>Filter:</strong> You can write simple filter code which dictates which actions should run based on the trigger data coming in.</p></li>
+<li><p><strong>Action(s):</strong> You can select one or more actions to run when the trigger event occurs. Add additional actions by clicking the “Add action” button. Keep in mind that users must have activated all services used in the Applet in order to turn it on.</p></li>
+<li><p><strong>Action fields:</strong> Like trigger fields, data can be pre filled and hidden in an action field or can be filled out by the user. In the case of action fields, it is important to hide any fields that don’t need to be filled out by the user. For example, if your Applet is “Tweet your Instagram photos”, you would place the Instagram “SourceURL” ingredient in the Twitter “Image URL” action field and then hide it as this is the only appropriate ingredient to have in that field. You might ask the user to fill out other types of action fields themselves such as their location, their email address, or a name of a photo album private to them. Note that action fields marked to be “chosen by the user” can include prefilled text or numbers, but cannot include prefilled ingredients.</p></li>
+</ul>
+
+<h2 id="using-filter-code">Using filter code</h2>
+
+<p>When you build an Applet with the creation tool, you can use the <strong>filter
+code</strong> feature to add extra flexibility and power by writing your own
+JavaScript that runs whenever the Applet does. Your code has access to the data
+returned by the trigger, as well as metadata like the current time in the
+user's time zone, and it can use that information to override action field
+values or skip actions.</p>
+
+<p>See the <a href="#applets-cookbook">Applets Cookbook</a> section for some examples of what you can do with filter code.</p>
+
+<p>There are some fields that are always available:</p>
+
+<ul>
+<li><p><code>Meta.currentUserTime</code>: The current time when your code is evaluated, in the user's timezone. This returns a <a href="/external?url=https%3A%2F%2Fmomentjs.com%2F">Moment.js</a> object.</p></li>
+<li><p><code>Meta.triggerTime</code>: The time that the trigger event happened, in the user's timezone. This should be close to <code>currentUserTime</code>, but could vary depending on the polling period of the Applet's trigger. This returns a <a href="/external?url=https%3A%2F%2Fmomentjs.com%2F">Moment.js</a> object.</p></li>
+<li><p><code>Meta.previousTriggerTime</code>: The time that the most recent, previous trigger event happened, in the user's timezone. This returns a <a href="/external?url=https%3A%2F%2Fmomentjs.com%2F">Moment.js</a> object.</p></li>
+</ul>
+
+<p>There are additional fields available depending on the specific trigger and
+actions that your Applet uses. For example, if your Applet uses the Weather
+Underground service's "Sunrise" trigger, your code can use <code>Weather.sunRises</code>
+to get the trigger's ingredients. If it uses the LIFX service's "Toggle lights
+on/off" action, your code can use <code>Lifx.toggle</code> to override that action's
+fields or skip it instead of running it.</p>
+
+<p>The trigger's object contains the values of each of the trigger's ingredients.
+If you're using the "Sunrise" trigger, you can get the current temperature
+in Celsius by writing <code>Weather.sunRises.TempCelsius</code>. For convenience, you can
+also just write <code>Trigger.TempCelsius</code>, since an Applet can only have one
+trigger. Note that the ingredient values are always strings, even when they
+represent numeric data.</p>
+
+<p>Each action's object has the following methods:</p>
+
+<ul>
+<li><p><code>skip()</code>: This lets you skip an action instead of running it. You can optionally provide a message that will be shown in the user's event feed to explain why the Applet decided not to run the action.</p></li>
+<li><p><code>set[FieldName]()</code>: For each hidden field of the action, you can use a correspondingly-named setter method to override its value. If you do, the value you provide will be used verbatim, skipping the templating step that normally happens with hidden fields. If you want to use ingredient values, you can do so by just using string concatenation or <a href="/external?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FReference%2FTemplate_literals">JavaScript template literals</a>:</p></li>
+</ul>
+
+<pre><code class="javascript">Twitter.postNewTweet.setTweet(
+  `The sun rose at ${Weather.sunRises.SunriseAt}`
+)
+</code></pre>
+
+<p>When you override the value of a dropdown field, the argument you pass in should be the option's <code>value</code>, not its <code>label</code>. The filter code editor has autocomplete support for dropdown field setters to make this easier.</p>
+
+<h4 id="technical-details">Technical details</h4>
+
+<ul>
+<li><p>When you write filter code, you're technically writing <a href="/external?url=https%3A%2F%2Fwww.typescriptlang.org%2F">TypeScript</a>, not JavaScript. This helps prevent runtime problems with your code by catching simple mistakes as early as possible. You should generally be able to just write normal JavaScript, but the TypeScript documentation may be helpful if you run into issues with more advanced use cases.</p></li>
+<li><p>Filter code is run in an isolated environment with a short timeout. There are no methods available that do any I/O (blocking or otherwise), so your code should execute quickly.</p></li>
+</ul>
+
+<h4 id="testing-and-publishing-your-applets">Testing and publishing your Applets</h4>
+
+<ul>
+<li><p>When your Applet has been all filled out, click the "Preview" button to create a private version of the Applet.</p></li>
+<li><p>Visit your service page to try out the Applet to make sure that it is working as expected. Private Applets can be modified based on your testing.</p></li>
+</ul>
+
+<h2 id="applets-cookbook">Applets Cookbook</h2>
+
+<p>In this section we provide a series of examples of Applets that take advantage of the Filter Code. It is important to note that JavaScript (Typescript) is a full-fledged programming language - if you need help you might consider participating in the Maker community on <a href="/external?url=https%3A%2F%2Fwww.hackster.io%2Fifttt">Hackster.io</a> or learning <a href="/external?url=https%3A%2F%2Fwww.codecademy.com%2Flearn%2Fjavascript">JavaScript</a>.</p>
+
+<h3 id="example-random-light-colors">Example: Random light colors</h3>
+
+<h4 id="applet-description">Applet description</h4>
+
+<ul>
+<li>Random light colors</li>
+<li>Change your LIFX colors to a random color</li>
+</ul>
+
+<h4 id="trigger">Trigger</h4>
+
+<ul>
+<li>Button Widget: Button Press</li>
+</ul>
+
+<h4 id="filter-code">Filter code</h4>
+
+<pre><code>var colors = ["#FF8400", "#FF0000", "#15FF00", "#FF00D4","#00D4FF","#003CFF"]
+var index = Math.floor((Math.random() * colors.length))
+Lifx.color.setAdvancedOptions('color: ' + colors[index] + '; brightness: 1; duration: 12')
+</code></pre>
+
+<h4 id="action-s">Action(s)</h4>
+
+<ul>
+<li>Lifx: change color of lights</li>
+</ul>
+
+<h3 id="example-adjust-your-lights-as-it-gets-darker-outside">Example: Adjust your lights as it gets darker outside</h3>
+
+<h4 id="applet-description">Applet description</h4>
+
+<ul>
+<li>Adjust your lights as it gets darker outside</li>
+<li>Change your LIFX light bulbs to reflect the color outside and have a more natural color as it gets darker outside</li>
+</ul>
+
+<h4 id="trigger">Trigger</h4>
+
+<ul>
+<li>Date &amp; Time: Every hour</li>
+</ul>
+
+<h4 id="filter-code">Filter code</h4>
+
+<pre><code>var hour     = Meta.currentTime.hour()
+var colorKey = hour.toString()
+
+var colors: {[key:string]:string} = {
+  "17":"#F3F2EB",
+  "18":"#F7F2E6",
+  "19":"#F9EFE0",
+  "20":"#FBEFDC",
+  "21":"#FBE5C6",
+  "22":"#FBE5C6"
+}
+
+if (hour &lt; 17) {
+  Lifx.color.skip("Too early")
+} else if (hour &lt; 22)  {
+  Lifx.color.setAdvancedOptions(
+    'color: ' + colors[colorKey] + '; brightness: 1; duration: 12'
+  )
+} else {
+  Lifx.color.skip("Too late")
+}
+</code></pre>
+
+<h4 id="action-s">Action(s)</h4>
+
+<ul>
+<li>Lifx: change color of lights</li>
+</ul>
+
+<h3 id="example-flight-deals-from-or-to-san-francisco">Example: Flight deals from or to San Francisco</h3>
+
+<h4 id="applet-description">Applet description</h4>
+
+<ul>
+<li>Flight deals: San Francisco</li>
+<li>Get a daily email with flight tickets on sale below $400.00.</li>
+</ul>
+
+<h4 id="trigger">Trigger</h4>
+
+<ul>
+<li>Twitter: New tweet from search</li>
+<li>This Applet uses a search field (hidden from the user) with value: <code>(from:SecretFlying OR from:AirFareSpot OR from:FTMileageRuns OR
+from:ThePointsGuy OR from:airfarewatchdog) AND
+(SanFrancisco OR "San Francisco" OR SFO OR "SF" OR "SFBayArea"
+OR OAK OR "Oakland" OR "Bay Area")</code></li>
+</ul>
+
+<p><img style="max-width: 100%; height: auto;" alt="Template for creating an IFTTT Applet" title="Template for creating an IFTTT Applet" loading="lazy" width="500" height="534" src="/assets/dependency-000229.png"></p>
+
+<h4 id="filter-code">Filter code</h4>
+
+<pre><code>var txt = Ingredients.Text || ""
+var price = parseInt((txt.match(/\s\$(\d+)\s/) || [])[1])
+
+if (price &gt; 400) {
+  EmailDigest.sendDailyEmail.skip("Too expensive")
+}
+</code></pre>
+
+<h4 id="action-s">Action(s)</h4>
+
+<ul>
+<li>Lifx: change color of lights</li>
+</ul>
+
+<h3 id="example-daily-motivational-quote">Example: Daily motivational quote</h3>
+
+<h4 id="applet-description">Applet description</h4>
+
+<ul>
+<li>Daily quote</li>
+<li>Receive a daily motivational quote on your phone and a weekly digest with all the quotes.</li>
+</ul>
+
+<h4 id="trigger">Trigger</h4>
+
+<ul>
+<li>Date &amp; Time: Everyday at a time chosen by the user</li>
+</ul>
+
+<h4 id="filter-code">Filter code</h4>
+
+<pre><code>// quotes by brainyquote.com
+var data = [{"quote":"Life is 10% what happens to you and 90% how you react to it.","author":"Charles R. Swindoll"},{"quote":"Only I can change my life. No one can do it for me.","author":"Carol Burnett"},{"quote":"Infuse your life with action. Don't wait for it to happen. Make it happen. Make your own future. Make your own hope. Make your own love. And whatever your beliefs, honor your creator, not by passively waiting for grace to come down from upon high, but by doing what you can to make grace happen... yourself, right now, right down here on Earth.","author":"Bradley Whitford"},{"quote":"Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence.","author":"Helen Keller"}]
+
+var day  = Meta.currentTime.day()
+var wday = Meta.currentTime.format('dddd')
+var msg  = data[day]['quote'] + 'by ' + data[day]['author']
+
+IfNotifications.sendNotification.setMessage(msg)
+EmailDigest.sendWeeklyEmail.setTitle(wday)
+EmailDigest.sendWeeklyEmail.setMessage(msg)
+</code></pre>
+
+<h4 id="action-s">Action(s)</h4>
+
+<ul>
+<li>Notifications: Send notification</li>
+<li>Email Digest: Add to weekly email digest</li>
+</ul>
+
+<h3 id="example-random-motivational-quote-button">Example: Random Motivational quote button</h3>
+
+<h4 id="applet-description">Applet description</h4>
+
+<ul>
+<li>Random motivational quote button</li>
+<li>Receive a random quote every time you a press a button. Quotes from brainyquote.com</li>
+</ul>
+
+<h4 id="trigger">Trigger</h4>
+
+<ul>
+<li>Button Widget: button press</li>
+</ul>
+
+<h4 id="filter-code">Filter code</h4>
+
+<pre><code>// Quotes by brainyquote.com
+var data = [{"quote":"Life is 10% what happens to you and 90% how you react to it.","author":"Charles R. Swindoll"},{"quote":"Only I can change my life. No one can do it for me.","author":"Carol Burnett"},{"quote":"Infuse your life with action. Don't wait for it to happen. Make it happen. Make your own future. Make your own hope. Make your own love. And whatever your beliefs, honor your creator, not by passively waiting for grace to come down from upon high, but by doing what you can to make grace happen... yourself, right now, right down here on Earth.","author":"Bradley Whitford"},{"quote":"Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence.","author":"Helen Keller"},{"quote":"Good, better, best. Never let it rest. 'Til your good is better and your better is best.","author":"St. Jerome"},{"quote":"Always do your best. What you plant now, you will harvest later.","author":"Og Mandino"},{"quote":"In order to succeed, we must first believe that we can.","author":"Nikos Kazantzakis"},{"quote":"If you fell down yesterday, stand up today.","author":"H. G. Wells"},{"quote":"With the new day comes new strength and new thoughts.","author":"Eleanor Roosevelt"},{"quote":"Failure will never overtake me if my determination to succeed is strong enough.","author":"Og Mandino"},{"quote":"Keep your eyes on the stars, and your feet on the ground.","author":"Theodore Roosevelt"},{"quote":"It always seems impossible until it's done.","author":"Nelson Mandela"},{"quote":"It does not matter how slowly you go as long as you do not stop.","author":"Confucius"},{"quote":"Quality is not an act, it is a habit.","author":"Aristotle"},{"quote":"The secret of getting ahead is getting started.","author":"Mark Twain"},{"quote":"If you can dream it, you can do it.","author":"Walt Disney"},{"quote":"A creative man is motivated by the desire to achieve, not by the desire to beat others.","author":"Ayn Rand"},{"quote":"Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in your own powers you cannot be successful or happy.","author":"Norman Vincent Peale"},{"quote":"Problems are not stop signs, they are guidelines.","author":"Robert H. Schuller"},{"quote":"You can't cross the sea merely by standing and staring at the water.","author":"Rabindranath Tagore"},{"quote":"Setting goals is the first step in turning the invisible into the visible.","author":"Tony Robbins"},{"quote":"We should not give up and we should not allow the problem to defeat us.","author":"A. P. J. Abdul Kalam"},{"quote":"Start where you are. Use what you have. Do what you can.","author":"Arthur Ashe"},{"quote":"Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.","author":"Thomas A. Edison"},{"quote":"Accept the challenges so that you can feel the exhilaration of victory.","author":"George S. Patton"},{"quote":"Knowing is not enough; we must apply. Willing is not enough; we must do.","author":"Johann Wolfgang von Goethe"}, {"quote":"Never, never, never give up.","author":"Winston Churchill"},{"quote":"If you want to conquer fear, don't sit home and think about it. Go out and get busy.","author":"Dale Carnegie"},{"quote":"We may encounter many defeats but we must not be defeated.","author":"Maya Angelou"},{"quote":"When something is important enough, you do it even if the odds are not in your favor.","author":"Elon Musk"},{"quote":"You are never too old to set another goal or to dream a new dream.","author":"Les Brown"},{"quote":"Look up at the stars and not down at your feet. Try to make sense of what you see, and wonder about what makes the universe exist. Be curious.","author":"Stephen Hawking"},{"quote":"The will to win, the desire to succeed, the urge to reach your full potential... these are the keys that will unlock the door to personal excellence.","author":"Confucius"},{"quote":"Do the difficult things while they are easy and do the great things while they are small. A journey of a thousand miles must begin with a single step.","author":"Lao Tzu"},{"quote":"Be kind whenever possible. It is always possible.","author":"Dalai Lama"},{"quote":"Set your goals high, and don't stop till you get there.","author":"Bo Jackson"},{"quote":"The past cannot be changed. The future is yet in your power.","author":"Unknown"},{"quote":"March on. Do not tarry. To go forward is to move toward perfection. March on, and fear not the thorns, or the sharp stones on life's path.","author":"Khalil Gibran"},{"quote":"Motivation is the art of getting people to do what you want them to do because they want to do it.","author":"Dwight D. Eisenhower"},{"quote":"When you reach the end of your rope, tie a knot in it and hang on.","author":"Franklin D. Roosevelt"},{"quote":"Never give up, for that is just the place and time that the tide will turn.","author":"Harriet Beecher Stowe"},{"quote":"Things do not happen. Things are made to happen.","author":"John F. Kennedy"},{"quote":"The way to get started is to quit talking and begin doing.","author":"Walt Disney"},{"quote":"Aim for the moon. If you miss, you may hit a star.","author":"W. Clement Stone"},{"quote":"Be miserable. Or motivate yourself. Whatever has to be done, it's always your choice.","author":"Wayne Dyer"},{"quote":"Your talent is God's gift to you. What you do with it is your gift back to God.","author":"Leo Buscaglia"},{"quote":"Perseverance is not a long race; it is many short races one after the other.","author":"Walter Elliot"},{"quote":"Always desire to learn something useful.","author":"Sophocles"},{"quote":"Go for it now. The future is promised to no one.","author":"Wayne Dyer"},{"quote":"There's a way to do it better - find it.","author":"Thomas A. Edison"},{"quote":"The more man meditates upon good thoughts, the better will be his world and the world at large.","author":"Confucius"},{"quote":"Ever tried. Ever failed. No matter. Try Again. Fail again. Fail better.","author":"Samuel Beckett"}, {"quote":"If you don't like how things are, change it! You're not a tree.","author":"Jim Rohn"},{"quote":"There is only one corner of the universe you can be certain of improving, and that's your own self.","author":"Aldous Huxley"},{"quote":"Perseverance is failing 19 times and succeeding the 20th.","author":"Julie Andrews"},{"quote":"If you're going through hell, keep going.","author":"Winston Churchill"},{"quote":"A good plan violently executed now is better than a perfect plan executed next week.","author":"George S. Patton"},{"quote":"It is very important to know who you are. To make decisions. To show who you are.","author":"Malala Yousafzai"},{"quote":"The more things you do, the more you can do.","author":"Lucille Ball"},{"quote":"Be Impeccable With Your Word. Speak with integrity. Say only what you mean. Avoid using the word to speak against yourself or to gossip about others. Use the power of your word in the direction of truth and love.","author":"Don Miguel Ruiz"},{"quote":"I am not afraid... I was born to do this.","author":"Joan of Arc"},{"quote":"The ultimate aim of the ego is not to see something, but to be something.","author":"Muhammad Iqbal"},{"quote":"I was motivated to be different in part because I was different.","author":"Donna Brazile"},{"quote":"Consult not your fears but your hopes and your dreams. Think not about your frustrations, but about your unfulfilled potential. Concern yourself not with what you tried and failed in, but with what it is still possible for you to do.","author":"Pope John XXIII"},{"quote":"What you get by achieving your goals is not as important as what you become by achieving your goals.","author":"Zig Ziglar"},{"quote":"Even if you fall on your face, you're still moving forward.","author":"Victor Kiam"},{"quote":"No bird soars too high if he soars with his own wings.","author":"William Blake"},{"quote":"One way to keep momentum going is to have constantly greater goals.","author":"Michael Korda"},{"quote":"Beginning today, treat everyone you meet as if they were going to be dead by midnight. Extend to them all the care, kindness and understanding you can muster, and do it with no thought of any reward. Your life will never be the same again.","author":"Og Mandino"},{"quote":"The first step toward success is taken when you refuse to be a captive of the environment in which you first find yourself.","author":"Mark Caine"},{"quote":"If you think you can do it, you can.","author":"John Burroughs"},{"quote":"Expect problems and eat them for breakfast.","author":"Alfred A. Montapert"},{"quote":"Well done is better than well said.","author":"Benjamin Franklin"},{"quote":"Do not wait; the time will never be 'just right.' Start where you stand, and work with whatever tools you may have at your command, and better tools will be found as you go along.","author":"George Herbert"},{"quote":"Don't watch the clock; do what it does. Keep going.","author":"Sam Levenson"},{"quote":"Poverty was the greatest motivating factor in my life.","author":"Jimmy Dean"},{"quote":"Never retreat. Never explain. Get it done and let them howl.","author":"Benjamin Jowett"},{"quote":"Deserve your dream.","author":"Octavio Paz"}, {"quote":"I've worked too hard and too long to let anything stand in the way of my goals. I will not let my teammates down and I will not let myself down.","author":"Mia Hamm"},{"quote":"The key is to keep company only with people who uplift you, whose presence calls forth your best.","author":"Epictetus"},{"quote":"Motivation will almost always beat mere talent.","author":"Norman Ralph Augustine"},{"quote":"The harder the conflict, the more glorious the triumph.","author":"Thomas Paine"},{"quote":"Do something wonderful, people may imitate it.","author":"Albert Schweitzer"},{"quote":"Either you run the day or the day runs you.","author":"Jim Rohn"},{"quote":"Arriving at one goal is the starting point to another.","author":"John Dewey"},{"quote":"You just can't beat the person who never gives up.","author":"Babe Ruth"},{"quote":"Many are called but few get up.","author":"Oliver Herford"},{"quote":"I'd rather attempt to do something great and fail than to attempt to do nothing and succeed.","author":"Robert H. Schuller"},{"quote":"I've found that luck is quite predictable. If you want more luck, take more chances. Be more active. Show up more often.","author":"Brian Tracy"},{"quote":"God always strives together with those who strive.","author":"Aeschylus"},{"quote":"I know where I'm going and I know the truth, and I don't have to be what you want me to be. I'm free to be what I want.","author":"Muhammad Ali"},{"quote":"Go big or go home. Because it's true. What do you have to lose?","author":"Eliza Dushku"},{"quote":"You can't build a reputation on what you are going to do.","author":"Henry Ford"},{"quote":"By failing to prepare, you are preparing to fail.","author":"Benjamin Franklin"},{"quote":"We aim above the mark to hit the mark.","author":"Ralph Waldo Emerson"},{"quote":"Hitch your wagon to a star.","author":"Ralph Waldo Emerson"},{"quote":"Learning is the beginning of wealth. Learning is the beginning of health. Learning is the beginning of spirituality. Searching and learning is where the miracle process all begins.","author":"Jim Rohn"},{"quote":"A somebody was once a nobody who wanted to and did.","author":"John Burroughs"},{"quote":"Every exit is an entry somewhere else.","author":"Tom Stoppard"},{"quote":"Wherever you are - be all there.","author":"Jim Elliot"},{"quote":"Do your work with your whole heart, and you will succeed - there's so little competition.","author":"Elbert Hubbard"},{"quote":"Never give in and never give up.","author":"Hubert H. Humphrey"},{"quote":"Do the one thing you think you cannot do. Fail at it. Try again. Do better the second time. The only people who never tumble are those who never mount the high wire. This is your moment. Own it.","author":"Oprah Winfrey"},{"quote":"A will finds a way.","author":"Orison Swett Marden"}, {"quote":"I learned that we can do anything, but we can't do everything... at least not at the same time. So think of your priorities not in terms of what activities you do, but when you do them. Timing is everything.","author":"Dan Millman"},{"quote":"The wise does at once what the fool does at last.","author":"Baltasar Gracian"},{"quote":"A goal is a dream with a deadline.","author":"Napoleon Hill"},{"quote":"You create your opportunities by asking for them.","author":"Shakti Gawain"},{"quote":"If you don't ask, you don't get.","author":"Stevie Wonder"},{"quote":"Without hard work, nothing grows but weeds.","author":"Gordon B. Hinckley"},{"quote":"You have to make it happen.","author":"Denis Diderot"},{"quote":"You must take action now that will move you towards your goals. Develop a sense of urgency in your life.","author":"H. Jackson Brown, Jr."},{"quote":"Don't think, just do.","author":"Horace"},{"quote":"Your heaviest artillery will be your will to live. Keep that big gun going.","author":"Norman Cousins"},{"quote":"It's always too early to quit.","author":"Norman Vincent Peale"},{"quote":"Set yourself earnestly to see what you are made to do, and then set yourself earnestly to do it.","author":"Phillips Brooks"},{"quote":"Who seeks shall find.","author":"Sophocles"},{"quote":"Determine never to be idle. No person will have occasion to complain of the want of time who never loses any. It is wonderful how much may be done if we are always doing.","author":"Thomas Jefferson"},{"quote":"They can conquer who believe they can.","author":"Virgil"},{"quote":"The more we do, the more we can do.","author":"William Hazlitt"},{"quote":"Begin to be now what you will be hereafter.","author":"William James"},{"quote":"Do whatever you do intensely.","author":"Robert Henri"},{"quote":"There is nothing deep down inside us except what we have put there ourselves.","author":"Richard Rorty"},{"quote":"We make the world we live in and shape our own environment.","author":"Orison Swett Marden"},{"quote":"Step by step and the thing is done.","author":"Charles Atlas"},{"quote":"The weeds keep multiplying in our garden, which is our mind ruled by fear. Rip them out and call them by name.","author":"Sylvia Browne"},{"quote":"Crave for a thing, you will get it. Renounce the craving, the object will follow you by itself.","author":"Swami Sivananda"},{"quote":"I like motivational books, because I like the go-getting American spirit - your destiny is in your own hands, life is what you make it, don't accept your limitations, jump before you're pushed, leap before you look.","author":"Louise Mensch"},{"quote":"I like to put on hardcore when I have to clean my apartment, which I hate to do, but it's motivational. I like old heavy metal when I'm outside working on my car. Music has definite functions for me.","author":"Peter Steele"},{"quote":"I went to a motivational training course once, a course of self-discovery, and I found out after a week that my fear - it was not a fear of not being accepted - was a very violent fear of failure.","author":"Emanuel Steward"}]
+
+var i = Math.floor((Math.random() * data.length))
+var msg = data[i]['quote'] + 'by ' + data[i]['author']
+
+IfNotifications.sendNotification.setMessage(msg)
+</code></pre>
+
+<h4 id="action-s">Action(s)</h4>
+
+<ul>
+<li>Notifications: Send notification</li>
+</ul>
+
+<hr>
+
+<h1 id="troubleshooting-applets">Troubleshooting Applets</h1>
+
+<p>Sometimes Applets run into issues or don't run as expected. Here are some tips for troubleshooting Applet issues that your users (or you!) may run into.</p>
+
+<h3 id="asking-users-for-further-information">Asking users for further information</h3>
+
+<p>Asking your users the following questions will help you further investigate the issue they are running into.</p>
+
+<h5 id="1-whats-your-applet-id">1) What's your Applet ID?</h5>
+
+<p>This ID can be found on the Applet's page or in the address bar as part of the URL. It is unique when an Applet is created, but it stays the same for everyone when multiple users enable it. For example, <a href="/applets/zgD6EJ8h-receive-nasa-s-image-of-the-day-in-your-email" class="link-inline">this Applet</a>'s ID is <code>zgD6EJ8h</code>.</p>
+
+<p>Once a user share's their Applet ID with you, look up any relevant requests on your service's Request Search page (found in your service dashboard) to find more information.</p>
+
+<h5 id="2-do-you-see-any-specific-error-messages">2) Do you see any specific error messages?</h5>
+
+<p>Here's where they can look:</p>
+
+<ul>
+<li><a href="/activity" class="link-inline">Their IFTTT-wide account activity</a>: ifttt.com/activity</li>
+<li>A specific <em>Applet's</em> activity: ifttt.com/activity/applet/<strong>[Applet-ID-here]</strong></li>
+<li>A specific <em>service's</em> activity: ifttt.com/activity/service/<strong>[your-service-slug]</strong></li>
+</ul>
+
+<h5 id="3-did-anything-change-recently-about-your-applet-or-the-services-involved">3) Did anything change recently about your Applet or the services involved?</h5>
+
+<p>This will be helpful in scenarios where a user's password changed, for example, or in scenarios where a user recently changed something about the specific Applet or the trigger/action services.</p>
+
+<h5 id="4-what-was-the-expected-behavior-of-your-applet">4) What was the expected behavior of your Applet?</h5>
+
+<p>If they are concerned about the speed of their Applets, look into the <a href="/docs/api_reference#realtime-api" class="link-inline">Realtime API</a> if your service has triggers, and your service's performance page (found in your service dashboard) for further tips.</p>
+
+<h3 id="tools-available-to-help-troubleshoot">Tools available to help troubleshoot</h3>
+
+<p>Once you have a user's report of an Applet issue, here are some tools to help you investigate:</p>
+
+<ul>
+<li><strong>Request Search</strong> (found in your service dashboard): here you can look up specific requests based on request ID or Applet version ID to find more information on the request and response.</li>
+<li><strong>Service Health</strong> (found in your service dashboard): here you can look for trends to see if this issue is new, if it is affecting many users or only a handful, etc.</li>
+<li>Your server logs. With a request ID, you should be able to line up that request in your logs to see what might have gone wrong.</li>
+<li><a href="/hc/en-us/articles/37696590075547" target="_blank" class="link-inline">The IFTTT.com <em>Applet Troubleshooting</em> section</a>: our user support team has gathered great tips for users troubleshooting their Applets which could help you investigate as well.</li>
+</ul>
+
+<h3 id="understanding-ifttt-error-codes">Understanding IFTTT error codes</h3>
+
+<p>Here is an explanation of the error codes that you might see on your Service Health and Request Search pages:</p>
+
+<ul>
+<li><strong>E1</strong>: error connecting to your service</li>
+<li><strong>E2</strong>: request timed out</li>
+<li><strong>E3</strong>: invalid JSON</li>
+<li><strong>E4</strong>: error from your service</li>
+<li><strong>E5</strong>: action skipped</li>
+<li><strong>E7</strong>: rate limit error from your service</li>
+<li><strong>E0</strong>: other uncaught error</li>
+</ul>
+
+<p>In addition to those above, you may also see other <a href="/external?url=https%3A%2F%2Fwww.rfc-editor.org%2Frfc%2Frfc9110.html%23name-status-codes" target="_blank" class="link-inline">HTTP status codes</a> and their corresponding descriptions.</p>
+
+<p>Different types of requests can have individual thresholds for how long IFTTT waits for a response. The following timeouts are in place right now (subject to change without notice):</p>
+
+<table><thead>
+<tr>
+<th>Value (ms)</th>
+<th>Endpoints</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>2500</code></td>
+<td>/token endpoint when obtaining or refreshing a set of tokens</td>
+</tr>
+<tr>
+<td><code>8000</code></td>
+<td>Trigger, query and action API endpoints</td>
+</tr>
+<tr>
+<td><code>12000</code></td>
+<td>Connect API endpoints</td>
+</tr>
+</tbody></table>
+
+<hr>
+
+      </div>
+    </div>
+  </div>
+
+    </div>
+
+    <footer class="site-footer ifttt_next_bucket">
+    <a class="pro-upsell pro-ad" title="Try IFTTT Pro" href="/subscriptions/pro">
+        <div class="pro-upsell-text">
+          <span class="logo">
+            <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+            <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#111"></path></svg>
+          </span>
+          <span class="pro-upsell-heading">Automate more, effortlessly.</span>
+        </div>
+
+        <div class="button-secondary button-on-color">
+            Try it free
+        </div>
+</a>  <div class="footer-top-container">
+    <div class="logo-container">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/">
+        <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="ifttt-logo" title="IFTTT" style="fill: white"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>    </div>
+
+    <div class="footer-sections">
+      <div class="footer-section explore">
+        <div class="section-header">
+          <a title="Explore" href="/explore">Explore</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="Services" title="Services" href="/explore/services">Services</a>
+              </li>
+              <li>
+                <a alt="Stories" title="Stories" href="/explore/stories">Stories</a>
+              </li>
+              <li>
+                <a alt="Applets" title="Applets" href="/explore/applets">Applets</a>
+              </li>
+              <li>
+                <a alt="IFTTT MCP" title="IFTTT MCP" href="/mcp">IFTTT MCP</a>
+              </li>
+              <li>
+                <a alt="Help Center" title="Help Center" href="/hc/en-us">Help Center</a>
+              </li>
+              <li>
+                <a alt="Content Map" title="Content Map" href="/content_map">Content Map</a>
+              </li>
+              <li>
+                <a alt="Search" title="Search" href="/explore">Search</a>
+              </li>
+              <li>
+                <a alt="Plans" title="Plans" href="/plans">Plans</a>
+              </li>
+              <li>
+                <a alt="Developer docs" title="Developer docs" href="/docs/api_reference">Developer docs</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section top-integrations">
+        <div class="section-header">
+          Top Integrations
+        </div>
+          <ul>
+              <li>
+                <a alt="Discord and Instagram" title="Discord and Instagram" href="/connect/discord/instagram">Discord and Instagram</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Notion" title="iOS Calendar and Notion" href="/connect/ios_calendar/notion_so">iOS Calendar and Notion</a>
+              </li>
+              <li>
+                <a alt="Google Calendar and Google Sheets" title="Google Calendar and Google Sheets" href="/connect/google_calendar/google_sheets">Google Calendar and Google Sheets</a>
+              </li>
+              <li>
+                <a alt="Google Assistant and My Q" title="Google Assistant and My Q" href="/connect/google_assistant_v2/myq_devices">Google Assistant and My Q</a>
+              </li>
+              <li>
+                <a alt="BotGhost and Spotify" title="BotGhost and Spotify" href="/connect/botghost/spotify">BotGhost and Spotify</a>
+              </li>
+              <li>
+                <a alt="SMS and Twitter" title="SMS and Twitter" href="/connect/sms/twitter">SMS and Twitter</a>
+              </li>
+              <li>
+                <a alt="iOS Reminders and Notion" title="iOS Reminders and Notion" href="/connect/ios_reminders/notion_so">iOS Reminders and Notion</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Todoist" title="iOS Calendar and Todoist" href="/connect/ios_calendar/todoist">iOS Calendar and Todoist</a>
+              </li>
+              <li>
+                <a alt="Telegram and Twitter" title="Telegram and Twitter" href="/connect/telegram/twitter">Telegram and Twitter</a>
+              </li>
+              <li>
+                <a alt="Discord and Twitter" title="Discord and Twitter" href="/connect/discord/twitter">Discord and Twitter</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section latest-stories">
+        <div class="section-header">
+          <a title="Latest Stories" href="/explore/stories">Latest Stories</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="How to automate with AI" title="How to automate with AI" href="/explore/how-to-automate-with-ai">How to automate with AI</a>
+              </li>
+              <li>
+                <a alt="Best Twitter automation tools" title="Best Twitter automation tools" href="/explore/best-twitter-automation-tools">Best Twitter automation tools</a>
+              </li>
+              <li>
+                <a alt="Best time management apps and tools" title="Best time management apps and tools" href="/explore/best-time-management-apps-strategies-and-tools">Best time management apps and tools</a>
+              </li>
+              <li>
+                <a alt="What is workflow automation?" title="What is workflow automation?" href="/explore/what-is-workflow-automation">What is workflow automation?</a>
+              </li>
+              <li>
+                <a alt="How to use RSS Feeds" title="How to use RSS Feeds" href="/explore/how-to-use-rss-feeds">How to use RSS Feeds</a>
+              </li>
+              <li>
+                <a alt="What are webhooks?" title="What are webhooks?" href="/explore/what-are-webhooks">What are webhooks?</a>
+              </li>
+              <li>
+                <a alt="11 best Pomodoro productivity apps" title="11 best Pomodoro productivity apps" href="/explore/best-pomodoro-productivity-apps">11 best Pomodoro productivity apps</a>
+              </li>
+              <li>
+                <a alt="How to automate Threads" title="How to automate Threads" href="/explore/how-to-automate-threads">How to automate Threads</a>
+              </li>
+              <li>
+                <a alt="How to automate social media posts" title="How to automate social media posts" href="/explore/how-to-automate-social-media-posts">How to automate social media posts</a>
+              </li>
+              <li>
+                <a alt="Best social media tools for automation" title="Best social media tools for automation" href="/explore/best-automation-tools-social-media">Best social media tools for automation</a>
+              </li>
+          </ul>
+      </div>
+    <div class="footer-section company">
+      <div class="section-header">Company</div>
+      <ul>
+        <li><a alt="Developers" title="Developers" href="/developers">Developers</a></li>
+        <li><a alt="Partner program" title="Partner program" href="/partners">Partner program</a></li>
+        <li><a alt="Careers" title="Careers" href="/careers">Careers</a></li>
+        <li><a alt="Contact" title="Contact" href="/contact">Contact</a></li>
+        <li><a alt="About" title="About" href="/about">About</a></li>
+        <li><a alt="Privacy" title="Privacy" href="/privacy">Privacy</a></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer-section download">
+      <ul class="download-buttons">
+        <li>
+          <a title="Download on the App Store" aria-label="The Apple App Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fitunes.apple.com%2Fapp%2Fapple-store%2Fid660944635%3Fpt%3D1752682%26ct%3D%2Fdocs%2Fapplets%26mt%3D8">
+            <img alt="" title="Download on the App Store" loading="lazy" width="136" height="40" src="/assets/asset-000099.svg">
+</a>        </li>
+        <li>
+          <a title="Get it on Google Play" aria-label="The Google Play Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.ifttt.ifttt%26utm_source%3D%2Fdocs%2Fapplets%26utm_medium%3Dweb">
+            <img alt="" title="Get it on Google Play" loading="lazy" width="136" height="42" src="/assets/asset-000100.svg">
+</a>        </li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom-container">
+      <div class="group group-social">
+        <a class="social-icon" alt="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.facebook.com%2Fifttt">
+          <img alt="Facebook" title="Facebook" loading="lazy" width="28" height="28" src="/assets/asset-000102.svg">
+</a>
+        <a class="social-icon" alt="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fifttt%2F">
+          <img alt="LinkedIn" title="LinkedIn" loading="lazy" width="28" height="28" src="/assets/asset-000101.svg">
+</a>
+        <a class="social-icon" alt="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.instagram.com%2Fiftttapp%2F">
+          <img alt="Instagram" title="Instagram" loading="lazy" width="28" height="28" src="/assets/asset-000103.svg">
+</a>
+        <a class="social-icon" alt="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.youtube.com%2F%40IFTTT">
+          <img alt="YouTube" title="YouTube" loading="lazy" width="28" height="28" src="/assets/asset-000104.svg">
+</a>
+        <a class="social-icon" alt="Twitter" title="Twitter" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Ftwitter.com%2FIFTTT">
+          <img alt="Twitter" title="Twitter" loading="lazy" width="28" height="28" src="/assets/asset-000105.svg">
+</a>
+        <a class="social-icon" alt="TikTok" title="TikTok" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.tiktok.com%2F%40iftttapp">
+          <img alt="TikTok" title="TikTok" loading="lazy" width="28" height="28" src="/assets/asset-000106.svg">
+</a>
+        <a class="social-icon" alt="Reddit" title="Reddit" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fifttt%2F">
+          <img alt="Reddit" title="Reddit" loading="lazy" width="28" height="28" src="/assets/asset-000107.svg">
+</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+<div style="position: absolute; top: 50vh; height: 1px; width: 100%;"></div><script src="/local.js" defer></script></body></html>

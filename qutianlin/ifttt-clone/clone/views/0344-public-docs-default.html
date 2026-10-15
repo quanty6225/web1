@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en"><head>
+    <link rel="preload" href="/assets/asset-000002.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000004.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000003.woff2" as="font" type="font/woff2">
+
+<style>
+/* IFTTT.ai rebrand — Museo Sans Rounded (site-wide base font). One @font-face per Museo cut; */
+/* CSS font-weight == the cut number (300 Light / 500 Regular / 700 body / 900 headings). */
+/* NB: map by cut name, not the weight Figma's inspect panel shows — a designer's desktop copy */
+/* may report ~200 less (700 for the 900 cut); these files carry OS/2 weight == cut number. */
+
+/* Museo Sans Rounded 300 (light) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 300;
+  src: url("/assets/dependency-000100.woff2") format("woff2"),
+    url("/assets/dependency-000101.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 500 (regular) — covers CSS 400–600 */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 500 600;
+  src: url("/assets/asset-000002.woff2") format("woff2"),
+    url("/assets/dependency-000102.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 700 (body) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 700;
+  src: url("/assets/asset-000004.woff2") format("woff2"),
+    url("/assets/dependency-000104.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 900 (black) — display headings */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 900;
+  src: url("/assets/asset-000003.woff2") format("woff2"),
+    url("/assets/dependency-000106.woff") format("woff");
+  font-display: swap;
+}
+
+/* Metric-matched fallback for the swap window: Avenir Next scaled to the Museo advance widths, with */
+/* the Museo line box (hhea 940/-260 divided by size-adjust), so the change to Museo moves no layout. */
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 500 600;
+  src: local("Avenir Next Medium"), local("AvenirNext-Medium");
+  size-adjust: 98.0%;
+  ascent-override: 95.92%;
+  descent-override: 26.53%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 700;
+  src: local("Avenir Next Bold"), local("AvenirNext-Bold");
+  size-adjust: 94.5%;
+  ascent-override: 99.47%;
+  descent-override: 27.51%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 900;
+  src: local("Avenir Next Heavy"), local("AvenirNext-Heavy");
+  size-adjust: 90.2%;
+  ascent-override: 104.21%;
+  descent-override: 28.82%;
+  line-gap-override: 0%;
+}
+
+/* Museo Sans Rounded 500 / 700 italic — fetched only by pages that set font-style: italic. */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 500 600;
+  src: url("/assets/asset-000981.woff2") format("woff2"),
+    url("/assets/dependency-000103.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/asset-001589.woff2") format("woff2"),
+    url("/assets/dependency-000105.woff") format("woff");
+  font-display: swap;
+}
+</style>
+
+    <!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0">
+<meta name="mobile-web-app-capable" content="yes">
+
+
+
+
+  <title>Documentation - Build your integration - IFTTT</title>
+<meta name="description" content="Before you begin building, get acclimated with how IFTTT works.">
+<meta name="keywords" content="ifttt applets connect connections integrate integration automate automation services recipes trigger action ifthisthenthat free">
+<meta property="al:ios:url" content="ifttt://">
+<meta property="al:ios:app_store_id" content="660944635">
+<meta property="al:ios:app_name" content="IFTTT">
+<meta property="fb:app_id" content="122259781154546">
+<meta property="fb:admins" content="7302486">
+<meta property="og:title" content="Documentation - Build your integration - IFTTT">
+<meta property="og:description" content="Before you begin building, get acclimated with how IFTTT works.">
+<meta property="og:site_name" content="IFTTT">
+<meta property="og:url" content="https://ifttt.com/docs">
+<meta property="og:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@IFTTT">
+<meta name="twitter:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta name="twitter:app:id:iphone" content="660944635">
+<meta name="twitter:app:id:ipad" content="660944635">
+<meta name="twitter:app:id:googleplay" content="com.ifttt.ifttt">
+<meta name="twitter:app:url:iphone" content="ifttt://">
+<meta name="twitter:app:url:ipad" content="ifttt://">
+<meta name="twitter:app:url:googleplay" content="ifttt://">
+<meta name="twitter:app:name:googleplay" content="IFTTT">
+<meta name="author" content="IFTTT">
+<meta name="copyright" content="Copyright 2026 IFTTT Inc.">
+<meta name="theme-color" content="">
+<meta name="facebook-domain-verification" content="tapueff3rri63aug9c5b7hapbv3mkv">
+
+<!-- Standard SVG Favicon -->
+<link rel="icon" href="/assets/dependency-000091.svg" type="image/svg+xml">
+
+<!-- For all Apple Devices: -->
+<link rel="apple-touch-icon" href="/assets/dependency-000081.png">
+
+<!-- For Windows 8: -->
+<meta name="msapplication-TileImage" content="https://web-assets.ifttt.com/builds/assets/pinned-Dpomu1wG.png">
+<meta name="msapplication-TileColor" content="#111">
+
+
+
+<link rel="stylesheet" href="/assets/asset-000979.css">
+<link rel="stylesheet" href="/assets/asset-000117.css">
+<link rel="stylesheet" href="/assets/asset-000134.css">
+
+    
+  <link rel="stylesheet" href="/local.css"></head>
+  <body id="docs-body" class="partners-body docs-body get-started-action  false" style="background-color: rgb(255, 255, 255);" data-local-route="/docs" data-local-actor="anonymous" data-local-state="default"><div id="flash-messages"></div>
+  
+      <!-- Google Tag Manager (noscript) -->
+  <noscript></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+    
+
+
+  
+
+  
+
+
+      
+<header class="unified-header signed-out" style="background-color: #fff">
+  <div class="container header">
+    <section class="left-group">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/">
+  <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt" style="fill: #111"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>
+    </section>
+
+      <section class="right-group signed-out">
+        <a class="nav-link link-menu" title="Explore" href="/explore">
+          Explore
+</a>
+        <a class="nav-link link-menu" title="Plans" href="/plans">
+          Plans
+</a>
+        <a class="sign-in button-tertiary button-outlined " href="/login">Log in</a>
+
+          <a title="Get started" class="button-tertiary  sign-up signed-out" href="/join?source=site-header">
+            Get started
+</a>      </section>
+      <section class="mobile-icon">
+        
+<span id="unified_mobile_menu" role="button" class="closed" tabindex="0">
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hamburger-icon">
+    <title>Mobile menu</title>
+    <g fill="#111" id="mobile-hamburger-icon">
+      <path d="M19.6504 15C20.5617 15 21.3008 15.7391 21.3008 16.6504C21.3008 17.5617 20.5617 18.3008 19.6504 18.3008H1.65039C0.739121 18.3008 0 17.5617 0 16.6504C0 15.7391 0.739121 15 1.65039 15H19.6504ZM19.6504 7.5C20.5617 7.5 21.3008 8.23912 21.3008 9.15039C21.3008 10.0617 20.5617 10.8008 19.6504 10.8008H1.65039C0.739121 10.8008 0 10.0617 0 9.15039C0 8.23912 0.739121 7.5 1.65039 7.5H19.6504ZM19.6504 0C20.5617 0 21.3008 0.739121 21.3008 1.65039C21.3008 2.56166 20.5617 3.30078 19.6504 3.30078H1.65039C0.739121 3.30078 0 2.56166 0 1.65039C0 0.739121 0.739121 0 1.65039 0H19.6504Z" transform="translate(1.35 2.85)"></path>
+    </g>
+  </svg>
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="close-icon">
+    <title>Close menu</title>
+    <path fill="#111" d="M16.4901 0.535065C17.1612 -0.160319 18.2692 -0.180639 18.9648 0.490143C19.66 1.16128 19.6797 2.26933 19.0087 2.96475L12.1815 10.0399L18.4482 16.5351C19.1189 17.2305 19.0993 18.3377 18.4042 19.0087C17.7088 19.6797 16.6007 19.66 15.9296 18.9648L9.74991 12.5595L3.57022 18.9648C2.89918 19.6602 1.79112 19.6796 1.09561 19.0087C0.400326 18.3376 0.380671 17.2305 1.05167 16.5351L7.31729 10.0399L0.490143 2.96475C-0.180639 2.26923 -0.160319 1.16115 0.535065 0.490143C1.23058 -0.180569 2.3377 -0.16026 3.0087 0.535065L9.74893 7.52042L16.4901 0.535065Z" transform="translate(2.25 2.25)"></path>
+  </svg>
+</span>
+
+
+      </section>
+  </div>
+
+</header>
+
+
+    <div class="platform-bg_color-container">
+        <nav class="tabbed-nav kb-nav">
+    <div class="container">
+      
+        
+        
+        
+        
+        
+<ul><li class="active first"><a class="link-menu" href="/docs">Get started</a></li><li><a class="link-menu" href="/docs/api_reference">Service API</a></li><li><a class="link-menu" href="/docs/connect_api">Connect API</a></li><li><a class="link-menu" href="/docs/example_services">Example Services</a></li><li class="last"><a class="link-menu" href="/docs/faq">FAQ</a></li></ul>    </div>
+  </nav>
+
+  <div class="container">
+    <div class="docs-content">
+
+        <div class="toc-sidebar link-menu">
+          <nav class="sidebar-nav">
+            <ul>
+<li><a href="#get-started" class="active">Get started</a></li>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#1-plan-your-integration">Plan</a></li>
+<li><a href="#2-build-the-integration">Build</a>
+
+<ul>
+<li><a href="#development">Development</a></li>
+<li><a href="#testing">Testing</a></li>
+<li><a href="#submit-your-service-for-review">Submit for review</a></li>
+<li><a href="#step-by-step-walkthrough">Step-by-step walkthrough</a></li>
+</ul></li>
+<li><a href="#3-launch-and-market-your-service">Launch and market your service</a>
+
+<ul>
+<li><a href="#landing-page">Landing page</a></li>
+<li><a href="#works-with-ifttt-badges">Works with IFTTT badges</a></li>
+<li><a href="#social-media">Social media</a></li>
+<li><a href="#email-campaigns">Email campaigns</a></li>
+<li><a href="#blog-posts">Blog posts</a></li>
+<li><a href="#video">Video</a></li>
+<li><a href="#contests-and-giveaways">Contests and giveaways</a></li>
+<li><a href="#co-marketing-with-ifttt">Co-marketing with IFTTT</a></li>
+</ul></li>
+</ul>
+
+            <br>
+          </nav>
+        </div>
+
+      <div class="docs-main-content">
+        <div class="hero">
+  <div>
+    <h1 id="get-started">
+      Get started: Free and powerful integrations with IFTTT
+    </h1>
+    <img title="Get started" alt="Get started" class="hero" loading="eager" src="/assets/asset-001803.png">
+    <p>
+      It's easy to work with familiar and relevant brands: from the latest bots and
+      IoT, to the world’s most famous voice-activated assistant. As a developer,
+      you can publish a service, build Applets, and embed them directly in your app
+      or website, all for free.
+    </p>
+  </div>
+</div>
+
+<h3 id="overview">Overview</h3>
+
+<p>Before you begin building anything, you should first get acclimated with how IFTTT works to understand the user experience. Below is a short introduction and we'll cover these topics in more detail later on in this guide.</p>
+
+<p>If you already know how IFTTT works, you can <a href="#1-plan-your-integration">skip ahead</a>.</p>
+
+<h3 id="services">Services</h3>
+
+<p>Services are the basic building blocks of IFTTT. Some examples of services are <a href="/amazon_alexa">Amazon Alexa</a>, <a href="/twitter">Twitter</a>, <a href="/dropbox">Dropbox</a>, <a href="/fitbit">Fitbit</a>, and <a href="/ecobee">ecobee</a>. Each of your products will be represented on IFTTT as a service. Each of your services will have their own dedicated landing page on IFTTT, called a "service page."</p>
+
+<p><img alt="Service page example" loading="lazy" title="Service page" src="/assets/asset-001805.png"></p>
+
+<h3 id="applets">Applets</h3>
+
+<p>We bring services together into Applets. An Applet is an automation workflow that connects two or more services together and allows users to do something that those services couldn't do on their own. For example, you could use an Applet to <a href="/applets/eX6zn2mD">turn on your Philips Hue lights when your Arlo security camera detects motion</a> or <a href="/applets/HcyvXCPK">pause your iRobot vacuum before your Zoom meetings</a>.</p>
+
+<p>Applets are composed of triggers, queries, and actions. Triggers tell an Applet to start, queries provide additional conditions, and actions are the result of an Applet run. Applets can be published by a service admin or users themselves.</p>
+
+<p><img alt="Applet example" loading="lazy" title="Applet example" src="/assets/asset-001804.png"></p>
+
+<h3 id="triggers-actions-and-queries">Triggers, Actions, and Queries</h3>
+
+<p>Your product's API consists of various endpoints used to get, write, or send data. Each of your API's endpoints will map 1-to-1 to a trigger, action, or query that you want to add to your service. Your triggers will be sending data to IFTTT when something happens with your product (e.g. thermostat turned on). Queries are a way for IFTTT to request additional data from your product (e.g. List current temperature setting). Your actions will collect instructions that IFTTT sends you to do something with your product (e.g. turn on the device).</p>
+
+<p><img alt="Applet components" loading="lazy" title="Applet components" src="/assets/asset-001807.png"></p>
+
+<p>If you're new to IFTTT, we recommend <a href="/">creating a free account</a> to experience a few Applets for yourself. Here are a few simple Applets worth trying to get the hang of it:</p>
+
+<ul>
+<li><a class="link-standalone" href="/applets/Zv56ZXwR">Get a daily email with the weather report</a></li>
+<li><a class="link-standalone" href="/applets/VDdNBmiE">Get a notification when the ISS passes over your house but only if it is clear skies and after dark</a></li>
+</ul>
+
+<h2 id="1-plan-your-integration">1. Plan your integration</h2>
+
+<p>Now that you understand the IFTTT user experience, it's time to apply your product to these basic concepts. Think about how your users commonly experience and interact with your device, app, or service:</p>
+
+<ul>
+<li>What are the most popular and useful features or functions?</li>
+<li>Which of these are currently supported by your API?</li>
+</ul>
+
+<p>This is the best place to start when thinking about how your IFTTT integration will work and what triggers, queries, and actions to include. Start with a handful of the most obvious triggers, queries, and actions and expand later.</p>
+
+<p>Make sure to always keep in mind what the user experience will look like and what use cases your integration will support because of the triggers, queries, and actions that you have.</p>
+
+<p><strong><em>Pro tip: Learn from other similar services. If you need help figuring out what might be most useful to your users, you can browse our services catalog for similar products and use the triggers, queries, and actions they support as things to consider.</em></strong></p>
+
+<p>Some of the best IFTTT integrations are the result of product managers, marketing teams, and engineers all working together. This teamwork will ensure that what you plan to build aligns with the user experiences you want to create and advertise.</p>
+
+<p>As part of your planning, make sure to read through our guidelines and recommendations for <a href="/docs/guidelines">designing a successful IFTTT integration</a>.</p>
+
+<h2 id="2-build-the-integration">2. Build the integration</h2>
+
+<p>Building your IFTTT integration will be done in three stages:</p>
+
+<h3 id="development">Development</h3>
+
+<h4 id="set-up-your-environment">Set up your environment</h4>
+
+<p>You'll first need to add an IFTTT compatibility layer to your API so that the IFTTT Platform can understand your endpoints and translate them into each trigger, query and action that you want to include as part of your service. We recommend two strategies for doing this:</p>
+
+<ul>
+<li><strong>Most common:</strong> Deploy a "shim app" that sits between your API and IFTTT. This app will translate resources from your API into responses IFTTT can understand.</li>
+</ul>
+
+<p><img alt="Architecture diagram" loading="lazy" title="Architecture diagram" src="/assets/asset-001806.png"></p>
+
+<ul>
+<li>Add IFTTT-specific endpoints directly to your API. These endpoints can source data from your existing API and serve them in responses IFTTT can understand.</li>
+</ul>
+
+<p>If you don't have an API, our <a href="/docs/api_reference">documentation</a> will guide you through its development with straightforward requirements.</p>
+
+<h4 id="create-your-service-on-the-ifttt-platform">Create your service on the IFTTT Platform</h4>
+
+<p>Once your API environment is properly configured to speak to IFTTT, you'll navigate to your Platform dashboard to create a new service. If you have multiple, uniquely different products (e.g. a thermostat, a dishwasher, and an air purifier), it is advised that you create a separate service for each of them.</p>
+
+<p>You'll then begin to build the features of your integration in accordance with our <a href="/docs/guidelines">service design guide</a> and <a href="/docs/api_reference">developer documentation</a>.</p>
+
+<h3 id="testing">Testing</h3>
+
+<p>You want to make sure that what you are building is working as intended. Therefore, it's strongly recommended that you test each component of your integration at every stage of its development.</p>
+
+<p>The IFTTT Platform provides you with robust endpoint and authentication testing tools that will help you to rapidly develop your triggers, queries, and actions with the peace of mind that they're compatible with IFTTT.</p>
+
+<h4 id="end-to-end-testing-with-applets">End to end testing with Applets</h4>
+
+<p>As you near the completion of your development, set aside some time for testing your newly built IFTTT service end to end. Build and run Applets that use each trigger, query, and action from your service on IFTTT to ensure that everything works as intended and the user experience is as expected.</p>
+
+<h4 id="invite-others-to-test-your-integration">Invite others to test your integration</h4>
+
+<p>After you've tested your service on your own, show off what you've built and collect feedback by inviting others to try it out. Your service's dashboard includes an Invite URL that allows you to give up to 25 people special preview access to your service.</p>
+
+<p><strong><em>Note: Your invitees must first have their own IFTTT account in order to preview your service and test it with Applets. If they don't yet have an IFTTT account, they can create one for free from the Invite URL.</em></strong></p>
+
+<p>It's a good idea to have a few ready-made Applets available for your invitees to easily enable. However, your invitees can still test your service by creating their own Applets with other services of their choosing. Make sure to first brief them on how to enable or create an Applet, then follow up to hear of their experiences and any feedback they might have.</p>
+
+<h3 id="submit-your-service-for-review">Submit your service for review</h3>
+
+<p>Once you've finished developing and testing your IFTTT integration and you're confident that your service will delight users, it's time to submit it for IFTTT to review.</p>
+
+<p>You can find the submit link under the "Publish" tab on your service's dashboard. IFTTT does an internal review process before a service can be pushed into production. This process can take up to a week depending on when we receive your submission and how much feedback we have.</p>
+
+<p>If our team has any feedback or concerns, we'll send you an email and you'll be able to view our comments on the review page next to each element. Feel free to re-submit the service once you've addressed the feedback and respond via the comments.</p>
+
+<p>Below are common reasons for services not passing the review on the first try:</p>
+
+<ul>
+<li>Applet logo is not a white vector image on transparent background.</li>
+<li>Authentication or endpoint tests are not passing at the time of review.</li>
+<li>Authentication flow does not mention IFTTT or does not include a consent message.</li>
+<li>Support email is a personal address.</li>
+<li>Service copy is incomplete, confusing, contains placeholders, styling, or grammar issues. This covers everything from service name and description to verbiage and helper text on individual triggers, queries, or actions.</li>
+<li>A query you've built doesn't have a practical application.</li>
+</ul>
+
+<p>Once your service has been approved, we'll send you an email asking you to fill out the pre-launch marketing form. In this form, we'll ask for the date on which you'd like the service to be published on IFTTT. Before your service is published, we'll do a final review to make sure that the service's endpoint and authentication tests are passing, and that you have at least twelve published Applets ready for users to begin their experience with.</p>
+
+<h3 id="step-by-step-walkthrough">Step-by-step walkthrough</h3>
+
+<div class="introduction">
+  <div class="walkthrough">
+    <div class="videos">
+        <video controls="controls" preload="metadata" src="/assets/video-xkP_W9n21Nc.mp4" style="width:100%;max-height:70vh"></video><video controls="controls" preload="metadata" src="/assets/video-qnj1XKTZfjQ.mp4" style="width:100%;max-height:70vh"></video><video controls="controls" preload="metadata" src="/assets/video-QwvPzcsYgh4.mp4" style="width:100%;max-height:70vh"></video></div>
+  </div>
+</div>
+
+<h2 id="3-launch-and-market-your-service">3. Launch and market your service</h2>
+
+<p>Once your service has been approved by IFTTT, it's time to publish and share it with the world! On your launch date, your integration will go live and ready for all to use.</p>
+
+<p>Users already on IFTTT may discover your service organically, but to see the best adoption possible, you'll want to spread the word that you're now on IFTTT. Marketing your service effectively and often is the best way to guarantee it'll be a success.</p>
+
+<p>Below is a blueprint for how to successfully market your service. Follow our <a href="/explore/brand-guidelines">brand guidelines</a> where necessary.</p>
+
+<h3 id="landing-page">Landing page</h3>
+
+<p>Show off your service on your website. This is one of the most effective ways to showcase your new IFTTT integration to your users. We're happy to help with the details, but a landing page on your own website gives you the freedom to showcase your IFTTT service in your own style. You can use video, photos, and copy that make it clear that your IFTTT service is a natural extension of your brand.</p>
+
+<p>From an SEO and discoverability perspective, these pages act as important top-of-the-funnel tools and help people learn more about the features of your service before they become customers. "Works with IFTTT" is a powerful badge — wear it with pride on your site!</p>
+
+<p><img alt="Philips hue landing page" loading="lazy" title="Landing page hue" src="/assets/dependency-000233.png"></p>
+
+<h3 id="works-with-ifttt-badges">Works with IFTTT badges</h3>
+
+<p>Make sure to tell the world that you work with IFTTT on your packaging, website, digital properties, and trade show displays. Use badges in marketing material to promote your integrations, too. You may place these next to other <em>Works with</em> or <em>Download on</em> badges like Google Play, App Store, Google Assistant, and Amazon Alexa.</p>
+
+<p><img alt="Example Works with IFTTT badges" loading="lazy" title="Example badges" src="/assets/dependency-000231.jpg"></p>
+
+<p>On request, we can also create customized <em>Works with IFTTT</em> badges that feature your service icon or logo.</p>
+
+<p><img alt="Custom Works with IFTTT badges" loading="lazy" title="Custom badges" src="/assets/dependency-000230.jpg"></p>
+
+<h3 id="social-media">Social media</h3>
+
+<p>Shout about it! Social media is the perfect way to start a conversation. Post about your service's launch, of course. But don't stop there — share favorite Applets regularly along with the link to your service page on IFTTT. People follow you for a reason — they want to know more! Make sure to take advantage of this engaged audience that's opted-in to hear from you regularly.</p>
+
+<p>This is also an opportunity to collect user feedback. Ask questions, and listen — which Applets do people want to see from you? What triggers or actions are you missing? The next game-changing idea may come to you in a Tweet.</p>
+
+<p>Remember to tag @IFTTT in your posts so we can help spread the word — we've got an itchy RT finger!</p>
+
+<p><img alt="Social media example" loading="lazy" title="Social media example" src="/assets/dependency-000239.png"></p>
+
+<h3 id="email-campaigns">Email campaigns</h3>
+
+<p>Subject: We're on IFTTT :-). When it comes to email marketing your IFTTT integration, we recommend a two-part approach:</p>
+
+<ol>
+<li><p>At launch time, send a one-off announcement to your user base, highlighting the new functionality and some amazing Applets.</p></li>
+<li><p>Include IFTTT in your on-boarding email or email campaign, so that new users can get up to speed on everything your service offers.</p></li>
+</ol>
+
+<p>You'll also want to email users when you make improvements to your service, such as adding new triggers and actions or building an exciting Applet with a new partner.</p>
+
+<p><img alt="Email example" loading="lazy" title="Litter robot email" src="/assets/dependency-000234.png"></p>
+
+<h3 id="blog-posts">Blog posts</h3>
+
+<p>Tell the story of your service. You may use your blog for major product updates, heartfelt user stories, tips, thought leadership, SEO — or for all of the above. Whatever your publishing criteria, there's a way to tell the story of your IFTTT service in a natural way. And you'll want to: a blog post is the perfect way to highlight the value of your new integration and link to must-have Applets.</p>
+
+<p>It will help you control the story on launch day, and will always be a place where people can go to get more context, straight from the source.</p>
+
+<p>The story shouldn't end at launch, either — if you make updates to your service or uncover interesting data from your IFTTT users, it may be time to write another post.</p>
+
+<h3 id="video">Video</h3>
+
+<p>Your service is the star. Marketers have been investing in more video content year-over-year for one simple reason: it works. No need to hire Steven Spielberg — it's just about telling your story in an authentic way.</p>
+
+<p>Highlight some Applets, demo the in-app integration — even a screen grab video can be engaging if it's showing the viewer something that will make their life better/easier/cooler. Still stuck on what to film? Mix this best practice with a contest and see if you can incentivize your users to create their own videos showing off your service.</p>
+
+<video controls="controls" preload="metadata" src="/assets/video-4CChLSXqS6k.mp4" style="width:100%;max-height:70vh"></video><h3 id="contests-and-giveaways">Contests and giveaways</h3>
+
+<p>Harness your community's creativity. Run a contest or a giveaway to get people excited about your service. Ask for Applet ideas in exchange for the chance to win a product. Or ask people to spread the word about your new service with a specific hashtag or referral link in order to unlock a discount. You may be blown away by the creativity and enthusiasm hiding in your community!</p>
+
+<p>We're happy to help co-market these campaigns with social or blog support.</p>
+
+<h3 id="co-marketing-with-ifttt">Co-marketing with IFTTT</h3>
+
+<p>We're invested in your success so we're happy to help promote your service and tell the world all about it. Contact our partnerships team at <a href="/external?url=mailto%3Apartnerships%40ifttt.com">partnerships@ifttt.com</a> to learn more.</p>
+
+      </div>
+    </div>
+  </div>
+
+    </div>
+
+    <footer class="site-footer ifttt_next_bucket">
+    <a class="pro-upsell pro-ad" title="Try IFTTT Pro" href="/subscriptions/pro">
+        <div class="pro-upsell-text">
+          <span class="logo">
+            <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+            <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#111"></path></svg>
+          </span>
+          <span class="pro-upsell-heading">Automate more, effortlessly.</span>
+        </div>
+
+        <div class="button-secondary button-on-color">
+            Try it free
+        </div>
+</a>  <div class="footer-top-container">
+    <div class="logo-container">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/">
+        <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="ifttt-logo" title="IFTTT" style="fill: white"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>    </div>
+
+    <div class="footer-sections">
+      <div class="footer-section explore">
+        <div class="section-header">
+          <a title="Explore" href="/explore">Explore</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="Services" title="Services" href="/explore/services">Services</a>
+              </li>
+              <li>
+                <a alt="Stories" title="Stories" href="/explore/stories">Stories</a>
+              </li>
+              <li>
+                <a alt="Applets" title="Applets" href="/explore/applets">Applets</a>
+              </li>
+              <li>
+                <a alt="IFTTT MCP" title="IFTTT MCP" href="/mcp">IFTTT MCP</a>
+              </li>
+              <li>
+                <a alt="Help Center" title="Help Center" href="/hc/en-us">Help Center</a>
+              </li>
+              <li>
+                <a alt="Content Map" title="Content Map" href="/content_map">Content Map</a>
+              </li>
+              <li>
+                <a alt="Search" title="Search" href="/explore">Search</a>
+              </li>
+              <li>
+                <a alt="Plans" title="Plans" href="/plans">Plans</a>
+              </li>
+              <li>
+                <a alt="Developer docs" title="Developer docs" href="/docs/api_reference">Developer docs</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section top-integrations">
+        <div class="section-header">
+          Top Integrations
+        </div>
+          <ul>
+              <li>
+                <a alt="Discord and Instagram" title="Discord and Instagram" href="/connect/discord/instagram">Discord and Instagram</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Notion" title="iOS Calendar and Notion" href="/connect/ios_calendar/notion_so">iOS Calendar and Notion</a>
+              </li>
+              <li>
+                <a alt="Google Calendar and Google Sheets" title="Google Calendar and Google Sheets" href="/connect/google_calendar/google_sheets">Google Calendar and Google Sheets</a>
+              </li>
+              <li>
+                <a alt="Google Assistant and My Q" title="Google Assistant and My Q" href="/connect/google_assistant_v2/myq_devices">Google Assistant and My Q</a>
+              </li>
+              <li>
+                <a alt="BotGhost and Spotify" title="BotGhost and Spotify" href="/connect/botghost/spotify">BotGhost and Spotify</a>
+              </li>
+              <li>
+                <a alt="SMS and Twitter" title="SMS and Twitter" href="/connect/sms/twitter">SMS and Twitter</a>
+              </li>
+              <li>
+                <a alt="iOS Reminders and Notion" title="iOS Reminders and Notion" href="/connect/ios_reminders/notion_so">iOS Reminders and Notion</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Todoist" title="iOS Calendar and Todoist" href="/connect/ios_calendar/todoist">iOS Calendar and Todoist</a>
+              </li>
+              <li>
+                <a alt="Telegram and Twitter" title="Telegram and Twitter" href="/connect/telegram/twitter">Telegram and Twitter</a>
+              </li>
+              <li>
+                <a alt="Discord and Twitter" title="Discord and Twitter" href="/connect/discord/twitter">Discord and Twitter</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section latest-stories">
+        <div class="section-header">
+          <a title="Latest Stories" href="/explore/stories">Latest Stories</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="How to automate with AI" title="How to automate with AI" href="/explore/how-to-automate-with-ai">How to automate with AI</a>
+              </li>
+              <li>
+                <a alt="Best Twitter automation tools" title="Best Twitter automation tools" href="/explore/best-twitter-automation-tools">Best Twitter automation tools</a>
+              </li>
+              <li>
+                <a alt="Best time management apps and tools" title="Best time management apps and tools" href="/explore/best-time-management-apps-strategies-and-tools">Best time management apps and tools</a>
+              </li>
+              <li>
+                <a alt="What is workflow automation?" title="What is workflow automation?" href="/explore/what-is-workflow-automation">What is workflow automation?</a>
+              </li>
+              <li>
+                <a alt="How to use RSS Feeds" title="How to use RSS Feeds" href="/explore/how-to-use-rss-feeds">How to use RSS Feeds</a>
+              </li>
+              <li>
+                <a alt="What are webhooks?" title="What are webhooks?" href="/explore/what-are-webhooks">What are webhooks?</a>
+              </li>
+              <li>
+                <a alt="11 best Pomodoro productivity apps" title="11 best Pomodoro productivity apps" href="/explore/best-pomodoro-productivity-apps">11 best Pomodoro productivity apps</a>
+              </li>
+              <li>
+                <a alt="How to automate Threads" title="How to automate Threads" href="/explore/how-to-automate-threads">How to automate Threads</a>
+              </li>
+              <li>
+                <a alt="How to automate social media posts" title="How to automate social media posts" href="/explore/how-to-automate-social-media-posts">How to automate social media posts</a>
+              </li>
+              <li>
+                <a alt="Best social media tools for automation" title="Best social media tools for automation" href="/explore/best-automation-tools-social-media">Best social media tools for automation</a>
+              </li>
+          </ul>
+      </div>
+    <div class="footer-section company">
+      <div class="section-header">Company</div>
+      <ul>
+        <li><a alt="Developers" title="Developers" href="/developers">Developers</a></li>
+        <li><a alt="Partner program" title="Partner program" href="/partners">Partner program</a></li>
+        <li><a alt="Careers" title="Careers" href="/careers">Careers</a></li>
+        <li><a alt="Contact" title="Contact" href="/contact">Contact</a></li>
+        <li><a alt="About" title="About" href="/about">About</a></li>
+        <li><a alt="Privacy" title="Privacy" href="/privacy">Privacy</a></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer-section download">
+      <ul class="download-buttons">
+        <li>
+          <a title="Download on the App Store" aria-label="The Apple App Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fitunes.apple.com%2Fapp%2Fapple-store%2Fid660944635%3Fpt%3D1752682%26ct%3D%2Fdocs%26mt%3D8">
+            <img alt="" title="Download on the App Store" loading="lazy" width="136" height="40" src="/assets/asset-000099.svg">
+</a>        </li>
+        <li>
+          <a title="Get it on Google Play" aria-label="The Google Play Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.ifttt.ifttt%26utm_source%3D%2Fdocs%26utm_medium%3Dweb">
+            <img alt="" title="Get it on Google Play" loading="lazy" width="136" height="42" src="/assets/asset-000100.svg">
+</a>        </li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom-container">
+      <div class="group group-social">
+        <a class="social-icon" alt="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.facebook.com%2Fifttt">
+          <img alt="Facebook" title="Facebook" loading="lazy" width="28" height="28" src="/assets/asset-000102.svg">
+</a>
+        <a class="social-icon" alt="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fifttt%2F">
+          <img alt="LinkedIn" title="LinkedIn" loading="lazy" width="28" height="28" src="/assets/asset-000101.svg">
+</a>
+        <a class="social-icon" alt="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.instagram.com%2Fiftttapp%2F">
+          <img alt="Instagram" title="Instagram" loading="lazy" width="28" height="28" src="/assets/asset-000103.svg">
+</a>
+        <a class="social-icon" alt="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.youtube.com%2F%40IFTTT">
+          <img alt="YouTube" title="YouTube" loading="lazy" width="28" height="28" src="/assets/asset-000104.svg">
+</a>
+        <a class="social-icon" alt="Twitter" title="Twitter" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Ftwitter.com%2FIFTTT">
+          <img alt="Twitter" title="Twitter" loading="lazy" width="28" height="28" src="/assets/asset-000105.svg">
+</a>
+        <a class="social-icon" alt="TikTok" title="TikTok" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.tiktok.com%2F%40iftttapp">
+          <img alt="TikTok" title="TikTok" loading="lazy" width="28" height="28" src="/assets/asset-000106.svg">
+</a>
+        <a class="social-icon" alt="Reddit" title="Reddit" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fifttt%2F">
+          <img alt="Reddit" title="Reddit" loading="lazy" width="28" height="28" src="/assets/asset-000107.svg">
+</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+<div style="position: absolute; top: 50vh; height: 1px; width: 100%;"></div><script src="/local.js" defer></script></body></html>

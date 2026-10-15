@@ -1,0 +1,93 @@
+{
+  "keep_up_with_tweets": {
+    "title": "Keep up with a user’s Tweets",
+    "description": "When a specific user Tweets, this Applet will send it to your phone during the day (between 8 AM and 10 PM) or save it to Feedly at night.",
+    "definition": {
+      "trigger": {
+        "module": "/twitter/triggers/new_tweet_by_user",
+        "fields": {
+          "username": "SFBART"
+        },
+        "account": "default"
+      },
+      "actions": [
+        {
+          "module": "/if_notifications/actions/send_notification",
+          "fields": {
+            "message": "@{{UserName}} tweeted: {{Text}}"
+          },
+          "account": "default"
+        },
+        {
+          "module": "/feedly/actions/create_new_entry_feedly",
+          "fields": {
+            "url": "{{LinkToTweet}}"
+          },
+          "account": "default"
+        }
+      ],
+      "queries": [],
+      "delay_seconds": 0,
+      "description": "When a specific user Tweets, this Applet will send it to your phone during the day (between 8 AM and 10 PM) or save it to Feedly at night.",
+      "filter_code": "const hour = Meta.currentUserTime.hour();\nif (hour >= 8 && hour < 22) { Feedly.createNewEntryFeedly.skip(\"Saved notifications for daytime\"); } else { IfNotifications.sendNotification.skip(\"Saved articles for nighttime\"); }"
+    },
+    "unavailable": false,
+    "missing_schema_titles": [],
+    "evidence": "artifacts/capture/ifttt-supplemental-private-management/0005-auth-p-{source_username}-applets-new-from=keep_up_with_tweets-default.json",
+    "filter_provenance": "Local equivalent of the observed template description; not claimed as captured source code."
+  },
+  "ok_google_good_night": {
+    "title": "Say \"OK Google, good night\" to get ready for bed",
+    "description": "Saying \"OK Google, good night\" will activate a LIFX scene and set your Nest Thermostat’s temperature.",
+    "definition": {
+      "trigger": null,
+      "actions": [],
+      "queries": [],
+      "delay_seconds": 0,
+      "description": "Saying \"OK Google, good night\" will activate a LIFX scene and set your Nest Thermostat’s temperature.",
+      "filter_code": ""
+    },
+    "unavailable": true,
+    "missing_schema_titles": [],
+    "evidence": "artifacts/capture/ifttt-supplemental-private-management/0006-auth-p-{source_username}-applets-new-from=ok_google_good_night-default.json",
+    "filter_provenance": null
+  },
+  "post_my_instagram_photos": {
+    "title": "Post my Instagram photos to other services",
+    "description": "This Applet posts your new Instagram photos to Twitter and archives them to Dropbox.",
+    "definition": {
+      "trigger": {
+        "module": "/instagram/triggers/any_new_photo_by_you",
+        "fields": {},
+        "account": "default"
+      },
+      "actions": [
+        {
+          "module": "/dropbox/actions/add_file_from_url",
+          "fields": {
+            "url": "{{SourceUrl}}",
+            "filename": "{{Caption}}",
+            "path": "Apps/IFTTT/Instagram"
+          },
+          "account": "default"
+        },
+        {
+          "module": "/twitter/actions/post_new_tweet_with_image",
+          "fields": {
+            "tweet": "{{Caption}}",
+            "photo_url": "{{SourceUrl}}"
+          },
+          "account": "default"
+        }
+      ],
+      "queries": [],
+      "delay_seconds": 0,
+      "description": "This Applet posts your new Instagram photos to Twitter and archives them to Dropbox.",
+      "filter_code": ""
+    },
+    "unavailable": false,
+    "missing_schema_titles": [],
+    "evidence": "artifacts/capture/ifttt-supplemental-private-management/0007-auth-p-{source_username}-applets-new-from=post_my_instagram_photos-default.json",
+    "filter_provenance": null
+  }
+}

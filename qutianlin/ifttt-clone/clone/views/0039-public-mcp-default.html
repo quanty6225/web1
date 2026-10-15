@@ -1,0 +1,1197 @@
+<!doctype html>
+<html lang="en"><head>
+  <link rel="preload" href="/assets/asset-000002.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000004.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000003.woff2" as="font" type="font/woff2">
+
+<style>
+/* IFTTT.ai rebrand — Museo Sans Rounded (site-wide base font). One @font-face per Museo cut; */
+/* CSS font-weight == the cut number (300 Light / 500 Regular / 700 body / 900 headings). */
+/* NB: map by cut name, not the weight Figma's inspect panel shows — a designer's desktop copy */
+/* may report ~200 less (700 for the 900 cut); these files carry OS/2 weight == cut number. */
+
+/* Museo Sans Rounded 300 (light) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 300;
+  src: url("/assets/dependency-000100.woff2") format("woff2"),
+    url("/assets/dependency-000101.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 500 (regular) — covers CSS 400–600 */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 500 600;
+  src: url("/assets/asset-000002.woff2") format("woff2"),
+    url("/assets/dependency-000102.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 700 (body) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 700;
+  src: url("/assets/asset-000004.woff2") format("woff2"),
+    url("/assets/dependency-000104.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 900 (black) — display headings */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 900;
+  src: url("/assets/asset-000003.woff2") format("woff2"),
+    url("/assets/dependency-000106.woff") format("woff");
+  font-display: swap;
+}
+
+/* Metric-matched fallback for the swap window: Avenir Next scaled to the Museo advance widths, with */
+/* the Museo line box (hhea 940/-260 divided by size-adjust), so the change to Museo moves no layout. */
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 500 600;
+  src: local("Avenir Next Medium"), local("AvenirNext-Medium");
+  size-adjust: 98.0%;
+  ascent-override: 95.92%;
+  descent-override: 26.53%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 700;
+  src: local("Avenir Next Bold"), local("AvenirNext-Bold");
+  size-adjust: 94.5%;
+  ascent-override: 99.47%;
+  descent-override: 27.51%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 900;
+  src: local("Avenir Next Heavy"), local("AvenirNext-Heavy");
+  size-adjust: 90.2%;
+  ascent-override: 104.21%;
+  descent-override: 28.82%;
+  line-gap-override: 0%;
+}
+
+/* Museo Sans Rounded 500 / 700 italic — fetched only by pages that set font-style: italic. */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 500 600;
+  src: url("/assets/asset-000981.woff2") format("woff2"),
+    url("/assets/dependency-000103.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/asset-001589.woff2") format("woff2"),
+    url("/assets/dependency-000105.woff") format("woff");
+  font-display: swap;
+}
+</style>
+
+  <!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+
+  
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0">
+<meta name="mobile-web-app-capable" content="yes">
+
+
+
+
+  <title>MCP - Connect AI Tools to 1,000+ Services - IFTTT</title>
+<meta name="description" content="Connect Claude to 1,000+ services with the IFTTT MCP Server.">
+<meta name="keywords" content="ifttt applets connect connections integrate integration automate automation services recipes trigger action ifthisthenthat free">
+<meta property="al:ios:url" content="ifttt://">
+<meta property="al:ios:app_store_id" content="660944635">
+<meta property="al:ios:app_name" content="IFTTT">
+<meta property="fb:app_id" content="122259781154546">
+<meta property="fb:admins" content="7302486">
+<meta property="og:title" content="MCP - Connect AI Tools to 1,000+ Services - IFTTT">
+<meta property="og:description" content="Connect Claude to 1,000+ services with the IFTTT MCP Server.">
+<meta property="og:site_name" content="IFTTT">
+<meta property="og:url" content="https://ifttt.com/mcp">
+<meta property="og:image" content="https://web-assets.ifttt.com/builds/assets/what-is-mcp-diagram-og-BfpDXSHn.png">
+<meta property="og:image:width" content="2013">
+<meta property="og:image:height" content="1042">
+<meta property="og:type" content="website">
+<meta property="og:image:alt" content="Diagram showing AI tools connecting through IFTTT MCP to 1,000+ services">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@IFTTT">
+<meta name="twitter:image" content="https://web-assets.ifttt.com/builds/assets/what-is-mcp-diagram-og-BfpDXSHn.png">
+<meta name="twitter:app:id:iphone" content="660944635">
+<meta name="twitter:app:id:ipad" content="660944635">
+<meta name="twitter:app:id:googleplay" content="com.ifttt.ifttt">
+<meta name="twitter:app:url:iphone" content="ifttt://">
+<meta name="twitter:app:url:ipad" content="ifttt://">
+<meta name="twitter:app:url:googleplay" content="ifttt://">
+<meta name="twitter:app:name:googleplay" content="IFTTT">
+<meta name="twitter:image:alt" content="Diagram showing AI tools connecting through IFTTT MCP to 1,000+ services">
+<meta name="author" content="IFTTT">
+<meta name="copyright" content="Copyright 2026 IFTTT Inc.">
+<meta name="theme-color" content="">
+<meta name="facebook-domain-verification" content="tapueff3rri63aug9c5b7hapbv3mkv">
+
+<!-- Standard SVG Favicon -->
+<link rel="icon" href="/assets/dependency-000091.svg" type="image/svg+xml">
+
+<!-- For all Apple Devices: -->
+<link rel="apple-touch-icon" href="/assets/dependency-000081.png">
+
+<!-- For Windows 8: -->
+<meta name="msapplication-TileImage" content="https://web-assets.ifttt.com/builds/assets/pinned-Dpomu1wG.png">
+<meta name="msapplication-TileColor" content="#111">
+
+
+
+
+  
+  <link rel="stylesheet" href="/assets/asset-000946.css">
+  
+<link rel="stylesheet" href="/local.css"></head>
+
+<body class="home-body mcp-action  mcp-page web-body" style="background-color: rgb(255, 255, 255);" data-local-route="/mcp" data-local-actor="anonymous" data-local-state="default">
+    <!-- Google Tag Manager (noscript) -->
+  <noscript></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  
+
+
+  
+
+
+
+  
+
+  
+
+      
+<header class="unified-header signed-out" style="background-color: #fff">
+  <div class="container header">
+    <section class="left-group">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/">
+  <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt" style="fill: #111"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>
+        <div class="search-container">
+          <div id="universal-search" class="ifttt-search ">
+<input id="universal-search-input" class="ifttt-search-input" type="search" aria-label="Search" placeholder="Search for Applets, services, etc." maxlength="1024" autocomplete="off" spellcheck="false">
+  <span class="icon search">
+    <svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" title="Search"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.299 10.571C17.299 8.71905 16.64 7.13505 15.324 5.81905C14.008 4.50205 12.424 3.84405 10.571 3.84405C8.71905 3.84405 7.13505 4.50205 5.81905 5.81905C4.50205 7.13505 3.84405 8.71905 3.84405 10.571C3.84405 12.423 4.50205 14.008 5.81905 15.324C7.13505 16.64 8.71905 17.299 10.571 17.299C12.423 17.299 14.008 16.64 15.324 15.324C16.64 14.008 17.299 12.424 17.299 10.571ZM24.987 23.065C24.987 23.585 24.797 24.035 24.417 24.416C24.036 24.796 23.585 24.986 23.065 24.986C22.525 24.986 22.074 24.796 21.713 24.416L16.563 19.281C14.771 20.522 12.773 21.143 10.571 21.143C9.14005 21.143 7.77105 20.865 6.46405 20.309C5.15805 19.754 4.03205 19.003 3.08605 18.057C2.14005 17.111 1.38905 15.985 0.833046 14.678C0.279261 13.3799 -0.00417164 11.9824 4.63958e-05 10.571C4.63958e-05 9.14005 0.278046 7.77105 0.833046 6.46405C1.38905 5.15805 2.14005 4.03205 3.08605 3.08605C4.03205 2.14005 5.15805 1.38905 6.46405 0.833046C7.76224 0.279261 9.15967 -0.00417164 10.571 4.63958e-05C12.003 4.63958e-05 13.371 0.278046 14.678 0.833046C15.985 1.38905 17.111 2.14005 18.057 3.08605C19.003 4.03205 19.754 5.15805 20.309 6.46405C20.865 7.77105 21.143 9.14005 21.143 10.571C21.143 12.774 20.523 14.771 19.281 16.563L24.431 21.713C24.801 22.083 24.987 22.534 24.987 23.065V23.065Z" fill="#111"></path></svg>
+  </span>
+  <span class="icon clean-search">
+    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-x"><rect width="24" height="24" rx="8" fill="#111" fill-opacity="0.06"></rect><path d="M15.2803 7.30566C15.6637 6.90826 16.2969 6.89686 16.6943 7.28027C17.0917 7.66374 17.1031 8.2969 16.7197 8.69433L13.3892 12.145L16.439 15.3057C16.8225 15.7031 16.8115 16.3362 16.4141 16.7197C16.0166 17.1032 15.3835 17.0918 15 16.6943L12 13.585L9 16.6943C8.6165 17.0918 7.98336 17.1032 7.58594 16.7197C7.18851 16.3362 7.17754 15.7031 7.56103 15.3057L10.6104 12.145L7.28027 8.69433C6.89686 8.2969 6.90826 7.66374 7.30566 7.28027C7.7031 6.89686 8.33626 6.90826 8.71973 7.30566L12 10.7051L15.2803 7.30566Z" fill="#666"></path></svg>
+  </span>
+
+  
+            <section class="universal-search-helper">
+  <div class="default-recommendations">
+    <section class="recent-searches hide">
+      <span class="universal-search-helper-title">Recent</span>
+      <ul class="universal-search-helper-list">
+        <li class="loading-dots"><img loading="lazy" fetchpriority="low" width="150" height="343" title="Loading-dots" alt="Loading-dots icon" src="/assets/asset-000006.gif"></li>
+      </ul>
+    </section>
+
+      <section class="recommended-services">
+        <span class="universal-search-helper-title">Recommendations</span>
+        <ul class="universal-search-helper-list">
+            <li>
+              <a href="/maker_webhooks">
+                <div class="recent-search-icon" style="background-color: #0099ff">
+                  <img alt="Webhooks" title="Webhooks" width="24" height="24" loading="lazy" src="/assets/asset-000035.bin">
+                </div>
+                <span class="recent-search-text">Webhooks</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/twitter">
+                <div class="recent-search-icon" style="background-color: #000000">
+                  <img alt="X (Twitter)" title="X (Twitter)" width="24" height="24" loading="lazy" src="/assets/asset-000036.bin">
+                </div>
+                <span class="recent-search-text">X (Twitter)</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/youtube">
+                <div class="recent-search-icon" style="background-color: #FF0000">
+                  <img alt="YouTube" title="YouTube" width="24" height="24" loading="lazy" src="/assets/asset-000037.bin">
+                </div>
+                <span class="recent-search-text">YouTube</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/discord">
+                <div class="recent-search-icon" style="background-color: #5865f2">
+                  <img alt="Discord" title="Discord" width="24" height="24" loading="lazy" src="/assets/asset-000038.bin">
+                </div>
+                <span class="recent-search-text">Discord</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/google_sheets">
+                <div class="recent-search-icon" style="background-color: #23448b">
+                  <img alt="Google Sheets" title="Google Sheets" width="24" height="24" loading="lazy" src="/assets/asset-000039.bin">
+                </div>
+                <span class="recent-search-text">Google Sheets</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/myq_devices">
+                <div class="recent-search-icon" style="background-color: #009CDE">
+                  <img alt="MyQ" title="MyQ" width="24" height="24" loading="lazy" src="/assets/asset-000040.bin">
+                </div>
+                <span class="recent-search-text">MyQ</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/gmail">
+                <div class="recent-search-icon" style="background-color: #23448b">
+                  <img alt="Gmail" title="Gmail" width="24" height="24" loading="lazy" src="/assets/asset-000041.bin">
+                </div>
+                <span class="recent-search-text">Gmail</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/instagram">
+                <div class="recent-search-icon" style="background-color: #e4405f">
+                  <img alt="Instagram" title="Instagram" width="24" height="24" loading="lazy" src="/assets/asset-000042.bin">
+                </div>
+                <span class="recent-search-text">Instagram</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+        </ul>
+      </section>
+  </div>
+
+  <section class="search-preview">
+    <ul class="universal-search-helper-list">
+      <li class="loading-dots"><img loading="lazy" fetchpriority="low" width="150" height="343" title="Loading-dots" alt="Loading-dots icon" src="/assets/asset-000006.gif"></li>
+    </ul>
+  </section>
+
+  <a class="search-navigation" href="#">
+    <span>See all results</span>
+    <svg width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg" title="Arrow-right"><g clip-path="url(#clip0_52729_108402)"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.42027 0.46167L12.0564 5.84166L6.42027 11.2216L4.86156 9.73378L7.83645 6.8941H0.984375V4.78921H7.83645L4.86155 1.94954L6.42027 0.46167Z" fill="#09F"></path></g><defs><clippath id="clip0_52729_108402"><rect width="12" height="12" fill="#fff" transform="translate(0.5)"></rect></clippath></defs></svg>
+</a></section>
+
+
+</div>          <div class="mobile-close-search-icon">
+            <svg width="24" height="25" viewbox="0 0 11 11" xmlns="http://www.w3.org/2000/svg" class="close-icon">
+              <title>Close menu</title>
+              <g stroke="#111" stroke-width="2.5" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                <path d="M1.598 1.598l7.717 7.717M9.447 1.598L1.73 9.315"></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+    </section>
+
+      <section class="right-group signed-out">
+        <a class="nav-link link-menu" title="Explore" href="/explore">
+          Explore
+</a>
+        <a class="nav-link link-menu" title="Plans" href="/plans">
+          Plans
+</a>
+        <a class="sign-in button-tertiary button-outlined " href="/login">Log in</a>
+
+          <a title="Get started" class="button-tertiary  sign-up signed-out" href="/join?source=site-header">
+            Get started
+</a>          <span class="mobile-icon-search">
+            <svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" title="Search"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.299 10.571C17.299 8.71905 16.64 7.13505 15.324 5.81905C14.008 4.50205 12.424 3.84405 10.571 3.84405C8.71905 3.84405 7.13505 4.50205 5.81905 5.81905C4.50205 7.13505 3.84405 8.71905 3.84405 10.571C3.84405 12.423 4.50205 14.008 5.81905 15.324C7.13505 16.64 8.71905 17.299 10.571 17.299C12.423 17.299 14.008 16.64 15.324 15.324C16.64 14.008 17.299 12.424 17.299 10.571ZM24.987 23.065C24.987 23.585 24.797 24.035 24.417 24.416C24.036 24.796 23.585 24.986 23.065 24.986C22.525 24.986 22.074 24.796 21.713 24.416L16.563 19.281C14.771 20.522 12.773 21.143 10.571 21.143C9.14005 21.143 7.77105 20.865 6.46405 20.309C5.15805 19.754 4.03205 19.003 3.08605 18.057C2.14005 17.111 1.38905 15.985 0.833046 14.678C0.279261 13.3799 -0.00417164 11.9824 4.63958e-05 10.571C4.63958e-05 9.14005 0.278046 7.77105 0.833046 6.46405C1.38905 5.15805 2.14005 4.03205 3.08605 3.08605C4.03205 2.14005 5.15805 1.38905 6.46405 0.833046C7.76224 0.279261 9.15967 -0.00417164 10.571 4.63958e-05C12.003 4.63958e-05 13.371 0.278046 14.678 0.833046C15.985 1.38905 17.111 2.14005 18.057 3.08605C19.003 4.03205 19.754 5.15805 20.309 6.46405C20.865 7.77105 21.143 9.14005 21.143 10.571C21.143 12.774 20.523 14.771 19.281 16.563L24.431 21.713C24.801 22.083 24.987 22.534 24.987 23.065V23.065Z" fill="#111"></path></svg>
+          </span>
+      </section>
+      <section class="mobile-icon">
+        
+<span id="unified_mobile_menu" role="button" class="closed" tabindex="0">
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hamburger-icon">
+    <title>Mobile menu</title>
+    <g fill="#111" id="mobile-hamburger-icon">
+      <path d="M19.6504 15C20.5617 15 21.3008 15.7391 21.3008 16.6504C21.3008 17.5617 20.5617 18.3008 19.6504 18.3008H1.65039C0.739121 18.3008 0 17.5617 0 16.6504C0 15.7391 0.739121 15 1.65039 15H19.6504ZM19.6504 7.5C20.5617 7.5 21.3008 8.23912 21.3008 9.15039C21.3008 10.0617 20.5617 10.8008 19.6504 10.8008H1.65039C0.739121 10.8008 0 10.0617 0 9.15039C0 8.23912 0.739121 7.5 1.65039 7.5H19.6504ZM19.6504 0C20.5617 0 21.3008 0.739121 21.3008 1.65039C21.3008 2.56166 20.5617 3.30078 19.6504 3.30078H1.65039C0.739121 3.30078 0 2.56166 0 1.65039C0 0.739121 0.739121 0 1.65039 0H19.6504Z" transform="translate(1.35 2.85)"></path>
+    </g>
+  </svg>
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="close-icon">
+    <title>Close menu</title>
+    <path fill="#111" d="M16.4901 0.535065C17.1612 -0.160319 18.2692 -0.180639 18.9648 0.490143C19.66 1.16128 19.6797 2.26933 19.0087 2.96475L12.1815 10.0399L18.4482 16.5351C19.1189 17.2305 19.0993 18.3377 18.4042 19.0087C17.7088 19.6797 16.6007 19.66 15.9296 18.9648L9.74991 12.5595L3.57022 18.9648C2.89918 19.6602 1.79112 19.6796 1.09561 19.0087C0.400326 18.3376 0.380671 17.2305 1.05167 16.5351L7.31729 10.0399L0.490143 2.96475C-0.180639 2.26923 -0.160319 1.16115 0.535065 0.490143C1.23058 -0.180569 2.3377 -0.16026 3.0087 0.535065L9.74893 7.52042L16.4901 0.535065Z" transform="translate(2.25 2.25)"></path>
+  </svg>
+</span>
+
+
+      </section>
+  </div>
+
+</header>
+
+
+
+  <div id="flash-messages">
+    
+  </div>
+
+  <div class="after-header-content">
+    
+  </div>
+
+  <div class="page-canvas">
+    <main class="container web">
+        
+
+
+
+<main>
+  <section class="mcp-hero">
+  <div class="mcp-hero__content">
+    <h1 class="mcp-hero__title">Connect AI tools to<br>1,000+ services with IFTTT</h1>
+    <p class="mcp-hero__subtitle">Your favorite AI tools can now do more than answer questions.<br class="hide-on-xs"> Let Claude search, build, and run automations across 1,000+ services<br class="hide-on-xs"> and 50M+ applets with the IFTTT MCP Server.</p>
+  </div>
+
+  <div class="mcp-hero__screenshot-wrapper">
+    <video class="mcp-hero__screenshot" autoplay="" loop="" muted="" playsinline="">
+      <source src="/assets/dependency-000228.mp4" type="video/mp4">
+    </source></video>
+  </div>
+
+  <div class="mcp-hero__cta">
+      <a class="mcp-hero__cta-button mcp-hero__cta-button--primary" href="/join">Sign up for free to IFTTT</a>
+  </div>
+</section>
+
+  <section class="mcp-explore">
+  <div class="mcp-explore__container">
+    <h2 class="mcp-explore__title">Explore what is possible<br class="hide-on-xs"> with the IFTTT MCP</h2>
+
+    <div class="mcp-explore__cards">
+      <div class="mcp-explore__card">
+        <div class="mcp-explore__card-screenshot">
+          <img alt="AI taking action across apps" class="mcp-explore__card-image" loading="lazy" title="Explore-take-action" src="/assets/asset-000948.png">
+        </div>
+        <div class="mcp-explore__card-text">
+          <span class="mcp-explore__badge">TAKE ACTION</span>
+          <h3 class="mcp-explore__card-title">Real actions across your apps with a single prompt</h3>
+          <p class="mcp-explore__card-description">Ask Claude to send a Slack message, log a task, or post an update and it will happen immediately. No copy-pasting required.</p>
+        </div>
+      </div>
+
+      <div class="mcp-explore__card">
+        <div class="mcp-explore__card-screenshot">
+          <img alt="Creating applets with AI" class="mcp-explore__card-image" loading="lazy" title="Explore-create-applets" src="/assets/asset-000949.png">
+        </div>
+        <div class="mcp-explore__card-text">
+          <span class="mcp-explore__badge">CREATE APPLETS</span>
+          <h3 class="mcp-explore__card-title">Turn a description into a live automation</h3>
+          <p class="mcp-explore__card-description">Tell AI what you want to automate in plain language and it can create Applets on your behalf.</p>
+        </div>
+      </div>
+
+      <div class="mcp-explore__card">
+        <div class="mcp-explore__card-screenshot">
+          <img alt="Discovering applets with AI" class="mcp-explore__card-image" loading="lazy" title="Explore-discover" src="/assets/asset-000950.png">
+        </div>
+        <div class="mcp-explore__card-text">
+          <span class="mcp-explore__badge">DISCOVER &amp; CONNECT</span>
+          <h3 class="mcp-explore__card-title">Optimize your workflows by finding new Applets</h3>
+          <p class="mcp-explore__card-description">Discover time-saving Applets with ease when you describe your goals to AI.</p>
+        </div>
+      </div>
+    </div>
+
+      <div class="mcp-explore__cta">
+        <a class="mcp-explore__cta-button" href="/join">Get started with IFTTT</a>
+      </div>
+  </div>
+</section>
+
+  
+<section class="mcp-agent-showcase">
+  <div class="mcp-agent-showcase__container">
+    <h2 class="mcp-agent-showcase__title">How to get started with<br class="hide-on-xs"> the IFTTT MCP</h2>
+    <p class="mcp-agent-showcase__subtitle">
+      The IFTTT MCP server adds your IFTTT services and automation tools to your favorite agentic tools.<br>
+      Pick your AI tool to see how to connect it to IFTTT.
+    </p>
+
+    <div class="mcp-agent-showcase__tabs" role="tablist" aria-label="AI tools compatible with the IFTTT MCP">
+        <button type="button" role="tab" id="mcp-agent-tab-claude" class="mcp-agent-showcase__tab is-active" aria-selected="true" aria-controls="mcp-agent-panel-claude" tabindex="0">
+          <span class="mcp-agent-showcase__tab-logo">
+            <img alt="" aria-hidden="true" class="mcp-agent-showcase__tab-logo-img" width="20" height="20" title="Claude" loading="eager" src="/assets/asset-000694.svg">
+          </span>
+          <span class="mcp-agent-showcase__tab-name">Claude</span>
+        </button>
+        <button type="button" role="tab" id="mcp-agent-tab-claude-code" class="mcp-agent-showcase__tab " aria-selected="false" aria-controls="mcp-agent-panel-claude-code" tabindex="-1">
+          <span class="mcp-agent-showcase__tab-logo">
+            <img alt="" aria-hidden="true" class="mcp-agent-showcase__tab-logo-img" width="20" height="20" title="Claude-code" loading="eager" src="/assets/asset-000695.svg">
+          </span>
+          <span class="mcp-agent-showcase__tab-name">Claude Code</span>
+        </button>
+        <button type="button" role="tab" id="mcp-agent-tab-chatgpt" class="mcp-agent-showcase__tab " aria-selected="false" aria-controls="mcp-agent-panel-chatgpt" tabindex="-1">
+          <span class="mcp-agent-showcase__tab-logo">
+            <img alt="" aria-hidden="true" class="mcp-agent-showcase__tab-logo-img" width="20" height="20" title="Chatgpt" loading="eager" src="/assets/asset-000696.svg">
+          </span>
+          <span class="mcp-agent-showcase__tab-name">ChatGPT</span>
+        </button>
+        <button type="button" role="tab" id="mcp-agent-tab-cursor" class="mcp-agent-showcase__tab " aria-selected="false" aria-controls="mcp-agent-panel-cursor" tabindex="-1">
+          <span class="mcp-agent-showcase__tab-logo">
+            <img alt="" aria-hidden="true" class="mcp-agent-showcase__tab-logo-img" width="20" height="20" title="Cursor" loading="eager" src="/assets/asset-000699.svg">
+          </span>
+          <span class="mcp-agent-showcase__tab-name">Cursor</span>
+        </button>
+        <button type="button" role="tab" id="mcp-agent-tab-copilot" class="mcp-agent-showcase__tab " aria-selected="false" aria-controls="mcp-agent-panel-copilot" tabindex="-1">
+          <span class="mcp-agent-showcase__tab-logo">
+            <img alt="" aria-hidden="true" class="mcp-agent-showcase__tab-logo-img" width="20" height="20" title="Copilot" loading="eager" src="/assets/asset-000697.svg">
+          </span>
+          <span class="mcp-agent-showcase__tab-name">CoPilot</span>
+        </button>
+        <button type="button" role="tab" id="mcp-agent-tab-openclaw" class="mcp-agent-showcase__tab " aria-selected="false" aria-controls="mcp-agent-panel-openclaw" tabindex="-1">
+          <span class="mcp-agent-showcase__tab-logo">
+            <img alt="" aria-hidden="true" class="mcp-agent-showcase__tab-logo-img" width="20" height="20" title="Openclaw" loading="eager" src="/assets/asset-000698.svg">
+          </span>
+          <span class="mcp-agent-showcase__tab-name">OpenClaw</span>
+        </button>
+        <button type="button" role="tab" id="mcp-agent-tab-perplexity" class="mcp-agent-showcase__tab " aria-selected="false" aria-controls="mcp-agent-panel-perplexity" tabindex="-1">
+          <span class="mcp-agent-showcase__tab-logo">
+            <img alt="" aria-hidden="true" class="mcp-agent-showcase__tab-logo-img" width="20" height="20" title="Perplexity" loading="eager" src="/assets/asset-000701.svg">
+          </span>
+          <span class="mcp-agent-showcase__tab-name">Perplexity</span>
+        </button>
+    </div>
+
+      <div role="tabpanel" id="mcp-agent-panel-claude" class="mcp-agent-showcase__panel is-active" aria-labelledby="mcp-agent-tab-claude">
+        <div class="mcp-agent-showcase__panel-header">
+          <span class="mcp-agent-showcase__panel-logo">
+            <img alt="Claude logo" class="mcp-agent-showcase__panel-logo-img" width="32" height="32" title="Claude" loading="eager" src="/assets/asset-000694.svg">
+          </span>
+          <h3 class="mcp-agent-showcase__panel-name">Claude</h3>
+        </div>
+
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 1</span>
+            <p class="mcp-agent-showcase__step-text">Ensure you're signed up for a paid plan.</p>
+
+              <a href="/external?url=https%3A%2F%2Fclaude.ai%2Fupgrade" class="mcp-agent-showcase__action" target="_blank" rel="noopener">Claude paid plans<svg class="mcp-agent-showcase__icon" viewbox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+</a>
+
+
+          </div>
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 2</span>
+            <p class="mcp-agent-showcase__step-text">Go to the Customize page.</p>
+
+
+
+          </div>
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 3</span>
+            <p class="mcp-agent-showcase__step-text">Find IFTTT in the Connectors directory (or use the link below).</p>
+
+              <a href="/external?url=https%3A%2F%2Fclaude.ai%2Fdirectory%2Fconnectors%2Fa0ea0811-dabc-4b51-903a-d762fec4afcb" class="mcp-agent-showcase__action" target="_blank" rel="noopener">Add IFTTT to Claude<svg class="mcp-agent-showcase__icon" viewbox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+</a>
+
+
+          </div>
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 4</span>
+            <p class="mcp-agent-showcase__step-text">Connect, authenticate, and activate the toggle during conversations.</p>
+
+
+
+          </div>
+
+      </div>
+      <div role="tabpanel" id="mcp-agent-panel-claude-code" class="mcp-agent-showcase__panel " aria-labelledby="mcp-agent-tab-claude-code" hidden="">
+        <div class="mcp-agent-showcase__panel-header">
+          <span class="mcp-agent-showcase__panel-logo">
+            <img alt="Claude Code logo" class="mcp-agent-showcase__panel-logo-img" width="32" height="32" title="Claude-code" loading="eager" src="/assets/asset-000695.svg">
+          </span>
+          <h3 class="mcp-agent-showcase__panel-name">Claude Code</h3>
+        </div>
+
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 1</span>
+            <p class="mcp-agent-showcase__step-text">Run this command in your terminal:</p>
+
+
+                <div class="mcp-agent-showcase__code-block">
+                  <pre class="mcp-agent-showcase__code-block-value">claude mcp add --transport http ifttt https://ifttt.com/mcp</pre>
+                  <button type="button" class="mcp-agent-showcase__code-copy" aria-label="Copy to clipboard">
+                    <svg class="mcp-agent-showcase__icon" viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+
+                    <span>Copy</span>
+                  </button>
+                </div>
+
+          </div>
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 2</span>
+            <p class="mcp-agent-showcase__step-text">Start Claude Code and run /mcp to connect to the server.</p>
+
+
+
+          </div>
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 3</span>
+            <p class="mcp-agent-showcase__step-text">Complete the OAuth sign-in in your browser to finish.</p>
+
+
+
+          </div>
+
+      </div>
+      <div role="tabpanel" id="mcp-agent-panel-chatgpt" class="mcp-agent-showcase__panel " aria-labelledby="mcp-agent-tab-chatgpt" hidden="">
+        <div class="mcp-agent-showcase__panel-header">
+          <span class="mcp-agent-showcase__panel-logo">
+            <img alt="ChatGPT logo" class="mcp-agent-showcase__panel-logo-img" width="32" height="32" title="Chatgpt" loading="eager" src="/assets/asset-000696.svg">
+          </span>
+          <h3 class="mcp-agent-showcase__panel-name">ChatGPT</h3>
+        </div>
+
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 1</span>
+            <p class="mcp-agent-showcase__step-text">Ensure you're signed up for a paid plan and have Developer mode turned on.</p>
+
+              <a href="/external?url=https%3A%2F%2Fchatgpt.com%2F%23settings%2FConnectors%2FAdvanced" class="mcp-agent-showcase__action" target="_blank" rel="noopener">Turn on Developer mode<svg class="mcp-agent-showcase__icon" viewbox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+</a>
+
+
+          </div>
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 2</span>
+            <p class="mcp-agent-showcase__step-text">Go to Settings &gt; Apps &gt; Create App.</p>
+
+              <a href="/external?url=https%3A%2F%2Fchatgpt.com%2F%23settings%2FApps" class="mcp-agent-showcase__action" target="_blank" rel="noopener">Create ChatGPT app<svg class="mcp-agent-showcase__icon" viewbox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+</a>
+
+
+          </div>
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 3</span>
+            <p class="mcp-agent-showcase__step-text">Name it “IFTTT MCP” and paste the server URL below:</p>
+
+
+                <div class="mcp-agent-showcase__url-row">
+                  <code class="mcp-agent-showcase__url-value">https://ifttt.com/mcp</code>
+                  <button type="button" class="mcp-agent-showcase__copy" aria-label="Copy to clipboard">
+                    <svg class="mcp-agent-showcase__icon" viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+
+                    <span>Copy</span>
+                  </button>
+                </div>
+
+              <p class="mcp-agent-showcase__step-text">Leave authentication as OAuth, and click “Create.”</p>
+          </div>
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 4</span>
+            <p class="mcp-agent-showcase__step-text">Connect, authenticate, and activate the toggle during conversations.</p>
+
+
+
+          </div>
+
+          <p class="mcp-agent-showcase__note">Custom MCP connector support in ChatGPT is rolling out gradually — availability depends on your plan.</p>
+      </div>
+      <div role="tabpanel" id="mcp-agent-panel-cursor" class="mcp-agent-showcase__panel " aria-labelledby="mcp-agent-tab-cursor" hidden="">
+        <div class="mcp-agent-showcase__panel-header">
+          <span class="mcp-agent-showcase__panel-logo">
+            <img alt="Cursor logo" class="mcp-agent-showcase__panel-logo-img" width="32" height="32" title="Cursor" loading="eager" src="/assets/asset-000699.svg">
+          </span>
+          <h3 class="mcp-agent-showcase__panel-name">Cursor</h3>
+        </div>
+
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 1</span>
+            <p class="mcp-agent-showcase__step-text">Add IFTTT to Cursor in one click, then authenticate when Cursor prompts you.</p>
+
+              <a href="/external?url=cursor%3A%2F%2Fanysphere.cursor-deeplink%2Fmcp%2Finstall%3Fname%3DIFTTT%26config%3DeyJ1cmwiOiJodHRwczovL2lmdHR0LmNvbS9tY3AifQ%253D%253D" class="mcp-agent-showcase__action" target="_blank" rel="noopener">Add IFTTT to Cursor<svg class="mcp-agent-showcase__icon" viewbox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+</a>
+
+
+          </div>
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 2</span>
+            <p class="mcp-agent-showcase__step-text">Or manually open Cursor, go to Tools &amp; Integrations → Add Custom MCP, and paste this into mcp.json:</p>
+
+
+                <div class="mcp-agent-showcase__code-block">
+                  <pre class="mcp-agent-showcase__code-block-value">{
+  "mcpServers": {
+    "ifttt": {
+      "url": "https://ifttt.com/mcp"
+    }
+  }
+}</pre>
+                  <button type="button" class="mcp-agent-showcase__code-copy" aria-label="Copy to clipboard">
+                    <svg class="mcp-agent-showcase__icon" viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+
+                    <span>Copy</span>
+                  </button>
+                </div>
+
+              <p class="mcp-agent-showcase__step-text">Save it.</p>
+          </div>
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 3</span>
+            <p class="mcp-agent-showcase__step-text">Then click "Connect" next to IFTTT to authenticate with OAuth.</p>
+
+
+
+          </div>
+
+      </div>
+      <div role="tabpanel" id="mcp-agent-panel-copilot" class="mcp-agent-showcase__panel " aria-labelledby="mcp-agent-tab-copilot" hidden="">
+        <div class="mcp-agent-showcase__panel-header">
+          <span class="mcp-agent-showcase__panel-logo">
+            <img alt="CoPilot logo" class="mcp-agent-showcase__panel-logo-img" width="32" height="32" title="Copilot" loading="eager" src="/assets/asset-000697.svg">
+          </span>
+          <h3 class="mcp-agent-showcase__panel-name">CoPilot</h3>
+        </div>
+
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 1</span>
+            <p class="mcp-agent-showcase__step-text">In Copilot Studio, open or create an agent with generative orchestration enabled.</p>
+
+              <a href="/external?url=https%3A%2F%2Fcopilotstudio.microsoft.com%2F" class="mcp-agent-showcase__action" target="_blank" rel="noopener">Open Copilot Studio<svg class="mcp-agent-showcase__icon" viewbox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+</a>
+
+
+          </div>
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 2</span>
+            <p class="mcp-agent-showcase__step-text">Go to Tools &gt; Add a tool &gt; Model Context Protocol, then add a custom MCP server with the URL below:</p>
+
+
+                <div class="mcp-agent-showcase__url-row">
+                  <code class="mcp-agent-showcase__url-value">https://ifttt.com/mcp</code>
+                  <button type="button" class="mcp-agent-showcase__copy" aria-label="Copy to clipboard">
+                    <svg class="mcp-agent-showcase__icon" viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+
+                    <span>Copy</span>
+                  </button>
+                </div>
+
+              <p class="mcp-agent-showcase__step-text">Set transport to Streamable HTTP and authentication to OAuth 2.0, then add the server.</p>
+          </div>
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 3</span>
+            <p class="mcp-agent-showcase__step-text">Register the callback URL Copilot Studio returns with IFTTT, then add the server to your agent.</p>
+
+
+
+          </div>
+
+          <p class="mcp-agent-showcase__note">MCP connectors are set up in Copilot Studio, not the consumer Microsoft Copilot app. SSE transport is not supported.</p>
+      </div>
+      <div role="tabpanel" id="mcp-agent-panel-openclaw" class="mcp-agent-showcase__panel " aria-labelledby="mcp-agent-tab-openclaw" hidden="">
+        <div class="mcp-agent-showcase__panel-header">
+          <span class="mcp-agent-showcase__panel-logo">
+            <img alt="OpenClaw logo" class="mcp-agent-showcase__panel-logo-img" width="32" height="32" title="Openclaw" loading="eager" src="/assets/asset-000698.svg">
+          </span>
+          <h3 class="mcp-agent-showcase__panel-name">OpenClaw</h3>
+        </div>
+
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 1</span>
+            <p class="mcp-agent-showcase__step-text">Open your OpenClaw config file at:</p>
+
+
+                <div class="mcp-agent-showcase__url-row">
+                  <code class="mcp-agent-showcase__url-value">~/.openclaw/openclaw.json</code>
+                  <button type="button" class="mcp-agent-showcase__copy" aria-label="Copy to clipboard">
+                    <svg class="mcp-agent-showcase__icon" viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+
+                    <span>Copy</span>
+                  </button>
+                </div>
+
+          </div>
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 2</span>
+            <p class="mcp-agent-showcase__step-text">Add IFTTT under the mcpServers section:</p>
+
+
+                <div class="mcp-agent-showcase__code-block">
+                  <pre class="mcp-agent-showcase__code-block-value">{
+  "mcpServers": {
+    "ifttt": {
+      "transport": "http",
+      "url": "https://ifttt.com/mcp"
+    }
+  }
+}</pre>
+                  <button type="button" class="mcp-agent-showcase__code-copy" aria-label="Copy to clipboard">
+                    <svg class="mcp-agent-showcase__icon" viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+
+                    <span>Copy</span>
+                  </button>
+                </div>
+
+          </div>
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 3</span>
+            <p class="mcp-agent-showcase__step-text">Restart the gateway:</p>
+
+
+                <div class="mcp-agent-showcase__url-row">
+                  <code class="mcp-agent-showcase__url-value">openclaw gateway restart</code>
+                  <button type="button" class="mcp-agent-showcase__copy" aria-label="Copy to clipboard">
+                    <svg class="mcp-agent-showcase__icon" viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+
+                    <span>Copy</span>
+                  </button>
+                </div>
+
+          </div>
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 4</span>
+            <p class="mcp-agent-showcase__step-text">Complete the OAuth sign-in when prompted.</p>
+
+
+
+          </div>
+
+      </div>
+      <div role="tabpanel" id="mcp-agent-panel-perplexity" class="mcp-agent-showcase__panel " aria-labelledby="mcp-agent-tab-perplexity" hidden="">
+        <div class="mcp-agent-showcase__panel-header">
+          <span class="mcp-agent-showcase__panel-logo">
+            <img alt="Perplexity logo" class="mcp-agent-showcase__panel-logo-img" width="32" height="32" title="Perplexity" loading="eager" src="/assets/asset-000701.svg">
+          </span>
+          <h3 class="mcp-agent-showcase__panel-name">Perplexity</h3>
+        </div>
+
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 1</span>
+            <p class="mcp-agent-showcase__step-text">Make sure you're on a paid tier (Pro, Max, or Enterprise).</p>
+
+
+
+          </div>
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 2</span>
+            <p class="mcp-agent-showcase__step-text">Go to Settings &gt; Connectors, click “+ Custom connector,” and select Remote.</p>
+
+              <a href="/external?url=https%3A%2F%2Fwww.perplexity.ai%2Fcomputer%2Fconnectors" class="mcp-agent-showcase__action" target="_blank" rel="noopener">Open Perplexity Settings<svg class="mcp-agent-showcase__icon" viewbox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+</a>
+
+
+          </div>
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 3</span>
+            <p class="mcp-agent-showcase__step-text">Name it “IFTTT MCP” and paste the server URL below:</p>
+
+
+                <div class="mcp-agent-showcase__url-row">
+                  <code class="mcp-agent-showcase__url-value">https://ifttt.com/mcp</code>
+                  <button type="button" class="mcp-agent-showcase__copy" aria-label="Copy to clipboard">
+                    <svg class="mcp-agent-showcase__icon" viewbox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+
+                    <span>Copy</span>
+                  </button>
+                </div>
+
+              <p class="mcp-agent-showcase__step-text">Acknowledge the risk checkbox, then click “Add.”</p>
+          </div>
+          <div class="mcp-agent-showcase__step">
+            <span class="mcp-agent-showcase__step-label">Step 4</span>
+            <p class="mcp-agent-showcase__step-text">Click the connector card to authenticate with OAuth, then enable it under Sources.</p>
+
+
+
+          </div>
+
+      </div>
+  </div>
+</section>
+
+  <section class="mcp-what-is">
+  <div class="mcp-what-is__container">
+    <div class="mcp-what-is__text">
+      <h2 class="mcp-what-is__title">What is MCP?</h2>
+      <p class="mcp-what-is__description">Model Context Protocol (MCP) is like a special set of rules that lets AI helpers (like Claude) use information from other apps and websites safely.</p>
+      <p class="mcp-what-is__description">You can use AI to call IFTTT to create, trigger and access 1,000+ integrations. Send a Slack message, turn on your Hue lights, or create your next Applet, all from a chat in Claude.</p>
+    </div>
+    <div class="mcp-what-is__diagram">
+      <img alt="Diagram showing AI tools connecting through IFTTT MCP to 1,000+ services" class="mcp-what-is__diagram-image mcp-what-is__diagram-image--desktop" loading="lazy" title="What-is-mcp-diagram" src="/assets/asset-000951.png">
+      <img alt="Diagram showing AI tools connecting through IFTTT MCP to 1,000+ services" class="mcp-what-is__diagram-image mcp-what-is__diagram-image--mobile" loading="lazy" title="What-is-mcp-diagram-mobile" src="/assets/dependency-000240.png">
+    </div>
+  </div>
+</section>
+
+  <section class="mcp-service-grid">
+  <div class="mcp-service-grid__container">
+    <h2 class="mcp-service-grid__title">AI can tap into 1,000+ apps<br class="hide-on-xs"> through IFTTT MCP</h2>
+
+    <div class="mcp-service-grid__grid">
+        <a class="mcp-service-grid__tile" style="background-color: #e44332" href="/todoist">
+          <img alt="Todoist" class="mcp-service-grid__icon" loading="lazy" width="48" height="48" title="Monochrome regular" src="/assets/asset-000024.bin">
+          <span class="mcp-service-grid__name">Todoist</span>
+</a>        <a class="mcp-service-grid__tile" style="background-color: #000000" href="/notion_so">
+          <img alt="Notion.so" class="mcp-service-grid__icon" loading="lazy" width="48" height="48" title="Monochrome regular" src="/assets/asset-000248.bin">
+          <span class="mcp-service-grid__name">Notion.so</span>
+</a>        <a class="mcp-service-grid__tile" style="background-color: #0099ff" href="/if_notifications">
+          <img alt="Notifications" class="mcp-service-grid__icon" loading="lazy" width="48" height="48" title="Monochrome regular" src="/assets/asset-000062.bin">
+          <span class="mcp-service-grid__name">Notifications</span>
+</a>        <a class="mcp-service-grid__tile" style="background-color: #EC7505" href="/feed">
+          <img alt="RSS Feed" class="mcp-service-grid__icon" loading="lazy" width="48" height="48" title="Monochrome regular" src="/assets/asset-000049.bin">
+          <span class="mcp-service-grid__name">RSS Feed</span>
+</a>        <a class="mcp-service-grid__tile" style="background-color: #23448b" href="/google_docs">
+          <img alt="Google Docs" class="mcp-service-grid__icon" loading="lazy" width="48" height="48" title="Monochrome regular" src="/assets/asset-000082.bin">
+          <span class="mcp-service-grid__name">Google Docs</span>
+</a>        <a class="mcp-service-grid__tile" style="background-color: #3276dc" href="/airtable">
+          <img alt="Airtable" class="mcp-service-grid__icon" loading="lazy" width="48" height="48" title="Monochrome regular" src="/assets/asset-000952.bin">
+          <span class="mcp-service-grid__name">Airtable</span>
+</a>        <a class="mcp-service-grid__tile" style="background-color: #7B68EE" href="/clickup">
+          <img alt="ClickUp" class="mcp-service-grid__icon" loading="lazy" width="48" height="48" title="Monochrome regular" src="/assets/asset-000250.bin">
+          <span class="mcp-service-grid__name">ClickUp</span>
+</a>        <a class="mcp-service-grid__tile" style="background-color: #2DBE60" href="/evernote">
+          <img alt="Evernote" class="mcp-service-grid__icon" loading="lazy" width="48" height="48" title="Monochrome regular" src="/assets/asset-000025.bin">
+          <span class="mcp-service-grid__name">Evernote</span>
+</a>        <a class="mcp-service-grid__tile" style="background-color: #23448b" href="/gmail">
+          <img alt="Gmail" class="mcp-service-grid__icon" loading="lazy" width="48" height="48" title="Monochrome regular" src="/assets/asset-000029.bin">
+          <span class="mcp-service-grid__name">Gmail</span>
+</a>        <a class="mcp-service-grid__tile" style="background-color: #333333" href="/hue">
+          <img alt="Philips Hue" class="mcp-service-grid__icon" loading="lazy" width="48" height="48" title="Monochrome regular" src="/assets/asset-000046.bin">
+          <span class="mcp-service-grid__name">Philips Hue</span>
+</a>        <a class="mcp-service-grid__tile" style="background-color: #6441A5" href="/twitch">
+          <img alt="Twitch" class="mcp-service-grid__icon" loading="lazy" width="48" height="48" title="Monochrome regular" src="/assets/asset-000251.bin">
+          <span class="mcp-service-grid__name">Twitch</span>
+</a>        <a class="mcp-service-grid__tile" style="background-color: #ff1a12" href="/augusthome">
+          <img alt="August" class="mcp-service-grid__icon" loading="lazy" width="48" height="48" title="Monochrome regular" src="/assets/asset-000953.bin">
+          <span class="mcp-service-grid__name">August</span>
+</a>        <a class="mcp-service-grid__tile" style="background-color: #2C6EFC" href="/google_calendar">
+          <img alt="Google Calendar" class="mcp-service-grid__icon" loading="lazy" width="48" height="48" title="Monochrome regular" src="/assets/asset-000070.bin">
+          <span class="mcp-service-grid__name">Google Calendar</span>
+</a>        <a class="mcp-service-grid__tile" style="background-color: #1b99d6" href="/ring">
+          <img alt="Ring" class="mcp-service-grid__icon" loading="lazy" width="48" height="48" title="Monochrome regular" src="/assets/asset-000260.bin">
+          <span class="mcp-service-grid__name">Ring</span>
+</a>        <a class="mcp-service-grid__tile" style="background-color: #6CB86A" href="/irobot">
+          <img alt="iRobot" class="mcp-service-grid__icon" loading="lazy" width="48" height="48" title="Monochrome regular" src="/assets/asset-000247.bin">
+          <span class="mcp-service-grid__name">iRobot</span>
+</a>        <a class="mcp-service-grid__tile" style="background-color: #e4405f" href="/instagram">
+          <img alt="Instagram" class="mcp-service-grid__icon" loading="lazy" width="48" height="48" title="Monochrome regular" src="/assets/asset-000065.bin">
+          <span class="mcp-service-grid__name">Instagram</span>
+</a>        <a class="mcp-service-grid__tile" style="background-color: #0062fe" href="/dropbox">
+          <img alt="Dropbox" class="mcp-service-grid__icon" loading="lazy" width="48" height="48" title="Monochrome regular" src="/assets/asset-000079.bin">
+          <span class="mcp-service-grid__name">Dropbox</span>
+</a>        <a class="mcp-service-grid__tile" style="background-color: #4A154B" href="/slack">
+          <img alt="Slack" class="mcp-service-grid__icon" loading="lazy" width="48" height="48" title="Monochrome regular" src="/assets/asset-000244.bin">
+          <span class="mcp-service-grid__name">Slack</span>
+</a>    </div>
+
+    <a class="mcp-service-grid__cta" href="/explore/services">
+      Explore services
+</a>  </div>
+</section>
+
+  <section class="mcp-how-works">
+  <div class="mcp-how-works__container">
+    <h2 class="mcp-how-works__title">How does IFTTT work?</h2>
+
+    <div class="mcp-how-works__cards">
+      <div class="mcp-how-works__card">
+        <h3 class="mcp-how-works__card-title">Connect to your services</h3>
+        <p class="mcp-how-works__card-description">IFTTT has over 1,000 services, bound to include your everyday app stack.</p>
+        <div class="mcp-how-works__card-image-wrapper">
+          <img alt="Service icons showing IFTTT integrations" class="mcp-how-works__card-image" loading="lazy" title="How-connect" src="/assets/asset-000954.png">
+        </div>
+      </div>
+
+      <div class="mcp-how-works__card">
+        <h3 class="mcp-how-works__card-title">Automate with Applets</h3>
+        <p class="mcp-how-works__card-description">Customize triggers and actions to save you time with Applets. Create your own or choose from our published library.</p>
+        <div class="mcp-how-works__card-image-wrapper">
+          <img alt="An Applet showing If TikTok new video Then post to Slack channel" class="mcp-how-works__card-image" loading="lazy" title="How-automate" src="/assets/asset-000955.png">
+        </div>
+      </div>
+
+      <div class="mcp-how-works__card">
+        <h3 class="mcp-how-works__card-title">Let automation do the work</h3>
+        <p class="mcp-how-works__card-description">You're all set after you've created and enabled your Applets. IFTTT now automates your everyday workflows.</p>
+        <div class="mcp-how-works__card-image-wrapper">
+          <img alt="Applet cards showing active automations" class="mcp-how-works__card-image" loading="lazy" title="How-automation" src="/assets/asset-000956.png">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="user-testimonials">
+  <h2 class="display-3 user-testimonials__title">Get inspiration from others</h2>
+
+  <div class="user-testimonials__cards">
+    <div class="user-testimonial-card-wrapper">
+      <div class="user-testimonial-card user-testimonial-card--clover">
+        <div class="user-testimonial-card__quote">
+          <svg width="48" height="32" viewbox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="user-testimonial-card__quote-icon" title="Quote-icon"><path d="M0 32V19.2C0 15.4667 0.533333 12.1333 1.6 9.2C2.8 6.13333 4.46667 3.6 6.6 1.6L12 6C10.2667 7.73333 9 9.6 8.2 11.6C7.4 13.6 7 15.8667 7 18.4H12V32H0ZM26 32V19.2C26 15.4667 26.5333 12.1333 27.6 9.2C28.8 6.13333 30.4667 3.6 32.6 1.6L38 6C36.2667 7.73333 35 9.6 34.2 11.6C33.4 13.6 33 15.8667 33 18.4H38V32H26Z" fill="#fff"></path></svg>
+          <p class="text-h2 user-testimonial-card__quote-text">I use IFTTT for my business in many ways: automating social media posts, managing email notifications, tracking expenses and invoices, and streamlining project management.</p>
+        </div>
+        <div class="user-testimonial-card__person">
+          <span class="user-testimonial-card__badge">5 hours saved every week</span>
+          <div class="user-testimonial-card__profile">
+            <img alt="" loading="lazy" width="48" height="48" class="user-testimonial-card__photo" title="Testimonial dirk vos" src="/assets/asset-000277.png">
+            <p class="body-medium user-testimonial-card__name">Dirk Vos<br>Consultant</p>
+          </div>
+        </div>
+      </div>
+      <a class="link-standalone user-testimonial-card__link" href="/solutions/customer-communications?source=user-testimonials">
+        More customer communication solutions
+        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-arrow-right"><path d="M11.5882 4L17 9.5M17 9.5L11.5882 15M17 9.5H4" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</a>    </div>
+
+    <div class="user-testimonial-card-wrapper">
+      <div class="user-testimonial-card user-testimonial-card--fuchsia">
+        <div class="user-testimonial-card__quote">
+          <svg width="48" height="32" viewbox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="user-testimonial-card__quote-icon" title="Quote-icon"><path d="M0 32V19.2C0 15.4667 0.533333 12.1333 1.6 9.2C2.8 6.13333 4.46667 3.6 6.6 1.6L12 6C10.2667 7.73333 9 9.6 8.2 11.6C7.4 13.6 7 15.8667 7 18.4H12V32H0ZM26 32V19.2C26 15.4667 26.5333 12.1333 27.6 9.2C28.8 6.13333 30.4667 3.6 32.6 1.6L38 6C36.2667 7.73333 35 9.6 34.2 11.6C33.4 13.6 33 15.8667 33 18.4H38V32H26Z" fill="#fff"></path></svg>
+          <p class="text-h2 user-testimonial-card__quote-text">I use IFTTT to automate the publishing of my blog posts to various sites. I also publish my blog posts on my Facebook page using an RSS feed integration.</p>
+        </div>
+        <div class="user-testimonial-card__person">
+          <span class="user-testimonial-card__badge">10 hours saved every week</span>
+          <div class="user-testimonial-card__profile">
+            <img alt="" loading="lazy" width="48" height="48" class="user-testimonial-card__photo" title="Testimonial steve karmeinsky" src="/assets/asset-000278.png">
+            <p class="body-medium user-testimonial-card__name">Steve Karmeinsky<br>Automation Guru</p>
+          </div>
+        </div>
+      </div>
+      <a class="link-standalone user-testimonial-card__link" href="/solutions/social-media?source=user-testimonials">
+        More social media solutions
+        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-arrow-right"><path d="M11.5882 4L17 9.5M17 9.5L11.5882 15M17 9.5H4" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</a>    </div>
+  </div>
+</section>
+
+  <section class="mcp-bottom-cta">
+  <div class="mcp-bottom-cta__container">
+    <div class="mcp-bottom-cta__text">
+      <h2 class="mcp-bottom-cta__title">Start using IFTTT MCP in your AI workflow</h2>
+
+        <a class="mcp-bottom-cta__button mcp-bottom-cta__button--primary" href="/join">Sign up for free</a>
+    </div>
+
+    <div class="mcp-bottom-cta__screenshot-wrapper">
+      <img alt="Claude connected to IFTTT" class="mcp-bottom-cta__screenshot" loading="lazy" title="Claude-screenshot" src="/assets/asset-000957.png">
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+    </main>
+  </div>
+
+  
+
+  
+
+    <footer class="site-footer ifttt_next_bucket">
+    <a class="pro-upsell pro-ad" title="Try IFTTT Pro" href="/subscriptions/pro">
+        <div class="pro-upsell-text">
+          <span class="logo">
+            <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+            <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#111"></path></svg>
+          </span>
+          <span class="pro-upsell-heading">Automate more, effortlessly.</span>
+        </div>
+
+        <div class="button-secondary button-on-color">
+            Try it free
+        </div>
+</a>  <div class="footer-top-container">
+    <div class="logo-container">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/">
+        <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="ifttt-logo" title="IFTTT" style="fill: white"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>    </div>
+
+    <div class="footer-sections">
+      <div class="footer-section explore">
+        <div class="section-header">
+          <a title="Explore" href="/explore">Explore</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="Services" title="Services" href="/explore/services">Services</a>
+              </li>
+              <li>
+                <a alt="Stories" title="Stories" href="/explore/stories">Stories</a>
+              </li>
+              <li>
+                <a alt="Applets" title="Applets" href="/explore/applets">Applets</a>
+              </li>
+              <li>
+                <a alt="IFTTT MCP" title="IFTTT MCP" href="/mcp">IFTTT MCP</a>
+              </li>
+              <li>
+                <a alt="Help Center" title="Help Center" href="/hc/en-us">Help Center</a>
+              </li>
+              <li>
+                <a alt="Content Map" title="Content Map" href="/content_map">Content Map</a>
+              </li>
+              <li>
+                <a alt="Search" title="Search" href="/explore">Search</a>
+              </li>
+              <li>
+                <a alt="Plans" title="Plans" href="/plans">Plans</a>
+              </li>
+              <li>
+                <a alt="Developer docs" title="Developer docs" href="/docs/api_reference">Developer docs</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section top-integrations">
+        <div class="section-header">
+          Top Integrations
+        </div>
+          <ul>
+              <li>
+                <a alt="Discord and Instagram" title="Discord and Instagram" href="/connect/discord/instagram">Discord and Instagram</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Notion" title="iOS Calendar and Notion" href="/connect/ios_calendar/notion_so">iOS Calendar and Notion</a>
+              </li>
+              <li>
+                <a alt="Google Calendar and Google Sheets" title="Google Calendar and Google Sheets" href="/connect/google_calendar/google_sheets">Google Calendar and Google Sheets</a>
+              </li>
+              <li>
+                <a alt="Google Assistant and My Q" title="Google Assistant and My Q" href="/connect/google_assistant_v2/myq_devices">Google Assistant and My Q</a>
+              </li>
+              <li>
+                <a alt="BotGhost and Spotify" title="BotGhost and Spotify" href="/connect/botghost/spotify">BotGhost and Spotify</a>
+              </li>
+              <li>
+                <a alt="SMS and Twitter" title="SMS and Twitter" href="/connect/sms/twitter">SMS and Twitter</a>
+              </li>
+              <li>
+                <a alt="iOS Reminders and Notion" title="iOS Reminders and Notion" href="/connect/ios_reminders/notion_so">iOS Reminders and Notion</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Todoist" title="iOS Calendar and Todoist" href="/connect/ios_calendar/todoist">iOS Calendar and Todoist</a>
+              </li>
+              <li>
+                <a alt="Telegram and Twitter" title="Telegram and Twitter" href="/connect/telegram/twitter">Telegram and Twitter</a>
+              </li>
+              <li>
+                <a alt="Discord and Twitter" title="Discord and Twitter" href="/connect/discord/twitter">Discord and Twitter</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section latest-stories">
+        <div class="section-header">
+          <a title="Latest Stories" href="/explore/stories">Latest Stories</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="How to automate with AI" title="How to automate with AI" href="/explore/how-to-automate-with-ai">How to automate with AI</a>
+              </li>
+              <li>
+                <a alt="Best Twitter automation tools" title="Best Twitter automation tools" href="/explore/best-twitter-automation-tools">Best Twitter automation tools</a>
+              </li>
+              <li>
+                <a alt="Best time management apps and tools" title="Best time management apps and tools" href="/explore/best-time-management-apps-strategies-and-tools">Best time management apps and tools</a>
+              </li>
+              <li>
+                <a alt="What is workflow automation?" title="What is workflow automation?" href="/explore/what-is-workflow-automation">What is workflow automation?</a>
+              </li>
+              <li>
+                <a alt="How to use RSS Feeds" title="How to use RSS Feeds" href="/explore/how-to-use-rss-feeds">How to use RSS Feeds</a>
+              </li>
+              <li>
+                <a alt="What are webhooks?" title="What are webhooks?" href="/explore/what-are-webhooks">What are webhooks?</a>
+              </li>
+              <li>
+                <a alt="11 best Pomodoro productivity apps" title="11 best Pomodoro productivity apps" href="/explore/best-pomodoro-productivity-apps">11 best Pomodoro productivity apps</a>
+              </li>
+              <li>
+                <a alt="How to automate Threads" title="How to automate Threads" href="/explore/how-to-automate-threads">How to automate Threads</a>
+              </li>
+              <li>
+                <a alt="How to automate social media posts" title="How to automate social media posts" href="/explore/how-to-automate-social-media-posts">How to automate social media posts</a>
+              </li>
+              <li>
+                <a alt="Best social media tools for automation" title="Best social media tools for automation" href="/explore/best-automation-tools-social-media">Best social media tools for automation</a>
+              </li>
+          </ul>
+      </div>
+    <div class="footer-section company">
+      <div class="section-header">Company</div>
+      <ul>
+        <li><a alt="Developers" title="Developers" href="/developers">Developers</a></li>
+        <li><a alt="Partner program" title="Partner program" href="/partners">Partner program</a></li>
+        <li><a alt="Careers" title="Careers" href="/careers">Careers</a></li>
+        <li><a alt="Contact" title="Contact" href="/contact">Contact</a></li>
+        <li><a alt="About" title="About" href="/about">About</a></li>
+        <li><a alt="Privacy" title="Privacy" href="/privacy">Privacy</a></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer-section download">
+      <ul class="download-buttons">
+        <li>
+          <a title="Download on the App Store" aria-label="The Apple App Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fitunes.apple.com%2Fapp%2Fapple-store%2Fid660944635%3Fpt%3D1752682%26ct%3D%2Fmcp%26mt%3D8">
+            <img alt="" title="Download on the App Store" loading="lazy" width="136" height="40" src="/assets/asset-000099.svg">
+</a>        </li>
+        <li>
+          <a title="Get it on Google Play" aria-label="The Google Play Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.ifttt.ifttt%26utm_source%3D%2Fmcp%26utm_medium%3Dweb">
+            <img alt="" title="Get it on Google Play" loading="lazy" width="136" height="42" src="/assets/asset-000100.svg">
+</a>        </li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom-container">
+      <div class="group group-social">
+        <a class="social-icon" alt="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.facebook.com%2Fifttt">
+          <img alt="Facebook" title="Facebook" loading="lazy" width="28" height="28" src="/assets/asset-000102.svg">
+</a>
+        <a class="social-icon" alt="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fifttt%2F">
+          <img alt="LinkedIn" title="LinkedIn" loading="lazy" width="28" height="28" src="/assets/asset-000101.svg">
+</a>
+        <a class="social-icon" alt="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.instagram.com%2Fiftttapp%2F">
+          <img alt="Instagram" title="Instagram" loading="lazy" width="28" height="28" src="/assets/asset-000103.svg">
+</a>
+        <a class="social-icon" alt="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.youtube.com%2F%40IFTTT">
+          <img alt="YouTube" title="YouTube" loading="lazy" width="28" height="28" src="/assets/asset-000104.svg">
+</a>
+        <a class="social-icon" alt="Twitter" title="Twitter" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Ftwitter.com%2FIFTTT">
+          <img alt="Twitter" title="Twitter" loading="lazy" width="28" height="28" src="/assets/asset-000105.svg">
+</a>
+        <a class="social-icon" alt="TikTok" title="TikTok" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.tiktok.com%2F%40iftttapp">
+          <img alt="TikTok" title="TikTok" loading="lazy" width="28" height="28" src="/assets/asset-000106.svg">
+</a>
+        <a class="social-icon" alt="Reddit" title="Reddit" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fifttt%2F">
+          <img alt="Reddit" title="Reddit" loading="lazy" width="28" height="28" src="/assets/asset-000107.svg">
+</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+  
+
+  <div id="react-portal-container"></div>
+
+  
+
+  
+  
+
+
+
+    
+
+  
+
+
+
+<div style="position: absolute; top: 50vh; height: 1px; width: 100%;"></div><script src="/local.js" defer></script></body></html>

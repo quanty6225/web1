@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Troubleshooting Discord Servers Not Populating When Creating an Applet - IFTTT Help</title><link rel="stylesheet" href="/local.css"></head><body class="local-shell help-page" data-local-route="/hc/en-us/articles/31091194724123" data-local-actor="anonymous" data-local-state="default"><header><a class="brand" href="/hc/en-us">IFTTT</a><nav><a href="/hc/en-us">Explore</a> <a href="/hc/en-us">My Applets</a></nav></header><main><a href="/hc/en-us">Help Center</a><h1>Troubleshooting Discord Servers Not Populating When Creating an Applet</h1><article><h2 id="h_01JD3G2B22ZB6VKXFNMPBEVXPD">Background:</h2>
+<p>When setting up an Applet with a Discord trigger or action, you’ll see a field to select the server and channel you want to use:</p>
+<p class="wysiwyg-text-align-center"><img src="/assets/help-asset-000173.png" width="480" height="381"></p>
+<p class="wysiwyg-text-align-left">If your server or channel isn’t showing up as an option in those fields, this guide will help you resolve the issue.</p>
+<h3 id="h_01JD3GDQ0WTSBK3PW6R60Z8JJ9" class="wysiwyg-text-align-left">Ensure the server has been added to the IFTTT Discord Service</h3>
+<p>When first connecting the Discord service on IFTTT, you’ll be prompted to select a server to add the IFTTT bot to. After adding the bot, that server will appear as an option in the <strong>which channel </strong>dropdown when creating an Applet. If one server appears but another doesn’t, it’s often because the IFTTT bot hasn’t been added to the missing server.</p>
+<p>If a server is missing from the list, start by following these steps:</p>
+<ul>
+<li>Go to <a href="/discord/settings" target="_blank" rel="noopener noreferrer">ifttt.com/discord/settings </a>
+</li>
+<li>Click <strong>Reconnect </strong>in the bottom right</li>
+</ul>
+<p class="wysiwyg-text-align-center"><strong><img src="/assets/help-asset-000174.png" width="458" height="405"><br></strong></p>
+<ul>
+<li>On the following screen, ensure that the server that wasn't populating is selected in the <strong>Add to server </strong>field seen below:</li>
+</ul>
+<p class="wysiwyg-text-align-center"><img src="/assets/help-asset-000175.png"></p>
+<ul>
+<li class="wysiwyg-text-align-left">Once selected, press <strong>continue </strong>
+</li>
+<li class="wysiwyg-text-align-left">Ensure all permissions are enabled on the follow screen then press <strong>Authorize</strong>
+</li>
+</ul>
+<p class="wysiwyg-text-align-center"><img src="/assets/help-asset-000176.png" width="332" height="494"></p>
+<ul>
+<li class="wysiwyg-text-align-left">Lastly, go to <a href="/create" target="_blank" rel="noopener noreferrer">ifttt.com/create</a>. You’ll now see your newly added server listed as an option when creating an Applet, along with any servers you’ve previously added</li>
+</ul>
+<h3 id="h_01JD3J18S2AK3RK5YGNJRE5DP2">Additional Troubleshooting: Servers not populating when reconnecting</h3>
+<p>If you’ve followed the steps in the previous section and your server doesn’t appear as an option in the <strong>Add to server</strong> field on this screen:</p>
+<p class="wysiwyg-text-align-center"><img src="/assets/help-asset-000177.png" width="292" height="431"></p>
+<p class="wysiwyg-text-align-left">It’s likely because the account connected to the IFTTT Discord service doesn’t have the <strong>Manage Server</strong> permission for the server you’re trying to connect.</p>
+<p class="wysiwyg-text-align-left">That permission will need to be granted to your Discord account by an admin of the server. They can do so by following these steps:</p>
+<ul>
+<li class="wysiwyg-text-align-left">Right click on the Server icon, hover over Server Settings, then click <strong>Roles</strong>
+</li>
+<li>Select the role assigned to your Discord account, go to the <strong>Permissions</strong> tab, and enable the <strong>Manage Server</strong> permission.</li>
+<li>Alternatively, create a custom role for your Discord account that includes the <strong>Manage Server</strong> permission.</li>
+</ul>
+<p class="wysiwyg-text-align-center"><img src="/assets/help-asset-000178.png" width="563" height="193"></p>
+<ul>
+<li class="wysiwyg-text-align-left">Once that permission has been added to your Discord account, follow the steps in the previous section to connect that server to the IFTTT Discord service</li>
+</ul>
+<h3 id="01JD589R3G1B44J7KCB47JH5RM">Additional Troubleshooting: Applet runs errors</h3>
+<p>Once your Applets are enabled, if you experience run errors, check out our guide <a href="/hc/en-us/articles/30302323958683" target="_blank" rel="noopener noreferrer">here</a> on granting the necessary permissions to allow IFTTT to view server messages and post to your server.</p>
+<p> </p></article><p>Comments: 0</p></main><footer><a href="/hc/en-us">Help Center</a> · <a href="/hc/en-us">Contact</a></footer><script src="/local.js" defer></script></body></html>

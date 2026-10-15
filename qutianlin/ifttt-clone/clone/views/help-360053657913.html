@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Example Applets using queries and filter code - IFTTT Help</title><link rel="stylesheet" href="/local.css"></head><body class="local-shell help-page" data-local-route="/hc/en-us/articles/360053657913" data-local-actor="anonymous" data-local-state="default"><header><a class="brand" href="/hc/en-us">IFTTT</a><nav><a href="/hc/en-us">Explore</a> <a href="/hc/en-us">My Applets</a></nav></header><main><a href="/hc/en-us">Help Center</a><h1>Example Applets using queries and filter code</h1><article><h2 id="h_01M157VDCK2Q2JYGTTRJ8BTCSW"><span class="wysiwyg-font-size-x-large"><strong>Applet: IF you complete a new activity on Strava → THEN Send a notification</strong></span></h2><p><span style="font-weight: 400;">This Applet triggers whenever you complete a new activity on Strava. If so, a notification will be sent through the IFTTT app. But what if you don't want notifications on a weekend day? Or, what if it was rainy out and you still got your workout in? Congratulate yourself for training in unfavorable weather. Adding queries and filter code to this Applet will help you do that</span></p><p>Here's how you can set up the Applet:</p><p><strong>Trigger service: </strong><a href="/strava" target="_blank" rel="noopener noreferrer">Strava</a></p><p><span style="font-weight: 400;"><strong>Trigger:</strong> New activity by you</span></p><p><strong>Query service: </strong><a href="/weather" target="_blank" rel="noopener noreferrer">Weather Underground</a></p><p><span style="font-weight: 400;"><strong>Query:</strong> Two day forecast</span></p><p><strong>Action service: </strong><a href="/if_notifications" target="_blank" rel="noopener noreferrer">Notifications</a></p><p><span style="font-weight: 400;"><strong>Action:</strong> Send a notification from the IFTTT app</span></p><p><strong>Filter code:</strong></p><pre class="wysiwyg-code-block"><code class="language-auto">// Filter code that demonstrates Meta.currentUserTime
+// and logic to skip actions on weekends
+// 0 is for Sunday and 6 is for Saturday
+
+let currentDay = Meta.currentUserTime.day();
+let currentCondition = Weather.twoDayForecast[0].Condition;
+
+if (currentDay == 0 || currentDay == 6) {
+  IfNotifications.sendNotification.skip();
+}
+
+else if (currentCondition == "Rainy") {
+  IfNotifications.sendNotification.setMessage("Nice work getting your workout in on a rainy day");
+}</code></pre><p> </p><h2 id="h_01M157VDCMX5E84PJ4TW5D222F"><span class="wysiwyg-font-size-x-large"><strong>Applet: Turn on my entryway lights based on outside brightness</strong></span></h2><p><span style="font-weight: 400;">To prevent turning on lights when it is light outside, we can make use of a query and filter code that will check for the brightness using the Tempest Weather System.</span></p><p><strong>Trigger service: </strong><a href="/smartthings_v2" target="_blank" rel="noopener noreferrer">SmartThings</a></p><p><span style="font-weight: 400;"><strong>Trigger:</strong> Unlocked</span></p><p><strong>Query service: </strong><a href="/weatherflow" target="_blank" rel="noopener noreferrer">Tempest Weather System</a><br><span style="font-weight: 400;"><strong>Query:</strong> History of observations</span><br> </p><p><strong>Action service:</strong><span style="font-weight: 400;"> </span><a href="/smartthings_v2" target="_blank" rel="noopener noreferrer"><span style="font-weight: 400;">SmartThings</span></a><br><span style="font-weight: 400;"><strong>Action:</strong> Switch on</span> </p><p><strong>Filter code:</strong></p><pre class="wysiwyg-code-block"><code class="language-auto">let aboveThreshold = 100;
+let currentLum = Number(Weatherflow.historyOfObservations[0].Brightness);
+
+let time_unlocked = moment(SmartthingsV2.unlockedSmartthings.UnlockedAt,'MMMM D, YYYY at h:mmA').format("HH:mm");
+
+var msg = 'Door unlocked at ' + time_unlocked + ' and it is currently ' + currentLum + 'lum above the ' + aboveThreshold + 'lum threshold.';
+
+if (currentLum &gt; aboveThreshold){
+    SmartthingsV2.turnOnSmartthings.skip(msg)
+}</code></pre><p> </p><h2 id="h_01M157VDCMNAYBGDQGA9T6DSH1"><span class="wysiwyg-font-size-x-large"><strong>Applet: IF you start traveling to your vacation home →THEN heat some water for your stay</strong></span></h2><p><span style="font-weight: 400;">When you have plans to spend your weekend at your cabin, you want the heater turned on before you arrive. This Applet, along with the Google Calendar Query and the filter code, will check whether you have an event with the keyword "Weekend at the Cabin" when you arrive near your cabin. If it does, the heater will turn on</span></p><p><strong>Trigger service: </strong><a href="/location" target="_blank" rel="noopener noreferrer">Location</a></p><p><span style="font-weight: 400;"><strong>Trigger:</strong> You enter an area</span></p><p><span style="font-weight: 400;"></span><strong>Query service: </strong><a href="/google_calendar" target="_blank" rel="noopener noreferrer">Google Calendar</a></p><p><span style="font-weight: 400;"><strong>Query:</strong> Search events (set </span><strong>Query</strong><span style="font-weight: 400;"> to “Weekend at the Cabin”)</span></p><p><strong>Action service: </strong><a href="/wemo_switch" target="_blank" rel="noopener noreferrer">WeMo Smart Plug</a></p><p><span style="font-weight: 400;"><strong>Action:</strong> Turn On</span></p><p><strong>Filter code:</strong></p><pre class="wysiwyg-code-block"><code class="language-auto">// locationDate will fetch the moment.js date object for the location trigger
+// calendarDate will fetch the moment.js date object for the Google Calendar query
+
+let locationDate = new Date(Location.enterRegionLocation.OccurredAt);
+let calendarDate = new Date(GoogleCalendar.searchEvents[0].Start);
+
+// The following if statement checks if the date and the month when you enter 
+// the location matches the date and the month are the same. If they are the same, 
+// then the action should run.
+
+if (locationDate.getDate !== calendarDate.getDate &amp;&amp; locationDate.getMonth !== calendarDate.getMonth) {
+    WemoSwitch.attributeSocketOnDiscrete.skip();
+}</code></pre><p> </p><h2 id="h_01M157VDCMZ09C1870GZ3YAHVH">
+<strong>Applet: IF tomorrow's forecast is clear → THEN schedule a long run</strong><span class="wysiwyg-font-size-x-large"></span>
+</h2><p><span style="font-weight: 400;">This Applet checks tomorrow’s weather then adds a “Go for a run” event to your calendar depending on the forecast. If it’s going to be sunny, you’re signed up for the long run. Otherwise, make it quick. Either way, you get a notification the day before as a heads up.</span></p><p><strong>Trigger service: </strong><a href="/date_and_time" target="_blank" rel="noopener noreferrer">Date and Time</a></p><p><span style="font-weight: 400;"><strong>Trigger:</strong> Every day at</span></p><p><strong>Query service: </strong><a href="/weather" target="_blank" rel="noopener noreferrer">Weather Underground</a></p><p><span style="font-weight: 400;"><strong>Query:</strong> Two day forecast</span></p><p><strong>Action service: </strong><a href="/google_calendar" target="_blank" rel="noopener noreferrer">Google Calendar</a></p><p><span style="font-weight: 400;"><strong>Action:</strong> Quick add event</span></p><p><strong>Action service: </strong><a href="/if_notifications" target="_blank" rel="noopener noreferrer">Notifications</a></p><p><span style="font-weight: 400;"><strong>Action:</strong> Send a rich notification from the IFTTT app</span><span style="font-weight: 400;"></span></p><p><strong>Filter code:</strong></p><pre class="wysiwyg-code-block"><code class="language-auto">if (Weather.twoDayForecast[1].Condition == "Sunny") {
+  var length_of_run_in_minutes = "90"
+  var length_of_run_in_words = "long"
+} else {
+  var length_of_run_in_minutes = "60"
+  var length_of_run_in_words = "short"
+}
+
+GoogleCalendar.quickAddEvent.setQuickAdd(`8am tomorrow Go for a run ${length_of_run_in_minutes} minutes`)
+
+IfNotifications.sendRichNotification.setTitle(
+  `You're going for a ${length_of_run_in_words} run tomorrow`
+)
+
+IfNotifications.sendRichNotification.setMessage(
+  `It's going to be ${Weather.twoDayForecast[1].Condition.toLowerCase()} with a high of ${Weather.twoDayForecast[1].HighTempFahrenheit}° F`
+)
+
+IfNotifications.sendRichNotification.setLinkUrl(
+  Weather.twoDayForecast[1].ForecastUrl
+)
+
+IfNotifications.sendRichNotification.setImageUrl(
+  Weather.twoDayForecast[1].TodaysConditionImageUrl
+)</code></pre><h2 id="h_01M157VDCME1DDAD819X3265PE"> </h2><h2 id="h_01M157VDCMST0NM6YF5DSP3D1W">
+<strong>Applet: IF there's a new post on Reddit → THEN post a tweet with an image</strong><br> </h2><p><span style="font-weight: 400;">This Applet posts a tweet with an image from a specified X (Twitter) account and skips tweeting if there's no image on the Reddit post.</span><br> </p><p><strong>Trigger service: </strong><a href="/reddit" target="_blank" rel="noopener noreferrer">reddit</a><br><span style="font-weight: 400;"><strong>Trigger:</strong> New hot post in subreddit</span><span style="font-weight: 400;"></span></p><p><strong>Action service: </strong><a href="/twitter" target="_blank" rel="noopener noreferrer">Twitter</a><br><span style="font-weight: 400;"><strong>Action:</strong> Post a tweet with image</span></p><p><strong>Filter code:</strong></p><pre class="wysiwyg-code-block" style="white-space: pre-wrap;"><code class="language-auto">let redditImageURL = Reddit.newHotPostInSubreddit.ImageURL;
+let noImageURL = `https://ifttt.com/images/no_image_card.png`;
+
+if (redditImageURL == noImageURL) {
+  Twitter.postNewTweetWithImage.skip(`No image URL present`);
+}</code></pre></article><p>Comments: 0</p></main><footer><a href="/hc/en-us">Help Center</a> · <a href="/hc/en-us">Contact</a></footer><script src="/local.js" defer></script></body></html>

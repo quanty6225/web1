@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en"><head>
+  <link rel="preload" href="/assets/asset-000002.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000004.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000003.woff2" as="font" type="font/woff2">
+
+<style>
+/* IFTTT.ai rebrand — Museo Sans Rounded (site-wide base font). One @font-face per Museo cut; */
+/* CSS font-weight == the cut number (300 Light / 500 Regular / 700 body / 900 headings). */
+/* NB: map by cut name, not the weight Figma's inspect panel shows — a designer's desktop copy */
+/* may report ~200 less (700 for the 900 cut); these files carry OS/2 weight == cut number. */
+
+/* Museo Sans Rounded 300 (light) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 300;
+  src: url("/assets/dependency-000100.woff2") format("woff2"),
+    url("/assets/dependency-000101.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 500 (regular) — covers CSS 400–600 */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 500 600;
+  src: url("/assets/asset-000002.woff2") format("woff2"),
+    url("/assets/dependency-000102.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 700 (body) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 700;
+  src: url("/assets/asset-000004.woff2") format("woff2"),
+    url("/assets/dependency-000104.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 900 (black) — display headings */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 900;
+  src: url("/assets/asset-000003.woff2") format("woff2"),
+    url("/assets/dependency-000106.woff") format("woff");
+  font-display: swap;
+}
+
+/* Metric-matched fallback for the swap window: Avenir Next scaled to the Museo advance widths, with */
+/* the Museo line box (hhea 940/-260 divided by size-adjust), so the change to Museo moves no layout. */
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 500 600;
+  src: local("Avenir Next Medium"), local("AvenirNext-Medium");
+  size-adjust: 98.0%;
+  ascent-override: 95.92%;
+  descent-override: 26.53%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 700;
+  src: local("Avenir Next Bold"), local("AvenirNext-Bold");
+  size-adjust: 94.5%;
+  ascent-override: 99.47%;
+  descent-override: 27.51%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 900;
+  src: local("Avenir Next Heavy"), local("AvenirNext-Heavy");
+  size-adjust: 90.2%;
+  ascent-override: 104.21%;
+  descent-override: 28.82%;
+  line-gap-override: 0%;
+}
+
+/* Museo Sans Rounded 500 / 700 italic — fetched only by pages that set font-style: italic. */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 500 600;
+  src: url("/assets/asset-000981.woff2") format("woff2"),
+    url("/assets/dependency-000103.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/asset-001589.woff2") format("woff2"),
+    url("/assets/dependency-000105.woff") format("woff");
+  font-display: swap;
+}
+</style>
+
+  <!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+
+  
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0">
+<meta name="mobile-web-app-capable" content="yes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>Applet Wizard - IFTTT</title>
+<meta name="description" content="Applet Wizard - IFTTT">
+<meta name="keywords" content="ifttt applets connect connections integrate integration automate automation services recipes trigger action ifthisthenthat free">
+<meta property="al:ios:url" content="ifttt://">
+<meta property="al:ios:app_store_id" content="660944635">
+<meta property="al:ios:app_name" content="IFTTT">
+<meta property="fb:app_id" content="122259781154546">
+<meta property="fb:admins" content="7302486">
+<meta property="og:title" content="Applet Wizard - IFTTT">
+<meta property="og:description" content="Applet Wizard - IFTTT">
+<meta property="og:site_name" content="IFTTT">
+<meta property="og:url" content="https://ifttt.com/applet_discovery">
+<meta property="og:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@IFTTT">
+<meta name="twitter:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta name="twitter:app:id:iphone" content="660944635">
+<meta name="twitter:app:id:ipad" content="660944635">
+<meta name="twitter:app:id:googleplay" content="com.ifttt.ifttt">
+<meta name="twitter:app:url:iphone" content="ifttt://">
+<meta name="twitter:app:url:ipad" content="ifttt://">
+<meta name="twitter:app:url:googleplay" content="ifttt://">
+<meta name="twitter:app:name:googleplay" content="IFTTT">
+<meta name="author" content="IFTTT">
+<meta name="copyright" content="Copyright 2026 IFTTT Inc.">
+<meta name="theme-color" content="">
+<meta name="facebook-domain-verification" content="tapueff3rri63aug9c5b7hapbv3mkv">
+
+<!-- Standard SVG Favicon -->
+<link rel="icon" href="/assets/dependency-000091.svg" type="image/svg+xml">
+
+<!-- For all Apple Devices: -->
+<link rel="apple-touch-icon" href="/assets/dependency-000081.png">
+
+<!-- For Windows 8: -->
+<meta name="msapplication-TileImage" content="https://web-assets.ifttt.com/builds/assets/pinned-Dpomu1wG.png">
+<meta name="msapplication-TileColor" content="#111">
+
+
+
+
+  
+  <link rel="stylesheet" href="/assets/asset-001038.css">
+<link rel="stylesheet" href="/assets/asset-000135.css">
+<link rel="stylesheet" href="/assets/asset-000119.css">
+  
+<link rel="stylesheet" href="/local.css"></head>
+
+<body class="onboarding-body repeat-action   web-body" data-local-route="/applet_discovery" data-local-actor="member" data-local-state="default">
+    <!-- Google Tag Manager (noscript) -->
+  <noscript></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  
+
+
+  
+
+
+
+  
+
+  
+
+      <span></span>
+
+
+  <div id="flash-messages">
+    
+  </div>
+
+  <div class="after-header-content">
+    
+  </div>
+
+  <div class="page-canvas">
+    <main class="container web">
+        
+
+
+<div><div class="index__goal-selection-view___D2ArO"><header class="header__onboarding-header___1_c6R"><button type="submit" aria-label="Back button" class="header__back___1_c6R button-tertiary button-outlined button-with-icon only-icon-on-mobile"><span class="button-icon"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.63995 0.497476C9.30364 -0.166035 10.3804 -0.165615 11.0442 0.497476C11.708 1.16132 11.7079 2.23791 11.0442 2.90177L4.08233 9.86271L10.5052 16.519C11.157 17.1946 11.1367 18.2714 10.4612 18.9233C9.78569 19.5747 8.71072 19.5553 8.05889 18.8803L0.476862 11.0238C-0.166495 10.3567 -0.158088 9.29551 0.49737 8.64005L8.63995 0.497476Z" fill="#111" transform="translate(6.3 2.3)"></path></svg></span><span class="hide-on-xs">Back</span></button><div class="header__progress-bar-container___1_c6R"><div class="header__dot___1_c6R header__active___1_c6R"></div><div class="header__dot___1_c6R"></div></div><div class="spacer"></div><h1>What brings you to IFTTT?</h1></header><div class="index__container___D2ArO index__goal-selection___D2ArO"><div><p class="txt-body-3">Pick one to help us suggest the best Applets and tools for you.</p><ul class="index__goal-list___D2ArO"><li><a class="onboarding_tile__inner-tile___z1uvh onboarding_tile__goal-select___z1uvh"><span><svg fill="none" height="128" viewbox="0 0 128 128" width="128" xmlns="http://www.w3.org/2000/svg"><clippath id="clip5_8264_4106"><path d="m20 24h88v80h-88z"></path></clippath><g clip-path="url(#clip5_8264_4106)" stroke="#fff" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"><path d="m64 42.125 26.5625 28.125h14.0625l-40.625-43.75-40.625 43.75h14.0625zM64 89c-5.3125 0-9.375-4.0625-9.375-9.375v-9.375h18.75v9.375c0 5.3125-4.0625 9.375-9.375 9.375zM57.75 60.875v9.375M70.25 60.875v9.375M64 92.125c0 5.3125 4.0625 9.375 9.375 9.375M57.75 101.5h-21.875v-31.25M92.125 70.25v31.25h-18.75"></path></g></svg></span><div>Automate my home</div><div class="onboarding_tile__description___z1uvh txt-caption">I want to use automation to control devices in and around my home to simplify my lifestyle.</div></a></li><li><a class="onboarding_tile__inner-tile___z1uvh onboarding_tile__goal-select___z1uvh"><span><svg fill="none" height="128" viewbox="0 0 128 128" width="128" xmlns="http://www.w3.org/2000/svg"><g fill="#fff"><path clip-rule="evenodd" d="m75 46.25c-2.0568 0-3.75 1.6932-3.75 3.75v31.875h29.375v-31.875c0-2.0568-1.6932-3.75-3.75-3.75zm-8.75 3.75v34.375 12.5c0 4.818 3.9318 8.75 8.75 8.75h21.875c4.818 0 8.75-3.932 8.75-8.75v-12.5-34.375c0-4.8182-3.932-8.75-8.75-8.75h-21.875c-4.8182 0-8.75 3.9318-8.75 8.75zm34.375 46.875v-10h-29.375v10c0 2.0568 1.6932 3.75 3.75 3.75h21.875c2.0568 0 3.75-1.6932 3.75-3.75zm-19.375-5.625c-1.3807 0-2.5 1.1193-2.5 2.5s1.1193 2.5 2.5 2.5h9.375c1.3807 0 2.5-1.1193 2.5-2.5s-1.1193-2.5-2.5-2.5z" fill-rule="evenodd"></path><path d="M91.5 59.5c0-1.3807-1.1193-2.5-2.5-2.5s-2.5 1.1193-2.5 2.5v12.5h-2v-6.5c0-1.3807-1.1193-2.5-2.5-2.5s-2.5 1.1193-2.5 2.5v6.5h-3c-1.3807 0-2.5 1.1193-2.5 2.5s1.1193 2.5 2.5 2.5h18c1.3807 0 2.5-1.1193 2.5-2.5s-1.1193-2.5-2.5-2.5h-3zM25.2586 22.5h14.4828c1.5235 0 2.7586 1.186 2.7586 2.649v14.702c0 1.463-1.2351 2.649-2.7586 2.649h-14.4828c-1.5235 0-2.7586-1.186-2.7586-2.649v-14.702c0-1.463 1.2351-2.649 2.7586-2.649z"></path><path clip-rule="evenodd" d="m27.1279 54c.4064 3.9621 1.7744 7.7789 4.0011 11.1115 2.6921 4.029 6.5185 7.1692 10.9953 9.0235 4.4767 1.8544 9.4029 2.3396 14.1554 1.3942 1.3542-.2693 2.6703.6101 2.9397 1.9643.2694 1.3541-.6101 2.6703-1.9642 2.9397-5.7225 1.1382-11.6539.554-17.0444-1.6788-5.3904-2.2328-9.9977-6.0138-13.2392-10.8651-3.2415-4.8512-4.9716-10.5548-4.9716-16.3893 0-1.3807 1.1193-2.5 2.5-2.5h24.5v-24.5c0-1.3807 1.1193-2.5 2.5-2.5 5.8345 0 11.5381 1.7301 16.3893 4.9716 1.8667 1.2473 3.575 2.6969 5.0976 4.3155.9461 1.0056.8977 2.5878-.108 3.5338-1.0056.9461-2.5878.8977-3.5339-.108-1.2645-1.3442-2.6832-2.548-4.2335-3.5839-3.3326-2.2268-7.1494-3.5947-11.1115-4.0011v26.8721z" fill-rule="evenodd"></path></g></svg></span><div>Automate my business</div><div class="onboarding_tile__description___z1uvh txt-caption">I want to automate my business processes to simplify them and save time.</div></a></li><li><a class="onboarding_tile__inner-tile___z1uvh onboarding_tile__goal-select___z1uvh"><span><svg fill="none" height="128" viewbox="0 0 128 128" width="128" xmlns="http://www.w3.org/2000/svg"><g fill="#fff"><path d="M87.7607 69.8278c-3.6206 0-6.566-2.9459-6.566-6.5667 0-3.6643 2.9454-6.6457 6.566-6.6457 3.7267 0 6.6461 2.9189 6.6461 6.6457 0 3.6208-2.9813 6.5667-6.6461 6.5667zm0-9.3555c-1.5191 0-2.7091 1.2249-2.7091 2.7888 0 1.4944 1.2154 2.7098 2.7091 2.7098 1.5641 0 2.7893-1.1902 2.7893-2.7098 0-1.5639-1.2252-2.7888-2.7893-2.7888zm0-4.6378c-3.6206 0-6.566-2.9453-6.566-6.5657 0-1.8536.4019-11.3026 8.3345-15.314 2.6651-1.3325 3.3395-2.0668 3.3395-5.7157 0-2.772-2.2915-5.0275-5.108-5.0275-2.7721 0-5.0276 2.2552-5.0276 5.0275 0 3.6651-2.9813 6.6467-6.6461 6.6467-3.6206 0-6.5665-2.9816-6.5665-6.6467.0003-10.0571 8.1825-18.2391 18.2402-18.2391s18.2403 8.182 18.2403 18.2394c0 8.4836-3.263 13.8986-10.5814 17.557-.4494.2905-1.0125 2.2079-1.0125 3.4724-.0003 3.6204-2.9816 6.5657-6.6464 6.5657zm0-36.4795c4.9435 0 8.9649 3.9854 8.9649 8.8844 0 5.4356-1.84 7.3499-5.4639 9.1613-6.0358 3.0521-6.2101 10.9749-6.2101 11.8681 0 1.4939 1.2154 2.7089 2.7091 2.7089 1.5641 0 2.7893-1.19 2.7893-2.7089 0-.0534.0856-5.3924 3.1449-6.922 6.0012-3.0004 8.4491-7.0876 8.4491-14.1074 0-7.9305-6.4523-14.3825-14.3833-14.3825s-14.3831 6.452-14.3831 14.3825c0 1.5121 1.2409 2.7898 2.7096 2.7898 1.5379 0 2.7893-1.2514 2.7893-2.7898 0-4.899 3.9857-8.8844 8.8842-8.8844zM61.5057 77.2797c-8.2357 0-14.9361-6.7004-14.9361-14.9358 0-8.2355 6.7004-14.9359 14.9361-14.9359 8.2354 0 14.9359 6.7004 14.9359 14.9359 0 8.2354-6.7005 14.9358-14.9359 14.9358zm0-26.0148c-6.1093 0-11.0792 4.97-11.0792 11.079s4.9699 11.079 11.0792 11.079c6.109 0 11.079-4.97 11.079-11.079s-4.9702-11.079-11.079-11.079z"></path><path d="m75.5738 78.5653h-26.4067c-3.2367 0-5.8702-2.6332-5.8702-5.8701 0-.0172-.003-28.9024-.003-28.9024 0-2.979-2.5795-5.4027-5.7504-5.4027h-1.7929c-3.1709 0-5.7506 2.4237-5.7506 5.4027v40.7268c0 4.7036 3.3562 8.6373 7.7991 9.5342v9.2792c0 1.065.8632 1.928 1.9282 1.928h43.5602c1.0653 0 1.9285-.863 1.9285-1.928v-15.1252c0-5.3171-4.3256-9.6425-9.6422-9.6425zm-41.7167-34.7725c0-.8521.8498-1.5458 1.8937-1.5458h1.793c1.0442 0 1.8934.6935 1.8934 1.5458v1.6271h-5.5801zm47.502 57.6112h-39.7031v-9.082-.0033s0-.0005 0-.0008c0-1.0653-.8632-1.9284-1.9285-1.9284-3.2369 0-5.8704-2.6332-5.8704-5.8702v-35.2425h5.583v23.4184c0 5.3633 4.3636 9.727 9.727 9.727h26.4067c3.1901 0 5.7853 2.5954 5.7853 5.7853z"></path></g></svg></span><div>Something else</div><div class="onboarding_tile__description___z1uvh txt-caption">I want to automate workflows to do something else.</div></a></li></ul></div></div></div></div>
+
+
+    </main>
+  </div>
+
+  
+
+  
+
+      <span></span>
+
+
+
+  
+
+  <div id="react-portal-container"></div>
+
+  
+
+  
+  
+
+
+  <div id="zendesk-widget-button" class="chat-style">
+    <span class="button help-button">
+      <span class="icon icon-upper-right">
+          <svg width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" title="Help-bg-white"><circle cx="20" cy="20" r="19.5" fill="#fff"></circle><path d="M20 0C8.95419 0 0 8.95419 0 20C0 31.0455 8.95419 40 20 40C31.0457 40 40 31.0455 40 20C40 8.95419 31.0457 0 20 0ZM22.1248 29.1933C22.1248 30.8129 20.877 32.0604 19.1902 32.0604C17.5031 32.0604 16.2553 30.8129 16.2553 29.1933V29.1258C16.2553 27.5062 17.5031 26.258 19.1902 26.258C20.877 26.258 22.1248 27.5062 22.1248 29.1258V29.1933ZM28.0296 14.9898C28.0296 19.2743 25.0605 21.0294 21.3839 21.7716L21.2827 22.9958C21.147 23.8724 20.4385 24.6485 19.4603 24.6485H18.3301C17.3515 24.6485 16.6429 23.9068 16.5085 22.9958V20.0844C16.3397 18.971 17.5031 18.1944 18.5837 18.0596C21.5183 17.6891 22.8678 16.7782 22.8678 15.125V15.0574C22.8678 13.5395 21.7207 12.6621 19.7636 12.6621C18.3133 12.6621 17.065 13.101 15.8508 14.0116C15.4455 14.3153 14.9058 14.5517 14.3321 14.5517C13.0502 14.5517 11.9704 13.4715 11.9704 12.1904C11.9704 11.5487 12.2404 10.8742 12.8482 10.3681C14.6361 8.88418 16.8962 7.93879 19.8648 7.93879C24.7233 7.93879 28.0296 10.4353 28.0296 14.9222V14.9898Z" fill="#111"></path></svg>
+      </span>
+      <span class="icon icon-default">
+        <svg width="20" height="20" viewbox="0 0 20 20" aria-hidden="true"><g id="Layer_4"><path d="M11,12.3V13c0,0-1.8,0-2,0v-0.6c0-0.6,0.1-1.4,0.8-2.1c0.7-0.7,1.6-1.2,1.6-2.1c0-0.9-0.7-1.4-1.4-1.4 c-1.3,0-1.4,1.4-1.5,1.7H6.6C6.6,7.1,7.2,5,10,5c2.4,0,3.4,1.6,3.4,3C13.4,10.4,11,10.8,11,12.3z"></path><circle cx="10" cy="15" r="1"></circle><path d="M10,2c4.4,0,8,3.6,8,8s-3.6,8-8,8s-8-3.6-8-8S5.6,2,10,2 M10,0C4.5,0,0,4.5,0,10s4.5,10,10,10s10-4.5,10-10S15.5,0,10,0 L10,0z"></path></g></svg>
+      </span>
+      <span class="title has-bottom-nav">
+        Help
+      </span>
+    </span>
+  </div>
+
+    
+
+  
+
+
+
+<script src="/local.js" defer></script></body></html>

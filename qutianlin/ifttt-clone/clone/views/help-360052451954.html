@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>What is filter code? - IFTTT Help</title><link rel="stylesheet" href="/local.css"></head><body class="local-shell help-page" data-local-route="/hc/en-us/articles/360052451954" data-local-actor="anonymous" data-local-state="default"><header><a class="brand" href="/hc/en-us">IFTTT</a><nav><a href="/hc/en-us">Explore</a> <a href="/hc/en-us">My Applets</a></nav></header><main><a href="/hc/en-us">Help Center</a><h1>What is filter code?</h1><article><p><span style="font-weight: 400;">Filter code lets you add custom JavaScript logic to your Applets. You can use it to control when Actions run, change the values sent to Actions, or build more advanced automations based on Trigger and Query data.</span></p><p><span style="font-weight: 400;">Filter code runs after an Applet's Trigger and Queries, but before any Delay or Actions.</span></p><p>Some of the things you can do with filter code include:</p><ul data-spread="false">
+<li data-list-item-id="ebe98a643aee9d20c11076b578f9a0728">
+<strong>Skip an Action or multiple Actions</strong> when certain conditions are met.</li>
+<li data-list-item-id="e03d690fff5d33fdc9a1a28ff2252c21f">
+<strong>Change the values of Action fields</strong> before an Action runs.</li>
+<li data-list-item-id="e747c2fe0fca65325762e110c24cd5310">
+<strong>Use data from your Trigger or Queries</strong> to create more advanced logic.</li>
+<li data-list-item-id="eafd0e74b873a8a7c2a45e2234efdd1fd">
+<strong>Use JavaScript</strong> to build conditions that aren't available through the standard Applet configuration.</li>
+</ul><p>Here are some examples of what you can do with filter code.</p><h2 id="h_01JJW2BQWS8Y2V6HY0PZCR9RP7">Running Applets only during certain times</h2><p><span style="font-weight: 400;">If you have Applets that notify you about new events or updates from a service, but these notifications are not important enough to wake you up at night, you can use filter code to skip notifications outside your waking hours. This is one of the most common use cases and fortunately, a simple one to set up.</span></p><pre class="wysiwyg-code-block"><code class="language-auto">let currentHour = Meta.currentUserTime.hour();
+
+if (currentHour &lt; 9 || currentHour &gt;= 23) {
+  Email.sendMeEmail.skip(`It's ${currentHour}, only running between 9am and 11pm`);
+    // You can pass a message to skip() and it will be recorded in the Applet's
+    // activity feed when an action is skipped. This is useful for debugging.
+}</code></pre><p><span style="font-weight: 400;">In the filter code, you have access to the time object </span><span style="font-weight: 400;"><span class="wysiwyg-underline">Meta.currentUserTime</span></span><span style="font-weight: 400;">, which is technically </span><a href="/external?url=https%3A%2F%2Fmomentjs.com%2Fdocs%2F%23%2Fget-set%2F" target="_self"><span style="font-weight: 400;">a momentjs object</span></a><span style="font-weight: 400;">. It has a lot of built-in methods for getting and manipulating the different parts that make up the current time and date (taking into account the time zone the user set in their IFTTT account setting).</span><br><br><span style="font-weight: 400;">For this example, you need to get the integer value, the number that represents the current hour (in 24h format). The </span><span style="font-weight: 400;"><span class="wysiwyg-underline">hour()</span></span><span style="font-weight: 400;"> method provides that, so we assign the value to the </span><span style="font-weight: 400;"><span class="wysiwyg-underline">currentHour</span></span><span style="font-weight: 400;"> variable on the first line.</span></p><p><span style="font-weight: 400;">We then build a simple IF statement that checks two conditions: either the value of <span class="wysiwyg-underline">currentHour</span> is less than 9 OR it’s greater than or equal to 23 (11pm). The || symbols represent the OR logic we need in this example.</span></p><p><span style="font-weight: 400;">Lastly, in the { } we have just one command - skip the email Action. If the current hour is outside the 9am - 11pm interval, this code will stop the Applet. Any Actions afterward will not run.</span></p><h2 id="h_01JJW2BQWS8PPKWVBD12XMFRQE">Running Actions every other week</h2><p><span style="font-weight: 400;">Another interesting Applet idea that is now possible with filter code is running an Action on a bi-weekly schedule. If you want your Applet to run on certain days of the week, then the Date &amp; Time service can help, but it’s powerless if you have a bi-weekly Action(s). It’s also not useful when there is another Trigger that needs to fire, and the schedule is just another layer of logic on top of it.</span></p><pre class="wysiwyg-code-block"><code class="language-auto">// Filter code to check the week number and if the week number is odd, 
+// the actions will be skipped.
+// This code makes use of the moment.js function moment().week() 
+// which returns the current week number in the number format.
+
+let thisWeek = Meta.currentUserTime.week();
+
+//Change 0 to 1 to make it run on odd weeks instead
+
+if (thisWeek % 2 != 0) { 
+   IfNotifications.sendNotification.skip(`Only running on even weeks. Week number ${thisWeek}`);
+}</code></pre><h2 id="h_01JJW2BQWSFX6FNNZNBNQFZ3TE">Running Actions based on Trigger data</h2><p><span style="font-weight: 400;">If you have a few Applets that take alerts (from a monitoring, security, or weather service, for example) and use different Actions to notify you, you can combine them in one Applet and build the filter code logic to skip some notification methods if the alert is not important enough.</span></p><p><span style="font-weight: 400;">In this example, we have an Applet that takes the current temperature from the Weather Underground Trigger and three Actions - <span class="wysiwyg-underline">sendMeEmail</span>, <span class="wysiwyg-underline">sendMeText</span> and <span class="wysiwyg-underline">sendNotification</span>. The logic is then built to skip the text message if the temperature does not rise above 90, and to skip both a text and a push notification if it’s still under 75. All three Actions will fire if the temperature rises above 90.</span></p><pre class="wysiwyg-code-block"><code class="language-auto">let currentTemp = Number(Weather.currentTemperatureRisesAbove.TempFahrenheit);
+
+if (currentTemp &lt; 90 &amp;&amp; currentTemp &gt; 75) {
+   Sms.sendMeText.skip(`Temperature is ${currentTemp}`);
+} 
+
+else if (currentTemp &lt;= 75) {
+   IfNotifications.sendNotification.skip(`Temperature is ${currentTemp}`);
+   Sms.sendMeText.skip(`Temperature is ${currentTemp}`);
+}</code></pre><h2 id="h_01JJW2BQWTM08ARP6NF0VEWTHQ">Searching for a keyword and skipping an Action</h2><p><span style="font-weight: 400;">This is a simple starter filter code that searches for a keyword in a Google Calendar event description and skips the notification Action if the keyword is not found. </span></p><pre class="wysiwyg-code-block"><code class="language-auto">  let str = GoogleCalendar.anyEventStarts.Description;  
+  let searchTerm = 'IFTTT';  
+
+  if (!str.includes(searchTerm)) {  
+    IfNotifications.sendNotification.skip("Not found!")  
+  }</code></pre><p><span style="font-weight: 400;">The code works by checking whether the search term appears anywhere in the calendar event description using .includes(). If the term isn't found, the IF statement skips the notification accordingly.</span></p><h2 id="h_01JJW2BQWT6T1CJCBEY45A3YP1">Updating Action fields</h2><p><span style="font-weight: 400;">In this example, there is an array of colors and a way of picking a random color from the list. This color is then used with a <span class="wysiwyg-underline">Lifx.color</span> Action to change the color of your lights.</span></p><pre class="wysiwyg-code-block"><code class="language-auto">let colors = [
+"#FF8400", 
+"#FF0000", 
+"#15FF00", 
+"#FF00D4",
+"#00D4FF",
+"#003CFF"
+]
+
+let index = Math.floor((Math.random() * colors.length))
+
+Lifx.color.setAdvancedOptions('color: ' + colors[index] + '; brightness: 1; duration: 12')
+</code></pre><p> </p><h2 id="h_01M3DBWD9BRKRWDZS27483SVG5">Adding filter code to an Applet</h2><p>You can add filter code when creating or editing an Applet. For instructions, see <a href="/hc/en-us/articles/4406412223771">How to add filter code</a>.</p><p>If you're not comfortable writing JavaScript, the filter code editor includes tools that can help you generate code. You can choose from generators for common use cases or describe what you want to accomplish and use the AI filter code generator to create the code for you.</p><p class="wysiwyg-text-align-center"> </p></article><p>Comments: 0</p></main><footer><a href="/hc/en-us">Help Center</a> · <a href="/hc/en-us">Contact</a></footer><script src="/local.js" defer></script></body></html>

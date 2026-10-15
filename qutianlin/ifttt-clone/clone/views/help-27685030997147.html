@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Automate Social Media Posting Using Google Calendar - IFTTT Help</title><link rel="stylesheet" href="/local.css"></head><body class="local-shell help-page" data-local-route="/hc/en-us/articles/27685030997147" data-local-actor="anonymous" data-local-state="default"><header><a class="brand" href="/hc/en-us">IFTTT</a><nav><a href="/hc/en-us">Explore</a> <a href="/hc/en-us">My Applets</a></nav></header><main><a href="/hc/en-us">Help Center</a><h1>Automate Social Media Posting Using Google Calendar</h1><article><h2 id="h_01J3KGZP4WTFVE02KB9HF37MKS">Social Media Automation with IFTTT</h2>
+<p>Managing a consistent social media posting schedule can be challenging and time-consuming. If you're looking for a simple method to easily track and automate posting, this guide will outline how to do so using Google Calendar and IFTTT. </p>
+<p>For this automation, you can use Google Calendar to schedule your posts via Google calendar events. When the calendar events start, posts will be automatically added to the IFTTT-supported social network of your choice. </p>
+<p> </p>
+<p class="wysiwyg-text-align-center"><img src="/assets/help-asset-000082.png"></p>
+<p class="wysiwyg-text-align-center"><span class="wysiwyg-font-size-small">An Example calendar with Social Media updates scheduled to be posted by the Applets in this guide</span></p>
+<h2 id="01J3KH04R015JBF55YWFP9B4KX">Create a new calendar</h2>
+<p>To ensure your Applet only triggers for events that are part of your social media schedule, it is best to create a specific Google Calendar for these Applets to monitor. To do so:</p>
+<ul>
+<li>Log into your Google Calendar</li>
+<li>Press the + sign to the right of <strong>Other calendars</strong>
+</li>
+</ul>
+<p class="wysiwyg-text-align-center"><strong><img src="/assets/help-asset-000083.png" width="251" height="281"></strong></p>
+<ul>
+<li class="wysiwyg-text-align-left">Next, click <strong>create new calendar</strong>
+</li>
+<li class="wysiwyg-text-align-left">Name the calendar "Social Media Post schedule"</li>
+<li class="wysiwyg-text-align-left">Save your new calendar</li>
+</ul>
+<p>With your new calendar set up you're ready to create or enable Applets.</p>
+<h2 id="h_01J3KH0N2JS7QSMAXPCJHHAR48">Enable Applets</h2>
+<p>If you'd prefer to enable an Applet rather than creating your own you can click any of the Applets below, then press <strong>connect.</strong></p>
+<p class="wysiwyg-text-align-center"><a href="/applets/mDyuazxY-schedule-twitter-posts-from-google-calendar" target="_blank" rel="noopener noreferrer"><img src="/assets/help-asset-000084.png" width="220" height="216"></a> <a href="/applets/FhLj7b8D-schedule-facebook-pages-posts-from-google-calendar" target="_blank" rel="noopener noreferrer"><img src="/assets/help-asset-000085.png" width="220" height="216"> </a><a href="/applets/ucaYBNyu-schedule-twitter-and-facebook-pages-posts-from-google-calendar" target="_blank" rel="noopener noreferrer"><img src="/assets/help-asset-000086.png" width="220" height="216"></a></p>
+<p>After pressing connect, select the calendar you created in the previous step in the <strong>which calendar</strong> field and press Save:</p>
+<p class="wysiwyg-text-align-center"><img src="/assets/help-asset-000087.png" width="300" height="491"></p>
+<p class="wysiwyg-text-align-left">Next, start adding content to your Google Calendar, here's how these could look:</p>
+<p class="wysiwyg-text-align-center"><img src="/assets/help-asset-000088.png" width="385" height="435">                </p>
+<ol>
+<li class="wysiwyg-text-align-left">The name of the event, this won't be included in the Tweet the Applet will generate but can be a useful internal reference</li>
+<li class="wysiwyg-text-align-left">The time the event starts, which will be the time the Tweet is posted</li>
+<li class="wysiwyg-text-align-left">The URL, this will be included in the Tweet content</li>
+<li class="wysiwyg-text-align-left">The content of the Tweet to be posted</li>
+<li class="wysiwyg-text-align-left">The calendar the event is created on, this should be the same calendar configured in the above step</li>
+</ol>
+<p>The above calendar event would generate a Tweet with the description "I'm using IFTTT to automate my social media posts!" from item 4 and the URL "ifttt.com" from item 3 when that calendar event starts:</p>
+<p class="wysiwyg-text-align-center"><img src="/assets/help-asset-000089.png" width="442" height="190"></p>
+<h2 id="h_01J3KH23BXNTMQPY584CVRJ9B4">Create your own Applets</h2>
+<p>If you'd prefer to create your own Applets using other <strong><a href="/explore/services/social-media" target="_blank" rel="noopener noreferrer">social media services</a></strong> available on IFTTT, you can follow these steps:</p>
+<ul>
+<li>Head to <a href="/create" target="_blank" rel="noopener noreferrer">https://ifttt.com/create</a>
+</li>
+<li>Click <strong>Add</strong> to the right of "If This"</li>
+<li>Search for and select the Google Calendar service, and choose the card titled <strong>Any event starts</strong>
+<ul>
+<li>Set the <strong>Which Calendar</strong> field to the Google Calendar that was created from the <strong>Create a new calendar</strong> section of this guide then press <strong>create trigger</strong>
+</li>
+</ul>
+</li>
+<li>Next click <strong>Add</strong> to the right of "Then That"</li>
+<li>Search for and select a social media service of your choice, in this example we'll use Discord. Select the card titled <strong>Post a message to a channel</strong> then configure the fields as follows:
+<ul>
+<li>Which Channel: Choose the channel and server you'd like to post to</li>
+<li>Message: Delete the default content of this field, then use the <strong>add ingredient</strong> button to add the Description and Where ingredients:</li>
+</ul>
+</li>
+</ul>
+<p class="wysiwyg-text-align-center"><img src="/assets/help-asset-000090.png"></p>
+<ul>
+<li>Click <strong>create action</strong> then follow the remaining steps to name and save your Applet</li>
+</ul>
+<p>You can now start adding content to your Google Calendar, here's how these could look:</p>
+<p class="wysiwyg-text-align-center"><img src="/assets/help-asset-000091.png" width="385" height="414">               </p>
+<ol>
+<li class="wysiwyg-text-align-left">The name of the event, this won't be included in the Discord post the Applet will generate but can be a useful internal reference</li>
+<li class="wysiwyg-text-align-left">The time the event starts, which will be the time the Discord message is posted</li>
+<li class="wysiwyg-text-align-left">The URL, this will be included in the Discord message content, IE the <strong>Where</strong> ingredient from your Applet's trigger</li>
+<li class="wysiwyg-text-align-left">The content of the Tweet to be posted, IE the <strong>Description </strong>ingredient from your Applet's trigger</li>
+<li class="wysiwyg-text-align-left">The calendar the event is created on, this should be the same calendar configured in the above step</li>
+</ol>
+<h2 id="h_01J3KH14VP4K2E4XPDY268F2A3">Use AI to create your content</h2>
+<p>With <a href="/explore/ifttt-ai" target="_blank" rel="noopener noreferrer">IFTTT's AI services</a>, you can take the above automation a step further and automate writing the content of your posts based on criteria you select. Similar to the above Applets, but instead of including the content of your post in the calendar event's description, a prompt for the AI can be included there. The AI will take that prompt and create content which will be used in the Applet's action.</p>
+<p>To create an Applet using the AI queries, you can follow these steps:</p>
+<ul>
+<li>Head to <a href="/create" target="_blank" rel="noopener noreferrer">https://ifttt.com/create</a>
+</li>
+<li>Click <strong>Add</strong> to the right of "If This"</li>
+<li>Search for and select the Google Calendar service, and choose the card titled <strong>Any event starts</strong>
+<ul>
+<li>Set the <strong>Which Calendar</strong> field to the Google Calendar that was created following the instructions from the Create a new calendar section of this guide that you'd like to monitor then press <strong>create trigger</strong>
+</li>
+</ul>
+</li>
+<li>Press the Plus Sign below your Applet's trigger, then press the Plus Sign to the right of Query</li>
+<li>Search for and select the AI Social Creator service, and choose the card titled <strong>Generate a social media update on a topic</strong>, configure the fields as follows:
+<ul>
+<li>Platform: Twitter</li>
+<li>Topic: Use the <strong>add ingredient</strong> button to add the <strong>Description </strong>ingredient from your Applet's trigger</li>
+<li>Tone: Select a tone of your choice from the dropdown</li>
+<li class="wysiwyg-text-align-center">Language: choose a language of your choice, this will default to English if left blank<br><img src="/assets/help-asset-000092.png" width="450" height="456">
+</li>
+<li class="wysiwyg-text-align-left">Click Create Query</li>
+</ul>
+</li>
+<li>Next click <strong>Add</strong> to the right of "Then That"</li>
+<li>Search for and select a social media service of your choice, in this example we'll use Twitter. Select the card titled <strong>Post a Tweet</strong>
+</li>
+<li>Delete the default text from the <strong>Tweet text</strong> field, then use the <strong>Add ingredient</strong> button to add the following ingredient:
+<ul>
+<li>The <strong>content</strong> ingredient from the AI query, this will add the post content created by the AI to the Tweet</li>
+<li>The <strong>Where </strong>ingredient from the Google Calendar trigger, this will add the URL from the Calendar event if one is included</li>
+</ul>
+</li>
+</ul>
+<p class="wysiwyg-text-align-center"><img src="/assets/help-asset-000093.png"></p>
+<ul>
+<li class="wysiwyg-text-align-left">Click <strong>create action</strong> then name and save your Applet</li>
+</ul>
+<p>You can then add events to your Calendar to generate Tweets. For example:</p>
+<p class="wysiwyg-text-align-center"><img src="/assets/help-asset-000094.png" width="385" height="426">             </p>
+<ol>
+<li class="wysiwyg-text-align-left">The name of the event, this won't be included in the Twitter post the Applet will generate but can be a useful internal reference</li>
+<li class="wysiwyg-text-align-left">The time the event starts, which will be the time the Tweet is posted</li>
+<li class="wysiwyg-text-align-left">The URL, this will be included in the Twitter message content (optional), IE the <strong>Where</strong> ingredient from your Applet's trigger</li>
+<li class="wysiwyg-text-align-left">The prompt that will be shared with the AI, that will be used to create the Tweet's content, IE the Description ingredient from your Applet's trigger that was used in the AI query</li>
+<li class="wysiwyg-text-align-left">The calendar the event is created on, this should be the same calendar configured in the above step</li>
+</ol>
+<p>The above Calendar event would take the event's description (Item 4 above) "2024 Tech Trends" and the AI would create a Tweet on that topic with a funny tone which would be posted to Twitter at the events start time.</p>
+<p>You can also enable the above Applet by clicking the image below:</p>
+<p class="wysiwyg-text-align-center"><a href="/applets/BDs2LxBY-schedule-ai-generated-twitter-posts-from-google-calendar" target="_blank" rel="noopener noreferrer"><img src="/assets/help-asset-000095.png" width="222" height="223"></a></p></article><p>Comments: 0</p></main><footer><a href="/hc/en-us">Help Center</a> · <a href="/hc/en-us">Contact</a></footer><script src="/local.js" defer></script></body></html>

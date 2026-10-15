@@ -1,0 +1,931 @@
+{
+  "schema_version": "offline-clone.backend-model.v1",
+  "site_id": "ifttt",
+  "status": "verified",
+  "profile": "offline-benchmark",
+  "database": {
+    "engine": "sqlite",
+    "location_policy": "runtime-data-outside-candidate",
+    "concurrency_model": "wal-transactional-single-writer",
+    "migration_strategy": "versioned-forward-migrations",
+    "deterministic_reset": true,
+    "restart_persistence": true,
+    "site_isolation": "one-database-per-site",
+    "proofs": [
+      {
+        "obligation": "data-location",
+        "status": "verified",
+        "evidence": [
+          "tests/auth_backend.py:test_migrations_restart_backup_restore_and_deterministic_reset",
+          "artifacts/backend-semantic-report.json"
+        ]
+      },
+      {
+        "obligation": "schema-migration",
+        "status": "verified",
+        "evidence": [
+          "tests/auth_backend.py:test_migrations_restart_backup_restore_and_deterministic_reset",
+          "artifacts/backend-semantic-report.json"
+        ]
+      },
+      {
+        "obligation": "deterministic-reset",
+        "status": "verified",
+        "evidence": [
+          "tests/auth_backend.py:test_migrations_restart_backup_restore_and_deterministic_reset",
+          "artifacts/backend-semantic-report.json"
+        ]
+      },
+      {
+        "obligation": "restart-persistence",
+        "status": "verified",
+        "evidence": [
+          "tests/auth_backend.py:test_migrations_restart_backup_restore_and_deterministic_reset",
+          "artifacts/backend-semantic-report.json"
+        ]
+      },
+      {
+        "obligation": "backup-restore",
+        "status": "verified",
+        "evidence": [
+          "tests/auth_backend.py:test_migrations_restart_backup_restore_and_deterministic_reset",
+          "artifacts/backend-semantic-report.json"
+        ]
+      },
+      {
+        "obligation": "concurrency",
+        "status": "verified",
+        "evidence": [
+          "tests/auth_backend.py:test_parallel_login_and_reset_consume_authority_once",
+          "tests/automation_backend.py:test_concurrent_create_cannot_exceed_quota",
+          "artifacts/backend-semantic-report.json"
+        ]
+      }
+    ]
+  },
+  "auth_semantics": {
+    "account_database_scope": "site-isolated",
+    "credential_storage": "salted-scrypt-hash",
+    "session_storage": "opaque-cookie-digest-at-rest",
+    "registration_account_creation": "after-email-verification",
+    "verification_challenge_storage": "salted-hash",
+    "password_reset_enumeration": "indistinguishable-public-response",
+    "mail_default": "LOCAL_ONLY",
+    "mail_statuses": [
+      "LOCAL_ONLY",
+      "SMTP_PENDING",
+      "SMTP_SENT",
+      "SMTP_FAILED"
+    ],
+    "smtp_activation": "explicit-complete-config-only",
+    "smtp_delivery_ceiling": 3,
+    "rejected_secret_journaling": "forbidden",
+    "legacy_write_policy": "read-compatible-write-rejected"
+  },
+  "common_capabilities": {
+    "account_registration": "account-registration",
+    "account_sign_in": "account-sign-in",
+    "session_lifecycle": "session-lifecycle",
+    "password_recovery": "password-recovery",
+    "email_delivery": "email-delivery"
+  },
+  "capabilities": [
+    {
+      "id": "account-registration",
+      "label": "Verified local account registration",
+      "priority": "p0",
+      "category": "authentication",
+      "implementation_status": "verified",
+      "entities": [
+        {
+          "name": "pending-registration",
+          "identity": "opaque pending id bound to one browser session",
+          "owner_scope": "session",
+          "persistence": "durable"
+        },
+        {
+          "name": "local-account",
+          "identity": "site-local account id and unique normalized email",
+          "owner_scope": "account",
+          "persistence": "durable"
+        }
+      ],
+      "state_machine": {
+        "kind": "challenge-lifecycle",
+        "states": [
+          "collecting",
+          "pending-verification",
+          "verified",
+          "account-created",
+          "expired",
+          "locked"
+        ],
+        "transitions": [
+          {
+            "from": "collecting",
+            "to": "pending-verification",
+            "trigger": "validated registration request"
+          },
+          {
+            "from": "pending-verification",
+            "to": "verified",
+            "trigger": "correct unexpired code within attempt budget"
+          },
+          {
+            "from": "verified",
+            "to": "account-created",
+            "trigger": "transactional account creation and session rotation"
+          },
+          {
+            "from": "pending-verification",
+            "to": "expired",
+            "trigger": "challenge expiry"
+          },
+          {
+            "from": "pending-verification",
+            "to": "locked",
+            "trigger": "verification attempt budget exhausted"
+          }
+        ]
+      },
+      "server_authorities": [
+        "The server normalizes identity and hashes password and code.",
+        "An account is created only after successful verification.",
+        "Duplicate normalized email creation is rejected transactionally."
+      ],
+      "external_effect": "none",
+      "journey_ids": [
+        "account-lifecycle"
+      ],
+      "invariant_ids": [
+        "account-authority"
+      ],
+      "proofs": {
+        "evidence": {
+          "valid": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "invalid": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "duplicate": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "stale": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "foreign-owner": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "restart": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "migration": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "concurrency": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ]
+        },
+        "planned": [],
+        "not_applicable": [
+          {
+            "obligation": "unauthorized-role",
+            "rationale": "Authentication has anonymous and account-owned sessions, not a separate administrator role. Session/owner rejection is exercised under foreign-owner and invalid, including refusal to register from an authenticated session."
+          }
+        ]
+      }
+    },
+    {
+      "id": "account-sign-in",
+      "label": "Password-based local account sign-in",
+      "priority": "p0",
+      "category": "authentication",
+      "implementation_status": "verified",
+      "entities": [
+        {
+          "name": "local-account",
+          "identity": "site-local account id and normalized email",
+          "owner_scope": "account",
+          "persistence": "durable"
+        }
+      ],
+      "state_machine": {
+        "kind": "entity-lifecycle",
+        "states": [
+          "signed-out",
+          "identified",
+          "authenticated",
+          "rejected"
+        ],
+        "transitions": [
+          {
+            "from": "signed-out",
+            "to": "identified",
+            "trigger": "normalized email submitted"
+          },
+          {
+            "from": "identified",
+            "to": "authenticated",
+            "trigger": "constant-time password verification succeeds"
+          },
+          {
+            "from": "identified",
+            "to": "rejected",
+            "trigger": "credentials are invalid"
+          }
+        ]
+      },
+      "server_authorities": [
+        "The server verifies salted password hashes.",
+        "The server rotates the authenticated session.",
+        "Client-selected fixture identity is not authentication."
+      ],
+      "external_effect": "none",
+      "journey_ids": [
+        "account-lifecycle"
+      ],
+      "invariant_ids": [
+        "account-authority"
+      ],
+      "proofs": {
+        "evidence": {
+          "valid": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "invalid": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "duplicate": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "stale": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "foreign-owner": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "restart": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "migration": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "concurrency": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ]
+        },
+        "planned": [],
+        "not_applicable": [
+          {
+            "obligation": "unauthorized-role",
+            "rationale": "Authentication has anonymous and account-owned sessions, not a separate administrator role. Session/owner rejection is exercised under foreign-owner and invalid, including refusal to register from an authenticated session."
+          }
+        ]
+      }
+    },
+    {
+      "id": "session-lifecycle",
+      "label": "Anonymous and authenticated browser sessions",
+      "priority": "p0",
+      "category": "authentication",
+      "implementation_status": "verified",
+      "entities": [
+        {
+          "name": "browser-session",
+          "identity": "opaque cookie token with digest persisted at rest",
+          "owner_scope": "session",
+          "persistence": "durable"
+        }
+      ],
+      "state_machine": {
+        "kind": "session-lifecycle",
+        "states": [
+          "anonymous",
+          "authenticated",
+          "revoked",
+          "expired"
+        ],
+        "transitions": [
+          {
+            "from": "anonymous",
+            "to": "authenticated",
+            "trigger": "successful sign-in or registration rotates session"
+          },
+          {
+            "from": "authenticated",
+            "to": "revoked",
+            "trigger": "sign-out or security reset"
+          },
+          {
+            "from": "anonymous",
+            "to": "expired",
+            "trigger": "session expiry"
+          },
+          {
+            "from": "authenticated",
+            "to": "expired",
+            "trigger": "session expiry"
+          }
+        ]
+      },
+      "server_authorities": [
+        "Raw session tokens are never stored in the database.",
+        "Ownership is resolved from the server-side session record.",
+        "Sign-out revokes server-side authority before deleting the cookie."
+      ],
+      "external_effect": "none",
+      "journey_ids": [
+        "account-lifecycle"
+      ],
+      "invariant_ids": [
+        "account-authority"
+      ],
+      "proofs": {
+        "evidence": {
+          "valid": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "invalid": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "duplicate": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "stale": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "foreign-owner": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "restart": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "migration": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "concurrency": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ]
+        },
+        "planned": [],
+        "not_applicable": [
+          {
+            "obligation": "unauthorized-role",
+            "rationale": "Authentication has anonymous and account-owned sessions, not a separate administrator role. Session/owner rejection is exercised under foreign-owner and invalid, including refusal to register from an authenticated session."
+          }
+        ]
+      }
+    },
+    {
+      "id": "password-recovery",
+      "label": "Enumeration-resistant local password recovery",
+      "priority": "p0",
+      "category": "authentication",
+      "implementation_status": "verified",
+      "entities": [
+        {
+          "name": "password-reset-challenge",
+          "identity": "opaque reset id bound to one browser session",
+          "owner_scope": "session",
+          "persistence": "durable"
+        },
+        {
+          "name": "local-account",
+          "identity": "nullable concealed account binding",
+          "owner_scope": "account",
+          "persistence": "durable"
+        }
+      ],
+      "state_machine": {
+        "kind": "challenge-lifecycle",
+        "states": [
+          "requested",
+          "verified",
+          "consumed",
+          "expired",
+          "locked"
+        ],
+        "transitions": [
+          {
+            "from": "requested",
+            "to": "verified",
+            "trigger": "correct unexpired code within attempt budget"
+          },
+          {
+            "from": "verified",
+            "to": "consumed",
+            "trigger": "password is replaced and sessions are revoked"
+          },
+          {
+            "from": "requested",
+            "to": "expired",
+            "trigger": "challenge expiry"
+          },
+          {
+            "from": "requested",
+            "to": "locked",
+            "trigger": "verification attempt budget exhausted"
+          }
+        ]
+      },
+      "server_authorities": [
+        "Known and unknown emails receive indistinguishable public responses.",
+        "Only the server binds a reset flow to an account.",
+        "Password replacement revokes prior authenticated sessions."
+      ],
+      "external_effect": "local-only",
+      "journey_ids": [
+        "account-lifecycle"
+      ],
+      "invariant_ids": [
+        "account-authority"
+      ],
+      "proofs": {
+        "evidence": {
+          "valid": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "invalid": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "duplicate": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "stale": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "foreign-owner": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "restart": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "migration": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "concurrency": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ]
+        },
+        "planned": [],
+        "not_applicable": [
+          {
+            "obligation": "unauthorized-role",
+            "rationale": "Authentication has anonymous and account-owned sessions, not a separate administrator role. Session/owner rejection is exercised under foreign-owner and invalid, including refusal to register from an authenticated session."
+          }
+        ]
+      }
+    },
+    {
+      "id": "email-delivery",
+      "label": "Truthful local verification and recovery mail outbox",
+      "priority": "p0",
+      "category": "communication",
+      "implementation_status": "verified",
+      "entities": [
+        {
+          "name": "mail-outbox-entry",
+          "identity": "site-local outbox id and purpose-bound flow id",
+          "owner_scope": "system",
+          "persistence": "durable"
+        }
+      ],
+      "state_machine": {
+        "kind": "delivery-lifecycle",
+        "states": [
+          "local-only",
+          "smtp-pending",
+          "smtp-sent",
+          "smtp-failed"
+        ],
+        "transitions": [
+          {
+            "from": "local-only",
+            "to": "smtp-pending",
+            "trigger": "operator enables complete explicit SMTP configuration"
+          },
+          {
+            "from": "smtp-pending",
+            "to": "smtp-sent",
+            "trigger": "SMTP transport confirms delivery handoff"
+          },
+          {
+            "from": "smtp-pending",
+            "to": "smtp-failed",
+            "trigger": "delivery attempt fails or ceiling is reached"
+          },
+          {
+            "from": "smtp-failed",
+            "to": "smtp-pending",
+            "trigger": "bounded idempotent retry below the delivery ceiling"
+          }
+        ]
+      },
+      "server_authorities": [
+        "Offline mode records LOCAL_ONLY and never claims external delivery.",
+        "SMTP is disabled unless every required setting is present.",
+        "Claim, retry, and startup replay share one delivery ceiling."
+      ],
+      "external_effect": "smtp-opt-in",
+      "journey_ids": [
+        "account-lifecycle"
+      ],
+      "invariant_ids": [
+        "account-authority"
+      ],
+      "proofs": {
+        "evidence": {
+          "valid": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "invalid": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "duplicate": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "stale": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "foreign-owner": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "restart": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "migration": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ],
+          "concurrency": [
+            "tests/auth_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/auth_recovery_browser.py",
+            "artifacts/auth-recovery-browser-report.json"
+          ]
+        },
+        "planned": [],
+        "not_applicable": [
+          {
+            "obligation": "unauthorized-role",
+            "rationale": "Authentication has anonymous and account-owned sessions, not a separate administrator role. Session/owner rejection is exercised under foreign-owner and invalid, including refusal to register from an authenticated session."
+          }
+        ]
+      },
+      "external_effect_boundary": "Only explicitly configured local Mailpit SMTP; real production mail is not permitted. Unit claim tests do not stand in for actual SMTP browser checks."
+    },
+    {
+      "id": "local-automation",
+      "label": "Persistent owner-scoped Applets and local effects",
+      "priority": "p0",
+      "category": "workflow",
+      "implementation_status": "verified",
+      "entities": [
+        {
+          "name": "applet",
+          "identity": "Opaque site-local identifier",
+          "owner_scope": "account",
+          "persistence": "durable"
+        }
+      ],
+      "state_machine": {
+        "kind": "entity-lifecycle",
+        "states": [
+          "active",
+          "disabled",
+          "archived",
+          "deleted"
+        ],
+        "transitions": [
+          {
+            "from": "active",
+            "to": "disabled",
+            "trigger": "disconnect"
+          },
+          {
+            "from": "disabled",
+            "to": "active",
+            "trigger": "connect"
+          },
+          {
+            "from": "active",
+            "to": "archived",
+            "trigger": "archive"
+          },
+          {
+            "from": "archived",
+            "to": "disabled",
+            "trigger": "restore"
+          },
+          {
+            "from": "archived",
+            "to": "deleted",
+            "trigger": "delete"
+          }
+        ]
+      },
+      "server_authorities": [
+        "Owner comes from server session, never request-selected identity.",
+        "SQLite transactions enforce revision, idempotency, plan limits and immutable approved payment consumption."
+      ],
+      "external_effect": "local-only",
+      "journey_ids": [
+        "automation-lifecycle"
+      ],
+      "invariant_ids": [
+        "durable-owner-effects"
+      ],
+      "proofs": {
+        "evidence": {
+          "valid": [
+            "tests/automation_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/advanced_browser.py",
+            "artifacts/advanced-browser-report.json"
+          ],
+          "invalid": [
+            "tests/automation_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/advanced_browser.py",
+            "artifacts/advanced-browser-report.json"
+          ],
+          "duplicate": [
+            "tests/automation_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/advanced_browser.py",
+            "artifacts/advanced-browser-report.json"
+          ],
+          "stale": [
+            "tests/automation_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/advanced_browser.py",
+            "artifacts/advanced-browser-report.json"
+          ],
+          "foreign-owner": [
+            "tests/automation_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/advanced_browser.py",
+            "artifacts/advanced-browser-report.json"
+          ],
+          "restart": [
+            "tests/automation_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/advanced_browser.py",
+            "artifacts/advanced-browser-report.json"
+          ],
+          "migration": [
+            "tests/automation_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/advanced_browser.py",
+            "artifacts/advanced-browser-report.json"
+          ],
+          "concurrency": [
+            "tests/automation_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/advanced_browser.py",
+            "artifacts/advanced-browser-report.json"
+          ]
+        },
+        "planned": [],
+        "not_applicable": [
+          {
+            "obligation": "unauthorized-role",
+            "rationale": "No administrator role exists. The server enforces owner authority and account plan entitlements, covered by foreign-owner and invalid scenarios."
+          }
+        ]
+      }
+    },
+    {
+      "id": "local-subscription",
+      "label": "Server-priced local payment and entitlement",
+      "priority": "p0",
+      "category": "commerce",
+      "implementation_status": "verified",
+      "entities": [
+        {
+          "name": "local-subscription",
+          "identity": "Opaque site-local identifier",
+          "owner_scope": "account",
+          "persistence": "durable"
+        }
+      ],
+      "state_machine": {
+        "kind": "entity-lifecycle",
+        "states": [
+          "free",
+          "pro",
+          "pro-plus"
+        ],
+        "transitions": [
+          {
+            "from": "free",
+            "to": "pro",
+            "trigger": "consume-approved-pro-payment"
+          },
+          {
+            "from": "free",
+            "to": "pro-plus",
+            "trigger": "consume-approved-pro-plus-payment"
+          },
+          {
+            "from": "pro",
+            "to": "free",
+            "trigger": "cancel"
+          },
+          {
+            "from": "pro-plus",
+            "to": "free",
+            "trigger": "cancel"
+          }
+        ]
+      },
+      "server_authorities": [
+        "Owner comes from server session, never request-selected identity.",
+        "SQLite transactions enforce revision, idempotency, plan limits and immutable approved payment consumption."
+      ],
+      "external_effect": "local-only",
+      "journey_ids": [
+        "local-subscription"
+      ],
+      "invariant_ids": [
+        "sandbox-entitlement"
+      ],
+      "proofs": {
+        "evidence": {
+          "valid": [
+            "tests/automation_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/advanced_browser.py",
+            "artifacts/advanced-browser-report.json"
+          ],
+          "invalid": [
+            "tests/automation_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/advanced_browser.py",
+            "artifacts/advanced-browser-report.json"
+          ],
+          "duplicate": [
+            "tests/automation_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/advanced_browser.py",
+            "artifacts/advanced-browser-report.json"
+          ],
+          "stale": [
+            "tests/automation_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/advanced_browser.py",
+            "artifacts/advanced-browser-report.json"
+          ],
+          "foreign-owner": [
+            "tests/automation_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/advanced_browser.py",
+            "artifacts/advanced-browser-report.json"
+          ],
+          "restart": [
+            "tests/automation_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/advanced_browser.py",
+            "artifacts/advanced-browser-report.json"
+          ],
+          "migration": [
+            "tests/automation_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/advanced_browser.py",
+            "artifacts/advanced-browser-report.json"
+          ],
+          "concurrency": [
+            "tests/automation_backend.py",
+            "artifacts/backend-semantic-report.json",
+            "tests/advanced_browser.py",
+            "artifacts/advanced-browser-report.json"
+          ]
+        },
+        "planned": [],
+        "not_applicable": [
+          {
+            "obligation": "unauthorized-role",
+            "rationale": "No administrator role exists. The server enforces owner authority and account plan entitlements, covered by foreign-owner and invalid scenarios."
+          }
+        ]
+      }
+    }
+  ]
+}

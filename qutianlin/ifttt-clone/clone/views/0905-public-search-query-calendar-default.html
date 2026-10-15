@@ -1,0 +1,2627 @@
+<!doctype html>
+<html lang="en"><head>
+  <link rel="preload" href="/assets/asset-000002.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000004.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000003.woff2" as="font" type="font/woff2">
+
+<style>
+/* IFTTT.ai rebrand — Museo Sans Rounded (site-wide base font). One @font-face per Museo cut; */
+/* CSS font-weight == the cut number (300 Light / 500 Regular / 700 body / 900 headings). */
+/* NB: map by cut name, not the weight Figma's inspect panel shows — a designer's desktop copy */
+/* may report ~200 less (700 for the 900 cut); these files carry OS/2 weight == cut number. */
+
+/* Museo Sans Rounded 300 (light) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 300;
+  src: url("/assets/dependency-000100.woff2") format("woff2"),
+    url("/assets/dependency-000101.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 500 (regular) — covers CSS 400–600 */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 500 600;
+  src: url("/assets/asset-000002.woff2") format("woff2"),
+    url("/assets/dependency-000102.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 700 (body) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 700;
+  src: url("/assets/asset-000004.woff2") format("woff2"),
+    url("/assets/dependency-000104.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 900 (black) — display headings */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 900;
+  src: url("/assets/asset-000003.woff2") format("woff2"),
+    url("/assets/dependency-000106.woff") format("woff");
+  font-display: swap;
+}
+
+/* Metric-matched fallback for the swap window: Avenir Next scaled to the Museo advance widths, with */
+/* the Museo line box (hhea 940/-260 divided by size-adjust), so the change to Museo moves no layout. */
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 500 600;
+  src: local("Avenir Next Medium"), local("AvenirNext-Medium");
+  size-adjust: 98.0%;
+  ascent-override: 95.92%;
+  descent-override: 26.53%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 700;
+  src: local("Avenir Next Bold"), local("AvenirNext-Bold");
+  size-adjust: 94.5%;
+  ascent-override: 99.47%;
+  descent-override: 27.51%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 900;
+  src: local("Avenir Next Heavy"), local("AvenirNext-Heavy");
+  size-adjust: 90.2%;
+  ascent-override: 104.21%;
+  descent-override: 28.82%;
+  line-gap-override: 0%;
+}
+
+/* Museo Sans Rounded 500 / 700 italic — fetched only by pages that set font-style: italic. */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 500 600;
+  src: url("/assets/asset-000981.woff2") format("woff2"),
+    url("/assets/dependency-000103.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/asset-001589.woff2") format("woff2"),
+    url("/assets/dependency-000105.woff") format("woff");
+  font-display: swap;
+}
+</style>
+
+  <!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+
+  
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0">
+<meta name="mobile-web-app-capable" content="yes">
+
+
+
+
+  <title>Search for 'Calendar' - IFTTT</title>
+<meta name="description" content="Get more from the services you love on IFTTT. Explore the latest tips and tricks, browse by category, or search by name.">
+<meta name="keywords" content="ifttt applets connect connections integrate integration automate automation services recipes trigger action ifthisthenthat free">
+<meta property="al:ios:url" content="ifttt://">
+<meta property="al:ios:app_store_id" content="660944635">
+<meta property="al:ios:app_name" content="IFTTT">
+<meta property="fb:app_id" content="122259781154546">
+<meta property="fb:admins" content="7302486">
+<meta property="og:title" content="Search for 'Calendar' - IFTTT">
+<meta property="og:description" content="Get more from the services you love on IFTTT. Explore the latest tips and tricks, browse by category, or search by name.">
+<meta property="og:site_name" content="IFTTT">
+<meta property="og:url" content="https://ifttt.com/search/query/calendar">
+<meta property="og:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:image:alt" content="Search for 'Calendar' - IFTTT - IFTTT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@IFTTT">
+<meta name="twitter:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta name="twitter:app:id:iphone" content="660944635">
+<meta name="twitter:app:id:ipad" content="660944635">
+<meta name="twitter:app:id:googleplay" content="com.ifttt.ifttt">
+<meta name="twitter:app:url:iphone" content="ifttt://">
+<meta name="twitter:app:url:ipad" content="ifttt://">
+<meta name="twitter:app:url:googleplay" content="ifttt://">
+<meta name="twitter:app:name:googleplay" content="IFTTT">
+<meta name="twitter:image:alt" content="Search for 'Calendar' - IFTTT - IFTTT">
+<meta name="author" content="IFTTT">
+<meta name="copyright" content="Copyright 2026 IFTTT Inc.">
+<meta name="theme-color" content="">
+<meta name="facebook-domain-verification" content="tapueff3rri63aug9c5b7hapbv3mkv">
+
+<!-- Standard SVG Favicon -->
+<link rel="icon" href="/assets/dependency-000091.svg" type="image/svg+xml">
+
+<!-- For all Apple Devices: -->
+<link rel="apple-touch-icon" href="/assets/dependency-000081.png">
+
+<!-- For Windows 8: -->
+<meta name="msapplication-TileImage" content="https://web-assets.ifttt.com/builds/assets/pinned-Dpomu1wG.png">
+<meta name="msapplication-TileColor" content="#111">
+
+
+
+
+  
+  <link rel="stylesheet" href="/assets/asset-000001.css">
+    <link rel="preload" as="image" href="/assets/asset-000006.gif">
+
+<link rel="stylesheet" href="/local.css"></head>
+
+<body class="explore-body index-action   web-body" style="background-color: rgb(255, 255, 255);" data-local-route="/search/query/calendar" data-local-actor="anonymous" data-local-state="default">
+    <!-- Google Tag Manager (noscript) -->
+  <noscript></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  
+
+
+  
+
+
+
+  
+
+  
+
+    
+<header class="unified-header signed-out" style="background-color: #fff">
+  <div class="container header">
+    <section class="left-group">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/">
+  <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt" style="fill: #111"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>
+        <div class="search-container">
+          <div id="universal-search" class="ifttt-search ">
+<input id="universal-search-input" class="ifttt-search-input" type="search" aria-label="Search" placeholder="Search for Applets, services, etc." maxlength="1024" autocomplete="off" spellcheck="false">
+  <span class="icon search">
+    <svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" title="Search"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.299 10.571C17.299 8.71905 16.64 7.13505 15.324 5.81905C14.008 4.50205 12.424 3.84405 10.571 3.84405C8.71905 3.84405 7.13505 4.50205 5.81905 5.81905C4.50205 7.13505 3.84405 8.71905 3.84405 10.571C3.84405 12.423 4.50205 14.008 5.81905 15.324C7.13505 16.64 8.71905 17.299 10.571 17.299C12.423 17.299 14.008 16.64 15.324 15.324C16.64 14.008 17.299 12.424 17.299 10.571ZM24.987 23.065C24.987 23.585 24.797 24.035 24.417 24.416C24.036 24.796 23.585 24.986 23.065 24.986C22.525 24.986 22.074 24.796 21.713 24.416L16.563 19.281C14.771 20.522 12.773 21.143 10.571 21.143C9.14005 21.143 7.77105 20.865 6.46405 20.309C5.15805 19.754 4.03205 19.003 3.08605 18.057C2.14005 17.111 1.38905 15.985 0.833046 14.678C0.279261 13.3799 -0.00417164 11.9824 4.63958e-05 10.571C4.63958e-05 9.14005 0.278046 7.77105 0.833046 6.46405C1.38905 5.15805 2.14005 4.03205 3.08605 3.08605C4.03205 2.14005 5.15805 1.38905 6.46405 0.833046C7.76224 0.279261 9.15967 -0.00417164 10.571 4.63958e-05C12.003 4.63958e-05 13.371 0.278046 14.678 0.833046C15.985 1.38905 17.111 2.14005 18.057 3.08605C19.003 4.03205 19.754 5.15805 20.309 6.46405C20.865 7.77105 21.143 9.14005 21.143 10.571C21.143 12.774 20.523 14.771 19.281 16.563L24.431 21.713C24.801 22.083 24.987 22.534 24.987 23.065V23.065Z" fill="#111"></path></svg>
+  </span>
+  <span class="icon clean-search">
+    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-x"><rect width="24" height="24" rx="8" fill="#111" fill-opacity="0.06"></rect><path d="M15.2803 7.30566C15.6637 6.90826 16.2969 6.89686 16.6943 7.28027C17.0917 7.66374 17.1031 8.2969 16.7197 8.69433L13.3892 12.145L16.439 15.3057C16.8225 15.7031 16.8115 16.3362 16.4141 16.7197C16.0166 17.1032 15.3835 17.0918 15 16.6943L12 13.585L9 16.6943C8.6165 17.0918 7.98336 17.1032 7.58594 16.7197C7.18851 16.3362 7.17754 15.7031 7.56103 15.3057L10.6104 12.145L7.28027 8.69433C6.89686 8.2969 6.90826 7.66374 7.30566 7.28027C7.7031 6.89686 8.33626 6.90826 8.71973 7.30566L12 10.7051L15.2803 7.30566Z" fill="#666"></path></svg>
+  </span>
+
+  
+            <section class="universal-search-helper">
+  <div class="default-recommendations">
+    <section class="recent-searches hide">
+      <span class="universal-search-helper-title">Recent</span>
+      <ul class="universal-search-helper-list">
+        <li class="loading-dots"><img loading="lazy" fetchpriority="low" width="150" height="343" title="Loading-dots" alt="Loading-dots icon" src="/assets/asset-000006.gif"></li>
+      </ul>
+    </section>
+
+      <section class="recommended-services">
+        <span class="universal-search-helper-title">Recommendations</span>
+        <ul class="universal-search-helper-list">
+            <li>
+              <a href="/maker_webhooks">
+                <div class="recent-search-icon" style="background-color: #0099ff">
+                  <img alt="Webhooks" title="Webhooks" width="24" height="24" loading="lazy" src="/assets/asset-000035.bin">
+                </div>
+                <span class="recent-search-text">Webhooks</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/twitter">
+                <div class="recent-search-icon" style="background-color: #000000">
+                  <img alt="X (Twitter)" title="X (Twitter)" width="24" height="24" loading="lazy" src="/assets/asset-000036.bin">
+                </div>
+                <span class="recent-search-text">X (Twitter)</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/youtube">
+                <div class="recent-search-icon" style="background-color: #FF0000">
+                  <img alt="YouTube" title="YouTube" width="24" height="24" loading="lazy" src="/assets/asset-000037.bin">
+                </div>
+                <span class="recent-search-text">YouTube</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/discord">
+                <div class="recent-search-icon" style="background-color: #5865f2">
+                  <img alt="Discord" title="Discord" width="24" height="24" loading="lazy" src="/assets/asset-000038.bin">
+                </div>
+                <span class="recent-search-text">Discord</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/google_sheets">
+                <div class="recent-search-icon" style="background-color: #23448b">
+                  <img alt="Google Sheets" title="Google Sheets" width="24" height="24" loading="lazy" src="/assets/asset-000039.bin">
+                </div>
+                <span class="recent-search-text">Google Sheets</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/myq_devices">
+                <div class="recent-search-icon" style="background-color: #009CDE">
+                  <img alt="MyQ" title="MyQ" width="24" height="24" loading="lazy" src="/assets/asset-000040.bin">
+                </div>
+                <span class="recent-search-text">MyQ</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/gmail">
+                <div class="recent-search-icon" style="background-color: #23448b">
+                  <img alt="Gmail" title="Gmail" width="24" height="24" loading="lazy" src="/assets/asset-000041.bin">
+                </div>
+                <span class="recent-search-text">Gmail</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/instagram">
+                <div class="recent-search-icon" style="background-color: #e4405f">
+                  <img alt="Instagram" title="Instagram" width="24" height="24" loading="lazy" src="/assets/asset-000042.bin">
+                </div>
+                <span class="recent-search-text">Instagram</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+        </ul>
+      </section>
+  </div>
+
+  <section class="search-preview">
+    <ul class="universal-search-helper-list">
+      <li class="loading-dots"><img loading="lazy" fetchpriority="low" width="150" height="343" title="Loading-dots" alt="Loading-dots icon" src="/assets/asset-000006.gif"></li>
+    </ul>
+  </section>
+
+  <a class="search-navigation" href="#">
+    <span>See all results</span>
+    <svg width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg" title="Arrow-right"><g clip-path="url(#clip0_52729_108402)"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.42027 0.46167L12.0564 5.84166L6.42027 11.2216L4.86156 9.73378L7.83645 6.8941H0.984375V4.78921H7.83645L4.86155 1.94954L6.42027 0.46167Z" fill="#09F"></path></g><defs><clippath id="clip0_52729_108402"><rect width="12" height="12" fill="#fff" transform="translate(0.5)"></rect></clippath></defs></svg>
+</a></section>
+
+
+</div>          <div class="mobile-close-search-icon">
+            <svg width="24" height="25" viewbox="0 0 11 11" xmlns="http://www.w3.org/2000/svg" class="close-icon">
+              <title>Close menu</title>
+              <g stroke="#111" stroke-width="2.5" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                <path d="M1.598 1.598l7.717 7.717M9.447 1.598L1.73 9.315"></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+    </section>
+
+      <section class="right-group signed-out">
+        <a class="nav-link link-menu" title="Explore" href="/explore">
+          Explore
+</a>
+        <a class="nav-link link-menu" title="Plans" href="/plans">
+          Plans
+</a>
+        <a class="sign-in button-tertiary button-outlined " href="/login">Log in</a>
+
+          <a title="Get started" class="button-tertiary  sign-up signed-out" href="/join?source=site-header">
+            Get started
+</a>          <span class="mobile-icon-search">
+            <svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" title="Search"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.299 10.571C17.299 8.71905 16.64 7.13505 15.324 5.81905C14.008 4.50205 12.424 3.84405 10.571 3.84405C8.71905 3.84405 7.13505 4.50205 5.81905 5.81905C4.50205 7.13505 3.84405 8.71905 3.84405 10.571C3.84405 12.423 4.50205 14.008 5.81905 15.324C7.13505 16.64 8.71905 17.299 10.571 17.299C12.423 17.299 14.008 16.64 15.324 15.324C16.64 14.008 17.299 12.424 17.299 10.571ZM24.987 23.065C24.987 23.585 24.797 24.035 24.417 24.416C24.036 24.796 23.585 24.986 23.065 24.986C22.525 24.986 22.074 24.796 21.713 24.416L16.563 19.281C14.771 20.522 12.773 21.143 10.571 21.143C9.14005 21.143 7.77105 20.865 6.46405 20.309C5.15805 19.754 4.03205 19.003 3.08605 18.057C2.14005 17.111 1.38905 15.985 0.833046 14.678C0.279261 13.3799 -0.00417164 11.9824 4.63958e-05 10.571C4.63958e-05 9.14005 0.278046 7.77105 0.833046 6.46405C1.38905 5.15805 2.14005 4.03205 3.08605 3.08605C4.03205 2.14005 5.15805 1.38905 6.46405 0.833046C7.76224 0.279261 9.15967 -0.00417164 10.571 4.63958e-05C12.003 4.63958e-05 13.371 0.278046 14.678 0.833046C15.985 1.38905 17.111 2.14005 18.057 3.08605C19.003 4.03205 19.754 5.15805 20.309 6.46405C20.865 7.77105 21.143 9.14005 21.143 10.571C21.143 12.774 20.523 14.771 19.281 16.563L24.431 21.713C24.801 22.083 24.987 22.534 24.987 23.065V23.065Z" fill="#111"></path></svg>
+          </span>
+      </section>
+      <section class="mobile-icon">
+        
+<span id="unified_mobile_menu" role="button" class="closed" tabindex="0">
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hamburger-icon">
+    <title>Mobile menu</title>
+    <g fill="#111" id="mobile-hamburger-icon">
+      <path d="M19.6504 15C20.5617 15 21.3008 15.7391 21.3008 16.6504C21.3008 17.5617 20.5617 18.3008 19.6504 18.3008H1.65039C0.739121 18.3008 0 17.5617 0 16.6504C0 15.7391 0.739121 15 1.65039 15H19.6504ZM19.6504 7.5C20.5617 7.5 21.3008 8.23912 21.3008 9.15039C21.3008 10.0617 20.5617 10.8008 19.6504 10.8008H1.65039C0.739121 10.8008 0 10.0617 0 9.15039C0 8.23912 0.739121 7.5 1.65039 7.5H19.6504ZM19.6504 0C20.5617 0 21.3008 0.739121 21.3008 1.65039C21.3008 2.56166 20.5617 3.30078 19.6504 3.30078H1.65039C0.739121 3.30078 0 2.56166 0 1.65039C0 0.739121 0.739121 0 1.65039 0H19.6504Z" transform="translate(1.35 2.85)"></path>
+    </g>
+  </svg>
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="close-icon">
+    <title>Close menu</title>
+    <path fill="#111" d="M16.4901 0.535065C17.1612 -0.160319 18.2692 -0.180639 18.9648 0.490143C19.66 1.16128 19.6797 2.26933 19.0087 2.96475L12.1815 10.0399L18.4482 16.5351C19.1189 17.2305 19.0993 18.3377 18.4042 19.0087C17.7088 19.6797 16.6007 19.66 15.9296 18.9648L9.74991 12.5595L3.57022 18.9648C2.89918 19.6602 1.79112 19.6796 1.09561 19.0087C0.400326 18.3376 0.380671 17.2305 1.05167 16.5351L7.31729 10.0399L0.490143 2.96475C-0.180639 2.26923 -0.160319 1.16115 0.535065 0.490143C1.23058 -0.180569 2.3377 -0.16026 3.0087 0.535065L9.74893 7.52042L16.4901 0.535065Z" transform="translate(2.25 2.25)"></path>
+  </svg>
+</span>
+
+
+      </section>
+  </div>
+
+   
+<div class="secondary-header">
+  <div class="secondary-header-row">
+    <div class="secondary-header-back">      
+<a title="Back button" class="button-tertiary button-outlined button-with-icon only-icon-on-mobile back-button-fixed" aria-label="Back button" href="/explore">
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="button-icon" title="Chevron-left-black"><path d="M8.63995 0.497476C9.30364 -0.166035 10.3804 -0.165615 11.0442 0.497476C11.708 1.16132 11.7079 2.23791 11.0442 2.90177L4.08233 9.86271L10.5052 16.519C11.157 17.1946 11.1367 18.2714 10.4612 18.9233C9.78569 19.5747 8.71072 19.5553 8.05889 18.8803L0.476862 11.0238C-0.166495 10.3567 -0.158088 9.29551 0.49737 8.64005L8.63995 0.497476Z" fill="#111" transform="translate(6.3 2.3)"></path></svg>
+  <span class="hide-on-xs">Back</span>
+</a>
+</div>
+
+  </div>
+
+</div>
+
+</header>
+
+
+  <div id="flash-messages">
+    
+  </div>
+
+  <div class="after-header-content">
+    
+  </div>
+
+  <div class="page-canvas">
+    <main class="container web">
+        
+
+
+
+<div class="explore-discover-container">
+
+  <div class="explore-header explore-header-search">
+    <h1 class="text-h2">Results for “calendar”</h1>
+    <div id="explore-search" class="ifttt-search ">
+<input id="explore-search-input" class="ifttt-search-input" type="search" aria-label="Search" placeholder="Search automations" maxlength="1024" autocomplete="off" spellcheck="false">
+  <span class="icon search">
+    <svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" title="Search"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.299 10.571C17.299 8.71905 16.64 7.13505 15.324 5.81905C14.008 4.50205 12.424 3.84405 10.571 3.84405C8.71905 3.84405 7.13505 4.50205 5.81905 5.81905C4.50205 7.13505 3.84405 8.71905 3.84405 10.571C3.84405 12.423 4.50205 14.008 5.81905 15.324C7.13505 16.64 8.71905 17.299 10.571 17.299C12.423 17.299 14.008 16.64 15.324 15.324C16.64 14.008 17.299 12.424 17.299 10.571ZM24.987 23.065C24.987 23.585 24.797 24.035 24.417 24.416C24.036 24.796 23.585 24.986 23.065 24.986C22.525 24.986 22.074 24.796 21.713 24.416L16.563 19.281C14.771 20.522 12.773 21.143 10.571 21.143C9.14005 21.143 7.77105 20.865 6.46405 20.309C5.15805 19.754 4.03205 19.003 3.08605 18.057C2.14005 17.111 1.38905 15.985 0.833046 14.678C0.279261 13.3799 -0.00417164 11.9824 4.63958e-05 10.571C4.63958e-05 9.14005 0.278046 7.77105 0.833046 6.46405C1.38905 5.15805 2.14005 4.03205 3.08605 3.08605C4.03205 2.14005 5.15805 1.38905 6.46405 0.833046C7.76224 0.279261 9.15967 -0.00417164 10.571 4.63958e-05C12.003 4.63958e-05 13.371 0.278046 14.678 0.833046C15.985 1.38905 17.111 2.14005 18.057 3.08605C19.003 4.03205 19.754 5.15805 20.309 6.46405C20.865 7.77105 21.143 9.14005 21.143 10.571C21.143 12.774 20.523 14.771 19.281 16.563L24.431 21.713C24.801 22.083 24.987 22.534 24.987 23.065V23.065Z" fill="#111"></path></svg>
+  </span>
+  <span class="icon clean-search">
+    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-x"><rect width="24" height="24" rx="8" fill="#111" fill-opacity="0.06"></rect><path d="M15.2803 7.30566C15.6637 6.90826 16.2969 6.89686 16.6943 7.28027C17.0917 7.66374 17.1031 8.2969 16.7197 8.69433L13.3892 12.145L16.439 15.3057C16.8225 15.7031 16.8115 16.3362 16.4141 16.7197C16.0166 17.1032 15.3835 17.0918 15 16.6943L12 13.585L9 16.6943C8.6165 17.0918 7.98336 17.1032 7.58594 16.7197C7.18851 16.3362 7.17754 15.7031 7.56103 15.3057L10.6104 12.145L7.28027 8.69433C6.89686 8.2969 6.90826 7.66374 7.30566 7.28027C7.7031 6.89686 8.33626 6.90826 8.71973 7.30566L12 10.7051L15.2803 7.30566Z" fill="#666"></path></svg>
+  </span>
+
+  
+      <section class="universal-search-helper">
+  <div class="default-recommendations">
+    <section class="recent-searches hide">
+      <span class="universal-search-helper-title">Recent</span>
+      <ul class="universal-search-helper-list">
+        <li class="loading-dots"><img loading="lazy" fetchpriority="low" width="150" height="343" title="Loading-dots" alt="Loading-dots icon" src="/assets/asset-000006.gif"></li>
+      </ul>
+    </section>
+
+      <section class="recommended-services">
+        <span class="universal-search-helper-title">Recommendations</span>
+        <ul class="universal-search-helper-list">
+            <li>
+              <a href="/maker_webhooks">
+                <div class="recent-search-icon" style="background-color: #0099ff">
+                  <img alt="Webhooks" title="Webhooks" width="24" height="24" loading="lazy" src="/assets/asset-000035.bin">
+                </div>
+                <span class="recent-search-text">Webhooks</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/twitter">
+                <div class="recent-search-icon" style="background-color: #000000">
+                  <img alt="X (Twitter)" title="X (Twitter)" width="24" height="24" loading="lazy" src="/assets/asset-000036.bin">
+                </div>
+                <span class="recent-search-text">X (Twitter)</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/youtube">
+                <div class="recent-search-icon" style="background-color: #FF0000">
+                  <img alt="YouTube" title="YouTube" width="24" height="24" loading="lazy" src="/assets/asset-000037.bin">
+                </div>
+                <span class="recent-search-text">YouTube</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/discord">
+                <div class="recent-search-icon" style="background-color: #5865f2">
+                  <img alt="Discord" title="Discord" width="24" height="24" loading="lazy" src="/assets/asset-000038.bin">
+                </div>
+                <span class="recent-search-text">Discord</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/google_sheets">
+                <div class="recent-search-icon" style="background-color: #23448b">
+                  <img alt="Google Sheets" title="Google Sheets" width="24" height="24" loading="lazy" src="/assets/asset-000039.bin">
+                </div>
+                <span class="recent-search-text">Google Sheets</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/myq_devices">
+                <div class="recent-search-icon" style="background-color: #009CDE">
+                  <img alt="MyQ" title="MyQ" width="24" height="24" loading="lazy" src="/assets/asset-000040.bin">
+                </div>
+                <span class="recent-search-text">MyQ</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/gmail">
+                <div class="recent-search-icon" style="background-color: #23448b">
+                  <img alt="Gmail" title="Gmail" width="24" height="24" loading="lazy" src="/assets/asset-000041.bin">
+                </div>
+                <span class="recent-search-text">Gmail</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/instagram">
+                <div class="recent-search-icon" style="background-color: #e4405f">
+                  <img alt="Instagram" title="Instagram" width="24" height="24" loading="lazy" src="/assets/asset-000042.bin">
+                </div>
+                <span class="recent-search-text">Instagram</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+        </ul>
+      </section>
+  </div>
+
+  <section class="search-preview">
+    <ul class="universal-search-helper-list">
+      <li class="loading-dots"><img loading="lazy" fetchpriority="low" width="150" height="343" title="Loading-dots" alt="Loading-dots icon" src="/assets/asset-000006.gif"></li>
+    </ul>
+  </section>
+
+  <a class="search-navigation" href="#">
+    <span>See all results</span>
+    <svg width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg" title="Arrow-right"><g clip-path="url(#clip0_52729_108402)"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.42027 0.46167L12.0564 5.84166L6.42027 11.2216L4.86156 9.73378L7.83645 6.8941H0.984375V4.78921H7.83645L4.86155 1.94954L6.42027 0.46167Z" fill="#09F"></path></g><defs><clippath id="clip0_52729_108402"><rect width="12" height="12" fill="#fff" transform="translate(0.5)"></rect></clippath></defs></svg>
+</a></section>
+
+
+</div>    <section class="ifttt-explore-search-filter filter-content-container">
+      <ul role="tablist" class="filter-content-list">
+        <a role="tab" class="text-h5 active" href="/explore">All</a>
+        <a role="tab" class="text-h5 " href="/explore/applets">Applets</a>
+        <a role="tab" class="text-h5 " href="/explore/services">Services</a>
+        <a role="tab" class="text-h5 " href="/explore/stories">Stories</a>
+</ul>    </section>
+  </div>
+
+  <div class="explore-discover-results hide">
+    <div class="explore-discover-tiles">
+      
+
+      <div class="explore-tile mcp-promo-tile"><a class="mcp-promo-tile__link" href="/mcp"><h3 class="mcp-promo-tile__title">Give your AI assistant 1,000+ services to act on</h3><p class="body-small mcp-promo-tile__subtitle">Have Claude, ChatGPT, or Cursor build and run your automations with IFTTT MCP.</p><span class="button-tertiary button-label-h5">Set up IFTTT MCP</span></a></div>
+    </div>
+    <section class="diy-explore-cta">
+      <h3>Don't see what you're looking for?</h3>
+      <a class="button-secondary" href="/create">Create your own Applet</a>
+    </section>
+</div>
+
+  <div class="web-services-container hide">
+    <section class="services-curated-section">
+  <div class="category-headline">
+    <h2 class="text-h5">Browse services by category</h2>
+    <div class="chips-arrows">
+      <button type="button" class="chips-arrow" aria-label="Scroll categories backward">
+        <svg viewbox="0 0 13.1546 21.6667" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-chevron-left"><path d="M12.52 0.634602C11.6739 -0.211534 10.302 -0.211534 9.45587 0.634602L0.634602 9.45587C-0.200881 10.2914 -0.212929 11.6422 0.60752 12.4924L8.82121 21.0045C9.65212 21.8656 11.0238 21.8901 11.8849 21.0591C12.7459 20.2282 12.7704 18.8566 11.9395 17.9955L5.20371 11.015L12.52 3.69873C13.3661 2.8526 13.3661 1.48074 12.52 0.634602Z" fill="#111"></path></svg>
+      </button>
+      <button type="button" class="chips-arrow chips-arrow-forward" aria-label="Scroll categories forward">
+        <svg viewbox="0 0 13.1546 21.6667" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-chevron-left"><path d="M12.52 0.634602C11.6739 -0.211534 10.302 -0.211534 9.45587 0.634602L0.634602 9.45587C-0.200881 10.2914 -0.212929 11.6422 0.60752 12.4924L8.82121 21.0045C9.65212 21.8656 11.0238 21.8901 11.8849 21.0591C12.7459 20.2282 12.7704 18.8566 11.9395 17.9955L5.20371 11.015L12.52 3.69873C13.3661 2.8526 13.3661 1.48074 12.52 0.634602Z" fill="#111"></path></svg>
+      </button>
+    </div>
+  </div>
+  <div class="chips-viewport">
+    <div class="service-category-chips">
+        <button name="button" type="button" class="service-category-chip active" aria-pressed="true">All</button>
+        <button name="button" type="button" class="service-category-chip " aria-pressed="false">New to IFTTT</button>
+        <button name="button" type="button" class="service-category-chip " aria-pressed="false">Popular</button>
+    </div>
+  </div>
+</section>
+
+<div class="web-service-cards">
+</div>
+
+</div>
+  <div class="search-view-container ">
+    <main>
+    <div class="services-container">
+      <ul class="service-cards">
+          <li class="service-card-list-item">
+            <a class="service-card spec-prefetch service-card-small" style="background-color: #4E598C" href="/ios_calendar">
+  <img class="service-card-image" title="iOS Calendar" loading="eager" width="54" height="54" alt="iOS Calendar icon" src="/assets/asset-001062.bin">
+  <span class="service-card-title">iOS Calendar</span>
+</a>
+</li>          <li class="service-card-list-item">
+            <a class="service-card spec-prefetch service-card-small" style="background-color: #2C6EFC" href="/google_calendar">
+  <img class="service-card-image" title="Google Calendar" loading="eager" width="54" height="54" alt="Google Calendar icon" src="/assets/asset-000167.bin">
+  <span class="service-card-title">Google Calendar</span>
+</a>
+</li>          <li class="service-card-list-item">
+            <a class="service-card spec-prefetch service-card-small" style="background-color: #0072C6" href="/calendar365">
+  <img class="service-card-image" title="Microsoft 365 Calendar" loading="eager" width="54" height="54" alt="Microsoft 365 Calendar icon" src="/assets/asset-000855.bin">
+  <span class="service-card-title">Microsoft 365 Calendar</span>
+</a>
+</li>          <li class="service-card-list-item">
+            <a class="service-card spec-prefetch service-card-small" style="background-color: #AF38F9" href="/akiflow">
+  <img class="service-card-image" title="Akiflow" loading="eager" width="54" height="54" alt="Akiflow icon" src="/assets/asset-000737.bin">
+  <span class="service-card-title">Akiflow</span>
+</a>
+</li>          <li class="service-card-list-item">
+            <a class="service-card spec-prefetch service-card-small" style="background-color: #333333" href="/isitchristmas">
+  <img class="service-card-image" title="Is It Christmas?" loading="eager" width="54" height="54" alt="Is It Christmas? icon" src="/assets/asset-001140.bin">
+  <span class="service-card-title">Is It Christmas?</span>
+</a>
+</li>          <li class="service-card-list-item">
+            <a class="service-card spec-prefetch service-card-small" style="background-color: #0099ff" href="/glanceclock">
+  <img class="service-card-image" title="Glance clock" loading="eager" width="54" height="54" alt="Glance clock icon" src="/assets/asset-001849.bin">
+  <span class="service-card-title">Glance clock</span>
+</a>
+</li>      </ul>
+    </div>
+    <div class="applets-container">
+      <ul class="web-applet-cards explore-search">
+          <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/aKYenUFV-add-new-ios-calendar-events-to-google-calendar" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add new iOS Calendar events to Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Google</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="29.9k users enabled this Applet" title="29.9k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="29.9k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">29.9k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/jwP9SYut-ios-calendar-events-to-google-calendar" style="background-color: #4E598C;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">iOS Calendar events to Google Calendar</span>
+    </div>
+      </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="19.4k users enabled this Applet" title="19.4k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="19.4k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">19.4k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/YjU4KCdM-add-new-google-calendar-events-to-ios-calendar" style="background-color: #4E598C;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add new Google Calendar events to iOS Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">alexander</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="16.4k users enabled this Applet" title="16.4k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="16.4k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">16.4k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/aczMu3Kv-add-new-ios-calendar-events-to-google-calendar" style="background-color: #4E598C;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add new iOS Calendar events to Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">IFTTT</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="10.4k users enabled this Applet" title="10.4k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="10.4k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">10.4k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/ud7hrSuw-track-your-work-hours-in-ios-calendar" style="background-color: #4E598C;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Location" title="Location" src="/assets/asset-000047.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Track your work hours in iOS Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">IFTTT</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="88.9k users enabled this Applet" title="88.9k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="88.9k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">88.9k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/U8dWMDSp-add-new-google-calendar-events-to-ios-calendar" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add new Google Calendar events to iOS Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Google</span>
+    </div>
+  </div>
+  <div class="meta badged">
+    <span class="installs" role="img" aria-label="2.72k users enabled this Applet" title="2.72k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="2.72k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">2.72k</span>
+</span>    <span title="Applet has pro features" class="card-badge">
+        <svg width="120" height="61" viewbox="0 0 120 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro plus"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H102.76C111.873 60.02 119.26 52.6327 119.26 43.52V16.5C119.26 7.3873 111.873 0 102.76 0H16.5ZM16.5938 17.5501V40.0151C16.5938 41.3519 17.2992 42.0574 18.636 42.0574H21.0495C22.3862 42.0574 23.0917 41.3519 23.0917 40.0151V33.8511H27.6217C32.783 33.8511 36.2733 29.9894 36.2733 24.6423C36.2733 19.2953 32.783 15.5078 27.6217 15.5078H18.636C17.2992 15.5078 16.5938 16.2133 16.5938 17.5501ZM26.285 28.2813H23.0917V21.0777H26.3964C28.55 21.0777 29.664 22.5258 29.664 24.6423C29.664 26.7589 28.55 28.2813 26.285 28.2813ZM52.1602 32.5472C52.1602 26.5318 56.9872 22.4844 62.9654 22.4844C69.0178 22.4844 73.8448 26.5318 73.8448 32.5472C73.8448 38.5255 69.0178 42.4986 63.0025 42.4986C56.9872 42.4986 52.1602 38.5255 52.1602 32.5472ZM58.6581 32.5472C58.6581 35.4064 60.6632 37.1516 63.0025 37.1516C65.3418 37.1516 67.3469 35.4064 67.3469 32.5472C67.3469 29.6509 65.3418 27.8314 63.0025 27.8314C60.6632 27.8314 58.6581 29.6509 58.6581 32.5472ZM38.4062 40.0165V24.9779C38.4062 23.6412 39.1117 22.9357 40.4485 22.9357H42.5278C43.8646 22.9357 44.57 23.6412 44.57 24.9779V26.1662C44.57 26.7974 44.4958 27.3544 44.4958 27.3544H44.57C45.2013 25.3864 47.2435 22.75 49.657 22.75C50.9566 22.75 51.4022 23.4555 51.4022 24.7923V26.8717C51.4022 28.2084 50.6967 28.914 49.36 28.914C46.3152 28.914 44.83 31.5132 44.83 34.6323V40.0165C44.83 41.3532 44.1245 42.0588 42.7877 42.0588H40.4485C39.1117 42.0588 38.4062 41.3532 38.4062 40.0165ZM83.9591 34.3922C82.5745 34.3922 81.8438 33.6983 81.8438 32.3835V31.653C81.8438 30.3383 82.5745 29.6443 83.9591 29.6443H89.7284V23.5087C89.7284 22.1939 90.4591 21.5 91.8438 21.5H92.8438C94.2284 21.5 94.9591 22.1939 94.9591 23.5087V29.6443H100.728C102.113 29.6443 102.844 30.3383 102.844 31.653V32.3835C102.844 33.6983 102.113 34.3922 100.728 34.3922H94.9591V40.4913C94.9591 41.8061 94.2284 42.5 92.8438 42.5H91.8438C90.4591 42.5 89.7284 41.8061 89.7284 40.4913V34.3922H83.9591Z" fill="#111"></path></svg>
+    </span>
+</div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/SNLP68BE-add-weather-underground-forecast-to-ios-calendar-daily" style="background-color: #4E598C;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Weather Underground" title="Weather Underground" src="/assets/asset-000026.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add Weather Underground forecast to iOS Calendar daily</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">IFTTT</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="61.5k users enabled this Applet" title="61.5k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="61.5k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">61.5k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/QW3cLEeD-add-new-ios-reminders-as-ios-calendar-events" style="background-color: #4E598C;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Apple Reminders" title="Apple Reminders" src="/assets/asset-000240.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add new iOS Reminders as iOS Calendar events</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">IFTTT</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="19.3k users enabled this Applet" title="19.3k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="19.3k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">19.3k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/YEzLKMZG-add-new-ios-calendar-events-to-google-calendar" style="background-color: #4E598C;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add new iOS Calendar events to Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">IFTTT</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="1.1k users enabled this Applet" title="1.1k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="1.1k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">1.1k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/AQNuUCkd-get-ifttt-notification-for-calendar-birthday-events" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Notifications" title="Notifications" src="/assets/asset-000062.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Get IFTTT notification for calendar birthday events</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Google</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="82k users enabled this Applet" title="82k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="82k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">82k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/sFk2WC4r-log-your-work-hours-automatically-in-google-calendar" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Location" title="Location" src="/assets/asset-000047.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 24.375px;">Log your work hours automatically in Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Google</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="158k users enabled this Applet" title="158k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="158k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">158k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/CrhspkRx-quickly-create-events-in-a-google-calendar" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Note widget" title="Note widget" src="/assets/asset-000074.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Quickly create events in a Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Google</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="132k users enabled this Applet" title="132k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="132k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">132k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/Wy89cqfv-create-google-calendar-events-from-note-widget" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Note widget" title="Note widget" src="/assets/asset-000074.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Create Google Calendar events from Note widget</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Google</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="63k users enabled this Applet" title="63k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="63k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">63k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/zU2EXWnG-copy-new-events-from-a-google-calendar-into-an-ios-calendar" style="background-color: #4E598C;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.9453px;">Copy New Events from a Google Calendar into an iOS Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">IFTTT</span>
+    </div>
+  </div>
+  <div class="meta badged">
+    <span class="installs" role="img" aria-label="1.4k users enabled this Applet" title="1.4k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="1.4k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">1.4k</span>
+</span>    <span title="Applet has pro features" class="card-badge">
+        <svg width="120" height="61" viewbox="0 0 120 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro plus"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H102.76C111.873 60.02 119.26 52.6327 119.26 43.52V16.5C119.26 7.3873 111.873 0 102.76 0H16.5ZM16.5938 17.5501V40.0151C16.5938 41.3519 17.2992 42.0574 18.636 42.0574H21.0495C22.3862 42.0574 23.0917 41.3519 23.0917 40.0151V33.8511H27.6217C32.783 33.8511 36.2733 29.9894 36.2733 24.6423C36.2733 19.2953 32.783 15.5078 27.6217 15.5078H18.636C17.2992 15.5078 16.5938 16.2133 16.5938 17.5501ZM26.285 28.2813H23.0917V21.0777H26.3964C28.55 21.0777 29.664 22.5258 29.664 24.6423C29.664 26.7589 28.55 28.2813 26.285 28.2813ZM52.1602 32.5472C52.1602 26.5318 56.9872 22.4844 62.9654 22.4844C69.0178 22.4844 73.8448 26.5318 73.8448 32.5472C73.8448 38.5255 69.0178 42.4986 63.0025 42.4986C56.9872 42.4986 52.1602 38.5255 52.1602 32.5472ZM58.6581 32.5472C58.6581 35.4064 60.6632 37.1516 63.0025 37.1516C65.3418 37.1516 67.3469 35.4064 67.3469 32.5472C67.3469 29.6509 65.3418 27.8314 63.0025 27.8314C60.6632 27.8314 58.6581 29.6509 58.6581 32.5472ZM38.4062 40.0165V24.9779C38.4062 23.6412 39.1117 22.9357 40.4485 22.9357H42.5278C43.8646 22.9357 44.57 23.6412 44.57 24.9779V26.1662C44.57 26.7974 44.4958 27.3544 44.4958 27.3544H44.57C45.2013 25.3864 47.2435 22.75 49.657 22.75C50.9566 22.75 51.4022 23.4555 51.4022 24.7923V26.8717C51.4022 28.2084 50.6967 28.914 49.36 28.914C46.3152 28.914 44.83 31.5132 44.83 34.6323V40.0165C44.83 41.3532 44.1245 42.0588 42.7877 42.0588H40.4485C39.1117 42.0588 38.4062 41.3532 38.4062 40.0165ZM83.9591 34.3922C82.5745 34.3922 81.8438 33.6983 81.8438 32.3835V31.653C81.8438 30.3383 82.5745 29.6443 83.9591 29.6443H89.7284V23.5087C89.7284 22.1939 90.4591 21.5 91.8438 21.5H92.8438C94.2284 21.5 94.9591 22.1939 94.9591 23.5087V29.6443H100.728C102.113 29.6443 102.844 30.3383 102.844 31.653V32.3835C102.844 33.6983 102.113 34.3922 100.728 34.3922H94.9591V40.4913C94.9591 41.8061 94.2284 42.5 92.8438 42.5H91.8438C90.4591 42.5 89.7284 41.8061 89.7284 40.4913V34.3922H83.9591Z" fill="#111"></path></svg>
+    </span>
+</div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/sASdKeEq-notify-of-birthdays-in-my-google-calendar" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Notifications" title="Notifications" src="/assets/asset-000062.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Notify of birthdays in my Google calendar.</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Google</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="30.5k users enabled this Applet" title="30.5k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="30.5k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">30.5k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/hicmnUzf-copy-new-google-calendar-events-to-another-calendar" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Copy new Google Calendar events to another calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Google</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="1.7k users enabled this Applet" title="1.7k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="1.7k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">1.7k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/YDz9nHcX-add-new-google-calendar-events-to-office-365-calendar" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Office 365 Calendar" title="Office 365 Calendar" src="/assets/asset-001852.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add new Google Calendar events to Office 365 Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">atanyag</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="294 users enabled this Applet" title="294 users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="294 users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">294</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/vnLksjPf-add-weather-underground-report-to-ios-calendar-each-morning" style="background-color: #4E598C;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Weather Underground" title="Weather Underground" src="/assets/asset-000026.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.9453px;">Add Weather Underground report to iOS Calendar each morning</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">IFTTT</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="7.42k users enabled this Applet" title="7.42k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="7.42k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">7.42k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/xUpm9wNb-copy-new-google-calendar-events-to-another-calendar" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Copy new Google Calendar events to another calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Google</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="1.26k users enabled this Applet" title="1.26k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="1.26k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">1.26k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/LRCDMcBm-add-weather-underground-daily-forecast-to-google-calendar" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Weather Underground" title="Weather Underground" src="/assets/asset-000026.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.9453px;">Add Weather Underground daily forecast to Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Google</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="71.6k users enabled this Applet" title="71.6k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="71.6k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">71.6k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/GFzQVwM3-save-strava-activity-to-ios-calendar-event" style="background-color: #fc4c02;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Strava" title="Strava" src="/assets/asset-001429.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Save Strava activity to iOS Calendar event</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Strava</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="3.89k users enabled this Applet" title="3.89k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="3.89k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">3.89k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/BnM5zjxs-add-new-ios-contacts-to-ios-calendar-automatically" style="background-color: #4E598C;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Contacts" title="iOS Contacts" src="/assets/asset-000944.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add new iOS Contacts to iOS Calendar automatically</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">IFTTT</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="6.16k users enabled this Applet" title="6.16k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="6.16k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">6.16k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/mD9y6hgq-add-completed-ios-reminders-to-ios-calendar" style="background-color: #4E598C;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Apple Reminders" title="Apple Reminders" src="/assets/asset-000240.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add completed iOS Reminders to iOS Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">IFTTT</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="2.85k users enabled this Applet" title="2.85k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="2.85k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">2.85k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/KD87nZVq-log-work-entry-and-exit-times-to-google-calendar" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Location" title="Location" src="/assets/asset-000047.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Log work entry and exit times to Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Google</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="58k users enabled this Applet" title="58k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="58k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">58k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/HAWbLFaE-add-today-s-weather-underground-report-to-google-calendar" style="background-color: #1E2023;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Weather Underground" title="Weather Underground" src="/assets/asset-000026.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.9453px;">Add today's Weather Underground report to Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Weather Underground</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="29.6k users enabled this Applet" title="29.6k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="29.6k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">29.6k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/yQUua9fg-add-an-ios-reminder-for-new-ios-calendar-events" style="background-color: #4E598C;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Apple Reminders" title="Apple Reminders" src="/assets/asset-000240.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add an iOS Reminder for new iOS Calendar events</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">IFTTT</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="5.4k users enabled this Applet" title="5.4k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="5.4k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">5.4k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/YQkVfRph-email-a-daily-digest-of-new-ios-calendar-events" style="background-color: #4E598C;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Email Digest" title="Email Digest" src="/assets/asset-000060.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Email a daily digest of new iOS Calendar events</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">IFTTT</span>
+    </div>
+  </div>
+  <div class="meta badged">
+    <span class="installs" role="img" aria-label="3.11k users enabled this Applet" title="3.11k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="3.11k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">3.11k</span>
+</span>    <span title="Applet has pro features" class="card-badge">
+        <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#111"></path></svg>
+    </span>
+</div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/ZGD7EAHN-create-evernote-journal-based-on-google-calendar-events" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Evernote" title="Evernote" src="/assets/asset-000025.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.9453px;">Create Evernote journal based on Google Calendar events</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Google</span>
+    </div>
+  </div>
+  <div class="meta badged">
+    <span class="installs" role="img" aria-label="12.2k users enabled this Applet" title="12.2k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="12.2k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">12.2k</span>
+</span>    <span title="Applet has pro features" class="card-badge">
+        <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#111"></path></svg>
+    </span>
+</div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/UA5gnNEi-copy-new-google-calendar-events-to-another-calendar" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Copy new Google Calendar events to another calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Google</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="666 users enabled this Applet" title="666 users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="666 users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">666</span>
+</span></div></a>
+    </li>
+</div>
+        <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/xkZYVNnq-add-new-ios-contacts-to-google-calendar-as-events" style="background-color: #4CD964;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Contacts" title="iOS Contacts" src="/assets/asset-000944.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add new iOS Contacts to Google Calendar as events</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">devin</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="12.9k users enabled this Applet" title="12.9k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="12.9k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">12.9k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/RcL7jrhv-ios-calendar-to-google-calendar" style="background-color: #4E598C;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">iOS Calendar to Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">IFTTT</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="198 users enabled this Applet" title="198 users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="198 users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">198</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/TwyzkFaE-log-time-spent-at-a-location-in-google-calendar" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Location" title="Location" src="/assets/asset-000047.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Log time spent at a location in Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">devin</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="18.6k users enabled this Applet" title="18.6k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="18.6k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">18.6k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/uXa5rcSH-add-new-ios-calendar-events-to-todoist-as-tasks" style="background-color: #e44332;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Todoist" title="Todoist" src="/assets/asset-000024.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add new iOS Calendar events to Todoist as tasks</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Todoist</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="2.27k users enabled this Applet" title="2.27k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="2.27k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">2.27k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/NuQXnBTY-add-google-calendar-reminder-when-rain-is-forecast-tomorrow" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Weather Underground" title="Weather Underground" src="/assets/asset-000026.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.9453px;">Add Google Calendar reminder when rain is forecast tomorrow</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Google</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="16.8k users enabled this Applet" title="16.8k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="16.8k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">16.8k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/cFX5ETAs-get-ifttt-notification-before-google-calendar-events" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Notifications" title="Notifications" src="/assets/asset-000062.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Get IFTTT notification before Google Calendar events</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Google</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="7.04k users enabled this Applet" title="7.04k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="7.04k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">7.04k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/m7QN9uYD-add-new-todoist-tasks-to-google-calendar-automatically" style="background-color: #e44332;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Todoist" title="Todoist" src="/assets/asset-000024.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.9453px;">Add new Todoist tasks to Google Calendar automatically</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Todoist</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="11.7k users enabled this Applet" title="11.7k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="11.7k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">11.7k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/aKaviBz9-add-a-rain-alert-to-google-calendar-for-tomorrow" style="background-color: #1E2023;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Weather Underground" title="Weather Underground" src="/assets/asset-000026.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add a rain alert to Google Calendar for tomorrow</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Weather Underground</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="15.7k users enabled this Applet" title="15.7k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="15.7k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">15.7k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/jpcdhLez-add-new-google-contacts-to-google-calendar" style="background-color: #3cba54;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Contacts" title="Google Contacts" src="/assets/asset-000031.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add new Google Contacts to Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">jamisonross</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="7.29k users enabled this Applet" title="7.29k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="7.29k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">7.29k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/WzgLUqGc-sync-new-google-calendar-events-to-outlook-calendar" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Office 365 Calendar" title="Office 365 Calendar" src="/assets/asset-001852.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Sync new Google Calendar events to Outlook Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">tpm9q7</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="100 users enabled this Applet" title="100 users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="100 users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">100</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/fVqcejHy-mute-android-ringtone-when-google-calendar-meeting-starts" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Android Device" title="Android Device" src="/assets/asset-000032.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.9453px;">Mute Android ringtone when Google Calendar meeting starts</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Google</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="9.63k users enabled this Applet" title="9.63k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="9.63k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">9.63k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/ThG2Npub-track-your-foursquare-checkins-in-ios-calendar" style="background-color: #4E598C;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Foursquare" title="Foursquare" src="/assets/asset-001853.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Track your Foursquare checkins in iOS Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">IFTTT</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="951 users enabled this Applet" title="951 users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="951 users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">951</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/K3rZiYHT-add-foursquare-check-ins-to-google-calendar" style="background-color: #F94877;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Foursquare" title="Foursquare" src="/assets/asset-001853.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add Foursquare check-ins to Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">dens</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="4.26k users enabled this Applet" title="4.26k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="4.26k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">4.26k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/BLx3eitM-add-phone-call-details-to-google-calendar" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Android Phone Call" title="Android Phone Call" src="/assets/asset-000071.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add phone call details to Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Google</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="6.4k users enabled this Applet" title="6.4k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="6.4k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">6.4k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/wKAV4H2b-add-new-strava-activities-to-google-calendar" style="background-color: #fc4c02;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Strava" title="Strava" src="/assets/asset-001429.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add new Strava activities to Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Strava</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="5.69k users enabled this Applet" title="5.69k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="5.69k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">5.69k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/MJYWdKUy-get-weather-underground-updates-by-notification-email-and-calendar-event" style="background-color: #1E2023;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Weather Underground" title="Weather Underground" src="/assets/asset-000026.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Email" title="Email" src="/assets/asset-000027.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Notifications" title="Notifications" src="/assets/asset-000062.bin">
+      </li>
+    <li>1+</li>  </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.9453px;">Get Weather Underground updates by notification, email, and calendar event</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Weather Underground</span>
+    </div>
+  </div>
+  <div class="meta badged">
+    <span class="installs" role="img" aria-label="29.7k users enabled this Applet" title="29.7k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="29.7k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">29.7k</span>
+</span>    <span title="Applet has pro features" class="card-badge">
+        <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#111"></path></svg>
+    </span>
+</div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/Xj5VhTas-add-google-calendar-event-when-new-trello-card-is-created" style="background-color: #0079bf;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Trello" title="Trello" src="/assets/asset-000048.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.9453px;">Add Google Calendar event when new Trello card is created</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Trello</span>
+    </div>
+  </div>
+  <div class="meta badged">
+    <span class="installs" role="img" aria-label="6.09k users enabled this Applet" title="6.09k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="6.09k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">6.09k</span>
+</span>    <span title="Applet has pro features" class="card-badge">
+        <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#111"></path></svg>
+    </span>
+</div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/h3Ty2qZj-send-pushbullet-link-when-a-google-calendar-event-starts" style="background-color: #479B31;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Pushbullet" title="Pushbullet" src="/assets/asset-001576.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Send Pushbullet link when a Google Calendar event starts</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Pushbullet</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="7.74k users enabled this Applet" title="7.74k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="7.74k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">7.74k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/qQ6wu984-save-new-ios-calendar-events-to-evernote" style="background-color: #2DBE60;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Evernote" title="Evernote" src="/assets/asset-000025.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Save new iOS Calendar events to Evernote</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Evernote</span>
+    </div>
+  </div>
+  <div class="meta badged">
+    <span class="installs" role="img" aria-label="1.07k users enabled this Applet" title="1.07k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="1.07k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">1.07k</span>
+</span>    <span title="Applet has pro features" class="card-badge">
+        <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#111"></path></svg>
+    </span>
+</div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/HZjvur3a-add-trello-cards-assigned-to-you-into-google-calendar" style="background-color: #0079bf;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Trello" title="Trello" src="/assets/asset-000048.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add Trello cards assigned to you into Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Trello</span>
+    </div>
+  </div>
+  <div class="meta badged">
+    <span class="installs" role="img" aria-label="5.75k users enabled this Applet" title="5.75k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="5.75k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">5.75k</span>
+</span>    <span title="Applet has pro features" class="card-badge">
+        <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#111"></path></svg>
+    </span>
+</div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/FNVuUCAy-add-google-calendar-event-when-evernote-note-tagged" style="background-color: #2DBE60;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Evernote" title="Evernote" src="/assets/asset-000025.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add Google Calendar event when Evernote note tagged</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">ramartijr</span>
+    </div>
+  </div>
+  <div class="meta badged">
+    <span class="installs" role="img" aria-label="4.17k users enabled this Applet" title="4.17k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="4.17k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">4.17k</span>
+</span>    <span title="Applet has pro features" class="card-badge">
+        <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#111"></path></svg>
+    </span>
+</div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/sCyvrLM3-log-work-entry-with-ios-calendar-and-get-notified" style="background-color: #4E598C;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Notifications" title="Notifications" src="/assets/asset-000062.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Location" title="Location" src="/assets/asset-000047.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Log work entry with iOS Calendar and get notified</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">IFTTT</span>
+    </div>
+  </div>
+  <div class="meta badged">
+    <span class="installs" role="img" aria-label="3.62k users enabled this Applet" title="3.62k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="3.62k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">3.62k</span>
+</span>    <span title="Applet has pro features" class="card-badge">
+        <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#111"></path></svg>
+    </span>
+</div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/jfuNdq4P-add-sunrise-weather-to-google-calendar" style="background-color: #1E2023;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Weather Underground" title="Weather Underground" src="/assets/asset-000026.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add sunrise weather to Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Weather Underground</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="3.09k users enabled this Applet" title="3.09k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="3.09k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">3.09k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/zK6vQSYz-log-work-arrivals-and-departures-in-google-calendar" style="background-color: #0099FF;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Location" title="Location" src="/assets/asset-000047.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.4531px;">Log work arrivals and departures in Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">IFTTT</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="3.91k users enabled this Applet" title="3.91k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="3.91k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">3.91k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/QPZrwpeA-add-new-todoist-tasks-to-google-calendar" style="background-color: #e44332;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Todoist" title="Todoist" src="/assets/asset-000024.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add new Todoist tasks to Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Todoist</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="2.88k users enabled this Applet" title="2.88k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="2.88k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">2.88k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/g798v5Cb-add-tomorrow-s-weather-in-google-calendar" style="background-color: #1E2023;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Weather Underground" title="Weather Underground" src="/assets/asset-000026.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add tomorrow's weather in Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Weather Underground</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="8.72k users enabled this Applet" title="8.72k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="8.72k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">8.72k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/fLE6piT2-add-phone-call-logs-to-google-calendar" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Android Phone Call" title="Android Phone Call" src="/assets/asset-000071.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add phone call logs to Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Google</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="4.08k users enabled this Applet" title="4.08k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="4.08k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">4.08k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/y2V9tCZ8-add-new-ios-calendar-events-to-google-calendar" style="background-color: #4E598C;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add new iOS Calendar events to Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">IFTTT</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="127 users enabled this Applet" title="127 users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="127 users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">127</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/rHaUpTFg-get-ifttt-notification-for-new-google-calendar-events" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Notifications" title="Notifications" src="/assets/asset-000062.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Get IFTTT notification for new Google Calendar events</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">jackbua</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="6.16k users enabled this Applet" title="6.16k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="6.16k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">6.16k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/cWn8CAeY-start-google-maps-navigation-before-calendar-events" style="background-color: #8CC251;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Android Device" title="Android Device" src="/assets/asset-000032.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Start Google Maps navigation before calendar events</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">IFTTT</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="4.19k users enabled this Applet" title="4.19k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="4.19k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">4.19k</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/v2nq8eKp-sync-new-events-added-from-a-specific-ios-calendar-to-a-gcal" style="background-color: #4E598C;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Calendar" title="iOS Calendar" src="/assets/asset-000945.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.9453px;">Sync new events added from a specific iOS Calendar to a GCal</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">IFTTT</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="560 users enabled this Applet" title="560 users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="560 users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">560</span>
+</span></div></a>
+    </li>
+</div>  <div class="explore-tile">
+    <li class="my-web-applet-card web-applet-card">
+      <a class="applet-card-body spec-prefetch" href="/applets/DcMF97CK-add-new-ios-reminders-to-google-calendar-events" style="background-color: #2C6EFC;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Apple Reminders" title="Apple Reminders" src="/assets/asset-000240.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Add new iOS Reminders to Google Calendar events</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Google</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="2.9k users enabled this Applet" title="2.9k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="2.9k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">2.9k</span>
+</span></div></a>
+    </li>
+</div></ul>
+    </div>
+</main>
+
+</div></div>
+    </main>
+  </div>
+
+  
+
+  
+
+    <footer class="site-footer ifttt_next_bucket">
+    <a class="pro-upsell pro-ad" title="Try IFTTT Pro" href="/subscriptions/pro">
+        <div class="pro-upsell-text">
+          <span class="logo">
+            <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+            <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#111"></path></svg>
+          </span>
+          <span class="pro-upsell-heading">Automate more, effortlessly.</span>
+        </div>
+
+        <div class="button-secondary button-on-color">
+            Try it free
+        </div>
+</a>  <div class="footer-top-container">
+    <div class="logo-container">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/">
+        <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="ifttt-logo" title="IFTTT" style="fill: white"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>    </div>
+
+    <div class="footer-sections">
+      <div class="footer-section explore">
+        <div class="section-header">
+          <a title="Explore" href="/explore">Explore</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="Services" title="Services" href="/explore/services">Services</a>
+              </li>
+              <li>
+                <a alt="Stories" title="Stories" href="/explore/stories">Stories</a>
+              </li>
+              <li>
+                <a alt="Applets" title="Applets" href="/explore/applets">Applets</a>
+              </li>
+              <li>
+                <a alt="IFTTT MCP" title="IFTTT MCP" href="/mcp">IFTTT MCP</a>
+              </li>
+              <li>
+                <a alt="Help Center" title="Help Center" href="/hc/en-us">Help Center</a>
+              </li>
+              <li>
+                <a alt="Content Map" title="Content Map" href="/content_map">Content Map</a>
+              </li>
+              <li>
+                <a alt="Search" title="Search" href="/explore">Search</a>
+              </li>
+              <li>
+                <a alt="Plans" title="Plans" href="/plans">Plans</a>
+              </li>
+              <li>
+                <a alt="Developer docs" title="Developer docs" href="/docs/api_reference">Developer docs</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section top-integrations">
+        <div class="section-header">
+          Top Integrations
+        </div>
+          <ul>
+              <li>
+                <a alt="Discord and Instagram" title="Discord and Instagram" href="/connect/discord/instagram">Discord and Instagram</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Notion" title="iOS Calendar and Notion" href="/connect/ios_calendar/notion_so">iOS Calendar and Notion</a>
+              </li>
+              <li>
+                <a alt="Google Calendar and Google Sheets" title="Google Calendar and Google Sheets" href="/connect/google_calendar/google_sheets">Google Calendar and Google Sheets</a>
+              </li>
+              <li>
+                <a alt="Google Assistant and My Q" title="Google Assistant and My Q" href="/connect/google_assistant_v2/myq_devices">Google Assistant and My Q</a>
+              </li>
+              <li>
+                <a alt="BotGhost and Spotify" title="BotGhost and Spotify" href="/connect/botghost/spotify">BotGhost and Spotify</a>
+              </li>
+              <li>
+                <a alt="SMS and Twitter" title="SMS and Twitter" href="/connect/sms/twitter">SMS and Twitter</a>
+              </li>
+              <li>
+                <a alt="iOS Reminders and Notion" title="iOS Reminders and Notion" href="/connect/ios_reminders/notion_so">iOS Reminders and Notion</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Todoist" title="iOS Calendar and Todoist" href="/connect/ios_calendar/todoist">iOS Calendar and Todoist</a>
+              </li>
+              <li>
+                <a alt="Telegram and Twitter" title="Telegram and Twitter" href="/connect/telegram/twitter">Telegram and Twitter</a>
+              </li>
+              <li>
+                <a alt="Discord and Twitter" title="Discord and Twitter" href="/connect/discord/twitter">Discord and Twitter</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section latest-stories">
+        <div class="section-header">
+          <a title="Latest Stories" href="/explore/stories">Latest Stories</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="How to automate with AI" title="How to automate with AI" href="/explore/how-to-automate-with-ai">How to automate with AI</a>
+              </li>
+              <li>
+                <a alt="Best Twitter automation tools" title="Best Twitter automation tools" href="/explore/best-twitter-automation-tools">Best Twitter automation tools</a>
+              </li>
+              <li>
+                <a alt="Best time management apps and tools" title="Best time management apps and tools" href="/explore/best-time-management-apps-strategies-and-tools">Best time management apps and tools</a>
+              </li>
+              <li>
+                <a alt="What is workflow automation?" title="What is workflow automation?" href="/explore/what-is-workflow-automation">What is workflow automation?</a>
+              </li>
+              <li>
+                <a alt="How to use RSS Feeds" title="How to use RSS Feeds" href="/explore/how-to-use-rss-feeds">How to use RSS Feeds</a>
+              </li>
+              <li>
+                <a alt="What are webhooks?" title="What are webhooks?" href="/explore/what-are-webhooks">What are webhooks?</a>
+              </li>
+              <li>
+                <a alt="11 best Pomodoro productivity apps" title="11 best Pomodoro productivity apps" href="/explore/best-pomodoro-productivity-apps">11 best Pomodoro productivity apps</a>
+              </li>
+              <li>
+                <a alt="How to automate Threads" title="How to automate Threads" href="/explore/how-to-automate-threads">How to automate Threads</a>
+              </li>
+              <li>
+                <a alt="How to automate social media posts" title="How to automate social media posts" href="/explore/how-to-automate-social-media-posts">How to automate social media posts</a>
+              </li>
+              <li>
+                <a alt="Best social media tools for automation" title="Best social media tools for automation" href="/explore/best-automation-tools-social-media">Best social media tools for automation</a>
+              </li>
+          </ul>
+      </div>
+    <div class="footer-section company">
+      <div class="section-header">Company</div>
+      <ul>
+        <li><a alt="Developers" title="Developers" href="/developers">Developers</a></li>
+        <li><a alt="Partner program" title="Partner program" href="/partners">Partner program</a></li>
+        <li><a alt="Careers" title="Careers" href="/careers">Careers</a></li>
+        <li><a alt="Contact" title="Contact" href="/contact">Contact</a></li>
+        <li><a alt="About" title="About" href="/about">About</a></li>
+        <li><a alt="Privacy" title="Privacy" href="/privacy">Privacy</a></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer-section download">
+      <ul class="download-buttons">
+        <li>
+          <a title="Download on the App Store" aria-label="The Apple App Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fitunes.apple.com%2Fapp%2Fapple-store%2Fid660944635%3Fpt%3D1752682%26ct%3D%2Fsearch%2Fquery%2Fcalendar%26mt%3D8">
+            <img alt="" title="Download on the App Store" loading="lazy" width="136" height="40" src="/assets/asset-000099.svg">
+</a>        </li>
+        <li>
+          <a title="Get it on Google Play" aria-label="The Google Play Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.ifttt.ifttt%26utm_source%3D%2Fsearch%2Fquery%2Fcalendar%26utm_medium%3Dweb">
+            <img alt="" title="Get it on Google Play" loading="lazy" width="136" height="42" src="/assets/asset-000100.svg">
+</a>        </li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom-container">
+      <div class="group group-social">
+        <a class="social-icon" alt="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.facebook.com%2Fifttt">
+          <img alt="Facebook" title="Facebook" loading="lazy" width="28" height="28" src="/assets/asset-000102.svg">
+</a>
+        <a class="social-icon" alt="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fifttt%2F">
+          <img alt="LinkedIn" title="LinkedIn" loading="lazy" width="28" height="28" src="/assets/asset-000101.svg">
+</a>
+        <a class="social-icon" alt="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.instagram.com%2Fiftttapp%2F">
+          <img alt="Instagram" title="Instagram" loading="lazy" width="28" height="28" src="/assets/asset-000103.svg">
+</a>
+        <a class="social-icon" alt="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.youtube.com%2F%40IFTTT">
+          <img alt="YouTube" title="YouTube" loading="lazy" width="28" height="28" src="/assets/asset-000104.svg">
+</a>
+        <a class="social-icon" alt="Twitter" title="Twitter" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Ftwitter.com%2FIFTTT">
+          <img alt="Twitter" title="Twitter" loading="lazy" width="28" height="28" src="/assets/asset-000105.svg">
+</a>
+        <a class="social-icon" alt="TikTok" title="TikTok" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.tiktok.com%2F%40iftttapp">
+          <img alt="TikTok" title="TikTok" loading="lazy" width="28" height="28" src="/assets/asset-000106.svg">
+</a>
+        <a class="social-icon" alt="Reddit" title="Reddit" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fifttt%2F">
+          <img alt="Reddit" title="Reddit" loading="lazy" width="28" height="28" src="/assets/asset-000107.svg">
+</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+  
+
+  <div id="react-portal-container"></div>
+
+  
+
+  
+  
+
+
+
+    
+
+  
+
+
+
+<div style="position: absolute; top: 50vh; height: 1px; width: 100%;"></div><script src="/local.js" defer></script></body></html>

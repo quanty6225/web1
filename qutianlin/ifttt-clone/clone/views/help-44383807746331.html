@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>How to monitor YouTube for new comments - IFTTT Help</title><link rel="stylesheet" href="/local.css"></head><body class="local-shell help-page" data-local-route="/hc/en-us/articles/44383807746331" data-local-actor="anonymous" data-local-state="default"><header><a class="brand" href="/hc/en-us">IFTTT</a><nav><a href="/hc/en-us">Explore</a> <a href="/hc/en-us">My Applets</a></nav></header><main><a href="/hc/en-us">Help Center</a><h1>How to monitor YouTube for new comments</h1><article><h3 id="h_01KCSGB60D7V46S68HWDS0BRYT">Background</h3><p>The <a href="/youtube" target="_blank" rel="noopener noreferrer">YouTube service</a> can be used to monitor new videos uploaded by your own account or a specific channel, as well as post videos to YouTube. While the service does not currently offer a native <strong data-start="833" data-end="848">New comment</strong> trigger, you can achieve this functionality by combining Google Apps Script with the <a href="/maker_webhooks">Webhooks service</a>.</p><p>Below, you’ll find instructions for setting up IFTTT to monitor new comments on a YouTube video.</p><h3 id="h_01KCSGV9WP71ZR9MNVKFW1903X">How to set this up</h3><p>Complete the following steps to configure IFTTT to monitor new YouTube comments.</p><ol>
+<li data-list-item-id="e3f7c0ee080277c329d94618db3731951">
+<p>Click the linked Applet below to enable it (requires <a href="/plans" target="_blank" rel="noopener noreferrer">IFTTT Pro</a>)</p>
+<figure class="wysiwyg-image wysiwyg-image-resized" style="width: 37.3%;"><a href="/applets/Sv9QMBPc-youtube-comment" target="_blank" rel="noopener noreferrer"><img style="aspect-ratio: 398/410;" src="/assets/help-asset-000007.png" width="398" height="410"></a></figure><ul><li data-list-item-id="ebf1ae4fb349e02f0cb954ea48ab2d010">This Applet will receive the Webhook and send you an email. If you want to use a different Action, feel free to click on the Applet <strong>Settings</strong> and then "make it your own". You can then remove the email Action and add an alternative.</li></ul>
+</li>
+<li data-list-item-id="ed1f96a03a7b48eb38b2721f4750c571b">Create a new Google Apps Script project by clicking the following link:<br><a href="/external?url=https%3A%2F%2Fscript.google.com%2Fhome%2Fprojects%2Fcreate" target="_blank" rel="noopener noreferrer"><span class="wysiwyg-underline">https://script.google.com/home/projects/create</span></a>
+</li>
+<li data-list-item-id="ebfabc91f9d844167c63e6e5cbf937b9e">Rename your script to 'Youtube Comment Script' or something similar.</li>
+<li data-list-item-id="e2f0e3de9f5d2a1224ff90469b03e3d45">
+<p>Copy and paste the script below into your script editor. Click 'Save'. The remainder of the instructions can be found at the top of the script and should be followed from within the Google Apps Script interface.<br> </p>
+<pre class="wysiwyg-code-block"><code class="language-auto">/**
+ * Google Apps Script: Send an IFTTT Webhook when new YouTube comments arrive.
+ * 
+ * Step 5: Enable Advanced Service "YouTube Data API" in the Script
+ *    - Services → YouTube Data API v3
+ *
+ * Step 6: Set your IFTTT details for the Script
+ *    - Project Settings → Script properties → add the following properties:
+ *         IFTTT_EVENT = youtube_comment
+ *         IFTTT_KEY   = your_ifttt_webhooks_key   (find this at https://ifttt.com/maker_webhooks/documentation)
+ *
+ * Step 7: Click "Run" once manually to install the automatic trigger.
+ *    - You'll be prompted to grant certain permissions. 
+ *    - Once this runs, your automatic trigger system will be setup, and no further action required.
+ *
+ * This script will automaticaly send IFTTT a Webhook to trigger your Applet. If you don't have 
+ * your Applet set up yet, you can use the following published Applet as a guide: https://ifttt.com/applets/Sv9QMBPc-youtube-comment
+ */
+
+function createTriggerEvery5Minutes() {
+  const triggers = ScriptApp.getProjectTriggers();
+  if (!triggers.some(t =&gt; t.getHandlerFunction() === 'checkYouTubeComments')) {
+    ScriptApp.newTrigger('checkYouTubeComments')
+      .timeBased()
+      .everyMinutes(5)
+      .create();
+  }
+  console.log('5-minute trigger installed.');
+}
+
+const CONFIG = {
+  PROP_LAST_CHECKED: 'YT_LAST_CHECKED_ISO',
+  PROP_LAST_IDS_SEEN: 'YT_LAST_IDS_SEEN',
+  IFTTT_EVENT_PROP: 'IFTTT_EVENT',
+  IFTTT_KEY_PROP: 'IFTTT_KEY',
+  POLL_LOOKBACK_SECONDS: 180,
+  PAGE_SIZE: 100
+};
+
+// Entry point for your time-driven trigger
+function checkYouTubeComments() {
+  const props = PropertiesService.getScriptProperties();
+
+  const iftttEvent = props.getProperty(CONFIG.IFTTT_EVENT_PROP);
+  const iftttKey   = props.getProperty(CONFIG.IFTTT_KEY_PROP);
+  if (!iftttEvent || !iftttKey) {
+    throw new Error('Missing IFTTT configuration. Set script properties IFTTT_EVENT and IFTTT_KEY.');
+  }
+
+  const now = new Date();
+  const lastCheckedStr = props.getProperty(CONFIG.PROP_LAST_CHECKED);
+  const lastChecked = lastCheckedStr ? new Date(lastCheckedStr) : null;
+
+  if (!lastChecked) {
+    props.setProperty(CONFIG.PROP_LAST_CHECKED, now.toISOString());
+    props.setProperty(CONFIG.PROP_LAST_IDS_SEEN, JSON.stringify([]));
+    console.log('Initialized baseline; no notifications sent on first run.');
+    return;
+  }
+
+  const cutoff = new Date(lastChecked.getTime() - CONFIG.POLL_LOOKBACK_SECONDS * 1000);
+
+  const channelId = getMyChannelId_();
+  if (!channelId) throw new Error('Could not resolve channelId.');
+
+  const threads = listRecentCommentThreads_(channelId);
+  const lastIdsSeen = parseJsonSafe_(props.getProperty(CONFIG.PROP_LAST_IDS_SEEN), []);
+  const notifications = [];
+
+  threads.forEach(function(thread) {
+    const videoId = thread.snippet &amp;&amp; thread.snippet.videoId;
+    const top = thread.snippet &amp;&amp; thread.snippet.topLevelComment;
+    if (!top) return;
+
+    const candidates = [];
+
+    // Top-level comment
+    candidates.push({
+      id: top.id,
+      publishedAt: top.snippet?.publishedAt,
+      text: top.snippet?.textDisplay || top.snippet?.textOriginal || '',
+      author: top.snippet?.authorDisplayName || 'Unknown',
+      videoId,
+      isReply: false
+    });
+
+    // Inline replies
+    const inlineReplies = (thread.replies &amp;&amp; thread.replies.comments) || [];
+    inlineReplies.forEach(r =&gt; {
+      candidates.push({
+        id: r.id,
+        publishedAt: r.snippet?.publishedAt,
+        text: r.snippet?.textDisplay || r.snippet?.textOriginal || '',
+        author: r.snippet?.authorDisplayName || 'Unknown',
+        videoId,
+        isReply: true
+      });
+    });
+
+    // Paginate full replies if needed
+    const totalReplyCount = thread.snippet?.totalReplyCount || 0;
+    if (totalReplyCount &gt; inlineReplies.length) {
+      const allReplies = listAllReplies_(top.id);
+      allReplies.forEach(r =&gt; {
+        candidates.push({
+          id: r.id,
+          publishedAt: r.snippet?.publishedAt,
+          text: r.snippet?.textDisplay || r.snippet?.textOriginal || '',
+          author: r.snippet?.authorDisplayName || 'Unknown',
+          videoId,
+          isReply: true
+        });
+      });
+    }
+
+    // Only new + not processed
+    candidates.forEach(function(c) {
+      const pub = c.publishedAt ? new Date(c.publishedAt) : null;
+      if (!pub) return;
+      if (pub &lt;= cutoff) return;
+      if (lastIdsSeen.includes(c.id)) return;
+      notifications.push(c);
+    });
+  });
+
+  const byVideo = {};
+  notifications.forEach(n =&gt; { if (n.videoId) byVideo[n.videoId] = true; });
+  const videoMeta = fetchVideoTitles_(Object.keys(byVideo));
+
+  // Send notifications
+  notifications.sort((a, b) =&gt; new Date(a.publishedAt) - new Date(b.publishedAt));
+
+  notifications.forEach(function(n) {
+    const title = videoMeta[n.videoId]?.title || '';
+    const url = buildCommentUrl_(n.videoId, n.id);
+    const isReply = n.isReply;
+
+    // HTML-friendly value3 with &lt;br&gt;
+    const value3 =
+      'Date: ' + n.publishedAt + '&lt;br&gt;' +
+      'Type: ' + (isReply ? 'Reply' : 'Top-level comment') + '&lt;br&gt;' +
+      'Link: ' + url;
+
+    // Updated value2 (NO parentheses)
+    const value2 = 'by ' + n.author + " on '" + title + "'";
+
+    postToIFTTT_(iftttEvent, iftttKey, {
+      value1: n.text || '',
+      value2: value2,
+      value3: value3
+    });
+
+    console.log('Sent IFTTT for comment ' + n.id);
+    lastIdsSeen.push(n.id);
+  });
+
+  while (lastIdsSeen.length &gt; 500) lastIdsSeen.shift();
+
+  props.setProperty(CONFIG.PROP_LAST_CHECKED, now.toISOString());
+  props.setProperty(CONFIG.PROP_LAST_IDS_SEEN, JSON.stringify(lastIdsSeen));
+}
+
+// Get authorized channel ID
+function getMyChannelId_() {
+  const resp = YouTube.Channels.list('id', { mine: true, maxResults: 1 });
+  return resp.items?.[0]?.id || null;
+}
+
+// List comment threads
+function listRecentCommentThreads_(channelId) {
+  const results = [];
+  let pageToken;
+  do {
+    const resp = YouTube.CommentThreads.list('snippet,replies', {
+      allThreadsRelatedToChannelId: channelId,
+      maxResults: CONFIG.PAGE_SIZE,
+      order: 'time',
+      pageToken: pageToken,
+      textFormat: 'plainText',
+      moderationStatus: 'published'
+    });
+    if (resp.items) results.push(...resp.items);
+    pageToken = resp.nextPageToken;
+  } while (pageToken);
+  return results;
+}
+
+// List all replies to a top-level comment
+function listAllReplies_(topLevelCommentId) {
+  const all = [];
+  let pageToken;
+  do {
+    const resp = YouTube.Comments.list('snippet', {
+      parentId: topLevelCommentId,
+      maxResults: CONFIG.PAGE_SIZE,
+      pageToken: pageToken,
+      textFormat: 'plainText'
+    });
+    if (resp.items) all.push(...resp.items);
+    pageToken = resp.nextPageToken;
+  } while (pageToken);
+  return all;
+}
+
+// Fetch video titles
+function fetchVideoTitles_(videoIds) {
+  const map = {};
+  if (!videoIds.length) return map;
+
+  function chunk(arr, size) {
+    const out = [];
+    for (let i = 0; i &lt; arr.length; i += size) out.push(arr.slice(i, i + size));
+    return out;
+  }
+
+  chunk(videoIds, 50).forEach(group =&gt; {
+    const resp = YouTube.Videos.list('snippet', { id: group.join(',') });
+    (resp.items || []).forEach(v =&gt; {
+      map[v.id] = { title: v.snippet?.title || '' };
+    });
+  });
+  return map;
+}
+
+// Post to IFTTT webhook
+function postToIFTTT_(event, key, payload) {
+  const url =
+    'https://maker.ifttt.com/trigger/' +
+    encodeURIComponent(event) +
+    '/with/key/' +
+    encodeURIComponent(key);
+
+  const options = {
+    method: 'post',
+    contentType: 'application/json',
+    payload: JSON.stringify(payload),
+    muteHttpExceptions: true
+  };
+
+  const res = UrlFetchApp.fetch(url, options);
+  if (res.getResponseCode() &gt;= 300) {
+    console.error('IFTTT error:', res.getContentText());
+  }
+}
+
+// Direct YouTube comment link
+function buildCommentUrl_(videoId, commentId) {
+  return 'https://www.youtube.com/watch?v=' + videoId + '&amp;lc=' + commentId;
+}
+
+// Safe JSON parsing
+function parseJsonSafe_(str, fallback) {
+  try { return str ? JSON.parse(str) : fallback; }
+  catch { return fallback; }
+}</code></pre>
+</li>
+</ol><p>Feel free to close this tab and continue in Google Apps Script.</p><p>Once your Applet is enabled and the Google Apps Script is created your Applet will trigger anytime a new comment is left on your videos.</p></article><p>Comments: 0</p></main><footer><a href="/hc/en-us">Help Center</a> · <a href="/hc/en-us">Contact</a></footer><script src="/local.js" defer></script></body></html>

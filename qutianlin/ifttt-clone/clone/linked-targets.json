@@ -1,0 +1,729 @@
+{
+  "capture_ids": [
+    "ifttt-supplemental-linked-public",
+    "ifttt-supplemental-linked-private"
+  ],
+  "observations": [
+    {
+      "route": "/Aqara_Home/triggers/click_1",
+      "source_status": 200,
+      "canonical": "/Aqara_Home/triggers/click_1",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0001-public-Aqara_Home-triggers-click_1-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/13299982764315"
+      ]
+    },
+    {
+      "route": "/android_sms",
+      "source_status": 404,
+      "canonical": "/android_sms",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0002-public-android_sms-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/32145248992411"
+      ]
+    },
+    {
+      "route": "/applets/177143p-automatically-post-a-reminder-to-a-slack-channel-15-minutes-before-a-calendar-event-starts",
+      "source_status": 200,
+      "canonical": "/explore",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0003-public-applets-177143p-automatically-post-a-reminder-to-a-slack-channel-15-minutes-before-a-calendar-event--default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/115010158167"
+      ]
+    },
+    {
+      "route": "/applets/BDs2LxBY-schedule-ai-generated-twitter-posts-from-google-calendar",
+      "source_status": 200,
+      "canonical": "/applets/BDs2LxBY-post-x-twitter-updates-from-google-calendar-events",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0004-public-applets-BDs2LxBY-schedule-ai-generated-twitter-posts-from-google-calendar-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/27685030997147"
+      ]
+    },
+    {
+      "route": "/applets/FhLj7b8D-schedule-facebook-pages-posts-from-google-calendar",
+      "source_status": 200,
+      "canonical": "/applets/FhLj7b8D-schedule-facebook-pages-posts-from-google-calendar",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0005-public-applets-FhLj7b8D-schedule-facebook-pages-posts-from-google-calendar-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/27685030997147"
+      ]
+    },
+    {
+      "route": "/applets/GB2TQWhv-save-your-new-instagram-photos-to-dropbox",
+      "source_status": 200,
+      "canonical": "/applets/GB2TQWhv-save-new-instagram-photos-to-dropbox",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0006-public-applets-GB2TQWhv-save-your-new-instagram-photos-to-dropbox-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/115010158167"
+      ]
+    },
+    {
+      "route": "/applets/HTak4X5f-turn-your-lights-on-automatically-as-you-arrive-home",
+      "source_status": 200,
+      "canonical": "/applets/HTak4X5f-turn-on-philips-hue-lights-when-you-arrive-home",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0007-public-applets-HTak4X5f-turn-your-lights-on-automatically-as-you-arrive-home-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/115010325748",
+        "/hc/en-us/articles/115010158167"
+      ]
+    },
+    {
+      "route": "/applets/JXSbCsV9-set-android-wallpaper-to-nasa-image-of-the-day",
+      "source_status": 200,
+      "canonical": "/applets/JXSbCsV9-set-android-wallpaper-to-nasa-image-of-the-day",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0008-public-applets-JXSbCsV9-set-android-wallpaper-to-nasa-image-of-the-day-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/4411016949403"
+      ]
+    },
+    {
+      "route": "/applets/Sv9QMBPc-youtube-comment",
+      "source_status": 200,
+      "canonical": "/explore",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0009-public-applets-Sv9QMBPc-youtube-comment-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/44383807746331"
+      ]
+    },
+    {
+      "route": "/applets/YUxMfCDS-save-tweets-that-include-a-specific-hashtag-to-google-sheets",
+      "source_status": 200,
+      "canonical": "/explore",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0010-public-applets-YUxMfCDS-save-tweets-that-include-a-specific-hashtag-to-google-sheets-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/29173259963803"
+      ]
+    },
+    {
+      "route": "/applets/YsLdfKMg-use-your-voice-to-find-or-call-your-device",
+      "source_status": 200,
+      "canonical": "/applets/YsLdfKMg-ask-google-assistant-to-call-your-phone-with-voip-calls",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0011-public-applets-YsLdfKMg-use-your-voice-to-find-or-call-your-device-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/32838868423323"
+      ]
+    },
+    {
+      "route": "/applets/bW8bYhUD-add-tweets-that-include-a-specific-hashtag-to-a-daily-email-digest",
+      "source_status": 200,
+      "canonical": "/applets/bW8bYhUD-save-new-x-tweets-with-a-hashtag-to-a-daily-email-digest",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0012-public-applets-bW8bYhUD-add-tweets-that-include-a-specific-hashtag-to-a-daily-email-digest-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/29173259963803"
+      ]
+    },
+    {
+      "route": "/applets/ftSzef7K-if-a-new-status-added-with-a-search-term-plumber-needed-then-send-me-an-email-at-michael-ifttt-com",
+      "source_status": 200,
+      "canonical": "/explore",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0013-public-applets-ftSzef7K-if-a-new-status-added-with-a-search-term-plumber-needed-then-send-me-an-email-at-mi-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/27931139121819"
+      ]
+    },
+    {
+      "route": "/applets/mDyuazxY-schedule-twitter-posts-from-google-calendar",
+      "source_status": 200,
+      "canonical": "/applets/mDyuazxY-post-tweets-from-google-calendar-events",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0014-public-applets-mDyuazxY-schedule-twitter-posts-from-google-calendar-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/27685030997147"
+      ]
+    },
+    {
+      "route": "/applets/mmeLwUBE-looking-for-a-______-twitter",
+      "source_status": 200,
+      "canonical": "/explore",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0015-public-applets-mmeLwUBE-looking-for-a-______-twitter-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/27931139121819"
+      ]
+    },
+    {
+      "route": "/applets/ucaYBNyu-schedule-twitter-and-facebook-pages-posts-from-google-calendar",
+      "source_status": 200,
+      "canonical": "/applets/ucaYBNyu-post-to-facebook-pages-and-x-from-google-calendar-events",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0016-public-applets-ucaYBNyu-schedule-twitter-and-facebook-pages-posts-from-google-calendar-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/27685030997147"
+      ]
+    },
+    {
+      "route": "/applets/w9HVuagD-close-your-myq-garage-door-with-your-voice",
+      "source_status": 200,
+      "canonical": "/applets/w9HVuagD-close-your-myq-garage-door-with-google-assistant",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0017-public-applets-w9HVuagD-close-your-myq-garage-door-with-your-voice-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/32838868423323"
+      ]
+    },
+    {
+      "route": "/applets/wCtU3SYM-looking-for-a-______-reddit",
+      "source_status": 200,
+      "canonical": "/explore",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0018-public-applets-wCtU3SYM-looking-for-a-______-reddit-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/27931139121819"
+      ]
+    },
+    {
+      "route": "/applets/xrdyz95v-get-a-notification-if-there-s-breaking-news-about-the-bay-area",
+      "source_status": 200,
+      "canonical": "/applets/xrdyz95v-get-an-ifttt-notification-for-sfgate-breaking-news",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0019-public-applets-xrdyz95v-get-a-notification-if-there-s-breaking-news-about-the-bay-area-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/115004914234"
+      ]
+    },
+    {
+      "route": "/applets/ziAfHuwq-turn-your-hue-lights-on-and-off-with-your-voice",
+      "source_status": 200,
+      "canonical": "/applets/ziAfHuwq-toggle-philips-hue-lights-with-google-assistant-voice-command",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0020-public-applets-ziAfHuwq-turn-your-hue-lights-on-and-off-with-your-voice-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/32838868423323"
+      ]
+    },
+    {
+      "route": "/fitbit/actions/log-weight",
+      "source_status": 404,
+      "canonical": "/fitbit/actions/log-weight",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0021-public-fitbit-actions-log-weight-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/55828629347355"
+      ]
+    },
+    {
+      "route": "/fitbit/triggers/new-daily-activity-summary",
+      "source_status": 404,
+      "canonical": "/fitbit/triggers/new-daily-activity-summary",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0022-public-fitbit-triggers-new-daily-activity-summary-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/55828629347355"
+      ]
+    },
+    {
+      "route": "/fitbit/triggers/new-sleep-logged",
+      "source_status": 404,
+      "canonical": "/fitbit/triggers/new-sleep-logged",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0023-public-fitbit-triggers-new-sleep-logged-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/55828629347355"
+      ]
+    },
+    {
+      "route": "/fitbit/triggers/new-weight-logged",
+      "source_status": 404,
+      "canonical": "/fitbit/triggers/new-weight-logged",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0024-public-fitbit-triggers-new-weight-logged-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/55828629347355"
+      ]
+    },
+    {
+      "route": "/google_health/actions/log_weight",
+      "source_status": 200,
+      "canonical": "/google_health/actions/log_weight",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0025-public-google_health-actions-log_weight-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/55828629347355"
+      ]
+    },
+    {
+      "route": "/google_health/triggers/new_daily_activity_summary",
+      "source_status": 200,
+      "canonical": "/google_health/triggers/new_daily_activity_summary",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0026-public-google_health-triggers-new_daily_activity_summary-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/55828629347355"
+      ]
+    },
+    {
+      "route": "/google_health/triggers/new_exercise_logged",
+      "source_status": 200,
+      "canonical": "/google_health/triggers/new_exercise_logged",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0027-public-google_health-triggers-new_exercise_logged-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/55828629347355"
+      ]
+    },
+    {
+      "route": "/google_health/triggers/new_sleep_logged",
+      "source_status": 200,
+      "canonical": "/google_health/triggers/new_sleep_logged",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0028-public-google_health-triggers-new_sleep_logged-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/55828629347355"
+      ]
+    },
+    {
+      "route": "/google_health/triggers/new_weight_logged",
+      "source_status": 200,
+      "canonical": "/google_health/triggers/new_weight_logged",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0029-public-google_health-triggers-new_weight_logged-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/55828629347355"
+      ]
+    },
+    {
+      "route": "/line",
+      "source_status": 200,
+      "canonical": "/line_v2",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0030-public-line-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/32145248992411"
+      ]
+    },
+    {
+      "route": "/mastodon_social/triggers/new_status_added_search",
+      "source_status": 200,
+      "canonical": "/mastodon_social/triggers/new_status_added_search",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0031-public-mastodon_social-triggers-new_status_added_search-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/27931139121819"
+      ]
+    },
+    {
+      "route": "/pocket",
+      "source_status": 200,
+      "canonical": "/explore",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0032-public-pocket-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/37878134722459"
+      ]
+    },
+    {
+      "route": "/telegram/",
+      "source_status": 200,
+      "canonical": "/telegram",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0033-public-telegram-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/32145248992411"
+      ]
+    },
+    {
+      "route": "/wemo_switch",
+      "source_status": 200,
+      "canonical": "/explore",
+      "actor": "anonymous",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0034-public-wemo_switch-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/360053657913"
+      ]
+    },
+    {
+      "route": "/discord/settings",
+      "source_status": 200,
+      "canonical": "/discord",
+      "actor": "member",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-private/0001-auth-discord-settings-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/31091194724123"
+      ]
+    },
+    {
+      "route": "/email/details",
+      "source_status": 200,
+      "canonical": "/email",
+      "actor": "member",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-private/0002-auth-email-details-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/28321059110299"
+      ]
+    },
+    {
+      "route": "/feed/details",
+      "source_status": 200,
+      "canonical": "/feed",
+      "actor": "member",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-private/0003-auth-feed-details-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/28321059110299"
+      ]
+    },
+    {
+      "route": "/finance/details",
+      "source_status": 200,
+      "canonical": "/finance",
+      "actor": "member",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-private/0004-auth-finance-details-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/28321059110299"
+      ]
+    },
+    {
+      "route": "/gmail/settings",
+      "source_status": 200,
+      "canonical": "/gmail",
+      "actor": "member",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-private/0005-auth-gmail-settings-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/28321059110299"
+      ]
+    },
+    {
+      "route": "/google_drive/settings",
+      "source_status": 200,
+      "canonical": "/google_drive",
+      "actor": "member",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-private/0006-auth-google_drive-settings-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/30616106079771"
+      ]
+    },
+    {
+      "route": "/home",
+      "source_status": 200,
+      "canonical": "/explore",
+      "actor": "member",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-private/0007-auth-home-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/115010361468",
+        "/hc/en-us/articles/115010361468"
+      ]
+    },
+    {
+      "route": "/maker_webhooks/documentation",
+      "source_status": 200,
+      "canonical": "/maker_webhooks",
+      "actor": "member",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-private/0008-auth-maker_webhooks-documentation-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/42758694173595",
+        "/hc/en-us/articles/42758694173595",
+        "/hc/en-us/articles/115010230347"
+      ]
+    },
+    {
+      "route": "/maker_webhooks/settings",
+      "source_status": 200,
+      "canonical": "/maker_webhooks",
+      "actor": "member",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-private/0009-auth-maker_webhooks-settings-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/115010230347"
+      ]
+    },
+    {
+      "route": "/sms/settings",
+      "source_status": 200,
+      "canonical": "/sms",
+      "actor": "member",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-private/0010-auth-sms-settings-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/32145248992411"
+      ]
+    },
+    {
+      "route": "/sonos/settings",
+      "source_status": 200,
+      "canonical": "/sonos",
+      "actor": "member",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-private/0011-auth-sonos-settings-default.json",
+      "discovered_from": [
+        "/hc/en-us/articles/47304131951003",
+        "/hc/en-us/articles/47304131951003"
+      ]
+    }
+  ],
+  "aliases": {
+    "/applets/177143p-automatically-post-a-reminder-to-a-slack-channel-15-minutes-before-a-calendar-event-starts": {
+      "anonymous": "/explore",
+      "member": "/explore"
+    },
+    "/applets/BDs2LxBY-schedule-ai-generated-twitter-posts-from-google-calendar": {
+      "anonymous": "/applets/BDs2LxBY-post-x-twitter-updates-from-google-calendar-events",
+      "member": "/applets/BDs2LxBY-post-x-twitter-updates-from-google-calendar-events"
+    },
+    "/applets/GB2TQWhv-save-your-new-instagram-photos-to-dropbox": {
+      "anonymous": "/applets/GB2TQWhv-save-new-instagram-photos-to-dropbox",
+      "member": "/applets/GB2TQWhv-save-new-instagram-photos-to-dropbox"
+    },
+    "/applets/HTak4X5f-turn-your-lights-on-automatically-as-you-arrive-home": {
+      "anonymous": "/applets/HTak4X5f-turn-on-philips-hue-lights-when-you-arrive-home",
+      "member": "/applets/HTak4X5f-turn-on-philips-hue-lights-when-you-arrive-home"
+    },
+    "/applets/Sv9QMBPc-youtube-comment": {
+      "anonymous": "/explore",
+      "member": "/explore"
+    },
+    "/applets/YUxMfCDS-save-tweets-that-include-a-specific-hashtag-to-google-sheets": {
+      "anonymous": "/explore",
+      "member": "/explore"
+    },
+    "/applets/YsLdfKMg-use-your-voice-to-find-or-call-your-device": {
+      "anonymous": "/applets/YsLdfKMg-ask-google-assistant-to-call-your-phone-with-voip-calls",
+      "member": "/applets/YsLdfKMg-ask-google-assistant-to-call-your-phone-with-voip-calls"
+    },
+    "/applets/bW8bYhUD-add-tweets-that-include-a-specific-hashtag-to-a-daily-email-digest": {
+      "anonymous": "/applets/bW8bYhUD-save-new-x-tweets-with-a-hashtag-to-a-daily-email-digest",
+      "member": "/applets/bW8bYhUD-save-new-x-tweets-with-a-hashtag-to-a-daily-email-digest"
+    },
+    "/applets/ftSzef7K-if-a-new-status-added-with-a-search-term-plumber-needed-then-send-me-an-email-at-michael-ifttt-com": {
+      "anonymous": "/explore",
+      "member": "/explore"
+    },
+    "/applets/mDyuazxY-schedule-twitter-posts-from-google-calendar": {
+      "anonymous": "/applets/mDyuazxY-post-tweets-from-google-calendar-events",
+      "member": "/applets/mDyuazxY-post-tweets-from-google-calendar-events"
+    },
+    "/applets/mmeLwUBE-looking-for-a-______-twitter": {
+      "anonymous": "/explore",
+      "member": "/explore"
+    },
+    "/applets/ucaYBNyu-schedule-twitter-and-facebook-pages-posts-from-google-calendar": {
+      "anonymous": "/applets/ucaYBNyu-post-to-facebook-pages-and-x-from-google-calendar-events",
+      "member": "/applets/ucaYBNyu-post-to-facebook-pages-and-x-from-google-calendar-events"
+    },
+    "/applets/w9HVuagD-close-your-myq-garage-door-with-your-voice": {
+      "anonymous": "/applets/w9HVuagD-close-your-myq-garage-door-with-google-assistant",
+      "member": "/applets/w9HVuagD-close-your-myq-garage-door-with-google-assistant"
+    },
+    "/applets/wCtU3SYM-looking-for-a-______-reddit": {
+      "anonymous": "/explore",
+      "member": "/explore"
+    },
+    "/applets/xrdyz95v-get-a-notification-if-there-s-breaking-news-about-the-bay-area": {
+      "anonymous": "/applets/xrdyz95v-get-an-ifttt-notification-for-sfgate-breaking-news",
+      "member": "/applets/xrdyz95v-get-an-ifttt-notification-for-sfgate-breaking-news"
+    },
+    "/applets/ziAfHuwq-turn-your-hue-lights-on-and-off-with-your-voice": {
+      "anonymous": "/applets/ziAfHuwq-toggle-philips-hue-lights-with-google-assistant-voice-command",
+      "member": "/applets/ziAfHuwq-toggle-philips-hue-lights-with-google-assistant-voice-command"
+    },
+    "/line": {
+      "anonymous": "/line_v2",
+      "member": "/line_v2"
+    },
+    "/pocket": {
+      "anonymous": "/explore",
+      "member": "/explore"
+    },
+    "/telegram/": {
+      "anonymous": "/telegram",
+      "member": "/telegram"
+    },
+    "/wemo_switch": {
+      "anonymous": "/explore",
+      "member": "/explore"
+    },
+    "/discord/settings": {
+      "member": "/discord"
+    },
+    "/email/details": {
+      "member": "/email"
+    },
+    "/feed/details": {
+      "member": "/feed"
+    },
+    "/finance/details": {
+      "member": "/finance"
+    },
+    "/gmail/settings": {
+      "member": "/gmail"
+    },
+    "/google_drive/settings": {
+      "member": "/google_drive"
+    },
+    "/home": {
+      "member": "/explore"
+    },
+    "/maker_webhooks/documentation": {
+      "member": "/maker_webhooks"
+    },
+    "/maker_webhooks/settings": {
+      "member": "/maker_webhooks"
+    },
+    "/sms/settings": {
+      "member": "/sms"
+    },
+    "/sonos/settings": {
+      "member": "/sonos"
+    },
+    "/services/create_default": {
+      "member": "/developer_sign_up/new"
+    }
+  },
+  "protected_aliases": [
+    "/discord/settings",
+    "/email/details",
+    "/feed/details",
+    "/finance/details",
+    "/gmail/settings",
+    "/google_drive/settings",
+    "/home",
+    "/maker_webhooks/documentation",
+    "/maker_webhooks/settings",
+    "/sms/settings",
+    "/sonos/settings",
+    "/services/create_default"
+  ],
+  "unavailable": {
+    "/android_sms": {
+      "route": "/android_sms",
+      "reason": "The referenced source address returned HTTP 404 during the supplemental read-only capture.",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0002-public-android_sms-default.json"
+    },
+    "/fitbit/actions/log-weight": {
+      "route": "/fitbit/actions/log-weight",
+      "reason": "The referenced source address returned HTTP 404 during the supplemental read-only capture.",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0021-public-fitbit-actions-log-weight-default.json"
+    },
+    "/fitbit/triggers/new-daily-activity-summary": {
+      "route": "/fitbit/triggers/new-daily-activity-summary",
+      "reason": "The referenced source address returned HTTP 404 during the supplemental read-only capture.",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0022-public-fitbit-triggers-new-daily-activity-summary-default.json"
+    },
+    "/fitbit/triggers/new-sleep-logged": {
+      "route": "/fitbit/triggers/new-sleep-logged",
+      "reason": "The referenced source address returned HTTP 404 during the supplemental read-only capture.",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0023-public-fitbit-triggers-new-sleep-logged-default.json"
+    },
+    "/fitbit/triggers/new-weight-logged": {
+      "route": "/fitbit/triggers/new-weight-logged",
+      "reason": "The referenced source address returned HTTP 404 during the supplemental read-only capture.",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0024-public-fitbit-triggers-new-weight-logged-default.json"
+    }
+  },
+  "data_boundaries": [
+    {
+      "route": "/Aqara_Home/triggers/click_1",
+      "collection": "/hc/en-us/articles/13299982764315",
+      "label": "Click (for Wireless Single Rocker / Mini switch)",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0001-public-Aqara_Home-triggers-click_1-default.json",
+      "reason": "Actual editorial Help reference outside the frozen first-five listing detail union; identity and source destination are preserved."
+    },
+    {
+      "route": "/applets/BDs2LxBY-post-x-twitter-updates-from-google-calendar-events",
+      "collection": "/hc/en-us/articles/27685030997147",
+      "label": "Post X (Twitter) updates from Google Calendar events",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0004-public-applets-BDs2LxBY-schedule-ai-generated-twitter-posts-from-google-calendar-default.json",
+      "reason": "Actual editorial Help reference outside the frozen first-five listing detail union; identity and source destination are preserved."
+    },
+    {
+      "route": "/applets/FhLj7b8D-schedule-facebook-pages-posts-from-google-calendar",
+      "collection": "/hc/en-us/articles/27685030997147",
+      "label": "Schedule Facebook Pages Posts from Google Calendar",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0005-public-applets-FhLj7b8D-schedule-facebook-pages-posts-from-google-calendar-default.json",
+      "reason": "Actual editorial Help reference outside the frozen first-five listing detail union; identity and source destination are preserved."
+    },
+    {
+      "route": "/applets/JXSbCsV9-set-android-wallpaper-to-nasa-image-of-the-day",
+      "collection": "/hc/en-us/articles/4411016949403",
+      "label": "Set Android wallpaper to NASA Image of the Day",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0008-public-applets-JXSbCsV9-set-android-wallpaper-to-nasa-image-of-the-day-default.json",
+      "reason": "Actual editorial Help reference outside the frozen first-five listing detail union; identity and source destination are preserved."
+    },
+    {
+      "route": "/applets/bW8bYhUD-save-new-x-tweets-with-a-hashtag-to-a-daily-email-digest",
+      "collection": "/hc/en-us/articles/29173259963803",
+      "label": "Save new X tweets with a hashtag to a daily email digest",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0012-public-applets-bW8bYhUD-add-tweets-that-include-a-specific-hashtag-to-a-daily-email-digest-default.json",
+      "reason": "Actual editorial Help reference outside the frozen first-five listing detail union; identity and source destination are preserved."
+    },
+    {
+      "route": "/applets/mDyuazxY-post-tweets-from-google-calendar-events",
+      "collection": "/hc/en-us/articles/27685030997147",
+      "label": "Post tweets from Google Calendar events",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0014-public-applets-mDyuazxY-schedule-twitter-posts-from-google-calendar-default.json",
+      "reason": "Actual editorial Help reference outside the frozen first-five listing detail union; identity and source destination are preserved."
+    },
+    {
+      "route": "/applets/ucaYBNyu-post-to-facebook-pages-and-x-from-google-calendar-events",
+      "collection": "/hc/en-us/articles/27685030997147",
+      "label": "Post to Facebook Pages and X from Google Calendar events",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0016-public-applets-ucaYBNyu-schedule-twitter-and-facebook-pages-posts-from-google-calendar-default.json",
+      "reason": "Actual editorial Help reference outside the frozen first-five listing detail union; identity and source destination are preserved."
+    },
+    {
+      "route": "/applets/xrdyz95v-get-an-ifttt-notification-for-sfgate-breaking-news",
+      "collection": "/hc/en-us/articles/115004914234",
+      "label": "Get an IFTTT notification for SFGATE breaking news",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0019-public-applets-xrdyz95v-get-a-notification-if-there-s-breaking-news-about-the-bay-area-default.json",
+      "reason": "Actual editorial Help reference outside the frozen first-five listing detail union; identity and source destination are preserved."
+    },
+    {
+      "route": "/google_health/actions/log_weight",
+      "collection": "/hc/en-us/articles/55828629347355",
+      "label": "Log your weight",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0025-public-google_health-actions-log_weight-default.json",
+      "reason": "Actual editorial Help reference outside the frozen first-five listing detail union; identity and source destination are preserved."
+    },
+    {
+      "route": "/google_health/triggers/new_daily_activity_summary",
+      "collection": "/hc/en-us/articles/55828629347355",
+      "label": "Daily activity summary",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0026-public-google_health-triggers-new_daily_activity_summary-default.json",
+      "reason": "Actual editorial Help reference outside the frozen first-five listing detail union; identity and source destination are preserved."
+    },
+    {
+      "route": "/google_health/triggers/new_exercise_logged",
+      "collection": "/hc/en-us/articles/55828629347355",
+      "label": "New exercise logged",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0027-public-google_health-triggers-new_exercise_logged-default.json",
+      "reason": "Actual editorial Help reference outside the frozen first-five listing detail union; identity and source destination are preserved."
+    },
+    {
+      "route": "/google_health/triggers/new_sleep_logged",
+      "collection": "/hc/en-us/articles/55828629347355",
+      "label": "New sleep logged",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0028-public-google_health-triggers-new_sleep_logged-default.json",
+      "reason": "Actual editorial Help reference outside the frozen first-five listing detail union; identity and source destination are preserved."
+    },
+    {
+      "route": "/google_health/triggers/new_weight_logged",
+      "collection": "/hc/en-us/articles/55828629347355",
+      "label": "New weight logged",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0029-public-google_health-triggers-new_weight_logged-default.json",
+      "reason": "Actual editorial Help reference outside the frozen first-five listing detail union; identity and source destination are preserved."
+    },
+    {
+      "route": "/mastodon_social/triggers/new_status_added_search",
+      "collection": "/hc/en-us/articles/27931139121819",
+      "label": "A new status from search",
+      "evidence": "artifacts/capture/ifttt-supplemental-linked-public/0031-public-mastodon_social-triggers-new_status_added_search-default.json",
+      "reason": "Actual editorial Help reference outside the frozen first-five listing detail union; identity and source destination are preserved."
+    }
+  ],
+  "local_equivalent": {
+    "route": "/services/create_default",
+    "destination": "/developer_sign_up/new",
+    "reason": "Source example-service creation is a write action and was not submitted. The existing local developer signup creates an independent local workspace.",
+    "authorization": "User-authorized local-equivalent backend; source writes prohibited by clone.md"
+  },
+  "scope_rule": "Preserve actual source redirects and 404s. Data references do not create new listing quotas. Existing full-detail Applet identities remain full details even when a source slug changed."
+}

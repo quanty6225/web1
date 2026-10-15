@@ -1,0 +1,2777 @@
+<!doctype html>
+<html lang="en"><head>
+    <link rel="preload" href="/assets/asset-000002.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000004.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000003.woff2" as="font" type="font/woff2">
+
+<style>
+/* IFTTT.ai rebrand — Museo Sans Rounded (site-wide base font). One @font-face per Museo cut; */
+/* CSS font-weight == the cut number (300 Light / 500 Regular / 700 body / 900 headings). */
+/* NB: map by cut name, not the weight Figma's inspect panel shows — a designer's desktop copy */
+/* may report ~200 less (700 for the 900 cut); these files carry OS/2 weight == cut number. */
+
+/* Museo Sans Rounded 300 (light) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 300;
+  src: url("/assets/dependency-000100.woff2") format("woff2"),
+    url("/assets/dependency-000101.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 500 (regular) — covers CSS 400–600 */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 500 600;
+  src: url("/assets/asset-000002.woff2") format("woff2"),
+    url("/assets/dependency-000102.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 700 (body) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 700;
+  src: url("/assets/asset-000004.woff2") format("woff2"),
+    url("/assets/dependency-000104.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 900 (black) — display headings */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 900;
+  src: url("/assets/asset-000003.woff2") format("woff2"),
+    url("/assets/dependency-000106.woff") format("woff");
+  font-display: swap;
+}
+
+/* Metric-matched fallback for the swap window: Avenir Next scaled to the Museo advance widths, with */
+/* the Museo line box (hhea 940/-260 divided by size-adjust), so the change to Museo moves no layout. */
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 500 600;
+  src: local("Avenir Next Medium"), local("AvenirNext-Medium");
+  size-adjust: 98.0%;
+  ascent-override: 95.92%;
+  descent-override: 26.53%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 700;
+  src: local("Avenir Next Bold"), local("AvenirNext-Bold");
+  size-adjust: 94.5%;
+  ascent-override: 99.47%;
+  descent-override: 27.51%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 900;
+  src: local("Avenir Next Heavy"), local("AvenirNext-Heavy");
+  size-adjust: 90.2%;
+  ascent-override: 104.21%;
+  descent-override: 28.82%;
+  line-gap-override: 0%;
+}
+
+/* Museo Sans Rounded 500 / 700 italic — fetched only by pages that set font-style: italic. */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 500 600;
+  src: url("/assets/asset-000981.woff2") format("woff2"),
+    url("/assets/dependency-000103.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/asset-001589.woff2") format("woff2"),
+    url("/assets/dependency-000105.woff") format("woff");
+  font-display: swap;
+}
+</style>
+
+    <!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0">
+<meta name="mobile-web-app-capable" content="yes">
+
+
+
+
+  <title>Connect API - IFTTT</title>
+<meta name="description" content="Learn how to build an API to show and update connections, run actions, perform queries, and listen for triggers.">
+<meta name="keywords" content="ifttt applets connect connections integrate integration automate automation services recipes trigger action ifthisthenthat free">
+<meta property="al:ios:url" content="ifttt://">
+<meta property="al:ios:app_store_id" content="660944635">
+<meta property="al:ios:app_name" content="IFTTT">
+<meta property="fb:app_id" content="122259781154546">
+<meta property="fb:admins" content="7302486">
+<meta property="og:title" content="Connect API - IFTTT">
+<meta property="og:description" content="Learn how to build an API to show and update connections, run actions, perform queries, and listen for triggers.">
+<meta property="og:site_name" content="IFTTT">
+<meta property="og:url" content="https://ifttt.com/docs/connect_api">
+<meta property="og:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@IFTTT">
+<meta name="twitter:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta name="twitter:app:id:iphone" content="660944635">
+<meta name="twitter:app:id:ipad" content="660944635">
+<meta name="twitter:app:id:googleplay" content="com.ifttt.ifttt">
+<meta name="twitter:app:url:iphone" content="ifttt://">
+<meta name="twitter:app:url:ipad" content="ifttt://">
+<meta name="twitter:app:url:googleplay" content="ifttt://">
+<meta name="twitter:app:name:googleplay" content="IFTTT">
+<meta name="author" content="IFTTT">
+<meta name="copyright" content="Copyright 2026 IFTTT Inc.">
+<meta name="theme-color" content="">
+<meta name="facebook-domain-verification" content="tapueff3rri63aug9c5b7hapbv3mkv">
+
+<!-- Standard SVG Favicon -->
+<link rel="icon" href="/assets/dependency-000091.svg" type="image/svg+xml">
+
+<!-- For all Apple Devices: -->
+<link rel="apple-touch-icon" href="/assets/dependency-000081.png">
+
+<!-- For Windows 8: -->
+<meta name="msapplication-TileImage" content="https://web-assets.ifttt.com/builds/assets/pinned-Dpomu1wG.png">
+<meta name="msapplication-TileColor" content="#111">
+
+
+
+<link rel="stylesheet" href="/assets/asset-000979.css">
+<link rel="stylesheet" href="/assets/asset-000117.css">
+<link rel="stylesheet" href="/assets/asset-000134.css">
+
+    
+  <link rel="stylesheet" href="/local.css"></head>
+  <body id="docs-body" class="partners-body docs-body connect-api-action  false" style="background-color: rgb(255, 255, 255);" data-local-route="/docs/connect_api" data-local-actor="anonymous" data-local-state="default"><div id="flash-messages"></div>
+  
+      <!-- Google Tag Manager (noscript) -->
+  <noscript></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+    
+
+
+  
+
+  
+
+
+      
+<header class="unified-header signed-out" style="background-color: #fff">
+  <div class="container header">
+    <section class="left-group">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/">
+  <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt" style="fill: #111"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>
+    </section>
+
+      <section class="right-group signed-out">
+        <a class="nav-link link-menu" title="Explore" href="/explore">
+          Explore
+</a>
+        <a class="nav-link link-menu" title="Plans" href="/plans">
+          Plans
+</a>
+        <a class="sign-in button-tertiary button-outlined " href="/login">Log in</a>
+
+          <a title="Get started" class="button-tertiary  sign-up signed-out" href="/join?source=site-header">
+            Get started
+</a>      </section>
+      <section class="mobile-icon">
+        
+<span id="unified_mobile_menu" role="button" class="closed" tabindex="0">
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hamburger-icon">
+    <title>Mobile menu</title>
+    <g fill="#111" id="mobile-hamburger-icon">
+      <path d="M19.6504 15C20.5617 15 21.3008 15.7391 21.3008 16.6504C21.3008 17.5617 20.5617 18.3008 19.6504 18.3008H1.65039C0.739121 18.3008 0 17.5617 0 16.6504C0 15.7391 0.739121 15 1.65039 15H19.6504ZM19.6504 7.5C20.5617 7.5 21.3008 8.23912 21.3008 9.15039C21.3008 10.0617 20.5617 10.8008 19.6504 10.8008H1.65039C0.739121 10.8008 0 10.0617 0 9.15039C0 8.23912 0.739121 7.5 1.65039 7.5H19.6504ZM19.6504 0C20.5617 0 21.3008 0.739121 21.3008 1.65039C21.3008 2.56166 20.5617 3.30078 19.6504 3.30078H1.65039C0.739121 3.30078 0 2.56166 0 1.65039C0 0.739121 0.739121 0 1.65039 0H19.6504Z" transform="translate(1.35 2.85)"></path>
+    </g>
+  </svg>
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="close-icon">
+    <title>Close menu</title>
+    <path fill="#111" d="M16.4901 0.535065C17.1612 -0.160319 18.2692 -0.180639 18.9648 0.490143C19.66 1.16128 19.6797 2.26933 19.0087 2.96475L12.1815 10.0399L18.4482 16.5351C19.1189 17.2305 19.0993 18.3377 18.4042 19.0087C17.7088 19.6797 16.6007 19.66 15.9296 18.9648L9.74991 12.5595L3.57022 18.9648C2.89918 19.6602 1.79112 19.6796 1.09561 19.0087C0.400326 18.3376 0.380671 17.2305 1.05167 16.5351L7.31729 10.0399L0.490143 2.96475C-0.180639 2.26923 -0.160319 1.16115 0.535065 0.490143C1.23058 -0.180569 2.3377 -0.16026 3.0087 0.535065L9.74893 7.52042L16.4901 0.535065Z" transform="translate(2.25 2.25)"></path>
+  </svg>
+</span>
+
+
+      </section>
+  </div>
+
+</header>
+
+
+    <div class="platform-bg_color-container">
+        <nav class="tabbed-nav kb-nav">
+    <div class="container">
+      
+        
+        
+        
+        
+        
+<ul><li class="first"><a class="link-menu" href="/docs">Get started</a></li><li><a class="link-menu" href="/docs/api_reference">Service API</a></li><li class="active"><a class="link-menu" href="/docs/connect_api">Connect API</a></li><li><a class="link-menu" href="/docs/example_services">Example Services</a></li><li class="last"><a class="link-menu" href="/docs/faq">FAQ</a></li></ul>    </div>
+  </nav>
+
+  <div class="container">
+    <div class="docs-content">
+
+        <div class="toc-sidebar link-menu">
+          <nav class="sidebar-nav">
+            <ul>
+<li><a href="#ifttt-connect-api" class="active">IFTTT Connect API</a></li>
+<li><a href="#the-basics">The basics</a>
+
+<ul>
+<li><a href="#http-status-codes">HTTP status codes</a></li>
+<li><a href="#error-responses">Error responses</a></li>
+<li><a href="#authentication">Authentication</a></li>
+<li><a href="#accessing-user-specific-resources">Accessing user specific resources</a></li>
+<li><a href="#connection-basics">Connection basics</a></li>
+<li><a href="#extra-data">Extra data</a></li>
+</ul></li>
+<li><a href="#ios-and-android-sdks">iOS and Android SDKs</a></li>
+<li><a href="#connect-url">Connect URL</a></li>
+<li><a href="#webhook-endpoint">Webhook endpoint</a>
+
+<ul>
+<li><a href="#request">Request</a></li>
+<li><a href="#response">Response</a></li>
+</ul></li>
+<li><a href="#users">Users</a>
+
+<ul>
+<li><a href="#show-the-current-service-and-user">Show the current service and user</a></li>
+</ul></li>
+<li><a href="#connection-details">Connection details</a>
+
+<ul>
+<li><a href="#show-a-connection">Show a connection</a></li>
+<li><a href="#update-a-connection">Update a connection</a></li>
+<li><a href="#field-options">Field options</a></li>
+<li><a href="#refresh-a-connection">Refresh a connection</a></li>
+</ul></li>
+<li><a href="#connection-events">Connection events</a>
+
+<ul>
+<li><a href="#enabled-webhook">Enabled webhook</a></li>
+<li><a href="#updated-webhook">Updated webhook</a></li>
+<li><a href="#disabled-webhook">Disabled webhook</a></li>
+</ul></li>
+<li><a href="#triggers">Triggers</a>
+
+<ul>
+<li><a href="#user-trigger-fields">User fields</a></li>
+<li><a href="#trigger-event-webhook">Trigger event webhook</a></li>
+<li><a href="#test-trigger-event-webhook">Test trigger event webhook</a></li>
+</ul></li>
+<li><a href="#queries">Queries</a>
+
+<ul>
+<li><a href="#user-query-fields">User fields</a></li>
+<li><a href="#perform-a-query">Perform a query</a></li>
+</ul></li>
+<li><a href="#actions">Actions</a>
+
+<ul>
+<li><a href="#user-action-fields">User fields</a></li>
+<li><a href="#run-an-action">Run an action</a></li>
+</ul></li>
+<li><a href="#examples">Examples</a></li>
+</ul>
+
+            <br>
+          </nav>
+        </div>
+
+      <div class="docs-main-content">
+        <h1 id="ifttt-connect-api">IFTTT Connect API</h1>
+
+<p>Once your service is set up on the platform, you can use the tools on this page to make connections available to anyone who uses your app, website, chatbot, or other client experience.</p>
+
+<h3 id="the-basics">The basics</h3>
+
+<p>This API is located at <code>https://connect.ifttt.com</code>. All API responses are formatted as JSON objects, and any requests that include a body should also be formatted as JSON and include a <code>Content-Type: application/json</code> header.</p>
+
+<p>Throughout these docs, we’ll use <code>{{service_id}}</code> as a placeholder for your service’s unique identifier, which can be found in the <a href="/mkt/general">Service tab</a> of the IFTTT Platform under the <strong>IFTTT service ID</strong> heading.</p>
+
+<h5 id="http-status-codes">HTTP status codes</h5>
+
+<p>The following set of HTTP response status codes may be returned when you send requests to the API. A <code>200</code> or <code>204</code> status code will be returned for successful requests, while any other status code indicates an error.</p>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>200</code></td>
+<td>The request succeeded.</td>
+</tr>
+<tr>
+<td><code>204</code></td>
+<td>The request succeeded, but no content will be returned.</td>
+</tr>
+<tr>
+<td><code>400</code></td>
+<td>The request was invalid.</td>
+</tr>
+<tr>
+<td><code>401</code></td>
+<td>The request was missing needed credentials or had badly-formed headers or an invalid token.</td>
+</tr>
+<tr>
+<td><code>403</code></td>
+<td>The request was authenticated correctly, but the current service or user doesn’t have permission to make the requested call.</td>
+</tr>
+<tr>
+<td><code>404</code></td>
+<td>The requested resource couldn’t be found, either because of an invalid ID or because you aren’t allowed to see it.</td>
+</tr>
+<tr>
+<td><code>422</code></td>
+<td>The request failed because of invalid parameters.</td>
+</tr>
+<tr>
+<td><code>500</code></td>
+<td>There was an internal error. If this persists, <a href="/external?url=mailto%3Aplatform-support%40ifttt.com" class="pop-zendesk-widget">contact us</a>.</td>
+</tr>
+<tr>
+<td><code>502</code></td>
+<td>The request failed because the downstream service could not process the request.</td>
+</tr>
+</tbody></table>
+
+<h5 id="error-responses">Error responses</h5>
+
+<p>Like success responses, error responses will be JSON objects. All error responses have the following structure:</p>
+
+<ul>
+<li><code>type</code>: The string <code>"error"</code>, to distinguish errors from other objects in the API.</li>
+<li><code>code</code>: A machine-readable string categorizing the failure.</li>
+<li><code>message</code>: A human-readable error message describing the failure.</li>
+<li><code>details</code>: Additional details describing the failure.</li>
+</ul>
+
+<div class="example-list">
+  <h6>Example: Requesting a non-existent connection</h6>
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>GET /v2/connections/invalid_connection_id
+Host: connect.ifttt.com
+</pre>
+      </code>
+    </li>
+    <li>
+      <span class="example-list-heading">Response</span>
+      <code>
+<pre>HTTP/1.1 404 Not Found
+Content-Type: application/json; charset=utf-8
+
+{
+  "type": "error",
+  "code": "not_found",
+  "message": "Unknown connection id",
+  "details": []
+}
+
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+<h5 id="authentication">Authentication</h5>
+
+<p>Every request is authenticated in one of two ways:</p>
+
+<ol>
+<li><p><strong>Unauthenticated</strong>: A request made with no credentials. Requests at this level can only read publicly-visible information.</p></li>
+<li><p><span id="user-id-explanation"></span> <strong>Service-authenticated</strong>: A request that includes an <code>IFTTT-Service-Key</code> header containing your service key, found in the <a href="/mkt/api">API tab</a> of the IFTTT Platform under the <strong>Service Key</strong> heading. You can use this approach when you’re making calls from your backend servers to the API.</p></li>
+</ol>
+
+<div class="example-list">
+  <h6>Example: Unauthenticated</h6>
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>GET /v2/me
+Host: connect.ifttt.com
+</pre>
+      </code>
+    </li>
+  </ul>
+  <h6>Example: Service-authenticated</h6>
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>GET /v2/me
+Host: connect.ifttt.com
+IFTTT-Service-Key: 6e7c8978c07a3b5918a237b9b5b1bb70
+</pre>
+      </code>
+    </li>
+  </ul>
+
+  <h6>Example: Service-authenticated with user_id</h6>
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>GET /v2/me?user_id=123
+Host: connect.ifttt.com
+IFTTT-Service-Key: 6e7c8978c07a3b5918a237b9b5b1bb70
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+<h5 id="accessing-user-specific-resources">Accessing user specific resources</h5>
+
+<p>Unless otherwise stated, most Connection API requests access user specific resources, so the <code>user_id</code> parameter is required. This <code>user_id</code> has to match the <code>id</code> that your service returns to IFTTT from its <a href="/docs/api_reference#user-information">User information</a> endpoint for a given user. Some endpoints can return extra user-specific information if you send a valid <code>user_id</code>, while other endpoints require you to send a <code>user_id</code> when you call them with a service key.</p>
+
+<p>For endpoints that require a <code>user_id</code>, requests will fail if the user does not have the connection enabled, and the same user of your service cannot enable the same connection twice, even if using multiple IFTTT accounts.</p>
+
+<h5 id="connection-basics">Connection basics</h5>
+
+<p>Connections utilize the Connect API to power dynamic and adaptable experiences for your users across various platforms. Connections can be enabled on IFTTT.com, the IFTTT mobile apps, and the <a href="#ios-and-android-sdks">iOS and Android SDKs</a>. Once a connection has been enabled, your users will expect to begin receiving the benefits of the experience you're powering using Connect API endpoints.</p>
+
+<p>To make development on the Connect API as easy as possible, IFTTT collects and stores user field data required (e.g. light bulb device ID) to run the connection for your users when your users enable a connection. To see currently-stored user field data for a user for a connection, use the <a href="#show-a-connection">show a connection</a> endpoint.</p>
+
+<h5 id="extra-data">Extra data</h5>
+
+<p>IFTTT may decide at any point in the future to include additional data sent to your API in order to provide extra information, optional features, or to aid in debugging. We do not consider this a breaking change, and ask that you do not either.</p>
+
+<p>As such, we ask that you do not validate the JSON strictly enough to the point where additional (validly formatted) key/values will result in an error. You may certainly validate and return an error if the JSON data is malformed or values that you normally expect are missing— IFTTT would normally publish a new API version in breaking cases like this.</p>
+
+<p>To put it simply: <strong>you should always expect that IFTTT may add additional JSON data at any time and your API should function correctly if it does</strong>.</p>
+
+<p>To ensure that your API adheres to this requirement, you’ll notice that requests include additional randomly generated key/value pairs in the JSON. Your API should ignore these and process the request normally.</p>
+
+<h3 id="ios-and-android-sdks">iOS and Android SDKs</h3>
+
+<p>The iOS SDK and Android SDK make it easy to integrate the API into your mobile apps:</p>
+
+<p><a class="open-in-new link-standalone" href="/external?url=https%3A%2F%2Fgithub.com%2FIFTTT%2FConnectSDK-Android">View the Android SDK on GitHub</a></p>
+
+<p><a class="open-in-new link-standalone" href="/external?url=https%3A%2F%2Fgithub.com%2FIFTTT%2FConnectSDK-iOS">View the iOS SDK on GitHub</a></p>
+
+<p>The API can be used on its own or in conjunction with our mobile SDKs. We’d recommend reading the API’s documentation even if you intend to use the mobile SDKs, since it thoroughly explains the structure and capabilities of the API that the SDKs are built on top of.</p>
+
+<h3 id="connect-url">Connect URL</h3>
+
+<p>A Connect URL can be used on any platform and kicks off the authentication process for a connection. Here’s what one looks like:</p>
+
+<p><code>GET https://ifttt.com/connect/{connection_id}?email=me%40ifttt.com&amp;redirect_uri=https%3A%2F%2Fifttt.com%2Fpage&amp;code=sf9o8usfl-2f3l-f23kj</code></p>
+
+<p>Depending on whether you're a new user, logged out, or logged in, you'll be directed through the flow appropriately. You should see a view with the background color of the service you need to connect:</p>
+
+<p><img src="/assets/asset-001802.png" alt="connect-url-screenshot"></p>
+
+<h4 id="url-parameters">URL parameters</h4>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>email</code></td>
+<td>Yes</td>
+<td>User’s email address, used as a unique identifier.</td>
+<td>me@ifttt.com</td>
+</tr>
+<tr>
+<td><code>redirect_uri</code></td>
+<td>No</td>
+<td>URL to redirect a user to upon completion of authentication. This parameter is required when the <code>skip_config</code> parameter is <code>true</code></td>
+<td>https://ifttt.com/page</td>
+</tr>
+<tr>
+<td><code>code</code></td>
+<td>No</td>
+<td>A <code>provisional_access_code</code> used to pre-authenticate a user to your service.</td>
+<td>sf9o8usfl-2f3l-f23kj</td>
+</tr>
+<tr>
+<td><code>skip_config</code></td>
+<td>No</td>
+<td>Instructs IFTTT to skip only the connection configuration page (default: false).</td>
+<td>true</td>
+</tr>
+</tbody></table>
+
+<p>We use the <code>email</code> address to optimize the log-in process when it matches an existing IFTTT account.</p>
+
+<p>The <code>redirect_uri</code> must be <a href="/mkt/embedded_redirects">registered to your service on the IFTTT Platform</a> or omitted. You should use a web protocol (https) resource - you can register multiple redirects in case you’re already using an appScheme://app in the Connect SDKs. Note that this parameter is required if <code>skip_config=true</code> is present.</p>
+
+<p>You can use the <code>code</code> to pre-authenticate a user to your service by including the below <code>provisional_access_code</code> in the querystring.</p>
+
+<p>We will grant a <code>provisional_access_code</code> in exchange for an <code>oauth_code</code> for a given user. This allows us to guarantee that the code is single-use only and expires after 48 hours. If present, we will use the provisional code to look up the <code>oauth_code</code> that we saved and attempt to exchange the <code>oauth_code</code> (along with our client id and secret) for an access token. If this fails, or the code is missing, we will redirect the user through the normal OAuth exchange.</p>
+
+<div class="example-list">
+  <h6>Acquiring a provisional access code using the API v2 endpoint:</h6>
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>POST /v2/provisional_access_code
+Host: connect.ifttt.com
+IFTTT-Service-Key: {{ifttt_service_key}}
+{
+    "oauth_code": "foo"
+}
+</pre>
+      </code>
+    </li>
+    <li>
+      <span class="example-list-heading">HTTP Response</span>
+      <code>
+<pre>HTTP/1.1 201
+Content-Type: application/json; charset=utf-8
+{
+    "provisional_access_code": "sf9o8usfl-2f3l-f23kj"
+}
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+<p>The provisional code expires after 48 hours, or upon use.</p>
+
+<p>You can use the <code>skip_config</code> parameter if you want to use your own connection configuration UI. Setting this parameter to true will instruct IFTTT to skip the connection configuration screen. This parameter defaults to false. Once a user clicks the connect button they will be taken through the usual connection flow however they will not see the connection configuration screen but will be redirected back to your app instead (<code>redirect_url</code>). The <code>redirect_url</code> parameter is required when <code>skip_config=true</code>. After the user is redirected back to your app or website, you will be able to use the <a href="#field-options">field options endpoint</a> and the <a href="#update-a-connection">update a connection endpoint</a> to support your UI and allow the user to configure the connection. A user connection created with <code>skip_config=true</code> is considered pending and will not fire its triggers or allow you to run it's actions or queries until it's updated using the <a href="#update-a-connection">update a connection endpoint</a>.</p>
+
+<h4 id="how-to-use-it">How to use it</h4>
+
+<p>A Connect URL should be utilized on any platform for which an official SDK is not available. You can read more about our <a href="#ios-and-android-sdks">iOS and Android SDKs</a> here.</p>
+
+<h4 id="connect-button">Connect button</h4>
+
+<p>When presenting the Connect URL to users, IFTTT recommends utilizing a static image version of our Connect Button that includes “works with IFTTT” language. The Connect Button is intended to better set user expectations and improve overall conversion rates.</p>
+
+<p>When you’re ready to implement a Connect URL in your experience, please <a href="/external?url=mailto%3Amarketing%40ifttt.com">contact IFTTT</a> for appropriate supporting assets.</p>
+
+<h3 id="webhook-endpoint">Webhook endpoint</h3>
+
+<p>The Connect API will push data to various URL endpoints on your server, webhooks, after certain events happen. Here are some examples:</p>
+
+<ol>
+<li>You're waiting for a trigger event webhook to come in and then use <code>["event_data"]["ingredients"]</code> to run an action. Learn more <a href="#trigger-event-webhook">here</a>.</li>
+<li>You're waiting for a connection enabled webhook to come in and then use that to send the user some helpful information. Learn more <a href="#enabled-webhook">here</a>.</li>
+</ol>
+
+<h5 id="request">Request</h5>
+
+<p>IFTTT will push data to your <strong>webhook endpoint</strong> with the following request structure:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Method</dt>
+        <dd>POST</dd>
+      </dl>
+      <dl>
+        <dt>URL</dt>
+        <dd><code>{{api_url_prefix}}/ifttt/v1/webhooks/{{type}}/{{event}}</code></dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Headers</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt></dt>
+        <dd>
+<pre><code>
+IFTTT-Service-Key: {{ifttt_service_key}}
+Accept: application/json
+Accept-Charset: utf-8
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Request-ID: {{random_uuid}}
+</code></pre></dd>
+    </dl></li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Path Segments</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>type</dt>
+        <dd>(string) The type of object the event is for.</dd>
+      </dl>
+      <dl>
+        <dt>event</dt>
+        <dd>(string) The event that occurred.</dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Body</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>sent_at</dt>
+        <dd>(number) The time in milliseconds when the webhook was sent.</dd>
+      </dl>
+      <dl>
+        <dt>type</dt>
+        <dd>(string) The type of object the event is for.</dd>
+      </dl>
+      <dl>
+        <dt>event</dt>
+        <dd>(string) The event that occurred.</dd>
+      </dl>
+      <dl>
+        <dt>data</dt>
+        <dd>(object) Information about the object.</dd>
+      </dl>
+      <dl>
+        <dt>data.connection_id</dt>
+        <dd>(string) The id of the connection.</dd>
+      </dl>
+      <dl>
+        <dt>data.user_id</dt>
+        <dd>(string) The id of the connection user.</dd>
+      </dl>
+      <dl>
+        <dt>data.user_timezone</dt>
+        <dd>(string) The user timezone. Default is "Pacific Time (US &amp; Canada)".</dd>
+      </dl>
+      <dl>
+        <dt>event_data</dt>
+        <dd>(object) Information about the event.</dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<h5 id="response">Response</h5>
+
+<p>Your webhook endpoint should generate the response below:</p>
+
+<div class="example-list">
+  <h6>HTTP</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>Status</dt>
+        <dd>200</dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<h3 id="users">Users</h3>
+
+<h5 id="show-the-current-service-and-user">Show the current service and user</h5>
+
+<p><strong>Authentication:</strong> Unauthenticated, service-authenticated, or service-authenticated with user_id</p>
+
+<p><strong>URL</strong>: <code>GET https://connect.ifttt.com/v2/me</code></p>
+
+<p>This endpoint returns information about the authentication of the current request. You can use this to verify that you’re using a valid service key; you can also use it to determine whether the <a href="#accessing-user-specific-resources"><code>user_id</code> parameter</a> you sent is currently connected to an IFTTT account and, if so, what that IFTTT account’s login is.</p>
+
+<div class="example-list">
+  <h6>Example: Service-authenticated with user_id</h6>
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>GET /v2/me?user_id=123
+Host: connect.ifttt.com
+IFTTT-Service-Key: 6e7c8978c07a3b5918a237b9b5b1bb70
+</pre>
+      </code>
+    </li>
+    <li>
+      <span class="example-list-heading">Response</span>
+      <code>
+<pre>HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "type": "me",
+  "authentication_level": "channel",
+  "service_id": "acme_social_network",
+  "user_login": "example_user"
+}
+
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+<h3 id="connection-details">Connection details</h3>
+
+<h5 id="show-a-connection">Show a connection</h5>
+
+<p><strong>Authentication:</strong> Unauthenticated or service-authenticated with user_id</p>
+
+<p><strong>URL</strong>: <code>GET https://connect.ifttt.com/v2/connections/{{connection_id}}</code></p>
+
+<p>This endpoint can be used to provide details about a specific connection. If the request is <a href="#authentication">authenticated</a> the response will include details specific to the authenticated user. If the authenticated user has enabled this connection, a <code>user_connection</code> object will be present, including the current configuration for <a href="#user-trigger-fields">user trigger fields</a>, <a href="#user-query-fields">user query fields</a>, and <a href="#user-action-fields">user action fields</a> in a connection.</p>
+
+<div class="example-list">
+<h6>Example: Show a connection, service-authenticated with user_id</h6>
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>GET /v2/connections/C8p3q9T6?user_id=123
+Host: connect.ifttt.com
+IFTTT-Service-Key: 6e7c8978c07a3b5918a237b9b5b1bb70
+</pre>
+      </code>
+    </li>
+    <li>
+      <span class="example-list-heading">Response</span>
+      <code>
+<pre>{
+    "type": "connection",
+    "id": "zG58W2uC",
+    "name": "Track your work hours",
+    "description": "A new Google Calendar event will be created each time you enter or exit your work location. The exit event automatically calculates the amount of time you spent at work, so you don’t have to!",
+    "url": "https://ifttt.com/applets/zG58W2uC",
+    "enabled_count": 22,
+    "user_status": "enabled",
+    "services": [
+        {
+            "service_id": "google_calendar",
+            "service_name": "Google Calendar",
+            "service_short_name": "Google",
+            "is_primary": true,
+            "monochrome_icon_url": "https://assets.ifttt.com/images/channels/1396293310/icons/monochrome_regular.png",
+            "color_icon_url": "https://assets.ifttt.com/images/channels/1396293310/icons/on_color_regular.png",
+            "brand_color": "#2c6efc",
+            "url": "https://ifttt.com/google_calendar",
+            "triggers": [],
+            "queries": [
+                {
+                    "id": "search_events",
+                    "label": "Search Events",
+                    "field_options_url": "https://connect.ifttt.com/v2/connections/zG58W2uC/queries/google_calendar.search_events/field_options",
+                    "run_url": null,
+                    "fields": [
+                        {
+                            "id": "calendar",
+                            "label": "Calendar",
+                            "type": "COLLECTION_SELECT",
+                            "required": true,
+                            "hidden": false,
+                            "default_value": null
+                        },
+                        {
+                            "id": "query",
+                            "label": "Query",
+                            "type": "TEXT_FIELD",
+                            "required": false,
+                            "hidden": true,
+                            "default_value": "Empty"
+                        }
+                    ],
+                    "user_queries": [
+                        {
+                            "run_url": null,
+                            "fields": [
+                                {
+                                    "id": "calendar",
+                                    "group": null,
+                                    "label": "test@ifttt.com",
+                                    "value": "cIfpFqysBl6kEAAQAAAAAmFsYW5seUBpZnR0dC5jb21hbGFubHlAaWZ0dHQuY29t"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "id": "add_detailed_event",
+                    "label": "Create a detailed event",
+                    "field_options_url": "https://connect.ifttt.com/v2/connections/zG58W2uC/actions/google_calendar.add_detailed_event/field_options",
+                    "run_url": "https://connect.ifttt.com/v2/connections/zG58W2uC/actions/google_calendar.add_detailed_event/run",
+                    "fields": [
+                        {
+                            "id": "start_time",
+                            "label": "Start time",
+                            "type": "TEXT_FIELD",
+                            "required": true,
+                            "hidden": true,
+                            "default_value": "10am"
+                        },
+                        {
+                            "id": "description",
+                            "label": "Description",
+                            "type": "TEXT_AREA",
+                            "required": false,
+                            "hidden": true,
+                            "default_value": ""
+                        },
+                        {
+                            "id": "location",
+                            "label": "Location",
+                            "type": "TEXT_FIELD",
+                            "required": false,
+                            "hidden": true,
+                            "default_value": ""
+                        },
+                        {
+                            "id": "calendar",
+                            "label": "Which calendar?",
+                            "type": "COLLECTION_SELECT",
+                            "required": true,
+                            "hidden": false,
+                            "default_value": null
+                        },
+                        {
+                            "id": "attendees",
+                            "label": "Attendees",
+                            "type": "TEXT_FIELD",
+                            "required": false,
+                            "hidden": true,
+                            "default_value": ""
+                        },
+                        {
+                            "id": "end_time",
+                            "label": "End time",
+                            "type": "TEXT_FIELD",
+                            "required": true,
+                            "hidden": true,
+                            "default_value": "10am"
+                        },
+                        {
+                            "id": "all_day",
+                            "label": "All day?",
+                            "type": "COLLECTION_SELECT",
+                            "required": false,
+                            "hidden": true,
+                            "default_value": "false"
+                        },
+                        {
+                            "id": "title",
+                            "label": "Title",
+                            "type": "TEXT_FIELD",
+                            "required": false,
+                            "hidden": true,
+                            "default_value": ""
+                        }
+                    ],
+                    "user_actions": [
+                        {
+                            "run_url": "https://connect.ifttt.com/v2/connections/zG58W2uC/actions/google_calendar.add_detailed_event/run",
+                            "fields": [
+                                {
+                                    "id": "calendar",
+                                    "group": null,
+                                    "label": "test@ifttt.com",
+                                    "value": "cIfpFqysBl6kEAAQAAAAAmFsYW5seUBpZnR0dC5jb21hbGFubHlAaWZ0dHQuY29t"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "service_id": "location",
+            "service_name": "Location",
+            "service_short_name": "Location",
+            "is_primary": false,
+            "monochrome_icon_url": "https://assets.ifttt.com/images/channels/941030000/icons/monochrome_regular.png",
+            "color_icon_url": "https://assets.ifttt.com/images/channels/941030000/icons/on_color_regular.png",
+            "brand_color": "#0099ff",
+            "url": "https://ifttt.com/location",
+            "triggers": [
+                {
+                    "id": "enter_or_exit_region_location",
+                    "label": "You enter or exit an area",
+                    "field_options_url": "https://connect.ifttt.com/v2/connections/zG58W2uC/triggers/location.enter_or_exit_region_location/field_options",
+                    "run_url": null,
+                    "fields": [
+                        {
+                            "id": "location",
+                            "label": "Your work location",
+                            "type": "LOCATION_ENTER_AND_EXIT",
+                            "required": true,
+                            "hidden": false,
+                            "default_value": {
+                                "latitude": "37.78383800416815",
+                                "longitude": "-122.40843300000002",
+                                "radius": "316.2010756871335",
+                                "address": "923 Market St, San Francisco, CA 94103, USA",
+                                "description": "923 Market St, San Francisco, CA 94103, USA",
+                                "zoom": "16"
+                            }
+                        }
+                    ],
+                    "user_triggers": [
+                        {
+                            "run_url": null,
+                            "fields": [
+                                {
+                                    "id": "location",
+                                    "value": {
+                                        "lat": 37.78383800416815,
+                                        "lng": -122.40843300000002,
+                                        "radius": 316.2010756871335,
+                                        "address": "923 Market St, San Francisco, CA 94103, USA",
+                                        "description": "923 Market St, San Francisco, CA 94103, USA",
+                                        "zoom": 16
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "queries": [],
+            "actions": []
+        }
+    ],
+    "value_propositions": [
+        {
+            "description": "Effortlessly track time spent at work",
+            "icon_url": "https://ifttt.com/value-prop-icons/clock.png"
+        },
+        {
+            "description": "Gain valuable insight into your daily routine",
+            "icon_url": "https://ifttt.com/value-prop-icons/heart.png"
+        }
+    ],
+    "features": [
+        {
+            "id": "qharvmtjdh",
+            "title": "Effortlessly track time spent at work",
+            "description": null,
+            "icon_url": "https://ifttt.com/value-prop-icons/clock.png",
+            "field_options_url": "https://connect.ifttt.com/v2/connections/zG58W2uC/features/qharvmtjdh/field_options",
+            "fields": [
+                {
+                    "id": "day_of_week",
+                    "label": "Day of week",
+                    "type": "COLLECTION_SELECT",
+                    "required": true,
+                    "hidden": false,
+                    "default_value": {
+                      "group": null,
+                      "label": "Monday",
+                      "value": "1"
+                    }
+                }
+            ],
+            "feature_triggers": [
+                {
+                    "id": "f3gtkmjkgf",
+                    "trigger_id": "enter_or_exit_region_location",
+                    "service_id": "location",
+                    "label": "You enter or exit an area",
+                    "field_options_url": "https://connect.ifttt.com/v2/connections/zG58W2uC/triggers/location.enter_or_exit_region_location/field_options",
+                    "run_url": null,
+                    "fields": [
+                        {
+                            "id": "location",
+                            "label": "Your work location",
+                            "type": "LOCATION_ENTER_AND_EXIT",
+                            "required": true,
+                            "hidden": false,
+                            "default_value": {
+                                "latitude": "37.78383800416815",
+                                "longitude": "-122.40843300000002",
+                                "radius": "316.2010756871335",
+                                "address": "923 Market St, San Francisco, CA 94103, USA",
+                                "description": "923 Market St, San Francisco, CA 94103, USA",
+                                "zoom": "16"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "feature_queries": [
+                {
+                    "id": "zfgacjes8c",
+                    "query_id": "search_events",
+                    "service_id": "google_calendar",
+                    "label": "Search Events",
+                    "field_options_url": "https://connect.ifttt.com/v2/connections/zG58W2uC/queries/google_calendar.search_events/field_options",
+                    "run_url": null,
+                    "fields": [
+                        {
+                            "id": "calendar",
+                            "label": "Calendar",
+                            "type": "COLLECTION_SELECT",
+                            "required": true,
+                            "hidden": false,
+                            "default_value": null
+                        },
+                        {
+                            "id": "query",
+                            "label": "Query",
+                            "type": "TEXT_FIELD",
+                            "required": false,
+                            "hidden": true,
+                            "default_value": "Empty"
+                        }
+                    ]
+                }
+            ],
+            "feature_actions": [
+                {
+                    "id": "xgzrzv2s3j",
+                    "action_id": "add_detailed_event",
+                    "service_id": "google_calendar",
+                    "label": "Create a detailed event",
+                    "field_options_url": "https://connect.ifttt.com/v2/connections/zG58W2uC/actions/google_calendar.add_detailed_event/field_options",
+                    "run_url": "https://connect.ifttt.com/v2/connections/zG58W2uC/actions/google_calendar.add_detailed_event/run",
+                    "fields": [
+                        {
+                            "id": "start_time",
+                            "label": "Start time",
+                            "type": "TEXT_FIELD",
+                            "required": true,
+                            "hidden": true,
+                            "default_value": "10am"
+                        },
+                        {
+                            "id": "description",
+                            "label": "Description",
+                            "type": "TEXT_AREA",
+                            "required": false,
+                            "hidden": true,
+                            "default_value": ""
+                        },
+                        {
+                            "id": "location",
+                            "label": "Location",
+                            "type": "TEXT_FIELD",
+                            "required": false,
+                            "hidden": true,
+                            "default_value": ""
+                        },
+                        {
+                            "id": "calendar",
+                            "label": "Which calendar?",
+                            "type": "COLLECTION_SELECT",
+                            "required": true,
+                            "hidden": false,
+                            "default_value": {
+                              "group": null,
+                              "label": "test@ifttt.com",
+                              "value": "cIfpFqysBl6kEAAQAAAAAmFsYW5seUBpZnR0dC5jb21hbGFubHlAaWZ0dHQuY29t"
+                            }
+                        },
+                        {
+                            "id": "attendees",
+                            "label": "Attendees",
+                            "type": "TEXT_FIELD",
+                            "required": false,
+                            "hidden": true,
+                            "default_value": ""
+                        },
+                        {
+                            "id": "end_time",
+                            "label": "End time",
+                            "type": "TEXT_FIELD",
+                            "required": true,
+                            "hidden": true,
+                            "default_value": "10am"
+                        },
+                        {
+                            "id": "all_day",
+                            "label": "All day?",
+                            "type": "COLLECTION_SELECT",
+                            "required": false,
+                            "hidden": true,
+                            "default_value": "false"
+                        },
+                        {
+                            "id": "title",
+                            "label": "Title",
+                            "type": "TEXT_FIELD",
+                            "required": false,
+                            "hidden": true,
+                            "default_value": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "user_connection": {
+        "user_features": [
+            {
+                "id": "c62f0695-aae5-4f46-9482-1b8cfba8baf4",
+                "feature_id": "qharvmtjdh",
+                "enabled": true,
+                "user_fields": [
+                    {
+                        "field_id": "day_of_week",
+                        "field_type": "COLLECTION_SELECT",
+                        "value": {
+                            "group": null,
+                            "label": "Tuesday",
+                            "value": "lkk2Skf2SDF"
+                        }
+                    }
+                ],
+                "user_feature_triggers": [
+                    {
+                        "id": "ef618c2d-70a4-4186-aa58-6b743086ebd0",
+                        "feature_trigger_id": "f3gtkmjkgf",
+                        "user_fields": [
+                            {
+                                "field_id": "location",
+                                "field_type": "LOCATION_ENTER_AND_EXIT",
+                                "value": {
+                                    "lat": 37.78383800416815,
+                                    "lng": -122.40843300000002,
+                                    "radius": 316.2010756871335,
+                                    "address": "923 Market St, San Francisco, CA 94103, USA",
+                                    "description": "923 Market St, San Francisco, CA 94103, USA",
+                                    "zoom": 16
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "user_feature_queries": [
+                    {
+                        "feature_query_id": "zfgacjes8c",
+                        "user_fields": [
+                            {
+                                "field_id": "calendar",
+                                "field_type": "COLLECTION_SELECT",
+                                "value": {
+                                    "group": null,
+                                    "label": "test@ifttt.com",
+                                    "value": "cIfpFqysBl6kEAAQAAAAAmFsYW5seUBpZnR0dC5jb21hbGFubHlAaWZ0dHQuY29t"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "user_feature_actions": [
+                    {
+                        "feature_action_id": "xgzrzv2s3j",
+                        "user_fields": [
+                            {
+                                "field_id": "calendar",
+                                "field_type": "COLLECTION_SELECT",
+                                "value": {
+                                    "group": null,
+                                    "label": "test@ifttt.com",
+                                    "value": "cIfpFqysBl6kEAAQAAAAAmFsYW5seUBpZnR0dC5jb21hbGFubHlAaWZ0dHQuY29t"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+<p>Response attributes:</p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>type</code></td>
+<td>(string) The type of the response. Always <code>connection</code></td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>(string) A connection id.</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>(string) A connection name.</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>(string) A connection description.</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>(string) A connection URL on IFTTT.</td>
+</tr>
+<tr>
+<td><code>enabled_count</code></td>
+<td>(string) The number of users who have this connection enabled.</td>
+</tr>
+<tr>
+<td><code>user_status</code></td>
+<td>(string) The status of this connection for the current user: <code>enabled</code> - currently turned on, <code>disabled</code> - turned off, <code>never_enabled</code> - deleted by the user or never turned on, <code>null</code> - when no user is specified.</td>
+</tr>
+<tr>
+<td><code>services</code></td>
+<td>(array) A list of services available in this connection.</td>
+</tr>
+<tr>
+<td><code>services.service_id</code></td>
+<td>(string) A service id.</td>
+</tr>
+<tr>
+<td><code>services.service_name</code></td>
+<td>(string) A full service name.</td>
+</tr>
+<tr>
+<td><code>services.service_short_name</code></td>
+<td>(string) A short service name.</td>
+</tr>
+<tr>
+<td><code>services.is_primary</code></td>
+<td>(string) <code>true</code> for the service that owns this connection.</td>
+</tr>
+<tr>
+<td><code>services.monochrome_icon_url</code></td>
+<td>(string) A URL for the service's monochrome icon.</td>
+</tr>
+<tr>
+<td><code>services.color_icon_url</code></td>
+<td>(string) A URL for the service's color icon.</td>
+</tr>
+<tr>
+<td><code>services.brand_color</code></td>
+<td>(string) A service's brand color.</td>
+</tr>
+<tr>
+<td><code>services.url</code></td>
+<td>(string) A service page on IFTTT.</td>
+</tr>
+<tr>
+<td><code>services.actions</code></td>
+<td>(array) service actions available in this connection.</td>
+</tr>
+<tr>
+<td><code>services.actions.id</code></td>
+<td>(string) An action id.</td>
+</tr>
+<tr>
+<td><code>services.actions.label</code></td>
+<td>(string) An action label.</td>
+</tr>
+<tr>
+<td><code>services.actions.field_options_url</code></td>
+<td>(string) A URL that returns the action field options.</td>
+</tr>
+<tr>
+<td><code>services.actions.run_url</code></td>
+<td>(string) A URL that runs the action.</td>
+</tr>
+<tr>
+<td><code>services.actions.fields</code></td>
+<td>(array) Action fields.</td>
+</tr>
+<tr>
+<td><code>services.actions.fields.id</code></td>
+<td>(string) A field id.</td>
+</tr>
+<tr>
+<td><code>services.actions.fields.type</code></td>
+<td>(string) A field type.</td>
+</tr>
+<tr>
+<td><code>services.actions.fields.label</code></td>
+<td>(string) A field label.</td>
+</tr>
+<tr>
+<td><del><code>services.actions.fields.default_value</code></del></td>
+<td>(Deprecated, use <code>feature_actions.fields.default_value</code>) (string) A field's default value.</td>
+</tr>
+<tr>
+<td><del><code>services.actions.fields.required</code></del></td>
+<td>(Deprecated, use <code>feature_actions.fields.required</code>) (string) <code>true</code> for required fields.</td>
+</tr>
+<tr>
+<td><del><code>services.actions.fields.hidden</code></del></td>
+<td>(Deprecated, use <code>feature_actions.fields.hidden</code>) (string) <code>true</code> for fields that are not visible to the user.</td>
+</tr>
+<tr>
+<td><del><code>services.actions.user_actions</code></del></td>
+<td>(Deprecated, use <code>user_connection</code>) (array) Actions that the user configured.</td>
+</tr>
+<tr>
+<td><code>services.actions.user_actions.id</code></td>
+<td>(string) A user action id.</td>
+</tr>
+<tr>
+<td><code>services.actions.user_actions.run_url</code></td>
+<td>(string) A URL that runs the action as configured by the user.</td>
+</tr>
+<tr>
+<td><code>services.actions.user_actions.fields</code></td>
+<td>(array) Fields configured by the user.</td>
+</tr>
+<tr>
+<td><del><code>services.actions.user_actions.fields.id</code></del></td>
+<td>(Deprecated, use <code>user_connection</code>) (string) A field id (maps to <code>actions.fields.id</code>).</td>
+</tr>
+<tr>
+<td><code>services.actions.user_actions.fields.label</code></td>
+<td>(string) For dropdown type fields, contains a user selected label.</td>
+</tr>
+<tr>
+<td><code>services.actions.user_actions.fields.value</code></td>
+<td>(string) A user selected value.</td>
+</tr>
+<tr>
+<td><code>services.actions.user_actions.fields.value.lat</code></td>
+<td>(string) For location fields, contains a latitude value.</td>
+</tr>
+<tr>
+<td><code>services.actions.user_actions.fields.value.lng</code></td>
+<td>(string) For location fields, contains a longitude value.</td>
+</tr>
+<tr>
+<td><code>services.actions.user_actions.fields.value.radius</code></td>
+<td>(string) For location fields, contains a radius value.</td>
+</tr>
+<tr>
+<td><code>services.actions.user_actions.fields.group</code></td>
+<td>(string) For dropdown type fields, contains a group name for a user selected label.</td>
+</tr>
+<tr>
+<td><code>features</code></td>
+<td>(array) A list of features available in this connection.</td>
+</tr>
+<tr>
+<td><code>features.id</code></td>
+<td>(string) A feature id.</td>
+</tr>
+<tr>
+<td><code>features.title</code></td>
+<td>(string) A feature title.</td>
+</tr>
+<tr>
+<td><code>features.description</code></td>
+<td>(string) A feature description.</td>
+</tr>
+<tr>
+<td><code>features.icon_url</code></td>
+<td>(string) A feature icon URL.</td>
+</tr>
+<tr>
+<td><code>features.field_options_url</code></td>
+<td>(string) A URL that returns the field options.</td>
+</tr>
+<tr>
+<td><code>features.fields</code></td>
+<td>(array) Feature fields.</td>
+</tr>
+<tr>
+<td><code>features.fields.id</code></td>
+<td>(string) A field ID.</td>
+</tr>
+<tr>
+<td><code>features.fields.label</code></td>
+<td>(string) A field label.</td>
+</tr>
+<tr>
+<td><code>features.fields.type</code></td>
+<td>(string)  A field type.</td>
+</tr>
+<tr>
+<td><code>features.fields.required</code></td>
+<td>(string) <code>true</code> for required fields.</td>
+</tr>
+<tr>
+<td><code>features.fields.hidden</code></td>
+<td>(string) <code>true</code> for fields that are not visible to the user.</td>
+</tr>
+<tr>
+<td><code>features.fields.default_value</code></td>
+<td>(object, array, string) A field's default value.</td>
+</tr>
+<tr>
+<td><code>feature_actions</code></td>
+<td>(array) Actions available in this feature.</td>
+</tr>
+<tr>
+<td><code>feature_actions.id</code></td>
+<td>(string) The feature action ID.</td>
+</tr>
+<tr>
+<td><code>feature_actions.action_id</code></td>
+<td>(string) An action ID (maps to <code>services.actions.id</code>)</td>
+</tr>
+<tr>
+<td><code>feature_actions.service_id</code></td>
+<td>(string) A service ID (maps to <code>services.id</code>)</td>
+</tr>
+<tr>
+<td><code>feature_actions.label</code></td>
+<td>(string) An action label.</td>
+</tr>
+<tr>
+<td><code>feature_actions.field_options_url</code></td>
+<td>(string) A URL that returns the field options.</td>
+</tr>
+<tr>
+<td><code>feature_actions.run_url</code></td>
+<td>(string) A URL that runs the action.</td>
+</tr>
+<tr>
+<td><code>feature_actions.fields</code></td>
+<td>(array) Action fields</td>
+</tr>
+<tr>
+<td><code>feature_actions.fields.id</code></td>
+<td>(string) An action field ID (maps to <code>services.actions.fields.id</code>)</td>
+</tr>
+<tr>
+<td><code>feature_actions.fields.label</code></td>
+<td>(string) An action field label.</td>
+</tr>
+<tr>
+<td><code>feature_actions.fields.type</code></td>
+<td>(string) An action field type.</td>
+</tr>
+<tr>
+<td><code>feature_actions.fields.required</code></td>
+<td>(string) <code>true</code> for required fields.</td>
+</tr>
+<tr>
+<td><code>feature_actions.fields.hidden</code></td>
+<td>(string) <code>true</code> for fields that are not visible to the user.</td>
+</tr>
+<tr>
+<td><code>feature_actions.fields.default_value</code></td>
+<td>(object, array, string) A default value for this field.</td>
+</tr>
+<tr>
+<td><code>features.queries.*</code></td>
+<td>Same as <code>features.actions</code>.</td>
+</tr>
+<tr>
+<td><code>features.queries.*</code></td>
+<td>Same as <code>features.actions</code>.</td>
+</tr>
+<tr>
+<td><code>services.queries.*</code></td>
+<td>Same as <code>services.actions</code>.</td>
+</tr>
+<tr>
+<td><code>services.triggers.*</code></td>
+<td>Same as <code>services.actions</code>.</td>
+</tr>
+<tr>
+<td><code>user_connection.user_features.id</code></td>
+<td>(string) An id referring to the specific instance of the user's configuration for this feature. This id can be used to run an Action or perform a Query based on a specific configuration by setting the <code>user_feature_id</code> field.</td>
+</tr>
+<tr>
+<td><code>user_connection.user_features.feature_id</code></td>
+<td>(string) The feature id.</td>
+</tr>
+<tr>
+<td><code>user_connection.user_features.enabled</code></td>
+<td>(boolean) <code>true</code> if the feature is enabled, <code>false</code> otherwise.</td>
+</tr>
+<tr>
+<td><code>user_connection.user_features.user_actions</code></td>
+<td>(array) Actions that the user configured.</td>
+</tr>
+<tr>
+<td><code>user_connection.user_features.user_feature_actions.feature_action_id</code></td>
+<td>(string) The feature action id.</td>
+</tr>
+<tr>
+<td><code>user_connection.user_features.user_feature_actions.user_fields</code></td>
+<td>(array) Fields configured by the user.</td>
+</tr>
+<tr>
+<td><code>user_connection.user_features.user_feature_actions.user_fields.field_id</code></td>
+<td>(string) A field id (maps to <code>actions.fields.id</code>).</td>
+</tr>
+<tr>
+<td><code>user_connection.user_features.user_feature_actions.user_fields.field_type</code></td>
+<td>(string) A field type.</td>
+</tr>
+<tr>
+<td><code>user_connection.user_features.user_feature_actions.user_fields.value</code></td>
+<td>(object, array, string) A user selected value.</td>
+</tr>
+<tr>
+<td><code>user_connection.user_features.user_feature_actions.user_fields.value.lat</code></td>
+<td>(number) For location fields, contains a latitude value.</td>
+</tr>
+<tr>
+<td><code>user_connection.user_features.user_feature_actions.user_fields.value.lng</code></td>
+<td>(number) For location fields, contains a longitude value.</td>
+</tr>
+<tr>
+<td><code>user_connection.user_features.user_feature_actions.user_fields.value.radius</code></td>
+<td>(number) For location fields, contains a radius value.</td>
+</tr>
+<tr>
+<td><code>user_connection.user_features.user_feature_actions.user_fields.value.group</code></td>
+<td>(string) For dropdown type fields, contains a group name for a user selected label.</td>
+</tr>
+<tr>
+<td><code>user_connection.user_features.user_feature_actions.user_fields.value.label</code></td>
+<td>(string) For dropdown type fields, a label for a user selected value.</td>
+</tr>
+<tr>
+<td><code>user_connection.user_features.user_feature_actions.user_fields.value.value</code></td>
+<td>(string) For dropdown type fields, a user selected value.</td>
+</tr>
+<tr>
+<td><code>user_connection.user_features.user_feature_queries.*</code></td>
+<td>Same as <code>user_connection.user_features.user_feature_actions</code>.</td>
+</tr>
+<tr>
+<td><code>user_connection.user_features.user_feature_triggers.*</code></td>
+<td>Same as <code>user_connection.user_features.user_feature_actions</code>.</td>
+</tr>
+<tr>
+<td><code>user_connection.user_features.user_feature_triggers.id</code></td>
+<td>(string) An ID referring to the specific instance of the trigger. The id is returned in of the body in the <a href="#trigger-event-webhook">Trigger event webhook</a></td>
+</tr>
+</tbody></table>
+
+<h5 id="update-a-connection">Update a connection</h5>
+
+<p><strong>Authentication:</strong> Service-authenticated with user_id</p>
+
+<p><strong>URL</strong>: <code>PUT https://connect.ifttt.com/v2/connections/{{connection_id}}/user_connection</code></p>
+
+<p>This endpoint can be used to update a specific user's connection. The request must be <a href="#authentication">authenticated</a>. Note, the PUT will replace the current stored configurations for the user. If a user has configured a trigger, sending a PUT request without the same trigger configuration will result in removing the user's configuration for the trigger. Likewise, if the user has never configured a query and it is absent from the <code>user_connection</code> from the <a href="#show-a-connection">Show a connection endpoint</a>, this endpoint can be used to store new configurations for the user.</p>
+
+<div class="example-list">
+<h6>Example: Update a connection, service-authenticated with user_id</h6>
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>PUT /v2/connections/C8p3q9T6/user_connection?user_id=123
+Host: connect.ifttt.com
+IFTTT-Service-Key: 6e7c8978c07a3b5918a237b9b5b1bb70
+{
+  "user_features": [
+    {
+      "feature_id": "XwqsedQk",
+      "enabled": true,
+      "user_fields": [
+        {
+          "field_id": "color",
+          "value": "red"
+        }
+      ],
+      "user_feature_triggers": [
+        {
+          "feature_trigger_id": "ht5kw3ga7l",
+          "user_fields": [
+            {
+              "field_id": "condition",
+              "value": "rain"
+            }
+          ]
+        }
+      ],
+      "user_feature_queries": [...],
+      "user_feature_actions": [...]
+    }
+  ]
+}
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+<h5 id="update-a-connection-deprecated">Update a connection (deprecated)</h5>
+
+<p><em>Endpoint has been deprecated. Please use the new <a href="#update-a-connection">Update a Connection</a> endpoint</em></p>
+
+<p><strong>Authentication:</strong> Service-authenticated with user_id</p>
+
+<p><strong>URL</strong>: <code>POST https://connect.ifttt.com/v2/connections/{{connection_id}}</code></p>
+
+<p>This endpoint can be used to update certain details about a specific connection. The request must be <a href="#authentication">authenticated</a>. Currently, you can only update <a href="#user-trigger-fields">user trigger fields</a>, <a href="#user-query-fields">user query fields</a>, and <a href="#user-action-fields">user action fields</a>. An attempt to update anything else will result in a <code>422 Unprocessable Entity</code>.</p>
+
+<p>Below is an example of updating a user action field with id <code>title</code>, which configures the action with id <code>post_picture</code> of the <code>acme_social_network</code> service.</p>
+
+<div class="example-list">
+<h6>Example: Update a connection, service-authenticated with user_id</h6>
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>POST /v2/connections/C8p3q9T6
+Host: connect.ifttt.com
+IFTTT-Service-Key: 6e7c8978c07a3b5918a237b9b5b1bb70
+{
+  "user_id": 123,
+  "services": [
+    {
+      "service_id": "acme_social_network",
+      "actions": [
+        {
+          "id": "post_picture",
+          "user_actions": [
+            {
+              "fields": [
+                {
+                  "id": "title",
+                  "value": "My San Francisco today"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+<h5 id="field-options">Field options</h5>
+
+<p>The field option endpoints allow you to fetch the available options for trigger fields, query fields, action fields, and feature fields. These endpoints return a human-readable <code>label</code> and a <code>value</code> that can be used to show, update, or override stored user fields.</p>
+
+<p><strong>Authentication:</strong> Service-authenticated with user_id</p>
+
+<p><strong>URL</strong>: <code>GET https://connect.ifttt.com/v2/connections/{{connection_id}}/{{type}}/{{type_id}}/field_options</code></p>
+
+<div class="example-list">
+  <h6>Path Segments</h6>
+  <ul>
+    <li>
+      <dl>
+        <dt>type</dt>
+        <dd>(string) The type of field. Must be `triggers`, `queries`, `actions`, or `features`.</dd>
+      </dl>
+      <dl>
+        <dt>type_id</dt>
+        <dd>(string) The ID for the specific trigger, query, action, or feature.</dd>
+      </dl>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example: Action Field Options, service-authenticated with user_id</h6>
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>GET /v2/connections/C8p3q9T6/actions/acme_cloud_storage.archive/field_options?user_id=123
+Host: connect.ifttt.com
+IFTTT-Service-Key: vFRqPGZBmZjB8JPp3mBFqOdt
+</pre>
+      </code>
+    </li>
+    <li>
+      <span class="example-list-heading">Response</span>
+      <code>
+<pre>{
+  "type": "field_options",
+  "options": {
+    "folder_name": [
+      {
+        "label": "Movies",
+        "value": "aBwLdm2ydHVya0BQbWFpbC8jb22=;2641ab0g",
+        "group": null
+      },
+      {
+        "label": "Music",
+        "value": "dHwLdm2ydHVya0BnbWFbgC8jb44=;1411vb0q",
+        "group": null
+      }
+    ]
+  }
+}
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+<p>Response attributes:</p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>label</code></td>
+<td>(string) A human-readable label for the option.</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td>(string) An option value to be used in an <a href="#run-an-action">action run</a> or to <a href="#update-a-connection">update a connection</a>.</td>
+</tr>
+<tr>
+<td><code>group</code></td>
+<td>(optional string) A group name which can be used to organize related options when displaying to a user.</td>
+</tr>
+</tbody></table>
+
+<h5 id="refresh-a-connection">Refresh a connection</h5>
+
+<p>This endpoint allows you to refresh dropdown field labels if they get changed.
+This is useful in a situation when a dropdown field label changes outside IFTTT.</p>
+
+<p>Let's say you have a smart light service on IFTTT with an action that uses a dropdown field allowing a user to select a light.
+Such a field will have multiple differently labeled options, one per light.
+When a user configures your connection they will pick a light by it's label.
+IFTTT will store the light id along with the label to avoid fetching options every time the connection needs to be displayed.
+If the user uses your app to renames the light they picked the change will not be known to IFTTT and the connection will still display the old label.
+To fix this you can call this endpoint and IFTTT will fetch dropdown options and update the selected light label.</p>
+
+<p><strong>Authentication:</strong> Service-authenticated with user_id</p>
+
+<p><strong>URL</strong>: <code>POST https://connect.ifttt.com/v2/connections/{{connection_id}}/user_connection/refresh</code></p>
+
+<div class="example-list">
+  <h6>Example: Refreshing a connection, service-authenticated with user_id</h6>
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>POST /v2/connections/C8p3q9T6/user_connection/refresh?user_id=123
+Host: connect.ifttt.com
+IFTTT-Service-Key: vFRqPGZBmZjB8JPp3mBFqOdt
+</pre>
+      </code>
+    </li>
+    <li>
+      <span class="example-list-heading">Response</span>
+      <code>
+<pre>HTTP/1.1 204 No Content
+Content-Type: application/json; charset=utf-8
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+<h3 id="connection-events">Connection events</h3>
+
+<h5 id="enabled-webhook">Enabled webhook</h5>
+
+<p>Connections are enabled by your users on the IFTTT web app or through your mobile app via IFTTT SDKs. When this happens IFTTT will send a request to your API's <a href="#webhook-endpoint">Webhook</a> endpoint.</p>
+
+<div class="example-list">
+  <h6>Example: Connection enabled</h6>
+  <ul>
+    <li>
+<pre><code>
+POST /ifttt/v1/webhooks/connection/enabled HTTP/1.1
+Host: api.example-service.com
+X-Request-ID: 9f99e73452cd40198cb6ce9c1cde83d6
+
+{
+  "sent_at": 1560285630699,
+  "data": {
+    "connection_id": "C8p3q9T6",
+    "user_id": "16507466",
+    "user_timezone": "Pacific Time (US &amp; Canada)"
+  },
+  "event_data": {
+    "enabled_at": "1560285630711"
+  }
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h5 id="updated-webhook">Updated webhook</h5>
+
+<p>When a user updates a connection, IFTTT will send a request to your API's <a href="#webhook-endpoint">Webhook</a> endpoint.</p>
+
+<div class="example-list">
+  <h6>Example: Connection Updated</h6>
+  <ul>
+    <li>
+<pre><code>
+POST /ifttt/v1/webhooks/connection/updated HTTP/1.1
+Host: api.example-service.com
+X-Request-ID: 9f99e73452cd40198cb6ce9c1cde83d6
+
+{
+  "sent_at": 1560285630699,
+  "data": {
+    "connection_id": "C8p3q9T6",
+    "user_id": "16507466",
+    "user_timezone": "Pacific Time (US &amp; Canada)"
+  },
+  "event_data": {
+    "updated_at": "1560285630711"
+  }
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h5 id="disabled-webhook">Disabled webhook</h5>
+
+<p>When a user disabled a connection, IFTTT will send a request to your API's <a href="#webhook-endpoint">Webhook</a> endpoint.</p>
+
+<div class="example-list">
+  <h6>Example: Connection disabled</h6>
+  <ul>
+    <li>
+<pre><code>
+POST /ifttt/v1/webhooks/connection/disabled HTTP/1.1
+Host: api.example-service.com
+X-Request-ID: 9f99e73452cd40198cb6ce9c1cde83d6
+
+{
+  "sent_at": 1560285630699,
+  "data": {
+    "connection_id": "C8p3q9T6",
+    "user_id": "16507466",
+    "user_timezone": "Pacific Time (US &amp; Canada)"
+  },
+  "event_data": {
+    "disabled_at": "1560285630711"
+  }
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h3 id="triggers">Triggers</h3>
+
+<h5 id="user-trigger-fields">User trigger fields</h5>
+
+<h6 id="stored-trigger-fields">Stored trigger fields</h6>
+
+<p>When a connection is enabled by your users on the IFTTT web app or through your mobile app via IFTTT SDKs, IFTTT will collect and store user configured trigger field values. You can see the currently stored trigger field values for a user via the <a href="#show-a-connection">show a connection</a> endpoint.</p>
+
+<h6 id="update-stored-trigger-fields">Update stored trigger fields</h6>
+
+<p>Stored user trigger field values can be updated using the <a href="#update-a-connection">update a connection</a> endpoint. To update stored fields you must use the <a href="#field-options">field options</a> endpoint to get valid values for the field.</p>
+
+<h5 id="trigger-event-webhook">Trigger event webhook</h5>
+
+<p>When a trigger detects a new event, IFTTT will send a request to your API's <a href="#webhook-endpoint">Webhook</a> endpoint.</p>
+
+<div class="example-list">
+  <h6>Example: New Trigger Event</h6>
+  <ul>
+    <li>
+<pre><code>
+POST /ifttt/v1/webhooks/trigger_subscription/fired HTTP/1.1
+Host: api.example-service.com
+X-Request-ID: 9f99e73452cd40198cb6ce9c1cde83d6
+
+{
+  "sent_at": 1543520153824,
+  "data": {
+    "user_id": "16507466",
+    "user_timezone": "Pacific Time (US &amp; Canada)",
+    "connection_id": "C8p3q9T6",
+    "trigger_id": "acme_cloud_storage.new_file",
+    "feature_id": "XwqsedQk",
+    "user_feature_id": "5e0d9be3-2381-4cbe-a567-ed264b0ac1dc",
+    "user_feature_trigger_id": "fa58e624-806f-447b-a902-9985acca572a"
+  },
+  "event_data": {
+    "ingredients": {
+      "FileName": "Street Art"
+    }
+  }
+}
+</code></pre>
+</li>
+
+  </ul>
+</div>
+
+<h5 id="test-trigger-event-webhook">Test trigger event webhook</h5>
+
+<p><strong>Authentication:</strong> Service-authenticated with user_id</p>
+
+<p><strong>URL</strong>: <code>POST https://connect.ifttt.com/v2/connections/{{connection_id}}/triggers/{{trigger_id}}/test</code></p>
+
+<p>This endpoint can be used to simulate a new event. A request to this endpoint will result in a test <a href="#trigger-event-webhook">Trigger event webhook</a> request to your API's <a href="#webhook-endpoint">Webhook</a> endpoint.</p>
+
+<div class="example-list">
+  <h6>Example: Test event, service-authenticated with user_id</h6>
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>POST /v2/connections/C8p3q9T6/triggers/acme_cloud_storage.new_file_added/test
+Host: connect.ifttt.com
+IFTTT-Service-Key: vFRqPGZBmZjB8JPp3mBFqOdt
+{
+  "user_id": 123,
+  "user_feature_id": "90276cb1-e8ff-4718-a34f-c73cf75c49cf"
+}
+</pre>
+      </code>
+    </li>
+    <li>
+      <span class="example-list-heading">Response</span>
+      <code>
+<pre>HTTP/1.1 204 No Content
+Status: 204 No Content
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+<p>Request attributes:</p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>user_feature_id</code></td>
+<td>(optional string) If provided, the connection will be run with this configuration. If not provided, the connection's first <code>user_feature_id</code> will be used.</td>
+</tr>
+</tbody></table>
+
+<h3 id="queries">Queries</h3>
+
+<h5 id="user-query-fields">User query fields</h5>
+
+<h6 id="stored-query-fields">Stored query fields</h6>
+
+<p>When a connection is enabled by your users on the IFTTT web app or through your mobile app via IFTTT SDKs, IFTTT will collect and store user configured query field values required to perform a query. You can see the currently stored query field values for a user via the <a href="#show-a-connection">show a connection</a> endpoint.</p>
+
+<h6 id="update-stored-query-fields">Update stored query fields</h6>
+
+<p>Stored user query field values can be updated using the <a href="#update-a-connection">update a connection</a> endpoint. To update stored fields you must use the <a href="#field-options">field options</a> endpoint to get valid values for the field.</p>
+
+<h6 id="overriding-stored-query-fields">Overriding stored query fields</h6>
+
+<p>Depending on the experience you're looking to create, you may want to override the stored query field values. To do this, include a valid field <code>label</code> and <code>value</code> in the body of the <a href="#perform-a-query">perform a query</a> request. <a href="/docs/connections#connection-creation-tool">View an example</a> of when to override stored fields.</p>
+
+<h5 id="perform-a-query">Perform a query</h5>
+
+<p><strong>Authentication:</strong> Service-authenticated with user_id</p>
+
+<p><strong>URL</strong>: <code>POST https://connect.ifttt.com/v2/connections/{{connection_id}}/queries/{{query_id}}/perform</code></p>
+
+<p>This endpoint performs the specified query using the <a href="#user-query-fields">user query fields</a> stored on IFTTT.</p>
+
+<p>Optionally, you may include a JSON object in the body of the request with any or all <code>fields</code>, which will temporarily override the fields stored on IFTTT.</p>
+
+<div class="example-list">
+  <h6>Example: Perform Query, service-authenticated with user_id</h6>
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>POST /v2/connections/C8p3q9T6/queries/acme_cloud_storage.list_files/perform
+Host: connect.ifttt.com
+IFTTT-Service-Key: vFRqPGZBmZjB8JPp3mBFqOdt
+{
+  "user_id": 123,
+  "fields": {
+    "folder_name": "aBwLdm2ydHVya0BQbWFpbC8jb22=;2641ab0g",
+  },
+  "limit": 1
+}
+</pre>
+      </code>
+    </li>
+    <li>
+      <span class="example-list-heading">Response</span>
+      <code>
+<pre>{
+  "type": "list",
+  "data": [
+    {
+      "id": "kj39jskl",
+      "name": "posts.zip",
+      "created_at": "2017-08-27T12:52:59-07:00",
+      "size": "293234",
+      "version": 3,
+      "tags": {
+        "type": "query",
+        "query_id": "acme_cloud_storage.get_file_metadata",
+        "fields": {
+          "file_id": "zAwLdm2ydHVya0BQbWFpbC8jb3e=;3441ab0g"
+        }
+      }
+    }
+  ],
+  "next": {
+    "fields": {
+      "folder_name": "aBwLdm2ydHVya0BQbWFpbC8jb22=;2641ab0g"
+    },
+    "cursor": "151517700064544d60c3a02405f8bd5520d3e31571"
+  }
+}
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+<p>Request attributes:</p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>fields</code></td>
+<td>(object) A map of query fields. This is effectively query parameters.</td>
+</tr>
+<tr>
+<td><code>user_feature_id</code></td>
+<td>(optional string) If provided, the connection will be run with this configuration. If not provided, the connection's first <code>user_feature_id</code> will be used.</td>
+</tr>
+<tr>
+<td><code>limit</code></td>
+<td>(optional number) A limit for the number of items in the response.</td>
+</tr>
+<tr>
+<td><code>cursor</code></td>
+<td>(optional string) A cursor that addresses a specific page of a result set.</td>
+</tr>
+</tbody></table>
+
+<p>Response attributes:</p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>type</code></td>
+<td>(string) The type of the response object. Can be either a <code>list</code> for a result set, or a <code>query</code> for an ingredient that is a query.</td>
+</tr>
+<tr>
+<td><code>data</code></td>
+<td>(optional array) The query result as a list of items. Only present if <code>type</code> is <code>list</code>.</td>
+</tr>
+<tr>
+<td><code>cursor</code></td>
+<td>(optional string) A cursor that can be used to request the next page of this result set. Only present if there is a next page.</td>
+</tr>
+<tr>
+<td><code>fields</code></td>
+<td>(object) A map of query fields to be used when making a next page or drill-down query request.</td>
+</tr>
+</tbody></table>
+
+<div class="example-list">
+  <h6>Example: Request a next page of a query, service-authenticated with user_id</h6>
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>POST /v2/connections/C8p3q9T6/queries/acme_cloud_storage.list_files/perform
+Host: connect.ifttt.com
+IFTTT-Service-Key: vFRqPGZBmZjB8JPp3mBFqOdt
+{
+  "user_id": 123,
+  "fields": {
+    "folder_name": "aBwLdm2ydHVya0BQbWFpbC8jb22=;2641ab0g",
+  }
+  "limit": 1,
+  "cursor": "151517700064544d60c3a02405f8bd5520d3e31571"
+}
+</pre>
+      </code>
+    </li>
+    <li>
+      <span class="example-list-heading">Response</span>
+      <code>
+<pre>{
+  "type": "list",
+  "data": [
+    {
+      "id": "ejjskl",
+      "name": "documents.zip",
+      "created_at": "2018-08-26T12:52:59-07:00",
+      "size": "93000",
+      "version": 1,
+      "tags": {
+        "type": "query",
+        "query_id": "acme_cloud_storage.get_file_metadata",
+        "fields": {
+          "file_id": "wAwLdm2ydHVya0BQbWFpbC8jb3e=;3441ab0g"
+        }
+      }
+    }
+  ]
+},
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+<p>In this example we request a second page of the previous result using <code>cursor</code>. Note the lack of <code>next</code> attribute in the response, indicating the end of the result.</p>
+
+<h3 id="actions">Actions</h3>
+
+<h5 id="user-action-fields">User action fields</h5>
+
+<h6 id="stored-action-fields">Stored action fields</h6>
+
+<p>When a connection is enabled by your users on the IFTTT web app or through your mobile app via IFTTT SDKs, IFTTT will collect and store user configured action field values required to run an action. You can see the currently stored action field values for a user via the <a href="#show-a-connection">show a connection</a> endpoint.</p>
+
+<h6 id="update-stored-action-fields">Update stored action fields</h6>
+
+<p>Stored user action field values can be updated using the <a href="#update-a-connection">update a connection</a> endpoint. To update stored fields you must use the <a href="#field-options">field options</a> endpoint to get valid values for the field.</p>
+
+<h6 id="overriding-stored-action-fields">Overriding stored action fields</h6>
+
+<p>Depending on the experience you're looking to create, you may want to override the stored action field values. To do this, include a valid field <code>label</code> and <code>value</code> in the body of the <a href="#run-an-action">run an action</a> request. <a href="/docs/connections#connection-creation-tool">View an example</a> of when to override stored fields.</p>
+
+<h5 id="run-an-action">Run an action</h5>
+
+<p><strong>Authentication:</strong> Service-authenticated with user_id</p>
+
+<p><strong>URL</strong>: <code>POST https://connect.ifttt.com/v2/connections/{{connection_id}}/actions/{{action_id}}/run</code></p>
+
+<p>This endpoint runs the specified action using the <a href="#user-action-fields">user action fields</a> stored on IFTTT. If successful, you'll receive an empty 204 No Content response.</p>
+
+<p>If a <code>user_feature_id</code> is provided, the connection will be run with this configuration. If not provided, the connection's first <code>user_feature_id</code> will be used.</p>
+
+<p>Optionally, you may include a JSON object in the body of the request with any or all <code>fields</code>, which will temporarily override the fields stored on IFTTT.</p>
+
+<p>Although all action field text inputs are strings, many action fields are defined with a type and some require a specific format. The table below maps action field types to their formats. Action field types not defined in the table do not have a specified format.</p>
+
+<table><thead>
+<tr>
+<th>Text type</th>
+<th>Format</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Messages</td>
+<td>Short Text</td>
+<td>Character count should be less than 140 characters</td>
+</tr>
+<tr>
+<td>Messages</td>
+<td>HTML</td>
+<td><code>&lt;b&gt;Bold&lt;/b&gt;&lt;br /&gt;&lt;p&gt;and&lt;/p&gt;&lt;i&gt;Italicize&lt;/i&gt;</code></td>
+</tr>
+<tr>
+<td>Metadata</td>
+<td>Path to a folder</td>
+<td>/path/to/folder</td>
+</tr>
+<tr>
+<td>URLs</td>
+<td>Link, Photo, File, Audio</td>
+<td>https://example.com/path/to/resource</td>
+</tr>
+<tr>
+<td>Date and Time</td>
+<td>ISO 8601</td>
+<td>1977-04-23T21:41:09</td>
+</tr>
+</tbody></table>
+
+<div class="example-list">
+  <h6>Example: Action Run, service-authenticated with user_id</h6>
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>POST /v2/connections/C8p3q9T6/actions/acme_cloud_storage.upload_from_url/run
+Host: connect.ifttt.com
+IFTTT-Service-Key: vFRqPGZBmZjB8JPp3mBFqOdt
+{
+  "user_id": 123
+}
+</pre>
+      </code>
+    </li>
+    <li>
+      <span class="example-list-heading">Response</span>
+      <code>
+<pre>HTTP/1.1 204 No Content
+Status: 204 No Content
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example: Action Run with field values, service-authenticated with user_id</h6>
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>POST /v2/connections/C8p3q9T6/actions/acme_cloud_storage.upload_from_url/run
+Host: connect.ifttt.com
+IFTTT-Service-Key: vFRqPGZBmZjB8JPp3mBFqOdt
+{
+  "user_id": 123,
+  "fields": {
+    "folder_name": "aBwLdm2ydHVya0BQbWFpbC8jb22=;2641ab0g"
+    "filename": "screenshot_04_23_1977",
+    "url": "https://my.service/path/to/resource.png",
+  }
+}
+</pre>
+      </code>
+    </li>
+    <li>
+      <span class="example-list-heading">Response</span>
+      <code>
+<pre>HTTP/1.1 204 No Content
+Status: 204 No Content
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example: Action Run with <code>user_feature_id</code>, service-authenticated with user_id</h6>
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>POST /v2/connections/C8p3q9T6/actions/acme_cloud_storage.upload_from_url/run
+Host: connect.ifttt.com
+IFTTT-Service-Key: vFRqPGZBmZjB8JPp3mBFqOdt
+{
+  "user_id": 123,
+  "user_feature_id": "4da42aa6-3858-4722-9ded-6a7ecdefd91f"
+}
+</pre>
+      </code>
+    </li>
+    <li>
+      <span class="example-list-heading">Response</span>
+      <code>
+<pre>HTTP/1.1 204 No Content
+Status: 204 No Content
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+<h3 id="examples">Examples</h3>
+
+<div class="example-list">
+  <h6>Example: Using a location (field_type: LOCATION_POINT) field when running a query</h6>
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>POST /v2/connections/C8p3q9T6/queries/weather.current_weather/perform
+Host: connect.ifttt.com
+IFTTT-Service-Key: vFRqPGZBmZjB8JPp3mBFqOdt
+{
+  "user_id": 123,
+  "user_feature_id": "4da42aa6-3858-4722-9ded-6a7ecdefd91f"
+  "fields" : {
+    <b>"location": {
+      "lat": 18.124,
+      "lng": 10.298
+    }</b>
+  }
+}
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example: Using an area (field_type: LOCATION_RADIUS) field when running a query</h6>
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>POST /v2/connections/C8p3q9T6/queries/acme.population/perform
+Host: connect.ifttt.com
+IFTTT-Service-Key: vFRqPGZBmZjB8JPp3mBFqOdt
+{
+  "user_id": 123,
+  "user_feature_id": "4da42aa6-3858-4722-9ded-6a7ecdefd91f"
+  "fields" : {
+    <b>"area": {
+      "lat": 18.124,
+      "lng": 10.298,
+      "radius": 3
+    }</b>
+  }
+}
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example: Using a dropdown (field_type: COLLECTION_SELECT or DOUBLE_COLLECTION_SELECT) field when running an action</h6>
+
+If you want to override a dropdown field when running an action or query you <b>must</b> use a value provided by the <code>field_options</code> endpoint.
+
+First request all possible field values.
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>GET /v2/connections/C8p3q9T6/actions/acme.send_message/field_options
+Host: connect.ifttt.com
+IFTTT-Service-Key: vFRqPGZBmZjB8JPp3mBFqOdt
+</pre>
+      </code>
+    </li>
+    <li>
+      <span class="example-list-heading">Response</span>
+      <code>
+<pre>HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "type": "field_options",
+  "options": {
+    "channel": [
+      {
+        "label": "Cats",
+        "value": "<b>oFro6MQAAA1UEwzVVNNVnJ1UtZ2hvc3RidJz</b>",
+        "group": null
+      },
+      {
+        "label": "Dogs",
+        "value": "EMHK+6aCAPAAAAgkI0WXJ1bpbtcHJpdmF0ZQ",
+        "group": null
+      }
+    ]
+  }
+}
+</pre>
+      </code>
+    </li>
+Then use a value returned in a subsequent query or action run.
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>POST /v2/connections/C8p3q9T6/actions/acme.send_message/run
+Host: connect.ifttt.com
+IFTTT-Service-Key: vFRqPGZBmZjB8JPp3mBFqOdt
+{
+  "user_id": 123,
+  "user_feature_id": "4da42aa6-3858-4722-9ded-6a7ecdefd91f"
+  "fields" : {
+    "channel": "<b>oFro6MQAAA1UEwzVVNNVnJ1UtZ2hvc3RidJz</b>",
+    "message": "Woof!"
+  }
+}
+</pre>
+      </code>
+    </li>
+You will receive an error response if you use a value not from a field options response.
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>POST /v2/connections/C8p3q9T6/actions/acme.send_message/run
+Host: connect.ifttt.com
+IFTTT-Service-Key: vFRqPGZBmZjB8JPp3mBFqOdt
+{
+  "user_id": 123,
+  "user_feature_id": "4da42aa6-3858-4722-9ded-6a7ecdefd91f"
+  "fields" : {
+    "channel": "<b>Cats</b>",
+    "message": "Woof!"
+  }
+}
+</pre>
+      </code>
+    </li>
+    <li>
+      <span class="example-list-heading">Response</span>
+      <code>
+<pre>HTTP/1.1 422 Unprocessable Entity
+Content-Type: application/json; charset=utf-8
+
+{
+  "type": "error",
+  "code": "invalid_parameters",
+  "message": "The parameters of your request were invalid",
+  "details": [
+    {
+      "parameter": "/fields/channel",
+      "message": "Not a valid option for this field. Use the field options request to get valid options."
+    }
+  ]
+}
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+<div class="example-list">
+  <h6>Example: Using a multiple checkbox select (field_type: CHECKBOX_MULTI) field when running an action</h6>
+
+If you want to override a multiple checkbox field when running an action or query you <b>must</b> use a value provided by the <code>field_options</code> endpoint.
+
+First request all possible field values.
+  <ul>
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>GET /v2/connections/C8p3q9T6/actions/acme.send_message/field_options
+Host: connect.ifttt.com
+IFTTT-Service-Key: vFRqPGZBmZjB8JPp3mBFqOdt
+</pre>
+      </code>
+    </li>
+    <li>
+      <span class="example-list-heading">Response</span>
+      <code>
+<pre>HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "type": "field_options",
+  "options": {
+    "channel": [
+      {
+        "label": "Cats",
+        "value": "<b>oFro6MQAAA1UEwzVVNNVnJ1UtZ2hvc3RidJz</b>",
+        "group": null
+      },
+      {
+        "label": "Dogs",
+        "value": "EMHK+6aCAPAAAAgkI0WXJ1bpbtcHJpdmF0ZQ",
+        "group": null
+      },
+      {
+        "label": "Otter",
+        "value": "<b>UQ2Ck3aaHsWBSeszDihhrMxpJPFf1OWL0d9</b>",
+        "group": null
+      }
+    ]
+  }
+}
+</pre>
+      </code>
+    </li>
+Then use a value returned in a subsequent query or action run.
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>POST /v2/connections/C8p3q9T6/actions/acme.send_message/run
+Host: connect.ifttt.com
+IFTTT-Service-Key: vFRqPGZBmZjB8JPp3mBFqOdt
+{
+  "user_id": 123,
+  "user_feature_id": "4da42aa6-3858-4722-9ded-6a7ecdefd91f"
+  "fields" : {
+    "channel": ["<b>oFro6MQAAA1UEwzVVNNVnJ1UtZ2hvc3RidJz</b>", "<b>UQ2Ck3aaHsWBSeszDihhrMxpJPFf1OWL0d9</b>"],
+  }
+}
+</pre>
+      </code>
+    </li>
+You will receive an error response if you use a value not from a field options response.
+    <li>
+      <span class="example-list-heading">HTTP Request</span>
+      <code>
+<pre>POST /v2/connections/C8p3q9T6/actions/acme.send_message/run
+Host: connect.ifttt.com
+IFTTT-Service-Key: vFRqPGZBmZjB8JPp3mBFqOdt
+{
+  "user_id": 123,
+  "user_feature_id": "4da42aa6-3858-4722-9ded-6a7ecdefd91f"
+  "fields" : {
+    "channel": ["<b>Cats</b>, <b>Otter</b>"],
+    "message": "Woof!"
+  }
+}
+</pre>
+      </code>
+    </li>
+    <li>
+      <span class="example-list-heading">Response</span>
+      <code>
+<pre>HTTP/1.1 422 Unprocessable Entity
+Content-Type: application/json; charset=utf-8
+
+{
+  "type": "error",
+  "code": "invalid_parameters",
+  "message": "The parameters of your request were invalid",
+  "details": [
+    {
+      "parameter": "/fields/channel",
+      "message": "Not a valid option for this field. Use the field options request to get valid options."
+    }
+  ]
+}
+</pre>
+      </code>
+    </li>
+  </ul>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+    </div>
+
+    <footer class="site-footer ifttt_next_bucket">
+    <a class="pro-upsell pro-ad" title="Try IFTTT Pro" href="/subscriptions/pro">
+        <div class="pro-upsell-text">
+          <span class="logo">
+            <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+            <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#111"></path></svg>
+          </span>
+          <span class="pro-upsell-heading">Automate more, effortlessly.</span>
+        </div>
+
+        <div class="button-secondary button-on-color">
+            Try it free
+        </div>
+</a>  <div class="footer-top-container">
+    <div class="logo-container">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/">
+        <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="ifttt-logo" title="IFTTT" style="fill: white"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>    </div>
+
+    <div class="footer-sections">
+      <div class="footer-section explore">
+        <div class="section-header">
+          <a title="Explore" href="/explore">Explore</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="Services" title="Services" href="/explore/services">Services</a>
+              </li>
+              <li>
+                <a alt="Stories" title="Stories" href="/explore/stories">Stories</a>
+              </li>
+              <li>
+                <a alt="Applets" title="Applets" href="/explore/applets">Applets</a>
+              </li>
+              <li>
+                <a alt="IFTTT MCP" title="IFTTT MCP" href="/mcp">IFTTT MCP</a>
+              </li>
+              <li>
+                <a alt="Help Center" title="Help Center" href="/hc/en-us">Help Center</a>
+              </li>
+              <li>
+                <a alt="Content Map" title="Content Map" href="/content_map">Content Map</a>
+              </li>
+              <li>
+                <a alt="Search" title="Search" href="/explore">Search</a>
+              </li>
+              <li>
+                <a alt="Plans" title="Plans" href="/plans">Plans</a>
+              </li>
+              <li>
+                <a alt="Developer docs" title="Developer docs" href="/docs/api_reference">Developer docs</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section top-integrations">
+        <div class="section-header">
+          Top Integrations
+        </div>
+          <ul>
+              <li>
+                <a alt="Discord and Instagram" title="Discord and Instagram" href="/connect/discord/instagram">Discord and Instagram</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Notion" title="iOS Calendar and Notion" href="/connect/ios_calendar/notion_so">iOS Calendar and Notion</a>
+              </li>
+              <li>
+                <a alt="Google Calendar and Google Sheets" title="Google Calendar and Google Sheets" href="/connect/google_calendar/google_sheets">Google Calendar and Google Sheets</a>
+              </li>
+              <li>
+                <a alt="Google Assistant and My Q" title="Google Assistant and My Q" href="/connect/google_assistant_v2/myq_devices">Google Assistant and My Q</a>
+              </li>
+              <li>
+                <a alt="BotGhost and Spotify" title="BotGhost and Spotify" href="/connect/botghost/spotify">BotGhost and Spotify</a>
+              </li>
+              <li>
+                <a alt="SMS and Twitter" title="SMS and Twitter" href="/connect/sms/twitter">SMS and Twitter</a>
+              </li>
+              <li>
+                <a alt="iOS Reminders and Notion" title="iOS Reminders and Notion" href="/connect/ios_reminders/notion_so">iOS Reminders and Notion</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Todoist" title="iOS Calendar and Todoist" href="/connect/ios_calendar/todoist">iOS Calendar and Todoist</a>
+              </li>
+              <li>
+                <a alt="Telegram and Twitter" title="Telegram and Twitter" href="/connect/telegram/twitter">Telegram and Twitter</a>
+              </li>
+              <li>
+                <a alt="Discord and Twitter" title="Discord and Twitter" href="/connect/discord/twitter">Discord and Twitter</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section latest-stories">
+        <div class="section-header">
+          <a title="Latest Stories" href="/explore/stories">Latest Stories</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="How to automate with AI" title="How to automate with AI" href="/explore/how-to-automate-with-ai">How to automate with AI</a>
+              </li>
+              <li>
+                <a alt="Best Twitter automation tools" title="Best Twitter automation tools" href="/explore/best-twitter-automation-tools">Best Twitter automation tools</a>
+              </li>
+              <li>
+                <a alt="Best time management apps and tools" title="Best time management apps and tools" href="/explore/best-time-management-apps-strategies-and-tools">Best time management apps and tools</a>
+              </li>
+              <li>
+                <a alt="What is workflow automation?" title="What is workflow automation?" href="/explore/what-is-workflow-automation">What is workflow automation?</a>
+              </li>
+              <li>
+                <a alt="How to use RSS Feeds" title="How to use RSS Feeds" href="/explore/how-to-use-rss-feeds">How to use RSS Feeds</a>
+              </li>
+              <li>
+                <a alt="What are webhooks?" title="What are webhooks?" href="/explore/what-are-webhooks">What are webhooks?</a>
+              </li>
+              <li>
+                <a alt="11 best Pomodoro productivity apps" title="11 best Pomodoro productivity apps" href="/explore/best-pomodoro-productivity-apps">11 best Pomodoro productivity apps</a>
+              </li>
+              <li>
+                <a alt="How to automate Threads" title="How to automate Threads" href="/explore/how-to-automate-threads">How to automate Threads</a>
+              </li>
+              <li>
+                <a alt="How to automate social media posts" title="How to automate social media posts" href="/explore/how-to-automate-social-media-posts">How to automate social media posts</a>
+              </li>
+              <li>
+                <a alt="Best social media tools for automation" title="Best social media tools for automation" href="/explore/best-automation-tools-social-media">Best social media tools for automation</a>
+              </li>
+          </ul>
+      </div>
+    <div class="footer-section company">
+      <div class="section-header">Company</div>
+      <ul>
+        <li><a alt="Developers" title="Developers" href="/developers">Developers</a></li>
+        <li><a alt="Partner program" title="Partner program" href="/partners">Partner program</a></li>
+        <li><a alt="Careers" title="Careers" href="/careers">Careers</a></li>
+        <li><a alt="Contact" title="Contact" href="/contact">Contact</a></li>
+        <li><a alt="About" title="About" href="/about">About</a></li>
+        <li><a alt="Privacy" title="Privacy" href="/privacy">Privacy</a></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer-section download">
+      <ul class="download-buttons">
+        <li>
+          <a title="Download on the App Store" aria-label="The Apple App Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fitunes.apple.com%2Fapp%2Fapple-store%2Fid660944635%3Fpt%3D1752682%26ct%3D%2Fdocs%2Fconnect_api%26mt%3D8">
+            <img alt="" title="Download on the App Store" loading="lazy" width="136" height="40" src="/assets/asset-000099.svg">
+</a>        </li>
+        <li>
+          <a title="Get it on Google Play" aria-label="The Google Play Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.ifttt.ifttt%26utm_source%3D%2Fdocs%2Fconnect_api%26utm_medium%3Dweb">
+            <img alt="" title="Get it on Google Play" loading="lazy" width="136" height="42" src="/assets/asset-000100.svg">
+</a>        </li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom-container">
+      <div class="group group-social">
+        <a class="social-icon" alt="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.facebook.com%2Fifttt">
+          <img alt="Facebook" title="Facebook" loading="lazy" width="28" height="28" src="/assets/asset-000102.svg">
+</a>
+        <a class="social-icon" alt="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fifttt%2F">
+          <img alt="LinkedIn" title="LinkedIn" loading="lazy" width="28" height="28" src="/assets/asset-000101.svg">
+</a>
+        <a class="social-icon" alt="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.instagram.com%2Fiftttapp%2F">
+          <img alt="Instagram" title="Instagram" loading="lazy" width="28" height="28" src="/assets/asset-000103.svg">
+</a>
+        <a class="social-icon" alt="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.youtube.com%2F%40IFTTT">
+          <img alt="YouTube" title="YouTube" loading="lazy" width="28" height="28" src="/assets/asset-000104.svg">
+</a>
+        <a class="social-icon" alt="Twitter" title="Twitter" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Ftwitter.com%2FIFTTT">
+          <img alt="Twitter" title="Twitter" loading="lazy" width="28" height="28" src="/assets/asset-000105.svg">
+</a>
+        <a class="social-icon" alt="TikTok" title="TikTok" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.tiktok.com%2F%40iftttapp">
+          <img alt="TikTok" title="TikTok" loading="lazy" width="28" height="28" src="/assets/asset-000106.svg">
+</a>
+        <a class="social-icon" alt="Reddit" title="Reddit" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fifttt%2F">
+          <img alt="Reddit" title="Reddit" loading="lazy" width="28" height="28" src="/assets/asset-000107.svg">
+</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+<div style="position: absolute; top: 50vh; height: 1px; width: 100%;"></div><script src="/local.js" defer></script></body></html>

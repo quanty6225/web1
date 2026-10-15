@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en"><head>
+    <link rel="preload" href="/assets/asset-000002.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000004.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000003.woff2" as="font" type="font/woff2">
+
+<style>
+/* IFTTT.ai rebrand — Museo Sans Rounded (site-wide base font). One @font-face per Museo cut; */
+/* CSS font-weight == the cut number (300 Light / 500 Regular / 700 body / 900 headings). */
+/* NB: map by cut name, not the weight Figma's inspect panel shows — a designer's desktop copy */
+/* may report ~200 less (700 for the 900 cut); these files carry OS/2 weight == cut number. */
+
+/* Museo Sans Rounded 300 (light) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 300;
+  src: url("/assets/dependency-000100.woff2") format("woff2"),
+    url("/assets/dependency-000101.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 500 (regular) — covers CSS 400–600 */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 500 600;
+  src: url("/assets/asset-000002.woff2") format("woff2"),
+    url("/assets/dependency-000102.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 700 (body) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 700;
+  src: url("/assets/asset-000004.woff2") format("woff2"),
+    url("/assets/dependency-000104.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 900 (black) — display headings */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 900;
+  src: url("/assets/asset-000003.woff2") format("woff2"),
+    url("/assets/dependency-000106.woff") format("woff");
+  font-display: swap;
+}
+
+/* Metric-matched fallback for the swap window: Avenir Next scaled to the Museo advance widths, with */
+/* the Museo line box (hhea 940/-260 divided by size-adjust), so the change to Museo moves no layout. */
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 500 600;
+  src: local("Avenir Next Medium"), local("AvenirNext-Medium");
+  size-adjust: 98.0%;
+  ascent-override: 95.92%;
+  descent-override: 26.53%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 700;
+  src: local("Avenir Next Bold"), local("AvenirNext-Bold");
+  size-adjust: 94.5%;
+  ascent-override: 99.47%;
+  descent-override: 27.51%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 900;
+  src: local("Avenir Next Heavy"), local("AvenirNext-Heavy");
+  size-adjust: 90.2%;
+  ascent-override: 104.21%;
+  descent-override: 28.82%;
+  line-gap-override: 0%;
+}
+
+/* Museo Sans Rounded 500 / 700 italic — fetched only by pages that set font-style: italic. */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 500 600;
+  src: url("/assets/asset-000981.woff2") format("woff2"),
+    url("/assets/dependency-000103.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/asset-001589.woff2") format("woff2"),
+    url("/assets/dependency-000105.woff") format("woff");
+  font-display: swap;
+}
+</style>
+
+    <!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0">
+<meta name="mobile-web-app-capable" content="yes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>New Applet - IFTTT</title>
+<meta name="description" content="New Applet - IFTTT">
+<meta name="keywords" content="ifttt applets connect connections integrate integration automate automation services recipes trigger action ifthisthenthat free">
+<meta property="al:ios:url" content="ifttt://">
+<meta property="al:ios:app_store_id" content="660944635">
+<meta property="al:ios:app_name" content="IFTTT">
+<meta property="fb:app_id" content="122259781154546">
+<meta property="fb:admins" content="7302486">
+<meta property="og:title" content="New Applet - IFTTT">
+<meta property="og:description" content="New Applet - IFTTT">
+<meta property="og:site_name" content="IFTTT">
+<meta property="og:url" content="https://ifttt.com/p/[PRIVATE]/applets/new">
+<meta property="og:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@IFTTT">
+<meta name="twitter:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta name="twitter:app:id:iphone" content="660944635">
+<meta name="twitter:app:id:ipad" content="660944635">
+<meta name="twitter:app:id:googleplay" content="com.ifttt.ifttt">
+<meta name="twitter:app:url:iphone" content="ifttt://">
+<meta name="twitter:app:url:ipad" content="ifttt://">
+<meta name="twitter:app:url:googleplay" content="ifttt://">
+<meta name="twitter:app:name:googleplay" content="IFTTT">
+<meta name="author" content="IFTTT">
+<meta name="copyright" content="Copyright 2026 IFTTT Inc.">
+<meta name="theme-color" content="">
+<meta name="facebook-domain-verification" content="tapueff3rri63aug9c5b7hapbv3mkv">
+
+<!-- Standard SVG Favicon -->
+<link rel="icon" href="/assets/dependency-000091.svg" type="image/svg+xml">
+
+<!-- For all Apple Devices: -->
+<link rel="apple-touch-icon" href="/assets/dependency-000081.png">
+
+<!-- For Windows 8: -->
+<meta name="msapplication-TileImage" content="https://web-assets.ifttt.com/builds/assets/pinned-Dpomu1wG.png">
+<meta name="msapplication-TileColor" content="#111">
+
+
+
+<link rel="stylesheet" href="/assets/asset-000979.css">
+<link rel="stylesheet" href="/assets/asset-000117.css">
+<link rel="stylesheet" href="/assets/asset-000134.css">
+
+    
+        
+      
+  <link rel="stylesheet" href="/local.css"></head>
+  <body id="partner-applets-body" class="partners-body partner-applets-body new-action  false" style="background-color: rgb(255, 255, 255);" data-local-route="/p/me/applets/new" data-local-actor="member" data-local-state="default"><div id="flash-messages"></div>
+  
+      <!-- Google Tag Manager (noscript) -->
+  <noscript></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+    
+
+
+  
+
+
+
+      
+<header class="unified-header signed-in" style="background-color: #fff">
+  <div class="container header">
+    <section class="left-group">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/explore">
+  <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt" style="fill: #111"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>
+    </section>
+
+      <section class="right-group signed-in">
+        <a title="Explore" class="nav-link link-menu" id="explore-link" href="/explore">
+          Explore
+</a>
+        <a title="My Applets" class="nav-link link-menu" href="/my_applets">
+          My Applets
+</a>
+        <a title="Create an Applet" class="create-button button-tertiary  " href="/create">
+          Create
+</a>
+        
+
+<div class="account-menu">
+  <button class="account-menu-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Account menu">Account menu</button>
+
+  <div class="account-menu-panel">
+    <div class="account-menu-card">
+      <div class="account-menu-identity">
+        <span class="account-menu-email" title="[PRIVATE]">[PRIVATE]</span>
+        <span class="plan free"><svg width="104" height="61" viewbox="0 0 104 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Free"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.38732 60.02 16.5 60.02H87.14C96.2527 60.02 103.64 52.6327 103.64 43.52V16.5C103.64 7.3873 96.2527 0 87.14 0H16.5ZM16 41.0155V18.5501C16 17.2133 16.7055 16.5078 18.0423 16.5078H30.2219C31.5587 16.5078 32.2642 17.2133 32.2642 18.5501V20.0354C32.2642 21.3722 31.5587 22.0777 30.2219 22.0777H22.4983V27.6477H28.5509C29.8877 27.6477 30.5932 28.3532 30.5932 29.69V31.1753C30.5932 32.5121 29.8877 33.2176 28.5509 33.2176H22.4983V41.0155C22.4983 42.3523 21.7927 43.0578 20.4559 43.0578H18.0423C16.7055 43.0578 16 42.3523 16 41.0155ZM33.8359 25.8167V41.4014C33.8359 42.7867 34.5671 43.5178 35.9524 43.5178H38.3767C39.762 43.5178 40.4931 42.7867 40.4931 41.4014V35.8217C40.4931 32.5893 42.0323 29.8956 45.1878 29.8956C46.5731 29.8956 47.3042 29.1645 47.3042 27.7792V25.6243C47.3042 24.2389 46.8424 23.5078 45.4956 23.5078C42.9944 23.5078 40.8779 26.2399 40.2237 28.2794H40.1468C40.1468 28.2794 40.2237 27.7022 40.2237 27.048V25.8167C40.2237 24.4314 39.4926 23.7002 38.1073 23.7002H35.9524C34.5671 23.7002 33.8359 24.4314 33.8359 25.8167ZM47.5742 33.4942C47.5742 27.8885 51.3609 23.5078 57.5235 23.5078C63.2036 23.5078 66.3591 27.5172 66.3591 32.6404C66.3591 33.6427 65.4681 34.7565 64.2059 34.7565H54.1452C54.6278 37.0953 56.5583 38.1719 58.6001 38.1719C59.8995 38.1719 61.1246 37.7635 62.0898 37.2809C63.3149 36.7241 64.2059 36.8726 64.837 38.0605L65.3568 39.0258C65.9508 40.1766 65.7651 41.179 64.6514 41.8101C63.2778 42.5897 61.0132 43.5178 58.0804 43.5178C51.2495 43.5178 47.5742 38.5803 47.5742 33.4942ZM54.2937 31.0812H60.0109C60.0109 29.5219 59.0085 28.2226 57.375 28.2226C55.5188 28.2226 54.6278 29.5591 54.2937 31.0812ZM67.8477 33.4942C67.8477 27.8885 71.6343 23.5078 77.797 23.5078C83.477 23.5078 86.6326 27.5172 86.6326 32.6404C86.6326 33.6427 85.7416 34.7565 84.4793 34.7565H74.4187C74.9013 37.0953 76.8317 38.1719 78.8736 38.1719C80.1729 38.1719 81.398 37.7635 82.3633 37.2809C83.5884 36.7241 84.4793 36.8726 85.1105 38.0605L85.6302 39.0258C86.2242 40.1766 86.0386 41.179 84.9248 41.8101C83.5512 42.5897 81.2867 43.5178 78.3538 43.5178C71.523 43.5178 67.8477 38.5803 67.8477 33.4942ZM74.5672 31.0812H80.2843C80.2843 29.5219 79.2819 28.2226 77.6485 28.2226C75.7923 28.2226 74.9013 29.5591 74.5672 31.0812Z" fill="#111"></path></svg></span>
+      </div>
+        <a title="Try Pro free" id="try-pro-free" class="button-tiny account-menu-billing-cta" href="/subscriptions/pro">
+          
+          Try Pro free
+</a>    </div>
+
+    <ul class="account-menu-links">
+      <li><a title="Explore" class="account-menu-item" href="/explore">Explore</a></li>
+      <li><a title="My Applets" class="account-menu-item" href="/my_applets">My Applets</a></li>
+      <li class="account-menu-create">
+        <a title="Create an Applet" class="button-tertiary button-outlined" href="/create">Create</a>
+      </li>
+    </ul>
+
+    <hr class="account-menu-divider">
+
+    <ul class="account-menu-list">
+        <li>
+          <a class="account-menu-item" title="Settings" href="/settings">
+            Settings
+</a>        </li>
+        <li>
+          <a class="account-menu-item" title="Refer a friend" href="/referral">
+            Refer a friend
+</a>        </li>
+        <li>
+          <a class="account-menu-item" title="Billing" href="/billing">
+            Billing
+</a>        </li>
+        <li>
+          <a class="account-menu-item" title="My services" href="/my_services">
+            My services
+</a>        </li>
+        <li>
+          <a class="account-menu-item" title="Activity" href="/activity">
+            Activity
+</a>        </li>
+        <li>
+          <a class="account-menu-item" title="Archive" href="/my_applets?tab=archived">
+            Archive
+</a>        </li>
+        <li>
+          <a class="account-menu-item" title="Plans" href="/plans">
+            Plans
+</a>        </li>
+        <li>
+          <a class="account-menu-item" title="Help" href="/hc/en-us">
+            Help
+</a>        </li>
+        <li>
+          <a class="account-menu-item" title="Log out" href="/session/logout">
+            Log out
+</a>        </li>
+    </ul>
+  </div>
+</div>
+
+
+      </section>
+  </div>
+
+</header>
+
+
+    <div class="platform-bg_color-container">
+        <div class="partners-header">
+  </div>
+
+  <div class="page-canvas">
+    <main class="container web">
+      
+
+
+
+
+<div class="main-content">
+  <div class="main-sidebar-column"></div>
+  <div class="main-content-column">
+    <div class="static-applet-composer-container">
+
+      <div><div><div class="applet_composer__connection-header___I4Lex"><div class="applet_composer__header-content___I4Lex"><div><h1>Create a new Applet</h1></div></div></div><div><div class="form applet-composer"><header class="composer-header"><a href="/docs/applets" target="_blank" rel="noopener noreferrer" class="link-standalone">Need help creating an Applet? </a></header><div class="form-section"><div class="composer-generic-errors"></div><div id="trigger" class="composer-section-with-icon"><div class="composer-section-with-icon-sidebar"><div class="composer-section-with-icon-icon"><span class="composer-section-with-icon-label"></span><span><span title="Trigger" class="svg-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 1 32 33"><path fill-rule="evenodd" d="M16 4l14 26H2z"></path></svg></span></span></div></div><div class="fieldset composer-fieldset"><div class="partners-tanda-composer field"><header class="composer-section-header"><div class="composer-section-header-top"><legend>Trigger</legend></div><p class="note remove-left-margin">Every Applet starts with a trigger from one of the services on IFTTT.</p></header><div class="partners-tanda-composer-selectors"><div class="input dropdown-service-selector"><input type="text" placeholder="Search services"></div></div></div></div></div><div class="composer-section-with-icon"><div class="composer-section-with-icon-sidebar"><div class="composer-section-with-icon-icon"><span class="composer-section-with-icon-label"></span><span><span title="Query" class="svg-icon"><svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.1504 0C18.8607 0 24.3008 5.44013 24.3008 12.1504C24.3008 18.8607 18.8607 24.3008 12.1504 24.3008C5.44013 24.3008 0 18.8607 0 12.1504C0 5.44013 5.44013 0 12.1504 0ZM12.1504 3.10059C7.15221 3.10059 3.10059 7.15221 3.10059 12.1504C3.10059 17.1486 7.15221 21.2002 12.1504 21.2002C17.1486 21.2002 21.2002 17.1486 21.2002 12.1504C21.2002 7.15221 17.1486 3.10059 12.1504 3.10059ZM7.5 8.03027C7.50048 6.48784 9.15607 5.51022 10.5068 6.25488L17.3711 10.042C18.6839 10.7668 18.7725 12.6021 17.5811 13.459L17.5742 13.4639L17.5684 13.4658L17.4619 13.5381L17.4609 13.5391L17.4531 13.5439L10.5977 17.7998C9.2893 18.6117 7.61076 17.7257 7.50586 16.2246L7.50391 16.2109L7.5 16.0889V8.03027ZM10.3643 14.5732L14.7373 11.8584L10.3643 9.44336V14.5732Z" fill="#111"></path></svg></span></span></div></div><p class="composer-add-field-message"><b>Queries are a Pro+ feature.</b> <a href="/subscriptions/pro_plus" target="_blank" rel="noopener noreferrer" class="link-inline">Upgrade</a> to use queries and more in your Applets.</p></div><div class="composer-section-with-icon"><div class="composer-section-with-icon-sidebar"><div class="composer-section-with-icon-icon"><span class="composer-section-with-icon-label"></span><span><span title="Filter" class="svg-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="-1.5 -2.5 30.5 29.5"><path fill-rule="evenodd" d="M11 14.143L0 0h28L17 14.143V23l-6 3V14.143z"></path></svg></span></span></div></div><div class="fieldset composer-fieldset composer-fieldset-disabled"><div class="composer-add-field field"><input disabled type="button" title="Add an action first" class="button-tertiary" value="Add filter code"><div class="composer-add-field-message"><b>Add a trigger and an action to unlock adding filter code.</b> Filter code lets you override action fields and skip actions.</div></div></div></div><div class="composer-section-with-icon"><div class="composer-section-with-icon-sidebar"><div class="composer-section-with-icon-icon"><span class="composer-section-with-icon-label"></span><span><span title="Delay" class="svg-icon"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewbox="0 0 25.5 25.5" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M25.5 12.75C25.5 19.7916 19.7916 25.5 12.75 25.5C5.70837 25.5 0 19.7916 0 12.75C0 5.70837 5.70837 0 12.75 0C19.7916 0 25.5 5.70837 25.5 12.75ZM12.8525 4.5C14.0315 4.5 14.3718 5.4557 14.3718 6.63461V11.6026L17.4423 11.6026C18.6212 11.6026 19.5769 11.9429 19.5769 13.1218C19.5769 14.3007 18.6212 14.8718 17.4423 14.8718H12.8525C11.886 14.8718 11.1025 14.0883 11.1025 13.1218V6.63461C11.1025 5.4557 11.6736 4.5 12.8525 4.5Z" fill="#fff"></path></svg></span></span></div></div><div class="composer-add-field fieldset composer-fieldset composer-fieldset-disabled"><div class="composer-add-field field"><input disabled type="button" title="Add a trigger first" class="button-tertiary" value="Add delay"><div class="composer-add-field-message"><b>Add a trigger to unlock adding an action delay.</b></div></div></div></div><div class="composer-section-with-icon composer-section-with-icon-last"><div class="composer-section-with-icon-sidebar"><div class="composer-section-with-icon-icon"><span class="composer-section-with-icon-label"></span><span><span title="Action" class="svg-icon"><svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.1504 0C18.8607 0 24.3008 5.44013 24.3008 12.1504C24.3008 18.8607 18.8607 24.3008 12.1504 24.3008C5.44013 24.3008 0 18.8607 0 12.1504C0 5.44013 5.44013 0 12.1504 0ZM12.1504 3.10059C7.15221 3.10059 3.10059 7.15221 3.10059 12.1504C3.10059 17.1486 7.15221 21.2002 12.1504 21.2002C17.1486 21.2002 21.2002 17.1486 21.2002 12.1504C21.2002 7.15221 17.1486 3.10059 12.1504 3.10059ZM7.5 8.03027C7.50048 6.48784 9.15607 5.51022 10.5068 6.25488L17.3711 10.042C18.6839 10.7668 18.7725 12.6021 17.5811 13.459L17.5742 13.4639L17.5684 13.4658L17.4619 13.5381L17.4609 13.5391L17.4531 13.5439L10.5977 17.7998C9.2893 18.6117 7.61076 17.7257 7.50586 16.2246L7.50391 16.2109L7.5 16.0889V8.03027ZM10.3643 14.5732L14.7373 11.8584L10.3643 9.44336V14.5732Z" fill="#111"></path></svg></span></span></div></div><div class="fieldset composer-fieldset composer-fieldset-disabled"><div class="composer-add-field field"><input disabled type="button" class="button-tertiary" value="Add action"><div class="composer-add-field-message"><b>Add a trigger to unlock adding an action.</b> Every Applet ends with at least one action.</div></div></div></div><section><div class="field"><div class="label">Applet title</div><div class="input"><div class="limited-text-input"><div class="limit limit-top">0/100</div><input type="text" required="" maxlength="100"></div><p class="note">Use sentence case capitalization without a period.</p></div></div><div class="field"><div class="label">Applet description</div><div class="input"><div class="limited-text-input"><div class="limit limit-top">0/500</div><div class="growing-text-area"><textarea maxlength="500" required=""></textarea><div style='border-style: solid; border-width: 2px; color: rgb(17, 17, 17); opacity: 1; font-family: "Museo Sans Rounded", "Museo Sans Rounded Fallback", "Avenir Next", helvetica, arial, sans-serif; font-size: 18px; font-weight: 700; letter-spacing: normal; line-height: 23.4px; margin: 0px; padding: 16px; min-height: calc(106.2px);'>
+</div></div></div><p class="note">Complement your title with more details about what your Applet will do and why someone should turn it on.</p></div></div><div class="field"><div class="label">Applet service</div><div class="applet-composer-primary-service-input"><div class="applet-composer-primary-service-logo"></div><div class="input"><select disabled><option>Add a trigger, query, or action above</option></select><p class="note">The service logo and color that will appear on the Applet card.</p></div></div></div></section></div><div class="actions"><div class="action-right"><a href="/p/me/applets" class="button-secondary button-cancel-link">Cancel</a><button name="button" type="submit" disabled class="button-secondary">Save</button></div></div></div></div></div></div>
+    </div>
+
+  </div>
+</div>
+
+    </main>
+  </div>
+
+    </div>
+
+    <footer class="site-footer ifttt_next_bucket">
+    <a class="pro-upsell pro-ad" title="Try IFTTT Pro" href="/subscriptions/pro">
+        <div class="pro-upsell-text">
+          <span class="logo">
+            <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+            <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#111"></path></svg>
+          </span>
+          <span class="pro-upsell-heading">Automate more, effortlessly.</span>
+        </div>
+
+        <div class="button-secondary button-on-color">
+            Try it free
+        </div>
+</a>  <div class="footer-top-container">
+    <div class="logo-container">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/explore">
+        <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="ifttt-logo" title="IFTTT" style="fill: white"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>    </div>
+
+    <div class="footer-sections">
+      <div class="footer-section explore">
+        <div class="section-header">
+          <a title="Explore" href="/explore">Explore</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="Services" title="Services" href="/explore/services">Services</a>
+              </li>
+              <li>
+                <a alt="Stories" title="Stories" href="/explore/stories">Stories</a>
+              </li>
+              <li>
+                <a alt="Applets" title="Applets" href="/explore/applets">Applets</a>
+              </li>
+              <li>
+                <a alt="IFTTT MCP" title="IFTTT MCP" href="/mcp">IFTTT MCP</a>
+              </li>
+              <li>
+                <a alt="Help Center" title="Help Center" href="/hc/en-us">Help Center</a>
+              </li>
+              <li>
+                <a alt="Content Map" title="Content Map" href="/content_map">Content Map</a>
+              </li>
+              <li>
+                <a alt="Search" title="Search" href="/explore">Search</a>
+              </li>
+              <li>
+                <a alt="Plans" title="Plans" href="/plans">Plans</a>
+              </li>
+              <li>
+                <a alt="Developer docs" title="Developer docs" href="/docs/api_reference">Developer docs</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section top-integrations">
+        <div class="section-header">
+          Top Integrations
+        </div>
+          <ul>
+              <li>
+                <a alt="Discord and Instagram" title="Discord and Instagram" href="/connect/discord/instagram">Discord and Instagram</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Notion" title="iOS Calendar and Notion" href="/connect/ios_calendar/notion_so">iOS Calendar and Notion</a>
+              </li>
+              <li>
+                <a alt="Google Calendar and Google Sheets" title="Google Calendar and Google Sheets" href="/connect/google_calendar/google_sheets">Google Calendar and Google Sheets</a>
+              </li>
+              <li>
+                <a alt="Google Assistant and My Q" title="Google Assistant and My Q" href="/connect/google_assistant_v2/myq_devices">Google Assistant and My Q</a>
+              </li>
+              <li>
+                <a alt="BotGhost and Spotify" title="BotGhost and Spotify" href="/connect/botghost/spotify">BotGhost and Spotify</a>
+              </li>
+              <li>
+                <a alt="SMS and Twitter" title="SMS and Twitter" href="/connect/sms/twitter">SMS and Twitter</a>
+              </li>
+              <li>
+                <a alt="iOS Reminders and Notion" title="iOS Reminders and Notion" href="/connect/ios_reminders/notion_so">iOS Reminders and Notion</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Todoist" title="iOS Calendar and Todoist" href="/connect/ios_calendar/todoist">iOS Calendar and Todoist</a>
+              </li>
+              <li>
+                <a alt="Telegram and Twitter" title="Telegram and Twitter" href="/connect/telegram/twitter">Telegram and Twitter</a>
+              </li>
+              <li>
+                <a alt="Discord and Twitter" title="Discord and Twitter" href="/connect/discord/twitter">Discord and Twitter</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section latest-stories">
+        <div class="section-header">
+          <a title="Latest Stories" href="/explore/stories">Latest Stories</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="How to automate with AI" title="How to automate with AI" href="/explore/how-to-automate-with-ai">How to automate with AI</a>
+              </li>
+              <li>
+                <a alt="Best Twitter automation tools" title="Best Twitter automation tools" href="/explore/best-twitter-automation-tools">Best Twitter automation tools</a>
+              </li>
+              <li>
+                <a alt="Best time management apps and tools" title="Best time management apps and tools" href="/explore/best-time-management-apps-strategies-and-tools">Best time management apps and tools</a>
+              </li>
+              <li>
+                <a alt="What is workflow automation?" title="What is workflow automation?" href="/explore/what-is-workflow-automation">What is workflow automation?</a>
+              </li>
+              <li>
+                <a alt="How to use RSS Feeds" title="How to use RSS Feeds" href="/explore/how-to-use-rss-feeds">How to use RSS Feeds</a>
+              </li>
+              <li>
+                <a alt="What are webhooks?" title="What are webhooks?" href="/explore/what-are-webhooks">What are webhooks?</a>
+              </li>
+              <li>
+                <a alt="11 best Pomodoro productivity apps" title="11 best Pomodoro productivity apps" href="/explore/best-pomodoro-productivity-apps">11 best Pomodoro productivity apps</a>
+              </li>
+              <li>
+                <a alt="How to automate Threads" title="How to automate Threads" href="/explore/how-to-automate-threads">How to automate Threads</a>
+              </li>
+              <li>
+                <a alt="How to automate social media posts" title="How to automate social media posts" href="/explore/how-to-automate-social-media-posts">How to automate social media posts</a>
+              </li>
+              <li>
+                <a alt="Best social media tools for automation" title="Best social media tools for automation" href="/explore/best-automation-tools-social-media">Best social media tools for automation</a>
+              </li>
+          </ul>
+      </div>
+    <div class="footer-section company">
+      <div class="section-header">Company</div>
+      <ul>
+        <li><a alt="Developers" title="Developers" href="/developers">Developers</a></li>
+        <li><a alt="Partner program" title="Partner program" href="/partners">Partner program</a></li>
+        <li><a alt="Careers" title="Careers" href="/careers">Careers</a></li>
+        <li><a alt="Contact" title="Contact" href="/contact">Contact</a></li>
+        <li><a alt="About" title="About" href="/about">About</a></li>
+        <li><a alt="Privacy" title="Privacy" href="/privacy">Privacy</a></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer-section download">
+      <ul class="download-buttons">
+        <li>
+          <a title="Download on the App Store" aria-label="The Apple App Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fitunes.apple.com%2Fapp%2Fapple-store%2Fid660944635%3Fpt%3D1752682%26ct%3D%2Fp%2F%5BPRIVATE%5D%2Fapplets%2Fnew%26mt%3D8">
+            <img alt="" title="Download on the App Store" loading="lazy" width="136" height="40" src="/assets/asset-000099.svg">
+</a>        </li>
+        <li>
+          <a title="Get it on Google Play" aria-label="The Google Play Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.ifttt.ifttt%26utm_source%3D%2Fp%2F%5BPRIVATE%5D%2Fapplets%2Fnew%26utm_medium%3Dweb">
+            <img alt="" title="Get it on Google Play" loading="lazy" width="136" height="42" src="/assets/asset-000100.svg">
+</a>        </li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom-container">
+      <div class="group group-social">
+        <a class="social-icon" alt="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.facebook.com%2Fifttt">
+          <img alt="Facebook" title="Facebook" loading="lazy" width="28" height="28" src="/assets/asset-000102.svg">
+</a>
+        <a class="social-icon" alt="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fifttt%2F">
+          <img alt="LinkedIn" title="LinkedIn" loading="lazy" width="28" height="28" src="/assets/asset-000101.svg">
+</a>
+        <a class="social-icon" alt="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.instagram.com%2Fiftttapp%2F">
+          <img alt="Instagram" title="Instagram" loading="lazy" width="28" height="28" src="/assets/asset-000103.svg">
+</a>
+        <a class="social-icon" alt="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.youtube.com%2F%40IFTTT">
+          <img alt="YouTube" title="YouTube" loading="lazy" width="28" height="28" src="/assets/asset-000104.svg">
+</a>
+        <a class="social-icon" alt="Twitter" title="Twitter" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Ftwitter.com%2FIFTTT">
+          <img alt="Twitter" title="Twitter" loading="lazy" width="28" height="28" src="/assets/asset-000105.svg">
+</a>
+        <a class="social-icon" alt="TikTok" title="TikTok" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.tiktok.com%2F%40iftttapp">
+          <img alt="TikTok" title="TikTok" loading="lazy" width="28" height="28" src="/assets/asset-000106.svg">
+</a>
+        <a class="social-icon" alt="Reddit" title="Reddit" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fifttt%2F">
+          <img alt="Reddit" title="Reddit" loading="lazy" width="28" height="28" src="/assets/asset-000107.svg">
+</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    
+
+    
+
+    
+
+    
+
+
+  <div id="zendesk-widget-button" class="chat-style">
+    <span class="button help-button">
+      <span class="icon icon-upper-right">
+          <svg width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" title="Help-bg-white"><circle cx="20" cy="20" r="19.5" fill="#fff"></circle><path d="M20 0C8.95419 0 0 8.95419 0 20C0 31.0455 8.95419 40 20 40C31.0457 40 40 31.0455 40 20C40 8.95419 31.0457 0 20 0ZM22.1248 29.1933C22.1248 30.8129 20.877 32.0604 19.1902 32.0604C17.5031 32.0604 16.2553 30.8129 16.2553 29.1933V29.1258C16.2553 27.5062 17.5031 26.258 19.1902 26.258C20.877 26.258 22.1248 27.5062 22.1248 29.1258V29.1933ZM28.0296 14.9898C28.0296 19.2743 25.0605 21.0294 21.3839 21.7716L21.2827 22.9958C21.147 23.8724 20.4385 24.6485 19.4603 24.6485H18.3301C17.3515 24.6485 16.6429 23.9068 16.5085 22.9958V20.0844C16.3397 18.971 17.5031 18.1944 18.5837 18.0596C21.5183 17.6891 22.8678 16.7782 22.8678 15.125V15.0574C22.8678 13.5395 21.7207 12.6621 19.7636 12.6621C18.3133 12.6621 17.065 13.101 15.8508 14.0116C15.4455 14.3153 14.9058 14.5517 14.3321 14.5517C13.0502 14.5517 11.9704 13.4715 11.9704 12.1904C11.9704 11.5487 12.2404 10.8742 12.8482 10.3681C14.6361 8.88418 16.8962 7.93879 19.8648 7.93879C24.7233 7.93879 28.0296 10.4353 28.0296 14.9222V14.9898Z" fill="#111"></path></svg>
+      </span>
+      <span class="icon icon-default">
+        <svg width="20" height="20" viewbox="0 0 20 20" aria-hidden="true"><g id="Layer_4"><path d="M11,12.3V13c0,0-1.8,0-2,0v-0.6c0-0.6,0.1-1.4,0.8-2.1c0.7-0.7,1.6-1.2,1.6-2.1c0-0.9-0.7-1.4-1.4-1.4 c-1.3,0-1.4,1.4-1.5,1.7H6.6C6.6,7.1,7.2,5,10,5c2.4,0,3.4,1.6,3.4,3C13.4,10.4,11,10.8,11,12.3z"></path><circle cx="10" cy="15" r="1"></circle><path d="M10,2c4.4,0,8,3.6,8,8s-3.6,8-8,8s-8-3.6-8-8S5.6,2,10,2 M10,0C4.5,0,0,4.5,0,10s4.5,10,10,10s10-4.5,10-10S15.5,0,10,0 L10,0z"></path></g></svg>
+      </span>
+      <span class="title">
+        Help
+      </span>
+    </span>
+  </div>
+
+
+
+<div style="position: absolute; top: 50vh; height: 1px; width: 100%;"></div><script src="/local.js" defer></script></body></html>

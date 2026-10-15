@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en"><head>
+    <link rel="preload" href="/assets/asset-000002.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000004.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000003.woff2" as="font" type="font/woff2">
+
+<style>
+/* IFTTT.ai rebrand — Museo Sans Rounded (site-wide base font). One @font-face per Museo cut; */
+/* CSS font-weight == the cut number (300 Light / 500 Regular / 700 body / 900 headings). */
+/* NB: map by cut name, not the weight Figma's inspect panel shows — a designer's desktop copy */
+/* may report ~200 less (700 for the 900 cut); these files carry OS/2 weight == cut number. */
+
+/* Museo Sans Rounded 300 (light) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 300;
+  src: url("/assets/dependency-000100.woff2") format("woff2"),
+    url("/assets/dependency-000101.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 500 (regular) — covers CSS 400–600 */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 500 600;
+  src: url("/assets/asset-000002.woff2") format("woff2"),
+    url("/assets/dependency-000102.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 700 (body) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 700;
+  src: url("/assets/asset-000004.woff2") format("woff2"),
+    url("/assets/dependency-000104.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 900 (black) — display headings */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 900;
+  src: url("/assets/asset-000003.woff2") format("woff2"),
+    url("/assets/dependency-000106.woff") format("woff");
+  font-display: swap;
+}
+
+/* Metric-matched fallback for the swap window: Avenir Next scaled to the Museo advance widths, with */
+/* the Museo line box (hhea 940/-260 divided by size-adjust), so the change to Museo moves no layout. */
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 500 600;
+  src: local("Avenir Next Medium"), local("AvenirNext-Medium");
+  size-adjust: 98.0%;
+  ascent-override: 95.92%;
+  descent-override: 26.53%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 700;
+  src: local("Avenir Next Bold"), local("AvenirNext-Bold");
+  size-adjust: 94.5%;
+  ascent-override: 99.47%;
+  descent-override: 27.51%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 900;
+  src: local("Avenir Next Heavy"), local("AvenirNext-Heavy");
+  size-adjust: 90.2%;
+  ascent-override: 104.21%;
+  descent-override: 28.82%;
+  line-gap-override: 0%;
+}
+
+/* Museo Sans Rounded 500 / 700 italic — fetched only by pages that set font-style: italic. */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 500 600;
+  src: url("/assets/asset-000981.woff2") format("woff2"),
+    url("/assets/dependency-000103.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/asset-001589.woff2") format("woff2"),
+    url("/assets/dependency-000105.woff") format("woff");
+  font-display: swap;
+}
+</style>
+
+    <!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0">
+<meta name="mobile-web-app-capable" content="yes">
+
+
+
+
+  <title>Smart home automation solutions &amp; tools - IFTTT</title>
+<meta name="description" content="Save time, streamline daily routines, and control all your smart devices with IFTTT.">
+<meta name="keywords" content="ifttt applets connect connections integrate integration automate automation services recipes trigger action ifthisthenthat free">
+<meta property="al:ios:url" content="ifttt://">
+<meta property="al:ios:app_store_id" content="660944635">
+<meta property="al:ios:app_name" content="IFTTT">
+<meta property="fb:app_id" content="122259781154546">
+<meta property="fb:admins" content="7302486">
+<meta property="og:title" content="Smart home automation solutions &amp; tools - IFTTT">
+<meta property="og:description" content="Save time, streamline daily routines, and control all your smart devices with IFTTT.">
+<meta property="og:site_name" content="IFTTT">
+<meta property="og:url" content="https://ifttt.com/solutions/smart-home">
+<meta property="og:image" content="https://images.ctfassets.net/mrsnpomeucef/4hlodqgW04gcmJcK5Euliq/e2bcd80c236cfb10ea0f1aed4763f643/smart_fixed_hero.webp">
+<meta property="og:image:width" content="440">
+<meta property="og:image:height" content="426">
+<meta property="og:type" content="website">
+<meta property="og:image:alt" content="Smart home automation solutions &amp; tools - IFTTT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@IFTTT">
+<meta name="twitter:image" content="https://images.ctfassets.net/mrsnpomeucef/4hlodqgW04gcmJcK5Euliq/e2bcd80c236cfb10ea0f1aed4763f643/smart_fixed_hero.webp">
+<meta name="twitter:app:id:iphone" content="660944635">
+<meta name="twitter:app:id:ipad" content="660944635">
+<meta name="twitter:app:id:googleplay" content="com.ifttt.ifttt">
+<meta name="twitter:app:url:iphone" content="ifttt://">
+<meta name="twitter:app:url:ipad" content="ifttt://">
+<meta name="twitter:app:url:googleplay" content="ifttt://">
+<meta name="twitter:app:name:googleplay" content="IFTTT">
+<meta name="twitter:image:alt" content="Smart home automation solutions &amp; tools - IFTTT">
+<meta name="author" content="IFTTT">
+<meta name="copyright" content="Copyright 2026 IFTTT Inc.">
+<meta name="theme-color" content="">
+<meta name="facebook-domain-verification" content="tapueff3rri63aug9c5b7hapbv3mkv">
+
+<!-- Standard SVG Favicon -->
+<link rel="icon" href="/assets/dependency-000091.svg" type="image/svg+xml">
+
+<!-- For all Apple Devices: -->
+<link rel="apple-touch-icon" href="/assets/dependency-000081.png">
+
+<!-- For Windows 8: -->
+<meta name="msapplication-TileImage" content="https://web-assets.ifttt.com/builds/assets/pinned-Dpomu1wG.png">
+<meta name="msapplication-TileColor" content="#111">
+
+
+
+<link rel="stylesheet" href="/assets/asset-001808.css">
+<link rel="stylesheet" href="/assets/asset-000117.css">
+<link rel="stylesheet" href="/assets/asset-000134.css">
+
+    
+  <link rel="stylesheet" href="/local.css"></head>
+  <body id="solutions-body" class="partners-body solutions-body show-action  false" style="background-color: rgb(255, 255, 255);" data-local-route="/solutions/smart-home" data-local-actor="anonymous" data-local-state="default"><div id="flash-messages"></div>
+  
+      <!-- Google Tag Manager (noscript) -->
+  <noscript></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+    
+
+
+  
+
+
+
+      
+<header class="unified-header signed-out" style="background-color: #fff">
+  <div class="container header">
+    <section class="left-group">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/">
+  <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt" style="fill: #111"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>
+    </section>
+
+      <section class="right-group signed-out">
+        <a class="nav-link link-menu" title="Explore" href="/explore">
+          Explore
+</a>
+        <a class="nav-link link-menu" title="Plans" href="/plans">
+          Plans
+</a>
+        <a class="sign-in button-tertiary button-outlined " href="/login">Log in</a>
+
+          <a title="Get started" class="button-tertiary  sign-up signed-out" href="/join?source=site-header">
+            Get started
+</a>      </section>
+      <section class="mobile-icon">
+        
+<span id="unified_mobile_menu" role="button" class="closed" tabindex="0">
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hamburger-icon">
+    <title>Mobile menu</title>
+    <g fill="#111" id="mobile-hamburger-icon">
+      <path d="M19.6504 15C20.5617 15 21.3008 15.7391 21.3008 16.6504C21.3008 17.5617 20.5617 18.3008 19.6504 18.3008H1.65039C0.739121 18.3008 0 17.5617 0 16.6504C0 15.7391 0.739121 15 1.65039 15H19.6504ZM19.6504 7.5C20.5617 7.5 21.3008 8.23912 21.3008 9.15039C21.3008 10.0617 20.5617 10.8008 19.6504 10.8008H1.65039C0.739121 10.8008 0 10.0617 0 9.15039C0 8.23912 0.739121 7.5 1.65039 7.5H19.6504ZM19.6504 0C20.5617 0 21.3008 0.739121 21.3008 1.65039C21.3008 2.56166 20.5617 3.30078 19.6504 3.30078H1.65039C0.739121 3.30078 0 2.56166 0 1.65039C0 0.739121 0.739121 0 1.65039 0H19.6504Z" transform="translate(1.35 2.85)"></path>
+    </g>
+  </svg>
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="close-icon">
+    <title>Close menu</title>
+    <path fill="#111" d="M16.4901 0.535065C17.1612 -0.160319 18.2692 -0.180639 18.9648 0.490143C19.66 1.16128 19.6797 2.26933 19.0087 2.96475L12.1815 10.0399L18.4482 16.5351C19.1189 17.2305 19.0993 18.3377 18.4042 19.0087C17.7088 19.6797 16.6007 19.66 15.9296 18.9648L9.74991 12.5595L3.57022 18.9648C2.89918 19.6602 1.79112 19.6796 1.09561 19.0087C0.400326 18.3376 0.380671 17.2305 1.05167 16.5351L7.31729 10.0399L0.490143 2.96475C-0.180639 2.26923 -0.160319 1.16115 0.535065 0.490143C1.23058 -0.180569 2.3377 -0.16026 3.0087 0.535065L9.74893 7.52042L16.4901 0.535065Z" transform="translate(2.25 2.25)"></path>
+  </svg>
+</span>
+
+
+      </section>
+  </div>
+
+</header>
+
+
+    <div class="platform-bg_color-container">
+      
+
+<section class="primary-container">
+  <div class="content">
+    <h1 class="heading">Connect and manage your smart home devices easily</h1>
+
+    <div class="text">
+      <p>Connect and control all your smart home devices from one place for a seamless, automated experience that saves you time and keeps your home running smoothly.</p>
+
+      <a class="button-primary" href="#applets">Try it now</a>
+    </div>
+  </div>
+  <div class="image" alt="Connect and manage your smart home devices easily" title="Connect and manage your smart home devices easily">
+    <style>
+      .solutions-body .primary-container .image {
+        background-image: url("/assets/asset-001818.bin");
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: center;
+        background-size: contain;
+      }
+    </style>
+  </div>
+</section>
+
+<section class="available-integrations">
+  <p>Achieve more by automating over 1,000 popular apps</p>
+  <a href="/explore/services">
+      <style>
+      .solutions-body .available-integrations a {
+        background-image: url("/assets/asset-001820.png"),
+          url("/assets/asset-001820.png");
+        background-position: -30px, 1305.85px;
+        background-repeat: no-repeat;
+        background-size: 1364.85px;
+      }
+    </style>
+  </a>
+</section>
+
+<section class="secondary-container">
+  <div class="image" alt="Make your smart home truly intelligent" title="Make your smart home truly intelligent">
+    <style>
+      .solutions-body .secondary-container .image {
+        background-image: url("/assets/asset-001812.bin");
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: center;
+        background-size: contain;
+      }
+    </style>
+  </div>
+  <div class="content">
+    <h2 class="heading">Make your smart home truly intelligent</h2>
+    <div class="text">
+      <p><strong>– Location-based smart home control:</strong> Automatically trigger lights, thermostats, and connected devices based on your location for effortless automation.</p>
+
+<p><strong>– Voice assistants:</strong> Connect Google Assistant or Siri to seamlessly manage all your smart home devices with voice commands.</p>
+
+<p><strong>– Energy-saving smart home automations:</strong> Use real-time weather updates to adjust heating, cooling, and lighting, saving energy and lowering your bills.</p>
+
+<p><strong>– Smart home security automation</strong>: Link lights, cameras, and motion detectors to create a safer, smarter home environment.</p>
+
+    </div>
+  </div>
+</section>
+
+<div class="trial-cta">
+    <a class="button-primary" href="/subscriptions/pro_plus">Start free trial</a>
+</div>
+
+<section class="applets">
+  <h3 id="applets">Top smart home automations that are sure to save you time</h3>
+  <p class="txt-body-2">Select any automation to get started.</p>
+  <ul class="web-applet-cards">
+      <li class="my-web-applet-card web-applet-card">
+        <a class="applet-card-body spec-prefetch" href="/applets/w9HVuagD-close-your-myq-garage-door-with-google-assistant" style="background-color: #262626;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Assistant" title="Google Assistant" src="/assets/asset-001057.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="MyQ" title="MyQ" src="/assets/asset-000237.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.9453px;">Close your MyQ garage door with Google Assistant</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Google</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="9.43k users enabled this Applet" title="9.43k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="9.43k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">9.43k</span>
+</span></div></a>
+      </li>
+      <li class="my-web-applet-card web-applet-card">
+        <a class="applet-card-body spec-prefetch" href="/applets/jwGsdWaM-close-myq-garage-door-with-a-siri-shortcut" style="background-color: #23235F;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="iOS Shortcuts" title="iOS Shortcuts" src="/assets/asset-000238.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="MyQ" title="MyQ" src="/assets/asset-000237.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.9453px;">Close MyQ garage door with a Siri Shortcut</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">iOS Shortcuts</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="4.97k users enabled this Applet" title="4.97k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="4.97k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">4.97k</span>
+</span></div></a>
+      </li>
+      <li class="my-web-applet-card web-applet-card">
+        <a class="applet-card-body spec-prefetch" href="/applets/wYf8ceZQ-toggle-philips-hue-lights-with-one-tap" style="background-color: #333333;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Philips Hue" title="Philips Hue" src="/assets/asset-000046.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Button widget" title="Button widget" src="/assets/asset-000261.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.7812px;">Toggle Philips Hue lights with one tap</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Philips Hue</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="111k users enabled this Applet" title="111k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="111k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">111k</span>
+</span></div></a>
+      </li>
+      <li class="my-web-applet-card web-applet-card">
+        <a class="applet-card-body spec-prefetch" href="/applets/RWjvrX6m-automatically-arm-your-blink-system-when-you-leave-home" style="background-color: #0099cc;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Blink" title="Blink" src="/assets/asset-001058.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Location" title="Location" src="/assets/asset-000047.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 27px;">Automatically arm your Blink System when you leave home</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Blink</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="24.1k users enabled this Applet" title="24.1k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="24.1k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">24.1k</span>
+</span></div></a>
+      </li>
+      <li class="my-web-applet-card web-applet-card">
+        <a class="applet-card-body spec-prefetch" href="/applets/zkXhNLbw-press-button-widget-to-activate-a-smart-life-scene" style="background-color: #5E92F7;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Smart Life" title="Smart Life" src="/assets/asset-001056.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Button widget" title="Button widget" src="/assets/asset-000261.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.9453px;">Press button widget to activate a Smart Life scene</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Smart Life</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="10.8k users enabled this Applet" title="10.8k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="10.8k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">10.8k</span>
+</span></div></a>
+      </li>
+      <li class="my-web-applet-card web-applet-card">
+        <a class="applet-card-body spec-prefetch" href="/applets/NAiAeMuh-blink-hue-lights-when-ring-doorbell-rings" style="background-color: #1b99d6;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Ring" title="Ring" src="/assets/asset-000260.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Philips Hue" title="Philips Hue" src="/assets/asset-000046.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span style="font-size: 26.9453px;">Blink Hue lights when Ring doorbell rings</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">Ring</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span class="installs" role="img" aria-label="15.6k users enabled this Applet" title="15.6k users enabled this Applet">
+      <span class="verified">
+        <img alt="" title="15.6k users enabled this Applet" loading="lazy" width="12" height="12" src="/assets/asset-000022.svg">
+</span>      <span class="number">15.6k</span>
+</span></div></a>
+      </li>
+  </ul>
+</section>
+
+<div class="trial-cta">
+    <h3>Don't take our word for it</h3>
+    <p class="txt-body-2">Individuals save on average 5 hours per week by using IFTTT</p>
+      <a class="button-primary" href="/subscriptions/pro_plus">Start free trial</a>
+</div>
+
+<section class="testimonial">
+  <div class="with-background">
+    <div class="benefit">
+      <div class="clock">
+        <img alt="Wrist watch - Save time with IFTTT" title="Wrist watch - Save time with IFTTT" loading="lazy" width="48" height="48" src="/assets/asset-001811.png">
+      </div>
+      <h3>7 hours saved every week</h3>
+    </div>
+    <div class="arrow"></div>
+  </div>
+  <div class="right-block">
+    <div class="content">
+      <span class="quote" alt="Testimonial quote icon"></span>
+      <p class="txt-body-2">I'm managing my Smart Home with IFTTT and several services such eWelink, Weather Underground, Google Calendar etc. I'm controlling the lights on/off state according to Sabbath and holidays times and the weather.</p>
+      <div class="headshot-container">
+        <div class="yuppies-sketch">
+          <img title="Mordechai Margalit" loading="lazy" width="80" height="80" alt="Mordechai Margalit icon" src="/assets/asset-001822.bin">
+        </div>
+        <span class="exclamations" alt="Exclamations"></span>
+      </div>
+      <h4>Mordechai Margalit</h4>
+      <p class="txt-body-3">Smart Home Enthusiast</p>
+    </div>
+  </div>
+</section>
+
+<div class="video trial-cta">
+  <h3>Do more with Google Assistant</h3>
+  <p class="txt-body-2">Connect Google Assistant to over 1,000 different digital tools and services. </p>
+    <div class="lazy-youtube-video"><video controls="controls" preload="metadata" src="/assets/video-f1rYLr5IJfk.mp4" style="width:100%;max-height:70vh"></video></div>
+</div>
+
+<div class="trial-cta">
+    <h3>Unlimited possibilities</h3>
+    <p class="txt-body-2">Pro+ unlocks our best and most powerful tools. You can<br>subscribe to any paid plan on a monthly or yearly basis.</p>
+      <a class="button-primary" href="/subscriptions/pro_plus">Start free trial</a>
+</div>
+
+
+
+    </div>
+
+    <footer class="site-footer ifttt_next_bucket">
+    <a class="pro-upsell pro-ad" title="Try IFTTT Pro" href="/subscriptions/pro">
+        <div class="pro-upsell-text">
+          <span class="logo">
+            <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+            <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#111"></path></svg>
+          </span>
+          <span class="pro-upsell-heading">Automate more, effortlessly.</span>
+        </div>
+
+        <div class="button-secondary button-on-color">
+            Try it free
+        </div>
+</a>  <div class="footer-top-container">
+    <div class="logo-container">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/">
+        <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="ifttt-logo" title="IFTTT" style="fill: white"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>    </div>
+
+    <div class="footer-sections">
+      <div class="footer-section explore">
+        <div class="section-header">
+          <a title="Explore" href="/explore">Explore</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="Services" title="Services" href="/explore/services">Services</a>
+              </li>
+              <li>
+                <a alt="Stories" title="Stories" href="/explore/stories">Stories</a>
+              </li>
+              <li>
+                <a alt="Applets" title="Applets" href="/explore/applets">Applets</a>
+              </li>
+              <li>
+                <a alt="IFTTT MCP" title="IFTTT MCP" href="/mcp">IFTTT MCP</a>
+              </li>
+              <li>
+                <a alt="Help Center" title="Help Center" href="/hc/en-us">Help Center</a>
+              </li>
+              <li>
+                <a alt="Content Map" title="Content Map" href="/content_map">Content Map</a>
+              </li>
+              <li>
+                <a alt="Search" title="Search" href="/explore">Search</a>
+              </li>
+              <li>
+                <a alt="Plans" title="Plans" href="/plans">Plans</a>
+              </li>
+              <li>
+                <a alt="Developer docs" title="Developer docs" href="/docs/api_reference">Developer docs</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section top-integrations">
+        <div class="section-header">
+          Top Integrations
+        </div>
+          <ul>
+              <li>
+                <a alt="Discord and Instagram" title="Discord and Instagram" href="/connect/discord/instagram">Discord and Instagram</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Notion" title="iOS Calendar and Notion" href="/connect/ios_calendar/notion_so">iOS Calendar and Notion</a>
+              </li>
+              <li>
+                <a alt="Google Calendar and Google Sheets" title="Google Calendar and Google Sheets" href="/connect/google_calendar/google_sheets">Google Calendar and Google Sheets</a>
+              </li>
+              <li>
+                <a alt="Google Assistant and My Q" title="Google Assistant and My Q" href="/connect/google_assistant_v2/myq_devices">Google Assistant and My Q</a>
+              </li>
+              <li>
+                <a alt="BotGhost and Spotify" title="BotGhost and Spotify" href="/connect/botghost/spotify">BotGhost and Spotify</a>
+              </li>
+              <li>
+                <a alt="SMS and Twitter" title="SMS and Twitter" href="/connect/sms/twitter">SMS and Twitter</a>
+              </li>
+              <li>
+                <a alt="iOS Reminders and Notion" title="iOS Reminders and Notion" href="/connect/ios_reminders/notion_so">iOS Reminders and Notion</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Todoist" title="iOS Calendar and Todoist" href="/connect/ios_calendar/todoist">iOS Calendar and Todoist</a>
+              </li>
+              <li>
+                <a alt="Telegram and Twitter" title="Telegram and Twitter" href="/connect/telegram/twitter">Telegram and Twitter</a>
+              </li>
+              <li>
+                <a alt="Discord and Twitter" title="Discord and Twitter" href="/connect/discord/twitter">Discord and Twitter</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section latest-stories">
+        <div class="section-header">
+          <a title="Latest Stories" href="/explore/stories">Latest Stories</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="How to automate with AI" title="How to automate with AI" href="/explore/how-to-automate-with-ai">How to automate with AI</a>
+              </li>
+              <li>
+                <a alt="Best Twitter automation tools" title="Best Twitter automation tools" href="/explore/best-twitter-automation-tools">Best Twitter automation tools</a>
+              </li>
+              <li>
+                <a alt="Best time management apps and tools" title="Best time management apps and tools" href="/explore/best-time-management-apps-strategies-and-tools">Best time management apps and tools</a>
+              </li>
+              <li>
+                <a alt="What is workflow automation?" title="What is workflow automation?" href="/explore/what-is-workflow-automation">What is workflow automation?</a>
+              </li>
+              <li>
+                <a alt="How to use RSS Feeds" title="How to use RSS Feeds" href="/explore/how-to-use-rss-feeds">How to use RSS Feeds</a>
+              </li>
+              <li>
+                <a alt="What are webhooks?" title="What are webhooks?" href="/explore/what-are-webhooks">What are webhooks?</a>
+              </li>
+              <li>
+                <a alt="11 best Pomodoro productivity apps" title="11 best Pomodoro productivity apps" href="/explore/best-pomodoro-productivity-apps">11 best Pomodoro productivity apps</a>
+              </li>
+              <li>
+                <a alt="How to automate Threads" title="How to automate Threads" href="/explore/how-to-automate-threads">How to automate Threads</a>
+              </li>
+              <li>
+                <a alt="How to automate social media posts" title="How to automate social media posts" href="/explore/how-to-automate-social-media-posts">How to automate social media posts</a>
+              </li>
+              <li>
+                <a alt="Best social media tools for automation" title="Best social media tools for automation" href="/explore/best-automation-tools-social-media">Best social media tools for automation</a>
+              </li>
+          </ul>
+      </div>
+    <div class="footer-section company">
+      <div class="section-header">Company</div>
+      <ul>
+        <li><a alt="Developers" title="Developers" href="/developers">Developers</a></li>
+        <li><a alt="Partner program" title="Partner program" href="/partners">Partner program</a></li>
+        <li><a alt="Careers" title="Careers" href="/careers">Careers</a></li>
+        <li><a alt="Contact" title="Contact" href="/contact">Contact</a></li>
+        <li><a alt="About" title="About" href="/about">About</a></li>
+        <li><a alt="Privacy" title="Privacy" href="/privacy">Privacy</a></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer-section download">
+      <ul class="download-buttons">
+        <li>
+          <a title="Download on the App Store" aria-label="The Apple App Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fitunes.apple.com%2Fapp%2Fapple-store%2Fid660944635%3Fpt%3D1752682%26ct%3D%2Fsolutions%2Fsmart-home%26mt%3D8">
+            <img alt="" title="Download on the App Store" loading="lazy" width="136" height="40" src="/assets/asset-000099.svg">
+</a>        </li>
+        <li>
+          <a title="Get it on Google Play" aria-label="The Google Play Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.ifttt.ifttt%26utm_source%3D%2Fsolutions%2Fsmart-home%26utm_medium%3Dweb">
+            <img alt="" title="Get it on Google Play" loading="lazy" width="136" height="42" src="/assets/asset-000100.svg">
+</a>        </li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom-container">
+      <div class="group group-social">
+        <a class="social-icon" alt="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.facebook.com%2Fifttt">
+          <img alt="Facebook" title="Facebook" loading="lazy" width="28" height="28" src="/assets/asset-000102.svg">
+</a>
+        <a class="social-icon" alt="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fifttt%2F">
+          <img alt="LinkedIn" title="LinkedIn" loading="lazy" width="28" height="28" src="/assets/asset-000101.svg">
+</a>
+        <a class="social-icon" alt="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.instagram.com%2Fiftttapp%2F">
+          <img alt="Instagram" title="Instagram" loading="lazy" width="28" height="28" src="/assets/asset-000103.svg">
+</a>
+        <a class="social-icon" alt="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.youtube.com%2F%40IFTTT">
+          <img alt="YouTube" title="YouTube" loading="lazy" width="28" height="28" src="/assets/asset-000104.svg">
+</a>
+        <a class="social-icon" alt="Twitter" title="Twitter" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Ftwitter.com%2FIFTTT">
+          <img alt="Twitter" title="Twitter" loading="lazy" width="28" height="28" src="/assets/asset-000105.svg">
+</a>
+        <a class="social-icon" alt="TikTok" title="TikTok" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.tiktok.com%2F%40iftttapp">
+          <img alt="TikTok" title="TikTok" loading="lazy" width="28" height="28" src="/assets/asset-000106.svg">
+</a>
+        <a class="social-icon" alt="Reddit" title="Reddit" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fifttt%2F">
+          <img alt="Reddit" title="Reddit" loading="lazy" width="28" height="28" src="/assets/asset-000107.svg">
+</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+<div style="position: absolute; top: 50vh; height: 1px; width: 100%;"></div><script src="/local.js" defer></script></body></html>

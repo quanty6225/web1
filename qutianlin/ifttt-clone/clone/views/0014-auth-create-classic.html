@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en"><head>
+  <link rel="preload" href="/assets/asset-000002.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000004.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000003.woff2" as="font" type="font/woff2">
+
+<style>
+/* IFTTT.ai rebrand — Museo Sans Rounded (site-wide base font). One @font-face per Museo cut; */
+/* CSS font-weight == the cut number (300 Light / 500 Regular / 700 body / 900 headings). */
+/* NB: map by cut name, not the weight Figma's inspect panel shows — a designer's desktop copy */
+/* may report ~200 less (700 for the 900 cut); these files carry OS/2 weight == cut number. */
+
+/* Museo Sans Rounded 300 (light) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 300;
+  src: url("/assets/dependency-000100.woff2") format("woff2"),
+    url("/assets/dependency-000101.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 500 (regular) — covers CSS 400–600 */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 500 600;
+  src: url("/assets/asset-000002.woff2") format("woff2"),
+    url("/assets/dependency-000102.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 700 (body) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 700;
+  src: url("/assets/asset-000004.woff2") format("woff2"),
+    url("/assets/dependency-000104.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 900 (black) — display headings */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 900;
+  src: url("/assets/asset-000003.woff2") format("woff2"),
+    url("/assets/dependency-000106.woff") format("woff");
+  font-display: swap;
+}
+
+/* Metric-matched fallback for the swap window: Avenir Next scaled to the Museo advance widths, with */
+/* the Museo line box (hhea 940/-260 divided by size-adjust), so the change to Museo moves no layout. */
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 500 600;
+  src: local("Avenir Next Medium"), local("AvenirNext-Medium");
+  size-adjust: 98.0%;
+  ascent-override: 95.92%;
+  descent-override: 26.53%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 700;
+  src: local("Avenir Next Bold"), local("AvenirNext-Bold");
+  size-adjust: 94.5%;
+  ascent-override: 99.47%;
+  descent-override: 27.51%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 900;
+  src: local("Avenir Next Heavy"), local("AvenirNext-Heavy");
+  size-adjust: 90.2%;
+  ascent-override: 104.21%;
+  descent-override: 28.82%;
+  line-gap-override: 0%;
+}
+
+/* Museo Sans Rounded 500 / 700 italic — fetched only by pages that set font-style: italic. */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 500 600;
+  src: url("/assets/asset-000981.woff2") format("woff2"),
+    url("/assets/dependency-000103.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/asset-001589.woff2") format("woff2"),
+    url("/assets/dependency-000105.woff") format("woff");
+  font-display: swap;
+}
+</style>
+
+  <!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+
+  
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0">
+<meta name="mobile-web-app-capable" content="yes">
+  <meta name="robots" content="noindex">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>Create - IFTTT</title>
+<meta name="description" content="Connect your favorite services on IFTTT, Gmail, Facebook, Slack, Amazon Alexa, Philips Hue, Instagram, and 100s more.">
+<meta name="keywords" content="ifttt applets connect connections integrate integration automate automation services recipes trigger action ifthisthenthat free">
+<meta property="al:ios:url" content="ifttt://">
+<meta property="al:ios:app_store_id" content="660944635">
+<meta property="al:ios:app_name" content="IFTTT">
+<meta property="fb:app_id" content="122259781154546">
+<meta property="fb:admins" content="7302486">
+<meta property="og:title" content="Create - IFTTT">
+<meta property="og:description" content="Connect your favorite services on IFTTT, Gmail, Facebook, Slack, Amazon Alexa, Philips Hue, Instagram, and 100s more.">
+<meta property="og:site_name" content="IFTTT">
+<meta property="og:url" content="https://ifttt.com/create">
+<meta property="og:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@IFTTT">
+<meta name="twitter:image" content="https://web-assets.ifttt.com/builds/assets/ifttt-banner-BdwHPmXv.png">
+<meta name="twitter:app:id:iphone" content="660944635">
+<meta name="twitter:app:id:ipad" content="660944635">
+<meta name="twitter:app:id:googleplay" content="com.ifttt.ifttt">
+<meta name="twitter:app:url:iphone" content="ifttt://">
+<meta name="twitter:app:url:ipad" content="ifttt://">
+<meta name="twitter:app:url:googleplay" content="ifttt://">
+<meta name="twitter:app:name:googleplay" content="IFTTT">
+<meta name="author" content="IFTTT">
+<meta name="copyright" content="Copyright 2026 IFTTT Inc.">
+<meta name="theme-color" content="">
+<meta name="facebook-domain-verification" content="tapueff3rri63aug9c5b7hapbv3mkv">
+
+<!-- Standard SVG Favicon -->
+<link rel="icon" href="/assets/dependency-000091.svg" type="image/svg+xml">
+
+<!-- For all Apple Devices: -->
+<link rel="apple-touch-icon" href="/assets/dependency-000081.png">
+
+<!-- For Windows 8: -->
+<meta name="msapplication-TileImage" content="https://web-assets.ifttt.com/builds/assets/pinned-Dpomu1wG.png">
+<meta name="msapplication-TileColor" content="#111">
+
+
+
+
+  
+  <link rel="stylesheet" href="/assets/asset-000133.css">
+<link rel="stylesheet" href="/assets/asset-000117.css">
+<link rel="stylesheet" href="/assets/asset-000134.css">
+<link rel="stylesheet" href="/assets/asset-000135.css">
+<link rel="stylesheet" href="/assets/asset-000119.css">
+<link rel="stylesheet" href="/assets/asset-000120.css">
+  
+        
+      
+<link rel="stylesheet" href="/local.css"></head>
+
+<body class="diy-creation-body show-action  new-diy-composer diy-step-initial web-body" data-local-route="/create" data-local-actor="member" data-local-state="classic">
+    <!-- Google Tag Manager (noscript) -->
+  <noscript></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  
+
+
+  
+
+
+
+  
+
+  
+
+      <span></span>
+
+
+  <div id="flash-messages">
+    
+  </div>
+
+  <div class="after-header-content">
+    
+  </div>
+
+  <div class="page-canvas">
+    <main class="container web">
+        
+
+
+
+
+<div id="diy-composer"><div class="web_modal__web-modal___YPvMY"></div><div class="index__checkout-on-modal___HGCZD checkout-on-modal"></div><div class="web_modal__web-modal___YPvMY"></div><div class="index__chat-shell___QWM_0"><header class="header__diy-header___XzjhP" style="background-color: white;"><button type="button" title="Cancel" aria-label="Cancel" class="icon-button icon-button-shaded"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.63992 0.497626C9.30368 -0.166041 10.3803 -0.165709 11.0442 0.497626C11.708 1.1615 11.708 2.23806 11.0442 2.90192L4.0823 9.86286L10.5052 16.5191C11.157 17.1948 11.1367 18.2715 10.4612 18.9234C9.78564 19.5746 8.7106 19.5554 8.05887 18.8804L0.476835 11.024C-0.166651 10.357 -0.15791 9.29576 0.497343 8.6402L8.63992 0.497626Z" fill="#111" transform="translate(6.3 2.3)"></path></svg></button><h1 style="color: rgb(17, 17, 17);">Create</h1><div></div></header><section class="index__diy-composer___QWM_0 index__has-bottom-bar___QWM_0 index__chat-style___QWM_0 index__classic-active___QWM_0"><div class="applet_limit_warning__applet-limit-bar___dEntY"><span class="body-caption">You’re using 0 of 2 Applets.</span><button type="button" class="button-tertiary button-outlined button-with-icon">Upgrade for more Applets<span class="button-icon"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.4756 0.475739C12.1101 -0.15858 13.1399 -0.158579 13.7744 0.475739L22.0244 8.72574C22.329 9.03038 22.4999 9.44435 22.5 9.87515C22.5 10.306 22.329 10.7199 22.0244 11.0246L13.7744 19.2746C13.1398 19.9091 12.1102 19.9091 11.4756 19.2746C10.8412 18.64 10.8411 17.6103 11.4756 16.9757L16.9521 11.5002H1.625C0.727569 11.5002 5.17315e-05 10.7726 0 9.87515C0.00022966 8.97789 0.727679 8.25015 1.625 8.25015H16.9521L11.4756 2.77457C10.8412 2.13996 10.8411 1.11027 11.4756 0.475739Z" fill="#111" transform="translate(0.75 2.12)"></path></svg></span></button></div><ul class="index__creation-mode-switcher___QWM_0"><li><button type="button" class="text-h5">Chat</button></li><li class="index__selected___QWM_0"><button type="button" class="text-h5">Classic</button></li></ul><section class="index__mode-containers___QWM_0" style="display: none; flex-direction: column;"><section class="intro__chat-section___AEzCo"><h1 class="intro__heading___AEzCo">What would you like to automate today?</h1><div class="intro__input-area___AEzCo"><div class="intro__chat-field___AEzCo"><textarea placeholder="Describe what you’d like to build" rows="1" maxlength="500" style="height: 37px;"></textarea><div class="intro__actions___AEzCo"><button id="continue" disabled class="intro__start-building___AEzCo"><span>Start building</span><span class="intro__arrow-icon___AEzCo"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.5882 4L17 9.5M17 9.5L11.5882 15M17 9.5H4" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></button></div></div></div><div class="intro__examples___AEzCo"><p>Try these examples</p><ul><li><button>If there’s a new Tweet with keyword, add to sheets.</button></li><li><button>If I miss a phone call, then send myself an email.</button></li><li><button>If an RSS feed has a new item, send me a notification.</button></li></ul></div></section></section><section class="index__mode-containers___QWM_0" style="display: block;"><section class="initial_step__diy-block___8is5_"><section class="diy_tanda_selected__tanda-select-block___VAKpM"><span class="diy_tanda_selected__label___VAKpM">if this</span><button class="button-tertiary button-on-color">Add</button></section><div class="initial_step__separator___8is5_"></div><div class="initial_step__separator___8is5_"></div><section class="diy_tanda_selected__tanda-select-block___VAKpM diy_tanda_selected__disabled___VAKpM"><span class="diy_tanda_selected__label___VAKpM">then that</span><button disabled class="button-tertiary">Add</button></section></section></section></section></div></div>
+
+
+    </main>
+  </div>
+
+  
+
+  
+
+      <span></span>
+
+
+
+  
+
+  <div id="react-portal-container"></div>
+
+  
+
+  
+  
+
+
+  <div id="zendesk-widget-button" class="chat-style">
+    <span class="button help-button">
+      <span class="icon icon-upper-right">
+          <svg viewbox="0 0 12.5386 21.671" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-help" style="width: 20px; height: 20px"><path d="M2.53434 13.4776C2.53434 14.5463 3.09838 15.1103 4.16709 15.1103H5.85921C6.77948 15.1103 7.19509 14.8432 7.4029 14.0416L7.49196 13.6854C7.71118 12.7854 8.52233 12.0783 9.43218 11.2851L9.43219 11.2851C10.8633 10.0375 12.5386 8.57706 12.5386 5.81851 12.5386 1.98898 8.94659 0 5.62172 0 3.39525 0 1.73281.771843.693792 1.45463-.196797 2.01867-.167111 2.76083.426615 3.62173L1.13909 4.69043C1.70313 5.52165 2.6234 5.52165 3.54368 5.07636 4.01866 4.83887 4.55301 4.66075 5.08737 4.66075 6.21545 4.66075 7.19509 5.40291 7.19509 6.41224 7.19509 7.4814 6.20143 8.33537 5.13172 9.2547 3.88471 10.3264 2.53434 11.4869 2.53434 13.1807V13.4776ZM2.65309 18.8508V20.0383C2.65309 21.107 3.21713 21.671 4.28583 21.671H5.71078C6.77948 21.671 7.34353 21.107 7.34353 20.0383V18.8508C7.34353 17.7821 6.77948 17.2181 5.71078 17.2181H4.28583C3.21713 17.2181 2.65309 17.7821 2.65309 18.8508Z" fill="#111"></path></svg>
+      </span>
+      <span class="icon icon-default">
+        <svg width="20" height="20" viewbox="0 0 20 20" aria-hidden="true"><g id="Layer_4"><path d="M11,12.3V13c0,0-1.8,0-2,0v-0.6c0-0.6,0.1-1.4,0.8-2.1c0.7-0.7,1.6-1.2,1.6-2.1c0-0.9-0.7-1.4-1.4-1.4 c-1.3,0-1.4,1.4-1.5,1.7H6.6C6.6,7.1,7.2,5,10,5c2.4,0,3.4,1.6,3.4,3C13.4,10.4,11,10.8,11,12.3z"></path><circle cx="10" cy="15" r="1"></circle><path d="M10,2c4.4,0,8,3.6,8,8s-3.6,8-8,8s-8-3.6-8-8S5.6,2,10,2 M10,0C4.5,0,0,4.5,0,10s4.5,10,10,10s10-4.5,10-10S15.5,0,10,0 L10,0z"></path></g></svg>
+      </span>
+      <span class="title">
+        Help
+      </span>
+    </span>
+  </div>
+
+    
+
+  
+
+
+
+<script src="/local.js" defer></script></body></html>

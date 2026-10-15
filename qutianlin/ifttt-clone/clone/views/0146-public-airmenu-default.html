@@ -1,0 +1,1535 @@
+<!doctype html>
+<html lang="en"><head>
+  <link rel="preload" href="/assets/asset-000002.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000004.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/assets/asset-000003.woff2" as="font" type="font/woff2">
+
+<style>
+/* IFTTT.ai rebrand — Museo Sans Rounded (site-wide base font). One @font-face per Museo cut; */
+/* CSS font-weight == the cut number (300 Light / 500 Regular / 700 body / 900 headings). */
+/* NB: map by cut name, not the weight Figma's inspect panel shows — a designer's desktop copy */
+/* may report ~200 less (700 for the 900 cut); these files carry OS/2 weight == cut number. */
+
+/* Museo Sans Rounded 300 (light) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 300;
+  src: url("/assets/dependency-000100.woff2") format("woff2"),
+    url("/assets/dependency-000101.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 500 (regular) — covers CSS 400–600 */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 500 600;
+  src: url("/assets/asset-000002.woff2") format("woff2"),
+    url("/assets/dependency-000102.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 700 (body) */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 700;
+  src: url("/assets/asset-000004.woff2") format("woff2"),
+    url("/assets/dependency-000104.woff") format("woff");
+  font-display: swap;
+}
+
+/* Museo Sans Rounded 900 (black) — display headings */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-weight: 900;
+  src: url("/assets/asset-000003.woff2") format("woff2"),
+    url("/assets/dependency-000106.woff") format("woff");
+  font-display: swap;
+}
+
+/* Metric-matched fallback for the swap window: Avenir Next scaled to the Museo advance widths, with */
+/* the Museo line box (hhea 940/-260 divided by size-adjust), so the change to Museo moves no layout. */
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 500 600;
+  src: local("Avenir Next Medium"), local("AvenirNext-Medium");
+  size-adjust: 98.0%;
+  ascent-override: 95.92%;
+  descent-override: 26.53%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 700;
+  src: local("Avenir Next Bold"), local("AvenirNext-Bold");
+  size-adjust: 94.5%;
+  ascent-override: 99.47%;
+  descent-override: 27.51%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Museo Sans Rounded Fallback";
+  font-weight: 900;
+  src: local("Avenir Next Heavy"), local("AvenirNext-Heavy");
+  size-adjust: 90.2%;
+  ascent-override: 104.21%;
+  descent-override: 28.82%;
+  line-gap-override: 0%;
+}
+
+/* Museo Sans Rounded 500 / 700 italic — fetched only by pages that set font-style: italic. */
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 500 600;
+  src: url("/assets/asset-000981.woff2") format("woff2"),
+    url("/assets/dependency-000103.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Rounded";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/asset-001589.woff2") format("woff2"),
+    url("/assets/dependency-000105.woff") format("woff");
+  font-display: swap;
+}
+</style>
+
+  <!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+
+  
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0">
+<meta name="mobile-web-app-capable" content="yes">
+
+
+
+
+  <title>AirMenu Integrations - Connect Your Apps with IFTTT</title>
+<meta name="description" content="Integrate AirMenu with over 1,000 of your favorite apps &amp; devices to unlock powerful automations on IFTTT. Get started today!">
+<meta name="keywords" content="ifttt airmenu integrations applets button widget gmail">
+<meta property="al:ios:url" content="ifttt://">
+<meta property="al:ios:app_store_id" content="660944635">
+<meta property="al:ios:app_name" content="IFTTT">
+<meta property="fb:app_id" content="122259781154546">
+<meta property="fb:admins" content="7302486">
+<meta property="og:title" content="AirMenu Integrations - Connect Your Apps with IFTTT">
+<meta property="og:description" content="Integrate AirMenu with over 1,000 of your favorite apps &amp; devices to unlock powerful automations on IFTTT. Get started today!">
+<meta property="og:site_name" content="IFTTT">
+<meta property="og:url" content="https://ifttt.com/airmenu">
+<meta property="og:image" content="https://screenshots.ifttt.com/service_embeds/airmenu/image">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:image:alt" content="AirMenu - IFTTT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@IFTTT">
+<meta name="twitter:image" content="https://screenshots.ifttt.com/service_embeds/airmenu/image">
+<meta name="twitter:app:id:iphone" content="660944635">
+<meta name="twitter:app:id:ipad" content="660944635">
+<meta name="twitter:app:id:googleplay" content="com.ifttt.ifttt">
+<meta name="twitter:app:url:iphone" content="ifttt://">
+<meta name="twitter:app:url:ipad" content="ifttt://">
+<meta name="twitter:app:url:googleplay" content="ifttt://">
+<meta name="twitter:app:name:googleplay" content="IFTTT">
+<meta name="twitter:image:alt" content="AirMenu - IFTTT">
+<meta name="author" content="IFTTT">
+<meta name="copyright" content="Copyright 2026 IFTTT Inc.">
+<meta name="theme-color" content="">
+<meta name="facebook-domain-verification" content="tapueff3rri63aug9c5b7hapbv3mkv">
+
+<!-- Standard SVG Favicon -->
+<link rel="icon" href="/assets/dependency-000091.svg" type="image/svg+xml">
+
+<!-- For all Apple Devices: -->
+<link rel="apple-touch-icon" href="/assets/dependency-000081.png">
+
+<!-- For Windows 8: -->
+<meta name="msapplication-TileImage" content="https://web-assets.ifttt.com/builds/assets/pinned-Dpomu1wG.png">
+<meta name="msapplication-TileColor" content="#111">
+
+
+
+
+  
+  <link rel="stylesheet" href="/assets/asset-000692.css">
+    <style>
+    .how-to-connect {
+      /* brand @ 10% over the white page (light section tint) */
+      background-color: #7db9011A;
+
+      .connect-header {
+        span {
+          /* Figma: tag = brand @ 10% (stacks over the section's 10%), text = full brand. */
+          background-color: #7db9011A;
+          color: #7db901;
+        }
+      }
+      .connect-steps .connect-step-image {
+        span.applet-card, span.connect-button {
+          svg circle { fill: #7db901; }
+        }
+
+        span.applet-card {
+          svg {
+            fill: #7db901;
+            rect:first-of-type { fill: #7db9011A; }
+          }
+          &:before { background: url("/assets/asset-000313.bin") no-repeat center center / contain; }
+          &:after { background: url("/assets/asset-000261.bin") no-repeat center center / contain; }
+        }
+
+        span.connect-accounts {
+          &:before { background: #111 url("/assets/asset-001407.svg") no-repeat center center / 24px; }
+          &:after { background: #7db901 url("/assets/asset-000313.bin") no-repeat center center / 24px; }
+        }
+      }
+    }
+  </style>
+
+<link rel="stylesheet" href="/local.css"></head>
+
+<body class="services-body show-action  service-landing-page web-body" style="background-color: rgb(125, 185, 1);" data-local-route="/airmenu" data-local-actor="anonymous" data-local-state="default">
+    <!-- Google Tag Manager (noscript) -->
+  <noscript></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  
+
+
+  
+
+  
+
+
+  
+
+  
+
+    
+<header class="unified-header on-color signed-out" style="background-color: #7db901">
+  <div class="container header">
+    <section class="left-group">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/">
+  <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt" style="fill: white"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>
+        <div class="search-container">
+          <div id="universal-search" class="ifttt-search on-color">
+<input id="universal-search-input" class="ifttt-search-input" type="search" aria-label="Search" placeholder="Search for Applets, services, etc." maxlength="1024" autocomplete="off" spellcheck="false">
+  <span class="icon search">
+    <svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" title="Search"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.299 10.571C17.299 8.71905 16.64 7.13505 15.324 5.81905C14.008 4.50205 12.424 3.84405 10.571 3.84405C8.71905 3.84405 7.13505 4.50205 5.81905 5.81905C4.50205 7.13505 3.84405 8.71905 3.84405 10.571C3.84405 12.423 4.50205 14.008 5.81905 15.324C7.13505 16.64 8.71905 17.299 10.571 17.299C12.423 17.299 14.008 16.64 15.324 15.324C16.64 14.008 17.299 12.424 17.299 10.571ZM24.987 23.065C24.987 23.585 24.797 24.035 24.417 24.416C24.036 24.796 23.585 24.986 23.065 24.986C22.525 24.986 22.074 24.796 21.713 24.416L16.563 19.281C14.771 20.522 12.773 21.143 10.571 21.143C9.14005 21.143 7.77105 20.865 6.46405 20.309C5.15805 19.754 4.03205 19.003 3.08605 18.057C2.14005 17.111 1.38905 15.985 0.833046 14.678C0.279261 13.3799 -0.00417164 11.9824 4.63958e-05 10.571C4.63958e-05 9.14005 0.278046 7.77105 0.833046 6.46405C1.38905 5.15805 2.14005 4.03205 3.08605 3.08605C4.03205 2.14005 5.15805 1.38905 6.46405 0.833046C7.76224 0.279261 9.15967 -0.00417164 10.571 4.63958e-05C12.003 4.63958e-05 13.371 0.278046 14.678 0.833046C15.985 1.38905 17.111 2.14005 18.057 3.08605C19.003 4.03205 19.754 5.15805 20.309 6.46405C20.865 7.77105 21.143 9.14005 21.143 10.571C21.143 12.774 20.523 14.771 19.281 16.563L24.431 21.713C24.801 22.083 24.987 22.534 24.987 23.065V23.065Z" fill="#111"></path></svg>
+  </span>
+  <span class="icon clean-search">
+    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-x"><rect width="24" height="24" rx="8" fill="#111" fill-opacity="0.06"></rect><path d="M15.2803 7.30566C15.6637 6.90826 16.2969 6.89686 16.6943 7.28027C17.0917 7.66374 17.1031 8.2969 16.7197 8.69433L13.3892 12.145L16.439 15.3057C16.8225 15.7031 16.8115 16.3362 16.4141 16.7197C16.0166 17.1032 15.3835 17.0918 15 16.6943L12 13.585L9 16.6943C8.6165 17.0918 7.98336 17.1032 7.58594 16.7197C7.18851 16.3362 7.17754 15.7031 7.56103 15.3057L10.6104 12.145L7.28027 8.69433C6.89686 8.2969 6.90826 7.66374 7.30566 7.28027C7.7031 6.89686 8.33626 6.90826 8.71973 7.30566L12 10.7051L15.2803 7.30566Z" fill="#666"></path></svg>
+  </span>
+
+  
+            <section class="universal-search-helper">
+  <div class="default-recommendations">
+    <section class="recent-searches hide">
+      <span class="universal-search-helper-title">Recent</span>
+      <ul class="universal-search-helper-list">
+        <li class="loading-dots"><img loading="lazy" fetchpriority="low" width="150" height="343" title="Loading-dots" alt="Loading-dots icon" src="/assets/asset-000006.gif"></li>
+      </ul>
+    </section>
+
+      <section class="recommended-services">
+        <span class="universal-search-helper-title">Recommendations</span>
+        <ul class="universal-search-helper-list">
+            <li>
+              <a href="/maker_webhooks">
+                <div class="recent-search-icon" style="background-color: #0099ff">
+                  <img alt="Webhooks" title="Webhooks" width="24" height="24" loading="lazy" src="/assets/asset-000035.bin">
+                </div>
+                <span class="recent-search-text">Webhooks</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/twitter">
+                <div class="recent-search-icon" style="background-color: #000000">
+                  <img alt="X (Twitter)" title="X (Twitter)" width="24" height="24" loading="lazy" src="/assets/asset-000036.bin">
+                </div>
+                <span class="recent-search-text">X (Twitter)</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/youtube">
+                <div class="recent-search-icon" style="background-color: #FF0000">
+                  <img alt="YouTube" title="YouTube" width="24" height="24" loading="lazy" src="/assets/asset-000037.bin">
+                </div>
+                <span class="recent-search-text">YouTube</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/discord">
+                <div class="recent-search-icon" style="background-color: #5865f2">
+                  <img alt="Discord" title="Discord" width="24" height="24" loading="lazy" src="/assets/asset-000038.bin">
+                </div>
+                <span class="recent-search-text">Discord</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/google_sheets">
+                <div class="recent-search-icon" style="background-color: #23448b">
+                  <img alt="Google Sheets" title="Google Sheets" width="24" height="24" loading="lazy" src="/assets/asset-000039.bin">
+                </div>
+                <span class="recent-search-text">Google Sheets</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/myq_devices">
+                <div class="recent-search-icon" style="background-color: #009CDE">
+                  <img alt="MyQ" title="MyQ" width="24" height="24" loading="lazy" src="/assets/asset-000040.bin">
+                </div>
+                <span class="recent-search-text">MyQ</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/gmail">
+                <div class="recent-search-icon" style="background-color: #23448b">
+                  <img alt="Gmail" title="Gmail" width="24" height="24" loading="lazy" src="/assets/asset-000041.bin">
+                </div>
+                <span class="recent-search-text">Gmail</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+            <li>
+              <a href="/instagram">
+                <div class="recent-search-icon" style="background-color: #e4405f">
+                  <img alt="Instagram" title="Instagram" width="24" height="24" loading="lazy" src="/assets/asset-000042.bin">
+                </div>
+                <span class="recent-search-text">Instagram</span>
+                <div class="recent-search-result-type">Service</div>
+</a>            </li>
+        </ul>
+      </section>
+  </div>
+
+  <section class="search-preview">
+    <ul class="universal-search-helper-list">
+      <li class="loading-dots"><img loading="lazy" fetchpriority="low" width="150" height="343" title="Loading-dots" alt="Loading-dots icon" src="/assets/asset-000006.gif"></li>
+    </ul>
+  </section>
+
+  <a class="search-navigation" href="#">
+    <span>See all results</span>
+    <svg width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg" title="Arrow-right"><g clip-path="url(#clip0_52729_108402)"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.42027 0.46167L12.0564 5.84166L6.42027 11.2216L4.86156 9.73378L7.83645 6.8941H0.984375V4.78921H7.83645L4.86155 1.94954L6.42027 0.46167Z" fill="#09F"></path></g><defs><clippath id="clip0_52729_108402"><rect width="12" height="12" fill="#fff" transform="translate(0.5)"></rect></clippath></defs></svg>
+</a></section>
+
+
+</div>          <div class="mobile-close-search-icon">
+            <svg width="24" height="25" viewbox="0 0 11 11" xmlns="http://www.w3.org/2000/svg" class="close-icon">
+              <title>Close menu</title>
+              <g stroke="#111" stroke-width="2.5" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                <path d="M1.598 1.598l7.717 7.717M9.447 1.598L1.73 9.315"></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+    </section>
+
+      <section class="right-group signed-out">
+        <a class="nav-link link-menu" title="Explore" href="/explore">
+          Explore
+</a>
+        <a class="nav-link link-menu" title="Plans" href="/plans">
+          Plans
+</a>
+        <a class="sign-in button-tertiary button-outlined button-on-color" href="/login">Log in</a>
+
+          <a title="Get started" class="button-tertiary  sign-up signed-out" href="/join?source=site-header">
+            Get started
+</a>          <span class="mobile-icon-search">
+            <svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" title="Search"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.299 10.571C17.299 8.71905 16.64 7.13505 15.324 5.81905C14.008 4.50205 12.424 3.84405 10.571 3.84405C8.71905 3.84405 7.13505 4.50205 5.81905 5.81905C4.50205 7.13505 3.84405 8.71905 3.84405 10.571C3.84405 12.423 4.50205 14.008 5.81905 15.324C7.13505 16.64 8.71905 17.299 10.571 17.299C12.423 17.299 14.008 16.64 15.324 15.324C16.64 14.008 17.299 12.424 17.299 10.571ZM24.987 23.065C24.987 23.585 24.797 24.035 24.417 24.416C24.036 24.796 23.585 24.986 23.065 24.986C22.525 24.986 22.074 24.796 21.713 24.416L16.563 19.281C14.771 20.522 12.773 21.143 10.571 21.143C9.14005 21.143 7.77105 20.865 6.46405 20.309C5.15805 19.754 4.03205 19.003 3.08605 18.057C2.14005 17.111 1.38905 15.985 0.833046 14.678C0.279261 13.3799 -0.00417164 11.9824 4.63958e-05 10.571C4.63958e-05 9.14005 0.278046 7.77105 0.833046 6.46405C1.38905 5.15805 2.14005 4.03205 3.08605 3.08605C4.03205 2.14005 5.15805 1.38905 6.46405 0.833046C7.76224 0.279261 9.15967 -0.00417164 10.571 4.63958e-05C12.003 4.63958e-05 13.371 0.278046 14.678 0.833046C15.985 1.38905 17.111 2.14005 18.057 3.08605C19.003 4.03205 19.754 5.15805 20.309 6.46405C20.865 7.77105 21.143 9.14005 21.143 10.571C21.143 12.774 20.523 14.771 19.281 16.563L24.431 21.713C24.801 22.083 24.987 22.534 24.987 23.065V23.065Z" fill="#111"></path></svg>
+          </span>
+      </section>
+      <section class="mobile-icon">
+        
+<span id="unified_mobile_menu" role="button" class="closed" tabindex="0">
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hamburger-icon">
+    <title>Mobile menu</title>
+    <g fill="white" id="mobile-hamburger-icon">
+      <path d="M19.6504 15C20.5617 15 21.3008 15.7391 21.3008 16.6504C21.3008 17.5617 20.5617 18.3008 19.6504 18.3008H1.65039C0.739121 18.3008 0 17.5617 0 16.6504C0 15.7391 0.739121 15 1.65039 15H19.6504ZM19.6504 7.5C20.5617 7.5 21.3008 8.23912 21.3008 9.15039C21.3008 10.0617 20.5617 10.8008 19.6504 10.8008H1.65039C0.739121 10.8008 0 10.0617 0 9.15039C0 8.23912 0.739121 7.5 1.65039 7.5H19.6504ZM19.6504 0C20.5617 0 21.3008 0.739121 21.3008 1.65039C21.3008 2.56166 20.5617 3.30078 19.6504 3.30078H1.65039C0.739121 3.30078 0 2.56166 0 1.65039C0 0.739121 0.739121 0 1.65039 0H19.6504Z" transform="translate(1.35 2.85)"></path>
+    </g>
+  </svg>
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="close-icon">
+    <title>Close menu</title>
+    <path fill="white" d="M16.4901 0.535065C17.1612 -0.160319 18.2692 -0.180639 18.9648 0.490143C19.66 1.16128 19.6797 2.26933 19.0087 2.96475L12.1815 10.0399L18.4482 16.5351C19.1189 17.2305 19.0993 18.3377 18.4042 19.0087C17.7088 19.6797 16.6007 19.66 15.9296 18.9648L9.74991 12.5595L3.57022 18.9648C2.89918 19.6602 1.79112 19.6796 1.09561 19.0087C0.400326 18.3376 0.380671 17.2305 1.05167 16.5351L7.31729 10.0399L0.490143 2.96475C-0.180639 2.26923 -0.160319 1.16115 0.535065 0.490143C1.23058 -0.180569 2.3377 -0.16026 3.0087 0.535065L9.74893 7.52042L16.4901 0.535065Z" transform="translate(2.25 2.25)"></path>
+  </svg>
+</span>
+
+
+      </section>
+  </div>
+
+</header>
+
+
+  <div id="flash-messages">
+    
+  </div>
+
+  <div class="after-header-content">
+     <section class="service-header">
+
+  
+<div class="secondary-header">
+  <div class="secondary-header-row">
+    <div class="secondary-header-back">
+<a title="Back button" class="button-tertiary button-outlined button-with-icon only-icon-on-mobile back-button-fixed button-on-color" aria-label="Back button" href="/explore">
+  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="button-icon" title="Chevron-left-white"><path d="M8.63995 0.497476C9.30364 -0.166035 10.3804 -0.165615 11.0442 0.497476C11.708 1.16132 11.7079 2.23791 11.0442 2.90177L4.08233 9.86271L10.5052 16.519C11.157 17.1946 11.1367 18.2714 10.4612 18.9233C9.78569 19.5747 8.71072 19.5553 8.05889 18.8803L0.476862 11.0238C-0.166495 10.3567 -0.158088 9.29551 0.49737 8.64005L8.63995 0.497476Z" fill="#fff" transform="translate(6.3 2.3)"></path></svg>
+  <span class="hide-on-xs">Back</span>
+</a></div>
+
+      <div class="secondary-header-actions">    
+<div class="share-wrapper">
+  
+<div class="modal hidden">
+  <div class="modal-background">
+    <div class="modal-content">
+      <div class="section">
+            <div class="modal-close">
+    <svg height="11" viewbox="0 0 11 11" width="11" xmlns="http://www.w3.org/2000/svg" title="X"><path d="m1.598 1.598 7.717 7.717m.132-7.717-7.717 7.717" fill="none" stroke="#111" stroke-linecap="square" stroke-width="2"></path></svg>
+  </div>
+
+          <div class="share-modal">
+    <h4 class="hide-on-xs">Share this using the options below:</h4>
+    <input id="share-url-input-mobile" type="text" ,="" readonly class="share-url-input hide-on-xs">
+    <div class="mobile-share-title hide-above-xs">AirMenu</div>
+    <p class="txt-body-3 cta hide-above-xs">
+      Send this automation to anyone using the options below.
+    </p>
+    <div class="share-icons">
+      <a class="twitter" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Ftwitter.com%2Fintent%2Ftweet%3Furl%3Dhttps%3A%2F%2Fift.tt%2FJDdy2sR">
+        <span><svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" title="Twitter x icon"><rect width="56" height="56" rx="28" fill="#111"></rect><path d="M29.827 26.5299L36.9746 18.4H35.2809L29.0746 25.4591L24.1176 18.4H18.4004L25.8963 29.0746L18.4004 37.6H20.0942L26.6482 30.1454L31.8831 37.6H37.6004L29.8266 26.5299H29.827ZM27.507 29.1686L20.7046 19.6477H23.3062L35.2817 36.4091H32.68L27.507 29.169V29.1686Z" fill="#fff"></path></svg></span>
+</a>
+      <a class="facebook" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttps%3A%2F%2Fift.tt%2FJDdy2sR">
+        <span><svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" title="Facebook icon"><rect width="56" height="56" rx="28" fill="#111"></rect><g clip-path="url(#clip0_15309_3633)"><path d="M40 28.0724C40 21.4031 34.6293 16 28 16C21.3707 16 16 21.4031 16 28.0724C16 34.0979 20.3893 39.0932 26.1227 40V31.56H23.072V28.0724H26.1227V25.4111C26.1227 22.385 27.9147 20.7163 30.656 20.7163C31.968 20.7163 33.344 20.9524 33.344 20.9524V23.9195H31.8293C30.3413 23.9195 29.872 24.8478 29.872 25.8028V28.0671H33.2L32.6667 31.5547H29.872V39.9893C35.6107 39.0879 40 34.0979 40 28.0724Z" fill="#fff"></path></g><defs><clippath id="clip0_15309_3633"><rect width="24" height="24" fill="#fff" transform="translate(16 16)"></rect></clippath></defs></svg></span>
+</a>
+      <a class="linkedin" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.linkedin.com%2FshareArticle%3Fmini%3Dtrue%26url%3Dhttps%3A%2F%2Fift.tt%2FJDdy2sR">
+        <span><svg fill="none" height="56" viewbox="0 0 56 56" width="56" xmlns="http://www.w3.org/2000/svg" title="Linkedin icon"><rect fill="#111" height="56" rx="28" width="56"></rect><path clip-rule="evenodd" d="m19.6199 16c-1.6654 0-3.0203 1.3564-3.0203 3.0237 0 1.668 1.3549 3.0249 3.0203 3.0249 1.6642 0 3.018-1.357 3.018-3.0249 0-1.6673-1.3538-3.0237-3.018-3.0237zm2.287 7.3261h-4.5772c-.2031 0-.3677.165-.3677.3685v14.7369c0 .2036.1646.3686.3677.3686h4.5772c.2031 0 .3677-.165.3677-.3686v-14.7369c0-.2035-.1646-.3685-.3677-.3685zm7.6207 1.3254c.8243-.8999 2.1832-1.692 4.0216-1.692 5.1553 0 5.8504 3.7349 5.8504 7.3884v8.0834c0 .2036-.1646.3686-.3677.3686h-4.5688c-.2032 0-.3678-.165-.3678-.3686v-7.165c0-2.0061-.1479-3.5406-2.0091-3.5406-1.709 0-2.3749.9572-2.3749 3.4142v7.2913c0 .2036-.1646.3686-.3677.3686h-4.5671c-.2032 0-.3678-.165-.3678-.3686v-14.7368c0-.2036.1646-.3686.3678-.3686h4.3834c.2031 0 .3677.165.3677.3686z" fill="#fff" fill-rule="evenodd"></path></svg></span>
+</a>
+      <a class="reddit" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Freddit.com%2Fsubmit%3Furl%3Dhttps%3A%2F%2Fift.tt%2FJDdy2sR">
+        <span><svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" title="Reddit icon"><rect width="56" height="56" rx="28" fill="#111"></rect><path d="M28 40C21.3724 40 16 34.6276 16 28C16 21.3724 21.3724 16 28 16C34.6276 16 40 21.3724 40 28C40 34.6276 34.6276 40 28 40ZM36.004 28C35.9917 27.6622 35.8819 27.3352 35.6879 27.0584C35.4939 26.7817 35.2239 26.5669 34.9106 26.4401C34.5973 26.3132 34.254 26.2797 33.9221 26.3436C33.5902 26.4074 33.2839 26.566 33.04 26.8C31.6749 25.8721 30.0702 25.3594 28.42 25.324L29.2 21.58L31.768 22.12C31.7985 22.4038 31.9292 22.6674 32.1366 22.8635C32.3439 23.0596 32.6144 23.1754 32.8995 23.1901C33.1845 23.2047 33.4654 23.1173 33.6918 22.9435C33.9182 22.7697 34.0753 22.5209 34.1348 22.2418C34.1942 21.9626 34.1523 21.6714 34.0164 21.4204C33.8806 21.1694 33.6597 20.975 33.3934 20.8722C33.1272 20.7694 32.833 20.7648 32.5637 20.8594C32.2944 20.9539 32.0676 21.1413 31.924 21.388L28.984 20.8C28.9359 20.7895 28.8862 20.7886 28.8378 20.7974C28.7894 20.8062 28.7431 20.8245 28.7018 20.8513C28.6605 20.8781 28.625 20.9128 28.5972 20.9534C28.5694 20.994 28.55 21.0398 28.54 21.088L27.652 25.252C25.9815 25.2772 24.3547 25.7902 22.972 26.728C22.787 26.5539 22.5664 26.4222 22.3254 26.3419C22.0844 26.2616 21.8289 26.2346 21.5765 26.2629C21.324 26.2911 21.0808 26.3739 20.8635 26.5056C20.6463 26.6372 20.4603 26.8145 20.3184 27.0251C20.1765 27.2358 20.0821 27.4748 20.0417 27.7256C20.0013 27.9764 20.016 28.2329 20.0846 28.4775C20.1533 28.722 20.2743 28.9487 20.4392 29.1419C20.6042 29.335 20.8092 29.49 21.04 29.596C21.0265 29.7717 21.0265 29.9483 21.04 30.124C21.04 32.812 24.172 34.996 28.036 34.996C31.9 34.996 35.032 32.812 35.032 30.124C35.0455 29.9483 35.0455 29.7717 35.032 29.596C35.3281 29.4488 35.5765 29.2208 35.7485 28.9384C35.9206 28.656 36.0091 28.3306 36.004 28V28ZM24.004 29.2C24.004 28.8817 24.1304 28.5765 24.3555 28.3515C24.5805 28.1264 24.8857 28 25.204 28C25.5223 28 25.8275 28.1264 26.0525 28.3515C26.2776 28.5765 26.404 28.8817 26.404 29.2C26.404 29.5183 26.2776 29.8235 26.0525 30.0485C25.8275 30.2736 25.5223 30.4 25.204 30.4C24.8857 30.4 24.5805 30.2736 24.3555 30.0485C24.1304 29.8235 24.004 29.5183 24.004 29.2ZM30.976 32.5C30.1246 33.1416 29.0771 33.4681 28.012 33.424C26.9469 33.4681 25.8994 33.1416 25.048 32.5C24.997 32.4378 24.9709 32.3589 24.9748 32.2786C24.9788 32.1982 25.0125 32.1222 25.0693 32.0653C25.1262 32.0085 25.2022 31.9748 25.2826 31.9708C25.3629 31.9669 25.4418 31.993 25.504 32.044C26.2255 32.5732 27.1061 32.8399 28 32.8C28.895 32.8487 29.7797 32.5904 30.508 32.068C30.5387 32.0336 30.5761 32.0059 30.618 31.9866C30.6598 31.9673 30.7052 31.9569 30.7513 31.9559C30.7973 31.9548 30.8431 31.9633 30.8858 31.9808C30.9284 31.9982 30.967 32.0242 30.9992 32.0572C31.0314 32.0902 31.0564 32.1295 31.0728 32.1726C31.0891 32.2156 31.0964 32.2616 31.0943 32.3077C31.0921 32.3537 31.0805 32.3988 31.0601 32.4401C31.0398 32.4815 31.0111 32.5182 30.976 32.548V32.5V32.5ZM30.76 30.448C30.5227 30.448 30.2907 30.3776 30.0933 30.2458C29.896 30.1139 29.7422 29.9265 29.6513 29.7072C29.5605 29.4879 29.5368 29.2467 29.5831 29.0139C29.6294 28.7811 29.7436 28.5673 29.9115 28.3995C30.0793 28.2316 30.2931 28.1174 30.5259 28.0711C30.7587 28.0248 30.9999 28.0485 31.2192 28.1393C31.4385 28.2302 31.6259 28.384 31.7578 28.5813C31.8896 28.7787 31.96 29.0107 31.96 29.248C31.9665 29.4106 31.9399 29.5728 31.8818 29.7248C31.8236 29.8768 31.7352 30.0154 31.6218 30.1321C31.5085 30.2488 31.3725 30.3413 31.2223 30.4038C31.0721 30.4664 30.9107 30.4978 30.748 30.496L30.76 30.448Z" fill="#fff"></path></svg></span>
+</a>
+      <button class="copy button button-tertiary hide-on-xs">Copy</button>
+    </div>
+    <p class="txt-body-3 hide-above-xs">Or copy link</p>
+    <input id="share-url-input-desktop" type="text" readonly class="share-url-input hide-above-xs">
+    <button class="copy button button-primary hide-above-xs">Copy</button>
+  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <button aria-label="share" class="modal-open button-tertiary button-outlined button-with-icon
+            only-icon-on-mobile share-button-fixed share-button
+            button-on-color">
+    <span><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" title="Sharing icon"><path d="M20.6748 11.5C21.5998 11.5 22.3494 12.2499 22.3496 13.1748V18.6748C22.3495 20.7044 20.7044 22.3506 18.6748 22.3506H3.6748C1.64522 22.3506 0.000106414 20.7044 0 18.6748V13.1748C0.000201546 12.2499 0.749852 11.5 1.6748 11.5C2.59976 11.5 3.34941 12.2499 3.34961 13.1748V18.6748C3.34972 18.8543 3.49538 19 3.6748 19H18.6748C18.8542 19 18.9999 18.8543 19 18.6748V13.1748C19.0002 12.2499 19.7499 11.5 20.6748 11.5ZM10.0225 0.459029C10.6685 -0.15301 11.6811 -0.15301 12.3271 0.459029L17.0771 4.95903C17.7485 5.59526 17.7768 6.65569 17.1406 7.32719C16.5044 7.99854 15.444 8.02768 14.7725 7.39165L12.8496 5.5684V14.1748C12.8495 15.0998 12.0998 15.8506 11.1748 15.8506C10.2498 15.8506 9.50011 15.0998 9.5 14.1748V5.5684L7.57715 7.39165C6.90564 8.02768 5.84518 7.99854 5.20898 7.32719C4.57283 6.65569 4.60108 5.59527 5.27246 4.95903L10.0225 0.459029Z" fill="#fff" transform="translate(0.826 0.826)"></path></svg></span>
+    <span class="hide-on-xs">Share</span>
+  </button>
+</div>
+
+<div style="display: none;"></div>
+
+</div>
+  </div>
+
+</div>
+
+
+  <div class="brand-section">
+    <img class="large-service-logo" alt="AirMenu" title="AirMenu" height="128" width="128" loading="eager" src="/assets/asset-000313.bin">
+    <h1>Automate your AirMenu integrations</h1>
+    <div class="service-description">
+      <span class="">
+        <p>AirMenu and IFTTT let you automate actions based on customer orders, like triggering promotions or activating flags when someone buys something. The Web-app platform for developing solutions that handle customer’s orders and requests.
+AirMenu is a cloud platform where you can create your own applications/web pages with complex menus of services/products.
+AirMenu will generate a trigger when the customer buys a product/service.
+For example, if you buy an item to rent out a room, you can open the room's door.</p>
+
+      </span>
+    </div>
+
+      <a href="/external?url=https%3A%2F%2Fwww.info.airmenu.com%2F" target="_blank" rel="noopener noreferrer" class="text-h4 service-visit-link">
+        <img src="/assets/asset-001035.svg" alt="">
+        Visit AirMenu
+      </a>
+
+          <a class="button-primary button-on-color hide-on-xs" href="/airmenu/activation/start"><span>Get started today</span></a><a class="button-mobile-large button-on-color hide-above-xs" href="/airmenu/activation/start"><span>Get started today</span></a>
+  </div>
+</section>
+
+
+  </div>
+
+  <div class="page-canvas">
+    <main class="container web">
+        
+
+<style>
+.unified-header, .service-header {
+  background-color: #7db901;
+}
+</style>
+
+
+
+
+
+<div class="tab-content filters hide" role="tablist">
+</div>
+
+<section class="popular-applets ">
+  <h2 class="services">Popular AirMenu workflows &amp; automations</h2>
+  <div id="popular-applets-search" class="ifttt-search ">
+<input id="popular-applets-search-input" class="ifttt-search-input" type="search" aria-label="Search" placeholder="Search for AirMenu workflows" maxlength="1024" autocomplete="off" spellcheck="false">
+  <span class="icon search">
+    <svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" title="Search"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.299 10.571C17.299 8.71905 16.64 7.13505 15.324 5.81905C14.008 4.50205 12.424 3.84405 10.571 3.84405C8.71905 3.84405 7.13505 4.50205 5.81905 5.81905C4.50205 7.13505 3.84405 8.71905 3.84405 10.571C3.84405 12.423 4.50205 14.008 5.81905 15.324C7.13505 16.64 8.71905 17.299 10.571 17.299C12.423 17.299 14.008 16.64 15.324 15.324C16.64 14.008 17.299 12.424 17.299 10.571ZM24.987 23.065C24.987 23.585 24.797 24.035 24.417 24.416C24.036 24.796 23.585 24.986 23.065 24.986C22.525 24.986 22.074 24.796 21.713 24.416L16.563 19.281C14.771 20.522 12.773 21.143 10.571 21.143C9.14005 21.143 7.77105 20.865 6.46405 20.309C5.15805 19.754 4.03205 19.003 3.08605 18.057C2.14005 17.111 1.38905 15.985 0.833046 14.678C0.279261 13.3799 -0.00417164 11.9824 4.63958e-05 10.571C4.63958e-05 9.14005 0.278046 7.77105 0.833046 6.46405C1.38905 5.15805 2.14005 4.03205 3.08605 3.08605C4.03205 2.14005 5.15805 1.38905 6.46405 0.833046C7.76224 0.279261 9.15967 -0.00417164 10.571 4.63958e-05C12.003 4.63958e-05 13.371 0.278046 14.678 0.833046C15.985 1.38905 17.111 2.14005 18.057 3.08605C19.003 4.03205 19.754 5.15805 20.309 6.46405C20.865 7.77105 21.143 9.14005 21.143 10.571C21.143 12.774 20.523 14.771 19.281 16.563L24.431 21.713C24.801 22.083 24.987 22.534 24.987 23.065V23.065Z" fill="#111"></path></svg>
+  </span>
+  <span class="icon clean-search">
+    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-x"><rect width="24" height="24" rx="8" fill="#111" fill-opacity="0.06"></rect><path d="M15.2803 7.30566C15.6637 6.90826 16.2969 6.89686 16.6943 7.28027C17.0917 7.66374 17.1031 8.2969 16.7197 8.69433L13.3892 12.145L16.439 15.3057C16.8225 15.7031 16.8115 16.3362 16.4141 16.7197C16.0166 17.1032 15.3835 17.0918 15 16.6943L12 13.585L9 16.6943C8.6165 17.0918 7.98336 17.1032 7.58594 16.7197C7.18851 16.3362 7.17754 15.7031 7.56103 15.3057L10.6104 12.145L7.28027 8.69433C6.89686 8.2969 6.90826 7.66374 7.30566 7.28027C7.7031 6.89686 8.33626 6.90826 8.71973 7.30566L12 10.7051L15.2803 7.30566Z" fill="#666"></path></svg>
+  </span>
+
+  
+</div>
+
+  <section class="discover_applets ">
+        <ul class="web-applet-cards">
+      <li class="my-web-applet-card web-applet-card">
+        <a class="applet-card-body spec-prefetch sized-applet-card responsive-small-or-large" href="/applets/cudsxSce-push-items-with-switchbot-when-a-new-airmenu-order-arrives" style="background-color: #7db901;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="AirMenu" title="AirMenu" src="/assets/asset-001463.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="SwitchBot" title="SwitchBot" src="/assets/asset-001461.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span>Push items with SwitchBot when a new AirMenu order arrives</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">AirMenu</span>
+    </div>
+  </div>
+  <div class="meta"></div></a>
+</li>      <li class="my-web-applet-card web-applet-card">
+        <a class="applet-card-body spec-prefetch sized-applet-card responsive-small-or-large" href="/applets/cH8EVn9a-save-new-airmenu-orders-to-dropbox-as-text-files" style="background-color: #7db901;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="AirMenu" title="AirMenu" src="/assets/asset-001463.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Dropbox" title="Dropbox" src="/assets/asset-000079.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span>Save new AirMenu orders to Dropbox as text files</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">AirMenu</span>
+    </div>
+  </div>
+  <div class="meta badged">
+    <span title="Applet has pro features" class="card-badge">
+        <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#111"></path></svg>
+    </span>
+</div></a>
+</li>      <li class="my-web-applet-card web-applet-card">
+        <a class="applet-card-body spec-prefetch sized-applet-card responsive-small-or-large" href="/applets/z3dHuwcR-add-spotify-track-when-a-new-airmenu-order-is-placed" style="background-color: #7db901;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="AirMenu" title="AirMenu" src="/assets/asset-001463.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Spotify" title="Spotify" src="/assets/asset-000023.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span>Add Spotify track when a new AirMenu order is placed</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">AirMenu</span>
+    </div>
+  </div>
+  <div class="meta"></div></a>
+</li>      <li class="my-web-applet-card web-applet-card">
+        <a class="applet-card-body spec-prefetch sized-applet-card responsive-small-or-large" href="/applets/Ka2MqtCk-turn-on-smart-life-device-when-a-new-airmenu-order-is-placed" style="background-color: #7db901;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="AirMenu" title="AirMenu" src="/assets/asset-001463.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Smart Life" title="Smart Life" src="/assets/asset-001056.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span>Turn on Smart Life device when a new AirMenu order is placed</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">AirMenu</span>
+    </div>
+  </div>
+  <div class="meta"></div></a>
+</li>      <li class="my-web-applet-card web-applet-card">
+        <a class="applet-card-body spec-prefetch sized-applet-card responsive-small-or-large" href="/applets/J2XNKjgk-add-new-airmenu-orders-to-google-calendar" style="background-color: #7db901;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="AirMenu" title="AirMenu" src="/assets/asset-001463.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Google Calendar" title="Google Calendar" src="/assets/asset-000070.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span>Add new AirMenu orders to Google Calendar</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">AirMenu</span>
+    </div>
+  </div>
+  <div class="meta"></div></a>
+</li>      <li class="my-web-applet-card web-applet-card">
+        <a class="applet-card-body spec-prefetch sized-applet-card responsive-small-or-large" href="/applets/cXHNZ6hs-open-garagewifi-door-when-a-new-airmenu-order-arrives" style="background-color: #7db901;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="AirMenu" title="AirMenu" src="/assets/asset-001463.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="GarageWiFi &amp; Gates" title="GarageWiFi &amp; Gates" src="/assets/asset-001462.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span>Open GarageWiFi door when a new AirMenu order arrives</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">AirMenu</span>
+    </div>
+  </div>
+  <div class="meta"></div></a>
+</li>      <li class="my-web-applet-card web-applet-card">
+        <a class="applet-card-body spec-prefetch sized-applet-card responsive-small-or-large" href="/applets/sDZ2qehr-email-me-when-a-new-airmenu-order-is-received" style="background-color: #7db901;">
+  <div class="meta-header">
+    <div class="works-with">
+  <ul class="permissions">
+      <li>
+        <img width="48" height="48" loading="lazy" alt="AirMenu" title="AirMenu" src="/assets/asset-001463.bin">
+      </li>
+      <li>
+        <img width="48" height="48" loading="lazy" alt="Email" title="Email" src="/assets/asset-000027.bin">
+      </li>
+      </ul>
+</div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <span>Email me when a new AirMenu order is received</span>
+    </div>
+        <div class="owner plain">
+      <span class="author">AirMenu</span>
+    </div>
+  </div>
+  <div class="meta"></div></a>
+</li>  </ul>
+  <div class="button-container">
+  </div>
+
+    <img class="loading-dots" width="150" height="343" title="Loading-dots" alt="Loading-dots icon" loading="eager" src="/assets/asset-000006.gif">
+</section>
+  <section class="discover_applets_search hide">
+    <img class="loading-dots" width="150" height="343" title="Loading-dots" alt="Loading-dots icon" loading="eager" src="/assets/asset-000006.gif">
+</section></section>
+
+<section class="tqas-module">
+  <h2>Create your own AirMenu workflow</h2>
+  <p class="body-small">
+    Create custom workflows effortlessly by selecting triggers, queries, and actions.
+    With IFTTT, it's simple: “If this” trigger happens, “then that” action follows.
+    Streamline tasks and save time with automated workflows that work for you.
+  </p>
+  <div class="tqas-ui">
+    <nav class="tqas-tab-nav" role="tablist">
+        <a href="#" role="tab" class="tqa-tab active ">
+          <span class="text-h3 tab-title">All <span class="tqa-tab-count">(6)</span></span>
+        </a>
+        <a href="#" role="tab" class="tqa-tab  ">
+          <span class="text-h3 tab-title">Triggers <span class="tqa-tab-count">(2)</span></span>
+        </a>
+        <a href="#" role="tab" class="tqa-tab  ">
+          <span class="text-h3 tab-title">Queries <span class="tqa-tab-count">(1)</span></span>
+        </a>
+        <a href="#" role="tab" class="tqa-tab  ">
+          <span class="text-h3 tab-title">Actions <span class="tqa-tab-count">(3)</span></span>
+        </a>
+    </nav>
+    <div class="tqas-contents">
+      <p class="body-small tqa-count">
+        6
+        triggers, queries, and actions
+      </p>
+        <div class="tqas-tab-panel ">
+
+          <div class="tqas-initial-items">
+              <div class="tqa-card">
+  <div class="tqa-card-header">
+    <span class="tqa-card-icon" title="AirMenu" style='background-color: #7db901; background-image: url("/assets/asset-000313.bin");'>
+    </span>
+    <div class="tqa-card-content">
+      <div class="tqa-card-title-container">
+        <h4 class="tqa-card-title">An AirMenu flag was activated</h4>
+      </div>
+      <div class="tqa-card-desc-container">
+        <span class="tqa-card-type-container tooltip-container">
+          <a href="/hc/en-us/articles/4411016949403" class="tqa-card-type-icon" target="_blank" rel="noopener noreferrer">
+            <span class="tqa-card-type-svg" alt="Polling trigger icon"><svg width="24" height="22" viewbox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-polling"><path d="M0.0377097 5.32493C-0.158341 4.40306 0.429404 3.49677 1.35111 3.30028C2.27325 3.1041 3.18095 3.69291 3.37713 4.61506L3.54079 5.38639C3.8279 4.88714 4.15577 4.40903 4.52273 3.95836C5.5194 2.73446 6.80127 1.71195 8.32343 1.00426C13.7067 -1.49831 20.0994 0.837485 22.6023 6.22055C25.1047 11.6037 22.7703 17.9965 17.3874 20.4994C12.4752 22.7831 6.7219 21.0389 3.85084 16.6262C3.32021 15.8104 3.72463 14.7764 4.57106 14.3827C5.43266 13.9822 6.4144 14.3781 6.94926 15.105C8.97566 17.8602 12.7269 18.901 15.9476 17.4037C19.6211 15.6958 21.2145 11.3324 19.5066 7.65893C17.7986 3.98601 13.4364 2.39255 9.76319 4.09992C8.71976 4.58502 7.84699 5.28166 7.16954 6.11352C6.88107 6.4678 6.62904 6.84886 6.41272 7.24737L7.18128 7.08372C8.10316 6.88782 9.00961 7.4767 9.20593 8.39849C9.40192 9.32041 8.81366 10.2275 7.89184 10.4238L3.45723 11.3671C2.32966 11.6069 1.22112 10.887 0.980979 9.75954L0.0377097 5.32493Z" fill="#111"></path><path d="M13.5116 6.25331C13.2802 5.95028 12.9241 5.73476 12.4139 5.73476C11.903 5.73479 11.5291 5.95131 11.2811 6.25624C11.0311 6.56373 10.9071 6.96321 10.9071 7.3246V11.6967C10.9072 12.1936 11.3105 12.5961 11.8075 12.5961H16.2049C16.5547 12.5961 16.945 12.413 17.2499 12.1166C17.554 11.8208 17.7605 11.4245 17.7606 11.015C17.7606 10.6066 17.5553 10.2338 17.2528 9.96132C16.9496 9.68827 16.5585 9.5248 16.2049 9.5248H13.8553V7.3246C13.8553 6.96006 13.7455 6.55984 13.5116 6.25331Z" fill="#111"></path></svg></span>
+            Polling trigger
+          </a>
+          <div class="tool-tip tool-tip--dark">Polling Applets run after IFTTT reaches out to the trigger service and finds a new trigger event. These trigger checks occur every 5 minutes for Pro and Pro+ users, and every hour for Free users.</div>
+        </span>
+        <span class="body-small tqa-card-desc">This trigger fires when a flag is activated.</span>
+      </div>
+    </div>
+  </div>
+  <div class="tqa-card-actions">
+    <a href="/airmenu/triggers/flag_was_activated" class="tqa-card-details">View details</a>
+    <a class="button-tertiary button-outlined button-label-h5 tqa-card-try" rel="nofollow" href="/create?template_trigger=airmenu.flag_was_activated&amp;chat_prefill_type=trigger&amp;chat_prefill_tqa=An+AirMenu+flag+was+activated&amp;chat_prefill_service=AirMenu&amp;chat_prefill_tab=triggers">Try it</a>
+  </div>
+</div>
+
+              <div class="tqa-card">
+  <div class="tqa-card-header">
+    <span class="tqa-card-icon" title="AirMenu" style='background-color: #7db901; background-image: url("/assets/asset-000313.bin");'>
+    </span>
+    <div class="tqa-card-content">
+      <div class="tqa-card-title-container">
+        <h4 class="tqa-card-title">A new order was done</h4>
+      </div>
+      <div class="tqa-card-desc-container">
+        <span class="tqa-card-type-container tooltip-container">
+          <a href="/hc/en-us/articles/4411016949403" class="tqa-card-type-icon" target="_blank" rel="noopener noreferrer">
+            <span class="tqa-card-type-svg" alt="Polling trigger icon"><svg width="24" height="22" viewbox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-polling"><path d="M0.0377097 5.32493C-0.158341 4.40306 0.429404 3.49677 1.35111 3.30028C2.27325 3.1041 3.18095 3.69291 3.37713 4.61506L3.54079 5.38639C3.8279 4.88714 4.15577 4.40903 4.52273 3.95836C5.5194 2.73446 6.80127 1.71195 8.32343 1.00426C13.7067 -1.49831 20.0994 0.837485 22.6023 6.22055C25.1047 11.6037 22.7703 17.9965 17.3874 20.4994C12.4752 22.7831 6.7219 21.0389 3.85084 16.6262C3.32021 15.8104 3.72463 14.7764 4.57106 14.3827C5.43266 13.9822 6.4144 14.3781 6.94926 15.105C8.97566 17.8602 12.7269 18.901 15.9476 17.4037C19.6211 15.6958 21.2145 11.3324 19.5066 7.65893C17.7986 3.98601 13.4364 2.39255 9.76319 4.09992C8.71976 4.58502 7.84699 5.28166 7.16954 6.11352C6.88107 6.4678 6.62904 6.84886 6.41272 7.24737L7.18128 7.08372C8.10316 6.88782 9.00961 7.4767 9.20593 8.39849C9.40192 9.32041 8.81366 10.2275 7.89184 10.4238L3.45723 11.3671C2.32966 11.6069 1.22112 10.887 0.980979 9.75954L0.0377097 5.32493Z" fill="#111"></path><path d="M13.5116 6.25331C13.2802 5.95028 12.9241 5.73476 12.4139 5.73476C11.903 5.73479 11.5291 5.95131 11.2811 6.25624C11.0311 6.56373 10.9071 6.96321 10.9071 7.3246V11.6967C10.9072 12.1936 11.3105 12.5961 11.8075 12.5961H16.2049C16.5547 12.5961 16.945 12.413 17.2499 12.1166C17.554 11.8208 17.7605 11.4245 17.7606 11.015C17.7606 10.6066 17.5553 10.2338 17.2528 9.96132C16.9496 9.68827 16.5585 9.5248 16.2049 9.5248H13.8553V7.3246C13.8553 6.96006 13.7455 6.55984 13.5116 6.25331Z" fill="#111"></path></svg></span>
+            Polling trigger
+          </a>
+          <div class="tool-tip tool-tip--dark">Polling Applets run after IFTTT reaches out to the trigger service and finds a new trigger event. These trigger checks occur every 5 minutes for Pro and Pro+ users, and every hour for Free users.</div>
+        </span>
+        <span class="body-small tqa-card-desc">This trigger fires when a new order is done.</span>
+      </div>
+    </div>
+  </div>
+  <div class="tqa-card-actions">
+    <a href="/airmenu/triggers/new_order_was_done" class="tqa-card-details">View details</a>
+    <a class="button-tertiary button-outlined button-label-h5 tqa-card-try" rel="nofollow" href="/create?template_trigger=airmenu.new_order_was_done&amp;chat_prefill_type=trigger&amp;chat_prefill_tqa=A+new+order+was+done&amp;chat_prefill_service=AirMenu&amp;chat_prefill_tab=triggers">Try it</a>
+  </div>
+</div>
+
+          </div>
+
+        </div>
+        <div class="tqas-tab-panel ">
+
+          <div class="tqas-initial-items">
+              <div class="tqa-card">
+  <div class="tqa-card-header">
+    <span class="tqa-card-icon" title="AirMenu" style='background-color: #7db901; background-image: url("/assets/asset-000313.bin");'>
+    </span>
+    <div class="tqa-card-content">
+      <div class="tqa-card-title-container">
+        <h4 class="tqa-card-title">Get all the orders from user</h4>
+          <a class="badge-container" title="IFTTT Pro Plans" href="/plans">
+            <span class="card-badge">
+              <img loading="lazy" height="18" width="32" title="Pro plus" alt="Pro plus icon" src="/assets/asset-000711.svg">
+            </span>
+</a>      </div>
+      <div class="tqa-card-desc-container">
+        <span class="tqa-card-type-container tooltip-container">
+          <a href="/hc/en-us/articles/4411016949403" class="tqa-card-type-icon" target="_blank" rel="noopener noreferrer">
+            <span class="tqa-card-type-svg" alt="Query icon"><svg width="22" height="24" viewbox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-query"><path d="M10.75 0C13.3212 0 16.0716 0.395941 18.0469 1.20898C20.0081 2.01623 21.4999 3.30558 21.5 5.1377V18.2979C21.4999 20.1246 20.001 21.4299 18.0381 22.2539C16.0593 23.0846 13.3084 23.5 10.75 23.5C8.19191 23.5 5.44087 23.0874 3.46191 22.2578C1.49841 21.4347 9.15621e-05 20.1289 0 18.2979V4.67285H0.0263672L0.0683594 4.47461C0.380472 2.99035 1.73976 1.91426 3.45312 1.20898C5.42838 0.395951 8.17885 1.03738e-05 10.75 0ZM17.7607 15.7549C15.5962 16.5995 13.1098 17.0101 10.7559 16.9521H10.7432C8.3904 17.0097 5.90576 16.5989 3.74219 15.7549L3.40137 15.6221V18.3174L3.4375 18.377C3.44185 18.3841 3.44664 18.3922 3.45215 18.4004C3.50045 18.4723 3.58658 18.5715 3.7334 18.6914C4.01494 18.9213 4.46085 19.1805 5.07812 19.4248C6.31073 19.9126 8.32012 20.3144 10.752 20.3145C13.1843 20.3145 15.1943 19.9154 16.4268 19.4287C17.0436 19.1851 17.4883 18.9253 17.7695 18.6953C17.916 18.5756 18.0033 18.4767 18.0518 18.4043C18.0553 18.399 18.0584 18.3936 18.0615 18.3887C18.0638 18.385 18.0654 18.3812 18.0674 18.3779L18.1035 18.3184L18.1016 15.6221L17.7607 15.7549ZM17.7607 9.15234C15.5962 9.9971 13.1097 10.4075 10.7559 10.3496H10.7432C8.39047 10.4072 5.9058 9.99652 3.74219 9.15234L3.40137 9.01953V11.7617L3.4375 11.8213C3.44185 11.8285 3.44665 11.8365 3.45215 11.8447C3.50045 11.9166 3.58659 12.0159 3.7334 12.1357C4.01494 12.3656 4.46085 12.6248 5.07812 12.8691C6.31073 13.357 8.32012 13.7588 10.752 13.7588C13.1843 13.7588 15.1943 13.3598 16.4268 12.873C17.0436 12.6294 17.4883 12.3696 17.7695 12.1396C17.916 12.0199 18.0033 11.9211 18.0518 11.8486C18.054 11.8453 18.0557 11.8419 18.0576 11.8389L18.0674 11.8223L18.1035 11.7627L18.1016 9.01953L17.7607 9.15234ZM10.75 3.12988C8.3177 3.12988 6.30769 3.52891 5.0752 4.01562C4.458 4.25936 4.01269 4.519 3.73145 4.74902C3.60686 4.85094 3.52641 4.93749 3.47559 5.00488L3.36328 5.15332L3.47266 5.30273C3.52878 5.37961 3.62214 5.4781 3.77051 5.59277C4.07717 5.82979 4.55454 6.08615 5.19629 6.32324C6.47788 6.79665 8.49249 7.16309 10.75 7.16309C13.0074 7.16305 15.0212 6.79663 16.3027 6.32324C16.9445 6.08618 17.4218 5.82978 17.7285 5.59277C17.8756 5.47913 17.9682 5.38118 18.0244 5.30469L18.1357 5.1543L18.0215 5.00488C17.9706 4.9384 17.8903 4.85315 17.7676 4.75293C17.486 4.52308 17.0409 4.26278 16.4238 4.01855C15.1913 3.53075 13.1817 3.12992 10.75 3.12988Z" fill="#111"></path></svg></span>
+            Query
+          </a>
+          <div class="tool-tip tool-tip--dark">A query lets your Applet retrieve extra data that isn't included in the trigger, so that your automation can include more complete or useful information.</div>
+        </span>
+        <span class="body-small tqa-card-desc">This query will return all the orders of a specific user.</span>
+      </div>
+    </div>
+  </div>
+  <div class="tqa-card-actions">
+    <a href="/airmenu/queries/username" class="tqa-card-details">View details</a>
+    <a class="button-tertiary button-outlined button-label-h5 tqa-card-try" rel="nofollow" href="/create?template_queries=airmenu.username&amp;chat_prefill_type=query&amp;chat_prefill_tqa=Get+all+the+orders+from+user&amp;chat_prefill_service=AirMenu&amp;chat_prefill_tab=queries">Try it</a>
+  </div>
+</div>
+
+          </div>
+
+        </div>
+        <div class="tqas-tab-panel ">
+
+          <div class="tqas-initial-items">
+              <div class="tqa-card">
+  <div class="tqa-card-header">
+    <span class="tqa-card-icon" title="AirMenu" style='background-color: #7db901; background-image: url("/assets/asset-000313.bin");'>
+    </span>
+    <div class="tqa-card-content">
+      <div class="tqa-card-title-container">
+        <h4 class="tqa-card-title">Create a new order</h4>
+      </div>
+      <div class="tqa-card-desc-container">
+        <span class="tqa-card-type-container tooltip-container">
+          <a href="/hc/en-us/articles/4411016949403" class="tqa-card-type-icon" target="_blank" rel="noopener noreferrer">
+            <span class="tqa-card-type-svg" alt="Action icon"><svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-action"><path d="M12.1504 0C18.8607 0 24.3008 5.44013 24.3008 12.1504C24.3008 18.8607 18.8607 24.3008 12.1504 24.3008C5.44013 24.3008 0 18.8607 0 12.1504C0 5.44013 5.44013 0 12.1504 0ZM12.1504 3.10059C7.15221 3.10059 3.10059 7.15221 3.10059 12.1504C3.10059 17.1486 7.15221 21.2002 12.1504 21.2002C17.1486 21.2002 21.2002 17.1486 21.2002 12.1504C21.2002 7.15221 17.1486 3.10059 12.1504 3.10059ZM7.5 8.03027C7.50048 6.48784 9.15607 5.51022 10.5068 6.25488L17.3711 10.042C18.6839 10.7668 18.7725 12.6021 17.5811 13.459L17.5742 13.4639L17.5684 13.4658L17.4619 13.5381L17.4609 13.5391L17.4531 13.5439L10.5977 17.7998C9.2893 18.6117 7.61076 17.7257 7.50586 16.2246L7.50391 16.2109L7.5 16.0889V8.03027ZM10.3643 14.5732L14.7373 11.8584L10.3643 9.44336V14.5732Z" fill="#111"></path></svg></span>
+            Action
+          </a>
+          <div class="tool-tip tool-tip--dark">An action is the task your Applet carries out after the trigger occurs. It defines what happens as the result of your automation and completes the workflow.</div>
+        </span>
+        <span class="body-small tqa-card-desc">This action will create a new order.</span>
+      </div>
+    </div>
+  </div>
+  <div class="tqa-card-actions">
+    <a href="/airmenu/actions/create_new_order" class="tqa-card-details">View details</a>
+    <a class="button-tertiary button-outlined button-label-h5 tqa-card-try" rel="nofollow" href="/create?template_actions=airmenu.create_new_order&amp;chat_prefill_type=action&amp;chat_prefill_tqa=Create+a+new+order&amp;chat_prefill_service=AirMenu&amp;chat_prefill_tab=actions">Try it</a>
+  </div>
+</div>
+
+              <div class="tqa-card">
+  <div class="tqa-card-header">
+    <span class="tqa-card-icon" title="AirMenu" style='background-color: #7db901; background-image: url("/assets/asset-000313.bin");'>
+    </span>
+    <div class="tqa-card-content">
+      <div class="tqa-card-title-container">
+        <h4 class="tqa-card-title">Trigger an AirMenu promotion</h4>
+      </div>
+      <div class="tqa-card-desc-container">
+        <span class="tqa-card-type-container tooltip-container">
+          <a href="/hc/en-us/articles/4411016949403" class="tqa-card-type-icon" target="_blank" rel="noopener noreferrer">
+            <span class="tqa-card-type-svg" alt="Action icon"><svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-action"><path d="M12.1504 0C18.8607 0 24.3008 5.44013 24.3008 12.1504C24.3008 18.8607 18.8607 24.3008 12.1504 24.3008C5.44013 24.3008 0 18.8607 0 12.1504C0 5.44013 5.44013 0 12.1504 0ZM12.1504 3.10059C7.15221 3.10059 3.10059 7.15221 3.10059 12.1504C3.10059 17.1486 7.15221 21.2002 12.1504 21.2002C17.1486 21.2002 21.2002 17.1486 21.2002 12.1504C21.2002 7.15221 17.1486 3.10059 12.1504 3.10059ZM7.5 8.03027C7.50048 6.48784 9.15607 5.51022 10.5068 6.25488L17.3711 10.042C18.6839 10.7668 18.7725 12.6021 17.5811 13.459L17.5742 13.4639L17.5684 13.4658L17.4619 13.5381L17.4609 13.5391L17.4531 13.5439L10.5977 17.7998C9.2893 18.6117 7.61076 17.7257 7.50586 16.2246L7.50391 16.2109L7.5 16.0889V8.03027ZM10.3643 14.5732L14.7373 11.8584L10.3643 9.44336V14.5732Z" fill="#111"></path></svg></span>
+            Action
+          </a>
+          <div class="tool-tip tool-tip--dark">An action is the task your Applet carries out after the trigger occurs. It defines what happens as the result of your automation and completes the workflow.</div>
+        </span>
+        <span class="body-small tqa-card-desc">This action will trigger an AirMenu promotion.</span>
+      </div>
+    </div>
+  </div>
+  <div class="tqa-card-actions">
+    <a href="/airmenu/actions/trigger_promotion" class="tqa-card-details">View details</a>
+    <a class="button-tertiary button-outlined button-label-h5 tqa-card-try" rel="nofollow" href="/create?template_actions=airmenu.trigger_promotion&amp;chat_prefill_type=action&amp;chat_prefill_tqa=Trigger+an+AirMenu+promotion&amp;chat_prefill_service=AirMenu&amp;chat_prefill_tab=actions">Try it</a>
+  </div>
+</div>
+
+              <div class="tqa-card">
+  <div class="tqa-card-header">
+    <span class="tqa-card-icon" title="AirMenu" style='background-color: #7db901; background-image: url("/assets/asset-000313.bin");'>
+    </span>
+    <div class="tqa-card-content">
+      <div class="tqa-card-title-container">
+        <h4 class="tqa-card-title">Activate an AirMenu flag</h4>
+      </div>
+      <div class="tqa-card-desc-container">
+        <span class="tqa-card-type-container tooltip-container">
+          <a href="/hc/en-us/articles/4411016949403" class="tqa-card-type-icon" target="_blank" rel="noopener noreferrer">
+            <span class="tqa-card-type-svg" alt="Action icon"><svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-action"><path d="M12.1504 0C18.8607 0 24.3008 5.44013 24.3008 12.1504C24.3008 18.8607 18.8607 24.3008 12.1504 24.3008C5.44013 24.3008 0 18.8607 0 12.1504C0 5.44013 5.44013 0 12.1504 0ZM12.1504 3.10059C7.15221 3.10059 3.10059 7.15221 3.10059 12.1504C3.10059 17.1486 7.15221 21.2002 12.1504 21.2002C17.1486 21.2002 21.2002 17.1486 21.2002 12.1504C21.2002 7.15221 17.1486 3.10059 12.1504 3.10059ZM7.5 8.03027C7.50048 6.48784 9.15607 5.51022 10.5068 6.25488L17.3711 10.042C18.6839 10.7668 18.7725 12.6021 17.5811 13.459L17.5742 13.4639L17.5684 13.4658L17.4619 13.5381L17.4609 13.5391L17.4531 13.5439L10.5977 17.7998C9.2893 18.6117 7.61076 17.7257 7.50586 16.2246L7.50391 16.2109L7.5 16.0889V8.03027ZM10.3643 14.5732L14.7373 11.8584L10.3643 9.44336V14.5732Z" fill="#111"></path></svg></span>
+            Action
+          </a>
+          <div class="tool-tip tool-tip--dark">An action is the task your Applet carries out after the trigger occurs. It defines what happens as the result of your automation and completes the workflow.</div>
+        </span>
+        <span class="body-small tqa-card-desc">This action will activate an AirMenu flag.</span>
+      </div>
+    </div>
+  </div>
+  <div class="tqa-card-actions">
+    <a href="/airmenu/actions/activate_flag" class="tqa-card-details">View details</a>
+    <a class="button-tertiary button-outlined button-label-h5 tqa-card-try" rel="nofollow" href="/create?template_actions=airmenu.activate_flag&amp;chat_prefill_type=action&amp;chat_prefill_tqa=Activate+an+AirMenu+flag&amp;chat_prefill_service=AirMenu&amp;chat_prefill_tab=actions">Try it</a>
+  </div>
+</div>
+
+          </div>
+
+        </div>
+        <div class="tqas-tab-panel active">
+
+          <div class="tqas-initial-items">
+              <div class="tqa-card">
+  <div class="tqa-card-header">
+    <span class="tqa-card-icon" title="AirMenu" style='background-color: #7db901; background-image: url("/assets/asset-000313.bin");'>
+    </span>
+    <div class="tqa-card-content">
+      <div class="tqa-card-title-container">
+        <h4 class="tqa-card-title">An AirMenu flag was activated</h4>
+      </div>
+      <div class="tqa-card-desc-container">
+        <span class="tqa-card-type-container tooltip-container">
+          <a href="/hc/en-us/articles/4411016949403" class="tqa-card-type-icon" target="_blank" rel="noopener noreferrer">
+            <span class="tqa-card-type-svg" alt="Polling trigger icon"><svg width="24" height="22" viewbox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-polling"><path d="M0.0377097 5.32493C-0.158341 4.40306 0.429404 3.49677 1.35111 3.30028C2.27325 3.1041 3.18095 3.69291 3.37713 4.61506L3.54079 5.38639C3.8279 4.88714 4.15577 4.40903 4.52273 3.95836C5.5194 2.73446 6.80127 1.71195 8.32343 1.00426C13.7067 -1.49831 20.0994 0.837485 22.6023 6.22055C25.1047 11.6037 22.7703 17.9965 17.3874 20.4994C12.4752 22.7831 6.7219 21.0389 3.85084 16.6262C3.32021 15.8104 3.72463 14.7764 4.57106 14.3827C5.43266 13.9822 6.4144 14.3781 6.94926 15.105C8.97566 17.8602 12.7269 18.901 15.9476 17.4037C19.6211 15.6958 21.2145 11.3324 19.5066 7.65893C17.7986 3.98601 13.4364 2.39255 9.76319 4.09992C8.71976 4.58502 7.84699 5.28166 7.16954 6.11352C6.88107 6.4678 6.62904 6.84886 6.41272 7.24737L7.18128 7.08372C8.10316 6.88782 9.00961 7.4767 9.20593 8.39849C9.40192 9.32041 8.81366 10.2275 7.89184 10.4238L3.45723 11.3671C2.32966 11.6069 1.22112 10.887 0.980979 9.75954L0.0377097 5.32493Z" fill="#111"></path><path d="M13.5116 6.25331C13.2802 5.95028 12.9241 5.73476 12.4139 5.73476C11.903 5.73479 11.5291 5.95131 11.2811 6.25624C11.0311 6.56373 10.9071 6.96321 10.9071 7.3246V11.6967C10.9072 12.1936 11.3105 12.5961 11.8075 12.5961H16.2049C16.5547 12.5961 16.945 12.413 17.2499 12.1166C17.554 11.8208 17.7605 11.4245 17.7606 11.015C17.7606 10.6066 17.5553 10.2338 17.2528 9.96132C16.9496 9.68827 16.5585 9.5248 16.2049 9.5248H13.8553V7.3246C13.8553 6.96006 13.7455 6.55984 13.5116 6.25331Z" fill="#111"></path></svg></span>
+            Polling trigger
+          </a>
+          <div class="tool-tip tool-tip--dark">Polling Applets run after IFTTT reaches out to the trigger service and finds a new trigger event. These trigger checks occur every 5 minutes for Pro and Pro+ users, and every hour for Free users.</div>
+        </span>
+        <span class="body-small tqa-card-desc">This trigger fires when a flag is activated.</span>
+      </div>
+    </div>
+  </div>
+  <div class="tqa-card-actions">
+    <a href="/airmenu/triggers/flag_was_activated" class="tqa-card-details">View details</a>
+    <a class="button-tertiary button-outlined button-label-h5 tqa-card-try" rel="nofollow" href="/create?template_trigger=airmenu.flag_was_activated&amp;chat_prefill_type=trigger&amp;chat_prefill_tqa=An+AirMenu+flag+was+activated&amp;chat_prefill_service=AirMenu&amp;chat_prefill_tab=all">Try it</a>
+  </div>
+</div>
+
+              <div class="tqa-card">
+  <div class="tqa-card-header">
+    <span class="tqa-card-icon" title="AirMenu" style='background-color: #7db901; background-image: url("/assets/asset-000313.bin");'>
+    </span>
+    <div class="tqa-card-content">
+      <div class="tqa-card-title-container">
+        <h4 class="tqa-card-title">A new order was done</h4>
+      </div>
+      <div class="tqa-card-desc-container">
+        <span class="tqa-card-type-container tooltip-container">
+          <a href="/hc/en-us/articles/4411016949403" class="tqa-card-type-icon" target="_blank" rel="noopener noreferrer">
+            <span class="tqa-card-type-svg" alt="Polling trigger icon"><svg width="24" height="22" viewbox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-polling"><path d="M0.0377097 5.32493C-0.158341 4.40306 0.429404 3.49677 1.35111 3.30028C2.27325 3.1041 3.18095 3.69291 3.37713 4.61506L3.54079 5.38639C3.8279 4.88714 4.15577 4.40903 4.52273 3.95836C5.5194 2.73446 6.80127 1.71195 8.32343 1.00426C13.7067 -1.49831 20.0994 0.837485 22.6023 6.22055C25.1047 11.6037 22.7703 17.9965 17.3874 20.4994C12.4752 22.7831 6.7219 21.0389 3.85084 16.6262C3.32021 15.8104 3.72463 14.7764 4.57106 14.3827C5.43266 13.9822 6.4144 14.3781 6.94926 15.105C8.97566 17.8602 12.7269 18.901 15.9476 17.4037C19.6211 15.6958 21.2145 11.3324 19.5066 7.65893C17.7986 3.98601 13.4364 2.39255 9.76319 4.09992C8.71976 4.58502 7.84699 5.28166 7.16954 6.11352C6.88107 6.4678 6.62904 6.84886 6.41272 7.24737L7.18128 7.08372C8.10316 6.88782 9.00961 7.4767 9.20593 8.39849C9.40192 9.32041 8.81366 10.2275 7.89184 10.4238L3.45723 11.3671C2.32966 11.6069 1.22112 10.887 0.980979 9.75954L0.0377097 5.32493Z" fill="#111"></path><path d="M13.5116 6.25331C13.2802 5.95028 12.9241 5.73476 12.4139 5.73476C11.903 5.73479 11.5291 5.95131 11.2811 6.25624C11.0311 6.56373 10.9071 6.96321 10.9071 7.3246V11.6967C10.9072 12.1936 11.3105 12.5961 11.8075 12.5961H16.2049C16.5547 12.5961 16.945 12.413 17.2499 12.1166C17.554 11.8208 17.7605 11.4245 17.7606 11.015C17.7606 10.6066 17.5553 10.2338 17.2528 9.96132C16.9496 9.68827 16.5585 9.5248 16.2049 9.5248H13.8553V7.3246C13.8553 6.96006 13.7455 6.55984 13.5116 6.25331Z" fill="#111"></path></svg></span>
+            Polling trigger
+          </a>
+          <div class="tool-tip tool-tip--dark">Polling Applets run after IFTTT reaches out to the trigger service and finds a new trigger event. These trigger checks occur every 5 minutes for Pro and Pro+ users, and every hour for Free users.</div>
+        </span>
+        <span class="body-small tqa-card-desc">This trigger fires when a new order is done.</span>
+      </div>
+    </div>
+  </div>
+  <div class="tqa-card-actions">
+    <a href="/airmenu/triggers/new_order_was_done" class="tqa-card-details">View details</a>
+    <a class="button-tertiary button-outlined button-label-h5 tqa-card-try" rel="nofollow" href="/create?template_trigger=airmenu.new_order_was_done&amp;chat_prefill_type=trigger&amp;chat_prefill_tqa=A+new+order+was+done&amp;chat_prefill_service=AirMenu&amp;chat_prefill_tab=all">Try it</a>
+  </div>
+</div>
+
+              <div class="tqa-card">
+  <div class="tqa-card-header">
+    <span class="tqa-card-icon" title="AirMenu" style='background-color: #7db901; background-image: url("/assets/asset-000313.bin");'>
+    </span>
+    <div class="tqa-card-content">
+      <div class="tqa-card-title-container">
+        <h4 class="tqa-card-title">Get all the orders from user</h4>
+          <a class="badge-container" title="IFTTT Pro Plans" href="/plans">
+            <span class="card-badge">
+              <img loading="lazy" height="18" width="32" title="Pro plus" alt="Pro plus icon" src="/assets/asset-000711.svg">
+            </span>
+</a>      </div>
+      <div class="tqa-card-desc-container">
+        <span class="tqa-card-type-container tooltip-container">
+          <a href="/hc/en-us/articles/4411016949403" class="tqa-card-type-icon" target="_blank" rel="noopener noreferrer">
+            <span class="tqa-card-type-svg" alt="Query icon"><svg width="22" height="24" viewbox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-query"><path d="M10.75 0C13.3212 0 16.0716 0.395941 18.0469 1.20898C20.0081 2.01623 21.4999 3.30558 21.5 5.1377V18.2979C21.4999 20.1246 20.001 21.4299 18.0381 22.2539C16.0593 23.0846 13.3084 23.5 10.75 23.5C8.19191 23.5 5.44087 23.0874 3.46191 22.2578C1.49841 21.4347 9.15621e-05 20.1289 0 18.2979V4.67285H0.0263672L0.0683594 4.47461C0.380472 2.99035 1.73976 1.91426 3.45312 1.20898C5.42838 0.395951 8.17885 1.03738e-05 10.75 0ZM17.7607 15.7549C15.5962 16.5995 13.1098 17.0101 10.7559 16.9521H10.7432C8.3904 17.0097 5.90576 16.5989 3.74219 15.7549L3.40137 15.6221V18.3174L3.4375 18.377C3.44185 18.3841 3.44664 18.3922 3.45215 18.4004C3.50045 18.4723 3.58658 18.5715 3.7334 18.6914C4.01494 18.9213 4.46085 19.1805 5.07812 19.4248C6.31073 19.9126 8.32012 20.3144 10.752 20.3145C13.1843 20.3145 15.1943 19.9154 16.4268 19.4287C17.0436 19.1851 17.4883 18.9253 17.7695 18.6953C17.916 18.5756 18.0033 18.4767 18.0518 18.4043C18.0553 18.399 18.0584 18.3936 18.0615 18.3887C18.0638 18.385 18.0654 18.3812 18.0674 18.3779L18.1035 18.3184L18.1016 15.6221L17.7607 15.7549ZM17.7607 9.15234C15.5962 9.9971 13.1097 10.4075 10.7559 10.3496H10.7432C8.39047 10.4072 5.9058 9.99652 3.74219 9.15234L3.40137 9.01953V11.7617L3.4375 11.8213C3.44185 11.8285 3.44665 11.8365 3.45215 11.8447C3.50045 11.9166 3.58659 12.0159 3.7334 12.1357C4.01494 12.3656 4.46085 12.6248 5.07812 12.8691C6.31073 13.357 8.32012 13.7588 10.752 13.7588C13.1843 13.7588 15.1943 13.3598 16.4268 12.873C17.0436 12.6294 17.4883 12.3696 17.7695 12.1396C17.916 12.0199 18.0033 11.9211 18.0518 11.8486C18.054 11.8453 18.0557 11.8419 18.0576 11.8389L18.0674 11.8223L18.1035 11.7627L18.1016 9.01953L17.7607 9.15234ZM10.75 3.12988C8.3177 3.12988 6.30769 3.52891 5.0752 4.01562C4.458 4.25936 4.01269 4.519 3.73145 4.74902C3.60686 4.85094 3.52641 4.93749 3.47559 5.00488L3.36328 5.15332L3.47266 5.30273C3.52878 5.37961 3.62214 5.4781 3.77051 5.59277C4.07717 5.82979 4.55454 6.08615 5.19629 6.32324C6.47788 6.79665 8.49249 7.16309 10.75 7.16309C13.0074 7.16305 15.0212 6.79663 16.3027 6.32324C16.9445 6.08618 17.4218 5.82978 17.7285 5.59277C17.8756 5.47913 17.9682 5.38118 18.0244 5.30469L18.1357 5.1543L18.0215 5.00488C17.9706 4.9384 17.8903 4.85315 17.7676 4.75293C17.486 4.52308 17.0409 4.26278 16.4238 4.01855C15.1913 3.53075 13.1817 3.12992 10.75 3.12988Z" fill="#111"></path></svg></span>
+            Query
+          </a>
+          <div class="tool-tip tool-tip--dark">A query lets your Applet retrieve extra data that isn't included in the trigger, so that your automation can include more complete or useful information.</div>
+        </span>
+        <span class="body-small tqa-card-desc">This query will return all the orders of a specific user.</span>
+      </div>
+    </div>
+  </div>
+  <div class="tqa-card-actions">
+    <a href="/airmenu/queries/username" class="tqa-card-details">View details</a>
+    <a class="button-tertiary button-outlined button-label-h5 tqa-card-try" rel="nofollow" href="/create?template_queries=airmenu.username&amp;chat_prefill_type=query&amp;chat_prefill_tqa=Get+all+the+orders+from+user&amp;chat_prefill_service=AirMenu&amp;chat_prefill_tab=all">Try it</a>
+  </div>
+</div>
+
+              <div class="tqa-card">
+  <div class="tqa-card-header">
+    <span class="tqa-card-icon" title="AirMenu" style='background-color: #7db901; background-image: url("/assets/asset-000313.bin");'>
+    </span>
+    <div class="tqa-card-content">
+      <div class="tqa-card-title-container">
+        <h4 class="tqa-card-title">Create a new order</h4>
+      </div>
+      <div class="tqa-card-desc-container">
+        <span class="tqa-card-type-container tooltip-container">
+          <a href="/hc/en-us/articles/4411016949403" class="tqa-card-type-icon" target="_blank" rel="noopener noreferrer">
+            <span class="tqa-card-type-svg" alt="Action icon"><svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-action"><path d="M12.1504 0C18.8607 0 24.3008 5.44013 24.3008 12.1504C24.3008 18.8607 18.8607 24.3008 12.1504 24.3008C5.44013 24.3008 0 18.8607 0 12.1504C0 5.44013 5.44013 0 12.1504 0ZM12.1504 3.10059C7.15221 3.10059 3.10059 7.15221 3.10059 12.1504C3.10059 17.1486 7.15221 21.2002 12.1504 21.2002C17.1486 21.2002 21.2002 17.1486 21.2002 12.1504C21.2002 7.15221 17.1486 3.10059 12.1504 3.10059ZM7.5 8.03027C7.50048 6.48784 9.15607 5.51022 10.5068 6.25488L17.3711 10.042C18.6839 10.7668 18.7725 12.6021 17.5811 13.459L17.5742 13.4639L17.5684 13.4658L17.4619 13.5381L17.4609 13.5391L17.4531 13.5439L10.5977 17.7998C9.2893 18.6117 7.61076 17.7257 7.50586 16.2246L7.50391 16.2109L7.5 16.0889V8.03027ZM10.3643 14.5732L14.7373 11.8584L10.3643 9.44336V14.5732Z" fill="#111"></path></svg></span>
+            Action
+          </a>
+          <div class="tool-tip tool-tip--dark">An action is the task your Applet carries out after the trigger occurs. It defines what happens as the result of your automation and completes the workflow.</div>
+        </span>
+        <span class="body-small tqa-card-desc">This action will create a new order.</span>
+      </div>
+    </div>
+  </div>
+  <div class="tqa-card-actions">
+    <a href="/airmenu/actions/create_new_order" class="tqa-card-details">View details</a>
+    <a class="button-tertiary button-outlined button-label-h5 tqa-card-try" rel="nofollow" href="/create?template_actions=airmenu.create_new_order&amp;chat_prefill_type=action&amp;chat_prefill_tqa=Create+a+new+order&amp;chat_prefill_service=AirMenu&amp;chat_prefill_tab=all">Try it</a>
+  </div>
+</div>
+
+              <div class="tqa-card">
+  <div class="tqa-card-header">
+    <span class="tqa-card-icon" title="AirMenu" style='background-color: #7db901; background-image: url("/assets/asset-000313.bin");'>
+    </span>
+    <div class="tqa-card-content">
+      <div class="tqa-card-title-container">
+        <h4 class="tqa-card-title">Trigger an AirMenu promotion</h4>
+      </div>
+      <div class="tqa-card-desc-container">
+        <span class="tqa-card-type-container tooltip-container">
+          <a href="/hc/en-us/articles/4411016949403" class="tqa-card-type-icon" target="_blank" rel="noopener noreferrer">
+            <span class="tqa-card-type-svg" alt="Action icon"><svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-action"><path d="M12.1504 0C18.8607 0 24.3008 5.44013 24.3008 12.1504C24.3008 18.8607 18.8607 24.3008 12.1504 24.3008C5.44013 24.3008 0 18.8607 0 12.1504C0 5.44013 5.44013 0 12.1504 0ZM12.1504 3.10059C7.15221 3.10059 3.10059 7.15221 3.10059 12.1504C3.10059 17.1486 7.15221 21.2002 12.1504 21.2002C17.1486 21.2002 21.2002 17.1486 21.2002 12.1504C21.2002 7.15221 17.1486 3.10059 12.1504 3.10059ZM7.5 8.03027C7.50048 6.48784 9.15607 5.51022 10.5068 6.25488L17.3711 10.042C18.6839 10.7668 18.7725 12.6021 17.5811 13.459L17.5742 13.4639L17.5684 13.4658L17.4619 13.5381L17.4609 13.5391L17.4531 13.5439L10.5977 17.7998C9.2893 18.6117 7.61076 17.7257 7.50586 16.2246L7.50391 16.2109L7.5 16.0889V8.03027ZM10.3643 14.5732L14.7373 11.8584L10.3643 9.44336V14.5732Z" fill="#111"></path></svg></span>
+            Action
+          </a>
+          <div class="tool-tip tool-tip--dark">An action is the task your Applet carries out after the trigger occurs. It defines what happens as the result of your automation and completes the workflow.</div>
+        </span>
+        <span class="body-small tqa-card-desc">This action will trigger an AirMenu promotion.</span>
+      </div>
+    </div>
+  </div>
+  <div class="tqa-card-actions">
+    <a href="/airmenu/actions/trigger_promotion" class="tqa-card-details">View details</a>
+    <a class="button-tertiary button-outlined button-label-h5 tqa-card-try" rel="nofollow" href="/create?template_actions=airmenu.trigger_promotion&amp;chat_prefill_type=action&amp;chat_prefill_tqa=Trigger+an+AirMenu+promotion&amp;chat_prefill_service=AirMenu&amp;chat_prefill_tab=all">Try it</a>
+  </div>
+</div>
+
+              <div class="tqa-card">
+  <div class="tqa-card-header">
+    <span class="tqa-card-icon" title="AirMenu" style='background-color: #7db901; background-image: url("/assets/asset-000313.bin");'>
+    </span>
+    <div class="tqa-card-content">
+      <div class="tqa-card-title-container">
+        <h4 class="tqa-card-title">Activate an AirMenu flag</h4>
+      </div>
+      <div class="tqa-card-desc-container">
+        <span class="tqa-card-type-container tooltip-container">
+          <a href="/hc/en-us/articles/4411016949403" class="tqa-card-type-icon" target="_blank" rel="noopener noreferrer">
+            <span class="tqa-card-type-svg" alt="Action icon"><svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-action"><path d="M12.1504 0C18.8607 0 24.3008 5.44013 24.3008 12.1504C24.3008 18.8607 18.8607 24.3008 12.1504 24.3008C5.44013 24.3008 0 18.8607 0 12.1504C0 5.44013 5.44013 0 12.1504 0ZM12.1504 3.10059C7.15221 3.10059 3.10059 7.15221 3.10059 12.1504C3.10059 17.1486 7.15221 21.2002 12.1504 21.2002C17.1486 21.2002 21.2002 17.1486 21.2002 12.1504C21.2002 7.15221 17.1486 3.10059 12.1504 3.10059ZM7.5 8.03027C7.50048 6.48784 9.15607 5.51022 10.5068 6.25488L17.3711 10.042C18.6839 10.7668 18.7725 12.6021 17.5811 13.459L17.5742 13.4639L17.5684 13.4658L17.4619 13.5381L17.4609 13.5391L17.4531 13.5439L10.5977 17.7998C9.2893 18.6117 7.61076 17.7257 7.50586 16.2246L7.50391 16.2109L7.5 16.0889V8.03027ZM10.3643 14.5732L14.7373 11.8584L10.3643 9.44336V14.5732Z" fill="#111"></path></svg></span>
+            Action
+          </a>
+          <div class="tool-tip tool-tip--dark">An action is the task your Applet carries out after the trigger occurs. It defines what happens as the result of your automation and completes the workflow.</div>
+        </span>
+        <span class="body-small tqa-card-desc">This action will activate an AirMenu flag.</span>
+      </div>
+    </div>
+  </div>
+  <div class="tqa-card-actions">
+    <a href="/airmenu/actions/activate_flag" class="tqa-card-details">View details</a>
+    <a class="button-tertiary button-outlined button-label-h5 tqa-card-try" rel="nofollow" href="/create?template_actions=airmenu.activate_flag&amp;chat_prefill_type=action&amp;chat_prefill_tqa=Activate+an+AirMenu+flag&amp;chat_prefill_service=AirMenu&amp;chat_prefill_tab=all">Try it</a>
+  </div>
+</div>
+
+          </div>
+
+        </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="mcp-callout">
+  <div class="mcp-callout__inner">
+    <h2 class="mcp-callout__title">Automate AirMenu from your AI assistant</h2>
+    <p class="body-medium mcp-callout__line">Tell Copilot to create AirMenu applets that trigger actions when customers place orders, with IFTTT MCP.</p>
+
+    <ul class="mcp-client-pills" aria-label="AI tools compatible with the IFTTT MCP">
+    <li class="mcp-client-pills__item">
+      <a class="mcp-client-pill" aria-label="Set up IFTTT MCP with Claude" href="/mcp#claude">
+        <span class="mcp-client-pill__logo">
+          <img alt="" aria-hidden="true" class="mcp-client-pill__logo-img" width="24" height="24" loading="lazy" title="Claude" src="/assets/asset-000694.svg">
+        </span>
+        <span class="mcp-client-pill__name">Claude</span>
+</a>    </li>
+    <li class="mcp-client-pills__item">
+      <a class="mcp-client-pill" aria-label="Set up IFTTT MCP with Claude Code" href="/mcp#claude-code">
+        <span class="mcp-client-pill__logo">
+          <img alt="" aria-hidden="true" class="mcp-client-pill__logo-img" width="24" height="24" loading="lazy" title="Claude-code" src="/assets/asset-000695.svg">
+        </span>
+        <span class="mcp-client-pill__name">Claude Code</span>
+</a>    </li>
+    <li class="mcp-client-pills__item">
+      <a class="mcp-client-pill" aria-label="Set up IFTTT MCP with ChatGPT" href="/mcp#chatgpt">
+        <span class="mcp-client-pill__logo">
+          <img alt="" aria-hidden="true" class="mcp-client-pill__logo-img" width="24" height="24" loading="lazy" title="Chatgpt" src="/assets/asset-000696.svg">
+        </span>
+        <span class="mcp-client-pill__name">ChatGPT</span>
+</a>    </li>
+    <li class="mcp-client-pills__item">
+      <a class="mcp-client-pill" aria-label="Set up IFTTT MCP with Cursor" href="/mcp#cursor">
+        <span class="mcp-client-pill__logo">
+          <img alt="" aria-hidden="true" class="mcp-client-pill__logo-img" width="24" height="24" loading="lazy" title="Cursor" src="/assets/asset-000699.svg">
+        </span>
+        <span class="mcp-client-pill__name">Cursor</span>
+</a>    </li>
+    <li class="mcp-client-pills__item">
+      <a class="mcp-client-pill" aria-label="Set up IFTTT MCP with CoPilot" href="/mcp#copilot">
+        <span class="mcp-client-pill__logo">
+          <img alt="" aria-hidden="true" class="mcp-client-pill__logo-img" width="24" height="24" loading="lazy" title="Copilot" src="/assets/asset-000697.svg">
+        </span>
+        <span class="mcp-client-pill__name">CoPilot</span>
+</a>    </li>
+    <li class="mcp-client-pills__item">
+      <a class="mcp-client-pill" aria-label="Set up IFTTT MCP with OpenClaw" href="/mcp#openclaw">
+        <span class="mcp-client-pill__logo">
+          <img alt="" aria-hidden="true" class="mcp-client-pill__logo-img" width="24" height="24" loading="lazy" title="Openclaw" src="/assets/asset-000698.svg">
+        </span>
+        <span class="mcp-client-pill__name">OpenClaw</span>
+</a>    </li>
+    <li class="mcp-client-pills__item">
+      <a class="mcp-client-pill" aria-label="Set up IFTTT MCP with Perplexity" href="/mcp#perplexity">
+        <span class="mcp-client-pill__logo">
+          <img alt="" aria-hidden="true" class="mcp-client-pill__logo-img" width="24" height="24" loading="lazy" title="Perplexity" src="/assets/asset-000701.svg">
+        </span>
+        <span class="mcp-client-pill__name">Perplexity</span>
+</a>    </li>
+</ul>
+
+
+    <a class="button-tertiary button-on-color button-label-h5 mcp-callout__cta" href="/mcp">Set up IFTTT MCP</a>
+  </div>
+</section>
+
+  <section class="service-works-well-with">
+    <h2 class="works-well-with">Connect AirMenu to these apps and more</h2>
+    <div class="service-works-with-icons">
+      <span class="service-icon-small" title="AirMenu" style='background-color: #7db901; background-image: url("/assets/asset-000313.bin");'>
+      </span>
+      <span class="works-with-icon"><svg width="28" height="16" viewbox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-works-with"><path d="M2 8H26M2 8L7.6 2M2 8L7.6 14M26 8L20.4 14M26 8L20.4 2" stroke="#999" stroke-opacity="0.3" stroke-width="4" stroke-miterlimit="5.49776" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+      <span class="plus-service"><svg width="28" height="28" viewbox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" title="Icon-soft-plus"><path fill-rule="evenodd" clip-rule="evenodd" d="M14 28C21.732 28 28 21.732 28 14C28 6.26801 21.732 0 14 0C6.26801 0 0 6.26801 0 14C0 21.732 6.26801 28 14 28ZM14.1172 7.53833C15.0094 7.53833 15.7326 8.26156 15.7326 9.15372V12.3247L19.0232 12.3247C19.9153 12.3247 20.6386 13.0479 20.6386 13.94C20.6386 14.8322 19.9153 15.5554 19.0232 15.5554H15.7326V18.846C15.7326 19.7382 15.0094 20.4614 14.1172 20.4614C13.225 20.4614 12.5018 19.7382 12.5018 18.846L12.5018 15.5554L9.33088 15.5554C8.43873 15.5554 7.71549 14.8322 7.71549 13.94C7.71549 13.0479 8.43873 12.3247 9.33088 12.3247H12.5018V9.15371C12.5018 8.26156 13.2251 7.53833 14.1172 7.53833Z" fill="#111"></path></svg></span>
+    </div>
+    <div class="search-view-container">
+      <div class="services-container">
+        <ul class="service-cards">
+            <li class="service-card-list-item ">
+              <a class="service-card spec-prefetch service-card-small" style="background-color: #ee4433" href="/connect/airmenu/do_button">
+  <img class="service-card-image" title="Button widget" loading="lazy" width="54" height="54" alt="Button widget icon" src="/assets/asset-000397.bin">
+  <span class="service-card-title">Button widget</span>
+</a>
+            </li>
+            <li class="service-card-list-item ">
+              <a class="service-card spec-prefetch service-card-small" style="background-color: #23448b" href="/connect/airmenu/gmail">
+  <img class="service-card-image" title="Gmail" loading="lazy" width="54" height="54" alt="Gmail icon" src="/assets/asset-000041.bin">
+  <span class="service-card-title">Gmail</span>
+</a>
+            </li>
+        </ul>
+        <p class="service-works-well-with-empty hide">Sorry, no service matches were found. Try a new search</p>
+      </div>
+    </div>
+  </section>
+
+  
+<section class="how-to-connect">
+  <div class="connect-header">
+    <span class="body-small">GET STARTED</span>
+    <h2>How to connect to a AirMenu automation</h2>
+  </div>
+
+  <div class="connect-steps">
+    <div class="connect-step">
+      <div class="connect-step-image middle" style="background-color: #7db9011A;">
+        <span class="applet-card">
+          <svg width="108" height="111" viewbox="0 0 108 111" fill="none" xmlns="http://www.w3.org/2000/svg" title="Applet-card"><rect width="108" height="111" rx="12" fill="#5865f2"></rect><rect x="0.435484" y="0.435484" width="107.129" height="110.129" rx="11.5645" stroke="#fff" stroke-opacity="0.1" stroke-width="0.870968"></rect><rect opacity="0.3" x="10.4516" y="33.4194" width="88.8387" height="8.70968" rx="1.74194" fill="#fff"></rect><rect opacity="0.3" x="10.4516" y="47.355" width="65.3226" height="8.70968" rx="1.74194" fill="#fff"></rect><rect x="10.4516" y="87.0322" width="88" height="17" rx="8.5" fill="#111" fill-opacity="0.2"></rect><circle cx="19.4985" cy="95.5322" r="6.5" fill="#5865f2"></circle><path d="M38.6529 95.6602C38.6529 93.9962 39.8849 92.7162 41.6529 92.7162C42.5329 92.7162 43.1489 93.0282 43.4849 93.2602C43.7089 93.4202 43.7249 93.6362 43.5809 93.8682L43.3809 94.1962C43.2289 94.4442 43.0289 94.4682 42.7809 94.3162C42.5169 94.1642 42.1409 93.9962 41.7169 93.9962C40.5729 93.9962 40.1009 94.8042 40.1009 95.6282C40.1009 96.4762 40.6129 97.3482 41.7169 97.3482C42.1969 97.3482 42.6129 97.1322 42.8849 96.9402C43.1249 96.7722 43.3329 96.7802 43.5009 97.0202L43.7249 97.3322C43.8769 97.5562 43.8689 97.7802 43.6529 97.9482C43.2929 98.2282 42.6209 98.6282 41.6529 98.6282C39.8129 98.6282 38.6529 97.3562 38.6529 95.6602ZM44.0807 96.4842C44.0807 95.1882 45.1207 94.3162 46.4087 94.3162C47.7127 94.3162 48.7527 95.1882 48.7527 96.4842C48.7527 97.7722 47.7127 98.6282 46.4167 98.6282C45.1207 98.6282 44.0807 97.7722 44.0807 96.4842ZM45.4807 96.4842C45.4807 97.1002 45.9127 97.4762 46.4167 97.4762C46.9207 97.4762 47.3527 97.1002 47.3527 96.4842C47.3527 95.8602 46.9207 95.4682 46.4167 95.4682C45.9127 95.4682 45.4807 95.8602 45.4807 96.4842ZM49.3362 98.0922V94.8522C49.3362 94.5642 49.4882 94.4122 49.7762 94.4122H50.2242C50.5122 94.4122 50.6562 94.5642 50.6562 94.8522V94.9242C50.6562 94.9642 50.6482 95.0282 50.6482 95.0282H50.6642C50.8562 94.7082 51.2482 94.3162 51.9762 94.3162C52.8082 94.3162 53.4562 94.7002 53.4562 95.8602V98.0922C53.4562 98.3802 53.3042 98.5322 53.0162 98.5322H52.5122C52.2242 98.5322 52.0722 98.3802 52.0722 98.0922V96.1162C52.0722 95.7322 51.9202 95.5722 51.6162 95.5722C51.0002 95.5722 50.7202 96.0842 50.7202 96.6682V98.0922C50.7202 98.3802 50.5682 98.5322 50.2802 98.5322H49.7762C49.4882 98.5322 49.3362 98.3802 49.3362 98.0922ZM54.219 98.0922V94.8522C54.219 94.5642 54.371 94.4122 54.659 94.4122H55.107C55.395 94.4122 55.539 94.5642 55.539 94.8522V94.9242C55.539 94.9642 55.531 95.0282 55.531 95.0282H55.547C55.739 94.7082 56.131 94.3162 56.859 94.3162C57.691 94.3162 58.339 94.7002 58.339 95.8602V98.0922C58.339 98.3802 58.187 98.5322 57.899 98.5322H57.395C57.107 98.5322 56.955 98.3802 56.955 98.0922V96.1162C56.955 95.7322 56.803 95.5722 56.499 95.5722C55.883 95.5722 55.603 96.0842 55.603 96.6682V98.0922C55.603 98.3802 55.451 98.5322 55.163 98.5322H54.659C54.371 98.5322 54.219 98.3802 54.219 98.0922ZM58.8698 96.4682C58.8698 95.2602 59.6858 94.3162 61.0138 94.3162C62.2378 94.3162 62.9178 95.1802 62.9178 96.2842C62.9178 96.5002 62.7258 96.7402 62.4538 96.7402H60.2858C60.3898 97.2442 60.8058 97.4762 61.2458 97.4762C61.5258 97.4762 61.7898 97.3882 61.9978 97.2842C62.2618 97.1642 62.4538 97.1962 62.5898 97.4522L62.7018 97.6602C62.8298 97.9082 62.7898 98.1242 62.5498 98.2602C62.2538 98.4282 61.7658 98.6282 61.1338 98.6282C59.6618 98.6282 58.8698 97.5642 58.8698 96.4682ZM60.3178 95.9482H61.5498C61.5498 95.6122 61.3338 95.3322 60.9818 95.3322C60.5818 95.3322 60.3898 95.6202 60.3178 95.9482ZM63.2526 96.4682C63.2526 95.3642 64.0686 94.3162 65.5486 94.3162C66.1726 94.3162 66.6126 94.5082 66.8766 94.6842C67.1006 94.8282 67.1166 95.0522 66.9726 95.2842L66.8366 95.4922C66.6846 95.7402 66.5006 95.7482 66.2446 95.6202C66.0846 95.5402 65.8766 95.4682 65.6366 95.4682C64.9806 95.4682 64.6526 95.9642 64.6526 96.4522C64.6526 96.9402 64.9886 97.4762 65.6846 97.4762C65.9566 97.4762 66.2286 97.3642 66.4286 97.2442C66.6926 97.1002 66.8926 97.1322 67.0286 97.3962L67.1326 97.5962C67.2526 97.8362 67.2286 98.0522 67.0126 98.1962C66.7246 98.3882 66.2286 98.6282 65.5486 98.6282C64.0766 98.6282 63.2526 97.6042 63.2526 96.4682ZM67.999 97.0682V95.5642H67.879C67.599 95.5642 67.447 95.4122 67.447 95.1242V94.9242C67.447 94.6362 67.599 94.4842 67.887 94.4842H68.039V93.7402C68.039 93.4522 68.191 93.3002 68.479 93.3002H68.943C69.231 93.3002 69.383 93.4522 69.383 93.7402V94.4842H69.807C70.095 94.4842 70.247 94.6362 70.247 94.9242V95.1242C70.247 95.4122 70.095 95.5642 69.815 95.5642H69.383V96.8122C69.383 97.1642 69.615 97.3002 69.863 97.3322C70.183 97.3722 70.303 97.4682 70.303 97.7722V98.1322C70.303 98.4602 70.103 98.5722 69.735 98.5722C69.127 98.5722 67.999 98.2922 67.999 97.0682Z" fill="#fff"></path><g filter="url(#filter0_d_17_508)"><path d="M61.498 85.968C60.0497 87.3769 57.6198 86.3506 57.6198 84.3301V61.0909C57.6198 59.0538 60.084 58.035 61.5226 59.4773L78.4566 76.4552C79.8932 77.8955 78.8731 80.3538 76.8388 80.3538H68.2087C67.9914 80.3538 67.7753 80.3848 67.5668 80.4458L67.5511 80.4504C67.1934 80.5551 66.8668 80.7456 66.5997 81.0055L61.498 85.968Z" fill="#fff"></path><path d="M76.1248 89.0785C76.6044 90.2368 76.0612 91.5652 74.9074 92.0555L71.4191 93.5381C70.2556 94.0326 68.9117 93.4883 68.4202 92.3235L60.2158 72.882C59.725 71.7188 60.2705 70.3779 61.4341 69.8879L65.0588 68.3611C66.2269 67.8692 67.5721 68.4218 68.057 69.5928L76.1248 89.0785Z" fill="#fff"></path><path d="M66.4927 74.4271L64.6654 75.1941C64.0836 75.4383 63.81 76.1079 64.0542 76.6897L69.7752 90.3194C70.0194 90.9012 70.689 91.1749 71.2708 90.9306L73.0981 90.1637C73.6799 89.9195 73.9535 89.2498 73.7093 88.668L67.9883 75.0383C67.7441 74.4565 67.0745 74.1829 66.4927 74.4271Z" fill="#111"></path><path d="M61.704 62.6617C60.9846 61.9406 59.7526 62.45 59.7526 63.4685V81.8848C59.7526 82.8932 60.9638 83.4071 61.689 82.7064L66.0886 78.4549L67.006 78.1562H74.4072C75.4244 78.1562 75.9344 76.927 75.216 76.2069L61.704 62.6617Z" fill="#111"></path></g><defs><filter id="filter0_d_17_508" x="52.5968" y="55.5" width="31.1398" height="48.1398" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB"><feflood flood-opacity="0" result="BackgroundImageFix"></feflood><fecolormatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix><feoffset dy="4.56992"></feoffset><fegaussianblur stddeviation="2.28496"></fegaussianblur><fecolormatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></fecolormatrix><feblend in2="BackgroundImageFix" result="effect1_dropShadow_17_508"></feblend><feblend in="SourceGraphic" in2="effect1_dropShadow_17_508" result="shape"></feblend></filter></defs></svg>
+        </span>
+      </div>
+      <h3>Find an Applet using AirMenu and Button widget</h3>
+      <span>Find an automation to connect to, or create your own!</span>
+    </div>
+    <div class="connect-step">
+      <div class="connect-step-image bottom" style="background-color: #7db9011A;">
+        <span class="connect-accounts">
+          <svg width="163" height="136" viewbox="0 0 163 136" fill="none" xmlns="http://www.w3.org/2000/svg" title="Connect-accounts"><path d="M0 12C0 5.37259 5.37258 0 12 0H151C157.627 0 163 5.37258 163 12V136H0V12Z" fill="#fff"></path><line x1="69.5" y1="39.5" x2="93.5" y2="39.5" stroke="url(#paint0_linear_17_530)" stroke-dasharray="3 3"></line><g opacity="0.5" fill="#111"><path d="M12 84C12 79.5817 15.5817 76 20 76H143C147.418 76 151 79.5817 151 84V136H12V84Z" fill-opacity="0.05"></path><g opacity="0.1"><rect x="24" y="88" width="12" height="12" rx="6"></rect><path d="M32.3826 91.4632C32.5871 91.2143 32.9547 91.178 33.2036 91.3825C33.4525 91.587 33.4885 91.9548 33.284 92.2038L29.9774 96.2291C29.4703 96.8464 28.5224 96.8361 28.0288 96.208L26.7078 94.527C26.5089 94.2737 26.5529 93.907 26.8061 93.708C27.0595 93.5089 27.4264 93.553 27.6255 93.8063L28.9461 95.4873L29.0102 95.5687L32.3826 91.4632Z"></path></g><rect opacity="0.1" x="40" y="91" width="65" height="6" rx="1.74194"></rect><g opacity="0.1"><rect x="24" y="106" width="12" height="12" rx="6"></rect><path d="M32.3826 109.463C32.5871 109.214 32.9547 109.178 33.2036 109.382C33.4525 109.587 33.4885 109.955 33.284 110.204L29.9774 114.229C29.4703 114.846 28.5224 114.836 28.0288 114.208L26.7078 112.527C26.5089 112.274 26.5529 111.907 26.8061 111.708C27.0595 111.509 27.4264 111.553 27.6255 111.806L28.9461 113.487L29.0102 113.569L32.3826 109.463Z"></path></g><rect opacity="0.1" x="40" y="109" width="81" height="6" rx="1.74194"></rect><g opacity="0.1"><rect x="24" y="124" width="12" height="12" rx="6"></rect><path d="M32.3826 127.463C32.5871 127.214 32.9547 127.178 33.2036 127.382C33.4525 127.587 33.4885 127.955 33.284 128.204L29.9774 132.229C29.4703 132.846 28.5224 132.836 28.0288 132.208L26.7078 130.527C26.5089 130.274 26.5529 129.907 26.8061 129.708C27.0595 129.509 27.4264 129.553 27.6255 129.806L28.9461 131.487L29.0102 131.569L32.3826 127.463Z"></path></g><rect opacity="0.1" x="40" y="127" width="40" height="6" rx="1.74194"></rect></g><defs><lineargradient id="paint0_linear_17_530" x1="69.5" y1="40.5" x2="93.5" y2="40.5" gradientunits="userSpaceOnUse"><stop stop-color="#222" stop-opacity="0"></stop><stop offset="0.5" stop-color="#222" stop-opacity="0.2"></stop><stop offset="1" stop-color="#222" stop-opacity="0"></stop></lineargradient></defs></svg>
+        </span>
+      </div>
+      <h3>Connect IFTTT to your accounts</h3>
+      <span>Securely connect the Applet services to your respective accounts.</span>
+    </div>
+    <div class="connect-step">
+      <div class="connect-step-image middle" style="background-color: #7db9011A;">
+        <span class="connect-button">
+          <svg width="220" height="59" viewbox="0 0 220 59" fill="none" xmlns="http://www.w3.org/2000/svg" title="Connect-button"><rect width="220" height="54.0351" rx="27.0175" fill="#111"></rect><path d="M57.5693 26.8215C57.5693 23.811 59.7983 21.4952 62.997 21.4952C64.5891 21.4952 65.7036 22.0597 66.3115 22.4794C66.7167 22.7689 66.7457 23.1597 66.4851 23.5794L66.1233 24.1728C65.8483 24.6215 65.4865 24.6649 65.0378 24.3899C64.5601 24.1149 63.8799 23.811 63.1128 23.811C61.043 23.811 60.1891 25.2728 60.1891 26.7636C60.1891 28.2978 61.1154 29.8755 63.1128 29.8755C63.9812 29.8755 64.7338 29.4847 65.2259 29.1373C65.6601 28.8334 66.0365 28.8478 66.3404 29.2821L66.7457 29.8465C67.0207 30.2518 67.0062 30.6571 66.6154 30.961C65.9641 31.4676 64.7483 32.1913 62.997 32.1913C59.668 32.1913 57.5693 29.8899 57.5693 26.8215ZM67.3894 28.3123C67.3894 25.9676 69.271 24.3899 71.6012 24.3899C73.9605 24.3899 75.842 25.9676 75.842 28.3123C75.842 30.6426 73.9605 32.1913 71.6157 32.1913C69.271 32.1913 67.3894 30.6426 67.3894 28.3123ZM69.9223 28.3123C69.9223 29.4268 70.7039 30.1071 71.6157 30.1071C72.5276 30.1071 73.3091 29.4268 73.3091 28.3123C73.3091 27.1834 72.5276 26.4742 71.6157 26.4742C70.7039 26.4742 69.9223 27.1834 69.9223 28.3123ZM76.8976 31.2215V25.3597C76.8976 24.8386 77.1726 24.5636 77.6936 24.5636H78.5042C79.0252 24.5636 79.2858 24.8386 79.2858 25.3597V25.4899C79.2858 25.5623 79.2713 25.6781 79.2713 25.6781H79.3002C79.6476 25.0992 80.3568 24.3899 81.6739 24.3899C83.1792 24.3899 84.3515 25.0847 84.3515 27.1834V31.2215C84.3515 31.7426 84.0765 32.0176 83.5555 32.0176H82.6436C82.1226 32.0176 81.8476 31.7426 81.8476 31.2215V27.6465C81.8476 26.9518 81.5726 26.6623 81.0226 26.6623C79.9081 26.6623 79.4015 27.5886 79.4015 28.6452V31.2215C79.4015 31.7426 79.1265 32.0176 78.6055 32.0176H77.6936C77.1726 32.0176 76.8976 31.7426 76.8976 31.2215ZM85.7316 31.2215V25.3597C85.7316 24.8386 86.0066 24.5636 86.5277 24.5636H87.3382C87.8593 24.5636 88.1198 24.8386 88.1198 25.3597V25.4899C88.1198 25.5623 88.1053 25.6781 88.1053 25.6781H88.1343C88.4816 25.0992 89.1908 24.3899 90.5079 24.3899C92.0132 24.3899 93.1856 25.0847 93.1856 27.1834V31.2215C93.1856 31.7426 92.9106 32.0176 92.3895 32.0176H91.4777C90.9566 32.0176 90.6816 31.7426 90.6816 31.2215V27.6465C90.6816 26.9518 90.4066 26.6623 89.8566 26.6623C88.7422 26.6623 88.2356 27.5886 88.2356 28.6452V31.2215C88.2356 31.7426 87.9606 32.0176 87.4395 32.0176H86.5277C86.0066 32.0176 85.7316 31.7426 85.7316 31.2215ZM94.1459 28.2834C94.1459 26.0978 95.6222 24.3899 98.0249 24.3899C100.239 24.3899 101.47 25.9531 101.47 27.9505C101.47 28.3413 101.122 28.7755 100.63 28.7755H96.7078C96.8959 29.6873 97.6486 30.1071 98.4446 30.1071C98.9512 30.1071 99.4288 29.9478 99.8051 29.7597C100.283 29.5426 100.63 29.6005 100.876 30.0636L101.079 30.4399C101.31 30.8886 101.238 31.2794 100.804 31.5255C100.268 31.8294 99.3854 32.1913 98.242 32.1913C95.5788 32.1913 94.1459 30.2663 94.1459 28.2834ZM96.7657 27.3426H98.9946C98.9946 26.7347 98.6038 26.2281 97.967 26.2281C97.2433 26.2281 96.8959 26.7492 96.7657 27.3426ZM102.075 28.2834C102.075 26.286 103.552 24.3899 106.229 24.3899C107.358 24.3899 108.154 24.7373 108.632 25.0557C109.037 25.3163 109.066 25.7215 108.806 26.1413L108.56 26.5176C108.285 26.9663 107.952 26.9807 107.489 26.7492C107.199 26.6044 106.823 26.4742 106.389 26.4742C105.202 26.4742 104.608 27.3715 104.608 28.2544C104.608 29.1373 105.216 30.1071 106.475 30.1071C106.967 30.1071 107.46 29.9044 107.821 29.6873C108.299 29.4268 108.661 29.4847 108.907 29.9623L109.095 30.3242C109.312 30.7584 109.269 31.1492 108.878 31.4097C108.357 31.7571 107.46 32.1913 106.229 32.1913C103.566 32.1913 102.075 30.3386 102.075 28.2834ZM110.663 29.3689V26.6478H110.445C109.939 26.6478 109.664 26.3728 109.664 25.8518V25.4899C109.664 24.9689 109.939 24.6939 110.46 24.6939H110.735V23.3478C110.735 22.8268 111.01 22.5518 111.531 22.5518H112.37C112.892 22.5518 113.167 22.8268 113.167 23.3478V24.6939H113.934C114.455 24.6939 114.73 24.9689 114.73 25.4899V25.8518C114.73 26.3728 114.455 26.6478 113.948 26.6478H113.167V28.9057C113.167 29.5426 113.586 29.7886 114.035 29.8465C114.614 29.9189 114.831 30.0926 114.831 30.6426V31.2939C114.831 31.8873 114.469 32.0899 113.803 32.0899C112.703 32.0899 110.663 31.5834 110.663 29.3689ZM115.432 28.2834C115.432 26.0978 116.909 24.3899 119.311 24.3899C121.526 24.3899 122.756 25.9531 122.756 27.9505C122.756 28.3413 122.409 28.7755 121.917 28.7755H117.994C118.182 29.6873 118.935 30.1071 119.731 30.1071C120.238 30.1071 120.715 29.9478 121.092 29.7597C121.569 29.5426 121.917 29.6005 122.163 30.0636L122.365 30.4399C122.597 30.8886 122.525 31.2794 122.09 31.5255C121.555 31.8294 120.672 32.1913 119.528 32.1913C116.865 32.1913 115.432 30.2663 115.432 28.2834ZM118.052 27.3426H120.281C120.281 26.7347 119.89 26.2281 119.253 26.2281C118.53 26.2281 118.182 26.7492 118.052 27.3426ZM123.391 28.2834C123.391 25.9242 124.809 24.3899 126.792 24.3899C128.297 24.3899 128.746 25.1281 128.746 25.1281H128.775C128.775 25.1281 128.761 24.9834 128.761 24.7952V22.4649C128.761 21.9439 129.036 21.6689 129.557 21.6689H130.468C130.989 21.6689 131.264 21.9439 131.264 22.4649V31.2215C131.264 31.7426 130.989 32.0176 130.468 32.0176H129.716C129.195 32.0176 128.92 31.7715 128.92 31.2939V31.2071C128.92 31.1781 128.934 31.1057 128.934 31.1057H128.905C128.905 31.1057 128.283 32.1913 126.749 32.1913C124.722 32.1913 123.391 30.5992 123.391 28.2834ZM125.909 28.2834C125.909 29.3978 126.503 30.1215 127.371 30.1215C128.124 30.1215 128.833 29.5715 128.833 28.2834C128.833 27.386 128.355 26.5031 127.371 26.5031C126.589 26.5031 125.909 27.1399 125.909 28.2834Z" fill="#fff"></path><g filter="url(#filter0_d_13364_20703)"><circle cx="192.986" cy="27.0178" r="23.1579" fill="#5865f2"></circle></g><path fill-rule="evenodd" clip-rule="evenodd" d="M202.891 19.4576C203.635 20.1279 203.707 21.2893 203.054 22.0517L192.107 34.8187C190.994 36.1176 189.024 36.1286 187.896 34.8422L182.959 29.209C182.298 28.454 182.358 27.2918 183.094 26.6133C183.831 25.9347 184.964 25.9968 185.626 26.7519L189.985 31.7258L200.361 19.6245C201.015 18.8621 202.147 18.7874 202.891 19.4576Z" fill="#fff"></path><defs><filter id="filter0_d_13364_20703" x="165.968" y="3.85986" width="54.0318" height="55.0001" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB"><feflood flood-opacity="0" result="BackgroundImageFix"></feflood><fecolormatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix><femorphology radius="0.964912" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_13364_20703"></femorphology><feoffset dy="4.82456"></feoffset><fegaussianblur stddeviation="1.44737"></fegaussianblur><fecomposite in2="hardAlpha" operator="out"></fecomposite><fecolormatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.32 0"></fecolormatrix><feblend in2="BackgroundImageFix" result="effect1_dropShadow_13364_20703"></feblend><feblend in="SourceGraphic" in2="effect1_dropShadow_13364_20703" result="shape"></feblend></filter></defs></svg>
+        </span>
+      </div>
+      <h3>Finalize and customize your Applet</h3>
+      <span>Review trigger and action settings, and click connect. Simple as that!</span>
+    </div>
+  </div>
+
+    <a class="button-secondary" href="/join" role="button">
+      <span>Get started</span>
+    </a>
+</section>
+
+
+  <section class="use-case">
+    <div class="content-wrapper">
+      <div class="connect-header">
+        <span class="body-small">USE CASE</span>
+        <h2>Coffee on demand</h2>
+      </div>
+      <p class="body-large">Set up a QR code menu for coffee orders with AirMenu and make it easy for customers to order and pay using their preferred payment method.</p>
+      <a class="button-secondary" role="button" href="/join">Get started</a>
+    </div>
+  </section>
+
+
+  <section class="upgrade-with-ifttt-pro">
+        <h2 class="works-well-with">Upgrade your automations with</h2>
+        <span class="logo">
+          <svg viewbox="0 0 332 88" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt-white"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="m0 0h28v88h-28zm160 0h-48v28h20v60h28v-60h20v-28zm76 0h-48v28h20v60h28v-60h20v-28zm76 0h-48v28h20v60h28v-60h20v-28zm-208 28v-28h-64v88h28v-24h24v-28h-24v-8z" fill="#fff"></path></svg>
+          <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro-badge-white"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#fff"></path></svg>
+        </span>
+      <ul class="upgrade-benefits">
+        <li>
+          <img width="248" height="206" loading="lazy" alt="Connect to more Applets" srcset="/assets/dependency-000085.png 2x, /assets/dependency-000086.png 3x" title="Connect-to-more-applets" src="/assets/asset-000257.png">
+          <h3>Connect to more Applets</h3>
+          <span class="body-small">Connect up to 20 automations with Pro, and unlimited automations with Pro+</span>
+        </li>
+        <li>
+          <img width="248" height="206" loading="lazy" alt="Add multiple actions with exclusive services" srcset="/assets/dependency-000098.png 2x, /assets/dependency-000099.png 3x" title="Multiple-applets-with-exclusive-services" src="/assets/asset-000258.png">
+          <h3>Add multiple actions with exclusive services</h3>
+          <span class="body-small">Add real-time data and multiple actions for smarter automations</span>
+        </li>
+        <li>
+          <img width="248" height="206" loading="lazy" alt="Get access to faster speeds" srcset="/assets/dependency-000089.png 2x, /assets/dependency-000090.png 3x" title="Faster-speeds" src="/assets/asset-000259.png">
+          <h3>Get access to faster speeds</h3>
+          <span class="body-small">Get faster updates and more actions with higher rate limits and quicker checks</span>
+        </li>
+      </ul>
+      <div class="upgrade-actions">
+        <a class="button-secondary button-on-color" href="/subscriptions/pro">Start your free trial</a>
+      </div>
+  </section>
+
+
+
+
+<div class="about-service-detail-card">
+  <div class="service-detail-content">
+    <div class="service-info">
+      <div class="service-icon" title="AirMenu" style='background-color: #7db901; background-image: url("/assets/asset-000313.bin");'>
+      </div>
+      <div class="service-details">
+        <div class="about-service-header">
+          <h4 class="service-title">About AirMenu</h4>
+          <div class="service-description">
+            <span class="body-small "><p>The Web-app platform for developing solutions that handle customer’s orders and requests.
+AirMenu is a cloud platform where you can create your own applications/web pages with complex menus of services/products.
+AirMenu will generate a trigger when the customer buys a product/service.
+For example, if you buy an item to rent out a room, you can open the room's door.</p>
+</span>
+          </div>
+            <div class="service-website-link">
+              <a href="/external?url=https%3A%2F%2Fwww.info.airmenu.com%2F" target="_blank" class="text-h5 service-website-link-text">
+                Visit website
+              </a>
+            </div>
+        </div>
+        <a class="button-mobile-medium" href="/airmenu/activation/start">Connect AirMenu</a>
+      </div>
+    </div>
+      <div class="similar-services">
+        <h4 class="similar-services-title">Similar to AirMenu</h4>
+        <div class="similar-services-list">
+            <a class="similar-service-item" href="/maker_webhooks">
+              <div class="service-icon" style='background-color: #0099ff; background-image: url("/assets/asset-000061.bin");'>
+              </div>
+              <div class="similar-service-name">
+                <p class="body-small similar-service-name-text">Webhooks</p>
+              </div>
+              <div class="similar-service-arrow">
+                <div class="arrow-icon">
+                  <svg width="16" height="11" viewbox="0 0 16 11" fill="none">
+                    <path d="M8 10.2082L16 2.35584L13.6 0L8 5.49714L2.4 0L0 2.35584L8 10.2082Z" fill="#111" transform="rotate(-90 8 5.5)"></path>
+                  </svg>
+                </div>
+              </div>
+</a>            <a class="similar-service-item" href="/github">
+              <div class="service-icon" style='background-color: #4078c0; background-image: url("/assets/asset-001423.bin");'>
+              </div>
+              <div class="similar-service-name">
+                <p class="body-small similar-service-name-text">GitHub</p>
+              </div>
+              <div class="similar-service-arrow">
+                <div class="arrow-icon">
+                  <svg width="16" height="11" viewbox="0 0 16 11" fill="none">
+                    <path d="M8 10.2082L16 2.35584L13.6 0L8 5.49714L2.4 0L0 2.35584L8 10.2082Z" fill="#111" transform="rotate(-90 8 5.5)"></path>
+                  </svg>
+                </div>
+              </div>
+</a>            <a class="similar-service-item" href="/openhab">
+              <div class="service-icon" style='background-color: #E64A19; background-image: url("/assets/asset-001421.bin");'>
+              </div>
+              <div class="similar-service-name">
+                <p class="body-small similar-service-name-text">openHAB</p>
+              </div>
+              <div class="similar-service-arrow">
+                <div class="arrow-icon">
+                  <svg width="16" height="11" viewbox="0 0 16 11" fill="none">
+                    <path d="M8 10.2082L16 2.35584L13.6 0L8 5.49714L2.4 0L0 2.35584L8 10.2082Z" fill="#111" transform="rotate(-90 8 5.5)"></path>
+                  </svg>
+                </div>
+              </div>
+</a>            <a class="similar-service-item" href="/botghost">
+              <div class="service-icon" style='background-color: #f45142; background-image: url("/assets/asset-001422.bin");'>
+              </div>
+              <div class="similar-service-name">
+                <p class="body-small similar-service-name-text">BotGhost</p>
+              </div>
+              <div class="similar-service-arrow">
+                <div class="arrow-icon">
+                  <svg width="16" height="11" viewbox="0 0 16 11" fill="none">
+                    <path d="M8 10.2082L16 2.35584L13.6 0L8 5.49714L2.4 0L0 2.35584L8 10.2082Z" fill="#111" transform="rotate(-90 8 5.5)"></path>
+                  </svg>
+                </div>
+              </div>
+</a>        </div>
+      </div>
+  </div>
+</div>
+
+
+  <section class="get-started background-color">
+    <h2>IFTTT helps all your apps and devices work better together</h2>
+    <a class="button button-primary button-on-color" href="/join">Get started for free</a>
+  </section>
+
+
+    </main>
+  </div>
+
+  
+
+  
+
+    <footer class="site-footer ifttt_next_bucket">
+    <a class="pro-upsell pro-ad" title="Try IFTTT Pro" href="/subscriptions/pro">
+        <div class="pro-upsell-text">
+          <span class="logo">
+            <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" title="Logo-ifttt"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+            <svg width="91" height="61" viewbox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg" title="Pro"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0C7.3873 0 0 7.3873 0 16.5V43.52C0 52.6327 7.3873 60.02 16.5 60.02H73.76C82.8727 60.02 90.26 52.6327 90.26 43.52V16.5C90.26 7.3873 82.8727 0 73.76 0H16.5ZM17 40.5073V18.0423C17 16.7055 17.7055 16 19.0422 16H28.028C33.1892 16 36.6796 19.7875 36.6796 25.1345C36.6796 30.4816 33.1892 34.3433 28.028 34.3433H23.498V40.5073C23.498 41.844 22.7925 42.5496 21.4558 42.5496H19.0422C17.7055 42.5496 17 41.844 17 40.5073ZM23.498 28.7735H26.6913C28.9563 28.7735 30.0702 27.2511 30.0702 25.1345C30.0702 23.018 28.9563 21.5698 26.8027 21.5698H23.498V28.7735ZM63.3716 22.9766C57.3935 22.9766 52.5664 27.024 52.5664 33.0394C52.5664 39.0177 57.3935 42.9908 63.4087 42.9908C69.424 42.9908 74.2511 39.0177 74.2511 33.0394C74.2511 27.024 69.424 22.9766 63.3716 22.9766ZM63.4087 37.6438C61.0695 37.6438 59.0644 35.8986 59.0644 33.0394C59.0644 30.1431 61.0695 28.3236 63.4087 28.3236C65.748 28.3236 67.7531 30.1431 67.7531 33.0394C67.7531 35.8986 65.748 37.6438 63.4087 37.6438ZM38.8125 25.4701V40.5087C38.8125 41.8454 39.518 42.5509 40.8547 42.5509H43.194C44.5307 42.5509 45.2362 41.8454 45.2362 40.5087V35.1245C45.2362 32.0054 46.7215 29.4061 49.7662 29.4061C51.103 29.4061 51.8085 28.7006 51.8085 27.3639V25.2845C51.8085 23.9477 51.3629 23.2422 50.0633 23.2422C47.6497 23.2422 45.6075 25.8786 44.9763 27.8466H44.902C44.902 27.8466 44.9763 27.2896 44.9763 26.6584V25.4701C44.9763 24.1334 44.2708 23.4278 42.9341 23.4278H40.8547C39.518 23.4278 38.8125 24.1334 38.8125 25.4701Z" fill="#111"></path></svg>
+          </span>
+          <span class="pro-upsell-heading">Automate more, effortlessly.</span>
+        </div>
+
+        <div class="button-secondary button-on-color">
+            Try it free
+        </div>
+</a>  <div class="footer-top-container">
+    <div class="logo-container">
+      <a title="Home" class="logo" aria-label="The IFTTT home page" href="/">
+        <svg width="122" height="37" viewbox="0 0 203 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="ifttt-logo" title="IFTTT" style="fill: white"><title>IFTTT</title>
+<desc>IFTTT</desc><path d="M109.374-.25H68.0791V15.3654H80.3558V52.1734H97.0968V15.3654H109.374V-.25ZM156.249-.25H114.954V15.3654H127.231V52.1734H143.972V15.3654H156.249V-.25ZM203.123-.25H161.829V15.3654H174.105V52.1734H190.846V15.3654H203.123V-.25ZM16.741-.25H0V52.1734H16.741V-.25ZM62.4997-.25H24.5535V52.1734H41.2945V37.6734H55.8033V20.9425H41.2945V15.3654H62.4997V-.25Z" fill="#111"></path></svg>
+</a>    </div>
+
+    <div class="footer-sections">
+      <div class="footer-section explore">
+        <div class="section-header">
+          <a title="Explore" href="/explore">Explore</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="Services" title="Services" href="/explore/services">Services</a>
+              </li>
+              <li>
+                <a alt="Stories" title="Stories" href="/explore/stories">Stories</a>
+              </li>
+              <li>
+                <a alt="Applets" title="Applets" href="/explore/applets">Applets</a>
+              </li>
+              <li>
+                <a alt="IFTTT MCP" title="IFTTT MCP" href="/mcp">IFTTT MCP</a>
+              </li>
+              <li>
+                <a alt="Help Center" title="Help Center" href="/hc/en-us">Help Center</a>
+              </li>
+              <li>
+                <a alt="Content Map" title="Content Map" href="/content_map">Content Map</a>
+              </li>
+              <li>
+                <a alt="Search" title="Search" href="/explore">Search</a>
+              </li>
+              <li>
+                <a alt="Plans" title="Plans" href="/plans">Plans</a>
+              </li>
+              <li>
+                <a alt="Developer docs" title="Developer docs" href="/docs/api_reference">Developer docs</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section top-integrations">
+        <div class="section-header">
+          Top Integrations
+        </div>
+          <ul>
+              <li>
+                <a alt="AirMenu and Button widget" title="AirMenu and Button widget" href="/connect/airmenu/do_button">AirMenu and Button widget</a>
+              </li>
+              <li>
+                <a alt="AirMenu and Gmail" title="AirMenu and Gmail" href="/connect/airmenu/gmail">AirMenu and Gmail</a>
+              </li>
+              <li>
+                <a alt="Discord and Instagram" title="Discord and Instagram" href="/connect/discord/instagram">Discord and Instagram</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Notion" title="iOS Calendar and Notion" href="/connect/ios_calendar/notion_so">iOS Calendar and Notion</a>
+              </li>
+              <li>
+                <a alt="Google Calendar and Google Sheets" title="Google Calendar and Google Sheets" href="/connect/google_calendar/google_sheets">Google Calendar and Google Sheets</a>
+              </li>
+              <li>
+                <a alt="Google Assistant and My Q" title="Google Assistant and My Q" href="/connect/google_assistant_v2/myq_devices">Google Assistant and My Q</a>
+              </li>
+              <li>
+                <a alt="BotGhost and Spotify" title="BotGhost and Spotify" href="/connect/botghost/spotify">BotGhost and Spotify</a>
+              </li>
+              <li>
+                <a alt="SMS and Twitter" title="SMS and Twitter" href="/connect/sms/twitter">SMS and Twitter</a>
+              </li>
+              <li>
+                <a alt="iOS Reminders and Notion" title="iOS Reminders and Notion" href="/connect/ios_reminders/notion_so">iOS Reminders and Notion</a>
+              </li>
+              <li>
+                <a alt="iOS Calendar and Todoist" title="iOS Calendar and Todoist" href="/connect/ios_calendar/todoist">iOS Calendar and Todoist</a>
+              </li>
+          </ul>
+      </div>
+      <div class="footer-section latest-stories">
+        <div class="section-header">
+          <a title="Latest Stories" href="/explore/stories">Latest Stories</a>
+        </div>
+          <ul>
+              <li>
+                <a alt="How to automate with AI" title="How to automate with AI" href="/explore/how-to-automate-with-ai">How to automate with AI</a>
+              </li>
+              <li>
+                <a alt="Best Twitter automation tools" title="Best Twitter automation tools" href="/explore/best-twitter-automation-tools">Best Twitter automation tools</a>
+              </li>
+              <li>
+                <a alt="Best time management apps and tools" title="Best time management apps and tools" href="/explore/best-time-management-apps-strategies-and-tools">Best time management apps and tools</a>
+              </li>
+              <li>
+                <a alt="What is workflow automation?" title="What is workflow automation?" href="/explore/what-is-workflow-automation">What is workflow automation?</a>
+              </li>
+              <li>
+                <a alt="How to use RSS Feeds" title="How to use RSS Feeds" href="/explore/how-to-use-rss-feeds">How to use RSS Feeds</a>
+              </li>
+              <li>
+                <a alt="What are webhooks?" title="What are webhooks?" href="/explore/what-are-webhooks">What are webhooks?</a>
+              </li>
+              <li>
+                <a alt="11 best Pomodoro productivity apps" title="11 best Pomodoro productivity apps" href="/explore/best-pomodoro-productivity-apps">11 best Pomodoro productivity apps</a>
+              </li>
+              <li>
+                <a alt="How to automate Threads" title="How to automate Threads" href="/explore/how-to-automate-threads">How to automate Threads</a>
+              </li>
+              <li>
+                <a alt="How to automate social media posts" title="How to automate social media posts" href="/explore/how-to-automate-social-media-posts">How to automate social media posts</a>
+              </li>
+              <li>
+                <a alt="Best social media tools for automation" title="Best social media tools for automation" href="/explore/best-automation-tools-social-media">Best social media tools for automation</a>
+              </li>
+          </ul>
+      </div>
+    <div class="footer-section company">
+      <div class="section-header">Company</div>
+      <ul>
+        <li><a alt="Developers" title="Developers" href="/developers">Developers</a></li>
+        <li><a alt="Partner program" title="Partner program" href="/partners">Partner program</a></li>
+        <li><a alt="Careers" title="Careers" href="/careers">Careers</a></li>
+        <li><a alt="Contact" title="Contact" href="/contact">Contact</a></li>
+        <li><a alt="About" title="About" href="/about">About</a></li>
+        <li><a alt="Privacy" title="Privacy" href="/privacy">Privacy</a></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer-section download">
+      <ul class="download-buttons">
+        <li>
+          <a title="Download on the App Store" aria-label="The Apple App Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fitunes.apple.com%2Fapp%2Fapple-store%2Fid660944635%3Fpt%3D1752682%26ct%3D%2Fairmenu%26mt%3D8">
+            <img alt="" title="Download on the App Store" loading="lazy" width="136" height="40" src="/assets/asset-000099.svg">
+</a>        </li>
+        <li>
+          <a title="Get it on Google Play" aria-label="The Google Play Store" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.ifttt.ifttt%26utm_source%3D%2Fairmenu%26utm_medium%3Dweb">
+            <img alt="" title="Get it on Google Play" loading="lazy" width="136" height="42" src="/assets/asset-000100.svg">
+</a>        </li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom-container">
+      <div class="group group-social">
+        <a class="social-icon" alt="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.facebook.com%2Fifttt">
+          <img alt="Facebook" title="Facebook" loading="lazy" width="28" height="28" src="/assets/asset-000102.svg">
+</a>
+        <a class="social-icon" alt="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fifttt%2F">
+          <img alt="LinkedIn" title="LinkedIn" loading="lazy" width="28" height="28" src="/assets/asset-000101.svg">
+</a>
+        <a class="social-icon" alt="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.instagram.com%2Fiftttapp%2F">
+          <img alt="Instagram" title="Instagram" loading="lazy" width="28" height="28" src="/assets/asset-000103.svg">
+</a>
+        <a class="social-icon" alt="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.youtube.com%2F%40IFTTT">
+          <img alt="YouTube" title="YouTube" loading="lazy" width="28" height="28" src="/assets/asset-000104.svg">
+</a>
+        <a class="social-icon" alt="Twitter" title="Twitter" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Ftwitter.com%2FIFTTT">
+          <img alt="Twitter" title="Twitter" loading="lazy" width="28" height="28" src="/assets/asset-000105.svg">
+</a>
+        <a class="social-icon" alt="TikTok" title="TikTok" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.tiktok.com%2F%40iftttapp">
+          <img alt="TikTok" title="TikTok" loading="lazy" width="28" height="28" src="/assets/asset-000106.svg">
+</a>
+        <a class="social-icon" alt="Reddit" title="Reddit" target="_blank" rel="noopener noreferrer" href="/external?url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fifttt%2F">
+          <img alt="Reddit" title="Reddit" loading="lazy" width="28" height="28" src="/assets/asset-000107.svg">
+</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+  
+
+  <div id="react-portal-container"></div>
+
+  
+
+  
+  
+
+
+
+    
+
+  
+
+
+
+<div style="position: absolute; top: 50vh; height: 1px; width: 100%;"></div><script src="/local.js" defer></script></body></html>
