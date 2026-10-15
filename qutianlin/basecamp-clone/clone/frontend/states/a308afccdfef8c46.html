@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html><head><link rel="stylesheet" href="/static/local.css"></head><body data-local-page="a308afccdfef8c46" data-local-auth="true" data-source-comment-total="0"><turbo-frame id="calendar" target="_top">
+  <section class="calendar-grid-wrapper" data-controller="avatar-overflow-container">
+    <div class="calendar-grid" data-controller="calendar-day-agenda" data-calendar-day-agenda-day-class="calendar-grid__day" data-calendar-day-agenda-selected-class="calendar-grid__day--selected">
+    <div class="calendar-grid__nav" data-controller="calendar-navigation" data-calendar-navigation-selected-month-value="2026-10" data-calendar-navigation-selected-month-class="month-picker__month--current btn--solid" data-calendar-navigation-unselected-month-class="btn--ghost">
+  <div class="calendar-grid__nav-left">
+  </div>
+    <div class="calendar-grid__nav-center">
+      <a class="month-picker__nav-link calendar-grid__nav--backward btn btn--icon" title="Back a month" data-controller="hotkey" data-hotkey="ArrowLeft" data-turbo-frame="calendar" data-action="hotkey-fire-&gt;calendar-navigation#announceMonth" data-calendar-navigation-month-param="September 2026" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2026-09-01">←</a>
+
+      <div class="calendar-grid__nav--month" data-behavior="expandable">
+        <div class="calendar-grid__nav--month-text" data-behavior="toggle_expansion_on_click" role="button" aria-label="Select month and year" aria-haspopup="true">
+            Next 6 Weeks
+        </div>
+        <div class="expanded_content">
+          <div class="month-picker" data-behavior="collapse_on_clickoutside">
+  <div class="month-picker__nav">
+    <button type="button" class="month-picker__nav-link" aria-label="Previous two years" data-action="calendar-navigation#shiftYears" data-calendar-navigation-by-param="-2">←</button>
+  </div>
+
+  <div class="month-picker__years">
+      <div class="month-picker__year" role="group" aria-label="2026" data-calendar-navigation-target="group">
+    <p class="month-picker__year-header" data-calendar-navigation-target="label">2026</p>
+    <div class="month-picker__months">
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2026" data-month="01" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2026-01-01">Jan</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2026" data-month="02" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2026-02-01">Feb</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2026" data-month="03" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2026-03-01">Mar</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2026" data-month="04" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2026-04-01">Apr</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2026" data-month="05" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2026-05-01">May</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2026" data-month="06" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2026-06-01">Jun</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2026" data-month="07" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2026-07-01">Jul</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2026" data-month="08" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2026-08-01">Aug</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2026" data-month="09" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2026-09-01">Sep</a>
+        <a class="month-picker__month btn btn--xs btn--primary month-picker__month--current btn--solid" aria-current="true" data-calendar-navigation-target="month" data-year="2026" data-month="10" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2026-10-01">Oct</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2026" data-month="11" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2026-11-01">Nov</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2026" data-month="12" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2026-12-01">Dec</a>
+    </div>
+  </div>
+  <div class="month-picker__year" role="group" aria-label="2027" data-calendar-navigation-target="group">
+    <p class="month-picker__year-header" data-calendar-navigation-target="label">2027</p>
+    <div class="month-picker__months">
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2027" data-month="01" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2027-01-01">Jan</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2027" data-month="02" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2027-02-01">Feb</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2027" data-month="03" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2027-03-01">Mar</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2027" data-month="04" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2027-04-01">Apr</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2027" data-month="05" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2027-05-01">May</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2027" data-month="06" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2027-06-01">Jun</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2027" data-month="07" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2027-07-01">Jul</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2027" data-month="08" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2027-08-01">Aug</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2027" data-month="09" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2027-09-01">Sep</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2027" data-month="10" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2027-10-01">Oct</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2027" data-month="11" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2027-11-01">Nov</a>
+        <a class="month-picker__month btn btn--xs btn--primary btn--ghost" data-calendar-navigation-target="month" data-year="2027" data-month="12" data-turbo-frame="calendar" data-behavior="collapse_on_click" data-stop-propagation="false" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2027-12-01">Dec</a>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="month-picker__nav">
+    <button type="button" class="month-picker__nav-link" aria-label="Next two years" data-action="calendar-navigation#shiftYears" data-calendar-navigation-by-param="2">→</button>
+  </div>
+</div>
+
+        </div>
+      </div>
+
+      <a class="month-picker__nav-link calendar-grid__nav--forward btn btn--icon" title="Forward a month" data-controller="hotkey" data-hotkey="ArrowRight" data-turbo-frame="calendar" data-action="hotkey-fire-&gt;calendar-navigation#announceMonth" data-calendar-navigation-month-param="November 2026" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2026-11-01">→</a>
+    </div>
+</div>
+  <div class="calendar-grid__view">
+    <div class="calendar-grid__header">
+      <div class="calendar-grid__weekdays-row">
+          <div class="calendar-grid__weekday" aria-hidden="true">Sun</div>
+          <div class="calendar-grid__weekday" aria-hidden="true">Mon</div>
+          <div class="calendar-grid__weekday" aria-hidden="true">Tue</div>
+          <div class="calendar-grid__weekday" aria-hidden="true">Wed</div>
+          <div class="calendar-grid__weekday" aria-hidden="true">Thu</div>
+          <div class="calendar-grid__weekday" aria-hidden="true">Fri</div>
+          <div class="calendar-grid__weekday" aria-hidden="true">Sat</div>
+      </div>
+    </div>
+    <div class="calendar-grid__body" id="calendar_weeks-pagination-list" data-slide-key="2026-10-11" data-controller="css-property-jitter related-element turbo-frame-pagination is-today" data-is-today-today-class="today" data-is-today-time-zone-value="Etc/UTC" data-action="visibilitychange@document-&gt;is-today#refresh" data-css-property-jitter-properties-value='[{"property": "--circle-rotate", "min": -5, "max": 5, "unit": "deg"}, {"property": "--circle-scale", "min": 0.95, "max": 1.1}]' data-related-element-highlight-class="related-hover" data-turbo-frame-pagination-paginate-on-intersection-value="true" data-turbo-frame-pagination-discard-frame-value="true">
+        <turbo-frame refresh="morph" role="presentation" data-turbo-frame-pagination-target="contents" id="calendar_weeks-pagination-contents-2026-10-11" target="_top">
+    <div class="calendar-grid__week" data-calendar-grid-target="week" role="region" aria-label="Week from Oct 11 to Oct 17">
+    <div class="sr-only" aria-owns="date-2026-10-11 day-items-2026-10-11 date-2026-10-12 day-items-2026-10-12 date-2026-10-13 day-items-2026-10-13 date-2026-10-14 day-items-2026-10-14 date-2026-10-15 day-items-2026-10-15 date-2026-10-16 day-items-2026-10-16 date-2026-10-17 day-items-2026-10-17" style="pointer-events: none"></div>
+  <div class="calendar-grid__week__day-containers">
+      <div class="calendar-grid__day calendar-grid__day--weekend" data-day="2026-10-11" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-10-12" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-10-13" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-10-14" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-10-15" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-10-16" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day calendar-grid__day--weekend" data-day="2026-10-17" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+  </div>
+  <div class="calendar-grid__week__dates">
+      <div id="date-2026-10-11" data-day="2026-10-11" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-11" aria-label="Sunday, October 11, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-11">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      11
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-10-12" data-day="2026-10-12" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-12" aria-label="Monday, October 12, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-12">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      12
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-10-13" data-day="2026-10-13" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-13" aria-label="Tuesday, October 13, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-13">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      13
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-10-14" data-day="2026-10-14" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-14" aria-label="Wednesday, October 14, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-14">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      14
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-10-15" data-day="2026-10-15" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-15" aria-label="Thursday, October 15, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-15">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      15
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-10-16" data-day="2026-10-16" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-16" aria-label="Friday, October 16, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-16">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      16
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-10-17" data-day="2026-10-17" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-17" aria-label="Saturday, October 17, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-17">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      17
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+  </div>
+  <div class="calendar-grid__week__items">
+    <div class="calendar-grid__items" id="day-items-2026-10-11" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-11" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-10-12" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-12" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-10-13" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-13" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-10-14" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-14" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-10-15" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-15" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-10-16" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-16" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-10-17" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-17" data-action="click-&gt;calendar-day#click">
+  </div>
+  </div>
+  <div class="calendar-grid__week__spanned-items" data-controller="calendar-week-span" data-action="click-&gt;calendar-week-span#click">
+  </div>
+</div>
+<div class="calendar-grid__week" data-calendar-grid-target="week" role="region" aria-label="Week from Oct 18 to Oct 24">
+    <div class="sr-only" aria-owns="date-2026-10-18 day-items-2026-10-18 date-2026-10-19 day-items-2026-10-19 date-2026-10-20 day-items-2026-10-20 date-2026-10-21 day-items-2026-10-21 date-2026-10-22 day-items-2026-10-22 date-2026-10-23 day-items-2026-10-23 date-2026-10-24 day-items-2026-10-24" style="pointer-events: none"></div>
+  <div class="calendar-grid__week__day-containers">
+      <div class="calendar-grid__day calendar-grid__day--weekend" data-day="2026-10-18" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-10-19" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-10-20" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-10-21" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-10-22" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-10-23" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day calendar-grid__day--weekend" data-day="2026-10-24" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+  </div>
+  <div class="calendar-grid__week__dates">
+      <div id="date-2026-10-18" data-day="2026-10-18" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-18" aria-label="Sunday, October 18, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-18">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      18
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-10-19" data-day="2026-10-19" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-19" aria-label="Monday, October 19, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-19">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      19
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-10-20" data-day="2026-10-20" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-20" aria-label="Tuesday, October 20, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-20">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      20
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-10-21" data-day="2026-10-21" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-21" aria-label="Wednesday, October 21, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-21">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      21
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-10-22" data-day="2026-10-22" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-22" aria-label="Thursday, October 22, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-22">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      22
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-10-23" data-day="2026-10-23" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-23" aria-label="Friday, October 23, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-23">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      23
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-10-24" data-day="2026-10-24" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-24" aria-label="Saturday, October 24, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-24">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      24
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+  </div>
+  <div class="calendar-grid__week__items">
+    <div class="calendar-grid__items" id="day-items-2026-10-18" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-18" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-10-19" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-19" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-10-20" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-20" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-10-21" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-21" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-10-22" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-22" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-10-23" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-23" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-10-24" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-24" data-action="click-&gt;calendar-day#click">
+  </div>
+  </div>
+  <div class="calendar-grid__week__spanned-items" data-controller="calendar-week-span" data-action="click-&gt;calendar-week-span#click">
+  </div>
+</div>
+<div class="calendar-grid__week" data-calendar-grid-target="week" role="region" aria-label="Week from Oct 25 to Oct 31">
+    <div class="sr-only" aria-owns="date-2026-10-25 day-items-2026-10-25 date-2026-10-26 day-items-2026-10-26 date-2026-10-27 day-items-2026-10-27 date-2026-10-28 day-items-2026-10-28 date-2026-10-29 day-items-2026-10-29 date-2026-10-30 day-items-2026-10-30 date-2026-10-31 day-items-2026-10-31" style="pointer-events: none"></div>
+  <div class="calendar-grid__week__day-containers">
+      <div class="calendar-grid__day calendar-grid__day--weekend" data-day="2026-10-25" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-10-26" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-10-27" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-10-28" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-10-29" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-10-30" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day calendar-grid__day--weekend" data-day="2026-10-31" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+  </div>
+  <div class="calendar-grid__week__dates">
+      <div id="date-2026-10-25" data-day="2026-10-25" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-25" aria-label="Sunday, October 25, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-25">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      25
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-10-26" data-day="2026-10-26" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-26" aria-label="Monday, October 26, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-26">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      26
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-10-27" data-day="2026-10-27" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-27" aria-label="Tuesday, October 27, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-27">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      27
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-10-28" data-day="2026-10-28" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-28" aria-label="Wednesday, October 28, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-28">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      28
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-10-29" data-day="2026-10-29" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-29" aria-label="Thursday, October 29, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-29">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      29
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-10-30" data-day="2026-10-30" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-30" aria-label="Friday, October 30, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-30">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      30
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-10-31" data-day="2026-10-31" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-10-31" aria-label="Saturday, October 31, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-10-31">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Oct</span>
+      31
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+  </div>
+  <div class="calendar-grid__week__items">
+    <div class="calendar-grid__items" id="day-items-2026-10-25" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-25" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-10-26" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-26" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-10-27" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-27" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-10-28" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-28" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-10-29" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-29" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-10-30" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-30" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-10-31" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-10-31" data-action="click-&gt;calendar-day#click">
+  </div>
+  </div>
+  <div class="calendar-grid__week__spanned-items" data-controller="calendar-week-span" data-action="click-&gt;calendar-week-span#click">
+  </div>
+</div>
+<div class="calendar-grid__week" data-calendar-grid-target="week" role="region" aria-label="Week from Nov 1 to Nov 7">
+    <div class="sr-only" aria-owns="date-2026-11-01 day-items-2026-11-01 date-2026-11-02 day-items-2026-11-02 date-2026-11-03 day-items-2026-11-03 date-2026-11-04 day-items-2026-11-04 date-2026-11-05 day-items-2026-11-05 date-2026-11-06 day-items-2026-11-06 date-2026-11-07 day-items-2026-11-07" style="pointer-events: none"></div>
+  <div class="calendar-grid__week__day-containers">
+      <div class="calendar-grid__day calendar-grid__day--first-of-month calendar-grid__day--weekend" data-day="2026-11-01" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-11-02" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-11-03" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-11-04" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-11-05" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-11-06" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day calendar-grid__day--weekend" data-day="2026-11-07" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+  </div>
+  <div class="calendar-grid__week__dates">
+      <div id="date-2026-11-01" data-day="2026-11-01" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month calendar-grid__first-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-01" aria-label="Sunday, November 1, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-01">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      Nov 1<span class="hidden@sm-down">, 2026</span>
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-11-02" data-day="2026-11-02" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-02" aria-label="Monday, November 2, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-02">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Nov</span>
+      2
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-11-03" data-day="2026-11-03" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-03" aria-label="Tuesday, November 3, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-03">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Nov</span>
+      3
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-11-04" data-day="2026-11-04" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-04" aria-label="Wednesday, November 4, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-04">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Nov</span>
+      4
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-11-05" data-day="2026-11-05" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-05" aria-label="Thursday, November 5, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-05">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Nov</span>
+      5
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-11-06" data-day="2026-11-06" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-06" aria-label="Friday, November 6, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-06">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Nov</span>
+      6
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-11-07" data-day="2026-11-07" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-07" aria-label="Saturday, November 7, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-07">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Nov</span>
+      7
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+  </div>
+  <div class="calendar-grid__week__items">
+    <div class="calendar-grid__items" id="day-items-2026-11-01" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-01" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-11-02" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-02" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-11-03" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-03" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-11-04" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-04" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-11-05" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-05" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-11-06" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-06" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-11-07" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-07" data-action="click-&gt;calendar-day#click">
+  </div>
+  </div>
+  <div class="calendar-grid__week__spanned-items" data-controller="calendar-week-span" data-action="click-&gt;calendar-week-span#click">
+  </div>
+</div>
+<div class="calendar-grid__week" data-calendar-grid-target="week" role="region" aria-label="Week from Nov 8 to Nov 14">
+    <div class="sr-only" aria-owns="date-2026-11-08 day-items-2026-11-08 date-2026-11-09 day-items-2026-11-09 date-2026-11-10 day-items-2026-11-10 date-2026-11-11 day-items-2026-11-11 date-2026-11-12 day-items-2026-11-12 date-2026-11-13 day-items-2026-11-13 date-2026-11-14 day-items-2026-11-14" style="pointer-events: none"></div>
+  <div class="calendar-grid__week__day-containers">
+      <div class="calendar-grid__day calendar-grid__day--weekend" data-day="2026-11-08" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-11-09" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-11-10" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-11-11" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-11-12" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-11-13" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day calendar-grid__day--weekend" data-day="2026-11-14" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+  </div>
+  <div class="calendar-grid__week__dates">
+      <div id="date-2026-11-08" data-day="2026-11-08" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-08" aria-label="Sunday, November 8, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-08">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Nov</span>
+      8
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-11-09" data-day="2026-11-09" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-09" aria-label="Monday, November 9, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-09">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Nov</span>
+      9
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-11-10" data-day="2026-11-10" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-10" aria-label="Tuesday, November 10, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-10">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Nov</span>
+      10
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-11-11" data-day="2026-11-11" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-11" aria-label="Wednesday, November 11, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-11">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Nov</span>
+      11
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-11-12" data-day="2026-11-12" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-12" aria-label="Thursday, November 12, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-12">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Nov</span>
+      12
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-11-13" data-day="2026-11-13" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-13" aria-label="Friday, November 13, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-13">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Nov</span>
+      13
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-11-14" data-day="2026-11-14" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-14" aria-label="Saturday, November 14, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-14">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Nov</span>
+      14
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+  </div>
+  <div class="calendar-grid__week__items">
+    <div class="calendar-grid__items" id="day-items-2026-11-08" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-08" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-11-09" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-09" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-11-10" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-10" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-11-11" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-11" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-11-12" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-12" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-11-13" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-13" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-11-14" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-14" data-action="click-&gt;calendar-day#click">
+  </div>
+  </div>
+  <div class="calendar-grid__week__spanned-items" data-controller="calendar-week-span" data-action="click-&gt;calendar-week-span#click">
+  </div>
+</div>
+<div class="calendar-grid__week" data-calendar-grid-target="week" role="region" aria-label="Week from Nov 15 to Nov 21">
+    <div class="sr-only" aria-owns="date-2026-11-15 day-items-2026-11-15 date-2026-11-16 day-items-2026-11-16 date-2026-11-17 day-items-2026-11-17 date-2026-11-18 day-items-2026-11-18 date-2026-11-19 day-items-2026-11-19 date-2026-11-20 day-items-2026-11-20 date-2026-11-21 day-items-2026-11-21" style="pointer-events: none"></div>
+  <div class="calendar-grid__week__day-containers">
+      <div class="calendar-grid__day calendar-grid__day--weekend" data-day="2026-11-15" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-11-16" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-11-17" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-11-18" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-11-19" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day" data-day="2026-11-20" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+      <div class="calendar-grid__day calendar-grid__day--weekend" data-day="2026-11-21" data-is-today-target="candidate" data-controller="calendar-day" data-action="click-&gt;calendar-day#click"></div>
+  </div>
+  <div class="calendar-grid__week__dates">
+      <div id="date-2026-11-15" data-day="2026-11-15" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-15" aria-label="Sunday, November 15, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-15">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Nov</span>
+      15
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-11-16" data-day="2026-11-16" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-16" aria-label="Monday, November 16, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-16">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Nov</span>
+      16
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-11-17" data-day="2026-11-17" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-17" aria-label="Tuesday, November 17, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-17">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Nov</span>
+      17
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-11-18" data-day="2026-11-18" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-18" aria-label="Wednesday, November 18, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-18">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Nov</span>
+      18
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-11-19" data-day="2026-11-19" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-19" aria-label="Thursday, November 19, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-19">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Nov</span>
+      19
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-11-20" data-day="2026-11-20" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-20" aria-label="Friday, November 20, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-20">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Nov</span>
+      20
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+<div id="date-2026-11-21" data-day="2026-11-21" data-is-today-target="candidate" class="calendar-grid__day-of-month-container">
+    <h3 class="margin-0 calendar-grid__day-of-month">
+      <a href="/6302022/calendar/entries/new?starts_on=2026-11-21" aria-label="Saturday, November 21, 2026" data-controller="clickability" data-action="clickability#check clickability:clickable-&gt;desktop-modal#openModal clickability:unclickable-&gt;calendar-day-agenda#show" data-day="2026-11-21">
+        <span aria-hidden="true">
+            <span class="calendar-grid__date-name">
+      <span class="calendar-grid__month-name">Nov</span>
+      21
+  </span>
+        </span>
+      </a>
+    </h3>
+</div>
+  </div>
+  <div class="calendar-grid__week__items">
+    <div class="calendar-grid__items" id="day-items-2026-11-15" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-15" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-11-16" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-16" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-11-17" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-17" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-11-18" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-18" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-11-19" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-19" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-11-20" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-20" data-action="click-&gt;calendar-day#click">
+  </div>
+<div class="calendar-grid__items" id="day-items-2026-11-21" role="group" aria-label="No events" data-controller="calendar-day" data-day="2026-11-21" data-action="click-&gt;calendar-day#click">
+  </div>
+  </div>
+  <div class="calendar-grid__week__spanned-items" data-controller="calendar-week-span" data-action="click-&gt;calendar-week-span#click">
+  </div>
+</div>
+    <a id="calendar_weeks-pagination-link-2026-11-22" class="pagination-link pagination-link--calendar" tabindex="-1" aria-hidden="true" data-frame="calendar_weeks-pagination-contents-2026-11-22" data-turbo-frame-pagination-target="paginationLink" data-action="pagination:load-next-page-&gt;turbo-frame-pagination#loadPage" href="/6302022/calendar/display?buckets=all&amp;items=entries&amp;people=me&amp;window_starts_on=2026-11-22"><div class="spinner ">
+  <div class="spinner__dot spinner__dot--1"></div>
+  <div class="spinner__dot spinner__dot--2"></div>
+  <div class="spinner__dot spinner__dot--3"></div>
+</div></a>
+</turbo-frame>
+    </div>
+  </div>
+    <div class="calendar-day-agenda">
+      <turbo-frame loading="lazy" data-calendar-day-agenda-target="frame" id="calendar_day_agenda" src="/6302022/calendar/agendas/today?buckets=all&amp;items=entries&amp;people=me" target="_top"></turbo-frame>
+    </div>
+</div>
+
+</section></turbo-frame><script defer src="/static/local.js"></script></body></html>

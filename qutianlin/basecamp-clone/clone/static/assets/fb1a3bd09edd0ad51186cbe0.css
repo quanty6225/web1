@@ -1,0 +1,119 @@
+.support {
+  display: flex;
+  flex-direction: column;
+  padding-inline: var(--space-medium);
+  position: relative;
+  z-index: 1;
+}
+
+.support__form {
+  display: grid;
+  font-size: var(--font-size-x-small);
+  gap: 3em;
+  letter-spacing: var(--letter-spacing);
+  margin-inline: auto;
+  width: min(100%, 40em);
+}
+
+.support__form fieldset {
+  display: grid;
+  gap: 1.5em;
+}
+
+.support__form fieldset label {
+  display: grid;
+  gap: 0.75em;
+}
+
+.support__form fieldset label .support__question {
+  font-size: var(--font-size-xx-large);
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  margin-bottom: -0.39em;
+  margin-top: -0.39em;
+}
+
+.support__form fieldset label p {
+  line-height: var(--line-height);
+  margin-bottom: -0.39em;
+  margin-top: -0.39em;
+}
+
+.support__field {
+  display: grid;
+  gap: 1.5em;
+  position: relative;
+}
+
+.support__field .field {
+  position: relative;
+}
+
+.support__field strong {
+  --field-ring-width: max(1px, 0.028125em);
+
+  bottom: 100%;
+  display: flex;
+  font-size: var(--font-size);
+  position: absolute;
+  right: calc(-1 * var(--field-ring-width));
+}
+
+.support__field strong span {
+  background: var(--color-green);
+  color: var(--color-ink-1);
+  display: inline-flex;
+  font-size: var(--font-size-xxx-small);
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1em;
+  padding: 0.15em 0.3em;
+  text-transform: uppercase;
+  transition:
+    background var(--transition),
+    color var(--transition)
+  ;
+}
+
+.support__form .field {
+  font-size: var(--font-size-x-large);
+}
+
+.support__form fieldset input[type=file] {
+  display: flex;
+}
+
+.support__form fieldset.error:not(:focus-within) .support__field strong span {
+  background-color: var(--color-red);
+  color: var(--color-ink-1);
+}
+
+.support__form fieldset.error:not(:focus-within) .field {
+  background-color: var(--field-fill);
+  box-shadow:
+    var(--field-ring) var(--color-red),
+    var(--box-shadow-strong)
+  ;
+  color: var(--color-error);
+}
+
+.support__form fieldset.error:not(:focus-within) .field::placeholder {
+  color: var(--color-error);
+}
+
+.support__form fieldset.error .error {
+  color: var(--color-error);
+  font-weight: 600;
+  line-height: var(--line-height);
+  margin-bottom: -0.39em;
+  margin-top: -0.39em;
+}
+
+@media(min-width: 64em) {
+
+  .support {
+    padding-inline: var(--space-x-large);
+  }
+
+}

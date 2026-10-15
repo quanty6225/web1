@@ -1,0 +1,43 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * ff-meta-serif-web-pro:
+ *   - http://typekit.com/eulas/00000000000000003b9b06f3
+ *   - http://typekit.com/eulas/00000000000000003b9b06f6
+ *   - http://typekit.com/eulas/00000000000000003b9b06f7
+ *   - http://typekit.com/eulas/00000000000000003b9b06f2
+ *
+ * © 2009-2026 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2020-02-06 00:18:05 UTC"}*/
+
+@import url("/static/assets/book-5ad28f267f394b1a633eef86.css");
+
+@font-face {
+font-family:"ff-meta-serif-web-pro";
+src:url("/static/assets/book-c5ab5726e72411317c2145fb.woff2") format("woff2"),url("/static/assets/book-12fcd60c6be96f520f5484d8.woff") format("woff"),url("/static/assets/book-a5b59faa39aa870ce47a0a98.otf") format("opentype");
+font-display:auto;font-style:italic;font-weight:500;font-stretch:normal;
+}
+
+@font-face {
+font-family:"ff-meta-serif-web-pro";
+src:url("/static/assets/book-7d06c55047d37238238989d3.woff2") format("woff2"),url("/static/assets/book-974296d480b47b31d17c4231.woff") format("woff"),url("/static/assets/book-05ff50c1ad32e933e74c52e0.otf") format("opentype");
+font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"ff-meta-serif-web-pro";
+src:url("/static/assets/book-b2238f7603e1068172fee5c0.woff2") format("woff2"),url("/static/assets/book-0e8cd05a3d3401f86c032c35.woff") format("woff"),url("/static/assets/book-b6e95b20a2903dcadb94013d.otf") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"ff-meta-serif-web-pro";
+src:url("/static/assets/book-f39b7dddf05270bc5156ffbf.woff2") format("woff2"),url("/static/assets/book-d100967837fcd96dc535bc08.woff") format("woff"),url("/static/assets/book-b389af2aa23f766f8a842110.otf") format("opentype");
+font-display:auto;font-style:normal;font-weight:500;font-stretch:normal;
+}
+
+.tk-ff-meta-serif-web-pro { font-family: "ff-meta-serif-web-pro",serif; }

@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'Lab Grotesque';
+  font-style: normal;
+  font-weight: 300;
+  src: url("/static/assets/a75874acb0e39714a0979faa.woff2") format('woff2'),
+       url("/static/assets/30c934baffdeeaf4841d3792.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  font-style: italic;
+  font-weight: 300;
+  src: url("/static/assets/d48fac373b431b32e9bac767.woff2") format('woff2'),
+       url("/static/assets/bfb794130bd0f24fbf421c01.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/static/assets/53259d3da6bdd8db2e797048.woff2") format('woff2'),
+       url("/static/assets/a85e6111e0506a07c2ca93e3.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  font-style: italic;
+  font-weight: 400;
+  src: url("/static/assets/b6b44fce2d299ced68437c1b.woff2") format('woff2'),
+       url("/static/assets/8a92eb885f1937fd3cf47e94.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  font-style: normal;
+  font-weight: 500;
+  src: url("/static/assets/c9d60d848e2b0a3ec8f982e5.woff2") format('woff2'),
+       url("/static/assets/b21ed9d3dfb63575d833fbef.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  font-style: italic;
+  font-weight: 500;
+  src: url("/static/assets/64faa43779aa2a95686fa364.woff2") format('woff2'),
+       url("/static/assets/5ebd05f00b0713663628f32d.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  font-style: normal;
+  font-weight: 700;
+  src: url("/static/assets/2013d5eca03a179b19a72b80.woff2") format('woff2'),
+       url("/static/assets/8be2727a81826647f2ac0de4.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  font-style: italic;
+  font-weight: 700;
+  src: url("/static/assets/d395c1105605439df9f085c0.woff2") format('woff2'),
+       url("/static/assets/c7cf0dd5e148001576ed5019.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  font-style: normal;
+  font-weight: 800;
+  src: url("/static/assets/63dfb1ba58ae85dc48d8b491.woff2") format('woff2'),
+       url("/static/assets/4dd643a13fd46e15c2ec10c8.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  font-style: italic;
+  font-weight: 800;
+  src: url("/static/assets/baa7724386afa6c106ac139a.woff2") format('woff2'),
+       url("/static/assets/d0866c48e4c293d706494610.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Lab Grotesque Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/static/assets/4abe8422c11c3e616e46f628.woff2") format('woff2'),
+       url("/static/assets/f7ae48a4d3815a16abb8de4b.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Lab Grotesque Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url("/static/assets/c113e88058d9282fcd2de1e7.woff2") format('woff2'),
+       url("/static/assets/4c66ac040c5521cc1fdedd6b.woff") format('woff');
+}

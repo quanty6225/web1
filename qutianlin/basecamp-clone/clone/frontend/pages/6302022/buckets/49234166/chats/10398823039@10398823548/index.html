@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="en" class="has-perma-toolbar" style="" data-controller="platform color-scheme badge" data-color-scheme="none" data-bridge-platform="" data-can-pin-projects="false" data-hide-badge-counts="true" data-emoji-support="big" data-os="" data-browser="chrome" data-notification-permission="denied" data-time-format="twelve_hour" data-notifications-state="on"><head><style type="text/css">.turbo-progress-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #0076ff;
+  z-index: 2147483647;
+  transition:
+    width 300ms ease-out,
+    opacity 150ms 150ms ease-in;
+  transform: translate3d(0, 0, 0);
+}
+</style>
+<meta charset="utf-8">
+
+<title data-bridge-alt="Chat">Chat</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="none">
+
+<meta name="referrer" content="origin-when-cross-origin">
+
+<meta name="theme-color" content="hsl(202.5, 42.1%, 7.5%)" media="(prefers-color-scheme: dark)">
+
+<meta name="turbo-root" content="/6302022">
+
+<meta name="turbo-cache-control" content="cache">
+
+<meta name="turbo-prefetch" content="true">
+
+<meta name="current-env" content="production"><meta name="current-stage" content="production"><meta name="current-release" content="5f43bd">
+<meta name="current-account-public-id" content="6302022"><meta name="current-account-slug-path" content="/6302022"><meta name="current-account-pro-pack" content="false"><meta name="current-account-restricts-archive-and-trash" content="false"><meta name="current-account-voice-notes-enabled" content="true">
+<meta name="current-account-on-per-seat-business-model" content="false"><meta name="current-account-on-modern-business-model" content="true">
+
+<meta name="current-person-id" content="53382586"><meta name="current-person-gid" content="gid://bc3/Person/53382586"><meta name="current-person-name" content="Dee"><meta name="current-person-email-address" content="demo@basecamp.offline.invalid"><meta name="current-person-avatar-url" content="/api/avatar.svg"><meta name="current-person-owner" content="true"><meta name="current-person-admin" content="true"><meta name="current-person-staff" content="false"><meta name="current-person-client" content="false"><meta name="current-person-employee" content="true"><meta name="current-person-first-week-day-int" content="0"><meta name="current-person-first-time-booster" content="true"><meta name="current-person-time-format" content="twelve_hour"><meta name="current-page-exclude-from-recent-history" content="false"><meta name="current-page-type" content="chat"><meta name="current-page-title" content="Chat"><meta name="current-page-subtitle" content="Making a Podcast"><meta name="current-page-project-description" content="👋 This is a sample project to showcase how we use Basecamp to make a podcast called REWORK. Take a look around and explore!">
+
+
+<meta name="current-account-name" content="Dee"><meta name="current-bucket-id" content="49234166"><meta name="current-bucket-name" content="Making a Podcast"><meta name="current-bucket-status" content="playgrounded"><meta name="current-bucket-path" content="/6302022/buckets/49234166"><meta name="current-bucket-type" content="Project"><meta name="current-recording-id" content="10398823039"><meta name="current-recording-type" content="Chat"><meta name="current-recording-title" content="Chat"><meta name="current-recording-is-docked" content="true"><meta name="current-dock-tool-title" content="Chat"><meta name="current-dock-tool-url" content="/6302022/buckets/49234166/chats/10398823039">
+
+
+<meta name="assets-version" content="v1">
+
+<meta name="apple-itunes-app" content="app-id=1015603248">
+
+
+
+<link rel="stylesheet" href="/static/assets/0618d0b8f58901465b03a3ef.css" media="all" data-turbo-track="reload">
+<link rel="stylesheet" href="/static/assets/4994bc21ac250d6a0f6327ee.css" media="all" data-turbo-track="reload">
+<link rel="subresource" href="/static/assets/901561f033523a234d8cec5c.js" data-script="builds/rich_text" data-turbo-track="reload">
+<link rel="subresource" href="/static/assets/55d92447ff8accc81735f52a.js" data-script="@mermaid-js/tiny/dist/mermaid.tiny" data-turbo-track="reload">
+<template id="mermaid-diagram-template">
+  <figure class="mermaid-diagram" data-controller="dialog" data-dialog-modal-value="true" data-action="keydown.esc-&gt;dialog#closeIfOpen">
+    <div class="mermaid-diagram__inline"></div>
+
+    <button type="button" class="mermaid-diagram__expand btn btn--sm btn--icon btn--ghost" aria-label="Expand diagram" aria-haspopup="dialog" data-action="dialog#open">
+      <svg class="svg-icon svg-icon--expand" aria-hidden="true"><use href="/static/assets/1427e07e496172d3997dc188.svg#expand"></use></svg>
+    </button>
+
+    <dialog class="mermaid-diagram__dialog" inert="" aria-label="Diagram" data-dialog-target="dialog">
+      <button type="button" class="mermaid-diagram__close btn btn--icon btn--ghost" aria-label="Close" data-action="dialog#close">
+        <svg class="svg-icon svg-icon--x" aria-hidden="true"><use href="/static/assets/675483664aff3de45e409c28.svg#x"></use></svg>
+      </button>
+
+      <div class="mermaid-diagram__expanded"></div>
+    </dialog>
+  </figure>
+</template>
+
+
+<meta name="current-avatar-version" content="7694f4a66316e53c8cdd9d9954bd611d" data-turbo-track="reload">
+
+<link rel="apple-touch-icon" sizes="196x196" href="/static/assets/469491359b770d998bdb50ce.png">
+<link rel="shortcut icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAJJklEQVR4AdRVW3BV1Rn+1trXc3LOSciNBCKQEBC5aMDoiBNhZKJVZDp2tBJGexmrggrFoaPjg5d0+uCDWmf6YJ2xrdoZZiJQqWFqa62GtgqDkmktYrRVC0oNhkBIci77vvqtrTIplUqfOl1n/3vd/+/7v3+tfST+x+X/j8CmHynnvj5vbu+OsLt3u9+j7b5nw+67+7y5eu6/FfSsFejdqWoe6Y/WzW2P+5pqzN31Oeyqy8mtNVXG1vqc2DW9ytjdPCvq+/4Of91dT6masyXypQR6e5V87IVwVXM+2t5QjacbCri2pgoteVe4ri1kxlIyY8OtzoqWxoK4trEgn26pj7b/4Llwld77ZUTkf1rQO6DclhXh5qZq0Ufrrs3BrrIB21CQ3GnSDEOkbbCwi5wr7aYa2U1V+rLLws29TymXU2d89J4vnHz4RVXVbkYPNlbLhxqrRUM+C7iWSMGU0LWAaQDWZ6bJKAEEMaAUUJ9HQ0NBPlQzPerVvnCGIr9ovHebsmdVJ/dSzu/V5YWTZQy2KUDcdLkGM6mCyehNEvjcLHqzpEJCBpoIU+XU58WWDKJ7tc9082kvbjlthN2lbcnNDTlsqc0LK2sLSi5gSAFdtOQWydgmYJsK1ikTbAuYZsJxSbICQQTkM7DqqsSWGXXJzXr/6SZPH+jfH3bVVuG+upzIZizAJLDBRYpRGYzO+Qw4JcB53XdICLKCNyd/i9+f7MMh/09MVUgTSBIgl0G2kFH3/3Qg7KKrf3nk1N62Pap2WpXxAE/0TMdGml8tNSQYEaCltii9QxKupeCydiwJwwyxZ3QnBsZ24aA3iF+PbMXeE/1QKKfK6dTlHMzI23jgJ8TAlCKntNFYndxUyGJVluC2AejoLSoguUj3HUbqaFDO2WzbqQIJXj/+G7xy7EW4WZMHMEKJv32TA9g98gtEqJC8oBpAxhGrakR4E6YU7TvtDgypOYUqsZ5MDcsEiEs3Y/gk+BAxndiGhAa0eRO0uSSQtSSGxvdi10fbUJU14PA8JHEARQviEPs494fhfgAhDMpgmzBcR6zfuVfN4WD6nCKQt5O1eQcLbTrWd/xI/A72Fl/A8yPPYMfhJzEWfczDKKGvnU2FHIJ/WB7CtkM/gydKqK3JIUpCxCpEpGL4YUDz8dLI77BvZAAGVWMMJCkWOploLT4rKYGBt1RTzhE9Lh3rHA9H7+NgZT9OBMdRUmXsH9uHre8+jrFgGBlTwiXD4coHeOavj+P90j/QVFvHG2AgjIIUXKiEqkXwqcRkWMEv//4c3ht/izfEgD5TDKLnV6+rJs0hJVBfiFdmM1jkkGVRjRF8EMVwEpNBET6jch2XeR7Ek2/9EAeOv4HBY3vw4wOPYPDE26jPF9AwrQa+BqfsIDSQ8CwkSKiEJnPYP4Hn39uOcjRGAhKOIRY5mXhlSmBgQJnMyxpHwoJQGCr9BSPeUZSCMibDEu9yAJOHwjANvDbyBh544348OPgg9o0eRM6yMXtGE5RI4AceAXnnoAgfQ0em6E9/HTNUbPfY23j1yCvQZ4vpsJiONRpbNrZjji3FJZIzx8KjeLd0EBU6q4Qeo/rUacxIClU56DLiTZDgJHgW0do8A1nHwWSljCiOGLUGVzz1IJCuBWvApG9DKbxw6CV8XDzCAylp4hK/gDnStNBpGqJFbz1YfBOjlVFUIg+VuAKP8kdJBF1s20JzfT0K2QwaMlVoP6cF1fkcJiYn4fk+wRMoKsHDTgIiNYMbBVWABLJS4s+lYfzxo91USEEaqsV04k5pyWQ5D7R7IhrF2xMHGLUPP/bhMadxHCPmp0w7lXSQyWQxd8ZMzGs5B1nXxcniOMqVCpI094DJhdqEBCSBGThJ6TaZcIxvDBx5DZ8UhzkvXVOo5ZL3s0NP/G1yCMe90fTQeZGPgCRiFSGm/EkS83ioNMo4jhCFISoE9oMAEcEV5dW5pleQJyTEp8B0rFVghUQAGTYOUIXB4ddBrjSxlIGJOQGdflQ8hPQesx3SaUD5E0av9JXSAKkl0IpEJBQzNRHn6JMPJeVb0qs2TUYD6prD6cO/EQRQIHu8e/wdxMQQELM14TLVghtkEQQhYjpNGDlScG5IaFDQf7GcogpsI6EiAgYRhKAbmsFlEoAQAlOLVkD7T7g5ZkrButFpTFWi67IMkqRfCJlckL8Ys6I58CoeZSUIIxZcAYJwD5Tu0wxFGGVwWKROOA1ApH0hNLhMx01O8OFXQSGkqqO8WYgirKm/CN2zV0FBJkGc9MtSUT4WxGJnXaEJa2Zcj05xEVAEKp7PlCSMVNGQOk1dE0RIAUHthBD4dExCCI4pSW0SnCoMwCfoBMHnIo8Ns76K9R23oLEwA5UQO0PPfEwubhVHy2WxKYjNZwr55uCqtq+hZ/o3sTRZCqfoolIKeM08eKEPPwoRhBHTqI03JNKWIGYdcbzieylx3w9Q5tUMKjFmxjVYW7MS9y75LtZ19KCm0ByUQ/nzyDc2XXOxOCo124VzxHBwwthYCqzNkcwPtTd1qOsX3IRbZ9+B6wtfx6XJcrR7bagrT4NbdCAnBMLxCOVxkjrpIzwZQk0AbslBk1eH8+I2XGl14damddiy6C58Y+l3sHDWMhXJ3FApkJvHDOvOqzrFsMZOCejG4sWi2NFqPBHE9tWl0Lo7Ngp7ptfPm+xqvxJrz/82blu0CRvn3YWNbZtxx6yNuH3mBmxo3oDbmm/F+ub1uI3922ffidvbN+GW8+7A2iXfwor5X8HMxvmTiZnfw+Du9gJ19VUd9hM3EEtjajtFQHe0LWsTh5e1WY/6sb267Jmri5F5jyernjUzDYPTaluPtDQtGp93Tqe3ePal0fmtl8VLWlfEC2ctj+a3XOjN5lxtXeuRTL5pMLbyz/qJdU8lNFfHvr36yg7r0WuWZQ5rjKn2bwQ+n+ycK8Y7z7VevbDdffj9/faNJyec7slYrCyFZrcXizWVxLyuoqweP7J6YmVdF8Fc4yunO0iMlXHodB8bsm9cdYH78BUd1qtXdIrxz/2eXp+RwNSFN9wg4suXipOXzXc/6Fpg77/03MzLXQvc/hULnB0rFjs7uhazvSjz8uVL7P3d57sf6LV6z1QfZ2qfFYEzbT6b8S9b808AAAD//6k7T4MAAAAGSURBVAMAiVUHfS2x5cIAAAAASUVORK5CYII=">
+
+<link rel="stylesheet" href="/static/local.css"></head>
+
+
+<body class="body-chat viewport account--free-plan" data-controller="web-notification-permission hotkey-mode scroll-state" data-action="scroll@window-&gt;scroll-state#update:passive turbo:morph@document-&gt;scroll-state#update" data-scroll-state-scrolled-class="page-scrolled" data-scroll-state-threshold-value="32" data-local-page="a1ebefcbd5849c95" data-local-auth="true" data-source-comment-total="0">
+  
+  <a href="#main-content" class="sr-only nav__accessibility-button btn btn--sm loading__hide" data-turbo="false">
+    Skip to main content
+  </a>
+
+  <div data-controller="desktop-modal">
+    <div class="layout">
+      <nav id="my_navigation" class="nav" aria-label="Main" data-notifications-url="/6302022/my/notifications.json">
+  <a class="nav__home-link btn btn--ghost btn--sm margin-right-auto leading-none" data-hotkey="h" aria-label="Home" href="/6302022/">
+    <svg class="svg-icon svg-icon--home" aria-hidden="true"><use href="/static/assets/e6f8387787211b34f3e9127e.svg#home"></use></svg>
+    <span>Home</span>
+    <kbd class="keyboard-shortcut" title="Keyboard shortcut: shift + H">H</kbd>
+</a>
+  <div class="nav__bc-menu">
+    <div class="nav-menu" data-behavior="expandable my_navigation_menu_toggle_shortcut" data-menu-section="my" data-controller="search nav-content-filter focus-trap" data-nav-content-filter-content-filter-outlet="#my-navigation-menu-listbox" data-focus-trap-focus-empty-region-value="false" data-action="
+      expand-&gt;nav-content-filter#selectIndex
+      prefetched-frame:injected-&gt;nav-content-filter#selectIndexLater
+      collapse-&gt;nav-content-filter#reset
+      collapse-&gt;nav-content-filter#selectIndex
+      expand-&gt;focus-trap#activate
+      prefetched-frame:injected-&gt;focus-trap#activate
+      collapse-&gt;focus-trap#deactivate" data-nav-content-filter-index-param="0">
+  <div class="collapsible_content" data-behavior="collapse_on_clickoutside">
+    <button name="button" type="button" class="nav__trigger" data-behavior="toggle_expansion_on_click" data-role="nav-shortcut-title" data-mac-shortcut-title="Keyboard shortcut: shift + J" aria-label="Jump Menu" aria-haspopup="true" title="Keyboard shortcut: shift + J">
+      <div class="nav__logo">
+        <img alt="" aria-hidden="true" src="/static/assets/8f55a3a5ddb8b3a2a6f24899.png" loading="eager">
+      </div>
+      <svg viewbox="0 0 193 37" fill="none" xmlns="http://www.w3.org/2000/svg" alt="Basecamp" class="nav__logotype">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M182.785 7.50211C188.019 7.50281 192.101 11.2908 192.101 18.4689V18.8087C192.101 25.8916 188.094 29.8706 182.785 29.8712C179.987 29.9725 177.361 28.5133 175.963 26.0822V36.6525H170.029V7.93761H175.963V11.2892C177.421 8.91941 180.007 7.48451 182.785 7.50211ZM180.99 11.9904C178.005 11.9907 175.756 14.1506 175.756 18.4689V18.7912C175.756 23.0896 177.798 25.174 181.029 25.174C184.259 25.1732 186.093 22.8983 186.094 18.7326V18.4689C186.094 14.1129 183.975 11.9908 180.99 11.9904Z"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M76.7011 7.38685C82.2181 7.38755 87.1301 10.6266 87.1311 18.2775V19.9259H71.7111C71.8811 23.4863 73.8091 25.6075 77.0211 25.6075C79.7601 25.6072 81.1211 24.4142 81.4801 22.6154H87.1501C86.4701 27.2363 82.7831 29.8319 76.9451 29.8322C70.4081 29.7562 65.7041 25.7017 65.7031 18.8458V18.5236C65.5581 15.5477 66.6651 12.647 68.7561 10.5294C70.8471 8.41165 73.7311 7.27175 76.7011 7.38685ZM76.7011 11.4787C74.0381 11.4678 71.8581 13.6024 71.8071 16.2716H81.3671C81.1591 13.0332 79.4781 11.4792 76.7011 11.4787Z"></path>
+        <path d="M99.7171 7.38656C104.667 7.38686 109.165 9.54757 109.769 15.703H104.1C104.023 14.638 103.521 13.6472 102.707 12.9588C101.892 12.2707 100.834 11.9421 99.7731 12.0467C96.7121 12.0467 94.6521 14.3388 94.6521 18.4491V18.7713C94.6531 23.0702 96.5421 25.287 99.8871 25.287C101.047 25.3697 102.194 24.9844 103.07 24.2166C103.946 23.4485 104.482 22.3597 104.555 21.1952H109.902C109.581 26.2896 105.894 29.8139 99.6781 29.8143C93.4621 29.8139 88.6821 25.8544 88.6821 18.8475V18.5252C88.5411 15.5441 89.6561 12.6409 91.7541 10.5233C93.8521 8.40557 96.7421 7.26636 99.7171 7.38656Z"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M34.373 7.42578C39.606 7.42618 43.31 9.54698 43.31 15.3614V29.3985H37.643V26.7266C36.158 28.8321 33.665 29.9854 31.103 29.7559C27.324 29.7559 23.998 27.8609 23.998 23.3536C23.999 18.3538 28.572 16.4786 35.129 16.4786H37.527V15.6075C37.527 13.0697 36.771 11.725 34.051 11.7247C33.162 11.6073 32.263 11.8679 31.574 12.4434C30.885 13.019 30.469 13.8581 30.424 14.7559H24.754C25.132 9.67958 29.139 7.42578 34.373 7.42578ZM35.242 20.002C31.803 20.002 29.801 20.7414 29.801 23.0333C29.801 24.5855 30.746 25.6094 32.918 25.6094C35.525 25.6091 37.529 24.1865 37.529 21.8008V20.002H35.242Z"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M121.637 7.38672C126.87 7.38712 130.593 9.50852 130.594 15.3222V29.3964H124.924V26.7265C123.448 28.8011 120.995 29.9499 118.461 29.7558C114.569 29.7556 111.299 27.8606 111.299 23.3535C111.299 18.3537 115.873 16.4786 122.41 16.4785H124.83V15.6074C124.83 13.0698 124.054 11.6861 121.353 11.6855C120.462 11.5682 119.561 11.8292 118.869 12.4042C118.177 12.9793 117.755 13.8173 117.705 14.7167H112.037C112.415 9.64062 116.402 7.38672 121.637 7.38672ZM122.543 20.0019C119.104 20.002 117.102 20.7414 117.102 23.0332C117.102 24.5854 118.048 25.6093 120.201 25.6093C122.826 25.6086 124.829 24.1862 124.83 21.8007V20.0019H122.543Z"></path>
+        <path d="M54.762 7.38672C59.504 7.38692 63.057 9.09172 63.586 14.0156H58.144C58.067 13.2153 57.659 12.4826 57.021 11.9941C56.384 11.506 55.572 11.3046 54.781 11.4394C52.892 11.4394 51.758 12.3303 51.758 13.6562C51.758 14.9814 52.779 15.5507 55.896 15.9863C61.243 16.7629 64.191 18.1087 64.191 22.7109C64.191 27.3121 60.846 29.7554 55.197 29.7558C49.548 29.7558 46.089 27.2177 45.881 22.5781H51.398C51.644 24.4713 52.59 25.6074 55.178 25.6074C57.463 25.6071 58.521 24.7554 58.521 23.2792C58.521 21.802 57.256 21.1948 54.195 20.7402C48.527 19.869 46.297 18.2395 46.297 14.0546C46.297 9.86872 50.397 7.38682 54.762 7.38672Z"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4901 0C17.8571 0.0004 21.1641 2.6331 21.1641 7.5761V7.7285C21.3691 10.706 19.3531 13.3814 16.4391 13.998C19.9381 14.3098 22.5411 17.3809 22.2791 20.8925V21.1953C22.2791 26.5734 18.7641 29.3959 12.0191 29.3964H0V0H11.4901ZM6.5391 24.7187H11.0001C14.2671 24.7181 15.7421 23.2399 15.7421 20.5703V20.4179C15.7421 17.7101 14.2671 16.3088 10.6781 16.3085H6.5391V24.7187ZM6.5391 12.123L10.4321 12.0468C13.6051 12.0466 14.8731 10.9086 14.8731 8.2578V8.125C14.8731 5.6634 13.4921 4.5471 10.3751 4.5468H6.5391V12.123Z"></path>
+        <path d="M146.457 7.3675C149.062 7.1584 151.491 8.7046 152.41 11.1566C154.008 8.7456 156.722 7.3168 159.609 7.3675C163.577 7.3679 166.639 9.8692 166.639 15.5511V29.3968H160.762V16.2132C160.762 13.4674 159.533 12.2371 157.398 12.2367C156.244 12.1861 155.125 12.6425 154.334 13.4867C153.543 14.3307 153.157 15.4776 153.279 16.6293V29.3968H147.383V16.2132C147.383 13.4675 146.117 12.2372 144.039 12.2367C142.883 12.1869 141.763 12.6418 140.969 13.4847C140.175 14.3279 139.784 15.4757 139.9 16.6293V29.3968H133.986V7.9359H139.9V11.1566C141.213 8.7703 143.739 7.3105 146.457 7.3675Z"></path>
+      </svg>
+      <kbd class="keyboard-shortcut">J</kbd>
+      <svg class="svg-icon svg-icon--chevron-down" aria-hidden="true"><use href="/static/assets/8f593f8a435ef577ee04941c.svg#chevron-down"></use></svg>
+</button>    <div class="nav-menu__sheet nav-menu__sheet--jump expanded_content" role="dialog" aria-label="Jump Menu" aria-description="Search or jump to a project, person, or recent page" aria-modal="true" data-focus-trap-target="region">
+      <div class="nav-menu__scroller" data-behavior="scrollable_menu" scrollable="">
+        <div data-controller="prefetched-frame" data-prefetched-frame-url-value="/6302022/my/navigation/menu" data-turbo-permanent=""></div>
+      </div>
+</div>  </div>
+</div>
+
+  </div>
+
+  <div class="hidden" aria-hidden="true">
+  <a tabindex="-1" data-hotkey="w" href="/6302022/my/drafts">Drafts</a>
+  <a tabindex="-1" data-hotkey="o" href="/6302022/my/boosts">Boosts</a>
+  <a tabindex="-1" data-controller="hotkey" data-hotkey="1,Shift+!,Shift+1" href="/6302022/activity">Activity</a>
+  <a tabindex="-1" data-controller="hotkey" data-hotkey="2,Shift+@,Shift+2" href="/6302022/calendar">Calendar</a>
+  <a tabindex="-1" data-controller="hotkey" data-hotkey="3,Shift+#,Shift+3" href="/6302022/reports">Reports</a>
+  <a tabindex="-1" data-controller="hotkey" data-hotkey="4,Shift+$,Shift+4" href="/6302022/everything">Everything</a>
+</div>
+
+
+  <bc-modal opened="false" data-desktop-modal-target="modal" data-action="close-&gt;desktop-modal#resetModal" close-on-submit="false" close-on-click-outside="true" type="box"></bc-modal>
+</nav>
+
+      <noscript>
+  <div class="noscript-message text-center margin-inline-auto">
+    <span><span class="emoji">⚠️</span></span>
+    <span class="noscript-message__content">
+      Some Basecamp features won’t work unless you enable JavaScript in your browser.
+      <a class="decorated" target="_blank" href="/external?target=http%3A%2F%2Fenable-javascript.com">Learn more…</a>
+    </span>
+  </div>
+</noscript>
+
+      <div id="flashes"></div>
+
+      
+
+
+      <main id="main-content" class="main-content perma perma--chat" data-appearing-on="local-ref-a679ac0207922d1f" data-bucket-url="/6302022/buckets/49234166" data-bucket-id="49234166" data-controller="bridge--page bridge--page-metadata bridge--insets bridge--display-rich-avatar bridge--image-viewer bridge--desktop-cable bridge--desktop-color-scheme bridge--desktop-download-flight bridge--desktop-lexxy-keyboard bridge--desktop-manifest bridge--desktop-navigation bridge--desktop-new-tab bridge--desktop-notification bridge--desktop-page-info bridge--desktop-sidebar-ping bridge--desktop-unreads bridge--desktop-window-focus bridge--buttons bridge--toast-notification bridge--overflow-menu desktop-modal" data-bridge--desktop-sidebar-ping-sidebar-outlet="#sidebar">
+        
+        <section class="system-degradations-banner formatted_content">
+  <h1 class="text-negative text-center margin-bottom-24">
+    Basecamp isn’t fully functional right now.
+  </h1>
+
+  <p data-system-degradation="uploads_disabled" class="margin-bottom-24">
+    <strong>File uploading is disabled</strong> due to a service disruption.
+    Your files are safe, but you can’t upload new files to messages, comments, documents, or the Docs &amp; Files section.
+  </p>
+
+  <p data-system-degradation="search_disabled" class="margin-bottom-24">
+    <strong>Search is offline</strong> due to a service disruption.
+    Your data is safe, and you can continue to use Basecamp.
+  </p>
+
+  <p data-system-degradation="readonly_database" class="margin-bottom-24">
+    <strong>The database is in read-only mode</strong> due to a service disruption.
+    Your data is safe, but you can’t currently post new messages, to-dos, documents, etc.
+  </p>
+
+  <p data-system-degradation="activity_timeline_disabled" class="margin-bottom-24">
+    <strong>Activity timelines are temporarily disabled</strong> due to a service disruption.
+    Your data is safe, and you can continue to use Basecamp.
+  </p>
+
+  <footer>
+    We’re terribly sorry for the disruption and are working diligently to bring Basecamp back to 100%.<br>
+    Visit <a href="/status" target="_blank">our status site</a> for updates.
+  </footer>
+</section>
+
+        <div id="announcement_banner" class="margin-inline-8" data-controller="announcement-banner" data-announcement-banner-url="/6302022/my/announcement" data-announcement-banner-read-url="/6302022/my/announcement/read" data-turbo-permanent="true"></div>
+        <div class="back-to-top app-mobile__hide hidden@md-down" data-controller="scroll-state scroll" data-action="scroll@window-&gt;scroll-state#update:passive resize@window-&gt;scroll-state#update:passive" data-scroll-state-scrolled-class="back-to-top--scrolled" data-scroll-state-threshold-value="160" data-scroll-behavior-value="preferred"><button name="button" type="button" class="back-to-top__button btn btn--ghost btn--sm" aria-label="Back to top" data-action="scroll#scrollToPageTop"><svg class="svg-icon svg-icon--arrow-up" aria-hidden="true"><use href="/static/assets/4370a69a5dd63a92205eaf5f.svg#arrow-up"></use></svg><span>Back to top</span></button></div>
+
+          <div class="perma-toolbar">
+              <nav id="breadcrumbs" class="perma-toolbar__breadcrumbs hide-scrollbar" aria-label="Breadcrumb" data-controller="scroll" data-scroll-to-value="end">
+  
+                  
+  <a class="perma-toolbar__breadcrumb perma-toolbar__breadcrumb--bucket" data-controller="hotkey animation" data-hotkey="Shift+G" data-animation-play-class="perma-toolbar__breadcrumb--consumed" title="Making a Podcast" href="/6302022/projects/49234166">
+    <strong>Making a Podcast</strong>
+    <kbd class="keyboard-shortcut" title="Shift+G">G</kbd>
+</a>
+
+
+
+  <span class="perma-toolbar__breadcrumb">
+    <a class="chat__breadcrumb hidden@md-up app-mobile__hide" href="/6302022/buckets/49234166">Making a Podcast</a>
+    <span class="hidden@md-down">Chat</span>
+  </span>
+
+
+
+</nav>
+              <div class="perma-toolbar__actions">
+                  
+  <turbo-frame id="bookmark_quick_toggle_recording_10398823039" src="/6302022/my/bookmarks/ref-220e2dab3f2c1788/quick_toggle" complete="">
+  <form class="contents" method="post" action="/6302022/my/bookmarks/ref-220e2dab3f2c1788"><input type="hidden" name="_method" value="put"><button class="perma-toolbar__btn set-aside-btn btn btn--sm btn--ghost " data-controller="fly-to" data-action="fly-to#fly" data-fly-to-animation-outlet=".tray--right .tray__nav" data-bridge--buttons-target="button" data-bridge-icon-url="/external?target=https%3A%2F%2Fbc3-production-assets-cdn.basecamp-static.com%2Fassets%2Ficons%2Fsrc%2Fbookmark-bd23f15c0034b8ea4295a7300080ae963589dfef8a2b4a1236e08e6f41cfcd49.svg" data-bridge-title="Bookmark" type="submit">
+  <svg class="svg-icon svg-icon--bookmark set-aside-btn__icon-add" aria-hidden="true"><use href="/static/assets/a86aa34c9916b23873e0d6d1.svg#bookmark"></use></svg>
+  <svg class="svg-icon svg-icon--bookmark-solid set-aside-btn__icon-remove" aria-hidden="true"><use href="/static/assets/8c165577dc9e7c8db73190e3.svg#bookmark-solid"></use></svg>
+  <span>Bookmark</span>
+</button></form>
+</turbo-frame>
+  <span class="hidden-on-template app-mobile__hide">
+    <a title="Notify me when people chat" class="btn btn--sm perma-toolbar__btn btn--ghost" data-bridge--buttons-target="button" data-bridge-icon-url="/external?target=https%3A%2F%2Fbc3-production-assets-cdn.basecamp-static.com%2Fassets%2Ficons%2Fsrc%2Fbell-901e5c7ff3bf27e634311e057b724346c148f5f720c31d185d6c555df007ec6b.svg" data-bridge-title="Notify me when people chat" data-turbo-prefetch="false" data-remote="true" rel="nofollow" data-method="post" href="/6302022/buckets/49234166/recordings/10398823039/subscription">Notify me when people chat</a>
+</span>
+
+<span class="action-sheet app-mobile__hide" data-behavior="expandable collapse_on_click">
+  <button name="button" type="button" title="Show options…" aria-label="Options menu" class="action-sheet__expansion-toggle btn btn--icon btn--sm btn--ghost " data-bridge-options-menu="" data-behavior="toggle_expansion_on_click toggle_file_menu"><svg class="svg-icon svg-icon--overflow" aria-hidden="true"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg></button>
+
+  <div class="action-sheet__content" data-behavior="collapse_on_clickoutside">
+    <turbo-frame id="bubble_up_menu_recording_10398823039" src="/6302022/buckets/49234166/recordings/10398823039/bubble_up?bridge_overflow_menu_item=true&amp;bridged=true" complete="">
+  
+
+
+  <div data-controller="bridge--bubble-up" data-bridge--bubble-up-url-value="/6302022/buckets/49234166/recordings/10398823039/bubble_up" data-bridge--bubble-up-bubbled-value="false">
+      <span class="action-sheet action-sheet--bubble-up " data-controller="orientation horizontal-offset" data-orientation-flip-class="flip" data-orientation-right-class="right-edge" data-orientation-left-class="left-edge" data-orientation-min-distance-value="80" data-orientation-anchor-value="bottom" data-orientation-boundary-selector-value=".chat-line" data-horizontal-offset-boundary-selector-value=".chat-line" data-horizontal-offset-invert-value="true" data-behavior="expandable" data-action="expand-&gt;orientation#flip turbo:frame-load-&gt;orientation#flip collapse-&gt;orientation#reset expand-&gt;horizontal-offset#offset collapse-&gt;horizontal-offset#reset">
+      <button name="button" type="button" class="action-sheet__action" data-bridge-bubble-up="" data-bridge--overflow-menu-target="item" data-bridge-icon-url="/external?target=https%3A%2F%2Fbc3-production-assets-cdn.basecamp-static.com%2Fassets%2Ficons%2Fsrc%2Fbubbles-426ac89342b4ad1b7025f807333438122bebff241ef85f47de141a788e366cbd.svg" data-behavior="toggle_expansion_on_click">
+        <svg class="svg-icon svg-icon--bubbles action-sheet__icon--visible" aria-hidden="true"><use href="/static/assets/c660911cef4c37b8dade19fe.svg#bubbles"></use></svg>
+        Bubble up
+</button>
+    <div class="action-sheet__content action-sheet__content--second-layer" data-orientation-target="content" data-horizontal-offset-target="content" data-behavior="collapse_on_clickoutside">
+      <turbo-frame loading="lazy" class="action-sheet__lazy-options" data-turbo-frame-target="element" id="bubble_up_actions_recording_10398823039" src="/6302022/buckets/49234166/recordings/10398823039/bubble_up/edit?bridge_overflow_menu_item=true&amp;bridged=true"></turbo-frame>
+    </div>
+  </span>
+
+</div>
+</turbo-frame>
+
+    <span class="copy-to-clipboard copy-to-clipboard--supported" data-controller="copy-to-clipboard" data-copy-to-clipboard-deselect-on-copy="true" data-copy-to-clipboard-flash-message-value="Copied"><span class="copy-to-clipboard__hider"><input type="text" id="" value="/6302022/buckets/49234166/chats/10398823039" class="copy-to-clipboard__hidden-text" tabindex="-1" data-copy-to-clipboard-target="copyable" data-action="click-&gt;copy-to-clipboard#selectCopyable" readonly aria-hidden="true" dir="auto"></span><a data-action="copy-to-clipboard#copy" data-behavior="collapse_on_click" class="action-sheet__action" href="#"><svg class="svg-icon svg-icon--link action-sheet__icon--visible" aria-hidden="true"><use href="/static/assets/a72c0db83cf80f3925c43a78.svg#link"></use></svg> <span class="action-sheet__action__copy-label">Copy link</span></a></span>
+
+    <hr class="action-sheet__divider">
+
+    <form class="button_to" method="post" action="/6302022/bonfire?campfire_id=10398823039"><input type="hidden" name="_method" value="patch"><button class="action-sheet__action" type="submit"><svg class="svg-icon svg-icon--messages" aria-hidden="true"><use href="/static/assets/7583a3c55a4b8186121ec61d.svg#messages"></use></svg> View in Bonfire</button></form>
+
+    <a data-bridge-menu-action="true" data-bridge--overflow-menu-target="item" data-bridge-action-type="attachments" data-bridge-icon-url="/external?target=https%3A%2F%2Fbc3-production-assets-cdn.basecamp-static.com%2Fassets%2Ficons%2Fsrc%2Fuploads-7c24552e3bfab741b2f5a90dac9f126cf43c691fe729d872513450880a25fc48.svg" class="action-sheet__action" href="/6302022/buckets/49234166/chats/10398823039/uploads"><svg class="svg-icon svg-icon--uploads" aria-hidden="true"><use href="/static/assets/561234d357457d94228132d9.svg#uploads"></use></svg> See all files posted here</a>
+
+    
+<span class="hidden-on-template">
+    <a role="button" aria-haspopup="dialog" data-action="desktop-modal#openModal keydown.space-&gt;desktop-modal#openModal" data-turbo-frame="_top" data-bridge--overflow-menu-target="item" data-bridge-icon-url="/external?target=https%3A%2F%2Fbc3-production-assets-cdn.basecamp-static.com%2Fassets%2Ficons%2Fsrc%2Fpeople-solid-6d43e4f83e1fe53dd72fcdf33976b6a4d6f79c9c328d499b0a8b4f7db5ba04ef.svg" class="action-sheet__action" href="/6302022/buckets/49234166/recordings/10398823039/notified_recipients"><svg class="svg-icon svg-icon--people" aria-hidden="true"><use href="/static/assets/fd9d5bde9e6b5f7dc701829e.svg#people"></use></svg> Notifying 4 people</a>
+</span>
+
+
+      <a data-bridge-menu-action="true" data-bridge--overflow-menu-target="item" data-bridge-icon-url="/external?target=https%3A%2F%2Fbc3-production-assets-cdn.basecamp-static.com%2Fassets%2Ficons%2Fsrc%2Fchatbot-solid-af6881d24fbe46a1d1f97a36aecdc1a71385353d2d4686b4b4fac8a44321bfef.svg" class="action-sheet__action" href="/6302022/buckets/49234166/chats/10398823039/integrations"><svg class="svg-icon svg-icon--chatbot" aria-hidden="true"><use href="/static/assets/6fad54b6cdf950ad49f4ee17.svg#chatbot"></use></svg> Configure chatbots</a>
+
+    <hr class="action-sheet__divider">
+
+    
+    
+  </div>
+</span>
+
+
+              </div>
+          </div>
+        
+
+
+
+
+<span data-behavior="flash_message_container">
+  
+</span>
+
+
+
+
+
+
+<div class="chat-panel" data-controller="desktop-modal " data-creator-id="53382586" data-editable-under-admin-pro-pack="false"><bc-modal opened="false" data-desktop-modal-target="modal" data-action="close-&gt;desktop-modal#resetModal" type="box"></bc-modal>
+
+  <div class="chat chat--perma recordable drop_zoned text-16 loading__hide chat--scrollable recording" data-recording-id="10398823039" data-creator-id="53382586" data-url="/6302022/buckets/49234166/chats/10398823039" data-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzAzOQ" data-behavior="drop_zone_container" id="recording_10398823039" data-read=""><span class="anchor recordable__anchor" id="__recording_10398823039"></span>
+    <bc-chat-room id="around_10398823548_chat_room_10398823039" class="chat__room" data-controller="chat--room bridge--chat" data-action="bc-chat:speak-&gt;chat--room#exitReplyMode turbo:before-cache@document-&gt;chat--room#resetReplyModeBeforeCache" data-chat--room-replying-class="chat-footer__with-reply" data-behavior="chat_room drop_zone" data-rich-text="" data-room-number="10398823039" data-room-kind="project" data-pending-reply-frame-id="pending_reply_bubble_chat_room_10398823039" data-bridge-upload-url="/6302022/buckets/49234166/chats/10398823039/uploads" data-campfire-person='{"name": "Campfire", "email_address": "support@basecamp.com", "avatar_url": "/external?target=https%3A%2F%2Fbc3-production-assets-cdn.basecamp-static.com%2F6302022%2Fpeople%2Fcampfire%2Favatar"}'>
+      
+
+<header hidden="" class="chat__header chat__header--chat app-mobile__hide">
+  <div class="chat__header-block flex justify-center">
+    <h3 class="margin-block-0" dir="auto">
+      <turbo-frame class="inline-edit-form inline-edit-form--pro-pack-dependent" id="recording_title_recording_10398823039"><a role="button" data-behavior="prevent_link_action" data-turbo-method="get" aria-description="Rename this tool." href="/6302022/buckets/49234166/recordings/10398823039/title/edit">Chat</a></turbo-frame>
+    </h3>
+  </div>
+</header>
+
+      
+  <section class="blank-slate blank-slate--animated blank-slate--chat flex margin-top-48 hidden">
+    <svg class="svg-icon svg-icon--messages-solid blank-slate__icon" aria-hidden="true"><use href="/static/assets/6d2b4ad947299f72a2bb812c.svg#messages-solid"></use></svg>
+    <div class="blank-slate__content">
+      <p class="margin-top-0">Chat casually in Basecamp. Ask questions, connect with your team, and share news without ceremony.</p>
+      <div class="relative">
+        <strong>Start by saying “Hi!” to your team</strong>.
+        <img alt="" class="blank-slate__arrow blank-slate__arrow--inline hidden@md-down" src="/static/assets/f025a840655550bce8621da1.svg" loading="eager">
+      </div>
+    </div>
+  </section>
+
+      <bc-infinite-page page="1" class="chat__lines" trigger="top" direction="up" data-behavior="chat_transcript" data-chat--room-target="linesWrapper" data-sidebar-target="scrollable" data-around-recording-id="10398823548" scrollable="" data-scroll-initialized="true" reached-infinity="">
+  <bc-grouped-dates data-behavior="chat_lines" data-infinite-page-container=""><div data-infinite-page-sentinel="" id="bc-infinite-page-sentinel-1791894217466-0" aria-hidden="true" style="height: 0px; pointer-events: none;"></div>
+    
+  
+<header class="date-divider" data-grouped-dates-divider="" data-datetime="2026-10-10">
+    <h3 class="break break--block text-center">
+    <span>Saturday, October 10</span>
+    </h3>
+  </header><turbo-frame target="_top" class="chat-line chat-line--rich-text chat-line--editable recording" data-recording-id="10398823542" data-creator-id="53382594" data-url="/6302022/buckets/49234166/chats/10398823039/lines/10398823542" data-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU0Mg" data-room-number="10398823039" data-controller="chat--line-formatter" data-behavior="chat_line" data-datetime="2026-10-10T00:43:00Z" id="recording_10398823542" data-chat--line-formatter-formatted-value="true"><span class="anchor recordable__anchor" id="__recording_10398823542"></span>
+  <div class="chat-line__avatar">
+    <img class="avatar" data-avatar-for-person-id="53382594" alt="Nicole Katz" title="Nicole Katz" loading="eager" decoding="async" src="/static/assets/d6e44ae3d648bd492b3dbc6a.bin" width="130" height="130">
+  </div>
+
+  <div class="chat-line__bubble">
+    <span class="chat-line__meta">
+      <strong class="chat-line__author">Nicole Katz</strong>
+      
+      <span class="chat-line__timestamp">
+        <span class="hidden-on-template" data-twelve-hour-time-format=""><a href="/6302022/buckets/49234166/chats/10398823039@10398823542"><time datetime="2026-10-10T00:43:00Z" data-local="time" data-format="%l:%M%P" title="October 10, 2026 at 12:43am UTC" data-processed-at="2026-10-13T12:23:37.476Z" data-localized="">12:43am</time></a></span>
+        <span class="hidden-on-template" data-twenty-four-hour-time-format="" aria-hidden="true"><a href="/6302022/buckets/49234166/chats/10398823039@10398823542"><time datetime="2026-10-10T00:43:00Z" data-local="time" data-format="%H:%M" title="October 10, 2026 at 12:43am UTC" data-processed-at="2026-10-13T12:23:37.477Z" data-localized="">00:43</time></a></span>
+      </span>
+
+      <turbo-frame id="chat_line_options_recording_10398823542">
+        <span class="action-sheet action-sheet--for-chat-line chat-line__options">
+          <a class="action-sheet__expansion-toggle btn btn--icon btn--sm btn--ghost" href="/6302022/buckets/49234166/chats/10398823039/lines/10398823542/options">
+            <svg class="svg-icon svg-icon--overflow" aria-hidden="true"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg>
+</a>        </span>
+</turbo-frame>
+      
+    </span>
+
+    
+
+    <div class="chat-line__body formatted_content" data-chat--line-formatter-target="body">hey y’all. I binge-listened to REWORK yesterday (I was a few episodes behind)!</div>
+
+    <div id="chat_line_boosts_recording_10398823542" class="hidden-on-template chat-line__boosts">
+  <div class="boosts" data-controller="boosts" data-boosts-deleting-class="boost--deleting">
+  
+
+  <turbo-frame class="contents" id="boosts_recording_10398823542">
+</turbo-frame>
+  <turbo-frame class="contents" id="new_boost_recording_10398823542">
+      <a class="boosts__new-boost btn btn--icon btn--sm btn--round" aria-label="New boost" href="/6302022/buckets/49234166/boosts/new?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU0Mg">
+        <img alt="" class="svg-icon" src="/static/assets/839486c33abf6fd0d5f5ff3e.svg" loading="eager">
+</a></turbo-frame></div>
+
+</div>
+
+  </div>
+</turbo-frame>
+
+  
+<turbo-frame target="_top" class="chat-line chat-line--rich-text chat-line--editable recording chat-line--thread" data-recording-id="10398823545" data-creator-id="53382594" data-url="/6302022/buckets/49234166/chats/10398823039/lines/10398823545" data-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU0NQ" data-room-number="10398823039" data-controller="chat--line-formatter" data-behavior="chat_line" data-datetime="2026-10-10T00:43:00Z" id="recording_10398823545" data-chat--line-formatter-formatted-value="true"><span class="anchor recordable__anchor" id="__recording_10398823545"></span>
+  <div class="chat-line__avatar">
+    <img class="avatar" data-avatar-for-person-id="53382594" alt="Nicole Katz" title="Nicole Katz" loading="eager" decoding="async" src="/static/assets/d6e44ae3d648bd492b3dbc6a.bin" width="130" height="130">
+  </div>
+
+  <div class="chat-line__bubble">
+    <span class="chat-line__meta">
+      <strong class="chat-line__author">Nicole Katz</strong>
+      
+      <span class="chat-line__timestamp">
+        <span class="hidden-on-template" data-twelve-hour-time-format=""><a href="/6302022/buckets/49234166/chats/10398823039@10398823545"><time datetime="2026-10-10T00:43:00Z" data-local="time" data-format="%l:%M%P" title="October 10, 2026 at 12:43am UTC" data-processed-at="2026-10-13T12:23:37.478Z" data-localized="">12:43am</time></a></span>
+        <span class="hidden-on-template" data-twenty-four-hour-time-format="" aria-hidden="true"><a href="/6302022/buckets/49234166/chats/10398823039@10398823545"><time datetime="2026-10-10T00:43:00Z" data-local="time" data-format="%H:%M" title="October 10, 2026 at 12:43am UTC" data-processed-at="2026-10-13T12:23:37.479Z" data-localized="">00:43</time></a></span>
+      </span>
+
+      <turbo-frame id="chat_line_options_recording_10398823545">
+        <span class="action-sheet action-sheet--for-chat-line chat-line__options">
+          <a class="action-sheet__expansion-toggle btn btn--icon btn--sm btn--ghost" href="/6302022/buckets/49234166/chats/10398823039/lines/10398823545/options">
+            <svg class="svg-icon svg-icon--overflow" aria-hidden="true"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg>
+</a>        </span>
+</turbo-frame>
+      
+    </span>
+
+    
+
+    <div class="chat-line__body formatted_content" data-chat--line-formatter-target="body">it is so good!</div>
+
+    <div id="chat_line_boosts_recording_10398823545" class="hidden-on-template chat-line__boosts">
+  <div class="boosts" data-controller="boosts" data-boosts-deleting-class="boost--deleting">
+  
+
+  <turbo-frame class="contents" id="boosts_recording_10398823545">
+    
+  <div id="boost_685543777" class="boost boost--posted" data-creator-id="53382591" data-behavior="expandable" data-boost-id="685543777">
+    <button type="button" class="boost__toggle" aria-labelledby="content_label_boost_685543777" aria-owns="content_label_boost_685543777" aria-expanded="false" data-visible-to-creator-or-admin="true" data-behavior="toggle_expansion_on_click"></button>
+
+    <img class="avatar boost__avatar" aria-hidden="true" data-avatar-for-person-id="53382591" alt="Jared Davis" title="Jared Davis" loading="eager" decoding="async" src="/static/assets/86ee3a2980dae2e2b90501cd.bin" width="130" height="130">
+
+    <a data-turbo-method="delete" data-visible-to-creator-or-admin="true" data-action="boosts#showDeletingEffect" data-boosts-parent-id-param="685543777" class="boost__btn boost__btn--remove boost__btn--trash btn btn--icon btn--xs btn--round btn--ghost btn--negative expanded_content" aria-label="Delete this boost" role="button" href="/6302022/buckets/49234166/boosts/685543777?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU0NQ"><svg class="svg-icon svg-icon--trash" aria-hidden="true"><use href="/static/assets/d19e1d4cd67847e6140b8894.svg#trash"></use></svg></a>
+
+    <span class="boost__content text-nowrap boost__content--emoji" data-behavior="toggle_expansion_on_click collapse_on_clickoutside" id="content_boost_685543777">
+      <span aria-hidden="true"><span class="emoji">🙌</span></span>
+      <span class="sr-only" id="content_label_boost_685543777">Jared D. boosted the chat with '<span class="emoji">🙌</span>'</span>
+    </span>
+</div>
+</turbo-frame>
+  <turbo-frame class="contents" id="new_boost_recording_10398823545">
+      <a class="boosts__new-boost btn btn--icon btn--sm btn--round" aria-label="New boost" href="/6302022/buckets/49234166/boosts/new?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU0NQ">
+        <img alt="" class="svg-icon" src="/static/assets/839486c33abf6fd0d5f5ff3e.svg" loading="eager">
+</a></turbo-frame></div>
+
+</div>
+
+  </div>
+</turbo-frame>
+
+  
+<turbo-frame target="_top" class="chat-line chat-line--rich-text chat-line--editable recording chat-line--thread" data-recording-id="10398823548" data-creator-id="53382594" data-url="/6302022/buckets/49234166/chats/10398823039/lines/10398823548" data-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU0OA" data-room-number="10398823039" data-controller="chat--line-formatter" data-behavior="chat_line" data-datetime="2026-10-10T00:43:00Z" id="recording_10398823548" data-chat--line-formatter-formatted-value="true" data-read=""><span class="anchor recordable__anchor" id="__recording_10398823548"></span>
+  <div class="chat-line__avatar">
+    <img class="avatar" data-avatar-for-person-id="53382594" alt="Nicole Katz" title="Nicole Katz" loading="eager" decoding="async" src="/static/assets/d6e44ae3d648bd492b3dbc6a.bin" width="130" height="130">
+  </div>
+
+  <div class="chat-line__bubble">
+    <span class="chat-line__meta">
+      <strong class="chat-line__author">Nicole Katz</strong>
+      
+      <span class="chat-line__timestamp">
+        <span class="hidden-on-template" data-twelve-hour-time-format=""><a href="/6302022/buckets/49234166/chats/10398823039@10398823548"><time datetime="2026-10-10T00:43:00Z" data-local="time" data-format="%l:%M%P" title="October 10, 2026 at 12:43am UTC" data-processed-at="2026-10-13T12:23:37.480Z" data-localized="">12:43am</time></a></span>
+        <span class="hidden-on-template" data-twenty-four-hour-time-format="" aria-hidden="true"><a href="/6302022/buckets/49234166/chats/10398823039@10398823548"><time datetime="2026-10-10T00:43:00Z" data-local="time" data-format="%H:%M" title="October 10, 2026 at 12:43am UTC" data-processed-at="2026-10-13T12:23:37.481Z" data-localized="">00:43</time></a></span>
+      </span>
+
+      <turbo-frame id="chat_line_options_recording_10398823548">
+        <span class="action-sheet action-sheet--for-chat-line chat-line__options">
+          <a class="action-sheet__expansion-toggle btn btn--icon btn--sm btn--ghost" href="/6302022/buckets/49234166/chats/10398823039/lines/10398823548/options">
+            <svg class="svg-icon svg-icon--overflow" aria-hidden="true"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg>
+</a>        </span>
+</turbo-frame>
+      
+    </span>
+
+    
+
+    <div class="chat-line__body formatted_content" data-chat--line-formatter-target="body">Really enjoying it. Just wanted to <span class="emoji">👏</span><span class="emoji">👏</span></div>
+
+    <div id="chat_line_boosts_recording_10398823548" class="hidden-on-template chat-line__boosts">
+  <div class="boosts" data-controller="boosts" data-boosts-deleting-class="boost--deleting">
+  
+
+  <turbo-frame class="contents" id="boosts_recording_10398823548">
+</turbo-frame>
+  <turbo-frame class="contents" id="new_boost_recording_10398823548">
+      <a class="boosts__new-boost btn btn--icon btn--sm btn--round" aria-label="New boost" href="/6302022/buckets/49234166/boosts/new?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU0OA">
+        <img alt="" class="svg-icon" src="/static/assets/839486c33abf6fd0d5f5ff3e.svg" loading="eager">
+</a></turbo-frame></div>
+
+</div>
+
+  </div>
+</turbo-frame>
+
+  
+<turbo-frame target="_top" class="chat-line chat-line--rich-text chat-line--editable recording" data-recording-id="10398823551" data-creator-id="53382589" data-url="/6302022/buckets/49234166/chats/10398823039/lines/10398823551" data-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU1MQ" data-room-number="10398823039" data-controller="chat--line-formatter" data-behavior="chat_line" data-datetime="2026-10-10T00:45:00Z" id="recording_10398823551" data-chat--line-formatter-formatted-value="true" data-read=""><span class="anchor recordable__anchor" id="__recording_10398823551"></span>
+  <div class="chat-line__avatar">
+    <img class="avatar" data-avatar-for-person-id="53382589" alt="Annie Bryan" title="Annie Bryan" loading="eager" decoding="async" src="/static/assets/90e2940c30310687f4f08b6c.bin" width="130" height="130">
+  </div>
+
+  <div class="chat-line__bubble">
+    <span class="chat-line__meta">
+      <strong class="chat-line__author">Annie Bryan</strong>
+      
+      <span class="chat-line__timestamp">
+        <span class="hidden-on-template" data-twelve-hour-time-format=""><a href="/6302022/buckets/49234166/chats/10398823039@10398823551"><time datetime="2026-10-10T00:45:00Z" data-local="time" data-format="%l:%M%P" title="October 10, 2026 at 12:45am UTC" data-processed-at="2026-10-13T12:23:37.482Z" data-localized="">12:45am</time></a></span>
+        <span class="hidden-on-template" data-twenty-four-hour-time-format="" aria-hidden="true"><a href="/6302022/buckets/49234166/chats/10398823039@10398823551"><time datetime="2026-10-10T00:45:00Z" data-local="time" data-format="%H:%M" title="October 10, 2026 at 12:45am UTC" data-processed-at="2026-10-13T12:23:37.483Z" data-localized="">00:45</time></a></span>
+      </span>
+
+      <turbo-frame id="chat_line_options_recording_10398823551">
+        <span class="action-sheet action-sheet--for-chat-line chat-line__options">
+          <a class="action-sheet__expansion-toggle btn btn--icon btn--sm btn--ghost" href="/6302022/buckets/49234166/chats/10398823039/lines/10398823551/options">
+            <svg class="svg-icon svg-icon--overflow" aria-hidden="true"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg>
+</a>        </span>
+</turbo-frame>
+      
+    </span>
+
+    
+
+    <div class="chat-line__body formatted_content" data-chat--line-formatter-target="body">Thanks <bc-attachment content-type="application/vnd.basecamp.mention" dir="auto"><bc-mention class="mentionable-person" gid="gid://bc3/Person/53382594">
+  <span data-controller="rich-avatar-trigger" data-action="keydown.enter-&gt;rich-avatar-trigger#activate keydown.space-&gt;rich-avatar-trigger#prepareActivation keyup-&gt;rich-avatar-trigger#completeActivation blur-&gt;rich-avatar-trigger#cancelActivation turbo:morph-element-&gt;rich-avatar-trigger#refresh:self turbo:render@document-&gt;rich-avatar-trigger#refresh">
+    <img aria_hidden="true" data-avatar-for-person-id="53382594" alt="" title="Nicole Katz" class="avatar" loading="eager" decoding="async" src="/static/assets/d6e44ae3d648bd492b3dbc6a.bin" width="20" height="20">Nicole
+</span></bc-mention></bc-attachment>!!!</div>
+
+    <div id="chat_line_boosts_recording_10398823551" class="hidden-on-template chat-line__boosts">
+  <div class="boosts" data-controller="boosts" data-boosts-deleting-class="boost--deleting">
+  
+
+  <turbo-frame class="contents" id="boosts_recording_10398823551">
+</turbo-frame>
+  <turbo-frame class="contents" id="new_boost_recording_10398823551">
+      <a class="boosts__new-boost btn btn--icon btn--sm btn--round" aria-label="New boost" href="/6302022/buckets/49234166/boosts/new?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU1MQ">
+        <img alt="" class="svg-icon" src="/static/assets/839486c33abf6fd0d5f5ff3e.svg" loading="eager">
+</a></turbo-frame></div>
+
+</div>
+
+  </div>
+</turbo-frame>
+
+  
+<turbo-frame target="_top" class="chat-line chat-line--rich-text chat-line--editable recording" data-recording-id="10398823554" data-creator-id="53382594" data-url="/6302022/buckets/49234166/chats/10398823039/lines/10398823554" data-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU1NA" data-room-number="10398823039" data-controller="chat--line-formatter" data-behavior="chat_line" data-datetime="2026-10-10T00:54:00Z" id="recording_10398823554" data-chat--line-formatter-formatted-value="true" data-read=""><span class="anchor recordable__anchor" id="__recording_10398823554"></span>
+  <div class="chat-line__avatar">
+    <img class="avatar" data-avatar-for-person-id="53382594" alt="Nicole Katz" title="Nicole Katz" loading="eager" decoding="async" src="/static/assets/d6e44ae3d648bd492b3dbc6a.bin" width="130" height="130">
+  </div>
+
+  <div class="chat-line__bubble">
+    <span class="chat-line__meta">
+      <strong class="chat-line__author">Nicole Katz</strong>
+      
+      <span class="chat-line__timestamp">
+        <span class="hidden-on-template" data-twelve-hour-time-format=""><a href="/6302022/buckets/49234166/chats/10398823039@10398823554"><time datetime="2026-10-10T00:54:00Z" data-local="time" data-format="%l:%M%P" title="October 10, 2026 at 12:54am UTC" data-processed-at="2026-10-13T12:23:37.484Z" data-localized="">12:54am</time></a></span>
+        <span class="hidden-on-template" data-twenty-four-hour-time-format="" aria-hidden="true"><a href="/6302022/buckets/49234166/chats/10398823039@10398823554"><time datetime="2026-10-10T00:54:00Z" data-local="time" data-format="%H:%M" title="October 10, 2026 at 12:54am UTC" data-processed-at="2026-10-13T12:23:37.485Z" data-localized="">00:54</time></a></span>
+      </span>
+
+      <turbo-frame id="chat_line_options_recording_10398823554">
+        <span class="action-sheet action-sheet--for-chat-line chat-line__options">
+          <a class="action-sheet__expansion-toggle btn btn--icon btn--sm btn--ghost" href="/6302022/buckets/49234166/chats/10398823039/lines/10398823554/options">
+            <svg class="svg-icon svg-icon--overflow" aria-hidden="true"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg>
+</a>        </span>
+</turbo-frame>
+      
+    </span>
+
+    
+
+    <div class="chat-line__body formatted_content" data-chat--line-formatter-target="body"><bc-attachment content-type="application/vnd.basecamp.mention" dir="auto"><bc-mention class="mentionable-person" gid="gid://bc3/Person/53382589">
+  <span data-controller="rich-avatar-trigger" data-action="keydown.enter-&gt;rich-avatar-trigger#activate keydown.space-&gt;rich-avatar-trigger#prepareActivation keyup-&gt;rich-avatar-trigger#completeActivation blur-&gt;rich-avatar-trigger#cancelActivation turbo:morph-element-&gt;rich-avatar-trigger#refresh:self turbo:render@document-&gt;rich-avatar-trigger#refresh">
+    <img aria_hidden="true" data-avatar-for-person-id="53382589" alt="" title="Annie Bryan" class="avatar" loading="eager" decoding="async" src="/static/assets/90e2940c30310687f4f08b6c.bin" width="20" height="20">Annie
+</span></bc-mention></bc-attachment> the bit from the Buckets of Time episode rang so true when they talked about busy weeks that they couldn’t actually             account for because all the time was spent multitasking and skipping between tasks. It’s splintering so much of your time because             your attention is constantly shifting.<br><br>             It struck me, like, I need to stop trying to do lots of little things throughout the day because it breaks my attention.             I gotta figure out how to commit to activity buckets throughout the week.</div>
+
+    <div id="chat_line_boosts_recording_10398823554" class="hidden-on-template chat-line__boosts">
+  <div class="boosts" data-controller="boosts" data-boosts-deleting-class="boost--deleting">
+  
+
+  <turbo-frame class="contents" id="boosts_recording_10398823554">
+</turbo-frame>
+  <turbo-frame class="contents" id="new_boost_recording_10398823554">
+      <a class="boosts__new-boost btn btn--icon btn--sm btn--round" aria-label="New boost" href="/6302022/buckets/49234166/boosts/new?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU1NA">
+        <img alt="" class="svg-icon" src="/static/assets/839486c33abf6fd0d5f5ff3e.svg" loading="eager">
+</a></turbo-frame></div>
+
+</div>
+
+  </div>
+</turbo-frame>
+
+  
+<turbo-frame target="_top" class="chat-line chat-line--rich-text chat-line--editable recording" data-recording-id="10398823557" data-creator-id="53382589" data-url="/6302022/buckets/49234166/chats/10398823039/lines/10398823557" data-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU1Nw" data-room-number="10398823039" data-controller="chat--line-formatter" data-behavior="chat_line" data-datetime="2026-10-10T01:25:00Z" id="recording_10398823557" data-chat--line-formatter-formatted-value="true" data-read=""><span class="anchor recordable__anchor" id="__recording_10398823557"></span>
+  <div class="chat-line__avatar">
+    <img class="avatar" data-avatar-for-person-id="53382589" alt="Annie Bryan" title="Annie Bryan" loading="eager" decoding="async" src="/static/assets/90e2940c30310687f4f08b6c.bin" width="130" height="130">
+  </div>
+
+  <div class="chat-line__bubble">
+    <span class="chat-line__meta">
+      <strong class="chat-line__author">Annie Bryan</strong>
+      
+      <span class="chat-line__timestamp">
+        <span class="hidden-on-template" data-twelve-hour-time-format=""><a href="/6302022/buckets/49234166/chats/10398823039@10398823557"><time datetime="2026-10-10T01:25:00Z" data-local="time" data-format="%l:%M%P" title="October 10, 2026 at 1:25am UTC" data-processed-at="2026-10-13T12:23:37.486Z" data-localized="">1:25am</time></a></span>
+        <span class="hidden-on-template" data-twenty-four-hour-time-format="" aria-hidden="true"><a href="/6302022/buckets/49234166/chats/10398823039@10398823557"><time datetime="2026-10-10T01:25:00Z" data-local="time" data-format="%H:%M" title="October 10, 2026 at 1:25am UTC" data-processed-at="2026-10-13T12:23:37.487Z" data-localized="">01:25</time></a></span>
+      </span>
+
+      <turbo-frame id="chat_line_options_recording_10398823557">
+        <span class="action-sheet action-sheet--for-chat-line chat-line__options">
+          <a class="action-sheet__expansion-toggle btn btn--icon btn--sm btn--ghost" href="/6302022/buckets/49234166/chats/10398823039/lines/10398823557/options">
+            <svg class="svg-icon svg-icon--overflow" aria-hidden="true"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg>
+</a>        </span>
+</turbo-frame>
+      
+    </span>
+
+    
+
+    <div class="chat-line__body formatted_content" data-chat--line-formatter-target="body">Right?! And I liked how they talked about how it’s important to apply that to the team and the company, not just our personal             schedules or whatever. Game changer!</div>
+
+    <div id="chat_line_boosts_recording_10398823557" class="hidden-on-template chat-line__boosts">
+  <div class="boosts" data-controller="boosts" data-boosts-deleting-class="boost--deleting">
+  
+
+  <turbo-frame class="contents" id="boosts_recording_10398823557">
+</turbo-frame>
+  <turbo-frame class="contents" id="new_boost_recording_10398823557">
+      <a class="boosts__new-boost btn btn--icon btn--sm btn--round" aria-label="New boost" href="/6302022/buckets/49234166/boosts/new?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU1Nw">
+        <img alt="" class="svg-icon" src="/static/assets/839486c33abf6fd0d5f5ff3e.svg" loading="eager">
+</a></turbo-frame></div>
+
+</div>
+
+  </div>
+</turbo-frame>
+
+  
+<turbo-frame target="_top" class="chat-line chat-line--rich-text chat-line--editable recording" data-recording-id="10398823560" data-creator-id="53382594" data-url="/6302022/buckets/49234166/chats/10398823039/lines/10398823560" data-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU2MA" data-room-number="10398823039" data-controller="chat--line-formatter" data-behavior="chat_line" data-datetime="2026-10-10T01:47:00Z" id="recording_10398823560" data-chat--line-formatter-formatted-value="true" data-read=""><span class="anchor recordable__anchor" id="__recording_10398823560"></span>
+  <div class="chat-line__avatar">
+    <img class="avatar" data-avatar-for-person-id="53382594" alt="Nicole Katz" title="Nicole Katz" loading="eager" decoding="async" src="/static/assets/d6e44ae3d648bd492b3dbc6a.bin" width="130" height="130">
+  </div>
+
+  <div class="chat-line__bubble">
+    <span class="chat-line__meta">
+      <strong class="chat-line__author">Nicole Katz</strong>
+      
+      <span class="chat-line__timestamp">
+        <span class="hidden-on-template" data-twelve-hour-time-format=""><a href="/6302022/buckets/49234166/chats/10398823039@10398823560"><time datetime="2026-10-10T01:47:00Z" data-local="time" data-format="%l:%M%P" title="October 10, 2026 at 1:47am UTC" data-processed-at="2026-10-13T12:23:37.488Z" data-localized="">1:47am</time></a></span>
+        <span class="hidden-on-template" data-twenty-four-hour-time-format="" aria-hidden="true"><a href="/6302022/buckets/49234166/chats/10398823039@10398823560"><time datetime="2026-10-10T01:47:00Z" data-local="time" data-format="%H:%M" title="October 10, 2026 at 1:47am UTC" data-processed-at="2026-10-13T12:23:37.489Z" data-localized="">01:47</time></a></span>
+      </span>
+
+      <turbo-frame id="chat_line_options_recording_10398823560">
+        <span class="action-sheet action-sheet--for-chat-line chat-line__options">
+          <a class="action-sheet__expansion-toggle btn btn--icon btn--sm btn--ghost" href="/6302022/buckets/49234166/chats/10398823039/lines/10398823560/options">
+            <svg class="svg-icon svg-icon--overflow" aria-hidden="true"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg>
+</a>        </span>
+</turbo-frame>
+      
+    </span>
+
+    
+
+    <div class="chat-line__body formatted_content" data-chat--line-formatter-target="body">such a good point</div>
+
+    <div id="chat_line_boosts_recording_10398823560" class="hidden-on-template chat-line__boosts">
+  <div class="boosts" data-controller="boosts" data-boosts-deleting-class="boost--deleting">
+  
+
+  <turbo-frame class="contents" id="boosts_recording_10398823560">
+</turbo-frame>
+  <turbo-frame class="contents" id="new_boost_recording_10398823560">
+      <a class="boosts__new-boost btn btn--icon btn--sm btn--round" aria-label="New boost" href="/6302022/buckets/49234166/boosts/new?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU2MA">
+        <img alt="" class="svg-icon" src="/static/assets/839486c33abf6fd0d5f5ff3e.svg" loading="eager">
+</a></turbo-frame></div>
+
+</div>
+
+  </div>
+</turbo-frame>
+
+  
+<turbo-frame target="_top" class="chat-line chat-line--rich-text chat-line--editable recording" data-recording-id="10398823562" data-creator-id="53382590" data-url="/6302022/buckets/49234166/chats/10398823039/lines/10398823562" data-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU2Mg" data-room-number="10398823039" data-controller="chat--line-formatter" data-behavior="chat_line" data-datetime="2026-10-10T02:31:00Z" id="recording_10398823562" data-chat--line-formatter-formatted-value="true" data-read=""><span class="anchor recordable__anchor" id="__recording_10398823562"></span>
+  <div class="chat-line__avatar">
+    <img class="avatar" data-avatar-for-person-id="53382590" alt="Cheryl Walters" title="Cheryl Walters" loading="eager" decoding="async" src="/static/assets/45df24fa3fc614c5a12cbfa9.bin" width="130" height="130">
+  </div>
+
+  <div class="chat-line__bubble">
+    <span class="chat-line__meta">
+      <strong class="chat-line__author">Cheryl Walters</strong>
+      
+      <span class="chat-line__timestamp">
+        <span class="hidden-on-template" data-twelve-hour-time-format=""><a href="/6302022/buckets/49234166/chats/10398823039@10398823562"><time datetime="2026-10-10T02:31:00Z" data-local="time" data-format="%l:%M%P" title="October 10, 2026 at 2:31am UTC" data-processed-at="2026-10-13T12:23:37.490Z" data-localized="">2:31am</time></a></span>
+        <span class="hidden-on-template" data-twenty-four-hour-time-format="" aria-hidden="true"><a href="/6302022/buckets/49234166/chats/10398823039@10398823562"><time datetime="2026-10-10T02:31:00Z" data-local="time" data-format="%H:%M" title="October 10, 2026 at 2:31am UTC" data-processed-at="2026-10-13T12:23:37.491Z" data-localized="">02:31</time></a></span>
+      </span>
+
+      <turbo-frame id="chat_line_options_recording_10398823562">
+        <span class="action-sheet action-sheet--for-chat-line chat-line__options">
+          <a class="action-sheet__expansion-toggle btn btn--icon btn--sm btn--ghost" href="/6302022/buckets/49234166/chats/10398823039/lines/10398823562/options">
+            <svg class="svg-icon svg-icon--overflow" aria-hidden="true"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg>
+</a>        </span>
+</turbo-frame>
+      
+    </span>
+
+    
+
+    <div class="chat-line__body formatted_content" data-chat--line-formatter-target="body">YAY! Glad you like it</div>
+
+    <div id="chat_line_boosts_recording_10398823562" class="hidden-on-template chat-line__boosts">
+  <div class="boosts" data-controller="boosts" data-boosts-deleting-class="boost--deleting">
+  
+
+  <turbo-frame class="contents" id="boosts_recording_10398823562">
+</turbo-frame>
+  <turbo-frame class="contents" id="new_boost_recording_10398823562">
+      <a class="boosts__new-boost btn btn--icon btn--sm btn--round" aria-label="New boost" href="/6302022/buckets/49234166/boosts/new?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU2Mg">
+        <img alt="" class="svg-icon" src="/static/assets/839486c33abf6fd0d5f5ff3e.svg" loading="eager">
+</a></turbo-frame></div>
+
+</div>
+
+  </div>
+</turbo-frame>
+
+  
+<turbo-frame target="_top" class="chat-line chat-line--rich-text chat-line--editable recording" data-recording-id="10398823564" data-creator-id="53382588" data-url="/6302022/buckets/49234166/chats/10398823039/lines/10398823564" data-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU2NA" data-room-number="10398823039" data-controller="chat--line-formatter" data-behavior="chat_line" data-datetime="2026-10-10T03:22:00Z" id="recording_10398823564" data-chat--line-formatter-formatted-value="true" data-read=""><span class="anchor recordable__anchor" id="__recording_10398823564"></span>
+  <div class="chat-line__avatar">
+    <img class="avatar" data-avatar-for-person-id="53382588" alt="Victor Cooper" title="Victor Cooper" loading="eager" decoding="async" src="/static/assets/2b05ed9c5b274fe0b49e816f.bin" width="130" height="130">
+  </div>
+
+  <div class="chat-line__bubble">
+    <span class="chat-line__meta">
+      <strong class="chat-line__author">Victor Cooper</strong>
+      
+      <span class="chat-line__timestamp">
+        <span class="hidden-on-template" data-twelve-hour-time-format=""><a href="/6302022/buckets/49234166/chats/10398823039@10398823564"><time datetime="2026-10-10T03:22:00Z" data-local="time" data-format="%l:%M%P" title="October 10, 2026 at 3:22am UTC" data-processed-at="2026-10-13T12:23:37.492Z" data-localized="">3:22am</time></a></span>
+        <span class="hidden-on-template" data-twenty-four-hour-time-format="" aria-hidden="true"><a href="/6302022/buckets/49234166/chats/10398823039@10398823564"><time datetime="2026-10-10T03:22:00Z" data-local="time" data-format="%H:%M" title="October 10, 2026 at 3:22am UTC" data-processed-at="2026-10-13T12:23:37.493Z" data-localized="">03:22</time></a></span>
+      </span>
+
+      <turbo-frame id="chat_line_options_recording_10398823564">
+        <span class="action-sheet action-sheet--for-chat-line chat-line__options">
+          <a class="action-sheet__expansion-toggle btn btn--icon btn--sm btn--ghost" href="/6302022/buckets/49234166/chats/10398823039/lines/10398823564/options">
+            <svg class="svg-icon svg-icon--overflow" aria-hidden="true"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg>
+</a>        </span>
+</turbo-frame>
+      
+    </span>
+
+    
+
+    <div class="chat-line__body formatted_content" data-chat--line-formatter-target="body"><a target="_blank" rel="noreferrer" class="autolinked" data-behavior="truncate" href="/external?target=https%3A%2F%2Fwww.foodnetwork.com%2Frecipes%2Fjeff-mauro%2Fchicago-style-italian-beef-sandwich-5644693">https://www.foodnetwork.com/recipes/jeff-mauro/chicago-style-italian-beef-sandwich-5644693</a></div>
+
+    <div id="chat_line_boosts_recording_10398823564" class="hidden-on-template chat-line__boosts">
+  <div class="boosts" data-controller="boosts" data-boosts-deleting-class="boost--deleting">
+  
+
+  <turbo-frame class="contents" id="boosts_recording_10398823564">
+    
+  <div id="boost_685543778" class="boost boost--posted" data-creator-id="53382589" data-behavior="expandable" data-boost-id="685543778">
+    <button type="button" class="boost__toggle" aria-labelledby="content_label_boost_685543778" aria-owns="content_label_boost_685543778" aria-expanded="false" data-visible-to-creator-or-admin="true" data-behavior="toggle_expansion_on_click"></button>
+
+    <img class="avatar boost__avatar" aria-hidden="true" data-avatar-for-person-id="53382589" alt="Annie Bryan" title="Annie Bryan" loading="eager" decoding="async" src="/static/assets/90e2940c30310687f4f08b6c.bin" width="130" height="130">
+
+    <a data-turbo-method="delete" data-visible-to-creator-or-admin="true" data-action="boosts#showDeletingEffect" data-boosts-parent-id-param="685543778" class="boost__btn boost__btn--remove boost__btn--trash btn btn--icon btn--xs btn--round btn--ghost btn--negative expanded_content" aria-label="Delete this boost" role="button" href="/6302022/buckets/49234166/boosts/685543778?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU2NA"><svg class="svg-icon svg-icon--trash" aria-hidden="true"><use href="/static/assets/d19e1d4cd67847e6140b8894.svg#trash"></use></svg></a>
+
+    <span class="boost__content text-nowrap " data-behavior="toggle_expansion_on_click collapse_on_clickoutside" id="content_boost_685543778">
+      <span aria-hidden="true">YUM!</span>
+      <span class="sr-only" id="content_label_boost_685543778">Annie B. boosted the chat with 'YUM!'</span>
+    </span>
+</div>
+</turbo-frame>
+  <turbo-frame class="contents" id="new_boost_recording_10398823564">
+      <a class="boosts__new-boost btn btn--icon btn--sm btn--round" aria-label="New boost" href="/6302022/buckets/49234166/boosts/new?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU2NA">
+        <img alt="" class="svg-icon" src="/static/assets/839486c33abf6fd0d5f5ff3e.svg" loading="eager">
+</a></turbo-frame></div>
+
+</div>
+
+  </div>
+</turbo-frame>
+
+  
+<turbo-frame target="_top" class="chat-line chat-line--rich-text chat-line--editable recording" data-recording-id="10398823567" data-creator-id="53382590" data-url="/6302022/buckets/49234166/chats/10398823039/lines/10398823567" data-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU2Nw" data-room-number="10398823039" data-controller="chat--line-formatter" data-behavior="chat_line" data-datetime="2026-10-10T03:34:00Z" id="recording_10398823567" data-chat--line-formatter-formatted-value="true" data-read=""><span class="anchor recordable__anchor" id="__recording_10398823567"></span>
+  <div class="chat-line__avatar">
+    <img class="avatar" data-avatar-for-person-id="53382590" alt="Cheryl Walters" title="Cheryl Walters" loading="eager" decoding="async" src="/static/assets/45df24fa3fc614c5a12cbfa9.bin" width="130" height="130">
+  </div>
+
+  <div class="chat-line__bubble">
+    <span class="chat-line__meta">
+      <strong class="chat-line__author">Cheryl Walters</strong>
+      
+      <span class="chat-line__timestamp">
+        <span class="hidden-on-template" data-twelve-hour-time-format=""><a href="/6302022/buckets/49234166/chats/10398823039@10398823567"><time datetime="2026-10-10T03:34:00Z" data-local="time" data-format="%l:%M%P" title="October 10, 2026 at 3:34am UTC" data-processed-at="2026-10-13T12:23:37.494Z" data-localized="">3:34am</time></a></span>
+        <span class="hidden-on-template" data-twenty-four-hour-time-format="" aria-hidden="true"><a href="/6302022/buckets/49234166/chats/10398823039@10398823567"><time datetime="2026-10-10T03:34:00Z" data-local="time" data-format="%H:%M" title="October 10, 2026 at 3:34am UTC" data-processed-at="2026-10-13T12:23:37.494Z" data-localized="">03:34</time></a></span>
+      </span>
+
+      <turbo-frame id="chat_line_options_recording_10398823567">
+        <span class="action-sheet action-sheet--for-chat-line chat-line__options">
+          <a class="action-sheet__expansion-toggle btn btn--icon btn--sm btn--ghost" href="/6302022/buckets/49234166/chats/10398823039/lines/10398823567/options">
+            <svg class="svg-icon svg-icon--overflow" aria-hidden="true"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg>
+</a>        </span>
+</turbo-frame>
+      
+    </span>
+
+    
+
+    <div class="chat-line__body formatted_content" data-chat--line-formatter-target="body">Nothing beats Mr. Beef! But I guess if you don’t wanna trek downtown, that recipe looks good</div>
+
+    <div id="chat_line_boosts_recording_10398823567" class="hidden-on-template chat-line__boosts">
+  <div class="boosts" data-controller="boosts" data-boosts-deleting-class="boost--deleting">
+  
+
+  <turbo-frame class="contents" id="boosts_recording_10398823567">
+</turbo-frame>
+  <turbo-frame class="contents" id="new_boost_recording_10398823567">
+      <a class="boosts__new-boost btn btn--icon btn--sm btn--round" aria-label="New boost" href="/6302022/buckets/49234166/boosts/new?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU2Nw">
+        <img alt="" class="svg-icon" src="/static/assets/839486c33abf6fd0d5f5ff3e.svg" loading="eager">
+</a></turbo-frame></div>
+
+</div>
+
+  </div>
+</turbo-frame>
+
+  
+<turbo-frame target="_top" class="chat-line chat-line--rich-text chat-line--editable recording" data-recording-id="10398823568" data-creator-id="53382589" data-url="/6302022/buckets/49234166/chats/10398823039/lines/10398823568" data-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU2OA" data-room-number="10398823039" data-controller="chat--line-formatter" data-behavior="chat_line" data-datetime="2026-10-10T05:09:00Z" id="recording_10398823568" data-chat--line-formatter-formatted-value="true"><span class="anchor recordable__anchor" id="__recording_10398823568"></span>
+  <div class="chat-line__avatar">
+    <img class="avatar" data-avatar-for-person-id="53382589" alt="Annie Bryan" title="Annie Bryan" loading="eager" decoding="async" src="/static/assets/90e2940c30310687f4f08b6c.bin" width="130" height="130">
+  </div>
+
+  <div class="chat-line__bubble">
+    <span class="chat-line__meta">
+      <strong class="chat-line__author">Annie Bryan</strong>
+      
+      <span class="chat-line__timestamp">
+        <span class="hidden-on-template" data-twelve-hour-time-format=""><a href="/6302022/buckets/49234166/chats/10398823039@10398823568"><time datetime="2026-10-10T05:09:00Z" data-local="time" data-format="%l:%M%P" title="October 10, 2026 at 5:09am UTC" data-processed-at="2026-10-13T12:23:37.495Z" data-localized="">5:09am</time></a></span>
+        <span class="hidden-on-template" data-twenty-four-hour-time-format="" aria-hidden="true"><a href="/6302022/buckets/49234166/chats/10398823039@10398823568"><time datetime="2026-10-10T05:09:00Z" data-local="time" data-format="%H:%M" title="October 10, 2026 at 5:09am UTC" data-processed-at="2026-10-13T12:23:37.496Z" data-localized="">05:09</time></a></span>
+      </span>
+
+      <turbo-frame id="chat_line_options_recording_10398823568">
+        <span class="action-sheet action-sheet--for-chat-line chat-line__options">
+          <a class="action-sheet__expansion-toggle btn btn--icon btn--sm btn--ghost" href="/6302022/buckets/49234166/chats/10398823039/lines/10398823568/options">
+            <svg class="svg-icon svg-icon--overflow" aria-hidden="true"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg>
+</a>        </span>
+</turbo-frame>
+      
+    </span>
+
+    
+
+    <div class="chat-line__body formatted_content" data-chat--line-formatter-target="body">Just a quick heads up that I need to update the video on YouTube. It’s uploading (slowly) now, but just a heads up in case             anyone’s trying to link to it in the next 40 minutes or so!</div>
+
+    <div id="chat_line_boosts_recording_10398823568" class="hidden-on-template chat-line__boosts">
+  <div class="boosts" data-controller="boosts" data-boosts-deleting-class="boost--deleting">
+  
+
+  <turbo-frame class="contents" id="boosts_recording_10398823568">
+</turbo-frame>
+  <turbo-frame class="contents" id="new_boost_recording_10398823568">
+      <a class="boosts__new-boost btn btn--icon btn--sm btn--round" aria-label="New boost" href="/6302022/buckets/49234166/boosts/new?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU2OA">
+        <img alt="" class="svg-icon" src="/static/assets/839486c33abf6fd0d5f5ff3e.svg" loading="eager">
+</a></turbo-frame></div>
+
+</div>
+
+  </div>
+</turbo-frame>
+
+  
+<turbo-frame target="_top" class="chat-line chat-line--rich-text chat-line--editable recording" data-recording-id="10398823569" data-creator-id="53382590" data-url="/6302022/buckets/49234166/chats/10398823039/lines/10398823569" data-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU2OQ" data-room-number="10398823039" data-controller="chat--line-formatter" data-behavior="chat_line" data-datetime="2026-10-10T05:10:00Z" id="recording_10398823569" data-chat--line-formatter-formatted-value="true"><span class="anchor recordable__anchor" id="__recording_10398823569"></span>
+  <div class="chat-line__avatar">
+    <img class="avatar" data-avatar-for-person-id="53382590" alt="Cheryl Walters" title="Cheryl Walters" loading="eager" decoding="async" src="/static/assets/45df24fa3fc614c5a12cbfa9.bin" width="130" height="130">
+  </div>
+
+  <div class="chat-line__bubble">
+    <span class="chat-line__meta">
+      <strong class="chat-line__author">Cheryl Walters</strong>
+      
+      <span class="chat-line__timestamp">
+        <span class="hidden-on-template" data-twelve-hour-time-format=""><a href="/6302022/buckets/49234166/chats/10398823039@10398823569"><time datetime="2026-10-10T05:10:00Z" data-local="time" data-format="%l:%M%P" title="October 10, 2026 at 5:10am UTC" data-processed-at="2026-10-13T12:23:37.497Z" data-localized="">5:10am</time></a></span>
+        <span class="hidden-on-template" data-twenty-four-hour-time-format="" aria-hidden="true"><a href="/6302022/buckets/49234166/chats/10398823039@10398823569"><time datetime="2026-10-10T05:10:00Z" data-local="time" data-format="%H:%M" title="October 10, 2026 at 5:10am UTC" data-processed-at="2026-10-13T12:23:37.498Z" data-localized="">05:10</time></a></span>
+      </span>
+
+      <turbo-frame id="chat_line_options_recording_10398823569">
+        <span class="action-sheet action-sheet--for-chat-line chat-line__options">
+          <a class="action-sheet__expansion-toggle btn btn--icon btn--sm btn--ghost" href="/6302022/buckets/49234166/chats/10398823039/lines/10398823569/options">
+            <svg class="svg-icon svg-icon--overflow" aria-hidden="true"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg>
+</a>        </span>
+</turbo-frame>
+      
+    </span>
+
+    
+
+    <div class="chat-line__body formatted_content" data-chat--line-formatter-target="body">Got it, thanks for letting us know</div>
+
+    <div id="chat_line_boosts_recording_10398823569" class="hidden-on-template chat-line__boosts">
+  <div class="boosts" data-controller="boosts" data-boosts-deleting-class="boost--deleting">
+  
+
+  <turbo-frame class="contents" id="boosts_recording_10398823569">
+    
+  <div id="boost_685543779" class="boost boost--posted" data-creator-id="53382589" data-behavior="expandable" data-boost-id="685543779">
+    <button type="button" class="boost__toggle" aria-labelledby="content_label_boost_685543779" aria-owns="content_label_boost_685543779" aria-expanded="false" data-visible-to-creator-or-admin="true" data-behavior="toggle_expansion_on_click"></button>
+
+    <img class="avatar boost__avatar" aria-hidden="true" data-avatar-for-person-id="53382589" alt="Annie Bryan" title="Annie Bryan" loading="eager" decoding="async" src="/static/assets/dccbd41c4bae6a1efc01b0a8.bin" width="130" height="130">
+
+    <a data-turbo-method="delete" data-visible-to-creator-or-admin="true" data-action="boosts#showDeletingEffect" data-boosts-parent-id-param="685543779" class="boost__btn boost__btn--remove boost__btn--trash btn btn--icon btn--xs btn--round btn--ghost btn--negative expanded_content" aria-label="Delete this boost" role="button" href="/6302022/buckets/49234166/boosts/685543779?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU2OQ&amp;onboarding=sample"><svg class="svg-icon svg-icon--trash" aria-hidden="true"><use href="/static/assets/d19e1d4cd67847e6140b8894.svg#trash"></use></svg></a>
+
+    <span class="boost__content text-nowrap boost__content--emoji" data-behavior="toggle_expansion_on_click collapse_on_clickoutside" id="content_boost_685543779">
+      <span aria-hidden="true"><span class="emoji">👍</span></span>
+      <span class="sr-only" id="content_label_boost_685543779">Annie B. boosted the chat with '<span class="emoji">👍</span>'</span>
+    </span>
+</div>
+</turbo-frame>
+  <turbo-frame class="contents" id="new_boost_recording_10398823569">
+      <a class="boosts__new-boost btn btn--icon btn--sm btn--round" aria-label="New boost" href="/6302022/buckets/49234166/boosts/new?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU2OQ">
+        <img alt="" class="svg-icon" src="/static/assets/839486c33abf6fd0d5f5ff3e.svg" loading="eager">
+</a></turbo-frame></div>
+
+</div>
+
+  </div>
+</turbo-frame>
+
+  
+<turbo-frame target="_top" class="chat-line chat-line--rich-text chat-line--editable recording" data-recording-id="10398823573" data-creator-id="53382588" data-url="/6302022/buckets/49234166/chats/10398823039/lines/10398823573" data-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU3Mw" data-room-number="10398823039" data-controller="chat--line-formatter" data-behavior="chat_line" data-datetime="2026-10-10T05:11:00Z" id="recording_10398823573" data-chat--line-formatter-formatted-value="true"><span class="anchor recordable__anchor" id="__recording_10398823573"></span>
+  <div class="chat-line__avatar">
+    <img class="avatar" data-avatar-for-person-id="53382588" alt="Victor Cooper" title="Victor Cooper" loading="eager" decoding="async" src="/static/assets/2b05ed9c5b274fe0b49e816f.bin" width="130" height="130">
+  </div>
+
+  <div class="chat-line__bubble">
+    <span class="chat-line__meta">
+      <strong class="chat-line__author">Victor Cooper</strong>
+      
+      <span class="chat-line__timestamp">
+        <span class="hidden-on-template" data-twelve-hour-time-format=""><a href="/6302022/buckets/49234166/chats/10398823039@10398823573"><time datetime="2026-10-10T05:11:00Z" data-local="time" data-format="%l:%M%P" title="October 10, 2026 at 5:11am UTC" data-processed-at="2026-10-13T12:23:37.499Z" data-localized="">5:11am</time></a></span>
+        <span class="hidden-on-template" data-twenty-four-hour-time-format="" aria-hidden="true"><a href="/6302022/buckets/49234166/chats/10398823039@10398823573"><time datetime="2026-10-10T05:11:00Z" data-local="time" data-format="%H:%M" title="October 10, 2026 at 5:11am UTC" data-processed-at="2026-10-13T12:23:37.500Z" data-localized="">05:11</time></a></span>
+      </span>
+
+      <turbo-frame id="chat_line_options_recording_10398823573">
+        <span class="action-sheet action-sheet--for-chat-line chat-line__options">
+          <a class="action-sheet__expansion-toggle btn btn--icon btn--sm btn--ghost" href="/6302022/buckets/49234166/chats/10398823039/lines/10398823573/options">
+            <svg class="svg-icon svg-icon--overflow" aria-hidden="true"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg>
+</a>        </span>
+</turbo-frame>
+      
+    </span>
+
+    
+
+    <div class="chat-line__body formatted_content" data-chat--line-formatter-target="body">Okay, just checked twitter and we’re ready to post tomorrow’s episode in full.</div>
+
+    <div id="chat_line_boosts_recording_10398823573" class="hidden-on-template chat-line__boosts">
+  <div class="boosts" data-controller="boosts" data-boosts-deleting-class="boost--deleting">
+  
+
+  <turbo-frame class="contents" id="boosts_recording_10398823573">
+</turbo-frame>
+  <turbo-frame class="contents" id="new_boost_recording_10398823573">
+      <a class="boosts__new-boost btn btn--icon btn--sm btn--round" aria-label="New boost" href="/6302022/buckets/49234166/boosts/new?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU3Mw">
+        <img alt="" class="svg-icon" src="/static/assets/839486c33abf6fd0d5f5ff3e.svg" loading="eager">
+</a></turbo-frame></div>
+
+</div>
+
+  </div>
+</turbo-frame>
+
+  
+<turbo-frame target="_top" class="chat-line chat-line--rich-text chat-line--editable recording" data-recording-id="10398823576" data-creator-id="53382590" data-url="/6302022/buckets/49234166/chats/10398823039/lines/10398823576" data-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU3Ng" data-room-number="10398823039" data-controller="chat--line-formatter" data-behavior="chat_line" data-datetime="2026-10-10T05:19:00Z" id="recording_10398823576" data-chat--line-formatter-formatted-value="true"><span class="anchor recordable__anchor" id="__recording_10398823576"></span>
+  <div class="chat-line__avatar">
+    <img class="avatar" data-avatar-for-person-id="53382590" alt="Cheryl Walters" title="Cheryl Walters" loading="eager" decoding="async" src="/static/assets/45df24fa3fc614c5a12cbfa9.bin" width="130" height="130">
+  </div>
+
+  <div class="chat-line__bubble">
+    <span class="chat-line__meta">
+      <strong class="chat-line__author">Cheryl Walters</strong>
+      
+      <span class="chat-line__timestamp">
+        <span class="hidden-on-template" data-twelve-hour-time-format=""><a href="/6302022/buckets/49234166/chats/10398823039@10398823576"><time datetime="2026-10-10T05:19:00Z" data-local="time" data-format="%l:%M%P" title="October 10, 2026 at 5:19am UTC" data-processed-at="2026-10-13T12:23:37.501Z" data-localized="">5:19am</time></a></span>
+        <span class="hidden-on-template" data-twenty-four-hour-time-format="" aria-hidden="true"><a href="/6302022/buckets/49234166/chats/10398823039@10398823576"><time datetime="2026-10-10T05:19:00Z" data-local="time" data-format="%H:%M" title="October 10, 2026 at 5:19am UTC" data-processed-at="2026-10-13T12:23:37.502Z" data-localized="">05:19</time></a></span>
+      </span>
+
+      <turbo-frame id="chat_line_options_recording_10398823576">
+        <span class="action-sheet action-sheet--for-chat-line chat-line__options">
+          <a class="action-sheet__expansion-toggle btn btn--icon btn--sm btn--ghost" href="/6302022/buckets/49234166/chats/10398823039/lines/10398823576/options">
+            <svg class="svg-icon svg-icon--overflow" aria-hidden="true"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg>
+</a>        </span>
+</turbo-frame>
+      
+    </span>
+
+    
+
+    <div class="chat-line__body formatted_content" data-chat--line-formatter-target="body">nice. Did we end up having to upgrade our subscription?</div>
+
+    <div id="chat_line_boosts_recording_10398823576" class="hidden-on-template chat-line__boosts">
+  <div class="boosts" data-controller="boosts" data-boosts-deleting-class="boost--deleting">
+  
+
+  <turbo-frame class="contents" id="boosts_recording_10398823576">
+</turbo-frame>
+  <turbo-frame class="contents" id="new_boost_recording_10398823576">
+      <a class="boosts__new-boost btn btn--icon btn--sm btn--round" aria-label="New boost" href="/6302022/buckets/49234166/boosts/new?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU3Ng">
+        <img alt="" class="svg-icon" src="/static/assets/839486c33abf6fd0d5f5ff3e.svg" loading="eager">
+</a></turbo-frame></div>
+
+</div>
+
+  </div>
+</turbo-frame>
+
+  
+<turbo-frame target="_top" class="chat-line chat-line--rich-text chat-line--editable recording" data-recording-id="10398823578" data-creator-id="53382588" data-url="/6302022/buckets/49234166/chats/10398823039/lines/10398823578" data-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU3OA" data-room-number="10398823039" data-controller="chat--line-formatter" data-behavior="chat_line" data-datetime="2026-10-10T05:31:00Z" id="recording_10398823578" data-chat--line-formatter-formatted-value="true"><span class="anchor recordable__anchor" id="__recording_10398823578"></span>
+  <div class="chat-line__avatar">
+    <img class="avatar" data-avatar-for-person-id="53382588" alt="Victor Cooper" title="Victor Cooper" loading="eager" decoding="async" src="/static/assets/2b05ed9c5b274fe0b49e816f.bin" width="130" height="130">
+  </div>
+
+  <div class="chat-line__bubble">
+    <span class="chat-line__meta">
+      <strong class="chat-line__author">Victor Cooper</strong>
+      
+      <span class="chat-line__timestamp">
+        <span class="hidden-on-template" data-twelve-hour-time-format=""><a href="/6302022/buckets/49234166/chats/10398823039@10398823578"><time datetime="2026-10-10T05:31:00Z" data-local="time" data-format="%l:%M%P" title="October 10, 2026 at 5:31am UTC" data-processed-at="2026-10-13T12:23:37.503Z" data-localized="">5:31am</time></a></span>
+        <span class="hidden-on-template" data-twenty-four-hour-time-format="" aria-hidden="true"><a href="/6302022/buckets/49234166/chats/10398823039@10398823578"><time datetime="2026-10-10T05:31:00Z" data-local="time" data-format="%H:%M" title="October 10, 2026 at 5:31am UTC" data-processed-at="2026-10-13T12:23:37.504Z" data-localized="">05:31</time></a></span>
+      </span>
+
+      <turbo-frame id="chat_line_options_recording_10398823578">
+        <span class="action-sheet action-sheet--for-chat-line chat-line__options">
+          <a class="action-sheet__expansion-toggle btn btn--icon btn--sm btn--ghost" href="/6302022/buckets/49234166/chats/10398823039/lines/10398823578/options">
+            <svg class="svg-icon svg-icon--overflow" aria-hidden="true"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg>
+</a>        </span>
+</turbo-frame>
+      
+    </span>
+
+    
+
+    <div class="chat-line__body formatted_content" data-chat--line-formatter-target="body">No, that’s what I was trying to avoid. We’re good to go <span class="emoji">👍</span></div>
+
+    <div id="chat_line_boosts_recording_10398823578" class="hidden-on-template chat-line__boosts">
+  <div class="boosts" data-controller="boosts" data-boosts-deleting-class="boost--deleting">
+  
+
+  <turbo-frame class="contents" id="boosts_recording_10398823578">
+    
+  <div id="boost_685543780" class="boost boost--posted" data-creator-id="53382590" data-behavior="expandable" data-boost-id="685543780">
+    <button type="button" class="boost__toggle" aria-labelledby="content_label_boost_685543780" aria-owns="content_label_boost_685543780" aria-expanded="false" data-visible-to-creator-or-admin="true" data-behavior="toggle_expansion_on_click"></button>
+
+    <img class="avatar boost__avatar" aria-hidden="true" data-avatar-for-person-id="53382590" alt="Cheryl Walters" title="Cheryl Walters" loading="eager" decoding="async" src="/static/assets/7b84d968bc8a0b12a2c64f39.bin" width="130" height="130">
+
+    <a data-turbo-method="delete" data-visible-to-creator-or-admin="true" data-action="boosts#showDeletingEffect" data-boosts-parent-id-param="685543780" class="boost__btn boost__btn--remove boost__btn--trash btn btn--icon btn--xs btn--round btn--ghost btn--negative expanded_content" aria-label="Delete this boost" role="button" href="/6302022/buckets/49234166/boosts/685543780?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU3OA&amp;onboarding=sample"><svg class="svg-icon svg-icon--trash" aria-hidden="true"><use href="/static/assets/d19e1d4cd67847e6140b8894.svg#trash"></use></svg></a>
+
+    <span class="boost__content text-nowrap boost__content--emoji" data-behavior="toggle_expansion_on_click collapse_on_clickoutside" id="content_boost_685543780">
+      <span aria-hidden="true"><span class="emoji">🙏</span></span>
+      <span class="sr-only" id="content_label_boost_685543780">Cheryl W. boosted the chat with '<span class="emoji">🙏</span>'</span>
+    </span>
+</div>
+</turbo-frame>
+  <turbo-frame class="contents" id="new_boost_recording_10398823578">
+      <a class="boosts__new-boost btn btn--icon btn--sm btn--round" aria-label="New boost" href="/6302022/buckets/49234166/boosts/new?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU3OA">
+        <img alt="" class="svg-icon" src="/static/assets/839486c33abf6fd0d5f5ff3e.svg" loading="eager">
+</a></turbo-frame></div>
+
+</div>
+
+  </div>
+</turbo-frame>
+
+  
+<turbo-frame target="_top" class="chat-line chat-line--rich-text chat-line--editable recording" data-recording-id="10398823583" data-creator-id="53382589" data-url="/6302022/buckets/49234166/chats/10398823039/lines/10398823583" data-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU4Mw" data-room-number="10398823039" data-controller="chat--line-formatter" data-behavior="chat_line" data-datetime="2026-10-10T05:39:00Z" id="recording_10398823583" data-chat--line-formatter-formatted-value="true"><span class="anchor recordable__anchor" id="__recording_10398823583"></span>
+  <div class="chat-line__avatar">
+    <img class="avatar" data-avatar-for-person-id="53382589" alt="Annie Bryan" title="Annie Bryan" loading="eager" decoding="async" src="/static/assets/90e2940c30310687f4f08b6c.bin" width="130" height="130">
+  </div>
+
+  <div class="chat-line__bubble">
+    <span class="chat-line__meta">
+      <strong class="chat-line__author">Annie Bryan</strong>
+      
+      <span class="chat-line__timestamp">
+        <span class="hidden-on-template" data-twelve-hour-time-format=""><a href="/6302022/buckets/49234166/chats/10398823039@10398823583"><time datetime="2026-10-10T05:39:00Z" data-local="time" data-format="%l:%M%P" title="October 10, 2026 at 5:39am UTC" data-processed-at="2026-10-13T12:23:37.505Z" data-localized="">5:39am</time></a></span>
+        <span class="hidden-on-template" data-twenty-four-hour-time-format="" aria-hidden="true"><a href="/6302022/buckets/49234166/chats/10398823039@10398823583"><time datetime="2026-10-10T05:39:00Z" data-local="time" data-format="%H:%M" title="October 10, 2026 at 5:39am UTC" data-processed-at="2026-10-13T12:23:37.506Z" data-localized="">05:39</time></a></span>
+      </span>
+
+      <turbo-frame id="chat_line_options_recording_10398823583">
+        <span class="action-sheet action-sheet--for-chat-line chat-line__options">
+          <a class="action-sheet__expansion-toggle btn btn--icon btn--sm btn--ghost" href="/6302022/buckets/49234166/chats/10398823039/lines/10398823583/options">
+            <svg class="svg-icon svg-icon--overflow" aria-hidden="true"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg>
+</a>        </span>
+</turbo-frame>
+      
+    </span>
+
+    
+
+    <div class="chat-line__body formatted_content" data-chat--line-formatter-target="body">Just got this incredible customer feedback!<blockquote dir="auto">So just a thank you for making awesome tools and awesome content             (we love the 37signals podcast and all the Basecamp resources).</blockquote></div>
+
+    <div id="chat_line_boosts_recording_10398823583" class="hidden-on-template chat-line__boosts">
+  <div class="boosts" data-controller="boosts" data-boosts-deleting-class="boost--deleting">
+  
+
+  <turbo-frame class="contents" id="boosts_recording_10398823583">
+    
+  <div id="boost_685543781" class="boost boost--posted" data-creator-id="53382588" data-behavior="expandable" data-boost-id="685543781">
+    <button type="button" class="boost__toggle" aria-labelledby="content_label_boost_685543781" aria-owns="content_label_boost_685543781" aria-expanded="false" data-visible-to-creator-or-admin="true" data-behavior="toggle_expansion_on_click"></button>
+
+    <img class="avatar boost__avatar" aria-hidden="true" data-avatar-for-person-id="53382588" alt="Victor Cooper" title="Victor Cooper" loading="eager" decoding="async" src="/static/assets/0eeb08a2133d49c5c9fd4d6b.bin" width="130" height="130">
+
+    <a data-turbo-method="delete" data-visible-to-creator-or-admin="true" data-action="boosts#showDeletingEffect" data-boosts-parent-id-param="685543781" class="boost__btn boost__btn--remove boost__btn--trash btn btn--icon btn--xs btn--round btn--ghost btn--negative expanded_content" aria-label="Delete this boost" role="button" href="/6302022/buckets/49234166/boosts/685543781?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU4Mw&amp;onboarding=sample"><svg class="svg-icon svg-icon--trash" aria-hidden="true"><use href="/static/assets/d19e1d4cd67847e6140b8894.svg#trash"></use></svg></a>
+
+    <span class="boost__content text-nowrap " data-behavior="toggle_expansion_on_click collapse_on_clickoutside" id="content_boost_685543781">
+      <span aria-hidden="true">nice!</span>
+      <span class="sr-only" id="content_label_boost_685543781">Victor C. boosted the chat with 'nice!'</span>
+    </span>
+</div>
+</turbo-frame>
+  <turbo-frame class="contents" id="new_boost_recording_10398823583">
+      <a class="boosts__new-boost btn btn--icon btn--sm btn--round" aria-label="New boost" href="/6302022/buckets/49234166/boosts/new?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU4Mw">
+        <img alt="" class="svg-icon" src="/static/assets/839486c33abf6fd0d5f5ff3e.svg" loading="eager">
+</a></turbo-frame></div>
+
+</div>
+
+  </div>
+</turbo-frame>
+
+  
+<turbo-frame target="_top" class="chat-line chat-line--rich-text chat-line--editable recording" data-recording-id="10398823586" data-creator-id="53382590" data-url="/6302022/buckets/49234166/chats/10398823039/lines/10398823586" data-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU4Ng" data-room-number="10398823039" data-controller="chat--line-formatter" data-behavior="chat_line" data-datetime="2026-10-10T05:45:00Z" id="recording_10398823586" data-chat--line-formatter-formatted-value="true"><span class="anchor recordable__anchor" id="__recording_10398823586"></span>
+  <div class="chat-line__avatar">
+    <img class="avatar" data-avatar-for-person-id="53382590" alt="Cheryl Walters" title="Cheryl Walters" loading="eager" decoding="async" src="/static/assets/45df24fa3fc614c5a12cbfa9.bin" width="130" height="130">
+  </div>
+
+  <div class="chat-line__bubble">
+    <span class="chat-line__meta">
+      <strong class="chat-line__author">Cheryl Walters</strong>
+      
+      <span class="chat-line__timestamp">
+        <span class="hidden-on-template" data-twelve-hour-time-format=""><a href="/6302022/buckets/49234166/chats/10398823039@10398823586"><time datetime="2026-10-10T05:45:00Z" data-local="time" data-format="%l:%M%P" title="October 10, 2026 at 5:45am UTC" data-processed-at="2026-10-13T12:23:37.507Z" data-localized="">5:45am</time></a></span>
+        <span class="hidden-on-template" data-twenty-four-hour-time-format="" aria-hidden="true"><a href="/6302022/buckets/49234166/chats/10398823039@10398823586"><time datetime="2026-10-10T05:45:00Z" data-local="time" data-format="%H:%M" title="October 10, 2026 at 5:45am UTC" data-processed-at="2026-10-13T12:23:37.508Z" data-localized="">05:45</time></a></span>
+      </span>
+
+      <turbo-frame id="chat_line_options_recording_10398823586">
+        <span class="action-sheet action-sheet--for-chat-line chat-line__options">
+          <a class="action-sheet__expansion-toggle btn btn--icon btn--sm btn--ghost" href="/6302022/buckets/49234166/chats/10398823039/lines/10398823586/options">
+            <svg class="svg-icon svg-icon--overflow" aria-hidden="true"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg>
+</a>        </span>
+</turbo-frame>
+      
+    </span>
+
+    
+
+    <div class="chat-line__body formatted_content" data-chat--line-formatter-target="body">Awww! <span class="emoji">💖</span></div>
+
+    <div id="chat_line_boosts_recording_10398823586" class="hidden-on-template chat-line__boosts">
+  <div class="boosts" data-controller="boosts" data-boosts-deleting-class="boost--deleting">
+  
+
+  <turbo-frame class="contents" id="boosts_recording_10398823586">
+</turbo-frame>
+  <turbo-frame class="contents" id="new_boost_recording_10398823586">
+      <a class="boosts__new-boost btn btn--icon btn--sm btn--round" aria-label="New boost" href="/6302022/buckets/49234166/boosts/new?boost%5Bboostable_gid%5D=Z2lkOi8vYmMzL1JlY29yZGluZy8xMDM5ODgyMzU4Ng">
+        <img alt="" class="svg-icon" src="/static/assets/839486c33abf6fd0d5f5ff3e.svg" loading="eager">
+</a></turbo-frame></div>
+
+</div>
+
+  </div>
+</turbo-frame>
+
+
+
+    
+  </bc-grouped-dates>
+</bc-infinite-page>
+      <footer id="chat_footer_bucket_49234166" class="chat__footer" data-role="chat_input_wrapper" data-controller="chat--input chat--rich-text-mode chat--emoji-picker" data-action="chat--emoji-picker:close-&gt;chat--input#focusEditor lexxy:focus-&gt;chat--emoji-picker#close" data-chat--rich-text-mode-target="wrapper" data-chat--rich-text-mode-enabled-class="chat__footer--rich-text" data-chat--room-target="footer" data-chat--emoji-picker-hidden-class="hidden" data-chat--emoji-picker-expanded-class="emoji-picker--expanded" data-voice-mode="ready">
+  <div class="chat__typing-status" data-behavior="chat_typing_status"></div>
+
+  
+<turbo-frame class="chat-line-reply-container" data-chat--room-target="replyTurboFrame" data-action="turbo:before-frame-render-&gt;chat--room#showExcerpt turbo:frame-render-&gt;chat--room#fixReplyOffset" id="editor_reply_bubble_chat_room_10398823039">
+</turbo-frame>
+
+  <div class="chat__container">
+    <form data-behavior="autosave" data-autosave-key="gid://bc3/Recording/10398823039" class="chat__form">
+      <div class="chat__upload-shelf hidden" data-behavior="chat_upload_shelf" data-action="click-&gt;chat--input#focusEditor:self"></div>
+
+      <div class="relative">
+          <div class="chat__shortcut-container">
+            <kbd class="keyboard-shortcut">C</kbd>
+            <button type="button" hidden="" data-hotkey="c" data-action="chat--input#focusEditor"></button>
+          </div>
+
+        <bc-require script="rich_text" data-controller="lexxy" style=""><lexxy-editor id="chat_speak_10398823039" class="formatted_content chat__mic input input--thick outline-none input--full-width lexxy-content lexxy-editor--empty" preset="chat" data-behavior="chat_speak rich_text_editor submit_on_control_enter drop_zone" data-controller="autofocus chat--big-emoji" data-action="keydown.up-&gt;chat--room#editLastLine click-&gt;chat--input#focusEditor:self lexxy:initialize-&gt;chat--emoji-picker#install lexxy:change-&gt;chat--big-emoji#toggle" data-chat--room-target="editor" data-chat--input-target="editor" data-chat--big-emoji-big-class="chat__mic--emoji" data-rich-autocomplete-types="integrations mentions" data-rich-avatar-suppressed="" data-direct-upload-url="/api/uploads/direct" data-blob-url-template="/files/:signed_id/:filename" permitted-attachment-types="application/vnd.basecamp.mention application/vnd.basecamp.opengraph-embed" name="content" data-autofocus-autofocused-value="true" data-voice-mode="ready" data-staged-upload="null" connected="" value='&lt;p dir="auto"&gt;&lt;br&gt;&lt;/p&gt;'><lexxy-prompt trigger="@" name="mention" src="/6302022/prompts/buckets/49234166/people/users?include_groups=true" vertical-direction="top" connected=""></lexxy-prompt></lexxy-editor></bc-require>
+      </div>
+    </form>
+
+    <button class="btn btn--sm btn--primary btn--solid chat__footer--post-button margin-top-8" data-behavior="chat_submit" tabindex="0">Post</button>
+
+    <div class="chat__tools">
+      <div class="chat__emoji-picker emoji-picker" data-chat--emoji-picker-target="picker" data-controller="orientation" data-orientation-flip-class="flip" data-orientation-right-class="right-edge" data-orientation-left-class="left-edge" data-orientation-min-distance-value="330" data-orientation-anchor-value="bottom" data-action="keydown.esc-&gt;chat--emoji-picker#close click@window-&gt;chat--emoji-picker#closeOnClickOutside chat--emoji-picker:close-&gt;chat--input#focusEditor">
+        <button type="button" class="chat__tools--button chat__emoji-button emoji-picker__toggle btn btn--icon btn--sm btn--ghost" data-orientation-target="content" data-action="chat--emoji-picker#toggle click-&gt;orientation#flip" aria-label="Add emoji" title="Add emoji" tabindex="0"><svg class="svg-icon svg-icon--face" aria-hidden="true"><use href="/static/assets/e0f5b347a3f3fc9ef1fffe04.svg#face"></use></svg></button>
+
+        <div class="emoji-picker__modal emoji-picker__modal--within-chat text-center">
+          <div class="hidden" data-behavior="show_on_mac">
+            <p class="emoji-picker__hint margin-bottom-8 margin-top-0 text-subtle text-14">
+              Get more emojis with <kbd class="keyboard-shortcut">⌘</kbd>+<kbd class="keyboard-shortcut">ctrl</kbd>+<kbd class="keyboard-shortcut">space</kbd>
+            </p>
+          </div>
+          <div class="emoji-picker__emojis">
+              <button name="button" type="button" title="Face with starry eyes" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="🤩"><span class="emoji">🤩</span></button>
+              <button name="button" type="button" title="Partying face" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="🥳"><span class="emoji">🥳</span></button>
+              <button name="button" type="button" title="Smiling face with flush cheeks" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="😊"><span class="emoji">😊</span></button>
+              <button name="button" type="button" title="Grinning face" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="😀"><span class="emoji">😀</span></button>
+              <button name="button" type="button" title="Grinning face with sweat drop" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="😅"><span class="emoji">😅</span></button>
+              <button name="button" type="button" title="Face with tears of joy" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="😂"><span class="emoji">😂</span></button>
+              <button name="button" type="button" title="Smiling face with sunglasses" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="😎"><span class="emoji">😎</span></button>
+              <button name="button" type="button" title="Winking face" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="😉"><span class="emoji">😉</span></button>
+              <button name="button" type="button" title="Winking face with stuck out tongue" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="😜"><span class="emoji">😜</span></button>
+              <button name="button" type="button" title="Grimacing face" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="😬"><span class="emoji">😬</span></button>
+              <button name="button" type="button" title="Surprised face with open mouth" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="😮"><span class="emoji">😮</span></button>
+              <button name="button" type="button" title="Flushed face" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="😳"><span class="emoji">😳</span></button>
+              <button name="button" type="button" title="Thinking face" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="🤔"><span class="emoji">🤔</span></button>
+              <button name="button" type="button" title="Unamused face" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="😒"><span class="emoji">😒</span></button>
+              <button name="button" type="button" title="Crying face" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="😢"><span class="emoji">😢</span></button>
+              <button name="button" type="button" title="Loudly crying face" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="😭"><span class="emoji">😭</span></button>
+              <button name="button" type="button" title="Face screaming in fear" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="😱"><span class="emoji">😱</span></button>
+              <button name="button" type="button" title="Thumbs up" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="👍"><span class="emoji">👍</span></button>
+              <button name="button" type="button" title="Clapping" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="👏"><span class="emoji">👏</span></button>
+              <button name="button" type="button" title="Waving hand" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="👋"><span class="emoji">👋</span></button>
+              <button name="button" type="button" title="Hands raised in celebration" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="🙌"><span class="emoji">🙌</span></button>
+              <button name="button" type="button" title="Hands pressed together" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="🙏"><span class="emoji">🙏</span></button>
+              <button name="button" type="button" title="Flexed bicep" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="💪"><span class="emoji">💪</span></button>
+              <button name="button" type="button" title="Sign of the horns" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="🤘"><span class="emoji">🤘</span></button>
+              <button name="button" type="button" title="Raised fist" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="✊"><span class="emoji">✊</span></button>
+              <button name="button" type="button" title="Thumbs down" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="👎"><span class="emoji">👎</span></button>
+              <button name="button" type="button" title="Peace" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="✌️"><span class="emoji">✌️</span></button>
+              <button name="button" type="button" title="Finger pointing left" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="👈"><span class="emoji">👈</span></button>
+              <button name="button" type="button" title="Finger pointing Up" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="👆"><span class="emoji">👆</span></button>
+              <button name="button" type="button" title="Raised hand" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="✋"><span class="emoji">✋</span></button>
+              <button name="button" type="button" title="Party popper" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="🎉"><span class="emoji">🎉</span></button>
+              <button name="button" type="button" title="Sparkles" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="✨"><span class="emoji">✨</span></button>
+              <button name="button" type="button" title="Red heart" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="❤️"><span class="emoji">❤️</span></button>
+              <button name="button" type="button" title="100 points" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="💯"><span class="emoji">💯</span></button>
+              <button name="button" type="button" title="Eyes" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="👀"><span class="emoji">👀</span></button>
+              <button name="button" type="button" title="Pile of poop" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="💩"><span class="emoji">💩</span></button>
+              <button name="button" type="button" title="Sun" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="☀️"><span class="emoji">☀️</span></button>
+              <button name="button" type="button" title="Moon" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="🌙"><span class="emoji">🌙</span></button>
+              <button name="button" type="button" title="Collision" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="💥"><span class="emoji">💥</span></button>
+              <button name="button" type="button" title="Fire" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="🔥"><span class="emoji">🔥</span></button>
+              <button name="button" type="button" title="Birthday cake" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="🎂"><span class="emoji">🎂</span></button>
+              <button name="button" type="button" title="Fork and knife" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="🍴"><span class="emoji">🍴</span></button>
+              <button name="button" type="button" title="Money bag" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="💰"><span class="emoji">💰</span></button>
+              <button name="button" type="button" title="Gold medal" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="🥇"><span class="emoji">🥇</span></button>
+              <button name="button" type="button" title="Red flashing light" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="🚨"><span class="emoji">🚨</span></button>
+              <button name="button" type="button" title="Light bulb" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="💡"><span class="emoji">💡</span></button>
+              <button name="button" type="button" title="Hammer and wrench" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="🛠">🛠</button>
+              <button name="button" type="button" title="Chart with upward trend" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="📈"><span class="emoji">📈</span></button>
+              <button name="button" type="button" title="Check mark" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="✅"><span class="emoji">✅</span></button>
+              <button name="button" type="button" title="Public address loudspeaker" class="emoji-picker__button btn btn--icon btn--sm btn--round btn--ghost" data-action="chat--emoji-picker#pick chat--input#insertText" data-chat--input-text-param="📢"><span class="emoji">📢</span></button>
+          </div>
+        </div>
+      </div>
+
+        <button class="chat__tools--button chat__attach-button btn btn--icon btn--sm btn--ghost app-mobile__hide" data-behavior="chat_attach_files" aria-label="Attach a file" title="Attach a file" tabindex="0"><svg class="svg-icon svg-icon--attachment" aria-hidden="true"><use href="/static/assets/2ec08f1422f18c759cdc9f27.svg#attachment"></use></svg></button>
+
+        <button class="chat__tools--button lexxy-editor__toolbar-button lexxy-voice-note-button btn btn--icon btn--sm btn--ghost" data-behavior="chat_toggle_voice_mode" name="voice-note" aria-label="Record a voice note" title="Record a voice note" tabindex="0" data-mode="ready"></button>
+
+      <button class="chat__tools--button chat__text-options-button btn btn--icon btn--sm btn--ghost" data-action="chat--rich-text-mode#toggle chat--input#focusEditor" aria-label="Text formatting" title="Text formatting" tabindex="0"><svg class="svg-icon svg-icon--text-options" aria-hidden="true"><use href="/static/assets/de2e4b66c2312d9932a464cf.svg#text-options"></use></svg></button>
+    </div>
+  </div>
+
+  <div class="chat__notice chat__notice--disconnected">
+    <strong>Note:</strong>
+    <span>Chat is offline. Reconnecting…</span>
+  </div>
+
+  <h3 class="chat-line--announcement chat__removed-notice">
+    <strong>You were removed from this ping</strong>
+  </h3>
+
+  <div class="chat__notice chat__notice--no-microphone">
+    <span>To record a voice note, <a target="_blank" class="decorated" href="/help/5/article/1056-enabling-microphone-access">allow microphone access</a>.</span>
+  </div>
+</footer>
+
+</bc-chat-room></div></div>
+<bc-modal opened="false" data-desktop-modal-target="modal" data-action="close-&gt;desktop-modal#resetModal" type="box"></bc-modal>
+
+      </main>
+
+      
+    </div>
+
+      <footer class="footer-trays" id="footer-trays" data-turbo-permanent="">
+        <div class="footer-trays__corner loading__hide">
+          <section class="tray tray--account">
+  <div class="tray__tab" data-controller="dialog list-navigation autofocus" data-list-navigation-wrap-value="true" data-autofocus-disabled-value="true" data-dialog-click-outside-exempt-selector-value="#sidebar" data-action="
+        keydown.esc-&gt;dialog#closeIfOpen
+        mousedown@document-&gt;dialog#captureClickStart
+        click@document-&gt;dialog#closeOnClickOutside
+        turbo:visit@document-&gt;dialog#closeOnPageVisit
+        dialog:show@document-&gt;dialog#closeOthers
+        dialog:show-&gt;autofocus#focusIfVisible
+        dialog:close-&gt;autofocus#reset">
+    <dialog id="my_navigation_account_content" class="tray__dialog tray__dialog--account" aria-label="My account" data-dialog-target="dialog" data-action="click-&gt;dialog#closeOnLinkClick keydown.up-&gt;list-navigation#focusPreviousElement keydown.down-&gt;list-navigation#focusNextElement keydown.home-&gt;list-navigation#focusFirstElement keydown.end-&gt;list-navigation#focusLastElement keydown.left-&gt;list-navigation#focusPreviousControl keydown.right-&gt;list-navigation#focusNextControl" inert="">
+      <div class="tray__hat">
+        <h3 class="tray__title">My Account</h3>
+      </div>
+
+      <div class="tray__item list-grid">
+        <form class="contents" method="get" action="/6302022/my/profile/edit">
+          <button name="button" type="button" class="reading__link list-grid" aria-haspopup="dialog" data-action="desktop-modal#openModal dialog#close" data-list-navigation-target="focusable" data-autofocus-target="field">
+            <div class="reading__avatar">
+              <svg class="svg-icon svg-icon--person" aria-hidden="true"><use href="/static/assets/4e05fb08c3c495d080c87f42.svg#person"></use></svg>
+            </div>
+            <div class="reading__content">
+              <h4 class="reading__description margin-block-0">My Profile</h4>
+            </div>
+</button></form>      </div>
+
+      <div class="tray__item list-grid">
+        <a class="reading__link list-grid" data-hotkey="w" data-list-navigation-target="focusable" data-autofocus-target="field" href="/6302022/my/drafts">
+          <div class="reading__avatar">
+            <svg class="svg-icon svg-icon--file-draft" aria-hidden="true"><use href="/static/assets/22ea33351d7d9aa3a238ba7f.svg#file-draft"></use></svg>
+          </div>
+          <div class="reading__content">
+            <h4 class="reading__description margin-block-0">My Drafts <kbd class="keyboard-shortcut">W</kbd></h4>
+          </div>
+</a>      </div>
+
+      <div class="tray__item list-grid">
+        <a class="reading__link list-grid" data-hotkey="o" data-list-navigation-target="focusable" data-autofocus-target="field" href="/6302022/my/boosts">
+          <div class="reading__avatar">
+            <svg class="svg-icon svg-icon--boost" aria-hidden="true"><use href="/static/assets/a1362cbf5a20db5c719059c8.svg#boost"></use></svg>
+          </div>
+          <div class="reading__content">
+            <h4 class="reading__description margin-block-0">My Boosts <kbd class="keyboard-shortcut">O</kbd></h4>
+          </div>
+</a>      </div>
+
+      <div class="tray__item list-grid">
+        <a class="reading__link list-grid" data-list-navigation-target="focusable" data-autofocus-target="field" href="/6302022/my/settings">
+          <div class="reading__avatar">
+            <svg class="svg-icon svg-icon--gear" aria-hidden="true"><use href="/static/assets/fe3512a845f8cfd078050008.svg#gear"></use></svg>
+          </div>
+          <div class="reading__content">
+            <h4 class="reading__description margin-block-0">Account &amp; Settings</h4>
+          </div>
+</a>      </div>
+
+      <div class="tray__item list-grid">
+        <form class="contents" data-turbo="false" method="post" action="/6302022/sign_out"><input type="hidden" name="_method" value="delete"><button class="reading__link list-grid" data-controller="hotkey" data-hotkey="Shift+: w q,Shift+: q" data-list-navigation-target="focusable" data-autofocus-target="field" type="submit">
+          <div class="reading__avatar">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" class="svg-icon" aria-hidden="true"><path fill="currentColor" d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"></path></svg>
+          </div>
+          <div class="reading__content">
+            <h4 class="reading__description margin-block-0">Log out <kbd class="keyboard-shortcut">:wq</kbd></h4>
+          </div>
+</button></form>      </div>
+</dialog>
+    <button class="tray__nav tray__nav--avatar app-mobile__hide" data-action="dialog#toggle" data-hotkey="u" aria-label="My Account" title="My Account">
+      <img data-current-person-avatar="true" alt="" loading="eager" decoding="async" class="avatar" src="/api/avatar.svg" width="30" height="30" title="Dee">
+      <kbd class="keyboard-shortcut">U</kbd>
+    </button>
+  </div>
+</section>
+
+        </div>
+        <div class="footer-trays__inner">
+          <section class="tray tray--left">
+  <div class="tray__tab" data-controller="dialog list-navigation turbo-frame autofocus turbo-frame-deep-link" data-dialog-click-outside-exempt-selector-value="#sidebar" data-list-navigation-wrap-value="true" data-autofocus-disabled-value="true" data-turbo-frame-delay-to-refresh-value="250" data-action="keydown.esc@document-&gt;dialog#closeIfOpen mousedown@document-&gt;dialog#captureClickStart click@document-&gt;dialog#closeOnClickOutside turbo:visit@document-&gt;dialog#closeOnPageVisit dialog:show@document-&gt;dialog#closeOthers dialog:show-&gt;autofocus#focusIfVisible dialog:close-&gt;autofocus#reset quick-find:dismiss-&gt;dialog#close dialog:show-&gt;turbo-frame#refresh dialog:close-&gt;turbo-frame#cancelRefresh turbo:before-morph-element-&gt;turbo-frame#reloadNestedFrameInsteadOfMorphing turbo:load@window-&gt;turbo-frame-deep-link#follow turbo-frame-deep-link:open-&gt;dialog#open turbo:frame-load-&gt;autofocus#focusIfVisible" data-turbo-frame-deep-link-param-value="tray" data-turbo-frame-deep-link-allowed-paths-value='["/6302022/my/assignments", "/6302022/my/assignings"]'>
+  <dialog id="my_navigation_assignments_content" class="tray__dialog tray__dialog--sheet tray__dialog--assignments" aria-label="My Tasks" data-dialog-target="dialog" data-action="click-&gt;dialog#closeOnLinkClick keydown.up-&gt;list-navigation#focusPreviousElement keydown.down-&gt;list-navigation#focusNextElement keydown.home-&gt;list-navigation#focusFirstElement keydown.end-&gt;list-navigation#focusLastElement keydown.left-&gt;list-navigation#focusPreviousControl keydown.right-&gt;list-navigation#focusNextControl" inert="">
+    <turbo-frame loading="lazy" refresh="morph" data-turbo-frame-target="element" data-turbo-frame-deep-link-target="frame" id="my_navigation_assignments" src="/6302022/my/assignments" target="_top"></turbo-frame>
+</dialog>
+  <button class="tray__nav btn btn--sm btn--ghost" aria-label="My Tasks" title="My Tasks" data-action="dialog#toggle mouseenter-&gt;turbo-frame#prefetch" data-hotkey="t">
+    <svg class="svg-icon svg-icon--check-solid tray__nav-icon hidden@md-up" aria-hidden="true"><use href="/static/assets/733ff089ed9844fc2aa349db.svg#check-solid"></use></svg>
+    <span class="hidden@md-down"><span class="tray__nav-prefix">My </span>Tasks</span>
+    <kbd class="keyboard-shortcut">T</kbd>
+</button>
+    <button type="button" class="hidden" tabindex="-1" aria-hidden="true" data-action="dialog#toggle" data-hotkey="a"></button>
+</div>
+
+  <div class="tray__tab" data-controller="dialog list-navigation turbo-frame autofocus" data-dialog-click-outside-exempt-selector-value="#sidebar" data-list-navigation-wrap-value="true" data-autofocus-disabled-value="true" data-turbo-frame-delay-to-refresh-value="250" data-action="keydown.esc@document-&gt;dialog#closeIfOpen mousedown@document-&gt;dialog#captureClickStart click@document-&gt;dialog#closeOnClickOutside turbo:visit@document-&gt;dialog#closeOnPageVisit dialog:show@document-&gt;dialog#closeOthers dialog:show-&gt;autofocus#focusIfVisible dialog:close-&gt;autofocus#reset quick-find:dismiss-&gt;dialog#close dialog:show-&gt;turbo-frame#refresh dialog:close-&gt;turbo-frame#cancelRefresh turbo:before-morph-element-&gt;turbo-frame#reloadNestedFrameInsteadOfMorphing turbo:frame-load-&gt;autofocus#focusIfVisible">
+  <dialog id="my_navigation_schedule_content" class="tray__dialog tray__dialog--sheet tray__dialog--schedule" aria-label="My Events" data-dialog-target="dialog" data-action="click-&gt;dialog#closeOnLinkClick keydown.up-&gt;list-navigation#focusPreviousElement keydown.down-&gt;list-navigation#focusNextElement keydown.home-&gt;list-navigation#focusFirstElement keydown.end-&gt;list-navigation#focusLastElement keydown.left-&gt;list-navigation#focusPreviousControl keydown.right-&gt;list-navigation#focusNextControl" inert="">
+    <turbo-frame loading="lazy" refresh="morph" data-turbo-frame-target="element" data-turbo-frame-deep-link-target="frame" id="my_navigation_schedule" src="/6302022/my/navigation/schedule" target="_top"></turbo-frame>
+</dialog>
+  <button class="tray__nav btn btn--sm btn--ghost" aria-label="My Events" title="My Events" data-action="dialog#toggle mouseenter-&gt;turbo-frame#prefetch" data-hotkey="e">
+    <svg class="svg-icon svg-icon--calendar tray__nav-icon hidden@md-up" aria-hidden="true"><use href="/static/assets/1b4038a6deb4cdd992e3f49b.svg#calendar"></use></svg>
+    <span class="hidden@md-down"><span class="tray__nav-prefix">My </span>Events</span>
+    <kbd class="keyboard-shortcut">E</kbd>
+</button>
+</div>
+</section>
+
+          <section class="tray tray--center">
+  <div class="tray__tab" data-controller="dialog list-navigation turbo-frame autofocus" data-list-navigation-wrap-value="true" data-autofocus-disabled-value="true" data-dialog-click-outside-exempt-selector-value="#sidebar" data-turbo-frame-delay-to-refresh-value="250" data-action="keydown.esc@document-&gt;dialog#closeIfOpen mousedown@document-&gt;dialog#captureClickStart click@document-&gt;dialog#closeOnClickOutside turbo:visit@document-&gt;dialog#closeOnPageVisit dialog:show@document-&gt;dialog#closeOthers
+        dialog:show-&gt;autofocus#focusIfVisible
+        dialog:close-&gt;autofocus#reset
+        dialog:show-&gt;turbo-frame#refresh
+        dialog:close-&gt;turbo-frame#cancelRefresh
+        turbo:before-morph-element-&gt;turbo-frame#reloadNestedFrameInsteadOfMorphing
+        turbo:frame-load-&gt;autofocus#focusIfVisible">
+    <dialog class="tray__dialog tray__dialog--sheet tray__dialog--today" aria-label="Today" data-dialog-target="dialog" data-action="click-&gt;dialog#closeOnLinkClick keydown.up-&gt;list-navigation#focusPreviousElement keydown.down-&gt;list-navigation#focusNextElement keydown.home-&gt;list-navigation#focusFirstElement keydown.end-&gt;list-navigation#focusLastElement keydown.left-&gt;list-navigation#focusPreviousControl keydown.right-&gt;list-navigation#focusNextControl" inert="">
+      <turbo-frame loading="lazy" refresh="morph" data-turbo-frame-target="element" id="my_navigation_today" src="/6302022/my/navigation/today" target="_top"></turbo-frame>
+    </dialog>
+
+    <turbo-frame refresh="morph" id="my_navigation_today_summary" src="/6302022/my/navigation/today/summary" target="_top" complete="">
+  
+<div class="contents">
+  <div class="tray__event-bar">
+    
+  </div>
+
+</div>
+
+</turbo-frame>
+  </div>
+</section>
+
+          <section class="tray tray--right">
+  <div class="tray__tab" data-controller="dialog list-navigation turbo-frame autofocus" data-dialog-click-outside-exempt-selector-value="#sidebar" data-list-navigation-wrap-value="true" data-autofocus-disabled-value="true" data-turbo-frame-delay-to-refresh-value="250" data-action="keydown.esc@document-&gt;dialog#closeIfOpen mousedown@document-&gt;dialog#captureClickStart click@document-&gt;dialog#closeOnClickOutside turbo:visit@document-&gt;dialog#closeOnPageVisit dialog:show@document-&gt;dialog#closeOthers dialog:show-&gt;autofocus#focusIfVisible dialog:close-&gt;autofocus#reset quick-find:dismiss-&gt;dialog#close dialog:show-&gt;turbo-frame#refresh dialog:close-&gt;turbo-frame#cancelRefresh turbo:before-morph-element-&gt;turbo-frame#reloadNestedFrameInsteadOfMorphing turbo:frame-load-&gt;autofocus#focusIfVisible">
+  <dialog class="tray__dialog tray__dialog--sheet tray__dialog--bookmarks" aria-label="My Bookmarks" data-dialog-target="dialog" data-action="click-&gt;dialog#closeOnLinkClick keydown.up-&gt;list-navigation#focusPreviousElement keydown.down-&gt;list-navigation#focusNextElement keydown.home-&gt;list-navigation#focusFirstElement keydown.end-&gt;list-navigation#focusLastElement keydown.left-&gt;list-navigation#focusPreviousControl keydown.right-&gt;list-navigation#focusNextControl" inert="">
+    <turbo-frame loading="lazy" refresh="morph" data-turbo-frame-target="element" data-turbo-frame-deep-link-target="frame" id="my_navigation_bookmarks" src="/6302022/my/navigation/bookmarks" target="_top"></turbo-frame>
+</dialog>
+  <button class="tray__nav btn btn--sm btn--ghost" aria-label="My Bookmarks" title="My Bookmarks" data-action="dialog#toggle mouseenter-&gt;turbo-frame#prefetch" data-hotkey="b" data-controller="animation" data-animation-play-class="tray__nav--consumed">
+    <svg class="svg-icon svg-icon--bookmark tray__nav-icon hidden@md-up" aria-hidden="true"><use href="/static/assets/a86aa34c9916b23873e0d6d1.svg#bookmark"></use></svg>
+    <span class="hidden@md-down"><span class="tray__nav-prefix">My </span>Bookmarks</span>
+    <kbd class="keyboard-shortcut">B</kbd>
+</button>
+</div>
+
+  <div class="tray__tab" data-controller="dialog list-navigation turbo-frame autofocus" data-dialog-click-outside-exempt-selector-value="#sidebar" data-list-navigation-wrap-value="true" data-autofocus-disabled-value="true" data-turbo-frame-delay-to-refresh-value="250" data-action="keydown.esc@document-&gt;dialog#closeIfOpen mousedown@document-&gt;dialog#captureClickStart click@document-&gt;dialog#closeOnClickOutside turbo:visit@document-&gt;dialog#closeOnPageVisit dialog:show@document-&gt;dialog#closeOthers dialog:show-&gt;autofocus#focusIfVisible dialog:close-&gt;autofocus#reset quick-find:dismiss-&gt;dialog#close dialog:show-&gt;turbo-frame#refresh dialog:close-&gt;turbo-frame#cancelRefresh turbo:before-morph-element-&gt;turbo-frame#reloadNestedFrameInsteadOfMorphing turbo:frame-load-&gt;autofocus#focusIfVisible">
+  <dialog class="tray__dialog tray__dialog--sheet tray__dialog--activity" aria-label="My Activity" data-dialog-target="dialog" data-action="click-&gt;dialog#closeOnLinkClick keydown.up-&gt;list-navigation#focusPreviousElement keydown.down-&gt;list-navigation#focusNextElement keydown.home-&gt;list-navigation#focusFirstElement keydown.end-&gt;list-navigation#focusLastElement keydown.left-&gt;list-navigation#focusPreviousControl keydown.right-&gt;list-navigation#focusNextControl" inert="">
+    <turbo-frame loading="lazy" refresh="morph" data-turbo-frame-target="element" data-turbo-frame-deep-link-target="frame" id="my_navigation_activity" src="/6302022/my/navigation/activity" target="_top"></turbo-frame>
+</dialog>
+  <button class="tray__nav btn btn--sm btn--ghost" aria-label="My Activity" title="My Activity" data-action="dialog#toggle mouseenter-&gt;turbo-frame#prefetch" data-hotkey="y">
+    <svg class="svg-icon svg-icon--chart tray__nav-icon hidden@md-up" aria-hidden="true"><use href="/static/assets/8b19d8374bf8e002cbd61fdc.svg#chart"></use></svg>
+    <span class="hidden@md-down"><span class="tray__nav-prefix">My </span>Activity</span>
+    <kbd class="keyboard-shortcut">Y</kbd>
+</button>
+</div>
+
+  <div class="tray__tab" data-controller="dialog autofocus turbo-frame" data-autofocus-disabled-value="true" data-turbo-frame-clear-on-disconnect-value="false" data-dialog-click-outside-exempt-selector-value="#sidebar" data-action="dialog:show-&gt;autofocus#focusIfVisible dialog:close-&gt;autofocus#reset turbo:frame-load-&gt;autofocus#focusIfVisible keydown.esc@document-&gt;dialog#closeIfOpen mousedown@document-&gt;dialog#captureClickStart click@document-&gt;dialog#closeOnClickOutside turbo:visit@document-&gt;dialog#closeOnPageVisit dialog:show@document-&gt;dialog#closeOthers">
+    <dialog data-dialog-target="dialog" class="tray__dialog tray__dialog--sheet tray__dialog--scratchpad" aria-label="My Notes" inert="">
+      <div class="tray__scratchpad-container document-style-editor drop_zoned" data-behavior="drop_zone_container">
+        <div class="perma-toolbar">
+  <div class="perma-toolbar__actions">
+    
+    <button type="button" class="tray__close btn btn--sm btn--icon btn--ghost app-mobile__hide" data-action="dialog#close" aria-label="Close">
+  <svg class="svg-icon svg-icon--x" aria-hidden="true"><use href="/static/assets/675483664aff3de45e409c28.svg#x"></use></svg>
+</button>
+
+  </div>
+</div>
+
+<header class="perma-header">
+  <h1 class="perma-header__title">My Notes</h1>
+</header>
+
+        <turbo-frame loading="lazy" data-turbo-frame-target="element" id="my_navigation_notes" src="/6302022/my/navigation/notes" target="_top"></turbo-frame>
+      </div>
+    </dialog>
+    <button class="tray__nav btn btn--sm btn--ghost" aria-label="My Notes" title="My Notes" data-action="click-&gt;dialog#toggle mouseenter-&gt;turbo-frame#prefetch" data-hotkey="n">
+      <svg class="svg-icon svg-icon--file-text tray__nav-icon hidden@md-up" aria-hidden="true"><use href="/static/assets/564b1d41f322943a3fdfae41.svg#file-text"></use></svg>
+      <span class="hidden@md-down">
+        <span class="tray__nav-prefix">My </span>Notes
+      </span>
+      <kbd class="keyboard-shortcut">N</kbd>
+    </button>
+  </div>
+</section>
+
+        </div>
+        <div class="help-button app-mobile__hide" data-role="help_button_container" data-beacon-id="913808d2-102c-45fc-bfd2-0868b1a14738" data-controller="help-button" data-action="click-&gt;help-button#watch error@window-&gt;help-button#fallBack:capture" data-help-button-loading-class="help-button--loading">
+  <a class="btn btn--ghost btn--sm leading-none" href="/support" target="_blank" rel="noopener" data-behavior="help_button" data-help-button-target="link" data-hotkey="?" aria-label="Support" title="Support">
+    <svg class="svg-icon svg-icon--question-circle-solid" aria-hidden="true"><use href="/static/assets/d951d4d469d160c9f88c0edc.svg#question-circle-solid"></use></svg>
+    <span>Support</span>
+    <kbd class="keyboard-shortcut">?</kbd>
+  </a>
+</div>
+      </footer>
+
+    
+
+    <div id="sidebar" role="complementary" aria-label="Sidebar" data-turbo-permanent="" data-controller="sidebar" data-action="
+      keydown.esc-&gt;sidebar#togglePaneFocus
+      keydown.esc@document-&gt;sidebar#togglePaneFocus
+      click-&gt;sidebar#focusListAfterVisit
+      prefetched-frame:injected-&gt;sidebar#reload
+      bc:unreads-change@window-&gt;sidebar#reloadSoon
+      visibilitychange@document-&gt;sidebar#reloadIfVisible
+      turbo:before-visit@document-&gt;sidebar#closeOnSmallViewportVisit
+      turbo:load@document-&gt;sidebar#closeOnConflictingVisit
+      turbo:load@document-&gt;sidebar#restoreKeyboardVisitFocus
+      turbo:before-visit@document-&gt;sidebar#preserveScroll
+      turbo:before-cache@document-&gt;sidebar#preserveScroll
+      turbo:render@document-&gt;sidebar#restoreScroll
+      turbo:click@document-&gt;sidebar#prepareKeyboardPageVisit
+      hashchange@window-&gt;sidebar#restoreKeyboardVisitFocus" data-sidebar-root-path-value="/my/sidebar" data-sidebar-default-location-value="/6302022/my/sidebar/inbox">
+
+  <button class="hidden" data-controller="ping-shortcut" data-hotkey="p" data-action="click-&gt;ping-shortcut#open" data-ping-shortcut-sidebar-outlet="#sidebar"></button>
+
+  <button class="hidden" data-hotkey="s" data-action="sidebar#toggle" data-sidebar-focus-list-param="true" aria-label="Toggle sidebar"></button>
+
+  <button hidden="" data-hotkey="z" data-behavior="toggle_focus_mode"></button>
+
+  <div hidden="">
+    <div class="focus-mode__toggle tray__action text-14">
+  <button class="focus-mode__toggle--off" name="button" type="button" aria-label="Pause notifications" data-behavior="enable_focus_mode" data-url="/6302022/my/notifications/snooze" data-verb="PUT">
+    <svg class="svg-icon svg-icon--bell" aria-hidden="true"><use href="/static/assets/916f610ab872272a8f7d20df.svg#bell"></use></svg>Shhh…<kbd class="keyboard-shortcut">Z</kbd>
+  </button>
+  <button class="focus-mode__toggle--on" name="button" type="button" aria-label="Resume notifications" data-behavior="toggle_notifications" data-url="/6302022/my/notifications/toggle" data-verb="DELETE">
+    <svg class="svg-icon svg-icon--bell-off-solid" aria-hidden="true"><use href="/static/assets/52ae10cdcdebc5c0c28ff518.svg#bell-off-solid"></use></svg>Silencing notifications<kbd class="keyboard-shortcut">Z</kbd>
+  </button>
+</div>
+
+  </div>
+
+  <aside class="sidebar" role="presentation" inert="" data-sidebar-target="pane">
+    <nav class="sidebar__top-bar" role="presentation">
+      <a class="sidebar__back btn btn--icon btn--sm btn--ghost" data-turbo-frame="sidebar_frame" data-action="sidebar#back" aria-label="Back" href="/6302022/my/sidebar/inbox"><svg class="svg-icon svg-icon--arrow-left" aria-hidden="true"><use href="/static/assets/252e305f07e9de4cef5b0063.svg#arrow-left"></use></svg></a>
+
+<button class="sidebar__close btn btn--icon btn--sm btn--ghost" data-action="sidebar#close" aria-label="Close sidebar"><svg class="svg-icon svg-icon--x" aria-hidden="true"><use href="/static/assets/675483664aff3de45e409c28.svg#x"></use></svg></button>
+
+    </nav>
+
+    <turbo-frame refresh="morph" class="sidebar__frame" data-sidebar-target="frame" data-controller="prefetched-frame" data-prefetched-frame-url-value="/6302022/my/sidebar/inbox" data-action="
+              turbo:frame-load-&gt;sidebar#persistAndFocusFrame
+              turbo:before-fetch-response-&gt;sidebar#closeOnFailedFetch
+              turbo:before-frame-render-&gt;sidebar#preserveOptimisticRows" id="sidebar_frame" target="_top">
+      <div class="sidebar__panel sidebar__skeleton-panel skeleton--pulse" aria-hidden="true">
+  <div class="sidebar__panel-scrollable">
+    <nav class="sidebar__circles" aria-hidden="true">
+  <header class="sidebar__circles-header">
+    <h3 class="sidebar__circles-heading">Ping someone</h3>
+  </header>
+
+  <div>
+    <div class="sidebar__circles-avatars hide-scrollbar">
+      <div class="sidebar__circle sidebar__circle--new">
+        <span class="sidebar__circle-new-icon"><svg class="svg-icon svg-icon--plus-solid" aria-hidden="true"><use href="/static/assets/9aa9354221eb8e79173503de.svg#plus-solid"></use></svg></span>
+        <span class="sidebar__circle-name">Ping</span>
+      </div>
+
+        <div class="sidebar__circle">
+          <span class="skeleton skeleton--circle sidebar__skeleton-circle sidebar__skeleton-circle--avatar"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--circle-name"></span>
+        </div>
+        <div class="sidebar__circle">
+          <span class="skeleton skeleton--circle sidebar__skeleton-circle sidebar__skeleton-circle--avatar"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--circle-name"></span>
+        </div>
+        <div class="sidebar__circle">
+          <span class="skeleton skeleton--circle sidebar__skeleton-circle sidebar__skeleton-circle--avatar"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--circle-name"></span>
+        </div>
+        <div class="sidebar__circle">
+          <span class="skeleton skeleton--circle sidebar__skeleton-circle sidebar__skeleton-circle--avatar"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--circle-name"></span>
+        </div>
+        <div class="sidebar__circle">
+          <span class="skeleton skeleton--circle sidebar__skeleton-circle sidebar__skeleton-circle--avatar"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--circle-name"></span>
+        </div>
+        <div class="sidebar__circle">
+          <span class="skeleton skeleton--circle sidebar__skeleton-circle sidebar__skeleton-circle--avatar"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--circle-name"></span>
+        </div>
+    </div>
+  </div>
+</nav>
+
+
+    <div class="sidebar__list">
+      <div class="sidebar__skeleton-readings" aria-hidden="true">
+  <div class="sidebar__skeleton-list-header"></div>
+
+    <div class="reading list-grid sidebar__skeleton-reading">
+      <div class="list-grid">
+        <span class="skeleton skeleton--circle reading__avatar sidebar__skeleton-circle sidebar__skeleton-circle--reading-avatar"></span>
+        <div class="reading__content">
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--title"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--body"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--meta"></span>
+        </div>
+      </div>
+    </div>
+    <div class="reading list-grid sidebar__skeleton-reading">
+      <div class="list-grid">
+        <span class="skeleton skeleton--circle reading__avatar sidebar__skeleton-circle sidebar__skeleton-circle--reading-avatar"></span>
+        <div class="reading__content">
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--title"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--body"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--meta"></span>
+        </div>
+      </div>
+    </div>
+    <div class="reading list-grid sidebar__skeleton-reading">
+      <div class="list-grid">
+        <span class="skeleton skeleton--circle reading__avatar sidebar__skeleton-circle sidebar__skeleton-circle--reading-avatar"></span>
+        <div class="reading__content">
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--title"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--body"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--meta"></span>
+        </div>
+      </div>
+    </div>
+    <div class="reading list-grid sidebar__skeleton-reading">
+      <div class="list-grid">
+        <span class="skeleton skeleton--circle reading__avatar sidebar__skeleton-circle sidebar__skeleton-circle--reading-avatar"></span>
+        <div class="reading__content">
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--title"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--body"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--meta"></span>
+        </div>
+      </div>
+    </div>
+    <div class="reading list-grid sidebar__skeleton-reading">
+      <div class="list-grid">
+        <span class="skeleton skeleton--circle reading__avatar sidebar__skeleton-circle sidebar__skeleton-circle--reading-avatar"></span>
+        <div class="reading__content">
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--title"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--body"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--meta"></span>
+        </div>
+      </div>
+    </div>
+    <div class="reading list-grid sidebar__skeleton-reading">
+      <div class="list-grid">
+        <span class="skeleton skeleton--circle reading__avatar sidebar__skeleton-circle sidebar__skeleton-circle--reading-avatar"></span>
+        <div class="reading__content">
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--title"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--body"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--meta"></span>
+        </div>
+      </div>
+    </div>
+    <div class="reading list-grid sidebar__skeleton-reading">
+      <div class="list-grid">
+        <span class="skeleton skeleton--circle reading__avatar sidebar__skeleton-circle sidebar__skeleton-circle--reading-avatar"></span>
+        <div class="reading__content">
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--title"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--body"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--meta"></span>
+        </div>
+      </div>
+    </div>
+    <div class="reading list-grid sidebar__skeleton-reading">
+      <div class="list-grid">
+        <span class="skeleton skeleton--circle reading__avatar sidebar__skeleton-circle sidebar__skeleton-circle--reading-avatar"></span>
+        <div class="reading__content">
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--title"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--body"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--meta"></span>
+        </div>
+      </div>
+    </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+</turbo-frame>
+    <nav class="sidebar__bar" role="presentation">
+      <a class="sidebar__back btn btn--icon btn--sm btn--ghost" tabindex="-1" data-turbo-frame="sidebar_frame" data-action="sidebar#back" aria-label="Back" href="/6302022/my/sidebar/inbox"><svg class="svg-icon svg-icon--arrow-left" aria-hidden="true"><use href="/static/assets/252e305f07e9de4cef5b0063.svg#arrow-left"></use></svg></a>
+
+<button class="sidebar__close btn btn--icon btn--sm btn--ghost" tabindex="-1" data-action="sidebar#close" aria-label="Close sidebar"><svg class="svg-icon svg-icon--x" aria-hidden="true"><use href="/static/assets/675483664aff3de45e409c28.svg#x"></use></svg></button>
+
+    </nav>
+  </aside>
+
+  <turbo-frame refresh="morph" data-sidebar-target="reloadable" id="sidebar_badge" src="/6302022/my/sidebar/badge" complete="">
+  
+<button class="sidebar-badge sidebar-badge--notifications" aria-label="Pings and Notifications" data-action="sidebar#toggleOrReturn" data-sidebar-path-param="/6302022/my/sidebar/inbox" data-sidebar-focus-list-param="true">
+    <span class="sidebar-badge__unreads">
+        <span class="sidebar-badge__count">
+            <span class="sidebar-badge__label sidebar-badge__label--notifications-prefix hidden@xl-down">Pings +</span>
+          <span class="unread-badge">3</span>
+          <span class="sidebar-badge__label sidebar-badge__label--notifications hidden@lg-down">New<span class="sidebar-badge__suffix hidden@xl-down"> for you</span></span>
+        </span>
+
+    </span>
+
+  <span class="sidebar-badge__empty">
+    <svg class="svg-icon svg-icon--bell-solid tray__nav-icon sidebar-badge__icon sidebar-badge__icon--on" aria-hidden="true"><use href="/static/assets/6695da332c6041d6e662fa08.svg#bell-solid"></use></svg>
+    <svg class="svg-icon svg-icon--bell-off-solid tray__nav-icon sidebar-badge__icon sidebar-badge__icon--off" aria-hidden="true"><use href="/static/assets/52ae10cdcdebc5c0c28ff518.svg#bell-off-solid"></use></svg>
+    <span class="sidebar-badge__empty-text hidden@md-down">
+      <span class="tray__nav-prefix">Pings + </span>Notifications
+    </span>
+  </span>
+
+  <kbd class="keyboard-shortcut">S</kbd>
+</button>
+</turbo-frame>
+</div>
+
+  </div>
+
+  
+
+
+  <div id="live_region" class="sr-only" data-controller="live-region" data-turbo-permanent="true" data-action="announce@window-&gt;live-region#announce turbo:before-cache@document-&gt;live-region#clear"><span data-live-region-target="polite" aria-live="polite" aria-relevant="additions"></span><span data-live-region-target="assertive" aria-live="assertive" aria-relevant="additions"></span></div>
+
+
+<div aria-hidden="true" data-lexxy-style-resolver="" style="contain: strict; position: fixed; top: 0px; left: 0px; visibility: hidden; pointer-events: none; width: 0px; height: 0px;"></div><script defer src="/static/local.js"></script></body></html>

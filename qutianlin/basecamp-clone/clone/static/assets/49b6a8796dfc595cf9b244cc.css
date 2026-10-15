@@ -1,0 +1,26 @@
+.button {
+  align-self: flex-start;
+  background: var(--color-white);
+  border-radius: 1.3em;
+  color: var(--color-theme);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  gap: 0.4em;
+  letter-spacing: normal;
+  padding: 0.6em 1.1em 0.55em 1.1em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.button span {
+  display: inline-flex;
+}
+
+
+
+.button--theme {
+  background: var(--color-theme);
+  color: var(--color-white);
+}

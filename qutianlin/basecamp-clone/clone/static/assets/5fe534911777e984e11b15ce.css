@@ -1,0 +1,115 @@
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  padding-inline: var(--space-medium);
+  position: relative;
+  z-index: 1;
+}
+
+.testimonials--card {
+  padding-inline: var(--space-medium);
+}
+
+.testimonials__card {
+  margin-inline: auto;
+  padding-bottom: 1.75em;
+  width: min(100%, 26em);
+}
+
+.testimonials__container {
+  column-gap: var(--space-medium);
+  column-width: 10.5em;
+  margin-bottom: calc(-1 * var(--space-medium));
+}
+
+.testimonials__container--contained {
+  margin-inline: auto;
+  width: min(100%, 40em);
+}
+
+.testimonials__testimonial {
+  break-inside: avoid;
+  display: flex;
+  padding-bottom: var(--space-medium);
+}
+
+.testimonials__testimonial blockquote {
+  background: var(--color-white);
+  box-shadow: var(--box-shadow-lifted);
+  color: var(--color-ink);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  overflow: clip;
+  padding: var(--space-medium);
+  position: relative;
+  text-align: left;
+  text-wrap: pretty;
+  width: 100%;
+}
+
+.testimonials__testimonial blockquote q {
+  font-size: var(--font-size-xx-small);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height-tight);
+  margin-bottom: -0.29em;
+  margin-top: -0.29em;
+  position: relative;
+}
+
+.testimonials__testimonial blockquote q:before {
+  content: '“';
+  position: absolute;
+  right: 100%;
+  top: 0;
+}
+
+.testimonials__testimonial blockquote q:after {
+  content: '”';
+  display: inline;
+}
+
+.testimonials__testimonial blockquote q mark {
+  font-weight: 500;
+}
+
+.testimonials__testimonial blockquote cite {
+  font-size: var(--font-size-xxx-small);
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height-tight);
+  margin-bottom: -0.29em;
+  margin-top: -0.29em;
+}
+
+@media(min-width: 64em) {
+
+  .testimonials {
+    padding-inline: var(--space-x-large);
+  }
+
+  .testimonials--card {
+    padding-inline: var(--space-x-large);
+  }
+
+  .testimonials__card {
+    padding-bottom: 2.25em;
+    padding-inline: 0.75em;
+    width: min(100%, 40em);
+  }
+
+}
+
+@media(prefers-color-scheme: dark) {
+
+  .testimonials__testimonial blockquote {
+    background: var(--color-ink-3);
+  }
+
+}
+
+.dark .testimonials__testimonial blockquote {
+  background: var(--color-ink-3);
+}

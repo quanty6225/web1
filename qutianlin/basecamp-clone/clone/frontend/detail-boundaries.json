@@ -1,0 +1,1010 @@
+{
+  "/6302022/buckets/49234166/card_tables/cards/10398823249": {
+    "source_url": "https://app.basecamp.com/6302022/buckets/49234166/card_tables/cards/10398823249",
+    "local_url": "/6302022/buckets/49234166/card_tables/cards/10398823249",
+    "discovered_from": "/6302022/buckets/49234166/card_tables/10398823040",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/6302022/buckets/49234166/todos/10398823624": {
+    "source_url": "https://app.basecamp.com/6302022/buckets/49234166/todos/10398823624",
+    "local_url": "/6302022/buckets/49234166/todos/10398823624",
+    "discovered_from": "/6302022/buckets/49234166/todolists/10398823593",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1057-using-agents": {
+    "source_url": "https://5.basecamp-help.com/article/1057-using-agents",
+    "local_url": "/help/5/article/1057-using-agents",
+    "discovered_from": "/help/5/category/1145-apps-integrations",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1103-help-us-help-you": {
+    "source_url": "https://5.basecamp-help.com/article/1103-help-us-help-you",
+    "local_url": "/help/5/article/1103-help-us-help-you",
+    "discovered_from": "/help/5/collection/1034-help-docs",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1104-create-a-har-file-for-performance-issues": {
+    "source_url": "https://5.basecamp-help.com/article/1104-create-a-har-file-for-performance-issues",
+    "local_url": "/help/5/article/1104-create-a-har-file-for-performance-issues",
+    "discovered_from": "/help/5/category/1042-troubleshooting-faqs",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1167-how-secure-is-basecamp": {
+    "source_url": "https://5.basecamp-help.com/article/1167-how-secure-is-basecamp",
+    "local_url": "/help/5/article/1167-how-secure-is-basecamp",
+    "discovered_from": "/help/5/category/1042-troubleshooting-faqs",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1166-using-basecamp-in-other-languages": {
+    "source_url": "https://5.basecamp-help.com/article/1166-using-basecamp-in-other-languages",
+    "local_url": "/help/5/article/1166-using-basecamp-in-other-languages",
+    "discovered_from": "/help/5/category/1042-troubleshooting-faqs",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/179-how-much-does-basecamp-cost-is-there-a-free-plan-or-are-there-any-special-rates": {
+    "source_url": "https://2.basecamp-help.com/article/179-how-much-does-basecamp-cost-is-there-a-free-plan-or-are-there-any-special-rates",
+    "local_url": "/help/2/article/179-how-much-does-basecamp-cost-is-there-a-free-plan-or-are-there-any-special-rates",
+    "discovered_from": "/help/2/category/393-faqs",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/180-how-can-i-reset-my-password-or-help-someone-else-reset-theirs": {
+    "source_url": "https://2.basecamp-help.com/article/180-how-can-i-reset-my-password-or-help-someone-else-reset-theirs",
+    "local_url": "/help/2/article/180-how-can-i-reset-my-password-or-help-someone-else-reset-theirs",
+    "discovered_from": "/help/2/category/393-faqs",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/181-can-i-change-the-calendar-to-start-on-mondays": {
+    "source_url": "https://2.basecamp-help.com/article/181-can-i-change-the-calendar-to-start-on-mondays",
+    "local_url": "/help/2/article/181-can-i-change-the-calendar-to-start-on-mondays",
+    "discovered_from": "/help/2/category/393-faqs",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/182-what-are-the-technical-requirements-for-using-basecamp": {
+    "source_url": "https://2.basecamp-help.com/article/182-what-are-the-technical-requirements-for-using-basecamp",
+    "local_url": "/help/2/article/182-what-are-the-technical-requirements-for-using-basecamp",
+    "discovered_from": "/help/2/category/393-faqs",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/183-can-i-create-templates-for-recurring-projects": {
+    "source_url": "https://2.basecamp-help.com/article/183-can-i-create-templates-for-recurring-projects",
+    "local_url": "/help/2/article/183-can-i-create-templates-for-recurring-projects",
+    "discovered_from": "/help/2/category/393-faqs",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/184-what-happens-when-my-trial-ends": {
+    "source_url": "https://2.basecamp-help.com/article/184-what-happens-when-my-trial-ends",
+    "local_url": "/help/2/article/184-what-happens-when-my-trial-ends",
+    "discovered_from": "/help/2/category/393-faqs",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/230-your-activity-and-assignments": {
+    "source_url": "https://2.basecamp-help.com/article/230-your-activity-and-assignments",
+    "local_url": "/help/2/article/230-your-activity-and-assignments",
+    "discovered_from": "/help/2/category/195-you",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/231-your-time-zone": {
+    "source_url": "https://2.basecamp-help.com/article/231-your-time-zone",
+    "local_url": "/help/2/article/231-your-time-zone",
+    "discovered_from": "/help/2/category/195-you",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/233-leave-an-account": {
+    "source_url": "https://2.basecamp-help.com/article/233-leave-an-account",
+    "local_url": "/help/2/article/233-leave-an-account",
+    "discovered_from": "/help/2/category/195-you",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/429-login-troubleshooting": {
+    "source_url": "https://2.basecamp-help.com/article/429-login-troubleshooting",
+    "local_url": "/help/2/article/429-login-troubleshooting",
+    "discovered_from": "/help/2/category/195-you",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/708-merging-separate-users-on-different-accounts": {
+    "source_url": "https://2.basecamp-help.com/article/708-merging-separate-users-on-different-accounts",
+    "local_url": "/help/2/article/708-merging-separate-users-on-different-accounts",
+    "discovered_from": "/help/2/category/195-you",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1155-out-of-office": {
+    "source_url": "https://5.basecamp-help.com/article/1155-out-of-office",
+    "local_url": "/help/5/article/1155-out-of-office",
+    "discovered_from": "/help/5/collection/1034-help-docs",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1178-my-assignments": {
+    "source_url": "https://5.basecamp-help.com/article/1178-my-assignments",
+    "local_url": "/help/5/article/1178-my-assignments",
+    "discovered_from": "/help/5/category/1153-personal-settings",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/400-customize-projects-screen": {
+    "source_url": "https://2.basecamp-help.com/article/400-customize-projects-screen",
+    "local_url": "/help/2/article/400-customize-projects-screen",
+    "discovered_from": "/help/2/category/394-video-tips-tricks",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/401-email-content": {
+    "source_url": "https://2.basecamp-help.com/article/401-email-content",
+    "local_url": "/help/2/article/401-email-content",
+    "discovered_from": "/help/2/category/394-video-tips-tricks",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/402-groups": {
+    "source_url": "https://2.basecamp-help.com/article/402-groups",
+    "local_url": "/help/2/article/402-groups",
+    "discovered_from": "/help/2/category/394-video-tips-tricks",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/403-loop-in": {
+    "source_url": "https://2.basecamp-help.com/article/403-loop-in",
+    "local_url": "/help/2/article/403-loop-in",
+    "discovered_from": "/help/2/category/394-video-tips-tricks",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/404-lump-sum-payments": {
+    "source_url": "https://2.basecamp-help.com/article/404-lump-sum-payments",
+    "local_url": "/help/2/article/404-lump-sum-payments",
+    "discovered_from": "/help/2/category/394-video-tips-tricks",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/405-move-items": {
+    "source_url": "https://2.basecamp-help.com/article/405-move-items",
+    "local_url": "/help/2/article/405-move-items",
+    "discovered_from": "/help/2/category/394-video-tips-tricks",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/406-organizing-to-dos": {
+    "source_url": "https://2.basecamp-help.com/article/406-organizing-to-dos",
+    "local_url": "/help/2/article/406-organizing-to-dos",
+    "discovered_from": "/help/2/category/394-video-tips-tricks",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/408-subscribing-to-your-calendars": {
+    "source_url": "https://2.basecamp-help.com/article/408-subscribing-to-your-calendars",
+    "local_url": "/help/2/article/408-subscribing-to-your-calendars",
+    "discovered_from": "/help/2/category/394-video-tips-tricks",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/409-who-can-see-what": {
+    "source_url": "https://2.basecamp-help.com/article/409-who-can-see-what",
+    "local_url": "/help/2/article/409-who-can-see-what",
+    "discovered_from": "/help/2/category/394-video-tips-tricks",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/classic/article/586-ftp": {
+    "source_url": "https://classic.basecamp-help.com/article/586-ftp",
+    "local_url": "/help/classic/article/586-ftp",
+    "discovered_from": "/help/classic/category/595-project-tools",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/classic/article/591-time-tracking": {
+    "source_url": "https://classic.basecamp-help.com/article/591-time-tracking",
+    "local_url": "/help/classic/article/591-time-tracking",
+    "discovered_from": "/help/classic/category/595-project-tools",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/classic/article/587-api-integrations": {
+    "source_url": "https://classic.basecamp-help.com/article/587-api-integrations",
+    "local_url": "/help/classic/article/587-api-integrations",
+    "discovered_from": "/help/classic/category/595-project-tools",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/classic/article/659-writeboards": {
+    "source_url": "https://classic.basecamp-help.com/article/659-writeboards",
+    "local_url": "/help/classic/article/659-writeboards",
+    "discovered_from": "/help/classic/category/595-project-tools",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1133-archiving-trash-and-restoring": {
+    "source_url": "https://5.basecamp-help.com/article/1133-archiving-trash-and-restoring",
+    "local_url": "/help/5/article/1133-archiving-trash-and-restoring",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1134-moving-copying": {
+    "source_url": "https://5.basecamp-help.com/article/1134-moving-copying",
+    "local_url": "/help/5/article/1134-moving-copying",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1085-subscribing-and-unsubscribing-from-discussions": {
+    "source_url": "https://5.basecamp-help.com/article/1085-subscribing-and-unsubscribing-from-discussions",
+    "local_url": "/help/5/article/1085-subscribing-and-unsubscribing-from-discussions",
+    "discovered_from": "/help/5/category/1047-working-with-your-team",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1081-working-with-clients": {
+    "source_url": "https://5.basecamp-help.com/article/1081-working-with-clients",
+    "local_url": "/help/5/article/1081-working-with-clients",
+    "discovered_from": "/help/5/category/1047-working-with-your-team",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1097-searching": {
+    "source_url": "https://5.basecamp-help.com/article/1097-searching",
+    "local_url": "/help/5/article/1097-searching",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/239-iphone-and-ipad-apps": {
+    "source_url": "https://2.basecamp-help.com/article/239-iphone-and-ipad-apps",
+    "local_url": "/help/2/article/239-iphone-and-ipad-apps",
+    "discovered_from": "/help/2/category/196-going-mobile",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/classic/article/560-templates": {
+    "source_url": "https://classic.basecamp-help.com/article/560-templates",
+    "local_url": "/help/classic/article/560-templates",
+    "discovered_from": "/help/classic/category/544-projects",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/classic/article/545-archiving-deleting": {
+    "source_url": "https://classic.basecamp-help.com/article/545-archiving-deleting",
+    "local_url": "/help/classic/article/545-archiving-deleting",
+    "discovered_from": "/help/classic/category/544-projects",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1072-the-basecamp-way-to-work": {
+    "source_url": "https://5.basecamp-help.com/article/1072-the-basecamp-way-to-work",
+    "local_url": "/help/5/article/1072-the-basecamp-way-to-work",
+    "discovered_from": "/help/5/category/1053-getting-started",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/245-picking-a-plan-when-your-trial-ends": {
+    "source_url": "https://2.basecamp-help.com/article/245-picking-a-plan-when-your-trial-ends",
+    "local_url": "/help/2/article/245-picking-a-plan-when-your-trial-ends",
+    "discovered_from": "/help/2/category/197-account-billing",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/246-switching-from-basecamp-classic": {
+    "source_url": "https://2.basecamp-help.com/article/246-switching-from-basecamp-classic",
+    "local_url": "/help/2/article/246-switching-from-basecamp-classic",
+    "discovered_from": "/help/2/category/197-account-billing",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/247-exporting-account-data": {
+    "source_url": "https://2.basecamp-help.com/article/247-exporting-account-data",
+    "local_url": "/help/2/article/247-exporting-account-data",
+    "discovered_from": "/help/2/category/197-account-billing",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/248-plan-limits": {
+    "source_url": "https://2.basecamp-help.com/article/248-plan-limits",
+    "local_url": "/help/2/article/248-plan-limits",
+    "discovered_from": "/help/2/category/197-account-billing",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/249-browser-requirements": {
+    "source_url": "https://2.basecamp-help.com/article/249-browser-requirements",
+    "local_url": "/help/2/article/249-browser-requirements",
+    "discovered_from": "/help/2/category/197-account-billing",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/250-basecamp-security": {
+    "source_url": "https://2.basecamp-help.com/article/250-basecamp-security",
+    "local_url": "/help/2/article/250-basecamp-security",
+    "discovered_from": "/help/2/category/197-account-billing",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/251-adding-storage": {
+    "source_url": "https://2.basecamp-help.com/article/251-adding-storage",
+    "local_url": "/help/2/article/251-adding-storage",
+    "discovered_from": "/help/2/category/197-account-billing",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/252-annual-subscription-plan": {
+    "source_url": "https://2.basecamp-help.com/article/252-annual-subscription-plan",
+    "local_url": "/help/2/article/252-annual-subscription-plan",
+    "discovered_from": "/help/2/category/197-account-billing",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/411-account-ownership": {
+    "source_url": "https://2.basecamp-help.com/article/411-account-ownership",
+    "local_url": "/help/2/article/411-account-ownership",
+    "discovered_from": "/help/2/category/197-account-billing",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1181-adding-or-removing-administrators": {
+    "source_url": "https://5.basecamp-help.com/article/1181-adding-or-removing-administrators",
+    "local_url": "/help/5/article/1181-adding-or-removing-administrators",
+    "discovered_from": "/help/5/category/1043-account-billing",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1084-using-basecamp-as-a-client": {
+    "source_url": "https://5.basecamp-help.com/article/1084-using-basecamp-as-a-client",
+    "local_url": "/help/5/article/1084-using-basecamp-as-a-client",
+    "discovered_from": "/help/5/category/1047-working-with-your-team",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1083-working-with-multiple-client-companies-in-one-project": {
+    "source_url": "https://5.basecamp-help.com/article/1083-working-with-multiple-client-companies-in-one-project",
+    "local_url": "/help/5/article/1083-working-with-multiple-client-companies-in-one-project",
+    "discovered_from": "/help/5/category/1047-working-with-your-team",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1174-hq-and-teams": {
+    "source_url": "https://5.basecamp-help.com/article/1174-hq-and-teams",
+    "local_url": "/help/5/article/1174-hq-and-teams",
+    "discovered_from": "/help/5/category/1047-working-with-your-team",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1092-companies": {
+    "source_url": "https://5.basecamp-help.com/article/1092-companies",
+    "local_url": "/help/5/article/1092-companies",
+    "discovered_from": "/help/5/category/1047-working-with-your-team",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1175-training-your-team": {
+    "source_url": "https://5.basecamp-help.com/article/1175-training-your-team",
+    "local_url": "/help/5/article/1175-training-your-team",
+    "discovered_from": "/help/5/category/1047-working-with-your-team",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1074-pings": {
+    "source_url": "https://5.basecamp-help.com/article/1074-pings",
+    "local_url": "/help/5/article/1074-pings",
+    "discovered_from": "/help/5/category/1047-working-with-your-team",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1086-mentions": {
+    "source_url": "https://5.basecamp-help.com/article/1086-mentions",
+    "local_url": "/help/5/article/1086-mentions",
+    "discovered_from": "/help/5/category/1047-working-with-your-team",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1093-removing-people-from-projects-and-your-account": {
+    "source_url": "https://5.basecamp-help.com/article/1093-removing-people-from-projects-and-your-account",
+    "local_url": "/help/5/article/1093-removing-people-from-projects-and-your-account",
+    "discovered_from": "/help/5/category/1047-working-with-your-team",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1142-account-owners": {
+    "source_url": "https://5.basecamp-help.com/article/1142-account-owners",
+    "local_url": "/help/5/article/1142-account-owners",
+    "discovered_from": "/help/5/category/1043-account-billing",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1140-admin-pro-pack": {
+    "source_url": "https://5.basecamp-help.com/article/1140-admin-pro-pack",
+    "local_url": "/help/5/article/1140-admin-pro-pack",
+    "discovered_from": "/help/5/category/1043-account-billing",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1138-manage-storage": {
+    "source_url": "https://5.basecamp-help.com/article/1138-manage-storage",
+    "local_url": "/help/5/article/1138-manage-storage",
+    "discovered_from": "/help/5/category/1043-account-billing",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1139-export-your-basecamp-data": {
+    "source_url": "https://5.basecamp-help.com/article/1139-export-your-basecamp-data",
+    "local_url": "/help/5/article/1139-export-your-basecamp-data",
+    "discovered_from": "/help/5/category/1043-account-billing",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1090-renaming-your-account": {
+    "source_url": "https://5.basecamp-help.com/article/1090-renaming-your-account",
+    "local_url": "/help/5/article/1090-renaming-your-account",
+    "discovered_from": "/help/5/category/1043-account-billing",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1143-switching-between-separate-accounts": {
+    "source_url": "https://5.basecamp-help.com/article/1143-switching-between-separate-accounts",
+    "local_url": "/help/5/article/1143-switching-between-separate-accounts",
+    "discovered_from": "/help/5/category/1043-account-billing",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1182-merging-people": {
+    "source_url": "https://5.basecamp-help.com/article/1182-merging-people",
+    "local_url": "/help/5/article/1182-merging-people",
+    "discovered_from": "/help/5/category/1043-account-billing",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/203-notifications": {
+    "source_url": "https://2.basecamp-help.com/article/203-notifications",
+    "local_url": "/help/2/article/203-notifications",
+    "discovered_from": "/help/2/category/193-projects",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/204-discussions": {
+    "source_url": "https://2.basecamp-help.com/article/204-discussions",
+    "local_url": "/help/2/article/204-discussions",
+    "discovered_from": "/help/2/category/193-projects",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/205-to-do-lists": {
+    "source_url": "https://2.basecamp-help.com/article/205-to-do-lists",
+    "local_url": "/help/2/article/205-to-do-lists",
+    "discovered_from": "/help/2/category/193-projects",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/206-moving-and-copying": {
+    "source_url": "https://2.basecamp-help.com/article/206-moving-and-copying",
+    "local_url": "/help/2/article/206-moving-and-copying",
+    "discovered_from": "/help/2/category/193-projects",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/207-events": {
+    "source_url": "https://2.basecamp-help.com/article/207-events",
+    "local_url": "/help/2/article/207-events",
+    "discovered_from": "/help/2/category/193-projects",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/208-files": {
+    "source_url": "https://2.basecamp-help.com/article/208-files",
+    "local_url": "/help/2/article/208-files",
+    "discovered_from": "/help/2/category/193-projects",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/209-file-labels": {
+    "source_url": "https://2.basecamp-help.com/article/209-file-labels",
+    "local_url": "/help/2/article/209-file-labels",
+    "discovered_from": "/help/2/category/193-projects",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/210-google-docs": {
+    "source_url": "https://2.basecamp-help.com/article/210-google-docs",
+    "local_url": "/help/2/article/210-google-docs",
+    "discovered_from": "/help/2/category/193-projects",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/211-adding-items-through-email": {
+    "source_url": "https://2.basecamp-help.com/article/211-adding-items-through-email",
+    "local_url": "/help/2/article/211-adding-items-through-email",
+    "discovered_from": "/help/2/category/193-projects",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/213-looping-non-users-into-a-discussion": {
+    "source_url": "https://2.basecamp-help.com/article/213-looping-non-users-into-a-discussion",
+    "local_url": "/help/2/article/213-looping-non-users-into-a-discussion",
+    "discovered_from": "/help/2/category/193-projects",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/215-searching-in": {
+    "source_url": "https://2.basecamp-help.com/article/215-searching-in",
+    "local_url": "/help/2/article/215-searching-in",
+    "discovered_from": "/help/2/category/193-projects",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/216-forwarded-emails": {
+    "source_url": "https://2.basecamp-help.com/article/216-forwarded-emails",
+    "local_url": "/help/2/article/216-forwarded-emails",
+    "discovered_from": "/help/2/category/193-projects",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/217-templates": {
+    "source_url": "https://2.basecamp-help.com/article/217-templates",
+    "local_url": "/help/2/article/217-templates",
+    "discovered_from": "/help/2/category/193-projects",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/classic/article/528-removing-people": {
+    "source_url": "https://classic.basecamp-help.com/article/528-removing-people",
+    "local_url": "/help/classic/article/528-removing-people",
+    "discovered_from": "/help/classic/category/547-people-companies",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/classic/article/570-companies": {
+    "source_url": "https://classic.basecamp-help.com/article/570-companies",
+    "local_url": "/help/classic/article/570-companies",
+    "discovered_from": "/help/classic/category/547-people-companies",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/classic/article/707-merging-separate-users-on-different-accounts": {
+    "source_url": "https://classic.basecamp-help.com/article/707-merging-separate-users-on-different-accounts",
+    "local_url": "/help/classic/article/707-merging-separate-users-on-different-accounts",
+    "discovered_from": "/help/classic/category/547-people-companies",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/191-granting-admin-powers": {
+    "source_url": "https://2.basecamp-help.com/article/191-granting-admin-powers",
+    "local_url": "/help/2/article/191-granting-admin-powers",
+    "discovered_from": "/help/2/category/185-working-with-people",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/192-activity-and-assignments": {
+    "source_url": "https://2.basecamp-help.com/article/192-activity-and-assignments",
+    "local_url": "/help/2/article/192-activity-and-assignments",
+    "discovered_from": "/help/2/category/185-working-with-people",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1063-card-tables": {
+    "source_url": "https://5.basecamp-help.com/article/1063-card-tables",
+    "local_url": "/help/5/article/1063-card-tables",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1052-chat": {
+    "source_url": "https://5.basecamp-help.com/article/1052-chat",
+    "local_url": "/help/5/article/1052-chat",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1120-calendar": {
+    "source_url": "https://5.basecamp-help.com/article/1120-calendar",
+    "local_url": "/help/5/article/1120-calendar",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1051-automatic-check-ins": {
+    "source_url": "https://5.basecamp-help.com/article/1051-automatic-check-ins",
+    "local_url": "/help/5/article/1051-automatic-check-ins",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1100-email-forwards": {
+    "source_url": "https://5.basecamp-help.com/article/1100-email-forwards",
+    "local_url": "/help/5/article/1100-email-forwards",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1076-external-links": {
+    "source_url": "https://5.basecamp-help.com/article/1076-external-links",
+    "local_url": "/help/5/article/1076-external-links",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1091-formatting-text-in-basecamp": {
+    "source_url": "https://5.basecamp-help.com/article/1091-formatting-text-in-basecamp",
+    "local_url": "/help/5/article/1091-formatting-text-in-basecamp",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1130-drafts-scheduled-posts": {
+    "source_url": "https://5.basecamp-help.com/article/1130-drafts-scheduled-posts",
+    "local_url": "/help/5/article/1130-drafts-scheduled-posts",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1099-boosts": {
+    "source_url": "https://5.basecamp-help.com/article/1099-boosts",
+    "local_url": "/help/5/article/1099-boosts",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1096-references-and-links": {
+    "source_url": "https://5.basecamp-help.com/article/1096-references-and-links",
+    "local_url": "/help/5/article/1096-references-and-links",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1098-public-links": {
+    "source_url": "https://5.basecamp-help.com/article/1098-public-links",
+    "local_url": "/help/5/article/1098-public-links",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1135-printing": {
+    "source_url": "https://5.basecamp-help.com/article/1135-printing",
+    "local_url": "/help/5/article/1135-printing",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1149-my-bar": {
+    "source_url": "https://5.basecamp-help.com/article/1149-my-bar",
+    "local_url": "/help/5/article/1149-my-bar",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1150-sidebar": {
+    "source_url": "https://5.basecamp-help.com/article/1150-sidebar",
+    "local_url": "/help/5/article/1150-sidebar",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1108-bookmarks": {
+    "source_url": "https://5.basecamp-help.com/article/1108-bookmarks",
+    "local_url": "/help/5/article/1108-bookmarks",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1109-bubble-up": {
+    "source_url": "https://5.basecamp-help.com/article/1109-bubble-up",
+    "local_url": "/help/5/article/1109-bubble-up",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1162-everything": {
+    "source_url": "https://5.basecamp-help.com/article/1162-everything",
+    "local_url": "/help/5/article/1162-everything",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1161-reports": {
+    "source_url": "https://5.basecamp-help.com/article/1161-reports",
+    "local_url": "/help/5/article/1161-reports",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1164-lineup": {
+    "source_url": "https://5.basecamp-help.com/article/1164-lineup",
+    "local_url": "/help/5/article/1164-lineup",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1163-timesheets": {
+    "source_url": "https://5.basecamp-help.com/article/1163-timesheets",
+    "local_url": "/help/5/article/1163-timesheets",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1078-hill-charts": {
+    "source_url": "https://5.basecamp-help.com/article/1078-hill-charts",
+    "local_url": "/help/5/article/1078-hill-charts",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/5/article/1080-the-needle": {
+    "source_url": "https://5.basecamp-help.com/article/1080-the-needle",
+    "local_url": "/help/5/article/1080-the-needle",
+    "discovered_from": "/help/5/category/1041-using-basecamp",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/224-sharing-your-calendars": {
+    "source_url": "https://2.basecamp-help.com/article/224-sharing-your-calendars",
+    "local_url": "/help/2/article/224-sharing-your-calendars",
+    "discovered_from": "/help/2/category/194-calendar",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/225-scheduling": {
+    "source_url": "https://2.basecamp-help.com/article/225-scheduling",
+    "local_url": "/help/2/article/225-scheduling",
+    "discovered_from": "/help/2/category/194-calendar",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/2/article/226-start-your-week-on-monday": {
+    "source_url": "https://2.basecamp-help.com/article/226-start-your-week-on-monday",
+    "local_url": "/help/2/article/226-start-your-week-on-monday",
+    "discovered_from": "/help/2/category/194-calendar",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/classic/article/524-exports": {
+    "source_url": "https://classic.basecamp-help.com/article/524-exports",
+    "local_url": "/help/classic/article/524-exports",
+    "discovered_from": "/help/classic/category/523-billing-account",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  },
+  "/help/classic/article/532-customization": {
+    "source_url": "https://classic.basecamp-help.com/article/532-customization",
+    "local_url": "/help/classic/article/532-customization",
+    "discovered_from": "/help/classic/category/523-billing-account",
+    "kind": "user-truncated",
+    "reason": "Item after the first five in its source collection.",
+    "in_scope": true,
+    "authorized_by": "clone.md BALANCED first-five detail rule"
+  }
+}

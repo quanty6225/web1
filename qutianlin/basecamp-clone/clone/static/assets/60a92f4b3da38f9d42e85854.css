@@ -1,0 +1,98 @@
+.codeblock {
+  display: grid;
+  font-size: var(--font-size);
+  gap: var(--space-medium);
+  letter-spacing: normal;
+  line-height: 1;
+  position: relative;
+}
+
+.codeblock__code {
+  background: oklch(var(--oklch-ink) / 0.05);
+  border: var(--line);
+  display: block;
+  font-size: var(--font-size-x-small);
+  line-height: var(--line-height);
+  overflow: clip;
+  position: relative;
+}
+
+.codeblock__code pre {
+  --mask-image: linear-gradient(
+    to right,
+    var(--color-ink) calc(100% - 2.6em),
+    transparent calc(100% - 1.7em)
+  );
+
+  display: block;
+  mask-image: var(--mask-image);
+  -webkit-mask-image: var(--mask-image);
+  -ms-overflow-style: none;
+  overflow-x: auto;
+  padding: 0.6em 2.6em 0.5em 1.05em;
+  scrollbar-width: none;
+}
+
+.codeblock__code pre::-webkit-scrollbar {
+  display: none;
+}
+
+.codeblock__code pre:focus-visible {
+  outline: 0;
+}
+
+.codeblock__code:has(pre:focus-visible) {
+  outline: max(2px, 0.1em) solid var(--color-ink);
+  outline-offset: max(2px, 0.1em);
+}
+
+.codeblock__code button {
+  color: var(--color-ink);
+  cursor: pointer;
+  display: grid;
+  height: 2.6em;
+  place-items: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2.6em;
+  z-index: 1;
+}
+
+.codeblock__code button svg {
+  grid-area: 1 / 1;
+  height: 1em;
+  overflow: visible;
+  transition:
+    opacity var(--transition),
+    transform var(--transition)
+  ;
+  will-change: transform;
+  width: 1em;
+}
+
+.codeblock__code button svg:last-child {
+  color: var(--color-green);
+}
+
+.codeblock__code button svg:last-child,
+.codeblock__code button[data-copied] svg:first-child {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.codeblock__code button[data-copied] svg:last-child {
+  opacity: 1;
+  transform: none;
+}
+
+.codeblock__code button[hidden] {
+  display: none;
+}
+
+.codeblock--wrap .codeblock__code pre {
+  --mask-image: none;
+
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}

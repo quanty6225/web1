@@ -1,0 +1,150 @@
+.field {
+  --field-fill: var(--color-white);
+  --field-fill-empty: oklch(var(--oklch-white) / 0.4);
+  --field-ring: 0 0 0 max(1px, 0.05em);
+
+  appearance: none;
+  background-color: var(--field-fill);
+  border: none;
+  border-radius: 0;
+  box-shadow:
+    var(--field-ring) transparent,
+    var(--box-shadow-strong)
+  ;
+  color: var(--color-ink);
+  display: block;
+  font-size: var(--font-size-x-small);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  padding: 0.7375em 1.1em 0.6625em;
+  transition:
+    background-color var(--transition),
+    box-shadow var(--transition)
+  ;
+  vertical-align: middle;
+}
+
+.field::placeholder,
+.field input::placeholder {
+  color: oklch(var(--oklch-ink) / 0.4);
+  transition: color var(--transition);
+}
+
+.field:focus::placeholder,
+.field input:focus::placeholder {
+  color: transparent;
+}
+
+.field:where(:placeholder-shown:not(:focus), :has(option[value=""]:checked), :has(input:placeholder-shown):not(:has(input:focus))) {
+  background-color: var(--field-fill-empty);
+  box-shadow:
+    var(--field-ring) transparent,
+    var(--box-shadow)
+  ;
+}
+
+.field:where(:focus) {
+  box-shadow:
+    var(--field-ring) var(--color-blue),
+    var(--box-shadow-strong)
+  ;
+}
+
+select.field {
+  background-image: url("/static/assets/7531e62481cefb93c664d990.svg");
+  background-position: right 1em center;
+  background-repeat: no-repeat;
+  background-size: 0.7em auto;
+}
+
+select.field:has(option[value=""]:checked) {
+  color: oklch(var(--oklch-ink) / 0.4);
+}
+
+textarea.field {
+  min-height: calc(8lh + 1.65em);
+  resize: vertical;
+}
+
+.field--group {
+  background: none;
+  box-shadow: none;
+  display: flex;
+  font-size: inherit;
+  isolation: isolate;
+  padding: 0;
+  position: relative;
+}
+
+.field--group::before {
+  background-color: var(--field-fill);
+  box-shadow:
+    var(--field-ring) transparent,
+    var(--box-shadow-strong)
+  ;
+  content: '';
+  font-size: var(--font-size-x-small);
+  inset: 0;
+  position: absolute;
+  transition:
+    background-color var(--transition),
+    box-shadow var(--transition)
+  ;
+  z-index: -1;
+}
+
+.field--group:where(:has(input:placeholder-shown):not(:has(input:focus)))::before {
+  background-color: var(--field-fill-empty);
+  box-shadow:
+    var(--field-ring) transparent,
+    var(--box-shadow)
+  ;
+}
+
+.field--group:where(:has(input:focus))::before {
+  box-shadow:
+    var(--field-ring) var(--color-blue),
+    var(--box-shadow-strong)
+  ;
+}
+
+.field--group input {
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: inherit;
+  flex: 1;
+  font-size: var(--font-size-x-small);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  min-width: 0;
+  padding: 0.7375em 1.1em 0.6625em;
+}
+
+.field--group .button {
+  --field-ring-width: max(1px, 0.045em);
+
+  margin: calc(-1 * var(--field-ring-width)) calc(-1 * var(--field-ring-width)) calc(-1 * var(--field-ring-width)) 0;
+}
+
+@media(prefers-color-scheme: dark) {
+
+  .field {
+    --field-fill: var(--color-ink-3);
+    --field-fill-empty: oklch(var(--oklch-ink-3) / 0.4);
+  }
+
+  select.field {
+    background-image: url("/static/assets/40292f38c7722e0b643a924e.svg");
+  }
+
+}
+
+.dark .field {
+  --field-fill: var(--color-ink-3);
+  --field-fill-empty: oklch(var(--oklch-ink-3) / 0.4);
+}
+
+.dark select.field {
+  background-image: url("/static/assets/40292f38c7722e0b643a924e.svg");
+}

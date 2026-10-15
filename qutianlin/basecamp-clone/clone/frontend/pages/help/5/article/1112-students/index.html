@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html class=" webkit chrome linux js"><head>
+    <meta charset="utf-8">
+    <title>Field Guide: Students - Basecamp 5 Help</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Welcome to Basecamp 👋 Projects, tasks, homework, schedules — whatever happened to the days when choosing what to watch on TV was the hardest to-do of the day? ">
+    <meta name="author" content="37signals">
+    <link rel="canonical" href="/help/5/article/1112-students">
+    
+        
+   
+            <meta name="twitter:card" content="summary">
+            <meta name="twitter:title" content="Field Guide: Students">
+            <meta name="twitter:description" content="Welcome to Basecamp 👋 Projects, tasks, homework, schedules — whatever happened to the days when choosing what to watch on TV was the hardest to-do of the day? ">
+
+
+    
+
+    
+        <link rel="stylesheet" href="/static/assets/119a3ea2b56a357a5c7d8449.css">
+    
+    <style>
+        body { background: #ffffff; }
+        .navbar .navbar-inner { background: #2c323d; }
+        .navbar .nav li a, 
+        .navbar .icon-private-w  { color: #c0c0c0; }
+        .navbar .brand, 
+        .navbar .nav li a:hover, 
+        .navbar .nav li a:focus, 
+        .navbar .nav .active a, 
+        .navbar .nav .active a:hover, 
+        .navbar .nav .active a:focus  { color: #ffffff; }
+        .navbar a:hover .icon-private-w, 
+        .navbar a:focus .icon-private-w, 
+        .navbar .active a .icon-private-w, 
+        .navbar .active a:hover .icon-private-w, 
+        .navbar .active a:focus .icon-private-w { color: #ffffff; }
+        #serp-dd .result a:hover,
+        #serp-dd .result > li.active,
+        #fullArticle strong a,
+        #fullArticle a strong,
+        .collection a,
+        .contentWrapper a,
+        .most-pop-articles .popArticles a,
+        .most-pop-articles .popArticles a:hover span,
+        .category-list .category .article-count,
+        .category-list .category:hover .article-count { color: #4381b5; }
+        #fullArticle, 
+        #fullArticle p, 
+        #fullArticle ul, 
+        #fullArticle ol, 
+        #fullArticle li, 
+        #fullArticle div, 
+        #fullArticle blockquote, 
+        #fullArticle dd, 
+        #fullArticle table { color:#585858; }
+    </style>
+    
+        <link rel="stylesheet" href="/static/assets/bdc162285a0fa2eec298ee30.css">
+    
+    <link rel="apple-touch-icon-precomposed" href="/external?target=https%3A%2F%2Fd33v4339jhl8k0.cloudfront.net%2Fdocs%2Fassets%2F59de6bbc2c7d3a40f0ed605f%2Fimages%2F6a31cd3d2db17b93928f985e%2Fbasecamp-logo-mark.png">
+    <link rel="shortcut icon" type="image/png" href="/external?target=https%3A%2F%2Fd33v4339jhl8k0.cloudfront.net%2Fdocs%2Fassets%2F59de6bbc2c7d3a40f0ed605f%2Fimages%2F6a31cd3f1c315d013efd0677%2Fbasecamp-app-icon.png">
+    <!--[if lt IE 9]>
+    
+        <script src="//d3eto7onm69fcz.cloudfront.net/assets/javascripts/html5shiv.min.js"></script>
+    
+    <![endif]-->
+    
+        <!-- Privacy-friendly analytics by Plausible -->
+<style>
+  /* CSS Tabs — reusable across all articles */
+  .tabs input[type="radio"] { display: none; }
+
+  .tabs {
+    border: 1px solid #d4d0c8;
+    border-radius: 8px;
+  }
+
+  .tab-labels {
+    display: flex;
+    border-bottom: 1px solid #d4d0c8;
+    margin-bottom: 0;
+    padding: 0 8px;
+  }
+
+  .tab-labels label {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+  }
+
+  .tab-labels label:hover { color: #222; }
+
+  .tab-panel { display: none; }
+
+  .panels {
+    background: #fffff8;
+    border-radius: 0 0 8px 8px;
+    padding: 20px 24px;
+  }
+
+  /* Active tab labels */
+  .tabs #t1:checked ~ .tab-labels label[for="t1"],
+  .tabs #t2:checked ~ .tab-labels label[for="t2"],
+  .tabs #t3:checked ~ .tab-labels label[for="t3"],
+  .tabs #t4:checked ~ .tab-labels label[for="t4"],
+  .tabs #t5:checked ~ .tab-labels label[for="t5"] {
+    color: #1a56db;
+    border-bottom-color: #1a56db;
+    font-weight: 700;
+  }
+
+  /* Show active panel */
+  .tabs #t1:checked ~ .panels #panel1,
+  .tabs #t2:checked ~ .panels #panel2,
+  .tabs #t3:checked ~ .panels #panel3,
+  .tabs #t4:checked ~ .panels #panel4,
+  .tabs #t5:checked ~ .panels #panel5 { display: block; }
+</style>
+
+<style>
+  /* ---------- Learning Center landing page ---------- */
+
+  .lc-lede {
+    font-size: 17px;
+    max-width: 64ch;
+    margin: 0 0 32px;
+  }
+
+  /* Featured block */
+  .lc-featured {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    background: #fffffb;
+    border: 1px solid #e2ded5;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .lc-featured__art { min-height: 190px; }
+
+  .lc-featured__body { padding: 26px 30px; }
+
+  /* Inside the featured block, the classes card supplies content, not chrome. */
+.lc-featured__body .bc-class-feature__card {
+  border: 0;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+  /* Secondary row */
+  .lc-secondary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 44px;
+  }
+
+  .lc-mini {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    background: #fffffb;
+    border: 1px solid #e2ded5;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+  }
+  .lc-mini:hover { border-color: #c9c3b8; }
+
+  .lc-mini__art { min-height: 96px; }
+  .lc-mini__body { padding: 15px 17px; }
+
+  .lc-mini__body h3 {
+    margin: 0 0 4px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .lc-mini__body p {
+    margin: 0;
+    font-size: 13px;
+    color: #6f6962;
+  }
+
+  .lc-kicker {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #46613a;
+    background: #e2ebda;
+    padding: 4px 9px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+
+  /* Category columns */
+  .lc-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px;
+    border-top: 1px solid #e2ded5;
+    padding-top: 28px;
+  }
+
+  .lc-cols h2 {
+    font-size: 17px;
+    margin: 0 0 3px;
+  }
+
+  .lc-cols__note {
+    font-size: 13px;
+    color: #7a746d;
+    margin: 0 0 13px;
+  }
+
+  .lc-cols ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .lc-cols li {
+    padding: 7px 0;
+    border-top: 1px solid #ece7dd;
+  }
+  .lc-cols li:first-child { border-top: none; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .lc-featured { grid-template-columns: 1fr; }
+    .lc-featured__art { min-height: 140px; }
+    .lc-secondary { grid-template-columns: 1fr; }
+    .lc-cols { grid-template-columns: 1fr; gap: 26px; }
+  }
+
+  /* ---------- Card art ----------
+     Placeholder geometry. Swap each rule for your real art, e.g.
+       background: url("/help/5/article/IMAGE-URL") center / cover no-repeat;
+  */
+  .lc-art--classes {
+    background: repeating-linear-gradient(0deg, #8a9a7b 0 16px, #a9b69b 16px 32px);
+  }
+  .lc-art--guide {
+    background: radial-gradient(circle at 50% 110%, #6b7d8f 0 62px, #d7cfc0 62px);
+  }
+  .lc-art--community {
+    background: linear-gradient(225deg, #c08552 0 50%, #2c3e4f 50%);
+  }
+/* Help Scout puts margin-bottom on every div in an article body.
+   On a grid item that margin inflates the row height. */
+.lc-featured > *,
+.lc-mini > *,
+.lc-cols > * {
+  margin-bottom: 0 !important;
+}
+
+.lc-featured__body .bc-class-feature__card::before {
+  content: "Next live class";
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8a6a2e;
+  background: #f2e6c9;
+  padding: 4px 9px;
+  border-radius: 4px;
+  margin-bottom: 11px;
+}
+</style>
+
+
+
+
+
+<style>
+  /* ---------- Classes page ---------- */
+/* ---------- Live classes: base ---------- */
+
+
+.bc-class-feature a {
+  display: block;
+  background: #fffffb;
+  border: 1px solid #e2ded5;
+  border-radius: 10px;
+  padding: 22px 26px;
+  text-decoration: none;
+  color: #2d2a26;
+}
+.bc-class-feature a:hover { border-color: #c9c3b8; }
+
+.bc-class-feature__title {
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin-bottom: 5px;
+}
+
+.bc-class-feature__meta {
+  display: block;
+  font-size: 15px;
+  color: #6f6962;
+}
+
+.bc-class-feature__card + .bc-class-feature__card { margin-top: 12px; }
+  .cl-lede { font-size: 17px; max-width: 64ch; margin: 0 0 30px; }
+
+  .cl-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 44px;
+  }
+
+  .cl-card {
+    background: #fffffb;
+    border: 1px solid #e2ded5;
+    border-radius: 9px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cl-card__art { height: 8px; }
+  .cl-art--intro { background: linear-gradient(90deg, #8a9a7b, #a9b69b); }
+  .cl-art--pro   { background: linear-gradient(90deg, #2c3e4f, #57687a); }
+  .cl-art--hours { background: linear-gradient(90deg, #c08552, #d8a878); }
+
+  .cl-card__body { padding: 20px 22px; flex: 1; }
+  .cl-card__body h3 { margin: 0 0 6px; font-size: 17px; font-weight: 600; }
+  .cl-card__body p { margin: 0; font-size: 14px; color: #6f6962; }
+
+  /* ---- Card footers: three rows, identical in every state ---- */
+
+  .cl-card__next {
+    border-top: 1px solid #ece7dd;
+    padding: 14px 22px 16px;
+  }
+
+  /* .bc-class-feature is a div, so Help Scout's bottom margin applies. */
+  .cl-card__next .bc-class-feature { margin-bottom: 0 !important; }
+
+  .cl-card__label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #9b948c;
+    margin-bottom: 4px;
+  }
+
+   /* Row three reserves two lines whether it needs them or not, so a
+     wrapping topic doesn't push this card's label above the others. */
+  .cl-card__sub,
+  .cl-card__next .bc-class-feature__topic {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #585858;
+    margin-top: 3px;
+    line-height: 1.45;
+    min-height: 2.9em;
+  }
+
+  .cl-card__next .bc-class-feature__topic { order: 2; }
+  /* When the feed supplies a real topic, the static line steps aside. */
+  .cl-card__next:has(.bc-class-feature__topic) .cl-card__sub { display: none; }
+
+  /* Row two when nothing is scheduled. Same slot, same size, quieter. */
+  .cl-card__none {
+    display: block;
+    font-size: 14.5px;
+    color: #9b948c;
+    font-style: italic;
+  }
+
+  /* Inside a card the class name is redundant — the heading says it —
+     and the date belongs above the topic. */
+  .cl-card__next .bc-class-feature__card {
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+  }
+  .cl-card__next .bc-class-feature__title { display: none; }
+  .cl-card__next .bc-class-feature__meta {
+    order: 1;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #1a7ee8;
+  }
+  .cl-card__next .bc-class-feature__topic {
+    order: 2;
+    font-size: 14px;
+    font-weight: 400;
+    color: #585858;
+    margin-top: 3px;
+  }
+
+  /* ---- Topic line elsewhere ---- */
+  .bc-class-feature__topic { display: block; }
+
+  .cl-schedule .bc-class-feature__topic {
+    font-size: 14px;
+    color: #585858;
+  }
+  .lc-featured__body .bc-class-feature__topic {
+    font-size: 15px;
+    color: #6f6962;
+    margin-bottom: 5px;
+  }
+
+  /* The Intro card heading already names the class, so don't repeat it. */
+  .cl-card--intro .bc-class-feature__title { display: none; }
+
+  /* Full schedule list */
+  .cl-schedule { margin-bottom: 44px; }
+  .cl-schedule .bc-class-feature__card {
+    border: 0;
+    border-top: 1px solid #e2ded5;
+    background: none;
+    border-radius: 0;
+    padding: 13px 4px;
+  }
+  .cl-schedule .bc-class-feature.is-live .bc-class-feature__card:last-child {
+    border-bottom: 1px solid #e2ded5;
+  }
+  .cl-schedule .bc-class-feature__card:hover { background: #faf7f0; }
+  .cl-schedule .bc-class-feature__title { font-size: 15px; font-weight: 600; margin-bottom: 1px; }
+  .cl-schedule .bc-class-feature__meta { font-size: 13px; }
+
+  /* Videos */
+  .cl-videos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .cl-videos iframe { width: 100%; border: 0; border-radius: 8px; }
+  .cl-sec div > iframe {
+    display: block;
+    border-radius: 11px;
+  }
+
+  .cl-sec h2 { font-size: 20px; margin: 0 0 4px; }
+  .cl-sec__note { margin: 0 0 18px; color: #7a746d; font-size: 14px; }
+
+  .cl-browse { display: inline-block; margin-top: 18px; font-weight: 600; color: #2c3e4f; }
+
+  /* Help Scout puts margin-bottom on every div in an article body.
+     On a grid item that margin inflates the row height. */
+  .cl-grid > *,
+  .cl-card > *,
+  .cl-videos > * { margin-bottom: 0 !important; }
+
+  @media (max-width: 820px) {
+    .cl-grid, .cl-videos { grid-template-columns: 1fr; }
+  }
+</style>
+
+<style>
+  /* ---------- Help Docs landing ---------- */
+
+  .hd-hero {
+    background: #fffffb;
+    border: 1px solid #e2ded5;
+    border-radius: 12px;
+    padding: 30px 34px 28px;
+    margin-bottom: 34px;
+  }
+  .hd-hero h2 { margin: 0 0 6px; font-size: 24px; letter-spacing: -0.015em; }
+  .hd-hero p { margin: 0 0 18px; color: #55504a; font-size: 16px; }
+
+  .hd-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .hd-chips a {
+    font-size: 13px;
+    background: #f0ece1;
+    border: 1px solid #e2ded5;
+    border-radius: 999px;
+    padding: 6px 13px;
+    text-decoration: none;
+    color: #4a453f;
+  }
+  .hd-chips a:hover { background: #e7e1d3; }
+
+  .hd-tasks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 34px; }
+
+  .hd-task {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 14px;
+    padding: 16px 0;
+    border-top: 1px solid #e7e2d8;
+  }
+  .hd-task__dot { width: 24px; height: 24px; border-radius: 6px; margin-top: 3px; }
+  .hd-dot--project  { background: #8a9a7b; }
+  .hd-dot--notify   { background: #6b7d8f; }
+  .hd-dot--client   { background: #c08552; }
+  .hd-dot--lost     { background: #b98a8a; }
+  .hd-dot--account  { background: #cfa83e; }
+  .hd-dot--broken   { background: #2c3e4f; }
+
+  .hd-task h3 { margin: 0 0 2px; font-size: 16px; font-weight: 600; }
+  .hd-task__note { margin: 0 0 8px; font-size: 13px; color: #6f6962; }
+.hd-task__links {
+  margin: 0;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+.hd-task__links a { color: #2c3e4f; text-decoration: none; }
+.hd-task__links a:hover { text-decoration: underline; }
+.hd-task__links span { display: none; }
+.hd-lede { font-size: 17px; max-width: 64ch; margin: 0 0 30px; color: #4a453f; }
+
+  /* Callout block — a group with its own audience,
+     sitting outside the task rows. */
+  .hd-callout {
+    background: #fffffb;
+    border: 1px solid #e2ded5;
+    border-left: 4px solid #c08552;
+    border-radius: 9px;
+    padding: 20px 24px;
+    margin-top: 38px;
+  }
+  .hd-callout h3 { margin: 0 0 4px; font-size: 17px; font-weight: 600; }
+  .hd-callout > p { margin: 0 0 12px; font-size: 14px; color: #6f6962; }
+
+  /* Links run across rather than stacking — there are only three,
+     and a wide box makes a vertical list look stranded. */
+  .hd-callout .hd-task__links {
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+  }
+
+  .hd-cats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .hd-cat {
+    background: #fffffb;
+    border: 1px solid #e2ded5;
+    border-radius: 8px;
+    padding: 15px 17px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .hd-cat:hover { border-color: #c9c3b8; }
+  .hd-cat strong { display: block; font-size: 15px; margin-bottom: 3px; }
+  .hd-cat em { font-style: normal; font-size: 12px; color: #a09a93; }
+
+  .hd-sec { margin-bottom: 40px; }
+  .hd-sec:last-child { margin-bottom: 0; }
+  .hd-sec h2 { font-size: 19px; margin: 0 0 4px; }
+  .hd-sec__note { margin: 0 0 16px; color: #7a746d; font-size: 14px; }
+
+  /* Help Scout puts margin-bottom on every div in an article body.
+     On a grid item that margin inflates the row height. */
+  .hd-tasks > *,
+  .hd-cats > *,
+  .hd-task > * { margin-bottom: 0 !important; }
+
+  @media (max-width: 900px) { .hd-cats { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 720px) {
+    .hd-tasks { grid-template-columns: 1fr; }
+    .hd-cats { grid-template-columns: 1fr; }
+  }
+</style>
+
+<style>
+  /* ---------- Annotated article list ---------- */
+  .ps-list { list-style: none; margin: 0; padding: 0; }
+  .ps-list li { padding: 14px 0; border-top: 1px solid #e2ded5; }
+  .ps-list li:last-child { border-bottom: 1px solid #e2ded5; }
+  .ps-list a { font-weight: 600; }
+  .ps-list p { margin: 2px 0 0; font-size: 0.95rem; color: #6f6962; }
+</style>
+
+<style>
+  /* ---------- Using Basecamp landing ---------- */
+
+.section-note { margin: 0 0 14px; font-size: 14px; color: #7a746d; }
+  .ub-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .ub-cards--two { grid-template-columns: repeat(2, 1fr); }
+
+  /* Cards are <a>, not <div>, so Help Scout's div margin never applies. */
+  .ub-card {
+    display: block;
+    background: #fffffb;
+    border: 1px solid #e2ded5;
+    border-radius: 8px;
+    padding: 15px 17px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .ub-card:hover { border-color: #c9c3b8; }
+  .ub-card strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #2c3e4f;
+    margin-bottom: 3px;
+  }
+  .ub-card span {
+    display: block;
+    font-size: 13px;
+    color: #6f6962;
+    line-height: 1.45;
+  }
+
+  /* Two-column annotated lists, using CSS columns so there are
+     no wrapper divs to pick up Help Scout's bottom margin. */
+  .ub-cols { columns: 2; column-gap: 34px; }
+  .ub-cols li { break-inside: avoid; }
+
+  @media (max-width: 880px) {
+    .ub-cards { grid-template-columns: repeat(2, 1fr); }
+    .ub-cols { columns: 1; }
+  }
+  @media (max-width: 560px) {
+    .ub-cards, .ub-cards--two { grid-template-columns: 1fr; }
+  }
+</style>
+
+<style>
+  /* ---------- The 37signals Way landing ---------- */
+
+.section-note { margin: 0 0 14px; font-size: 14px; color: #7a746d; }
+  .tw-feat {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    background: #fffffb;
+    border: 1px solid #e2ded5;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 14px;
+  }
+  .tw-feat:hover { border-color: #c9c3b8; }
+
+  /* Placeholder art. Swap for real card art when it exists:
+     background: url("/help/5/article/IMAGE-URL") center / cover no-repeat; */
+  .tw-feat__art {
+    min-height: 150px;
+    background: linear-gradient(135deg, #8a9a7b 0 50%, #cfc7b4 50%);
+  }
+
+  .tw-feat__body { padding: 24px 28px; }
+  .tw-feat__body h3 {
+    margin: 0 0 6px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+  }
+  .tw-feat__body p {
+    margin: 0 0 10px;
+    font-size: 15px;
+    color: #55504a;
+    max-width: 56ch;
+  }
+
+  /* Both children of .tw-feat are divs, so Help Scout's bottom margin
+     would inflate the grid row and leave a gap under the art. */
+  .tw-feat > * { margin-bottom: 0 !important; }
+
+  .tw-kicker {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #46613a;
+    background: #e2ebda;
+    padding: 4px 9px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .tw-mins {
+    display: block;
+    margin-top: 3px;
+    font-size: 13px;
+    color: #8a837b;
+  }
+
+  @media (max-width: 700px) {
+    .tw-feat { grid-template-columns: 1fr; }
+    .tw-feat__art { min-height: 90px; }
+  }
+</style>
+    
+<link rel="stylesheet" href="/static/local.css"></head>
+    
+    <body data-local-page="9370f30dfffafda5" data-local-auth="false" data-source-comment-total="0">
+        
+<header id="mainNav" class="navbar">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="/help/5/">
+            
+                
+                    <img src="/static/assets/f4674b4739463e9f4d344db8.png" alt="Basecamp 5 Help" width="333" height="75" loading="eager">
+                
+
+            
+            </a>
+            
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            
+            <div class="nav-collapse collapse">
+                <nav role="navigation"><!-- added for accessibility -->
+                <ul class="nav">
+                    
+                    
+                        
+                            <li id="help-docs"><a href="/help/5/collection/1034-help-docs">Help Docs  <b class="caret"></b></a></li>
+                        
+                            <li class="active" id="learning-center"><a href="/help/5/collection/1121-learning-center">Learning Center  <b class="caret"></b></a></li>
+                        
+                    
+                    
+                        <li id="contact"><a href="#" class="contactUs">Contact</a></li>
+                        <li id="contactMobile"><a href="#" class="contactUs">Contact</a></li>
+                    
+                    
+                </ul>
+                </nav>
+            </div><!--/.nav-collapse -->
+        </div><!--/container-->
+    </div><!--/navbar-inner-->
+</header>
+        <section id="contentArea" class="container-fluid">
+            <div class="row-fluid">
+                <section id="main-content" class="span9">
+                    <div class="contentWrapper">
+                        
+    
+    <article id="fullArticle">
+        <h1 class="title">Field Guide: Students</h1>
+    
+        <a href="#" class="printArticle" title="Print this article" aria-label="Print this Article"><i class="icon-print"></i></a>
+        <p>Welcome to Basecamp 👋</p>
+<p>Projects, tasks, homework, schedules — whatever happened to the days when choosing what to watch on TV was the hardest to-do of the day?</p>
+<p>Basecamp can’t take you back to that time, but it can help you manage your schoolwork so you have more time for the things you want. 😊</p>
+<p><b>Jump to:</b></p>
+<ul>
+ <li><a href="#Getting-started-with-projects-PSOjn" target="_blank">Getting started with projects</a></li>
+ <li><a href="#Working-with-others-GV9aj" target="_blank">Working with others</a></li>
+ <li><a href="#Keeping-track-of-your-work-LPvzn" target="_blank">Keeping track of your work</a></li>
+ <li><a href="#Whats-coming-up-HLHHK" target="_blank">What’s coming up</a></li>
+ <li><a href="#Your-files-and-resources-JSooD" target="_blank">Your files and resources</a></li>
+ <li><a href="#Staying-on-top-of-things-HXZ5t" target="_blank">Staying on top of things</a></li>
+</ul>
+<hr role="separator">
+<h2 id="Getting-started-with-projects-PSOjn"><a href="#Getting-started-with-projects-PSOjn" target="_blank">Getting started with projects</a></h2>
+<p>As a student, you may have been <a href="/help/5/article/1060-inviting-people" target="_blank">invited</a> to work in your Teacher’s or another student’s Basecamp account or maybe you’ve <a href="/discounts" target="_blank">created your own</a> to manage all of your schoolwork. Maybe all three!</p>
+<p>When you have access to multiple accounts using the same email address, you’ll see icons for each when you <a href="/signin" target="_blank">log into Basecamp</a> using a web browser:</p>
+<p><img src="/static/assets/03297a7364f1614ea2e76076.png" alt="Screenshot of a user's Launchpad with 3 icons — one for each Basecamp account they have access to.." style="max-width: 100%; " loading="eager"></p>
+<p>Every account you have access to is completely separate, i.e. the work in one account cannot be accessed from a separate account. So if you need to see what your teacher has posted, you’ll need to click the icon associated with your teacher’s account. In the example above, that’d be the Rydell High School account ✨</p>
+<div class="callout-green">
+ <p>💡<b> Tip: </b>You can access your other accounts from the "Accounts &amp; settings" link in the Basecamp menu or Home screen.</p>
+</div>
+<p>Once you’re in the right account, your work is organized into projects and this is where your work happens in Basecamp.</p>
+<p>In your Teacher’s (or another student’s) account, there’s likely a shared project they’ve created for you to work in. If you have any questions about the project setup, just post your question within the project's <a href="/help/5/article/1052-chat" target="_blank">Chat</a> (if it's available), or send them a <a href="/help/5/article/1074-pings" target="_blank">Ping</a>.</p>
+<p>In your own Basecamp account, you’ll likely have two types of projects — ones for working alone and ones for <a href="/help/5/article/1060-inviting-people" target="_blank">working with others</a>.</p>
+<p>Here’s an example of a solo project:</p>
+<p><img src="/static/assets/017bea421127dcf398916e63.png" alt="Screenshot of a project's main page named AP Psych | 2PM along with the tools its using." style="max-width: 100%; " loading="eager"></p>
+<p>And one for a group project:</p>
+<p style="text-align: center;" class="align-center"><img src="/static/assets/b26ce3908d5f6c2552659458.png" alt="Screenshot of a project's main page named Solar-powered robot." style="max-width: 100%; text-align: center;" loading="eager"></p>
+<p>Both projects look somewhat similar at a glance, but take a closer look — the <a href="/help/5/article/1095-project-tools" target="_blank">tools</a> being used vary between the two. You'll get a hang of which tools work for specific projects and if you find yourself using the same tools over and over again, create a <a href="/help/5/article/1094-project-and-list-templates" target="_blank">project template</a>.</p>
+<div class="callout-green">
+ <p>💡 <b>Tip: </b>See an overview of all the projects you have going on with the <a href="/help/5/article/1164-lineup" target="_blank">Lineup</a>!</p>
+</div>
+<hr role="separator">
+<h2 id="Working-with-others-GV9aj"><a href="#Working-with-others-GV9aj" target="_blank">Working with others</a></h2>
+<p>In or out of the classroom, communication is key when working with others. Basecamp makes this easy with Chat, Message Board posts, and comments.</p>
+<p>The <a href="/help/5/article/1075-message-board" target="_blank">Message Board</a> is the tool you'll want to use in projects you're working on with others. Why? Because this is the ideal spot to post announcements, ask one-time questions, and share any important information you’d like your team to know.</p>
+<p>In this example, Rob posted a message introducing his Basecamp (and Basecamp in general) with everyone on the project:</p>
+<p><img src="/static/assets/1c5b386fecc5ef2f207a4fc0.png" alt="Screenshot of a Message Board post titled Let's goooooooooo." style="max-width: 100%; " loading="eager"></p>
+<p>You and your team can discuss any message by leaving a comment below, just like Min did 👩🏻‍💻</p>
+<p>The <a href="/help/5/article/1052-chat" target="_blank">Chat</a> is another tool you’ll most likely use in group projects. This is the best place to have casual conversations in real time:</p>
+<p><img src="/static/assets/52b32606253e9b101a2ce295.png" alt="Screenshot of a Project's chat. There is a conversation between two students." style="max-width: 100%; " loading="eager"></p>
+<p>I don't know about you, but I'm curious to see just how "extra" Mr. Y's is being with this new update 🤔</p>
+<div class="callout-green">
+ <p>🤓 <b>Tip:</b> Want to get someone's attention? Just <a href="/help/5/article/1086-mentions" target="_blank">@mention</a> them and they'll get a notification right away!</p>
+</div>
+<p>You can discuss a project item by posting a comment. If you just want to acknowledge someone's work or comment, leave a <a href="/help/5/article/1099-boosts" target="_blank">Boost</a>!</p>
+<p style="text-align: center;" class="align-center"><img src="/static/assets/99cea09a16db64728c449099.png" alt="Screenshot of a document titled Inspo dump." style="max-width: 100%; text-align: center;" loading="eager"></p>
+<hr role="separator">
+<h2 id="Keeping-track-of-your-work-LPvzn"><a href="#Keeping-track-of-your-work-LPvzn" target="_blank">Keeping track of your work</a></h2>
+<p>Whether it’s a quick assignment or a bigger project, Basecamp gives you a couple of ways to keep track of your work.</p>
+<p><a href="/help/5/article/1077-to-dos" target="_blank">To-do lists</a> are best for tasks that are completed in one step, e.g. scheduling a meeting or completing a reading assignment.</p>
+<p>In solo projects, you may want to get in the habit of assigning the to-dos to yourself. That way, you'll see them in your <a href="/help/5/article/1178-my-assignments" target="_blank">My Assignments</a> page and get <a href="/help/5/article/1077-to-dos#Notifications-Ajyru" target="_blank">notified</a> when the due date approaches.</p>
+<p>In Rob's solo project, he decided to group to-dos within a list like this:</p>
+<p style="text-align: center;" class="align-center"><img src="/static/assets/295cbb8b2060b4b96073d543.png" alt="Screenshot of a to-do list titled Reading requirements. There are two To-do groups within that list — one titled Untie 1: Scientific Foundations of Psychology and another titled Unit 2: Biological Bases of Behavior.  " style="max-width: 100%; text-align: center;" loading="eager"></p>
+<p>The highlighted headers within his to-do list are helpful to see each assignment's associated unit. These to-dos aren't dependent on each other, so if Rob wanted to read the chapter on "The Brain," this list isn't going to stop him from marking it as complete.</p>
+<p>Alternatively, you can make separate lists like Rob did for his group project — each project member has their own to-do list:</p>
+<p style="text-align: center;" class="align-center"><img src="/static/assets/8ee4fc58be9b7be12d236e72.png" alt="Screenshot of three different to-lists titled Min's list. Ted's list, Rob's list." style="max-width: 100%; text-align: center;" loading="eager"></p>
+<p>Each of the project members can group their to-dos if it makes sense to them.</p>
+<p>As you get started on your projects, you may find yourself asking, "to group or not to group to-dos?" This really all depends on what works best for you and your team. Play around with it and you'll see what'll work best for the project. 😊</p>
+<div class="callout-green">
+ <p>🤓 <b>Tip: </b>Visualize your to-dos with <a href="/help/5/article/1078-hill-charts" target="_blank">Hill Charts</a> 👀</p>
+</div>
+<p>For tasks that happens in multiple steps or stages, you can use the <a href="/help/5/article/1063-card-tables" target="_blank">Card Table</a>.</p>
+<p>The Card Table is Basecamp's take on the Kanban and, like To-do lists, can be customized to fit you and your team's needs. You can rename the tool itself and the columns. The colors of the columns can be changed too! You can see these changes in the Card Table Rob created for his research papers:</p>
+<p style="text-align: center;" class="align-center"><img src="/static/assets/637ec014dd4004f448612956.png" alt="Screenshot of a project's Card Table tool renamed to Quarterly Research Papers." style="max-width: 100%; text-align: center;" loading="eager"></p>
+<p>And here's his group project:</p>
+<p><img src="/static/assets/7987a14fedd870650e9ae4d8.png" alt="Screenshot of a project's Card Table tool." style="max-width: 100%; " loading="eager"></p>
+<p>Often times, a Card will be comprised of multiple steps like this:</p>
+<p style="text-align: center;" class="align-center"><img src="/static/assets/50686449b06b814b1ac20809.png" alt="Screenshot of a Card titled Source components. There are 12 steps in this Card." style="max-width: 100%; text-align: center;" loading="eager"></p>
+<p>Hopefully, Cindy can help with those missing parts 🤞. Someone better add 'reach out to Cindy' to their to-do list before it slips through the cracks!</p>
+<hr role="separator">
+<h2 id="Whats-coming-up-HLHHK"><a href="#Whats-coming-up-HLHHK" target="_blank">What’s coming up</a></h2>
+<p>It's always good to see what to expect in the near future so you can plan accordingly. Just head to your project <a href="/help/5/article/1120-calendar#Viewing-project-calendars-7U_ky" target="_blank">Calendar</a> to see all dated assignments and events relevant to the project. You can also set it up so that you have two Calendars in a project like Rob did in both his solo and group projects — one for dated assignments and the other for <a href="/help/5/article/1120-calendar#Changing-your-calendar-view-yRm8x" target="_blank">events only</a>.</p>
+<p>In Rob's solo project, he renamed the Calendar he's using for his homework assignments to "Assignment Due Dates" — this Calendar will auto-populate with all dated assignments from the project's To-dos and Cards:</p>
+<p style="text-align: center;" class="align-center"><img src="/static/assets/fe30c250f5185dab17a02ef0.png" alt="Screenshot of a project's Calendar renamed to Assignment Due Dates. The project tasks are displayed in a grid view." style="max-width: 100%; text-align: center;" loading="eager"></p>
+<p>For his events-only Calendar, he renamed it to "Meetings/Events" — this is the Calendar he'll use to add events:</p>
+<p><img src="/static/assets/81c922cb1e6d96d40c38defb.png" alt="Screenshot of a project's Calendar renamed to Meeting/Events. The calendar events are displayed in a grid view." style="max-width: 100%; " loading="eager"></p>
+<div class="callout-green">
+ <p>🤓 <b>Tip: </b>Are you already using external calendar like Google Calendar or Outlook? Sync your Calendar so you can stay on top of your events and due dates without opening Basecamp.</p>
+</div>
+<hr role="separator">
+<h2 id="Your-files-and-resources-JSooD"><a href="#Your-files-and-resources-JSooD" target="_blank">Your files and resources</a></h2>
+<p>You'll find your project's documents and files <a href="/help/5/article/1079-docs-and-files" target="_blank">Docs &amp; Files</a> tool.</p>
+<p>Here's a look at the items Rob's team added to their <i>Solar-powered robot</i> project:</p>
+<p><img src="/static/assets/8ed0a3cec23eb42e1199489f.png" alt="Screenshot of a project's Docs &amp; Files tool. There's a document created in Basecamp, a folder of documents with embedded videos, an uploaded PDF file, and a file linked from Google Drive, one stand alone document." style="max-width: 100%; " loading="eager"></p>
+<p>The document with the <a href="/help/5/article/1091-formatting-text-in-basecamp#Embedding-content-from-other-services-bIQvZ" target="_blank">embedded video</a> allows you to play the video right from Basecamp:</p>
+<p><img src="/static/assets/6b8747fdf9d86a5bcc752481.png" alt="Screenshot of a Basecamp document with a Youtube video titled Solar power info." style="max-width: 100%; " loading="eager"></p>
+<div class="callout-green">
+ <p><b>🤓 Tip: </b>Want to share something with someone not on the project? Just send them a <a href="/help/5/article/1098-public-links" target="_blank">public link</a> 📧</p>
+</div>
+<p>Sometimes, you’ll need to access another service that’s related to your project. This is when you’ll want to add an <a href="/help/5/article/1076-external-links" target="_blank">External link</a>.</p>
+<p>Both project examples have External links that open to different services. In the solo project, Rob added a External link to his teacher's most recent slideshow for reference:</p>
+<p style="text-align: center;" class="align-center"><img src="/static/assets/bc0bd6befba7310cfd9fa1a0.png" alt="Screenshot of a project's main page scrolled down to the External links section. There is one external link named Research methods slideshow." style="max-width: 100%; text-align: center;" loading="eager"></p>
+<p>In the group project, two External links have been added — one for the coding program they're using and another for their budget:</p>
+<p style="text-align: center;" class="align-center"><img src="/static/assets/0badd7d8c37bd33a5479ced0.png" alt="Screenshot of two external links." style="max-width: 100%; text-align: center;" loading="eager"></p>
+<div class="callout-green">
+ <p>🤓 <b>Tip: </b>If an External link leads to a service that requires a password, you'll want to get that information to your team — you could even add it in the External link's description!</p>
+</div>
+<p>Basecamp also has a place to organize any <a href="/help/5/article/1100-email-forwards" target="_blank">emails</a> related to your project.</p>
+<p>Before you can forward emails into your project, you'll need to <a href="/help/5/article/1100-email-forwards#Adding-the-Email-Forwards-tool-97w64" target="_blank">add the Email Forwards tool</a>. After that, you can forward emails directly to <a href="/external?target=mailto%3Asave%40app.basecamp.com" target="_blank"><b>save@app.basecamp.com</b></a> or you can send it directly to the project by using your personalized address.</p>
+<p>Here's how a forwarded email looks in a project:</p>
+<p style="text-align: center;" class="align-center"><img src="/static/assets/02e218a367bcc542138ef26d.png" alt="Screenshot of an email forwarded into a Basecamp account. The email is in plain-text." style="max-width: 100%; text-align: center;" loading="eager"></p>
+<p>With the email stored in Basecamp, the group can discuss in the comments below and if they wanted, they can reply to Mr. Y. there too!</p>
+<p style="text-align: center;" class="align-center"><img src="/static/assets/d6e5271faaa2256843d4ab5f.png" alt="Screenshot of a comment section. A student is @mentioned and another student posts a GIF. There are also Boosts." style="max-width: 100%; text-align: center;" loading="eager"></p>
+<div class="callout-green">
+ <p>💡 <b>Tip: </b>Any attachments on a forwarded email should be 25MB or less.</p>
+</div>
+<hr role="separator">
+<h2 id="Staying-on-top-of-things-HXZ5t"><a href="#Staying-on-top-of-things-HXZ5t" target="_blank">Staying on top of things</a></h2>
+<p>Once everything is in place, Basecamp helps you stay on top of what’s happening without needing to check every project.</p>
+<p>At the bottom of your screen, the <a href="/help/5/article/1149-my-bar" target="_blank">"My" bar</a> gives you quick access to everything that’s relevant to you — your tasks, events you're part of, pages you've bookmarked, and notes you've left for yourself. On the right, you'll see what's "New for you" and your Pings.</p>
+<p style="text-align: center;" class="align-center"><img src="/static/assets/8eb7a93cd4e71753aabae936.png" alt="Screenshot of a user's project with the notification sidebar open." style="max-width: 100%; text-align: center;" loading="eager"></p>
+<p>In addition to the notifications you've <a href="/help/5/article/1177-notifications" target="_blank">set</a>, you'll receive an email with the<a href="/help/5/article/1160-activity#Daily-summary-emails-kRlAy" target="_blank"> latest activity</a> every morning, and an email with your <a href="/help/5/article/1178-my-assignments#Weekly-assignments-email-48qLb" target="_blank">upcoming assignments</a> every week<b>. </b>If you don't need those email notifications, you can always turn those off. You're in control here!</p>
+<div class="callout-yellow">
+ <p><b>🗒️ Note: </b>If you have push notifications enabled, you'll only receive push notifications for new Chat lines if you are <a href="/help/5/article/1086-mentions" target="_blank">@mentioned</a> or if there is a new message after chat has been idle for 6+ hours.</p>
+</div>
+<p>If you're leading a group project, you may have some recurring questions you'll want to ask your team. So, instead of creating a recurring to-do to ask your teammates, you can use <a href="/help/5/article/1051-automatic-check-ins" target="_blank">Automatic Check-ins</a> to ask <i>alllll</i> the questions.</p>
+<p style="text-align: center;" class="align-center"><img src="/static/assets/ccdee16adc451879b32af425.png" alt="Screenshot of two automatic check-in questions asking Anything you wanna share with the team? and Having trouble with anything?" style="max-width: 100%; text-align: center;" loading="eager"></p>
+<div class="callout-green">
+ <p>🤓 <b>Tip: </b>Most projects only need a few check-ins. When you set those up, vary the times and dates throughout the week. It's best to avoid a dozen check-ins set to notify on a Friday morning.</p>
+</div>
+<hr role="separator">
+<p>That's it for now! We hope this guide helps you with your schoolwork. And if you need any help, you can check out our <a href="/learn" target="_blank">learning center</a>, <a href="/help/5" target="_blank">help pages</a>, or hit us up at <a href="/support" target="_blank">Support</a>. Happy Basecamping!</p>
+    </article>
+    
+
+    <section class="articleFoot">
+    
+        <i class="icon-contact"></i>
+        <p class="help">Still need help?
+            <a id="sbContact" href="#" class="contactUs">Contact Us</a>
+            <a id="sbContactMobile" href="#" class="contactUs">Contact Us</a>
+        </p>
+    
+
+    <time class="lu" datetime="2026-09-23">Last updated on September 23, 2026</time>
+    </section>
+
+                    </div><!--/contentWrapper-->
+                    
+                </section><!--/content-->
+                <aside id="sidebar" class="span3">
+                 
+
+<form action="/help/5/search" method="GET" id="searchBar" class="sm" autocomplete="off">
+    
+                    <input type="hidden" name="collectionId" value="69efb4d20fbed4fb3a90427d">
+                    <input type="text" name="query" title="search-query" class="search-query" placeholder="Search" value="" aria-label="Search">
+                    <button type="submit">
+                        <span class="sr-only">Toggle Search</span>
+                        <i class="icon-search"></i>
+                    </button>
+                    <div id="serp-dd" style="display: none;" class="sb">
+                        <ul class="result">
+                        </ul>
+                    </div>
+                
+</form>
+
+                
+                    <h3>Categories</h3>
+                    <ul class="nav nav-list">
+                    
+                        
+                            <li><a href="/help/5/category/1124-the-basecamp-way">The 37signals Way  <i class="icon-arrow"></i></a></li>
+                        
+                    
+                        
+                            <li class="active"><a href="/help/5/category/1125-field-guides">Field Guides  <i class="icon-arrow"></i></a></li>
+                        
+                    
+                        
+                            <li><a href="/help/5/category/1170-classes">Classes  <i class="icon-arrow"></i></a></li>
+                        
+                    
+                    </ul>
+                
+                </aside><!--/span-->
+            </div><!--/row-->
+            <div id="noResults" style="display:none;">No results found</div>
+            <footer>
+                
+
+<p>©
+    
+        <a href="">37signals</a>
+    
+    2026. <span>Powered by <a rel="nofollow noopener noreferrer" href="/external?target=https%3A%2F%2Fwww.helpscout.com%2Fdocs-refer%2F%3Fco%3D37signals%26utm_source%3Ddocs%26utm_medium%3Dfooterlink%26utm_campaign%3DDocs%2BBranding" target="_blank">Help Scout</a></span>
+    
+        
+    
+    
+</p>
+
+            </footer>
+        </section><!--/.fluid-container-->
+        
+            
+
+<div id="beacon-container"><div class="hsds-beacon"><div class="Beacon"><div class="BeaconFabButtonFrame" style="border-radius: 42px; height: 42px; position: fixed; transform: scale(1); width: 106px; z-index: 1049; --pulse-background: #2377d2; --pulse-left-offset: 23px; --pulse-top-offset: -9px;"><style>.BeaconFabButtonFrame {
+  border: none;
+  bottom: 40px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  right: 40px;
+  top: auto;
+  transition:
+    box-shadow 250ms ease,
+    opacity 0.4s ease,
+    scale 0.125s ease-in-out,
+    transform 0.2s ease-in-out;
+}
+
+.BeaconFabButtonFrame:hover {
+    scale: 1.125;
+  }
+
+.BeaconFabButtonFrame:active {
+    box-shadow: none;
+  }
+
+.BeaconFabButtonFrame iframe {
+    border: none;
+    height: 100%;
+    width: 100%;
+    color-scheme: light !important;
+  }
+
+@media (max-height: 740px) {
+
+.BeaconFabButtonFrame {
+    bottom: 10px;
+    right: 20px;
+}
+  }
+
+@supports (--css: variables) {
+  .BeaconFabButtonPulse svg {
+    display: none;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: var(--pulse-top-offset);
+    left: var(--pulse-left-offset);
+    fill: var(--pulse-background);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .BeaconFabButtonPulse.is-visible svg {
+    display: block !important;
+    opacity: 0.2;
+    animation:
+      1.03s cubic-bezier(0.28, 0.53, 0.7, 1) pulse-scale 0.13s both,
+      0.76s cubic-bezier(0.42, 0, 0.58, 1) pulse-fade-out 0.4s both;
+  }
+
+  @keyframes pulse-scale {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(4);
+    }
+  }
+
+  @keyframes pulse-fade-out {
+    0% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+.BeaconFabButtonFrame--left {
+  left: 40px;
+  right: initial;
+}
+
+@media (max-height: 740px) {
+
+.BeaconFabButtonFrame--left {
+    left: 20px;
+    right: initial;
+}
+  }
+</style><div class="BeaconFabButtonPulse "><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 60 60" preserveaspectratio="none" aria-hidden="true">
+  <path d="M60 30C60 51.25 51.25 60 30 60C8.75 60 1.99634e-09 51.25 1.99563e-09 30C1.99492e-09 8.75 8.75 0 30 0C51.25 0 60 8.75 60 30Z"></path>
+</svg>
+</div><iframe id="" data-cy="FrameComponent" aria-label="Toggle Customer Support"></iframe></div></div></div></div><script defer src="/static/local.js"></script></body></html>

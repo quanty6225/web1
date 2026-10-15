@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html class=" webkit chrome linux js"><head>
+    <meta charset="utf-8">
+    <title>Managing people - Basecamp 5 Help</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Administrators and account owners can make changes to a user's profile information and access from the &quot;Manage people&quot; page in Adminland. Jump to: Changing some">
+    <meta name="author" content="37signals">
+    <link rel="canonical" href="/help/5/article/1185-managing-people">
+    
+        
+   
+            <meta name="twitter:card" content="summary">
+            <meta name="twitter:title" content="Managing people">
+            <meta name="twitter:description" content="Administrators and account owners can make changes to a user's profile information and access from the &quot;Manage people&quot; page in Adminland. Jump to: Changing some">
+
+
+    
+
+    
+        <link rel="stylesheet" href="/static/assets/49d7faef5ba57667cdff45ab.css">
+    
+    <style>
+        body { background: #ffffff; }
+        .navbar .navbar-inner { background: #2c323d; }
+        .navbar .nav li a, 
+        .navbar .icon-private-w  { color: #c0c0c0; }
+        .navbar .brand, 
+        .navbar .nav li a:hover, 
+        .navbar .nav li a:focus, 
+        .navbar .nav .active a, 
+        .navbar .nav .active a:hover, 
+        .navbar .nav .active a:focus  { color: #ffffff; }
+        .navbar a:hover .icon-private-w, 
+        .navbar a:focus .icon-private-w, 
+        .navbar .active a .icon-private-w, 
+        .navbar .active a:hover .icon-private-w, 
+        .navbar .active a:focus .icon-private-w { color: #ffffff; }
+        #serp-dd .result a:hover,
+        #serp-dd .result > li.active,
+        #fullArticle strong a,
+        #fullArticle a strong,
+        .collection a,
+        .contentWrapper a,
+        .most-pop-articles .popArticles a,
+        .most-pop-articles .popArticles a:hover span,
+        .category-list .category .article-count,
+        .category-list .category:hover .article-count { color: #4381b5; }
+        #fullArticle, 
+        #fullArticle p, 
+        #fullArticle ul, 
+        #fullArticle ol, 
+        #fullArticle li, 
+        #fullArticle div, 
+        #fullArticle blockquote, 
+        #fullArticle dd, 
+        #fullArticle table { color:#585858; }
+    </style>
+    
+        <link rel="stylesheet" href="/static/assets/bdc162285a0fa2eec298ee30.css">
+    
+    <link rel="apple-touch-icon-precomposed" href="/external?target=https%3A%2F%2Fd33v4339jhl8k0.cloudfront.net%2Fdocs%2Fassets%2F59de6bbc2c7d3a40f0ed605f%2Fimages%2F6a31cd3d2db17b93928f985e%2Fbasecamp-logo-mark.png">
+    <link rel="shortcut icon" type="image/png" href="/external?target=https%3A%2F%2Fd33v4339jhl8k0.cloudfront.net%2Fdocs%2Fassets%2F59de6bbc2c7d3a40f0ed605f%2Fimages%2F6a31cd3f1c315d013efd0677%2Fbasecamp-app-icon.png">
+    <!--[if lt IE 9]>
+    
+        <script src="//d3eto7onm69fcz.cloudfront.net/assets/javascripts/html5shiv.min.js"></script>
+    
+    <![endif]-->
+    
+        <!-- Privacy-friendly analytics by Plausible -->
+<style>
+  /* CSS Tabs — reusable across all articles */
+  .tabs input[type="radio"] { display: none; }
+
+  .tabs {
+    border: 1px solid #d4d0c8;
+    border-radius: 8px;
+  }
+
+  .tab-labels {
+    display: flex;
+    border-bottom: 1px solid #d4d0c8;
+    margin-bottom: 0;
+    padding: 0 8px;
+  }
+
+  .tab-labels label {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+  }
+
+  .tab-labels label:hover { color: #222; }
+
+  .tab-panel { display: none; }
+
+  .panels {
+    background: #fffff8;
+    border-radius: 0 0 8px 8px;
+    padding: 20px 24px;
+  }
+
+  /* Active tab labels */
+  .tabs #t1:checked ~ .tab-labels label[for="t1"],
+  .tabs #t2:checked ~ .tab-labels label[for="t2"],
+  .tabs #t3:checked ~ .tab-labels label[for="t3"],
+  .tabs #t4:checked ~ .tab-labels label[for="t4"],
+  .tabs #t5:checked ~ .tab-labels label[for="t5"] {
+    color: #1a56db;
+    border-bottom-color: #1a56db;
+    font-weight: 700;
+  }
+
+  /* Show active panel */
+  .tabs #t1:checked ~ .panels #panel1,
+  .tabs #t2:checked ~ .panels #panel2,
+  .tabs #t3:checked ~ .panels #panel3,
+  .tabs #t4:checked ~ .panels #panel4,
+  .tabs #t5:checked ~ .panels #panel5 { display: block; }
+</style>
+
+<style>
+  /* ---------- Learning Center landing page ---------- */
+
+  .lc-lede {
+    font-size: 17px;
+    max-width: 64ch;
+    margin: 0 0 32px;
+  }
+
+  /* Featured block */
+  .lc-featured {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    background: #fffffb;
+    border: 1px solid #e2ded5;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .lc-featured__art { min-height: 190px; }
+
+  .lc-featured__body { padding: 26px 30px; }
+
+  /* Inside the featured block, the classes card supplies content, not chrome. */
+.lc-featured__body .bc-class-feature__card {
+  border: 0;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+  /* Secondary row */
+  .lc-secondary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 44px;
+  }
+
+  .lc-mini {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    background: #fffffb;
+    border: 1px solid #e2ded5;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+  }
+  .lc-mini:hover { border-color: #c9c3b8; }
+
+  .lc-mini__art { min-height: 96px; }
+  .lc-mini__body { padding: 15px 17px; }
+
+  .lc-mini__body h3 {
+    margin: 0 0 4px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .lc-mini__body p {
+    margin: 0;
+    font-size: 13px;
+    color: #6f6962;
+  }
+
+  .lc-kicker {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #46613a;
+    background: #e2ebda;
+    padding: 4px 9px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+
+  /* Category columns */
+  .lc-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px;
+    border-top: 1px solid #e2ded5;
+    padding-top: 28px;
+  }
+
+  .lc-cols h2 {
+    font-size: 17px;
+    margin: 0 0 3px;
+  }
+
+  .lc-cols__note {
+    font-size: 13px;
+    color: #7a746d;
+    margin: 0 0 13px;
+  }
+
+  .lc-cols ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .lc-cols li {
+    padding: 7px 0;
+    border-top: 1px solid #ece7dd;
+  }
+  .lc-cols li:first-child { border-top: none; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .lc-featured { grid-template-columns: 1fr; }
+    .lc-featured__art { min-height: 140px; }
+    .lc-secondary { grid-template-columns: 1fr; }
+    .lc-cols { grid-template-columns: 1fr; gap: 26px; }
+  }
+
+  /* ---------- Card art ----------
+     Placeholder geometry. Swap each rule for your real art, e.g.
+       background: url("/help/5/article/IMAGE-URL") center / cover no-repeat;
+  */
+  .lc-art--classes {
+    background: repeating-linear-gradient(0deg, #8a9a7b 0 16px, #a9b69b 16px 32px);
+  }
+  .lc-art--guide {
+    background: radial-gradient(circle at 50% 110%, #6b7d8f 0 62px, #d7cfc0 62px);
+  }
+  .lc-art--community {
+    background: linear-gradient(225deg, #c08552 0 50%, #2c3e4f 50%);
+  }
+/* Help Scout puts margin-bottom on every div in an article body.
+   On a grid item that margin inflates the row height. */
+.lc-featured > *,
+.lc-mini > *,
+.lc-cols > * {
+  margin-bottom: 0 !important;
+}
+
+.lc-featured__body .bc-class-feature__card::before {
+  content: "Next live class";
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8a6a2e;
+  background: #f2e6c9;
+  padding: 4px 9px;
+  border-radius: 4px;
+  margin-bottom: 11px;
+}
+</style>
+
+
+
+
+
+<style>
+  /* ---------- Classes page ---------- */
+/* ---------- Live classes: base ---------- */
+
+
+.bc-class-feature a {
+  display: block;
+  background: #fffffb;
+  border: 1px solid #e2ded5;
+  border-radius: 10px;
+  padding: 22px 26px;
+  text-decoration: none;
+  color: #2d2a26;
+}
+.bc-class-feature a:hover { border-color: #c9c3b8; }
+
+.bc-class-feature__title {
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin-bottom: 5px;
+}
+
+.bc-class-feature__meta {
+  display: block;
+  font-size: 15px;
+  color: #6f6962;
+}
+
+.bc-class-feature__card + .bc-class-feature__card { margin-top: 12px; }
+  .cl-lede { font-size: 17px; max-width: 64ch; margin: 0 0 30px; }
+
+  .cl-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 44px;
+  }
+
+  .cl-card {
+    background: #fffffb;
+    border: 1px solid #e2ded5;
+    border-radius: 9px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cl-card__art { height: 8px; }
+  .cl-art--intro { background: linear-gradient(90deg, #8a9a7b, #a9b69b); }
+  .cl-art--pro   { background: linear-gradient(90deg, #2c3e4f, #57687a); }
+  .cl-art--hours { background: linear-gradient(90deg, #c08552, #d8a878); }
+
+  .cl-card__body { padding: 20px 22px; flex: 1; }
+  .cl-card__body h3 { margin: 0 0 6px; font-size: 17px; font-weight: 600; }
+  .cl-card__body p { margin: 0; font-size: 14px; color: #6f6962; }
+
+  /* ---- Card footers: three rows, identical in every state ---- */
+
+  .cl-card__next {
+    border-top: 1px solid #ece7dd;
+    padding: 14px 22px 16px;
+  }
+
+  /* .bc-class-feature is a div, so Help Scout's bottom margin applies. */
+  .cl-card__next .bc-class-feature { margin-bottom: 0 !important; }
+
+  .cl-card__label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #9b948c;
+    margin-bottom: 4px;
+  }
+
+   /* Row three reserves two lines whether it needs them or not, so a
+     wrapping topic doesn't push this card's label above the others. */
+  .cl-card__sub,
+  .cl-card__next .bc-class-feature__topic {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #585858;
+    margin-top: 3px;
+    line-height: 1.45;
+    min-height: 2.9em;
+  }
+
+  .cl-card__next .bc-class-feature__topic { order: 2; }
+  /* When the feed supplies a real topic, the static line steps aside. */
+  .cl-card__next:has(.bc-class-feature__topic) .cl-card__sub { display: none; }
+
+  /* Row two when nothing is scheduled. Same slot, same size, quieter. */
+  .cl-card__none {
+    display: block;
+    font-size: 14.5px;
+    color: #9b948c;
+    font-style: italic;
+  }
+
+  /* Inside a card the class name is redundant — the heading says it —
+     and the date belongs above the topic. */
+  .cl-card__next .bc-class-feature__card {
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+  }
+  .cl-card__next .bc-class-feature__title { display: none; }
+  .cl-card__next .bc-class-feature__meta {
+    order: 1;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #1a7ee8;
+  }
+  .cl-card__next .bc-class-feature__topic {
+    order: 2;
+    font-size: 14px;
+    font-weight: 400;
+    color: #585858;
+    margin-top: 3px;
+  }
+
+  /* ---- Topic line elsewhere ---- */
+  .bc-class-feature__topic { display: block; }
+
+  .cl-schedule .bc-class-feature__topic {
+    font-size: 14px;
+    color: #585858;
+  }
+  .lc-featured__body .bc-class-feature__topic {
+    font-size: 15px;
+    color: #6f6962;
+    margin-bottom: 5px;
+  }
+
+  /* The Intro card heading already names the class, so don't repeat it. */
+  .cl-card--intro .bc-class-feature__title { display: none; }
+
+  /* Full schedule list */
+  .cl-schedule { margin-bottom: 44px; }
+  .cl-schedule .bc-class-feature__card {
+    border: 0;
+    border-top: 1px solid #e2ded5;
+    background: none;
+    border-radius: 0;
+    padding: 13px 4px;
+  }
+  .cl-schedule .bc-class-feature.is-live .bc-class-feature__card:last-child {
+    border-bottom: 1px solid #e2ded5;
+  }
+  .cl-schedule .bc-class-feature__card:hover { background: #faf7f0; }
+  .cl-schedule .bc-class-feature__title { font-size: 15px; font-weight: 600; margin-bottom: 1px; }
+  .cl-schedule .bc-class-feature__meta { font-size: 13px; }
+
+  /* Videos */
+  .cl-videos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .cl-videos iframe { width: 100%; border: 0; border-radius: 8px; }
+  .cl-sec div > iframe {
+    display: block;
+    border-radius: 11px;
+  }
+
+  .cl-sec h2 { font-size: 20px; margin: 0 0 4px; }
+  .cl-sec__note { margin: 0 0 18px; color: #7a746d; font-size: 14px; }
+
+  .cl-browse { display: inline-block; margin-top: 18px; font-weight: 600; color: #2c3e4f; }
+
+  /* Help Scout puts margin-bottom on every div in an article body.
+     On a grid item that margin inflates the row height. */
+  .cl-grid > *,
+  .cl-card > *,
+  .cl-videos > * { margin-bottom: 0 !important; }
+
+  @media (max-width: 820px) {
+    .cl-grid, .cl-videos { grid-template-columns: 1fr; }
+  }
+</style>
+
+<style>
+  /* ---------- Help Docs landing ---------- */
+
+  .hd-hero {
+    background: #fffffb;
+    border: 1px solid #e2ded5;
+    border-radius: 12px;
+    padding: 30px 34px 28px;
+    margin-bottom: 34px;
+  }
+  .hd-hero h2 { margin: 0 0 6px; font-size: 24px; letter-spacing: -0.015em; }
+  .hd-hero p { margin: 0 0 18px; color: #55504a; font-size: 16px; }
+
+  .hd-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .hd-chips a {
+    font-size: 13px;
+    background: #f0ece1;
+    border: 1px solid #e2ded5;
+    border-radius: 999px;
+    padding: 6px 13px;
+    text-decoration: none;
+    color: #4a453f;
+  }
+  .hd-chips a:hover { background: #e7e1d3; }
+
+  .hd-tasks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 34px; }
+
+  .hd-task {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 14px;
+    padding: 16px 0;
+    border-top: 1px solid #e7e2d8;
+  }
+  .hd-task__dot { width: 24px; height: 24px; border-radius: 6px; margin-top: 3px; }
+  .hd-dot--project  { background: #8a9a7b; }
+  .hd-dot--notify   { background: #6b7d8f; }
+  .hd-dot--client   { background: #c08552; }
+  .hd-dot--lost     { background: #b98a8a; }
+  .hd-dot--account  { background: #cfa83e; }
+  .hd-dot--broken   { background: #2c3e4f; }
+
+  .hd-task h3 { margin: 0 0 2px; font-size: 16px; font-weight: 600; }
+  .hd-task__note { margin: 0 0 8px; font-size: 13px; color: #6f6962; }
+.hd-task__links {
+  margin: 0;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+.hd-task__links a { color: #2c3e4f; text-decoration: none; }
+.hd-task__links a:hover { text-decoration: underline; }
+.hd-task__links span { display: none; }
+.hd-lede { font-size: 17px; max-width: 64ch; margin: 0 0 30px; color: #4a453f; }
+
+  /* Callout block — a group with its own audience,
+     sitting outside the task rows. */
+  .hd-callout {
+    background: #fffffb;
+    border: 1px solid #e2ded5;
+    border-left: 4px solid #c08552;
+    border-radius: 9px;
+    padding: 20px 24px;
+    margin-top: 38px;
+  }
+  .hd-callout h3 { margin: 0 0 4px; font-size: 17px; font-weight: 600; }
+  .hd-callout > p { margin: 0 0 12px; font-size: 14px; color: #6f6962; }
+
+  /* Links run across rather than stacking — there are only three,
+     and a wide box makes a vertical list look stranded. */
+  .hd-callout .hd-task__links {
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+  }
+
+  .hd-cats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .hd-cat {
+    background: #fffffb;
+    border: 1px solid #e2ded5;
+    border-radius: 8px;
+    padding: 15px 17px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .hd-cat:hover { border-color: #c9c3b8; }
+  .hd-cat strong { display: block; font-size: 15px; margin-bottom: 3px; }
+  .hd-cat em { font-style: normal; font-size: 12px; color: #a09a93; }
+
+  .hd-sec { margin-bottom: 40px; }
+  .hd-sec:last-child { margin-bottom: 0; }
+  .hd-sec h2 { font-size: 19px; margin: 0 0 4px; }
+  .hd-sec__note { margin: 0 0 16px; color: #7a746d; font-size: 14px; }
+
+  /* Help Scout puts margin-bottom on every div in an article body.
+     On a grid item that margin inflates the row height. */
+  .hd-tasks > *,
+  .hd-cats > *,
+  .hd-task > * { margin-bottom: 0 !important; }
+
+  @media (max-width: 900px) { .hd-cats { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 720px) {
+    .hd-tasks { grid-template-columns: 1fr; }
+    .hd-cats { grid-template-columns: 1fr; }
+  }
+</style>
+
+<style>
+  /* ---------- Annotated article list ---------- */
+  .ps-list { list-style: none; margin: 0; padding: 0; }
+  .ps-list li { padding: 14px 0; border-top: 1px solid #e2ded5; }
+  .ps-list li:last-child { border-bottom: 1px solid #e2ded5; }
+  .ps-list a { font-weight: 600; }
+  .ps-list p { margin: 2px 0 0; font-size: 0.95rem; color: #6f6962; }
+</style>
+
+<style>
+  /* ---------- Using Basecamp landing ---------- */
+
+.section-note { margin: 0 0 14px; font-size: 14px; color: #7a746d; }
+  .ub-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .ub-cards--two { grid-template-columns: repeat(2, 1fr); }
+
+  /* Cards are <a>, not <div>, so Help Scout's div margin never applies. */
+  .ub-card {
+    display: block;
+    background: #fffffb;
+    border: 1px solid #e2ded5;
+    border-radius: 8px;
+    padding: 15px 17px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .ub-card:hover { border-color: #c9c3b8; }
+  .ub-card strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #2c3e4f;
+    margin-bottom: 3px;
+  }
+  .ub-card span {
+    display: block;
+    font-size: 13px;
+    color: #6f6962;
+    line-height: 1.45;
+  }
+
+  /* Two-column annotated lists, using CSS columns so there are
+     no wrapper divs to pick up Help Scout's bottom margin. */
+  .ub-cols { columns: 2; column-gap: 34px; }
+  .ub-cols li { break-inside: avoid; }
+
+  @media (max-width: 880px) {
+    .ub-cards { grid-template-columns: repeat(2, 1fr); }
+    .ub-cols { columns: 1; }
+  }
+  @media (max-width: 560px) {
+    .ub-cards, .ub-cards--two { grid-template-columns: 1fr; }
+  }
+</style>
+
+<style>
+  /* ---------- The 37signals Way landing ---------- */
+
+.section-note { margin: 0 0 14px; font-size: 14px; color: #7a746d; }
+  .tw-feat {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    background: #fffffb;
+    border: 1px solid #e2ded5;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 14px;
+  }
+  .tw-feat:hover { border-color: #c9c3b8; }
+
+  /* Placeholder art. Swap for real card art when it exists:
+     background: url("/help/5/article/IMAGE-URL") center / cover no-repeat; */
+  .tw-feat__art {
+    min-height: 150px;
+    background: linear-gradient(135deg, #8a9a7b 0 50%, #cfc7b4 50%);
+  }
+
+  .tw-feat__body { padding: 24px 28px; }
+  .tw-feat__body h3 {
+    margin: 0 0 6px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+  }
+  .tw-feat__body p {
+    margin: 0 0 10px;
+    font-size: 15px;
+    color: #55504a;
+    max-width: 56ch;
+  }
+
+  /* Both children of .tw-feat are divs, so Help Scout's bottom margin
+     would inflate the grid row and leave a gap under the art. */
+  .tw-feat > * { margin-bottom: 0 !important; }
+
+  .tw-kicker {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #46613a;
+    background: #e2ebda;
+    padding: 4px 9px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .tw-mins {
+    display: block;
+    margin-top: 3px;
+    font-size: 13px;
+    color: #8a837b;
+  }
+
+  @media (max-width: 700px) {
+    .tw-feat { grid-template-columns: 1fr; }
+    .tw-feat__art { min-height: 90px; }
+  }
+</style>
+    
+<link rel="stylesheet" href="/static/local.css"></head>
+    
+    <body data-local-page="dbf0ec5e91ba57d1" data-local-auth="false" data-source-comment-total="0">
+        
+<header id="mainNav" class="navbar">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="/help/5/">
+            
+                
+                    <img src="/static/assets/f4674b4739463e9f4d344db8.png" alt="Basecamp 5 Help" width="333" height="75" loading="eager">
+                
+
+            
+            </a>
+            
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            
+            <div class="nav-collapse collapse">
+                <nav role="navigation"><!-- added for accessibility -->
+                <ul class="nav">
+                    
+                    
+                        
+                            <li class="active" id="help-docs"><a href="/help/5/collection/1034-help-docs">Help Docs  <b class="caret"></b></a></li>
+                        
+                            <li id="learning-center"><a href="/help/5/collection/1121-learning-center">Learning Center  <b class="caret"></b></a></li>
+                        
+                    
+                    
+                        <li id="contact"><a href="#" class="contactUs">Contact</a></li>
+                        <li id="contactMobile"><a href="#" class="contactUs">Contact</a></li>
+                    
+                    
+                </ul>
+                </nav>
+            </div><!--/.nav-collapse -->
+        </div><!--/container-->
+    </div><!--/navbar-inner-->
+</header>
+        <section id="contentArea" class="container-fluid">
+            <div class="row-fluid">
+                <section id="main-content" class="span9">
+                    <div class="contentWrapper withRelated">
+                        
+    
+    <article id="fullArticle">
+        <h1 class="title">Managing people</h1>
+    
+        <a href="#" class="printArticle" title="Print this article" aria-label="Print this Article"><i class="icon-print"></i></a>
+        <p>Administrators and account owners can make changes to a user's profile information and access from the "Manage people" page in <a href="/help/5/article/1132-adminland" target="_blank">Adminland</a>.</p>
+<p><b>Jump to:</b></p>
+<ul>
+ <li><a href="#Changing-someones-info-jmVHk" target="_self">Changing someone's info</a></li>
+ <li><a href="#Selecting-project-access-B8EG5" target="_self">Selecting project access</a></li>
+ <li><a href="#Deactivating-2FA-D4NWn" target="_self">Deactivating 2FA</a></li>
+ <li><a href="#Sending-a-link-to-log-in-6CUPN" target="_self">Sending a link to log in</a></li>
+</ul>
+<hr role="separator">
+<h2 id="Changing-someones-info-jmVHk"><a href="#Changing-someones-info-jmVHk" target="_blank">Changing someone's info</a></h2>
+<p>From the "Manage people" screen, click the more options ••• menu located to the right of a user's name, and select the "Edit info" option. From there, owners and admins can update their job title, company/organization, time zone, project access, and <a href="/help/5/article/1093-removing-people-from-projects-and-your-account#Remove-someone-from-your-account-VGC4U" target="_blank">remove users</a> from the account.</p>
+<p style="text-align: center;" class="align-center"><img src="/static/assets/c817fc3243549c0ec713f769.png" alt="Screenshot of a user's more options menu opened. The Edit info option is outlined in a red box." style="max-width: 100%; text-align: center;" loading="eager"></p>
+<div class="callout-yellow">
+ <p><b>🗒️ Note: </b>It's not possible to change another user's name or email address after they've accepted their invite. Users can make their own changes <a href="/identity/edit" target="_blank">here</a>.  </p>
+</div>
+<hr role="separator">
+<h2 id="Selecting-project-access-B8EG5"><a href="#Selecting-project-access-B8EG5" target="_blank">Selecting project access</a></h2>
+<p>Click the more options ••• menu located to the right of a user's name and select "Change access" to update the projects they can access. Admins and owners can also <a href="/help/5/article/1180-changing-user-types" target="_blank">change a user's type</a> on the bottom this page.</p>
+<p style="text-align: center;" class="align-center"><img src="/static/assets/8515fd54c6f36b5308fd4c38.png" alt="Screenshot of a user's more options menu opened. The Change access option is outlined in a red box." style="max-width: 100%; text-align: center;" loading="eager"></p>
+<div class="callout-yellow">
+ <p><b>🗒️ Note: </b>To add someone to your team, update their company to the <a href="/help/5/article/1092-companies#Creating-new-companies-NVPXg" target="_blank">account's primary company</a> from the "Edit info" screen.</p>
+</div>
+<hr role="separator">
+<h2 id="Deactivating-2FA-D4NWn"><a href="#Deactivating-2FA-D4NWn" target="_blank">Deactivating 2FA</a></h2>
+<p>If a user lost access to their <a href="/help/5/article/1156-password-two-factor-authentication#Setting-up-two-factor-authentication-YSh9g" target="_blank">2FA</a> app and recovery codes, an account owner or admin can turn off the 2FA enabled on their login. From the "Manage people" page in Adminland, click the more options menu ••• located to the right of the user's profile and select the "Turn off 2FA" option:</p>
+<p style="text-align: center;" class="align-center"><img src="/static/assets/62a224ffe9c1d02f732a1195.png" alt="Screenshot of a user's more options menu opened. The Turn off 2FA option is outlined in a red box." style="max-width: 100%; text-align: center;" loading="eager"></p>
+<hr role="separator">
+<h2 id="Sending-a-link-to-log-in-6CUPN"><a href="#Sending-a-link-to-log-in-6CUPN" target="_blank">Sending a link to log in</a></h2>
+<p>If a new user has trouble finding their invitation, click the more options menu ••• located to the right of the user's profile, and click the "Send a link to log in" option:</p>
+<p style="text-align: center;" class="align-center"><img src="/static/assets/e72187e73706185ccb2e678f.png" style="width: 740px; text-align: center;" loading="eager"></p>
+<p>Basecamp will email the new user another invitation to join your Basecamp account. The email includes a unique link they’ll use to create their user account. After that, they'll be all set to log in on a <a href="/signin" target="_blank">web browser </a>or <a href="/help/5/category/1145-apps-integrations" target="_blank">app</a>.</p>
+<div class="callout-yellow">
+ <p>🗒️ <b>Note: </b>New users need to accept their email invitation before they can log in.</p>
+</div>
+    </article>
+    
+
+    <section class="articleFoot">
+    
+        <i class="icon-contact"></i>
+        <p class="help">Still need help?
+            <a id="sbContact" href="#" class="contactUs">Contact Us</a>
+            <a id="sbContactMobile" href="#" class="contactUs">Contact Us</a>
+        </p>
+    
+
+    <time class="lu" datetime="2026-06-11">Last updated on June 11, 2026</time>
+    </section>
+
+                    </div><!--/contentWrapper-->
+                    
+                        <section class="related">
+                            <h3>Related Articles</h3>
+                            <ul>
+                                
+                                    <li><a href="/help/5/article/1171-permissions"><i class="icon-article-doc"></i><span>Permissions</span></a></li>
+                                
+                                    <li><a href="/help/5/article/1180-changing-user-types"><i class="icon-article-doc"></i><span>Changing user types</span></a></li>
+                                
+                                    <li><a href="/help/5/article/1092-companies"><i class="icon-article-doc"></i><span>Organizing users with Companies and Groups</span></a></li>
+                                
+                                    <li><a href="/help/5/article/1093-removing-people-from-projects-and-your-account"><i class="icon-article-doc"></i><span>Removing people from Projects and your account</span></a></li>
+                                
+                            </ul>
+                        </section>
+                    
+                </section><!--/content-->
+                <aside id="sidebar" class="span3">
+                 
+
+<form action="/help/5/search" method="GET" id="searchBar" class="sm" autocomplete="off">
+    
+                    <input type="hidden" name="collectionId" value="69b2e804aff745e8eb441c24">
+                    <input type="text" name="query" title="search-query" class="search-query" placeholder="Search" value="" aria-label="Search">
+                    <button type="submit">
+                        <span class="sr-only">Toggle Search</span>
+                        <i class="icon-search"></i>
+                    </button>
+                    <div id="serp-dd" style="display: none;" class="sb">
+                        <ul class="result">
+                        </ul>
+                    </div>
+                
+</form>
+
+                
+                    <h3>Categories</h3>
+                    <ul class="nav nav-list">
+                    
+                        
+                            <li><a href="/help/5/category/1053-getting-started">Getting Started  <i class="icon-arrow"></i></a></li>
+                        
+                    
+                        
+                            <li><a href="/help/5/category/1041-using-basecamp">Using Basecamp  <i class="icon-arrow"></i></a></li>
+                        
+                    
+                        
+                            <li class="active"><a href="/help/5/category/1047-working-with-your-team">Working With Your Team  <i class="icon-arrow"></i></a></li>
+                        
+                    
+                        
+                            <li><a href="/help/5/category/1043-account-billing">Account, Billing, &amp; Settings  <i class="icon-arrow"></i></a></li>
+                        
+                    
+                        
+                            <li><a href="/help/5/category/1153-personal-settings">Personal Settings  <i class="icon-arrow"></i></a></li>
+                        
+                    
+                        
+                            <li><a href="/help/5/category/1145-apps-integrations">Apps &amp; Integrations  <i class="icon-arrow"></i></a></li>
+                        
+                    
+                        
+                            <li><a href="/help/5/category/1042-troubleshooting-faqs">Troubleshooting &amp; FAQs  <i class="icon-arrow"></i></a></li>
+                        
+                    
+                        
+                            <li><a href="/help/5/category/1206-moving-from-basecamp-2">Moving from Basecamp 2  <i class="icon-arrow"></i></a></li>
+                        
+                    
+                    </ul>
+                
+                </aside><!--/span-->
+            </div><!--/row-->
+            <div id="noResults" style="display:none;">No results found</div>
+            <footer>
+                
+
+<p>©
+    
+        <a href="">37signals</a>
+    
+    2026. <span>Powered by <a rel="nofollow noopener noreferrer" href="/external?target=https%3A%2F%2Fwww.helpscout.com%2Fdocs-refer%2F%3Fco%3D37signals%26utm_source%3Ddocs%26utm_medium%3Dfooterlink%26utm_campaign%3DDocs%2BBranding" target="_blank">Help Scout</a></span>
+    
+        
+    
+    
+</p>
+
+            </footer>
+        </section><!--/.fluid-container-->
+        
+            
+
+<div id="beacon-container"><div class="hsds-beacon"><div class="Beacon"><div class="BeaconFabButtonFrame" style="border-radius: 42px; height: 42px; position: fixed; transform: scale(1); width: 106px; z-index: 1049; --pulse-background: #2377d2; --pulse-left-offset: 23px; --pulse-top-offset: -9px;"><style>.BeaconFabButtonFrame {
+  border: none;
+  bottom: 40px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  right: 40px;
+  top: auto;
+  transition:
+    box-shadow 250ms ease,
+    opacity 0.4s ease,
+    scale 0.125s ease-in-out,
+    transform 0.2s ease-in-out;
+}
+
+.BeaconFabButtonFrame:hover {
+    scale: 1.125;
+  }
+
+.BeaconFabButtonFrame:active {
+    box-shadow: none;
+  }
+
+.BeaconFabButtonFrame iframe {
+    border: none;
+    height: 100%;
+    width: 100%;
+    color-scheme: light !important;
+  }
+
+@media (max-height: 740px) {
+
+.BeaconFabButtonFrame {
+    bottom: 10px;
+    right: 20px;
+}
+  }
+
+@supports (--css: variables) {
+  .BeaconFabButtonPulse svg {
+    display: none;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: var(--pulse-top-offset);
+    left: var(--pulse-left-offset);
+    fill: var(--pulse-background);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .BeaconFabButtonPulse.is-visible svg {
+    display: block !important;
+    opacity: 0.2;
+    animation:
+      1.03s cubic-bezier(0.28, 0.53, 0.7, 1) pulse-scale 0.13s both,
+      0.76s cubic-bezier(0.42, 0, 0.58, 1) pulse-fade-out 0.4s both;
+  }
+
+  @keyframes pulse-scale {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(4);
+    }
+  }
+
+  @keyframes pulse-fade-out {
+    0% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+.BeaconFabButtonFrame--left {
+  left: 40px;
+  right: initial;
+}
+
+@media (max-height: 740px) {
+
+.BeaconFabButtonFrame--left {
+    left: 20px;
+    right: initial;
+}
+  }
+</style><div class="BeaconFabButtonPulse "><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 60 60" preserveaspectratio="none" aria-hidden="true">
+  <path d="M60 30C60 51.25 51.25 60 30 60C8.75 60 1.99634e-09 51.25 1.99563e-09 30C1.99492e-09 8.75 8.75 0 30 0C51.25 0 60 8.75 60 30Z"></path>
+</svg>
+</div><iframe id="" data-cy="FrameComponent" aria-label="Toggle Customer Support"></iframe></div></div></div></div><script defer src="/static/local.js"></script></body></html>

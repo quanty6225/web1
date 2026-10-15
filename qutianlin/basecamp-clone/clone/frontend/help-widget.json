@@ -1,0 +1,46 @@
+{
+  "2": {
+    "labels": {
+      "nameLabel": "Name",
+      "emailLabel": "Email address",
+      "messageLabel": "How can we help?",
+      "messageSubmitLabel": "Send a message",
+      "weAreOnIt": "Help is on the way!",
+      "messageConfirmationText": "Someone from the team is about to read your message and will personally reach out to you soon.",
+      "emailValidationLabel": "Please use a valid email address",
+      "attachmentSizeErrorText": "Attachments may be no larger than 10MB",
+      "searchLabel": "What can we help you with?"
+    },
+    "launcher": "Contact Us",
+    "color": "#0076aa",
+    "avatars": [
+      "/static/assets/0da0e6862b29b7f6bae73abd.png",
+      "/static/assets/92c31a7a72084997a0114e31.jpg",
+      "/static/assets/46ce60a2a637e086a60891da.jpg",
+      "/static/assets/d771c8979f0be0f9147eabdd.png",
+      "/static/assets/56a65e63121b03e0e769404f.png"
+    ]
+  },
+  "5": {
+    "labels": {
+      "nameLabel": "Your Name",
+      "emailLabel": "Your Email",
+      "messageLabel": "How can we help?",
+      "messageSubmitLabel": "Send this message",
+      "weAreOnIt": "Help is on the way!",
+      "messageConfirmationText": "Someone from the team is about to read your message and will personally reach out to you soon.",
+      "emailValidationLabel": "Please use a valid email address",
+      "attachmentSizeErrorText": "Attachments may be no larger than 10MB",
+      "searchLabel": "What can we help you with?"
+    },
+    "launcher": "Need help?",
+    "color": "#2377d2",
+    "avatars": [
+      "/static/assets/0da0e6862b29b7f6bae73abd.png",
+      "/static/assets/bc8a5085425d6ea528d4f19e.png",
+      "/static/assets/46ce60a2a637e086a60891da.jpg",
+      "/static/assets/d771c8979f0be0f9147eabdd.png",
+      "/static/assets/47ca41d1bc459c4d03184877.jpg"
+    ]
+  }
+}

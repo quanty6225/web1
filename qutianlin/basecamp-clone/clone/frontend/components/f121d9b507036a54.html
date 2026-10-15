@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/local.css"></head>
+  <body data-local-page="f121d9b507036a54" data-local-auth="true" data-source-comment-total="0">
+    <turbo-frame id="sidebar_frame">
+  <div class="sidebar__panel" data-controller="sidebar--readings animate-before-submit quick-find roving-tabindex morph-version" data-sidebar-target="reloadable" data-quick-find-match-class="type-highlight" data-action="
+        focusin-&gt;roving-tabindex#activate
+        focusin-&gt;sidebar--readings#rememberFocusedReading
+        focusin-&gt;sidebar--readings#prepareActionSheet
+        pointerdown-&gt;sidebar--readings#prepareActionSheet
+        mouseover-&gt;sidebar--readings#prepareActionSheet
+        expand-&gt;sidebar--readings#prepareActionSheet
+        expand-&gt;sidebar--readings#markDropdownExpanded
+        collapse-&gt;sidebar--readings#unmarkDropdownExpanded
+        sidebar:focusList-&gt;sidebar--readings#focusList
+        turbo:before-morph-element-&gt;morph-version#preventUnchanged
+        turbo:before-morph-element-&gt;quick-find#preventRefreshWhileFiltering
+        turbo:morph-element-&gt;quick-find#highlightMatches:self
+        turbo:morph-element-&gt;sidebar--readings#restoreExpandedActionSheets:self
+        turbo:morph-element-&gt;sidebar--readings#restoreFocus:self
+        turbo:morph-element-&gt;sidebar--readings#refreshEmptyStates:self
+        turbo:morph-element-&gt;roving-tabindex#ensureTabStop:self
+        quick-find:filtered-&gt;roving-tabindex#ensureTabStop
+        quick-find:filtered-&gt;sidebar--readings#refreshVisibility
+        quick-find:refreshSuppressed-&gt;sidebar--readings#consumePendingAdvance
+        quick-find:refreshNeeded-&gt;sidebar#reload">
+    <button type="button" hidden data-hotkey="x" data-action="sidebar--readings#toggleFocusedReading"></button>
+
+    <div class="sidebar__panel-scrollable" data-sidebar-target="scrollable">
+      
+<div class="sidebar__circles" role="group" aria-labelledby="sidebar_pings_heading">
+  <header class="sidebar__circles-header">
+    <h3 class="sidebar__circles-heading" id="sidebar_pings_heading">Ping someone</h3>
+  </header>
+
+  <div class="sidebar__circles-body" data-behavior="expandable" data-controller="turbo-morph" data-action="turbo:before-morph-attribute-&gt;turbo-morph#exceptClass:self">
+    <div class="sidebar__circles-avatars hide-scrollbar" data-controller="list-navigation roving-tabindex" data-action="keydown.left-&gt;list-navigation#focusPreviousElement keydown.right-&gt;list-navigation#focusNextElement keydown.home-&gt;list-navigation#focusFirstElement keydown.end-&gt;list-navigation#focusLastElement keydown.up-&gt;list-navigation#focusPreviousControl keydown.down-&gt;list-navigation#focusNextControl focusin-&gt;roving-tabindex#activate turbo:morph-element-&gt;roving-tabindex#ensureTabStop:self">
+      <button class="sidebar__circle sidebar__circle--new" type="button" data-new-circle data-behavior="toggle_expansion_on_click" aria-expanded="false" data-list-navigation-target="focusable" data-roving-tabindex-target="focusable">
+        <span class="sidebar__circle-new-icon">
+          <svg class="svg-icon svg-icon--plus-solid" aria-hidden="true"><use href="/static/assets/9aa9354221eb8e79173503de.svg#plus-solid"></use></svg>
+          <kbd class="keyboard-shortcut">P</kbd>
+        </span>
+        <span class="sidebar__circle-name">Ping</span>
+      </button>
+
+      
+</div>
+      <section class="blank-slate blank-slate--pings">
+        Pings are direct messages — just click <strong>+</strong>, type someone’s name, and send them a private message.
+        <img alt="" class="blank-slate__arrow" src="/static/assets/f025a840655550bce8621da1.svg" loading="eager">
+      </section>
+
+    <div class="sidebar__new-circle expanded_content" data-behavior="collapse_on_clickoutside" data-controller="group-ping-matches" data-group-ping-matches-url-value="/6302022/my/sidebar/circles/group_matches" data-action="change-&gt;group-ping-matches#refresh focusin-&gt;group-ping-matches#revealMatches">
+      <form data-turbo-frame="sidebar_frame" action="/6302022/my/sidebar/circles" accept-charset="UTF-8" method="post"><div class="sidebar__new-circle-form" data-action="turbo:before-morph-element-&gt;turbo-morph#preventUpdate:self">
+          <bc-autocomplete url="/6302022/autocompletables/circles/people?include_circle_entries=true&amp;include_unnamed_circles=true" multiple class="input input--autocomplete text-14 flex-1" no-results-label="No results found">
+            <input placeholder="Start a private chat…" required="required" data-behavior="focus_on_expand" data-group-ping-matches-target="input" dir="auto" type="text" name="circle[users]" id="circle_users">
+</bc-autocomplete>
+          <input type="submit" name="commit" value="Ping 'em" class="btn btn--primary btn--solid btn--sm text-nowrap" data-disable-with="Ping 'em">
+
+          <turbo-frame data-group-ping-matches-target="frame" data-action="turbo:before-frame-render-&gt;group-ping-matches#screenResponse turbo:frame-load-&gt;group-ping-matches#announce" id="group_ping_matches"></turbo-frame>
+
+          <div class="sr-only" role="status" data-group-ping-matches-target="status"></div>
+        </div>
+</form>    </div>
+  </div>
+</div>
+
+
+      <div class="sidebar__list" data-action="
+            keydown.up-&gt;sidebar--readings#focusPrevious keydown.down-&gt;sidebar--readings#focusNext
+            keydown.left-&gt;sidebar--readings#focusPreviousControl keydown.right-&gt;sidebar--readings#focusNextControl
+            keydown.home-&gt;sidebar--readings#focusFirst keydown.end-&gt;sidebar--readings#focusLast
+            keydown.enter-&gt;sidebar--readings#openFocused">
+        <section class="sidebar__hide-when-empty readings--bubbled-ups" role="group" aria-labelledby="sidebar_bubbled_up_heading" data-sidebar--readings-target="hideableSection">
+        </section>
+
+
+        <section class="readings--unreads" role="group" aria-labelledby="sidebar_new_for_you_heading">
+          <div class="sidebar__no-unreads items-center justify-center text-14 text-subtle">
+            <svg class="svg-icon svg-icon--sparkles-solid" aria-hidden="true"><use href="/static/assets/5db56377261ed7d7b1fc49f4.svg#sparkles-solid"></use></svg> Nothing new for you.
+          </div>
+
+          <div class="sidebar__hide-when-empty" data-sidebar--readings-target="hideableSection">
+            <div data-behavior="expandable" class="">
+              <header class="sidebar__list-header">
+                <h3 class="sidebar__list-heading text-orange" id="sidebar_new_for_you_heading">
+                  <button type="button" class="sidebar__list-heading-toggle" data-behavior="toggle_expansion_on_click" aria-expanded="false">
+                    New for you <svg class="svg-icon svg-icon--chevron-down" aria-hidden="true" size="12"><use href="/static/assets/8f593f8a435ef577ee04941c.svg#chevron-down"></use></svg>
+                  </button>
+                </h3>
+                <form class="contents" method="post" action="/6302022/my/bulk_read"><input class="sidebar__mark-all-read btn btn--xs btn--ghost" data-action="sidebar--readings#readAll" type="submit" value="Mark all read"></form>
+              </header>
+
+              <div class="sidebar__list-settings expanded_content" data-behavior="collapse_on_clickoutside">
+                <form data-controller="form" data-turbo-frame="sidebar_frame" action="/6302022/my/sidebar/settings" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put"><label class="sidebar__list-setting">
+                    <div id="sort_pings_first-switch" class="switch-field" data-action="change-&gt;switch#toggle change-&gt;form#submit" data-controller="switch"><label class="binary-toggle">
+  <input type="checkbox" name="binary-toggle" id="sort_pings_first-switch" value="1" class="binary-toggle__checkbox" role="switch" aria-label="Show Pings first">
+  <div class="binary-toggle__inner" aria-hidden>
+    <div class="binary-toggle__switch" data-switch-target="switch"></div>
+  </div>
+  
+</label>
+<input type="hidden" name="sort_pings_first" id="sort_pings_first" value="false" data-switch-target="hiddenField"></div>
+                    Show Pings first
+                  </label>
+</form>              </div>
+            </div>
+
+            <div id="sidebar_unreads" data-sidebar--readings-target="unreads" data-action="turbo:click-&gt;sidebar--readings#visit">
+              
+<article id="reading_5068406178" class="reading list-grid" role="presentation" data-controller="requires-assets-version" data-requires-assets-version-required-version-value="v1" data-reading="true" data-morph-version="readings/5068406178/recordings/9923662447-20260811012808847433-20261013090601293959" data-sidebar--readings-target="reading" data-section="inbox" data-unread-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy85OTIzNjYyNDQ3" data-unread-url="/6302022/my/unreads/ref-c6415e0620c12c00" data-subscription-url="/6302022/buckets/29924033/recordings/9923662447/subscription.js">
+  
+<a class="reading__link list-grid" data-roving-tabindex-target="focusable" data-sidebar--readings-target="control" href="/6302022/onboarding/messages/9923662447">
+  <div class="reading__avatar" aria-hidden="true" role="presentation">
+    <img data-avatar-for-person-id="onboarding" alt="Basecamp" title="Basecamp" class="avatar" loading="eager" decoding="async" src="/static/assets/cdc6029b140fde59f7226e32.webp" width="40" height="40">
+    <div class="content-type-icon content-type-icon--onboarding content-type-icon--base bg-violet-50 content-type-icon--pinned"><svg class="svg-icon svg-icon--email-solid" aria-hidden="true"><use href="/static/assets/7bfcf0c81f342263c194d4b0.svg#email-solid"></use></svg></div>
+  </div>
+
+  <div class="reading__content" data-quick-find-target="searchable">
+    <h4 class="reading__description margin-block-0">
+      <span class="sr-only">A message from Basecamp,</span>
+      Help, support, and getting in touch
+    </h4>
+
+    <div class="reading__content-excerpt reading__content-excerpt--onboarding truncate">At many software companies, support is an afterthought. It’s something they don’t really want to do. They point you at a bot and make it really hard to talk to a human. That’s just wrong. At Basecamp, great customer service is one of our best features. We want to talk to you! We want you to talk ...</div>
+    <div class="reading__metadata truncate text-subtle">
+      <span class="reading__metadata-chunk">
+        <time datetime="2026-10-13T09:06:01Z" data-local="time-or-date">October 13, 2026  9:06am</time>
+      </span>
+
+      <span class="reading__metadata-chunk" aria-hidden="true" role="presentation">
+        A message from Basecamp
+      </span>
+    </div>
+  </div>
+</a>
+
+  <div class="reading__extras app-mobile__hide">
+    <span class="action-sheet action-sheet--bubble-up" data-behavior="expandable" data-deferred-action-sheet>
+    <button name="button" type="button" title="Bubble up…" aria-label="Bubble up…" aria-haspopup="dialog" aria-expanded="false" class="btn btn--ghost btn--icon btn--sm bubble-trigger" tabindex="-1" data-sidebar--readings-target="control" data-behavior="toggle_expansion_on_click">
+      <svg class="svg-icon svg-icon--bubbles text-blue bubble-trigger__icon bubble-trigger__icon--unscheduled" aria-hidden="true"><use href="/static/assets/c660911cef4c37b8dade19fe.svg#bubbles"></use></svg>
+      <svg class="svg-icon svg-icon--bubble text-blue bubble-trigger__icon bubble-trigger__icon--bubbled" aria-hidden="true"><use href="/assets/icons/sprites-2af0b5bc1d57f837d60c3a1085b6efb9740237b2541ad244ecf1518e642a22a5.svg#bubble"></use></svg>
+</button>
+  <template>
+    <span data-controller="orientation turbo-morph focus-trap list-navigation turbo-frame" data-turbo-frame-clear-on-disconnect-value="false" data-list-navigation-wrap-value="true" data-orientation-flip-class="flip" data-orientation-right-class="right-edge" data-orientation-left-class="left-edge" data-orientation-min-distance-value="80" data-orientation-anchor-value="bottom" data-action="
+          turbo:before-morph-attribute-&gt;turbo-morph#exceptClass:self
+          expand-&gt;orientation#flip
+          turbo:frame-load-&gt;orientation#flip
+          collapse-&gt;orientation#reset
+          expand-&gt;horizontal-offset#offset
+          collapse-&gt;horizontal-offset#reset
+          expand-&gt;focus-trap#activate
+          turbo:frame-load-&gt;focus-trap#activate
+          collapse-&gt;focus-trap#deactivate
+          mouseenter-&gt;turbo-frame#prefetch">
+      <div class="action-sheet__content" role="dialog" aria-label="Bubble up" aria-describedby="bubble_up_prompt_reading_5068406178" aria-modal="true" data-orientation-target="content" data-horizontal-offset-target="content" data-focus-trap-target="region" data-behavior="collapse_on_clickoutside">
+        <turbo-frame loading="lazy" class="action-sheet__lazy-options" data-turbo-frame-target="element" id="bubble_up_actions_reading_5068406178" src="/6302022/my/readings/5068406178/bubble_up/edit"></turbo-frame>
+</div>    </span>
+  </template>
+</span>
+
+
+      <span class="action-sheet reading__actions-toggle" data-behavior="expandable" data-deferred-action-sheet>
+  <button name="button" type="button" class="btn btn--ghost btn--icon btn--sm" title="More actions…" aria-label="More actions…" aria-expanded="false" tabindex="-1" data-action="keydown.down-&gt;list-navigation#focusNext" data-sidebar--readings-target="control" data-behavior="toggle_expansion_on_click">
+    <svg class="svg-icon svg-icon--overflow" aria-hidden="true" size="20"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg>
+</button>
+  <template>
+    <span data-controller="orientation turbo-morph list-navigation" data-list-navigation-wrap-value="true" data-orientation-flip-class="flip" data-orientation-right-class="right-edge" data-orientation-left-class="left-edge" data-orientation-min-distance-value="80" data-orientation-anchor-value="bottom" data-action="
+          turbo:before-morph-attribute-&gt;turbo-morph#exceptClass:self
+          expand-&gt;orientation#flip
+          collapse-&gt;orientation#reset
+          expand-&gt;horizontal-offset#offset
+          collapse-&gt;horizontal-offset#reset">
+      <span class="action-sheet__content" data-orientation-target="content" data-horizontal-offset-target="content" data-behavior="collapse_on_clickoutside">
+        <form class="contents" method="post" action="/6302022/my/readings/5068406178"><input type="hidden" name="_method" value="patch"><input label="Mark as unread" title="Mark as unread" tabindex="-1" class="action-sheet__action" data-turbo="true" data-action="keydown.up-&gt;list-navigation#focusPreviousElement keydown.down-&gt;list-navigation#focusNextElement keydown.home-&gt;list-navigation#focusFirstElement keydown.end-&gt;list-navigation#focusLastElement keydown.left-&gt;list-navigation#focusPreviousControl keydown.right-&gt;list-navigation#focusNextControl sidebar--readings#unread" data-behavior="collapse_on_click" data-stop-propagation="false" data-sidebar--readings-target="unreadButton" data-list-navigation-target="focusable" type="submit" value="Mark as unread"></form>
+        
+      </span>
+    </span>
+  </template>
+</span>
+
+
+      <div class="shortcut--container"><kbd class="keyboard-shortcut">X</kbd></div>
+      <form class="button_to" method="post" action="/6302022/my/readings/5068406178"><input type="hidden" name="_method" value="delete"><button type="submit" label="1" title="Mark as read" tabindex="-1" class="unread-badge unread-badge--clearable reading__badge outline-none" aria-label="(1 unread) Mark as read" data-action="sidebar--readings#read" data-badge-count="1" data-sidebar--readings-target="readButton control"><svg class="svg-icon svg-icon--x" aria-hidden="true"><use href="/static/assets/675483664aff3de45e409c28.svg#x"></use></svg></button></form>
+  </div>
+</article>
+<article id="reading_5068406174" class="reading list-grid" role="presentation" data-controller="requires-assets-version" data-requires-assets-version-required-version-value="v1" data-reading="true" data-morph-version="readings/5068406174/recordings/9923661869-20261008212729138310-20261013090601270069" data-sidebar--readings-target="reading" data-section="inbox" data-unread-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy85OTIzNjYxODY5" data-unread-url="/6302022/my/unreads/ref-83053f7b906ba17b" data-subscription-url="/6302022/buckets/29924033/recordings/9923661869/subscription.js">
+  
+<a class="reading__link list-grid" data-roving-tabindex-target="focusable" data-sidebar--readings-target="control" href="/6302022/onboarding/messages/9923661869">
+  <div class="reading__avatar" aria-hidden="true" role="presentation">
+    <img data-avatar-for-person-id="onboarding" alt="Basecamp" title="Basecamp" class="avatar" loading="eager" decoding="async" src="/static/assets/cdc6029b140fde59f7226e32.webp" width="40" height="40">
+    <div class="content-type-icon content-type-icon--onboarding content-type-icon--base bg-violet-50 content-type-icon--pinned"><svg class="svg-icon svg-icon--email-solid" aria-hidden="true"><use href="/static/assets/7bfcf0c81f342263c194d4b0.svg#email-solid"></use></svg></div>
+  </div>
+
+  <div class="reading__content" data-quick-find-target="searchable">
+    <h4 class="reading__description margin-block-0">
+      <span class="sr-only">A message from Basecamp,</span>
+      Inviting others to Basecamp
+    </h4>
+
+    <div class="reading__content-excerpt reading__content-excerpt--onboarding truncate">There are two primary ways to invite co-workers, colleagues, contractors, clients, or anyone else to your Basecamp account. You can invite them to a specific project, from that project. This is a good fit if you just want them to have access to one thing right now. You can invite them to the acco...</div>
+    <div class="reading__metadata truncate text-subtle">
+      <span class="reading__metadata-chunk">
+        <time datetime="2026-10-13T09:06:01Z" data-local="time-or-date">October 13, 2026  9:06am</time>
+      </span>
+
+      <span class="reading__metadata-chunk" aria-hidden="true" role="presentation">
+        A message from Basecamp
+      </span>
+    </div>
+  </div>
+</a>
+
+  <div class="reading__extras app-mobile__hide">
+    <span class="action-sheet action-sheet--bubble-up" data-behavior="expandable" data-deferred-action-sheet>
+    <button name="button" type="button" title="Bubble up…" aria-label="Bubble up…" aria-haspopup="dialog" aria-expanded="false" class="btn btn--ghost btn--icon btn--sm bubble-trigger" tabindex="-1" data-sidebar--readings-target="control" data-behavior="toggle_expansion_on_click">
+      <svg class="svg-icon svg-icon--bubbles text-blue bubble-trigger__icon bubble-trigger__icon--unscheduled" aria-hidden="true"><use href="/static/assets/c660911cef4c37b8dade19fe.svg#bubbles"></use></svg>
+      <svg class="svg-icon svg-icon--bubble text-blue bubble-trigger__icon bubble-trigger__icon--bubbled" aria-hidden="true"><use href="/assets/icons/sprites-2af0b5bc1d57f837d60c3a1085b6efb9740237b2541ad244ecf1518e642a22a5.svg#bubble"></use></svg>
+</button>
+  <template>
+    <span data-controller="orientation turbo-morph focus-trap list-navigation turbo-frame" data-turbo-frame-clear-on-disconnect-value="false" data-list-navigation-wrap-value="true" data-orientation-flip-class="flip" data-orientation-right-class="right-edge" data-orientation-left-class="left-edge" data-orientation-min-distance-value="80" data-orientation-anchor-value="bottom" data-action="
+          turbo:before-morph-attribute-&gt;turbo-morph#exceptClass:self
+          expand-&gt;orientation#flip
+          turbo:frame-load-&gt;orientation#flip
+          collapse-&gt;orientation#reset
+          expand-&gt;horizontal-offset#offset
+          collapse-&gt;horizontal-offset#reset
+          expand-&gt;focus-trap#activate
+          turbo:frame-load-&gt;focus-trap#activate
+          collapse-&gt;focus-trap#deactivate
+          mouseenter-&gt;turbo-frame#prefetch">
+      <div class="action-sheet__content" role="dialog" aria-label="Bubble up" aria-describedby="bubble_up_prompt_reading_5068406174" aria-modal="true" data-orientation-target="content" data-horizontal-offset-target="content" data-focus-trap-target="region" data-behavior="collapse_on_clickoutside">
+        <turbo-frame loading="lazy" class="action-sheet__lazy-options" data-turbo-frame-target="element" id="bubble_up_actions_reading_5068406174" src="/6302022/my/readings/5068406174/bubble_up/edit"></turbo-frame>
+</div>    </span>
+  </template>
+</span>
+
+
+      <span class="action-sheet reading__actions-toggle" data-behavior="expandable" data-deferred-action-sheet>
+  <button name="button" type="button" class="btn btn--ghost btn--icon btn--sm" title="More actions…" aria-label="More actions…" aria-expanded="false" tabindex="-1" data-action="keydown.down-&gt;list-navigation#focusNext" data-sidebar--readings-target="control" data-behavior="toggle_expansion_on_click">
+    <svg class="svg-icon svg-icon--overflow" aria-hidden="true" size="20"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg>
+</button>
+  <template>
+    <span data-controller="orientation turbo-morph list-navigation" data-list-navigation-wrap-value="true" data-orientation-flip-class="flip" data-orientation-right-class="right-edge" data-orientation-left-class="left-edge" data-orientation-min-distance-value="80" data-orientation-anchor-value="bottom" data-action="
+          turbo:before-morph-attribute-&gt;turbo-morph#exceptClass:self
+          expand-&gt;orientation#flip
+          collapse-&gt;orientation#reset
+          expand-&gt;horizontal-offset#offset
+          collapse-&gt;horizontal-offset#reset">
+      <span class="action-sheet__content" data-orientation-target="content" data-horizontal-offset-target="content" data-behavior="collapse_on_clickoutside">
+        <form class="contents" method="post" action="/6302022/my/readings/5068406174"><input type="hidden" name="_method" value="patch"><input label="Mark as unread" title="Mark as unread" tabindex="-1" class="action-sheet__action" data-turbo="true" data-action="keydown.up-&gt;list-navigation#focusPreviousElement keydown.down-&gt;list-navigation#focusNextElement keydown.home-&gt;list-navigation#focusFirstElement keydown.end-&gt;list-navigation#focusLastElement keydown.left-&gt;list-navigation#focusPreviousControl keydown.right-&gt;list-navigation#focusNextControl sidebar--readings#unread" data-behavior="collapse_on_click" data-stop-propagation="false" data-sidebar--readings-target="unreadButton" data-list-navigation-target="focusable" type="submit" value="Mark as unread"></form>
+        
+      </span>
+    </span>
+  </template>
+</span>
+
+
+      <div class="shortcut--container"><kbd class="keyboard-shortcut">X</kbd></div>
+      <form class="button_to" method="post" action="/6302022/my/readings/5068406174"><input type="hidden" name="_method" value="delete"><button type="submit" label="1" title="Mark as read" tabindex="-1" class="unread-badge unread-badge--clearable reading__badge outline-none" aria-label="(1 unread) Mark as read" data-action="sidebar--readings#read" data-badge-count="1" data-sidebar--readings-target="readButton control"><svg class="svg-icon svg-icon--x" aria-hidden="true"><use href="/static/assets/675483664aff3de45e409c28.svg#x"></use></svg></button></form>
+  </div>
+</article>
+<article id="reading_5068406173" class="reading list-grid" role="presentation" data-controller="requires-assets-version" data-requires-assets-version-required-version-value="v1" data-reading="true" data-morph-version="readings/5068406173/recordings/9923661571-20261008212403117866-20261013090601239392" data-sidebar--readings-target="reading" data-section="inbox" data-unread-readable-identifier="Z2lkOi8vYmMzL1JlY29yZGluZy85OTIzNjYxNTcx" data-unread-url="/6302022/my/unreads/ref-59afc6484afc762b" data-subscription-url="/6302022/buckets/29924033/recordings/9923661571/subscription.js">
+  
+<a class="reading__link list-grid" data-roving-tabindex-target="focusable" data-sidebar--readings-target="control" href="/6302022/onboarding/messages/9923661571">
+  <div class="reading__avatar" aria-hidden="true" role="presentation">
+    <img data-avatar-for-person-id="onboarding" alt="Basecamp" title="Basecamp" class="avatar" loading="eager" decoding="async" src="/static/assets/cdc6029b140fde59f7226e32.webp" width="40" height="40">
+    <div class="content-type-icon content-type-icon--onboarding content-type-icon--base bg-violet-50 content-type-icon--pinned"><svg class="svg-icon svg-icon--email-solid" aria-hidden="true"><use href="/static/assets/7bfcf0c81f342263c194d4b0.svg#email-solid"></use></svg></div>
+  </div>
+
+  <div class="reading__content" data-quick-find-target="searchable">
+    <h4 class="reading__description margin-block-0">
+      <span class="sr-only">A message from Basecamp,</span>
+      Getting around with the Basecamp menu
+    </h4>
+
+    <div class="reading__content-excerpt reading__content-excerpt--onboarding truncate">On every page you’ll find the Basecamp menu centered at the top of the screen. This is your ticket to get anywhere from anywhere, anytime. Click it (or hit SHIFT-J on your keyboard) and you’ll see buttons to global sections like Activity, Calendar, Reports, and Everything. Right below that is the...</div>
+    <div class="reading__metadata truncate text-subtle">
+      <span class="reading__metadata-chunk">
+        <time datetime="2026-10-13T09:06:01Z" data-local="time-or-date">October 13, 2026  9:06am</time>
+      </span>
+
+      <span class="reading__metadata-chunk" aria-hidden="true" role="presentation">
+        A message from Basecamp
+      </span>
+    </div>
+  </div>
+</a>
+
+  <div class="reading__extras app-mobile__hide">
+    <span class="action-sheet action-sheet--bubble-up" data-behavior="expandable" data-deferred-action-sheet>
+    <button name="button" type="button" title="Bubble up…" aria-label="Bubble up…" aria-haspopup="dialog" aria-expanded="false" class="btn btn--ghost btn--icon btn--sm bubble-trigger" tabindex="-1" data-sidebar--readings-target="control" data-behavior="toggle_expansion_on_click">
+      <svg class="svg-icon svg-icon--bubbles text-blue bubble-trigger__icon bubble-trigger__icon--unscheduled" aria-hidden="true"><use href="/static/assets/c660911cef4c37b8dade19fe.svg#bubbles"></use></svg>
+      <svg class="svg-icon svg-icon--bubble text-blue bubble-trigger__icon bubble-trigger__icon--bubbled" aria-hidden="true"><use href="/assets/icons/sprites-2af0b5bc1d57f837d60c3a1085b6efb9740237b2541ad244ecf1518e642a22a5.svg#bubble"></use></svg>
+</button>
+  <template>
+    <span data-controller="orientation turbo-morph focus-trap list-navigation turbo-frame" data-turbo-frame-clear-on-disconnect-value="false" data-list-navigation-wrap-value="true" data-orientation-flip-class="flip" data-orientation-right-class="right-edge" data-orientation-left-class="left-edge" data-orientation-min-distance-value="80" data-orientation-anchor-value="bottom" data-action="
+          turbo:before-morph-attribute-&gt;turbo-morph#exceptClass:self
+          expand-&gt;orientation#flip
+          turbo:frame-load-&gt;orientation#flip
+          collapse-&gt;orientation#reset
+          expand-&gt;horizontal-offset#offset
+          collapse-&gt;horizontal-offset#reset
+          expand-&gt;focus-trap#activate
+          turbo:frame-load-&gt;focus-trap#activate
+          collapse-&gt;focus-trap#deactivate
+          mouseenter-&gt;turbo-frame#prefetch">
+      <div class="action-sheet__content" role="dialog" aria-label="Bubble up" aria-describedby="bubble_up_prompt_reading_5068406173" aria-modal="true" data-orientation-target="content" data-horizontal-offset-target="content" data-focus-trap-target="region" data-behavior="collapse_on_clickoutside">
+        <turbo-frame loading="lazy" class="action-sheet__lazy-options" data-turbo-frame-target="element" id="bubble_up_actions_reading_5068406173" src="/6302022/my/readings/5068406173/bubble_up/edit"></turbo-frame>
+</div>    </span>
+  </template>
+</span>
+
+
+      <span class="action-sheet reading__actions-toggle" data-behavior="expandable" data-deferred-action-sheet>
+  <button name="button" type="button" class="btn btn--ghost btn--icon btn--sm" title="More actions…" aria-label="More actions…" aria-expanded="false" tabindex="-1" data-action="keydown.down-&gt;list-navigation#focusNext" data-sidebar--readings-target="control" data-behavior="toggle_expansion_on_click">
+    <svg class="svg-icon svg-icon--overflow" aria-hidden="true" size="20"><use href="/static/assets/1300177fca26d7876e13296f.svg#overflow"></use></svg>
+</button>
+  <template>
+    <span data-controller="orientation turbo-morph list-navigation" data-list-navigation-wrap-value="true" data-orientation-flip-class="flip" data-orientation-right-class="right-edge" data-orientation-left-class="left-edge" data-orientation-min-distance-value="80" data-orientation-anchor-value="bottom" data-action="
+          turbo:before-morph-attribute-&gt;turbo-morph#exceptClass:self
+          expand-&gt;orientation#flip
+          collapse-&gt;orientation#reset
+          expand-&gt;horizontal-offset#offset
+          collapse-&gt;horizontal-offset#reset">
+      <span class="action-sheet__content" data-orientation-target="content" data-horizontal-offset-target="content" data-behavior="collapse_on_clickoutside">
+        <form class="contents" method="post" action="/6302022/my/readings/5068406173"><input type="hidden" name="_method" value="patch"><input label="Mark as unread" title="Mark as unread" tabindex="-1" class="action-sheet__action" data-turbo="true" data-action="keydown.up-&gt;list-navigation#focusPreviousElement keydown.down-&gt;list-navigation#focusNextElement keydown.home-&gt;list-navigation#focusFirstElement keydown.end-&gt;list-navigation#focusLastElement keydown.left-&gt;list-navigation#focusPreviousControl keydown.right-&gt;list-navigation#focusNextControl sidebar--readings#unread" data-behavior="collapse_on_click" data-stop-propagation="false" data-sidebar--readings-target="unreadButton" data-list-navigation-target="focusable" type="submit" value="Mark as unread"></form>
+        
+      </span>
+    </span>
+  </template>
+</span>
+
+
+      <div class="shortcut--container"><kbd class="keyboard-shortcut">X</kbd></div>
+      <form class="button_to" method="post" action="/6302022/my/readings/5068406173"><input type="hidden" name="_method" value="delete"><button type="submit" label="1" title="Mark as read" tabindex="-1" class="unread-badge unread-badge--clearable reading__badge outline-none" aria-label="(1 unread) Mark as read" data-action="sidebar--readings#read" data-badge-count="1" data-sidebar--readings-target="readButton control"><svg class="svg-icon svg-icon--x" aria-hidden="true"><use href="/static/assets/675483664aff3de45e409c28.svg#x"></use></svg></button></form>
+  </div>
+</article>
+            </div>
+          </div>
+        </section>
+
+        <section class="sidebar__hide-when-empty readings--reads" role="group" aria-labelledby="sidebar_previous_notifications_heading" data-sidebar--readings-target="hideableSection">
+          <header class="sidebar__list-header">
+            <h3 class="sidebar__list-heading" id="sidebar_previous_notifications_heading">Previous notifications</h3>
+          </header>
+          <div id="sidebar_reads">
+            <bc-infinite-page page="1" id="sidebar_reads_pagination" data-quick-find-target="pagination" scroll-container=".sidebar__panel-scrollable">
+              <div data-infinite-page-container data-sidebar--readings-target="reads">
+                
+              </div>
+</bc-infinite-page>          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="sidebar__filter">
+  <div class="filter-by-text">
+    <input type="text" dir="auto" id="sidebar_filter_query" class="input filter-by-text__input text-14" data-quick-find-target="query" data-action="input-&gt;quick-find#search keydown.esc-&gt;quick-find#dismiss:stop focusin-&gt;quick-find#preloadPages" data-turbo-permanent placeholder="Filter…" aria-label="Filter…">
+
+    <button type="button" class="plain-btn search-query__icon" data-action="quick-find#clear" aria-label="Clear filter text">
+      <svg class="svg-icon svg-icon--x-circle-solid" aria-hidden="true"><use href="/static/assets/e507e2d7c3bf27cd3d14819a.svg#x-circle-solid"></use></svg>
+    </button>
+  </div>
+
+    <div class="sidebar__focus">
+      <div class="focus-mode__toggle tray__action text-14">
+  <button class="focus-mode__toggle--off" name="button" type="button" aria-label="Pause notifications" data-behavior="enable_focus_mode" data-url="/6302022/my/notifications/snooze" data-verb="PUT">
+    <svg class="svg-icon svg-icon--bell" aria-hidden="true"><use href="/static/assets/916f610ab872272a8f7d20df.svg#bell"></use></svg>Shhh…<kbd class="keyboard-shortcut">Z</kbd>
+  </button>
+  <button class="focus-mode__toggle--on" name="button" type="button" aria-label="Resume notifications" data-behavior="toggle_notifications" data-url="/6302022/my/notifications/toggle" data-verb="DELETE">
+    <svg class="svg-icon svg-icon--bell-off-solid" aria-hidden="true"><use href="/static/assets/52ae10cdcdebc5c0c28ff518.svg#bell-off-solid"></use></svg>Silencing notifications<kbd class="keyboard-shortcut">Z</kbd>
+  </button>
+</div>
+
+    </div>
+</div>
+
+  </div>
+</turbo-frame>
+  <script defer src="/static/local.js"></script></body>
+</html>

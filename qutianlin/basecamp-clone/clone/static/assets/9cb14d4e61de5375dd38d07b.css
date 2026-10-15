@@ -1,0 +1,77 @@
+:root {
+
+  --rgb-black: 0, 0, 0;
+  --rgb-error: 255, 1, 1;
+  --rgb-white: 255, 255, 255;
+
+  --rgb-theme: var(--rgb-black);
+  --rgb-theme-1: 244, 103, 199;
+  --rgb-theme-2: 190, 82, 255;
+  --rgb-theme-3: 139, 119, 255;
+  --rgb-theme-4: 0, 170, 194;
+  --rgb-theme-5: 154, 162, 0;
+  --rgb-theme-6: 248, 121, 23;
+  --rgb-theme-7: 240, 177, 3;
+  --rgb-theme-8: 204, 61, 51;
+  --rgb-theme-9: 41, 152, 80;
+  --rgb-theme-10: 0, 100, 230;
+  --rgb-theme-11: 236, 67, 67;
+  --rgb-theme-12: 207, 111, 182;
+
+  --color-black: rgb(var(--rgb-black));
+  --color-error: rgb(var(--rgb-error));
+  --color-white: rgb(var(--rgb-white));
+
+  --color-theme: rgb(var(--rgb-theme));
+  --color-theme-1: rgb(var(--rgb-theme-1));
+  --color-theme-2: rgb(var(--rgb-theme-2));
+  --color-theme-3: rgb(var(--rgb-theme-3));
+  --color-theme-4: rgb(var(--rgb-theme-4));
+  --color-theme-5: rgb(var(--rgb-theme-5));
+  --color-theme-6: rgb(var(--rgb-theme-6));
+  --color-theme-7: rgb(var(--rgb-theme-7));
+  --color-theme-8: rgb(var(--rgb-theme-8));
+  --color-theme-9: rgb(var(--rgb-theme-9));
+  --color-theme-10: rgb(var(--rgb-theme-10));
+  --color-theme-11: rgb(var(--rgb-theme-11));
+  --color-theme-12: rgb(var(--rgb-theme-12));
+
+  --font-family: 'Lab Grotesque', Sans-Serif;
+  --font-family-mono: 'Lab Grotesque Mono', Monospace;
+  --font-size: calc(1em + 1vw);
+  --font-size-x-small: 60%;
+  --font-size-small: 80%;
+  --font-size-large: 105%;
+  --font-size-x-large: 110%;
+  --font-size-xx-large: 115%;
+  --font-size-xxx-large: 125%;
+  --font-size-xxxx-large: 140%;
+
+  --line-height: calc(1.3em + 1vw);
+
+  --spacing: 0.75em;
+
+  --transition: 0.2s ease;
+
+}
+
+
+
+@media(min-width: 64em) and (hover: hover) and (pointer: fine) {
+
+  :root {
+
+    --font-size: calc(1.25em + 1vw);
+    --font-size-x-small: 50%;
+    --font-size-small: 65%;
+    --font-size-large: 110%;
+    --font-size-x-large: 120%;
+    --font-size-xx-large: 130%;
+    --font-size-xxx-large: 150%;
+    --font-size-xxxx-large: 180%;
+
+    --line-height: 1.3em;
+
+  }
+
+}

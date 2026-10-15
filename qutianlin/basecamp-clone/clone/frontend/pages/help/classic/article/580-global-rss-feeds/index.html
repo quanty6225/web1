@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class=" webkit chrome linux js"><head>
+    <meta charset="utf-8">
+    <title>Global &amp; RSS feeds - Basecamp Classic Help</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Jump ahead to: RSS basics Setting it up with your projects Setting it up globally Global milestone calendar Using other RSS feed readers OpenID &amp; RSS Security R">
+    <meta name="author" content="37signals">
+    <link rel="canonical" href="/help/classic/article/580-global-rss-feeds">
+    
+        
+   
+            <meta name="twitter:card" content="summary">
+            <meta name="twitter:title" content="Global &amp; RSS feeds">
+            <meta name="twitter:description" content="Jump ahead to: RSS basics Setting it up with your projects Setting it up globally Global milestone calendar Using other RSS feed readers OpenID &amp; RSS Security R">
+
+
+    
+
+    
+        <link rel="stylesheet" href="/static/assets/12c9d037f18bb649cba90626.css">
+    
+    <style>
+        body { background: #ffffff; }
+        .navbar .navbar-inner { background: #2c323d; }
+        .navbar .nav li a, 
+        .navbar .icon-private-w  { color: #c0c0c0; }
+        .navbar .brand, 
+        .navbar .nav li a:hover, 
+        .navbar .nav li a:focus, 
+        .navbar .nav .active a, 
+        .navbar .nav .active a:hover, 
+        .navbar .nav .active a:focus  { color: #ffffff; }
+        .navbar a:hover .icon-private-w, 
+        .navbar a:focus .icon-private-w, 
+        .navbar .active a .icon-private-w, 
+        .navbar .active a:hover .icon-private-w, 
+        .navbar .active a:focus .icon-private-w { color: #ffffff; }
+        #serp-dd .result a:hover,
+        #serp-dd .result > li.active,
+        #fullArticle strong a,
+        #fullArticle a strong,
+        .collection a,
+        .contentWrapper a,
+        .most-pop-articles .popArticles a,
+        .most-pop-articles .popArticles a:hover span,
+        .category-list .category .article-count,
+        .category-list .category:hover .article-count { color: #4381b5; }
+        #fullArticle, 
+        #fullArticle p, 
+        #fullArticle ul, 
+        #fullArticle ol, 
+        #fullArticle li, 
+        #fullArticle div, 
+        #fullArticle blockquote, 
+        #fullArticle dd, 
+        #fullArticle table { color:#585858; }
+    </style>
+    
+        <link rel="stylesheet" href="/static/assets/a01e5a0d9b5ab0d3d71545a3.css">
+    
+    <link rel="apple-touch-icon-precomposed" href="/external?target=https%3A%2F%2Fd33v4339jhl8k0.cloudfront.net%2Fdocs%2Fassets%2F59de6bbc2c7d3a40f0ed605f%2Fimages%2F5ee278922c7d3a10cba8c7d6%2Fsticker.png">
+    <link rel="shortcut icon" type="image/png" href="/external?target=https%3A%2F%2Fd33v4339jhl8k0.cloudfront.net%2Fdocs%2Fassets%2F59de6bbc2c7d3a40f0ed605f%2Fimages%2F5ee2789204286306f80508f7%2Fsticker.png">
+    <!--[if lt IE 9]>
+    
+        <script src="//d3eto7onm69fcz.cloudfront.net/assets/javascripts/html5shiv.min.js"></script>
+    
+    <![endif]-->
+    
+        <link rel="stylesheet" href="/static/local.css"></head>
+    
+    <body data-local-page="e0a0c50c5832401f" data-local-auth="false" data-source-comment-total="0">
+        
+<header id="mainNav" class="navbar">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="/help/classic/">
+            
+                <span>Basecamp Classic Help</span>
+            
+            </a>
+            
+            <div class="nav-collapse collapse">
+                <nav role="navigation"><!-- added for accessibility -->
+                <ul class="nav">
+                    
+                    
+                    
+                    
+                </ul>
+                </nav>
+            </div><!--/.nav-collapse -->
+        </div><!--/container-->
+    </div><!--/navbar-inner-->
+</header>
+        <section id="contentArea" class="container-fluid">
+            <div class="row-fluid">
+                <section id="main-content" class="span9">
+                    <div class="contentWrapper">
+                        
+    
+    <article id="fullArticle">
+        <h1 class="title">Global &amp; RSS feeds</h1>
+    
+        <a href="#" class="printArticle" title="Print this article" aria-label="Print this Article"><i class="icon-print"></i></a>
+        <p>Jump ahead to:</p>
+<ul>
+ <li><a href="/help/classic/article/580-global-rss-feeds#rss">RSS basics</a></li>
+ <li><a href="/help/classic/article/580-global-rss-feeds#rss-by-project">Setting it up with your projects</a></li>
+ <li><a href="/help/classic/article/580-global-rss-feeds#global-rss">Setting it up globally</a></li>
+ <li><a href="/help/classic/article/580-global-rss-feeds#ical-milestones">Global milestone calendar</a></li>
+ <li><a href="/help/classic/article/580-global-rss-feeds#rss-feed-readers">Using other RSS feed readers</a></li>
+ <li><a href="/help/classic/article/580-global-rss-feeds#openid-rss">OpenID &amp; RSS</a></li>
+ <li><a href="/help/classic/article/580-global-rss-feeds#security">Security</a></li>
+</ul>
+<hr>
+<h2 id="rss"><a href="#rss">RSS basics</a></h2>
+<p>RSS (Really Simple Syndication) lets you subscribe to specific content feeds and aggregate this information in one place to be read when you’re ready. Think of it as a feed of all your Basecamp project activities delivered to you so you can read through it when you want. If you’re curious, you can read <a href="/external?target=http%3A%2F%2Fwww.google.com%2Fsupport%2Ffeedburner%2Fbin%2Fanswer.py%3Fanswer%3D79408%26topic%3D13046">more on RSS</a>.</p>
+<p>RSS is a great way to stay on top of the major activity across all your projects. Whenever a new message or comment is posted, a new to-do added, a milestone completed, an event created, or a file uploaded, your RSS feed will be updated. This means you don’t have to keep logging into Basecamp to see if there’s anything new.</p>
+<p>Your RSS feed is protected and authenticated by your own unique username and password (the same one you use to log into your account). Your RSS reader will prompt you to enter your username and password to update your feed. You’ll need to use a newsreader that supports RSS authentication. <strong>Do not share your RSS feed with anyone </strong>— each person in your Basecamp account has their own special RSS feed.</p>
+<p>To read an RSS Feed you’ll need newsreader software like <a href="/external?target=http%3A%2F%2Franchero.com%2Fnetnewswire%2F">NetNewsWire</a> (for Mac) or <a href="/external?target=http%3A%2F%2Fwww.feeddemon.com%2F">FeedDemon</a> (for PC). </p>
+<h2 id="rss-by-project"><a href="#rss-by-project">RSS feed by project</a></h2>
+<p>Once you have your RSS newsreader software, you can copy the URL/address for one of your Basecamp RSS feeds and paste that URL into the subscription option of your newsreader (note: some news readers, like NetNewsWire, lets you just drag a link directly into the program to add the news feed). </p>
+<p>To subscribe to a project’s RSS feed, go to the project’s “Overview” tab and click the link that says “Subscribe to your project RSS feed” in the right sidebar.</p>
+<p><img src="/static/assets/d0cea608b114f241f9339e00.png" loading="eager"></p>
+<p>You’ll now be subscribed to that RSS feed, and depending on how often you’ve set your newsreader to refresh the feeds, you’ll be kept up to date on your projects without having to log into Basecamp.</p>
+<h2 id="global-rss"><a href="#global-rss">Global RSS feed</a></h2>
+<p>Basecamp lets you subscribe to to a project’s RSS feed or your global (all projects) RSS feed. You will then be notified any time someone posts a message, comment, or file, or adds or completes a to-do item or milestone, or adds an event to a project.</p>
+<p>To subscribe to your global (all projects) RSS feed, go to your Dashboard and click the link that says “Subscribe to your project RSS feed” at the bottom of the page.</p>
+<p><img src="/static/assets/9e000b30bf56ecf00cb28474.png" loading="eager"></p>
+<h2 id="ical-milestones"><a href="#ical-milestones">iCalendar milestones</a></h2>
+<p>The “Your global feeds” section includes an iCalendar feed. This feed allows you to subscribe to all the milestones in your projects in iCalendar format (<a href="/external?target=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FICalendar">what is iCalendar?</a>) without having to subscribe to each project’s feeds individually:</p>
+<p><img src="/static/assets/7f6f6335599caf0bfae67784.png" loading="eager"></p>
+<p>iCalendar is an open standard that allows different calendars to share information. If you use a desktop or web-based calendar that can subscribe to iCalendar feeds, you’ll be able to view your Basecamp milestones and events alongside all your other calendar items. Here’s <a href="/external?target=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FList_of_applications_with_iCalendar_support">a list of iCalendar-compatible calendar programs</a>. <strong>Do not share your iCalendar feed with anyone </strong>— each person in your Basecamp account has their own special iCalendar feed.</p>
+<h2 id="rss-feed-readers"><a href="#rss-feed-readers">Using other RSS feed readers</a></h2>
+<p>Basecamp Classic RSS feeds are password protected for your security. You need to use an RSS reader that supports authentication or password protected feeds.</p>
+<p>There are lots of feed readers out there that support password protected feeds, but we recommend <a href="/external?target=http%3A%2F%2Fwww.feeddemon.com%2F">FeedDemon</a> for the PC and <a href="/external?target=http%3A%2F%2Fwww.newsgator.com%2FNGOLProduct.aspx%3FProdID%3DNetNewsWire">NetNewsWire</a> for the Mac.</p>
+<p>If you’re a Safari user, RSS feeds are supported, but not in the format that Basecamp provides. There is a workaround though. Instead of loading the URL directly and letting the Mac Keychain store the username and password, embed the username (API token) and password in the URL and it will load fine. Like this:
+ <br>
+ <a href="/external?target=https%3A%2F%2F%7BAPI">https://{API</a> token}:x@foo.basecamphq.com/feed/recent_items_rss</p>
+<p>iPad users should check out <a href="/external?target=http%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Ffeedhopper-rss-reader%2Fid361881998%3Fmt%3D8">feedHopper</a> to view RSS feeds.</p>
+<h2 id="openid-rss"><a href="#openid-rss">OpenID &amp; RSS</a></h2>
+<p>For OpenID users: If you are prompted to enter a username and password by your feed reader or third party product, you can use your API token. You can find your API token by clicking “My info” in the upper right of your screen within Basecamp. Your tokens are listed near the bottom of the screen. Use your API token in the username field and any value (“X” is usually a good bet) in the password field.</p>
+<h2 id="security"><a href="#security">Security</a></h2>
+<p>You should not subscribe to your RSS or iCalendar feed with a web-based feedreader or calendar that doesn’t guarantee your feeds are kept private (otherwise other people or search engines may be able to see your data). You should confirm your feed will be kept private with the company that provides your newsreader or calendar service.</p>
+<hr>
+<p> Related articles:</p>
+<ul>
+ <li><a href="/help/classic/article/579-dashboard" target="_blank">Dashboard overview</a></li>
+ <li><a href="/help/classic/article/592-classic-notifications" target="_blank">Notifications</a></li>
+</ul>
+    </article>
+    
+
+    <section class="articleFoot">
+    
+
+    <time class="lu" datetime="2021-04-02">Last updated on April 2, 2021</time>
+    </section>
+
+                    </div><!--/contentWrapper-->
+                    
+                </section><!--/content-->
+                <aside id="sidebar" class="span3">
+                 
+
+<form action="/help/classic/search" method="GET" id="searchBar" class="sm" autocomplete="off">
+    
+                    <input type="hidden" name="collectionId" value="5e5991f004286364bc9605d4">
+                    <input type="text" name="query" title="search-query" class="search-query" placeholder="Search" value="" aria-label="Search">
+                    <button type="submit">
+                        <span class="sr-only">Toggle Search</span>
+                        <i class="icon-search"></i>
+                    </button>
+                    <div id="serp-dd" style="display: none;" class="sb">
+                        <ul class="result">
+                        </ul>
+                    </div>
+                
+</form>
+
+                
+                    <h3>Categories</h3>
+                    <ul class="nav nav-list">
+                    
+                        
+                            <li><a href="/help/classic/category/523-billing-account">Account &amp; Billing  <i class="icon-arrow"></i></a></li>
+                        
+                    
+                        
+                            <li><a href="/help/classic/category/541-security">Security  <i class="icon-arrow"></i></a></li>
+                        
+                    
+                        
+                            <li class="active"><a href="/help/classic/category/549-dashboard">Dashboard  <i class="icon-arrow"></i></a></li>
+                        
+                    
+                        
+                            <li><a href="/help/classic/category/544-projects">Projects Overview  <i class="icon-arrow"></i></a></li>
+                        
+                    
+                        
+                            <li><a href="/help/classic/category/595-project-tools">Project Tools  <i class="icon-arrow"></i></a></li>
+                        
+                    
+                        
+                            <li><a href="/help/classic/category/547-people-companies">People &amp; Companies  <i class="icon-arrow"></i></a></li>
+                        
+                    
+                        
+                            <li><a href="/help/classic/category/548-permissions-privacy">Permissions &amp; Privacy  <i class="icon-arrow"></i></a></li>
+                        
+                    
+                        
+                            <li><a href="/help/classic/category/563-notifications">Notifications  <i class="icon-arrow"></i></a></li>
+                        
+                    
+                    </ul>
+                
+                </aside><!--/span-->
+            </div><!--/row-->
+            <div id="noResults" style="display:none;">No results found</div>
+            <footer>
+                
+
+<p>©
+    
+        37signals
+    
+    2026. <span>Powered by <a rel="nofollow noopener noreferrer" href="/external?target=https%3A%2F%2Fwww.helpscout.com%2Fdocs-refer%2F%3Fco%3D37signals%26utm_source%3Ddocs%26utm_medium%3Dfooterlink%26utm_campaign%3DDocs%2BBranding" target="_blank">Help Scout</a></span>
+    
+        
+    
+    
+</p>
+
+            </footer>
+        </section><!--/.fluid-container-->
+        
+        
+    <script defer src="/static/local.js"></script></body></html>

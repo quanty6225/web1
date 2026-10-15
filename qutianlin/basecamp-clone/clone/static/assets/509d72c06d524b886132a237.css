@@ -1,0 +1,33 @@
+.card {
+  background: var(--color-white);
+  box-shadow: var(--box-shadow-card);
+  overflow: clip;
+  position: relative;
+}
+
+.card--headline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-neutral);
+  padding-top: 1.75em;
+}
+
+@media(min-width: 64em) {
+
+  .card--headline {
+    padding-top: 2.25em;
+  }
+
+}
+
+@media(prefers-color-scheme: dark) {
+
+  .card {
+    background: var(--color-ink-3);
+  }
+
+}
+
+.dark .card {
+  background: var(--color-ink-3);
+}

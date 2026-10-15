@@ -1,0 +1,46 @@
+.signup {
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  z-index: 100;
+}
+
+.signup div {
+  display: flex;
+  filter: blur(0.15em);
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  padding: var(--space-medium);
+  transform: scale(0.9) translateY(var(--space-xx-large));
+  transform-origin: center top;
+  transition:
+    filter var(--transition-slow),
+    opacity var(--transition-slow),
+    transform var(--transition-slow)
+  ;
+  will-change: transform;
+}
+
+
+
+.signup--peekaboo div {
+  filter: blur(0);
+  opacity: 1;
+  pointer-events: initial;
+  transform: scale(1) translateY(0);
+}
+
+@media(min-width: 64em) {
+
+  .signup {
+    left: auto;
+  }
+
+  .signup div {
+    padding-right: 2em;
+  }
+
+}

@@ -1,0 +1,14 @@
+.local-ping-actions{display:inline-block;position:relative;vertical-align:middle}
+.local-ping-actions>summary{list-style:none;cursor:pointer}
+.local-ping-actions>summary::-webkit-details-marker{display:none}
+.local-ping-actions[open]{z-index:20}
+.local-ping-actions-panel{position:fixed;inset:auto;margin:0;width:min(270px,78vw);max-height:55vh;overflow:auto;padding:8px;background:Canvas;color:CanvasText;border:1px solid #aaa;border-radius:8px;box-shadow:0 4px 16px #0002;white-space:normal}
+.local-ping-actions-panel:popover-open{display:flex;flex-direction:column;align-items:stretch}
+.local-ping-reaction-picker{display:grid;grid-template-columns:repeat(4,1fr)}
+.local-ping-actions-panel button{text-align:start}
+.local-ping-reaction-picker button{text-align:center}
+[data-local-ping-reactions] button[aria-pressed=true],.local-ping-reaction-picker button[aria-pressed=true]{background:#dcefff;color:#174b78}
+[data-local-ping-reactions]:empty{display:none}
+[data-local-ping-bubble-editor] .action-sheet__action{color:inherit}
+[data-local-ping-bookmark-row]>a{flex:1;min-width:0;overflow-wrap:anywhere}
+[data-local-chat-id]:target{outline:2px solid #287ed0;outline-offset:2px}

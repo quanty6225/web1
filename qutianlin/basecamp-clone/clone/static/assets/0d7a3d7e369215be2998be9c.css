@@ -1,0 +1,7 @@
+.visual-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-x-large);
+  position: relative;
+  z-index: 1;
+}

@@ -1,0 +1,76 @@
+.scroll-snap {
+  scroll-padding-inline: 0.75em;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.scroll-snap__item {
+  scroll-snap-align: start;
+}
+
+.scroll-snap-controls {
+  background: var(--color-blue);
+  background-image: var(--background-blue-light);
+  display: none;
+  overflow: clip;
+  position: absolute;
+  transition: transform var(--transition);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.scroll-snap-controls:has(.scroll-snap-control:active) {
+  transform: scale(0.97);
+}
+
+.scroll-snap-control {
+  aspect-ratio: 1;
+  border: 0;
+  color: var(--color-white);
+  cursor: pointer;
+  display: grid;
+  font-family: var(--font-family-martian-mono);
+  font-size: var(--font-size-small);
+  font-weight: 300;
+  height: 2em;
+  isolation: isolate;
+  letter-spacing: normal;
+  line-height: 1em;
+  padding: 0;
+  place-content: center;
+  position: relative;
+  transition: color var(--transition);
+}
+
+.scroll-snap-control:before {
+  background: oklch(var(--oklch-black) / 0.1);
+  content: '';
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity var(--transition);
+  z-index: -1;
+}
+
+.scroll-snap-control:disabled {
+  color: oklch(var(--oklch-white) / 0.5);
+  pointer-events: none;
+}
+
+@media(hover: hover) {
+
+  .scroll-snap-control:focus-visible:before,
+  .scroll-snap-control:hover:before {
+    opacity: 1;
+  }
+
+}
+
+@media(min-width: 64em) {
+
+  .scroll-snap-controls {
+    display: flex;
+  }
+
+}

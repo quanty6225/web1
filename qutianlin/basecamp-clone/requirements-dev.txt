@@ -1,0 +1,5 @@
+-r clone/requirements.txt
+httpx==0.28.1
+pytest==9.1.1
+playwright==1.61.0
+zxing-cpp==2.3.0

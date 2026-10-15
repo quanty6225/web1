@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class=""><head>
+  <meta name="robots" content="noarchive">
+  <meta name="viewport" content="width=100%, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="referrer" content="origin-when-cross-origin">
+
+  <title>Edit my info</title>
+
+  <link rel="shortcut icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <meta name="theme-color" content="#f5faf6">
+
+  <link rel="stylesheet" href="/static/assets/c79adbb889c3983a8cf4eced.css" media="all">
+
+  <link rel="stylesheet" href="/static/local.css"></head>
+
+<body class="edit_identity identity_validation" data-local-page="fef3bd64fec67753" data-local-auth="false" data-source-comment-total="0">
+  <div class="flash push--bottom push--top hide txt--center" data-controller="cookie-check">
+  <h2 class="txt--red flush">Cookies are not enabled.</h2>
+  <p class="flush">You'll need to enable cookies in your browser for Basecamp to work properly.</p>
+</div>
+
+
+  
+<div id="header" class="masthead clearfix">
+  <a class="masthead__bc-logo logo" href="/launchpad/">Basecamp</a>
+  <a class="masthead__lp-logo" href="/launchpad/">Launchpad</a>
+
+  <ul class="nav">
+    <li class="nav__item nav__item--name">
+      <a href="/launchpad/"><img class="nav__avatar" title="Dee" src="/api/avatar.svg" loading="eager"></a>
+    </li>
+    <li class="nav__item">
+      <a href="/activity_logs">Activity Logs</a>
+    </li>
+    <li class="nav__item">
+      <a href="/identity/edit">Edit my profile</a>
+    </li>
+    <li class="nav__item">
+      <a href="/identity/login_option">Login &amp; security</a>
+    </li>
+    <li class="nav__item">
+      <a rel="nofollow" data-method="delete" href="/session">Log out</a>
+    </li>
+  </ul>
+</div>
+
+
+<div class="balloon">
+  
+
+
+  <form class="identity_form" id="edit_identity_28796252" data-validation-url="/identity/validate" enctype="multipart/form-data" action="/identity" accept-charset="UTF-8" method="post"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="_method" value="patch"><div class="avatar-upload avatar-upload--unhinted txt--center">
+      <div class="avatar-upload__photo avatar-upload__photo--small flush--top">
+        <img src="/api/avatar.svg" loading="eager">
+      </div>
+
+      <label for="identity_avatar">Upload your photo…</label>
+      <br>
+      <input type="file" name="identity[avatar]" id="identity_avatar">
+    </div>
+
+    <div class="field field--validated">
+      <label class="field__label" for="name">Name</label>
+      <input tabindex="1" id="name" class="input--text" placeholder="e.g. Julie Young" type="text" value="Dee" name="identity[name]">
+      <p class="field__hint field__hint--invalid"></p>
+    </div>
+
+    <div class="field field--validated">
+      <label class="field__label" for="email_address">Email address</label>
+      <input tabindex="3" id="email_address" class="input--text" placeholder="e.g. julie.young@hey.com" data-validation-alias="username" type="text" value="demo@basecamp.offline.invalid" name="identity[email_address]">
+      <p class="field__hint field__hint--invalid"></p>
+    </div>
+
+    <div class="field">
+      <label class="field__label">Login &amp; security</label>
+      <p>
+        You currently log in with
+          your password.
+        <a class="decorated" href="/identity/login_option">Change this</a>
+      </p>
+    </div>
+
+
+    
+    <input type="hidden" name="proceed_to" id="proceed_to" value="/identity/edit">
+    <input type="hidden" name="return_to" id="return_to" value="/identity/edit">
+
+    <input type="submit" name="commit" value="Save my changes" tabindex="8" class="action_button primary push_half--bottom" data-disable-with="Save my changes">
+
+
+</form></div>
+
+
+
+<script defer src="/static/local.js"></script></body></html>

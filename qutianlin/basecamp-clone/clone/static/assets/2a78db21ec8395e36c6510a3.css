@@ -1,0 +1,76 @@
+.signal {
+  color: var(--color-white);
+  position: relative;
+}
+
+.signal__header dl,
+.signal__header h2 {
+  display: flex;
+  font-weight: 700;
+  padding-bottom: 0.15em;
+  padding-top: 0.15em;
+}
+
+.signal__header dl dt,
+.signal__header h2 span {
+  font-feature-settings: 'ss02', 'tnum';
+  width: 2.8ch;
+}
+
+.signal__header dl dd,
+.signal__header h2 strong {
+  transition: opacity var(--transition);
+  width: calc(100% - 2.8ch);
+}
+
+.signal__header a {
+  display: block;
+  letter-spacing: -0.01em;
+  pointer-events: auto;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.signal__content {
+  margin-left: 2.8ch;
+  margin-top: 0.5em;
+  max-width: 50ch;
+  pointer-events: auto;
+}
+
+.signal__content > * + * {
+  margin-top: 0.5em;
+}
+
+
+
+.signal--clone {
+  display: none;
+}
+
+
+
+@media(min-width: 64em) and (hover: hover) and (pointer: fine) {
+
+  .signal:hover,
+  .signal:focus,
+  .signal:focus-within {
+    z-index: 103;
+  }
+
+  .signal:not(:last-child) .signal__content {
+    margin-bottom: 0.5em;
+  }
+
+  .signal__header dl,
+  .signal__header h2 {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .signal__header a:hover,
+  .signal__header a:focus {
+    color: var(--color-white);
+  }
+
+}

@@ -1,0 +1,44 @@
+.signature {
+  --spacing: 2.2em;
+
+  align-items: center;
+  background: url("/static/assets/2926c12551492f993a747c71.svg") left top / auto 3.3em no-repeat;
+  display: flex;
+  font-size: var(--font-size-large);
+  gap: 0.5em;
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  padding-top: 4.3em;
+  position: relative;
+  width: 100%;
+}
+
+.signature:before {
+  background: url("/static/assets/5dc47c4fb1c358b7271a6569.jpg") center / cover no-repeat;
+  border-radius: 100%;
+  content: '';
+  display: inline-flex;
+  height: 3em;
+  width: 3em;
+}
+
+.signature dl {
+  display: flex;
+  flex-direction: column;
+}
+
+.signature dl dt {
+  font-weight: 500;
+}
+
+.signature dl dd {
+  font-style: italic;
+}
+
+@media(prefers-color-scheme: dark) {
+
+  .signature {
+    background-image: url("/static/assets/c804f40634acba24b744726c.svg");
+  }
+
+}

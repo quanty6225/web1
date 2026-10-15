@@ -1,0 +1,234 @@
+.nav {
+  display: flex;
+  height: var(--space-x-large);
+  padding-inline: max(var(--space-medium), (100% - 36em) / 2);
+  pointer-events: auto;
+  position: relative;
+  width: 100%;
+  z-index: 102;
+}
+
+.nav__container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.nav__content {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  gap: 0.75em;
+  justify-content: space-between;
+  pointer-events: auto;
+}
+
+.nav__logo {
+  display: flex;
+}
+
+.nav__logo a {
+  align-items: center;
+  color: var(--color-ink);
+  display: flex;
+  gap: 0.175em;
+  height: 1.2em;
+  justify-content: start;
+  pointer-events: auto;
+  width: auto;
+}
+
+.nav__logo a:before {
+  background: url("/static/assets/52160209ab253cc880735151.webp") center / 100% auto no-repeat;
+  content: '';
+  height: 1.425em;
+  pointer-events: none;
+  width: 1.425em;
+}
+
+.nav__logo a div {
+  align-items: center;
+  display: flex;
+}
+
+.nav__logo a svg {
+  height: 0.5em;
+  margin-bottom: 0.1375em;
+  overflow: visible;
+  padding-right: 0.05em;
+  width: auto;
+}
+
+.nav--slim .nav__content {
+  justify-content: center;
+}
+
+.nav--slim .nav__logo a {
+  --logo-height: 1.6625em;
+  --logo-width: 7.175em;
+  --logo-mark-size: 2em;
+  --logo-type-height: 0.74375em;
+
+  gap: 0;
+  height: var(--logo-height);
+  margin-bottom: -0.4625em;
+  margin-top: -0.6625em;
+  position: relative;
+  width: var(--logo-mark-size);
+}
+
+.nav--slim .nav__logo a:before {
+  height: var(--logo-mark-size);
+  position: relative;
+  width: var(--logo-mark-size);
+  z-index: 1;
+}
+
+.nav--slim .nav__logo a div {
+  filter: blur(0.05em);
+  height: var(--logo-mark-size);
+  justify-content: end;
+  opacity: 0;
+  overflow: clip;
+  padding-right: 0.1em;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  transform: scale(0.9);
+  width: calc(var(--logo-mark-size) / 2);
+}
+
+.nav--slim .nav__logo a svg {
+  height: var(--logo-type-height);
+  padding: 0;
+}
+
+.nav--actions {
+  padding-inline: var(--space-medium);
+}
+
+.nav--actions .nav__content {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+}
+
+.nav--actions .nav__logo {
+  grid-column: 2;
+}
+
+.nav__actions {
+  align-items: center;
+  display: flex;
+  gap: 0.3em;
+  grid-column: 3;
+  justify-self: end;
+}
+
+.nav__actions .button {
+  display: none;
+  flex: none;
+  text-wrap: nowrap;
+  transition:
+    background-color var(--transition),
+    color var(--transition),
+    opacity var(--transition),
+    visibility var(--transition)
+  ;
+}
+
+html.menu-open .nav .nav__actions .button {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+@media(hover: hover) {
+
+  .nav .button,
+  .nav .button:active,
+  .nav .button:focus,
+  .nav .button:hover {
+    transform: none;
+  }
+
+  .nav--slim .nav__logo a {
+    transition: width var(--transition-slow);
+  }
+
+  .nav--slim .nav__logo a div {
+    transition:
+      filter var(--transition-slow),
+      opacity var(--transition-slow),
+      transform var(--transition-slow),
+      width var(--transition-slow)
+    ;
+    will-change: transform;
+  }
+
+  .nav--slim .nav__logo a:focus,
+  .nav--slim .nav__logo a:hover {
+    width: var(--logo-width);
+  }
+
+  .nav--slim .nav__logo a:focus div,
+  .nav--slim .nav__logo a:hover div {
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1);
+    width: calc(var(--logo-width) - (var(--logo-mark-size) / 2));
+  }
+
+}
+
+@media(min-width: 64em) {
+
+  .nav {
+    padding-inline: max(var(--space-medium) + var(--space-large), (100% - 40em) / 2);
+  }
+
+  .nav--actions {
+    padding-inline: var(--space-medium);
+  }
+
+  .nav__content {
+    display: grid;
+    gap: var(--space-small);
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .nav--slim .nav__content {
+    display: flex;
+  }
+
+  .nav--actions .nav__content {
+    display: grid;
+  }
+
+  .nav--actions .nav__logo {
+    grid-row: 1;
+  }
+
+  .nav__actions {
+    display: contents;
+  }
+
+  .nav__actions .button {
+    display: flex;
+    grid-row: 1;
+  }
+
+  .nav__actions .button--canvas {
+    grid-column: 1;
+    justify-self: start;
+  }
+
+  .nav__actions .button--glow {
+    grid-column: 3;
+    justify-self: end;
+  }
+
+  .nav__logo {
+    justify-self: start;
+  }
+
+}

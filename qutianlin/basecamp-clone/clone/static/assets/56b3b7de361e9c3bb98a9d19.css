@@ -1,0 +1,423 @@
+.path {
+  color: inherit;
+  display: none;
+  position: relative;
+  visibility: hidden;
+}
+
+.path__header {
+  position: relative;
+}
+
+.path__header section,
+.path__footer section {
+  display: grid;
+  font-size: var(--font-size-small);
+  gap: var(--space-neutral);
+  letter-spacing: var(--letter-spacing);
+  text-wrap: pretty;
+}
+
+.path__header section dl {
+  display: grid;
+  gap: 0.75em;
+}
+
+.path__header section dl dt,
+.path__footer section h2 {
+  font-size: var(--font-size-xxxx-large);
+  font-weight: 800;
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--line-height);
+  margin-bottom: -0.3875em;
+  margin-top: -0.4em;
+  text-wrap: balance;
+}
+
+.path__header section dl dd,
+.path__header section p,
+.path__footer section blockquote q {
+  font-size: var(--font-size-medium);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing);
+  margin-bottom: -0.3875em;
+  margin-top: -0.4em;
+}
+
+.path__header section dl dd {
+  font-size: var(--font-size-x-large);
+  font-weight: 600;
+}
+
+.path__header section p {
+  font-size: var(--font-size-x-large);
+}
+
+.path__visual {
+  display: grid;
+  font-size: var(--font-size-xxx-small);
+  justify-content: center;
+  margin-top: var(--space-xxx-large);
+}
+
+.path__svg {
+  position: relative;
+}
+
+.path__svg svg {
+  height: 80em;
+  overflow: visible;
+  width: auto;
+}
+
+.path__svg svg path {
+  fill: none;
+  stroke: var(--color-ink);
+  stroke-dasharray: 0 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.path__svg svg marker polygon {
+  fill: var(--color-ink);
+}
+
+.path__point {
+  display: grid;
+  justify-items: center;
+  position: absolute;
+}
+
+.path__point dl {
+  display: grid;
+  gap: 0.4em;
+  position: absolute;
+  text-wrap: balance;
+  top: -0.85em;
+  width: 24em;
+}
+
+.path__point dl dt {
+  font-size: var(--font-size-xx-large);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height-tight);
+}
+
+.path__point dl dd {
+  font-size: var(--font-size-xx-large);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height-tight);
+}
+
+.path__point:before {
+  background-color: var(--color-white);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 2.4em auto;
+  border-radius: 100%;
+  content: '';
+  height: 3.325em;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 3.325em;
+}
+
+.path__point:first-child:before {
+  background-color: transparent;
+}
+
+.path__point--logo-airtable:before {
+  background-image: url("/static/assets/0cc932da34b39b684b50e1ad.png");
+}
+
+.path__point--logo-asana:before {
+  background-image: url("/static/assets/9f8e9ccced94109ef6f4d631.png");
+}
+
+.path__point--logo-basecamp:before {
+  background-image: url("/static/assets/da1965616158273d95d6abca.png");
+}
+
+.path__point--logo-clickup:before {
+  background-image: url("/static/assets/8cd5ca67c9bae1dc99a581ba.png");
+}
+
+.path__point--logo-email:before {
+  background-image: url("/static/assets/9f69b31988142172e486f70b.svg");
+}
+
+.path__point--logo-google-docs:before {
+  background-image: url("/static/assets/85026151aa4aa3b9c1e6645d.png");
+}
+
+.path__point--logo-google-sheets:before {
+  background-image: url("/static/assets/b885fc98b628a736a334808c.png");
+}
+
+.path__point--logo-jira:before {
+  background-image: url("/static/assets/6de71cdce51c33c2627abb3e.png");
+}
+
+.path__point--logo-mentions:before {
+  background-image: url("/static/assets/5ddaf09ecac2742d0a5576d7.png");
+}
+
+.path__point--logo-microsoft-azure:before {
+  background-image: url("/static/assets/6cd7c2cc7f7b112494774edb.png");
+}
+
+.path__point--logo-microsoft-teams:before {
+  background-image: url("/static/assets/5491665c33561f9632e7c749.png");
+}
+
+.path__point--logo-monday:before {
+  background-image: url("/static/assets/d114741295ad7d196df59cb2.png");
+}
+
+.path__point--logo-moxie:before {
+  background-image: url("/static/assets/d59bc06f39684b7c556fd296.png");
+}
+
+.path__point--logo-notion:before {
+  background-image: url("/static/assets/2695868266ae9943109ba828.svg");
+}
+
+.path__point--logo-slack:before {
+  background-image: url("/static/assets/07be6ccc1106153f2187dd17.png");
+}
+
+.path__point--logo-text:before {
+  background-image: url("/static/assets/f4b3ff3da3c6390e40adb1ea.svg");
+}
+
+.path__point--logo-trello:before {
+  background-image: url("/static/assets/b6a090aa9068a34dccbb0946.png");
+}
+
+.path__point--logo-trillian:before {
+  background-image: url("/static/assets/352c77bb281d36506260f831.png");
+}
+
+.path__point--logo-whatsapp:before {
+  background-image: url("/static/assets/ccfb0af11df9836045c38f97.png");
+}
+
+.path__point--logo-wrike:before {
+  background-image: url("/static/assets/4f25c436c8d1612b0118ee2b.png");
+}
+
+.path__point--align-left dl {
+  left: 2.2em;
+  text-align: left;
+}
+
+.path__point--align-right dl {
+  justify-items: end;
+  right: 2.2em;
+  text-align: right;
+}
+
+.path__footer {
+  display: grid;
+  gap: var(--space-medium);
+  justify-items: center;
+  margin-top: var(--space-small);
+  padding-inline: var(--space-medium);
+  position: relative;
+  text-align: center;
+}
+
+.path__footer:before {
+  background: url("/static/assets/da1965616158273d95d6abca.png") center / 100% auto no-repeat;
+  border-radius: 100%;
+  content: '';
+  height: 2.475em;
+  pointer-events: none;
+  width: 2.475em;
+}
+
+.path__footer section {
+  justify-items: center;
+}
+
+.path__footer section h2 {
+  font-size: var(--font-size-xxx-large);
+  line-height: var(--line-height-x-tight);
+  margin-bottom: -0.2125em;
+  margin-top: -0.225em;
+}
+
+.path__footer section blockquote q {
+  font-size: var(--font-size-x-large);
+}
+
+.path__footer section h2 + blockquote {
+  margin-top: -0.4em;
+}
+
+.path__footer section blockquote {
+  display: grid;
+  gap: var(--space-medium);
+}
+
+.path__footer section blockquote q mark {
+  font-weight: 500;
+}
+
+.path--loaded {
+  visibility: visible;
+}
+
+.path--plot,
+.path.selected {
+  display: grid;
+}
+
+.path--alex-de-simone .path__visual {
+  padding-top: 1.575em;
+}
+
+.path--alex-de-simone .path__point:first-child {
+  margin-left: -0.85em;
+  margin-top: -3em;
+}
+
+.path--brett-robison .path__visual {
+  padding-top: 1.425em;
+}
+
+.path--brett-robison .path__point:first-child {
+  margin-left: 1.25em;
+  margin-top: -2.85em;
+}
+
+.path--brian-garside .path__visual {
+  padding-top: 1.625em;
+}
+
+.path--brian-garside .path__point:first-child {
+  margin-left: 0.7em;
+  margin-top: -3.05em;
+}
+
+.path--dan-unger .path__visual {
+  padding-top: 1.575em;
+}
+
+.path--dan-unger .path__point:first-child {
+  margin-left: -0.8em;
+  margin-top: -3em;
+}
+
+.path--doug-seidl .path__visual {
+  padding-top: 1.65em;
+}
+
+.path--doug-seidl .path__point:first-child {
+  margin-left: -0.525em;
+  margin-top: -3.075em;
+}
+
+.path--fernando-araujo .path__visual {
+  padding-top: 1.5875em;
+}
+
+.path--fernando-araujo .path__point:first-child {
+  margin-left: 0.8em;
+  margin-top: -3.0125em;
+}
+
+.path--helen-ryan .path__visual {
+  padding-top: 1.3625em;
+}
+
+.path--helen-ryan .path__point:first-child {
+  margin-left: -1.3875em;
+  margin-top: -2.7875em;
+}
+
+.path--ian-parsons .path__visual {
+  padding-top: 1.3625em;
+}
+
+.path--ian-parsons .path__point:first-child {
+  margin-left: 1.425em;
+  margin-top: -2.7875em;
+}
+
+.path--johanne-brierre .path__visual {
+  padding-top: 1.225em;
+}
+
+.path--johanne-brierre .path__point:first-child {
+  margin-left: 1.6em;
+  margin-top: -2.65em;
+}
+
+.path--lucien-odey .path__visual {
+  padding-top: 1.5625em;
+}
+
+.path--lucien-odey .path__point:first-child {
+  margin-left: -0.825em;
+  margin-top: -2.9875em;
+}
+
+.path--ryan-almusawi .path__visual {
+  padding-top: 1.65em;
+}
+
+.path--ryan-almusawi .path__point:first-child {
+  margin-left: -0.525em;
+  margin-top: -3.075em;
+}
+
+.path--sebastien-bossi-croci .path__visual {
+  padding-top: 1.5875em;
+}
+
+.path--sebastien-bossi-croci .path__point:first-child {
+  margin-left: 0.775em;
+  margin-top: -3.0125em;
+}
+
+.path--stefan-strassburger .path__visual {
+  padding-top: 1.65em;
+}
+
+.path--stefan-strassburger .path__point:first-child {
+  margin-left: -0.475em;
+  margin-top: -3.075em;
+}
+
+@media(min-width: 64em) {
+
+  .path__visual {
+    margin-top: var(--space-xxxx-large);
+  }
+
+}
+
+@media(prefers-color-scheme: dark) {
+
+  .path__point:before {
+    background-color: var(--color-ink-3);
+  }
+
+  .path__point--logo-email:before {
+    background-image: url("/static/assets/82cd4205ce732287454153cb.svg");
+  }
+
+  .path__point--logo-notion:before {
+    background-image: url("/static/assets/2f1c6c16ac5b6be572514e9d.svg");
+  }
+
+  .path__point--logo-text:before {
+    background-image: url("/static/assets/dde34e1514d7340d29ffce14.svg");
+  }
+
+}

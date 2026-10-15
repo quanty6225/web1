@@ -1,0 +1,113 @@
+.logo {
+  --logo-height: 1.6625em;
+  --logo-width: 7.175em;
+  --logo-mark-size: 2em;
+  --logo-type-height: 0.74375em;
+
+  align-items: center;
+  color: var(--color-ink);
+  display: flex;
+  height: var(--logo-height);
+  justify-self: center;
+  margin-bottom: -0.4625em;
+  margin-top: -0.6625em;
+  position: relative;
+  width: var(--logo-mark-size);
+}
+
+.logo:before {
+  background: url("/static/assets/52160209ab253cc880735151.webp") center / 100% auto no-repeat;
+  content: '';
+  height: var(--logo-mark-size);
+  pointer-events: none;
+  position: relative;
+  width: var(--logo-mark-size);
+  z-index: 1;
+}
+
+.logo div {
+  align-items: center;
+  display: flex;
+  filter: blur(0.05em);
+  height: var(--logo-mark-size);
+  justify-content: end;
+  opacity: 0;
+  overflow: clip;
+  padding-right: 0.05em;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  transform: scale(0.9);
+  width: calc(var(--logo-mark-size) / 2);
+}
+
+.logo svg {
+  height: var(--logo-type-height);
+  margin-bottom: 0.1375em;
+  overflow: visible;
+  width: auto;
+}
+
+
+
+.logo--left {
+  --logo-height: 1.325em;
+  --logo-width: 5.75em;
+  --logo-mark-size: 1.57em;
+  --logo-type-height: 0.6em;
+
+  margin-bottom: -0.3625em;
+  margin-top: -0.56875em;
+  width: var(--logo-width);
+}
+
+.logo--left div {
+  filter: none;
+  opacity: initial;
+  padding-right: 0.1em;
+  transform: none;
+  width: auto;
+}
+
+
+
+@media(hover: hover) {
+
+  .logo:not(.logo--left) {
+    transition: width var(--transition-slow);
+  }
+
+  .logo:not(.logo--left):before {
+    transition: transform var(--transition-slow);
+    will-change: transform;
+  }
+
+  .logo:not(.logo--left) div {
+    transition:
+      filter var(--transition-slow),
+      opacity var(--transition-slow),
+      transform var(--transition-slow),
+      width var(--transition-slow)
+    ;
+    will-change: transform;
+  }
+
+  .logo:not(.logo--left):focus,
+  .logo:not(.logo--left):hover {
+    width: var(--logo-width);
+  }
+
+  .logo:not(.logo--left):focus:before,
+  .logo:not(.logo--left):hover:before {
+    transform: translateX(0);
+  }
+
+  .logo:not(.logo--left):focus div,
+  .logo:not(.logo--left):hover div {
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1);
+    width: calc(var(--logo-width) - (var(--logo-mark-size) / 2));
+  }
+
+}

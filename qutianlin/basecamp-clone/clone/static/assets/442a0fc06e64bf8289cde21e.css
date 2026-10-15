@@ -1,0 +1,10 @@
+.data-display {
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+
+
+.data-display--ready {
+  opacity: 1;
+}

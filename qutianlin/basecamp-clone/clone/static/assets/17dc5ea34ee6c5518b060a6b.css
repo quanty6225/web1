@@ -1,0 +1,20 @@
+.band {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.band--dark {
+  background: var(--color-ink);
+  color: var(--color-white);
+  padding: var(--space-x-large) var(--space-medium);
+}
+
+@media(prefers-color-scheme: dark) {
+
+  .band--dark {
+    background: oklch(from var(--color-ink-1) calc(l - 0.05) c h);
+  }
+
+}

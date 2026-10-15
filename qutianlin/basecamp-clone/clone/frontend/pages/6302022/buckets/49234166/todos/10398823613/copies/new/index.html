@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en" class="has-perma-toolbar" style="" data-controller="platform color-scheme badge" data-color-scheme="none" data-bridge-platform="" data-can-pin-projects="false" data-hide-badge-counts="true" data-emoji-support="big" data-os="" data-browser="chrome" data-notification-permission="denied" data-time-format="twelve_hour" data-notifications-state="on"><head><style type="text/css">.turbo-progress-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #0076ff;
+  z-index: 2147483647;
+  transition:
+    width 300ms ease-out,
+    opacity 150ms 150ms ease-in;
+  transform: translate3d(0, 0, 0);
+}
+</style>
+<meta charset="utf-8">
+
+<title data-bridge-alt="Copy: Upload">Copy: Upload</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="none">
+
+<meta name="referrer" content="origin-when-cross-origin">
+
+<meta name="theme-color" content="hsl(202.5, 42.1%, 7.5%)" media="(prefers-color-scheme: dark)">
+
+<meta name="turbo-root" content="/6302022">
+
+<meta name="turbo-cache-control" content="no-preview">
+
+<meta name="turbo-prefetch" content="true">
+
+<meta name="current-env" content="production"><meta name="current-stage" content="production"><meta name="current-release" content="5f43bd">
+<meta name="current-account-public-id" content="6302022"><meta name="current-account-slug-path" content="/6302022"><meta name="current-account-pro-pack" content="false"><meta name="current-account-restricts-archive-and-trash" content="false"><meta name="current-account-voice-notes-enabled" content="true">
+<meta name="current-account-on-per-seat-business-model" content="false"><meta name="current-account-on-modern-business-model" content="true">
+
+<meta name="current-person-id" content="53382586"><meta name="current-person-gid" content="gid://bc3/Person/53382586"><meta name="current-person-name" content="Dee"><meta name="current-person-email-address" content="demo@basecamp.offline.invalid"><meta name="current-person-avatar-url" content="/api/avatar.svg"><meta name="current-person-owner" content="true"><meta name="current-person-admin" content="true"><meta name="current-person-staff" content="false"><meta name="current-person-client" content="false"><meta name="current-person-employee" content="true"><meta name="current-person-first-week-day-int" content="0"><meta name="current-person-first-time-booster" content="true"><meta name="current-person-time-format" content="twelve_hour"><meta name="current-page-exclude-from-recent-history" content="true"><meta name="current-page-type" content="to-do"><meta name="current-page-title" content="Copy: Upload"><meta name="current-page-subtitle" content="Making a Podcast"><meta name="current-page-project-description" content="👋 This is a sample project to showcase how we use Basecamp to make a podcast called REWORK. Take a look around and explore!">
+
+
+<meta name="current-account-name" content="Dee"><meta name="current-bucket-id" content="49234166"><meta name="current-bucket-name" content="Making a Podcast"><meta name="current-bucket-status" content="playgrounded"><meta name="current-bucket-path" content="/6302022/buckets/49234166"><meta name="current-bucket-type" content="Project"><meta name="current-recording-id" content="10398823613"><meta name="current-recording-type" content="To-do"><meta name="current-recording-title" content="Upload"><meta name="current-recording-is-docked" content="false"><meta name="current-dock-tool-title" content="To-dos"><meta name="current-dock-tool-url" content="/6302022/buckets/49234166/todosets/10398823029">
+
+
+<meta name="assets-version" content="v1">
+
+<meta name="apple-itunes-app" content="app-id=1015603248">
+
+
+
+<link rel="stylesheet" href="/static/assets/0618d0b8f58901465b03a3ef.css" media="all" data-turbo-track="reload">
+<link rel="stylesheet" href="/static/assets/4994bc21ac250d6a0f6327ee.css" media="all" data-turbo-track="reload">
+<link rel="subresource" href="/static/assets/901561f033523a234d8cec5c.js" data-script="builds/rich_text" data-turbo-track="reload">
+<link rel="subresource" href="/static/assets/55d92447ff8accc81735f52a.js" data-script="@mermaid-js/tiny/dist/mermaid.tiny" data-turbo-track="reload">
+<template id="mermaid-diagram-template">
+  <figure class="mermaid-diagram" data-controller="dialog" data-dialog-modal-value="true" data-action="keydown.esc-&gt;dialog#closeIfOpen">
+    <div class="mermaid-diagram__inline"></div>
+
+    <button type="button" class="mermaid-diagram__expand btn btn--sm btn--icon btn--ghost" aria-label="Expand diagram" aria-haspopup="dialog" data-action="dialog#open">
+      <svg class="svg-icon svg-icon--expand" aria-hidden="true"><use href="/static/assets/1427e07e496172d3997dc188.svg#expand"></use></svg>
+    </button>
+
+    <dialog class="mermaid-diagram__dialog" inert="" aria-label="Diagram" data-dialog-target="dialog">
+      <button type="button" class="mermaid-diagram__close btn btn--icon btn--ghost" aria-label="Close" data-action="dialog#close">
+        <svg class="svg-icon svg-icon--x" aria-hidden="true"><use href="/static/assets/675483664aff3de45e409c28.svg#x"></use></svg>
+      </button>
+
+      <div class="mermaid-diagram__expanded"></div>
+    </dialog>
+  </figure>
+</template>
+
+
+<meta name="current-avatar-version" content="7694f4a66316e53c8cdd9d9954bd611d" data-turbo-track="reload">
+
+<link rel="apple-touch-icon" sizes="196x196" href="/static/assets/469491359b770d998bdb50ce.png">
+<link rel="shortcut icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+
+<link rel="stylesheet" href="/static/local.css"></head>
+
+
+<body class=" account--free-plan" data-controller="web-notification-permission hotkey-mode scroll-state" data-action="scroll@window-&gt;scroll-state#update:passive turbo:morph@document-&gt;scroll-state#update" data-scroll-state-scrolled-class="page-scrolled" data-scroll-state-threshold-value="32" data-local-page="3694a23005968347" data-local-auth="true" data-source-comment-total="0">
+  
+  <a href="#main-content" class="sr-only nav__accessibility-button btn btn--sm loading__hide" data-turbo="false">
+    Skip to main content
+  </a>
+
+  <div data-controller="desktop-modal">
+    <div class="layout">
+      <nav id="my_navigation" class="nav" aria-label="Main" data-notifications-url="/6302022/my/notifications.json">
+  <a class="nav__home-link btn btn--ghost btn--sm margin-right-auto leading-none" data-hotkey="h" aria-label="Home" href="/6302022/">
+    <svg class="svg-icon svg-icon--home" aria-hidden="true"><use href="/static/assets/e6f8387787211b34f3e9127e.svg#home"></use></svg>
+    <span>Home</span>
+    <kbd class="keyboard-shortcut" title="Keyboard shortcut: shift + H">H</kbd>
+</a>
+  <div class="nav__bc-menu">
+    <div class="nav-menu" data-behavior="expandable my_navigation_menu_toggle_shortcut" data-menu-section="my" data-controller="search nav-content-filter focus-trap" data-nav-content-filter-content-filter-outlet="#my-navigation-menu-listbox" data-focus-trap-focus-empty-region-value="false" data-action="
+      expand-&gt;nav-content-filter#selectIndex
+      prefetched-frame:injected-&gt;nav-content-filter#selectIndexLater
+      collapse-&gt;nav-content-filter#reset
+      collapse-&gt;nav-content-filter#selectIndex
+      expand-&gt;focus-trap#activate
+      prefetched-frame:injected-&gt;focus-trap#activate
+      collapse-&gt;focus-trap#deactivate" data-nav-content-filter-index-param="0">
+  <div class="collapsible_content" data-behavior="collapse_on_clickoutside">
+    <button name="button" type="button" class="nav__trigger" data-behavior="toggle_expansion_on_click" data-role="nav-shortcut-title" data-mac-shortcut-title="Keyboard shortcut: shift + J" aria-label="Jump Menu" aria-haspopup="true" title="Keyboard shortcut: shift + J">
+      <div class="nav__logo">
+        <img alt="" aria-hidden="true" src="/static/assets/8f55a3a5ddb8b3a2a6f24899.png" loading="eager">
+      </div>
+      <svg viewbox="0 0 193 37" fill="none" xmlns="http://www.w3.org/2000/svg" alt="Basecamp" class="nav__logotype">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M182.785 7.50211C188.019 7.50281 192.101 11.2908 192.101 18.4689V18.8087C192.101 25.8916 188.094 29.8706 182.785 29.8712C179.987 29.9725 177.361 28.5133 175.963 26.0822V36.6525H170.029V7.93761H175.963V11.2892C177.421 8.91941 180.007 7.48451 182.785 7.50211ZM180.99 11.9904C178.005 11.9907 175.756 14.1506 175.756 18.4689V18.7912C175.756 23.0896 177.798 25.174 181.029 25.174C184.259 25.1732 186.093 22.8983 186.094 18.7326V18.4689C186.094 14.1129 183.975 11.9908 180.99 11.9904Z"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M76.7011 7.38685C82.2181 7.38755 87.1301 10.6266 87.1311 18.2775V19.9259H71.7111C71.8811 23.4863 73.8091 25.6075 77.0211 25.6075C79.7601 25.6072 81.1211 24.4142 81.4801 22.6154H87.1501C86.4701 27.2363 82.7831 29.8319 76.9451 29.8322C70.4081 29.7562 65.7041 25.7017 65.7031 18.8458V18.5236C65.5581 15.5477 66.6651 12.647 68.7561 10.5294C70.8471 8.41165 73.7311 7.27175 76.7011 7.38685ZM76.7011 11.4787C74.0381 11.4678 71.8581 13.6024 71.8071 16.2716H81.3671C81.1591 13.0332 79.4781 11.4792 76.7011 11.4787Z"></path>
+        <path d="M99.7171 7.38656C104.667 7.38686 109.165 9.54757 109.769 15.703H104.1C104.023 14.638 103.521 13.6472 102.707 12.9588C101.892 12.2707 100.834 11.9421 99.7731 12.0467C96.7121 12.0467 94.6521 14.3388 94.6521 18.4491V18.7713C94.6531 23.0702 96.5421 25.287 99.8871 25.287C101.047 25.3697 102.194 24.9844 103.07 24.2166C103.946 23.4485 104.482 22.3597 104.555 21.1952H109.902C109.581 26.2896 105.894 29.8139 99.6781 29.8143C93.4621 29.8139 88.6821 25.8544 88.6821 18.8475V18.5252C88.5411 15.5441 89.6561 12.6409 91.7541 10.5233C93.8521 8.40557 96.7421 7.26636 99.7171 7.38656Z"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M34.373 7.42578C39.606 7.42618 43.31 9.54698 43.31 15.3614V29.3985H37.643V26.7266C36.158 28.8321 33.665 29.9854 31.103 29.7559C27.324 29.7559 23.998 27.8609 23.998 23.3536C23.999 18.3538 28.572 16.4786 35.129 16.4786H37.527V15.6075C37.527 13.0697 36.771 11.725 34.051 11.7247C33.162 11.6073 32.263 11.8679 31.574 12.4434C30.885 13.019 30.469 13.8581 30.424 14.7559H24.754C25.132 9.67958 29.139 7.42578 34.373 7.42578ZM35.242 20.002C31.803 20.002 29.801 20.7414 29.801 23.0333C29.801 24.5855 30.746 25.6094 32.918 25.6094C35.525 25.6091 37.529 24.1865 37.529 21.8008V20.002H35.242Z"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M121.637 7.38672C126.87 7.38712 130.593 9.50852 130.594 15.3222V29.3964H124.924V26.7265C123.448 28.8011 120.995 29.9499 118.461 29.7558C114.569 29.7556 111.299 27.8606 111.299 23.3535C111.299 18.3537 115.873 16.4786 122.41 16.4785H124.83V15.6074C124.83 13.0698 124.054 11.6861 121.353 11.6855C120.462 11.5682 119.561 11.8292 118.869 12.4042C118.177 12.9793 117.755 13.8173 117.705 14.7167H112.037C112.415 9.64062 116.402 7.38672 121.637 7.38672ZM122.543 20.0019C119.104 20.002 117.102 20.7414 117.102 23.0332C117.102 24.5854 118.048 25.6093 120.201 25.6093C122.826 25.6086 124.829 24.1862 124.83 21.8007V20.0019H122.543Z"></path>
+        <path d="M54.762 7.38672C59.504 7.38692 63.057 9.09172 63.586 14.0156H58.144C58.067 13.2153 57.659 12.4826 57.021 11.9941C56.384 11.506 55.572 11.3046 54.781 11.4394C52.892 11.4394 51.758 12.3303 51.758 13.6562C51.758 14.9814 52.779 15.5507 55.896 15.9863C61.243 16.7629 64.191 18.1087 64.191 22.7109C64.191 27.3121 60.846 29.7554 55.197 29.7558C49.548 29.7558 46.089 27.2177 45.881 22.5781H51.398C51.644 24.4713 52.59 25.6074 55.178 25.6074C57.463 25.6071 58.521 24.7554 58.521 23.2792C58.521 21.802 57.256 21.1948 54.195 20.7402C48.527 19.869 46.297 18.2395 46.297 14.0546C46.297 9.86872 50.397 7.38682 54.762 7.38672Z"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4901 0C17.8571 0.0004 21.1641 2.6331 21.1641 7.5761V7.7285C21.3691 10.706 19.3531 13.3814 16.4391 13.998C19.9381 14.3098 22.5411 17.3809 22.2791 20.8925V21.1953C22.2791 26.5734 18.7641 29.3959 12.0191 29.3964H0V0H11.4901ZM6.5391 24.7187H11.0001C14.2671 24.7181 15.7421 23.2399 15.7421 20.5703V20.4179C15.7421 17.7101 14.2671 16.3088 10.6781 16.3085H6.5391V24.7187ZM6.5391 12.123L10.4321 12.0468C13.6051 12.0466 14.8731 10.9086 14.8731 8.2578V8.125C14.8731 5.6634 13.4921 4.5471 10.3751 4.5468H6.5391V12.123Z"></path>
+        <path d="M146.457 7.3675C149.062 7.1584 151.491 8.7046 152.41 11.1566C154.008 8.7456 156.722 7.3168 159.609 7.3675C163.577 7.3679 166.639 9.8692 166.639 15.5511V29.3968H160.762V16.2132C160.762 13.4674 159.533 12.2371 157.398 12.2367C156.244 12.1861 155.125 12.6425 154.334 13.4867C153.543 14.3307 153.157 15.4776 153.279 16.6293V29.3968H147.383V16.2132C147.383 13.4675 146.117 12.2372 144.039 12.2367C142.883 12.1869 141.763 12.6418 140.969 13.4847C140.175 14.3279 139.784 15.4757 139.9 16.6293V29.3968H133.986V7.9359H139.9V11.1566C141.213 8.7703 143.739 7.3105 146.457 7.3675Z"></path>
+      </svg>
+      <kbd class="keyboard-shortcut">J</kbd>
+      <svg class="svg-icon svg-icon--chevron-down" aria-hidden="true"><use href="/static/assets/8f593f8a435ef577ee04941c.svg#chevron-down"></use></svg>
+</button>    <div class="nav-menu__sheet nav-menu__sheet--jump expanded_content" role="dialog" aria-label="Jump Menu" aria-description="Search or jump to a project, person, or recent page" aria-modal="true" data-focus-trap-target="region">
+      <div class="nav-menu__scroller" data-behavior="scrollable_menu" scrollable="">
+        <div data-controller="prefetched-frame" data-prefetched-frame-url-value="/6302022/my/navigation/menu" data-turbo-permanent=""></div>
+      </div>
+</div>  </div>
+</div>
+
+  </div>
+
+  <div class="hidden" aria-hidden="true">
+  <a tabindex="-1" data-hotkey="w" href="/6302022/my/drafts">Drafts</a>
+  <a tabindex="-1" data-hotkey="o" href="/6302022/my/boosts">Boosts</a>
+  <a tabindex="-1" data-controller="hotkey" data-hotkey="1,Shift+!,Shift+1" href="/6302022/activity">Activity</a>
+  <a tabindex="-1" data-controller="hotkey" data-hotkey="2,Shift+@,Shift+2" href="/6302022/calendar">Calendar</a>
+  <a tabindex="-1" data-controller="hotkey" data-hotkey="3,Shift+#,Shift+3" href="/6302022/reports">Reports</a>
+  <a tabindex="-1" data-controller="hotkey" data-hotkey="4,Shift+$,Shift+4" href="/6302022/everything">Everything</a>
+</div>
+
+
+  <bc-modal opened="false" data-desktop-modal-target="modal" data-action="close-&gt;desktop-modal#resetModal" close-on-submit="false" close-on-click-outside="true" type="box"></bc-modal>
+</nav>
+
+      <noscript>
+  <div class="noscript-message text-center margin-inline-auto">
+    <span><span class="emoji">⚠️</span></span>
+    <span class="noscript-message__content">
+      Some Basecamp features won’t work unless you enable JavaScript in your browser.
+      <a class="decorated" target="_blank" href="/external?target=http%3A%2F%2Fenable-javascript.com">Learn more…</a>
+    </span>
+  </div>
+</noscript>
+
+      <div id="flashes"></div>
+
+      
+
+
+      <main id="main-content" class="main-content perma perma--pared-down" data-appearing-on="" data-bucket-url="/6302022/buckets/49234166" data-bucket-id="49234166" data-controller="bridge--page bridge--page-metadata bridge--insets bridge--display-rich-avatar bridge--image-viewer bridge--desktop-cable bridge--desktop-color-scheme bridge--desktop-download-flight bridge--desktop-lexxy-keyboard bridge--desktop-manifest bridge--desktop-navigation bridge--desktop-new-tab bridge--desktop-notification bridge--desktop-page-info bridge--desktop-sidebar-ping bridge--desktop-unreads bridge--desktop-window-focus bridge--buttons bridge--toast-notification bridge--overflow-menu " data-bridge--desktop-sidebar-ping-sidebar-outlet="#sidebar">
+        
+        <section class="system-degradations-banner formatted_content">
+  <h1 class="text-negative text-center margin-bottom-24">
+    Basecamp isn’t fully functional right now.
+  </h1>
+
+  <p data-system-degradation="uploads_disabled" class="margin-bottom-24">
+    <strong>File uploading is disabled</strong> due to a service disruption.
+    Your files are safe, but you can’t upload new files to messages, comments, documents, or the Docs &amp; Files section.
+  </p>
+
+  <p data-system-degradation="search_disabled" class="margin-bottom-24">
+    <strong>Search is offline</strong> due to a service disruption.
+    Your data is safe, and you can continue to use Basecamp.
+  </p>
+
+  <p data-system-degradation="readonly_database" class="margin-bottom-24">
+    <strong>The database is in read-only mode</strong> due to a service disruption.
+    Your data is safe, but you can’t currently post new messages, to-dos, documents, etc.
+  </p>
+
+  <p data-system-degradation="activity_timeline_disabled" class="margin-bottom-24">
+    <strong>Activity timelines are temporarily disabled</strong> due to a service disruption.
+    Your data is safe, and you can continue to use Basecamp.
+  </p>
+
+  <footer>
+    We’re terribly sorry for the disruption and are working diligently to bring Basecamp back to 100%.<br>
+    Visit <a href="/status" target="_blank">our status site</a> for updates.
+  </footer>
+</section>
+
+        <div id="announcement_banner" class="margin-inline-8" data-controller="announcement-banner" data-announcement-banner-url="/6302022/my/announcement" data-announcement-banner-read-url="/6302022/my/announcement/read" data-turbo-permanent="true"></div>
+        <div class="back-to-top app-mobile__hide hidden@md-down" data-controller="scroll-state scroll" data-action="scroll@window-&gt;scroll-state#update:passive resize@window-&gt;scroll-state#update:passive" data-scroll-state-scrolled-class="back-to-top--scrolled" data-scroll-state-threshold-value="160" data-scroll-behavior-value="preferred"><button name="button" type="button" class="back-to-top__button btn btn--ghost btn--sm" aria-label="Back to top" data-action="scroll#scrollToPageTop"><svg class="svg-icon svg-icon--arrow-up" aria-hidden="true"><use href="/static/assets/4370a69a5dd63a92205eaf5f.svg#arrow-up"></use></svg><span>Back to top</span></button></div>
+
+          <div class="perma-toolbar">
+              <nav id="breadcrumbs" class="perma-toolbar__breadcrumbs hide-scrollbar" aria-label="Breadcrumb" data-controller="scroll" data-scroll-to-value="end">
+  
+                  
+  <a class="perma-toolbar__breadcrumb perma-toolbar__breadcrumb--bucket" data-controller="hotkey animation" data-hotkey="Shift+G" data-animation-play-class="perma-toolbar__breadcrumb--consumed" title="Making a Podcast" href="/6302022/projects/49234166">
+    <strong>Making a Podcast</strong>
+    <kbd class="keyboard-shortcut" title="Shift+G">G</kbd>
+</a>
+
+  
+    <a class="perma-toolbar__breadcrumb" title="To-dos" data-breadcrumbs-target="link" href="/6302022/buckets/49234166/todosets/10398823029"><span>To-dos</span></a><a class="perma-toolbar__breadcrumb" title="Two-Person Teams: Listener Questions" data-breadcrumbs-target="link" href="/6302022/buckets/49234166/todolists/10398823593"><span>Two-Person Teams: Listener Questions</span></a>
+
+
+
+
+
+</nav>
+          </div>
+        
+
+
+
+
+<span data-behavior="flash_message_container">
+  
+</span>
+
+
+
+
+
+
+<section class="act-on-card">
+  <div class="act-on-card__reference">
+        <article id="recording_10398823613" class="card card--todo card--torn" data-behavior="card sortable_card_handle" data-position-url="/6302022/buckets/49234166/recordings/10398823613/position" data-controller="recording-color-picker" data-vault-previews-target="previewable" data-url="/6302022/buckets/49234166/todos/10398823613" data-filing-url="/6302022/buckets/49234166/recordings/10398823613/filing" data-rich-avatar-suppressed="true" data-lightbox-suppressed="true" style="" role="article"><a class="card__link" data-bridge-desktop-label="Upload" href="/6302022/buckets/49234166/todos/10398823613"><div class="recording-preview recording-preview--todo">
+    <div class="content-type-icon content-type-icon--todo content-type-icon--base bg-green-50 content-type-icon--pinned"><svg class="svg-icon svg-icon--check-solid" aria-hidden="true"><use href="/static/assets/733ff089ed9844fc2aa349db.svg#check-solid"></use></svg></div>
+    
+
+    <object>
+      <ul class="todos">
+            <li class="todo " data-quick-find-target="searchable">
+  <div class="checkbox-field">
+      <div class="todo__checkbox checkbox disabled">
+</div>
+
+
+    <div class="todo__content checkbox-field__content">
+      <span class="todo__preview-title" dir="auto">
+      Upload
+</span>
+
+      <span class="task-details">
+        
+    <span class="task-details__assignee">
+        <img class="avatar" data-selectable-suppressed="" data-avatar-for-person-id="53382590" alt="Cheryl Walters" title="Cheryl Walters" loading="eager" decoding="async" src="/static/assets/45df24fa3fc614c5a12cbfa9.bin" width="130" height="130">
+
+        Cheryl W.
+    </span>
+
+          <span class="task-details__date">
+            <svg class="svg-icon svg-icon--calendar" aria-hidden="true"><use href="/static/assets/1b4038a6deb4cdd992e3f49b.svg#calendar"></use></svg>
+            <span>            Oct 16</span>
+          </span>
+        
+
+      </span>
+    </div>
+  </div>
+</li>
+
+      </ul>
+    </object>
+</div></a><div class="recording-colorpicker card__colorpicker">
+  <a title="Color me in!" class="card__colorpicker-trigger" data-turbo-prefetch="false" data-remote="true" href="/6302022/buckets/49234166/recordings/10398823613/color/edit"></a>
+</div>
+<div class="card__drag-handle hidden" data-behavior="sortable_card_handle"></div></article>
+
+  </div>
+
+  <div class="act-on-card__explanation">
+    <h1 class="margin-top-8">Copy this to-do to another list</h1>
+
+    <div class="margin-bottom-8">
+      First, choose where you want this to go:
+    </div>
+
+    <select class="input input--select input--full-width" data-behavior="destination_bucket_selector">
+      <option>Select a project…</option>
+
+        <optgroup label="Copy it within Making a Podcast to…">
+          <option data-name="Making a Podcast" data-url="/6302022/buckets/49234166/todos/10398823613/destination_todolists/49234166?operation=copy">
+            A to-do list in this project
+          </option>
+        </optgroup>
+
+        <optgroup label="Copy it out to…">
+            <option data-name="My Project" data-url="/6302022/buckets/49234166/todos/10398823613/destination_todolists/49234165?operation=copy">
+              My Project
+            </option>
+        </optgroup>
+    </select>
+
+    <div data-behavior="now_pick_a_list" class="text-pretty margin-top-24"></div>
+  </div>
+</section>
+
+<div data-behavior="todolists_for_bucket"></div>
+
+
+      </main>
+
+      
+    </div>
+
+      <footer class="footer-trays" id="footer-trays" data-turbo-permanent="">
+        <div class="footer-trays__corner loading__hide">
+          <section class="tray tray--account">
+  <div class="tray__tab" data-controller="dialog list-navigation autofocus" data-list-navigation-wrap-value="true" data-autofocus-disabled-value="true" data-dialog-click-outside-exempt-selector-value="#sidebar" data-action="
+        keydown.esc-&gt;dialog#closeIfOpen
+        mousedown@document-&gt;dialog#captureClickStart
+        click@document-&gt;dialog#closeOnClickOutside
+        turbo:visit@document-&gt;dialog#closeOnPageVisit
+        dialog:show@document-&gt;dialog#closeOthers
+        dialog:show-&gt;autofocus#focusIfVisible
+        dialog:close-&gt;autofocus#reset">
+    <dialog id="my_navigation_account_content" class="tray__dialog tray__dialog--account" aria-label="My account" data-dialog-target="dialog" data-action="click-&gt;dialog#closeOnLinkClick keydown.up-&gt;list-navigation#focusPreviousElement keydown.down-&gt;list-navigation#focusNextElement keydown.home-&gt;list-navigation#focusFirstElement keydown.end-&gt;list-navigation#focusLastElement keydown.left-&gt;list-navigation#focusPreviousControl keydown.right-&gt;list-navigation#focusNextControl" inert="">
+      <div class="tray__hat">
+        <h3 class="tray__title">My Account</h3>
+      </div>
+
+      <div class="tray__item list-grid">
+        <form class="contents" method="get" action="/6302022/my/profile/edit">
+          <button name="button" type="button" class="reading__link list-grid" aria-haspopup="dialog" data-action="desktop-modal#openModal dialog#close" data-list-navigation-target="focusable" data-autofocus-target="field">
+            <div class="reading__avatar">
+              <svg class="svg-icon svg-icon--person" aria-hidden="true"><use href="/static/assets/4e05fb08c3c495d080c87f42.svg#person"></use></svg>
+            </div>
+            <div class="reading__content">
+              <h4 class="reading__description margin-block-0">My Profile</h4>
+            </div>
+</button></form>      </div>
+
+      <div class="tray__item list-grid">
+        <a class="reading__link list-grid" data-hotkey="w" data-list-navigation-target="focusable" data-autofocus-target="field" href="/6302022/my/drafts">
+          <div class="reading__avatar">
+            <svg class="svg-icon svg-icon--file-draft" aria-hidden="true"><use href="/static/assets/22ea33351d7d9aa3a238ba7f.svg#file-draft"></use></svg>
+          </div>
+          <div class="reading__content">
+            <h4 class="reading__description margin-block-0">My Drafts <kbd class="keyboard-shortcut">W</kbd></h4>
+          </div>
+</a>      </div>
+
+      <div class="tray__item list-grid">
+        <a class="reading__link list-grid" data-hotkey="o" data-list-navigation-target="focusable" data-autofocus-target="field" href="/6302022/my/boosts">
+          <div class="reading__avatar">
+            <svg class="svg-icon svg-icon--boost" aria-hidden="true"><use href="/static/assets/a1362cbf5a20db5c719059c8.svg#boost"></use></svg>
+          </div>
+          <div class="reading__content">
+            <h4 class="reading__description margin-block-0">My Boosts <kbd class="keyboard-shortcut">O</kbd></h4>
+          </div>
+</a>      </div>
+
+      <div class="tray__item list-grid">
+        <a class="reading__link list-grid" data-list-navigation-target="focusable" data-autofocus-target="field" href="/6302022/my/settings">
+          <div class="reading__avatar">
+            <svg class="svg-icon svg-icon--gear" aria-hidden="true"><use href="/static/assets/fe3512a845f8cfd078050008.svg#gear"></use></svg>
+          </div>
+          <div class="reading__content">
+            <h4 class="reading__description margin-block-0">Account &amp; Settings</h4>
+          </div>
+</a>      </div>
+
+      <div class="tray__item list-grid">
+        <form class="contents" data-turbo="false" method="post" action="/6302022/sign_out"><input type="hidden" name="_method" value="delete"><button class="reading__link list-grid" data-controller="hotkey" data-hotkey="Shift+: w q,Shift+: q" data-list-navigation-target="focusable" data-autofocus-target="field" type="submit">
+          <div class="reading__avatar">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" class="svg-icon" aria-hidden="true"><path fill="currentColor" d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"></path></svg>
+          </div>
+          <div class="reading__content">
+            <h4 class="reading__description margin-block-0">Log out <kbd class="keyboard-shortcut">:wq</kbd></h4>
+          </div>
+</button></form>      </div>
+</dialog>
+    <button class="tray__nav tray__nav--avatar app-mobile__hide" data-action="dialog#toggle" data-hotkey="u" aria-label="My Account" title="My Account">
+      <img data-current-person-avatar="true" alt="" loading="eager" decoding="async" class="avatar" src="/api/avatar.svg" width="30" height="30" title="Dee">
+      <kbd class="keyboard-shortcut">U</kbd>
+    </button>
+  </div>
+</section>
+
+        </div>
+        <div class="footer-trays__inner">
+          <section class="tray tray--left">
+  <div class="tray__tab" data-controller="dialog list-navigation turbo-frame autofocus turbo-frame-deep-link" data-dialog-click-outside-exempt-selector-value="#sidebar" data-list-navigation-wrap-value="true" data-autofocus-disabled-value="true" data-turbo-frame-delay-to-refresh-value="250" data-action="keydown.esc@document-&gt;dialog#closeIfOpen mousedown@document-&gt;dialog#captureClickStart click@document-&gt;dialog#closeOnClickOutside turbo:visit@document-&gt;dialog#closeOnPageVisit dialog:show@document-&gt;dialog#closeOthers dialog:show-&gt;autofocus#focusIfVisible dialog:close-&gt;autofocus#reset quick-find:dismiss-&gt;dialog#close dialog:show-&gt;turbo-frame#refresh dialog:close-&gt;turbo-frame#cancelRefresh turbo:before-morph-element-&gt;turbo-frame#reloadNestedFrameInsteadOfMorphing turbo:load@window-&gt;turbo-frame-deep-link#follow turbo-frame-deep-link:open-&gt;dialog#open turbo:frame-load-&gt;autofocus#focusIfVisible" data-turbo-frame-deep-link-param-value="tray" data-turbo-frame-deep-link-allowed-paths-value='["/6302022/my/assignments", "/6302022/my/assignings"]'>
+  <dialog id="my_navigation_assignments_content" class="tray__dialog tray__dialog--sheet tray__dialog--assignments" aria-label="My Tasks" data-dialog-target="dialog" data-action="click-&gt;dialog#closeOnLinkClick keydown.up-&gt;list-navigation#focusPreviousElement keydown.down-&gt;list-navigation#focusNextElement keydown.home-&gt;list-navigation#focusFirstElement keydown.end-&gt;list-navigation#focusLastElement keydown.left-&gt;list-navigation#focusPreviousControl keydown.right-&gt;list-navigation#focusNextControl" inert="">
+    <turbo-frame loading="lazy" refresh="morph" data-turbo-frame-target="element" data-turbo-frame-deep-link-target="frame" id="my_navigation_assignments" src="/6302022/my/assignments" target="_top"></turbo-frame>
+</dialog>
+  <button class="tray__nav btn btn--sm btn--ghost" aria-label="My Tasks" title="My Tasks" data-action="dialog#toggle mouseenter-&gt;turbo-frame#prefetch" data-hotkey="t">
+    <svg class="svg-icon svg-icon--check-solid tray__nav-icon hidden@md-up" aria-hidden="true"><use href="/static/assets/733ff089ed9844fc2aa349db.svg#check-solid"></use></svg>
+    <span class="hidden@md-down"><span class="tray__nav-prefix">My </span>Tasks</span>
+    <kbd class="keyboard-shortcut">T</kbd>
+</button>
+    <button type="button" class="hidden" tabindex="-1" aria-hidden="true" data-action="dialog#toggle" data-hotkey="a"></button>
+</div>
+
+  <div class="tray__tab" data-controller="dialog list-navigation turbo-frame autofocus" data-dialog-click-outside-exempt-selector-value="#sidebar" data-list-navigation-wrap-value="true" data-autofocus-disabled-value="true" data-turbo-frame-delay-to-refresh-value="250" data-action="keydown.esc@document-&gt;dialog#closeIfOpen mousedown@document-&gt;dialog#captureClickStart click@document-&gt;dialog#closeOnClickOutside turbo:visit@document-&gt;dialog#closeOnPageVisit dialog:show@document-&gt;dialog#closeOthers dialog:show-&gt;autofocus#focusIfVisible dialog:close-&gt;autofocus#reset quick-find:dismiss-&gt;dialog#close dialog:show-&gt;turbo-frame#refresh dialog:close-&gt;turbo-frame#cancelRefresh turbo:before-morph-element-&gt;turbo-frame#reloadNestedFrameInsteadOfMorphing turbo:frame-load-&gt;autofocus#focusIfVisible">
+  <dialog id="my_navigation_schedule_content" class="tray__dialog tray__dialog--sheet tray__dialog--schedule" aria-label="My Events" data-dialog-target="dialog" data-action="click-&gt;dialog#closeOnLinkClick keydown.up-&gt;list-navigation#focusPreviousElement keydown.down-&gt;list-navigation#focusNextElement keydown.home-&gt;list-navigation#focusFirstElement keydown.end-&gt;list-navigation#focusLastElement keydown.left-&gt;list-navigation#focusPreviousControl keydown.right-&gt;list-navigation#focusNextControl" inert="">
+    <turbo-frame loading="lazy" refresh="morph" data-turbo-frame-target="element" data-turbo-frame-deep-link-target="frame" id="my_navigation_schedule" src="/6302022/my/navigation/schedule" target="_top"></turbo-frame>
+</dialog>
+  <button class="tray__nav btn btn--sm btn--ghost" aria-label="My Events" title="My Events" data-action="dialog#toggle mouseenter-&gt;turbo-frame#prefetch" data-hotkey="e">
+    <svg class="svg-icon svg-icon--calendar tray__nav-icon hidden@md-up" aria-hidden="true"><use href="/static/assets/1b4038a6deb4cdd992e3f49b.svg#calendar"></use></svg>
+    <span class="hidden@md-down"><span class="tray__nav-prefix">My </span>Events</span>
+    <kbd class="keyboard-shortcut">E</kbd>
+</button>
+</div>
+</section>
+
+          <section class="tray tray--center">
+  <div class="tray__tab" data-controller="dialog list-navigation turbo-frame autofocus" data-list-navigation-wrap-value="true" data-autofocus-disabled-value="true" data-dialog-click-outside-exempt-selector-value="#sidebar" data-turbo-frame-delay-to-refresh-value="250" data-action="keydown.esc@document-&gt;dialog#closeIfOpen mousedown@document-&gt;dialog#captureClickStart click@document-&gt;dialog#closeOnClickOutside turbo:visit@document-&gt;dialog#closeOnPageVisit dialog:show@document-&gt;dialog#closeOthers
+        dialog:show-&gt;autofocus#focusIfVisible
+        dialog:close-&gt;autofocus#reset
+        dialog:show-&gt;turbo-frame#refresh
+        dialog:close-&gt;turbo-frame#cancelRefresh
+        turbo:before-morph-element-&gt;turbo-frame#reloadNestedFrameInsteadOfMorphing
+        turbo:frame-load-&gt;autofocus#focusIfVisible">
+    <dialog class="tray__dialog tray__dialog--sheet tray__dialog--today" aria-label="Today" data-dialog-target="dialog" data-action="click-&gt;dialog#closeOnLinkClick keydown.up-&gt;list-navigation#focusPreviousElement keydown.down-&gt;list-navigation#focusNextElement keydown.home-&gt;list-navigation#focusFirstElement keydown.end-&gt;list-navigation#focusLastElement keydown.left-&gt;list-navigation#focusPreviousControl keydown.right-&gt;list-navigation#focusNextControl" inert="">
+      <turbo-frame loading="lazy" refresh="morph" data-turbo-frame-target="element" id="my_navigation_today" src="/6302022/my/navigation/today" target="_top"></turbo-frame>
+    </dialog>
+
+    <turbo-frame refresh="morph" id="my_navigation_today_summary" src="/6302022/my/navigation/today/summary" target="_top" complete="">
+  
+<div class="contents">
+  <div class="tray__event-bar">
+    
+  </div>
+
+</div>
+
+</turbo-frame>
+  </div>
+</section>
+
+          <section class="tray tray--right">
+  <div class="tray__tab" data-controller="dialog list-navigation turbo-frame autofocus" data-dialog-click-outside-exempt-selector-value="#sidebar" data-list-navigation-wrap-value="true" data-autofocus-disabled-value="true" data-turbo-frame-delay-to-refresh-value="250" data-action="keydown.esc@document-&gt;dialog#closeIfOpen mousedown@document-&gt;dialog#captureClickStart click@document-&gt;dialog#closeOnClickOutside turbo:visit@document-&gt;dialog#closeOnPageVisit dialog:show@document-&gt;dialog#closeOthers dialog:show-&gt;autofocus#focusIfVisible dialog:close-&gt;autofocus#reset quick-find:dismiss-&gt;dialog#close dialog:show-&gt;turbo-frame#refresh dialog:close-&gt;turbo-frame#cancelRefresh turbo:before-morph-element-&gt;turbo-frame#reloadNestedFrameInsteadOfMorphing turbo:frame-load-&gt;autofocus#focusIfVisible">
+  <dialog class="tray__dialog tray__dialog--sheet tray__dialog--bookmarks" aria-label="My Bookmarks" data-dialog-target="dialog" data-action="click-&gt;dialog#closeOnLinkClick keydown.up-&gt;list-navigation#focusPreviousElement keydown.down-&gt;list-navigation#focusNextElement keydown.home-&gt;list-navigation#focusFirstElement keydown.end-&gt;list-navigation#focusLastElement keydown.left-&gt;list-navigation#focusPreviousControl keydown.right-&gt;list-navigation#focusNextControl" inert="">
+    <turbo-frame loading="lazy" refresh="morph" data-turbo-frame-target="element" data-turbo-frame-deep-link-target="frame" id="my_navigation_bookmarks" src="/6302022/my/navigation/bookmarks" target="_top"></turbo-frame>
+</dialog>
+  <button class="tray__nav btn btn--sm btn--ghost" aria-label="My Bookmarks" title="My Bookmarks" data-action="dialog#toggle mouseenter-&gt;turbo-frame#prefetch" data-hotkey="b" data-controller="animation" data-animation-play-class="tray__nav--consumed">
+    <svg class="svg-icon svg-icon--bookmark tray__nav-icon hidden@md-up" aria-hidden="true"><use href="/static/assets/a86aa34c9916b23873e0d6d1.svg#bookmark"></use></svg>
+    <span class="hidden@md-down"><span class="tray__nav-prefix">My </span>Bookmarks</span>
+    <kbd class="keyboard-shortcut">B</kbd>
+</button>
+</div>
+
+  <div class="tray__tab" data-controller="dialog list-navigation turbo-frame autofocus" data-dialog-click-outside-exempt-selector-value="#sidebar" data-list-navigation-wrap-value="true" data-autofocus-disabled-value="true" data-turbo-frame-delay-to-refresh-value="250" data-action="keydown.esc@document-&gt;dialog#closeIfOpen mousedown@document-&gt;dialog#captureClickStart click@document-&gt;dialog#closeOnClickOutside turbo:visit@document-&gt;dialog#closeOnPageVisit dialog:show@document-&gt;dialog#closeOthers dialog:show-&gt;autofocus#focusIfVisible dialog:close-&gt;autofocus#reset quick-find:dismiss-&gt;dialog#close dialog:show-&gt;turbo-frame#refresh dialog:close-&gt;turbo-frame#cancelRefresh turbo:before-morph-element-&gt;turbo-frame#reloadNestedFrameInsteadOfMorphing turbo:frame-load-&gt;autofocus#focusIfVisible">
+  <dialog class="tray__dialog tray__dialog--sheet tray__dialog--activity" aria-label="My Activity" data-dialog-target="dialog" data-action="click-&gt;dialog#closeOnLinkClick keydown.up-&gt;list-navigation#focusPreviousElement keydown.down-&gt;list-navigation#focusNextElement keydown.home-&gt;list-navigation#focusFirstElement keydown.end-&gt;list-navigation#focusLastElement keydown.left-&gt;list-navigation#focusPreviousControl keydown.right-&gt;list-navigation#focusNextControl" inert="">
+    <turbo-frame loading="lazy" refresh="morph" data-turbo-frame-target="element" data-turbo-frame-deep-link-target="frame" id="my_navigation_activity" src="/6302022/my/navigation/activity" target="_top"></turbo-frame>
+</dialog>
+  <button class="tray__nav btn btn--sm btn--ghost" aria-label="My Activity" title="My Activity" data-action="dialog#toggle mouseenter-&gt;turbo-frame#prefetch" data-hotkey="y">
+    <svg class="svg-icon svg-icon--chart tray__nav-icon hidden@md-up" aria-hidden="true"><use href="/static/assets/8b19d8374bf8e002cbd61fdc.svg#chart"></use></svg>
+    <span class="hidden@md-down"><span class="tray__nav-prefix">My </span>Activity</span>
+    <kbd class="keyboard-shortcut">Y</kbd>
+</button>
+</div>
+
+  <div class="tray__tab" data-controller="dialog autofocus turbo-frame" data-autofocus-disabled-value="true" data-turbo-frame-clear-on-disconnect-value="false" data-dialog-click-outside-exempt-selector-value="#sidebar" data-action="dialog:show-&gt;autofocus#focusIfVisible dialog:close-&gt;autofocus#reset turbo:frame-load-&gt;autofocus#focusIfVisible keydown.esc@document-&gt;dialog#closeIfOpen mousedown@document-&gt;dialog#captureClickStart click@document-&gt;dialog#closeOnClickOutside turbo:visit@document-&gt;dialog#closeOnPageVisit dialog:show@document-&gt;dialog#closeOthers">
+    <dialog data-dialog-target="dialog" class="tray__dialog tray__dialog--sheet tray__dialog--scratchpad" aria-label="My Notes" inert="">
+      <div class="tray__scratchpad-container document-style-editor drop_zoned" data-behavior="drop_zone_container">
+        <div class="perma-toolbar">
+  <div class="perma-toolbar__actions">
+    
+    <button type="button" class="tray__close btn btn--sm btn--icon btn--ghost app-mobile__hide" data-action="dialog#close" aria-label="Close">
+  <svg class="svg-icon svg-icon--x" aria-hidden="true"><use href="/static/assets/675483664aff3de45e409c28.svg#x"></use></svg>
+</button>
+
+  </div>
+</div>
+
+<header class="perma-header">
+  <h1 class="perma-header__title">My Notes</h1>
+</header>
+
+        <turbo-frame loading="lazy" data-turbo-frame-target="element" id="my_navigation_notes" src="/6302022/my/navigation/notes" target="_top"></turbo-frame>
+      </div>
+    </dialog>
+    <button class="tray__nav btn btn--sm btn--ghost" aria-label="My Notes" title="My Notes" data-action="click-&gt;dialog#toggle mouseenter-&gt;turbo-frame#prefetch" data-hotkey="n">
+      <svg class="svg-icon svg-icon--file-text tray__nav-icon hidden@md-up" aria-hidden="true"><use href="/static/assets/564b1d41f322943a3fdfae41.svg#file-text"></use></svg>
+      <span class="hidden@md-down">
+        <span class="tray__nav-prefix">My </span>Notes
+      </span>
+      <kbd class="keyboard-shortcut">N</kbd>
+    </button>
+  </div>
+</section>
+
+        </div>
+        <div class="help-button app-mobile__hide" data-role="help_button_container" data-beacon-id="913808d2-102c-45fc-bfd2-0868b1a14738" data-controller="help-button" data-action="click-&gt;help-button#watch error@window-&gt;help-button#fallBack:capture" data-help-button-loading-class="help-button--loading">
+  <a class="btn btn--ghost btn--sm leading-none" href="/support" target="_blank" rel="noopener" data-behavior="help_button" data-help-button-target="link" data-hotkey="?" aria-label="Support" title="Support">
+    <svg class="svg-icon svg-icon--question-circle-solid" aria-hidden="true"><use href="/static/assets/d951d4d469d160c9f88c0edc.svg#question-circle-solid"></use></svg>
+    <span>Support</span>
+    <kbd class="keyboard-shortcut">?</kbd>
+  </a>
+</div>
+      </footer>
+
+    
+
+    <div id="sidebar" role="complementary" aria-label="Sidebar" data-turbo-permanent="" data-controller="sidebar" data-action="
+      keydown.esc-&gt;sidebar#togglePaneFocus
+      keydown.esc@document-&gt;sidebar#togglePaneFocus
+      click-&gt;sidebar#focusListAfterVisit
+      prefetched-frame:injected-&gt;sidebar#reload
+      bc:unreads-change@window-&gt;sidebar#reloadSoon
+      visibilitychange@document-&gt;sidebar#reloadIfVisible
+      turbo:before-visit@document-&gt;sidebar#closeOnSmallViewportVisit
+      turbo:load@document-&gt;sidebar#closeOnConflictingVisit
+      turbo:load@document-&gt;sidebar#restoreKeyboardVisitFocus
+      turbo:before-visit@document-&gt;sidebar#preserveScroll
+      turbo:before-cache@document-&gt;sidebar#preserveScroll
+      turbo:render@document-&gt;sidebar#restoreScroll
+      turbo:click@document-&gt;sidebar#prepareKeyboardPageVisit
+      hashchange@window-&gt;sidebar#restoreKeyboardVisitFocus" data-sidebar-root-path-value="/my/sidebar" data-sidebar-default-location-value="/6302022/my/sidebar/inbox">
+
+  <button class="hidden" data-controller="ping-shortcut" data-hotkey="p" data-action="click-&gt;ping-shortcut#open" data-ping-shortcut-sidebar-outlet="#sidebar"></button>
+
+  <button class="hidden" data-hotkey="s" data-action="sidebar#toggle" data-sidebar-focus-list-param="true" aria-label="Toggle sidebar"></button>
+
+  <button hidden="" data-hotkey="z" data-behavior="toggle_focus_mode"></button>
+
+  <div hidden="">
+    <div class="focus-mode__toggle tray__action text-14">
+  <button class="focus-mode__toggle--off" name="button" type="button" aria-label="Pause notifications" data-behavior="enable_focus_mode" data-url="/6302022/my/notifications/snooze" data-verb="PUT">
+    <svg class="svg-icon svg-icon--bell" aria-hidden="true"><use href="/static/assets/916f610ab872272a8f7d20df.svg#bell"></use></svg>Shhh…<kbd class="keyboard-shortcut">Z</kbd>
+  </button>
+  <button class="focus-mode__toggle--on" name="button" type="button" aria-label="Resume notifications" data-behavior="toggle_notifications" data-url="/6302022/my/notifications/toggle" data-verb="DELETE">
+    <svg class="svg-icon svg-icon--bell-off-solid" aria-hidden="true"><use href="/static/assets/52ae10cdcdebc5c0c28ff518.svg#bell-off-solid"></use></svg>Silencing notifications<kbd class="keyboard-shortcut">Z</kbd>
+  </button>
+</div>
+
+  </div>
+
+  <aside class="sidebar" role="presentation" inert="" data-sidebar-target="pane">
+    <nav class="sidebar__top-bar" role="presentation">
+      <a class="sidebar__back btn btn--icon btn--sm btn--ghost" data-turbo-frame="sidebar_frame" data-action="sidebar#back" aria-label="Back" href="/6302022/my/sidebar/inbox"><svg class="svg-icon svg-icon--arrow-left" aria-hidden="true"><use href="/static/assets/252e305f07e9de4cef5b0063.svg#arrow-left"></use></svg></a>
+
+<button class="sidebar__close btn btn--icon btn--sm btn--ghost" data-action="sidebar#close" aria-label="Close sidebar"><svg class="svg-icon svg-icon--x" aria-hidden="true"><use href="/static/assets/675483664aff3de45e409c28.svg#x"></use></svg></button>
+
+    </nav>
+
+    <turbo-frame refresh="morph" class="sidebar__frame" data-sidebar-target="frame" data-controller="prefetched-frame" data-prefetched-frame-url-value="/6302022/my/sidebar/inbox" data-action="
+              turbo:frame-load-&gt;sidebar#persistAndFocusFrame
+              turbo:before-fetch-response-&gt;sidebar#closeOnFailedFetch
+              turbo:before-frame-render-&gt;sidebar#preserveOptimisticRows" id="sidebar_frame" target="_top">
+      <div class="sidebar__panel sidebar__skeleton-panel skeleton--pulse" aria-hidden="true">
+  <div class="sidebar__panel-scrollable">
+    <nav class="sidebar__circles" aria-hidden="true">
+  <header class="sidebar__circles-header">
+    <h3 class="sidebar__circles-heading">Ping someone</h3>
+  </header>
+
+  <div>
+    <div class="sidebar__circles-avatars hide-scrollbar">
+      <div class="sidebar__circle sidebar__circle--new">
+        <span class="sidebar__circle-new-icon"><svg class="svg-icon svg-icon--plus-solid" aria-hidden="true"><use href="/static/assets/9aa9354221eb8e79173503de.svg#plus-solid"></use></svg></span>
+        <span class="sidebar__circle-name">Ping</span>
+      </div>
+
+        <div class="sidebar__circle">
+          <span class="skeleton skeleton--circle sidebar__skeleton-circle sidebar__skeleton-circle--avatar"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--circle-name"></span>
+        </div>
+        <div class="sidebar__circle">
+          <span class="skeleton skeleton--circle sidebar__skeleton-circle sidebar__skeleton-circle--avatar"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--circle-name"></span>
+        </div>
+        <div class="sidebar__circle">
+          <span class="skeleton skeleton--circle sidebar__skeleton-circle sidebar__skeleton-circle--avatar"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--circle-name"></span>
+        </div>
+        <div class="sidebar__circle">
+          <span class="skeleton skeleton--circle sidebar__skeleton-circle sidebar__skeleton-circle--avatar"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--circle-name"></span>
+        </div>
+        <div class="sidebar__circle">
+          <span class="skeleton skeleton--circle sidebar__skeleton-circle sidebar__skeleton-circle--avatar"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--circle-name"></span>
+        </div>
+        <div class="sidebar__circle">
+          <span class="skeleton skeleton--circle sidebar__skeleton-circle sidebar__skeleton-circle--avatar"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--circle-name"></span>
+        </div>
+    </div>
+  </div>
+</nav>
+
+
+    <div class="sidebar__list">
+      <div class="sidebar__skeleton-readings" aria-hidden="true">
+  <div class="sidebar__skeleton-list-header"></div>
+
+    <div class="reading list-grid sidebar__skeleton-reading">
+      <div class="list-grid">
+        <span class="skeleton skeleton--circle reading__avatar sidebar__skeleton-circle sidebar__skeleton-circle--reading-avatar"></span>
+        <div class="reading__content">
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--title"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--body"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--meta"></span>
+        </div>
+      </div>
+    </div>
+    <div class="reading list-grid sidebar__skeleton-reading">
+      <div class="list-grid">
+        <span class="skeleton skeleton--circle reading__avatar sidebar__skeleton-circle sidebar__skeleton-circle--reading-avatar"></span>
+        <div class="reading__content">
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--title"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--body"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--meta"></span>
+        </div>
+      </div>
+    </div>
+    <div class="reading list-grid sidebar__skeleton-reading">
+      <div class="list-grid">
+        <span class="skeleton skeleton--circle reading__avatar sidebar__skeleton-circle sidebar__skeleton-circle--reading-avatar"></span>
+        <div class="reading__content">
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--title"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--body"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--meta"></span>
+        </div>
+      </div>
+    </div>
+    <div class="reading list-grid sidebar__skeleton-reading">
+      <div class="list-grid">
+        <span class="skeleton skeleton--circle reading__avatar sidebar__skeleton-circle sidebar__skeleton-circle--reading-avatar"></span>
+        <div class="reading__content">
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--title"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--body"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--meta"></span>
+        </div>
+      </div>
+    </div>
+    <div class="reading list-grid sidebar__skeleton-reading">
+      <div class="list-grid">
+        <span class="skeleton skeleton--circle reading__avatar sidebar__skeleton-circle sidebar__skeleton-circle--reading-avatar"></span>
+        <div class="reading__content">
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--title"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--body"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--meta"></span>
+        </div>
+      </div>
+    </div>
+    <div class="reading list-grid sidebar__skeleton-reading">
+      <div class="list-grid">
+        <span class="skeleton skeleton--circle reading__avatar sidebar__skeleton-circle sidebar__skeleton-circle--reading-avatar"></span>
+        <div class="reading__content">
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--title"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--body"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--meta"></span>
+        </div>
+      </div>
+    </div>
+    <div class="reading list-grid sidebar__skeleton-reading">
+      <div class="list-grid">
+        <span class="skeleton skeleton--circle reading__avatar sidebar__skeleton-circle sidebar__skeleton-circle--reading-avatar"></span>
+        <div class="reading__content">
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--title"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--body"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--meta"></span>
+        </div>
+      </div>
+    </div>
+    <div class="reading list-grid sidebar__skeleton-reading">
+      <div class="list-grid">
+        <span class="skeleton skeleton--circle reading__avatar sidebar__skeleton-circle sidebar__skeleton-circle--reading-avatar"></span>
+        <div class="reading__content">
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--title"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--body"></span>
+          <span class="skeleton skeleton--line sidebar__skeleton-bar sidebar__skeleton-bar--meta"></span>
+        </div>
+      </div>
+    </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+</turbo-frame>
+    <nav class="sidebar__bar" role="presentation">
+      <a class="sidebar__back btn btn--icon btn--sm btn--ghost" tabindex="-1" data-turbo-frame="sidebar_frame" data-action="sidebar#back" aria-label="Back" href="/6302022/my/sidebar/inbox"><svg class="svg-icon svg-icon--arrow-left" aria-hidden="true"><use href="/static/assets/252e305f07e9de4cef5b0063.svg#arrow-left"></use></svg></a>
+
+<button class="sidebar__close btn btn--icon btn--sm btn--ghost" tabindex="-1" data-action="sidebar#close" aria-label="Close sidebar"><svg class="svg-icon svg-icon--x" aria-hidden="true"><use href="/static/assets/675483664aff3de45e409c28.svg#x"></use></svg></button>
+
+    </nav>
+  </aside>
+
+  <turbo-frame refresh="morph" data-sidebar-target="reloadable" id="sidebar_badge" src="/6302022/my/sidebar/badge" complete="">
+  
+<button class="sidebar-badge sidebar-badge--notifications" aria-label="Pings and Notifications" data-action="sidebar#toggleOrReturn" data-sidebar-path-param="/6302022/my/sidebar/inbox" data-sidebar-focus-list-param="true">
+    <span class="sidebar-badge__unreads">
+        <span class="sidebar-badge__count">
+            <span class="sidebar-badge__label sidebar-badge__label--notifications-prefix hidden@xl-down">Pings +</span>
+          <span class="unread-badge">3</span>
+          <span class="sidebar-badge__label sidebar-badge__label--notifications hidden@lg-down">New<span class="sidebar-badge__suffix hidden@xl-down"> for you</span></span>
+        </span>
+
+    </span>
+
+  <span class="sidebar-badge__empty">
+    <svg class="svg-icon svg-icon--bell-solid tray__nav-icon sidebar-badge__icon sidebar-badge__icon--on" aria-hidden="true"><use href="/static/assets/6695da332c6041d6e662fa08.svg#bell-solid"></use></svg>
+    <svg class="svg-icon svg-icon--bell-off-solid tray__nav-icon sidebar-badge__icon sidebar-badge__icon--off" aria-hidden="true"><use href="/static/assets/52ae10cdcdebc5c0c28ff518.svg#bell-off-solid"></use></svg>
+    <span class="sidebar-badge__empty-text hidden@md-down">
+      <span class="tray__nav-prefix">Pings + </span>Notifications
+    </span>
+  </span>
+
+  <kbd class="keyboard-shortcut">S</kbd>
+</button>
+</turbo-frame>
+</div>
+
+  </div>
+
+  
+
+
+  <div id="live_region" class="sr-only" data-controller="live-region" data-turbo-permanent="true" data-action="announce@window-&gt;live-region#announce turbo:before-cache@document-&gt;live-region#clear"><span data-live-region-target="polite" aria-live="polite" aria-relevant="additions"></span><span data-live-region-target="assertive" aria-live="assertive" aria-relevant="additions"></span></div>
+
+
+<script defer src="/static/local.js"></script></body></html>

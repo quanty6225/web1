@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" style="--rgb-theme: 0, 100, 230;"><head>
+
+    <title>37signals — Security Overview</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <meta name="description" content="Keeping customer data safe and secure is a huge responsibility and a top priority for us. Here’s how we make it happen.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:site_name" content="37signals">
+    <meta property="og:title" content="Security Overview">
+    <meta property="og:description" content="Keeping customer data safe and secure is a huge responsibility and a top priority for us. Here’s how we make it happen.">
+    <meta property="og:image" content="/external?target=https%3A%2F%2F37signals.com%2Fassets%2Fimages%2Fopengraph.png">
+    <meta property="og:url" content="/policies/security">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:title" content="Security Overview">
+    <meta name="twitter:description" content="Keeping customer data safe and secure is a huge responsibility and a top priority for us. Here’s how we make it happen.">
+    <meta name="twitter:image" content="/external?target=https%3A%2F%2F37signals.com%2Fassets%2Fimages%2Fopengraph.png">
+    <meta name="twitter:image:alt" content="37signals">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="canonical" href="/policies/security">
+
+    <link rel="icon" href="/static/assets/ea4ce1f576ca57563ae023e0.png">
+    <link rel="mask-icon" href="/external?target=https%3A%2F%2F37signals.com%2Fassets%2Fimages%2Fmask-icon.svg" color="#000000">
+    <link rel="apple-touch-icon" href="/static/assets/b2055cf0aabf93274a4afe8e.png">
+
+    <link rel="stylesheet" type="text/css" href="/static/assets/63c5cfc69141c0ac2c1342aa.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/9cb14d4e61de5375dd38d07b.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/89b5c876b7f84d151a5d453f.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/89c3740f6fa715ac24e7f158.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/49b6a8796dfc595cf9b244cc.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/3cbc2df0ffcf27b8513235ad.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/3e388048d7621a6233a0d7a6.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/e9c80378656ed85fe7fb17f6.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/4d83e1a59abfc7e46a28773d.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/26d15bb0d484b1bc5ce2f670.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/5b9b4033b50ac5b3ff367031.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/3f5991bf39f21621974271ef.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/7383941536d7e4952bca929f.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/6635697ce855c9e9db609b8c.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/870e9d8732812c48ea3d5982.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/58fb0f31d9efc26aa9a51424.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/b72da7112aa0157a9a466807.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/780786608c628a7028644ccf.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/2a78db21ec8395e36c6510a3.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/fed145b251e18833cd8a5500.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/da834377db7d492de02e9f69.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/336f233c1075f03fccf3a4f2.css">
+
+    <link rel="alternate" type="application/rss+xml" title="37signals Jobs Feed" href="/external?target=https%3A%2F%2F37signals.com%2Ffeed%2Fjobs.xml">
+
+    
+    
+
+    <link rel="stylesheet" href="/static/local.css"></head>
+
+  <body class="is-ready" data-local-page="675d5e575d1d848d" data-local-auth="false" data-source-comment-total="0">
+
+    <input class="nav-active" id="nav-active" type="checkbox">
+
+    <label class="nav-underlay" for="nav-active"></label>
+
+    <nav class="nav">
+      <div class="nav__logo">
+        <a href="/external?target=https%3A%2F%2F37signals.com%2F" aria-label="37signals"><img src="/static/assets/a0b882d54abd2225b4eeb294.svg" alt="37signals" loading="eager"></a>
+      </div>
+      <div class="nav__toggle">
+        <label for="nav-active">
+          <span>Menu</span>
+        </label>
+      </div>
+      <div class="nav__options">
+        <ul>
+          <li><a href="/external?target=https%3A%2F%2F37signals.com%2F" aria-label="Signals">Signals</a></li>
+          <li><a href="" target="_blank" rel="noopener" aria-label="Basecamp">Basecamp</a></li>
+          <li><a href="/external?target=https%3A%2F%2Fwww.hey.com" target="_blank" rel="noopener" aria-label="HEY">HEY</a></li>
+          <li><a href="/external?target=https%3A%2F%2Fwww.fizzy.do" target="_blank" rel="noopener" aria-label="Fizzy">Fizzy</a></li>
+          <li><a href="/external?target=https%3A%2F%2Fonce.com" target="_blank" rel="noopener" aria-label="ONCE">ONCE</a></li>
+        </ul>
+        <ul>
+          <li><a href="/external?target=https%3A%2F%2F1999.37signals.com" target="_blank" rel="noopener" aria-label="1999">1999</a></li>
+          <li><a href="/external?target=https%3A%2F%2F37signals.com%2Fbooks" aria-label="Books">Books</a></li>
+          <li><a href="/external?target=https%3A%2F%2F37signals.com%2Fthoughts" aria-label="Thoughts">Thoughts</a></li>
+          <li><a href="/external?target=https%3A%2F%2F37signals.com%2Fjobs" aria-label="Jobs">Jobs</a></li>
+          <li><a href="/external?target=https%3A%2F%2Fupdates.37signals.com" target="_blank" rel="noopener" aria-label="Updates">Updates</a></li>
+          <li><a href="/external?target=https%3A%2F%2F37signals.com%2Fpodcast" aria-label="Podcast">Podcast</a></li>
+          <li><a href="/external?target=https%3A%2F%2Fsupply.37signals.com" aria-label="Supply">Supply</a></li>
+          <li><a href="/external?target=https%3A%2F%2Fdev.37signals.com" aria-label="Dev">Dev</a></li>
+          <li><a href="/policies" aria-label="Policies">Policies</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="header">
+      <h1><a href="/external?target=https%3A%2F%2F37signals.com%2F" aria-label="37signals"><img src="/static/assets/d40498510f893c0219192aae.svg" alt="37signals" loading="eager"></a></h1>
+      <ul>
+        <li><a href="/external?target=https%3A%2F%2F37signals.com%2F" aria-label="Signals">Signals</a></li>
+        <li><a href="" target="_blank" rel="noopener" aria-label="Basecamp">Basecamp</a></li>
+        <li><a href="/external?target=https%3A%2F%2Fwww.hey.com" target="_blank" rel="noopener" aria-label="HEY">HEY</a></li>
+        <li><a href="/external?target=https%3A%2F%2Fwww.fizzy.do" target="_blank" rel="noopener" aria-label="Fizzy">Fizzy</a></li>
+        <li><a href="/external?target=https%3A%2F%2Fonce.com" target="_blank" rel="noopener" aria-label="ONCE">ONCE</a></li>
+      </ul>
+    </header>
+
+    <main>
+
+
+<section class="page">
+  <div class="page__headline">
+    <h1>Security Overview</h1>
+  </div>
+  <div class="page__body">
+    <div class="page__content content content--policies">
+
+      <h2 id="we-protect-your-data">We protect your data</h2>
+      <p>All data are written to multiple disks instantly, backed up daily, and stored in multiple locations. Files that our customers upload are stored on servers that use modern techniques to remove bottlenecks and points of failure.</p>
+
+      <h2 id="your-data-are-sent-using-https">Your data are sent using HTTPS</h2>
+      <p>Whenever your data are in transit between you and us, everything is encrypted, and sent using HTTPS. Within our firewalled private networks, data may be transferred unencrypted.</p>
+      <p>Any files which you upload to us are stored and are encrypted at rest. Our application databases are generally not encrypted at rest — the information you add to the applications is active in our databases and subject to the same protection and monitoring as the rest of our systems. Our database backups are encrypted at rest with AES-256, on our own storage and with our cloud storage provider.</p>
+
+      <h2 id="full-redundancy-for-all-major-systems">Full redundancy for all major systems</h2>
+      <p>Our servers — from power supplies to the internet connection to the air purifying systems — operate at full redundancy. Our systems are engineered to stay up even if multiple servers fail.</p>
+
+      <h2 id="sophisticated-physical-security">Sophisticated physical security</h2>
+      <p>Our state-of-the-art servers are protected by biometric locks and round-the-clock interior and exterior surveillance monitoring. Only authorized personnel have access to the data center. 24/7/365 onsite staff provides additional protection against unauthorized entry and security breaches.</p>
+
+      <h2 id="regularly-updated-infrastructure">Regularly-updated infrastructure</h2>
+      <p>Our software infrastructure is updated regularly with the latest security patches. Our products run on a dedicated network which is locked down with firewalls and carefully monitored. While perfect security is a moving target, we work with security researchers to keep up with the state-of-the-art in web security.</p>
+
+      <h2 id="we-protect-your-billing-information">We protect your billing information</h2>
+      <p>All credit card transactions are processed using secure encryption—the same level of encryption used by leading banks. Card information is transmitted, stored, and processed securely on a <a href="/external?target=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FPayment_Card_Industry_Data_Security_Standard">PCI-Compliant network</a>. Our <a href="/static/assets/f0203ab2a33d81fef5cda3ca.pdf">current PCI DSS Certificate of Compliance (PDF)</a>, issued by SecurityMetrics on our SAQ A self-assessment, is renewed annually.</p>
+
+      <h2 id="constant-monitoring">Constant monitoring</h2>
+      <p>We have a team dedicated to maintaining your account’s security on our systems and monitoring tools we’ve set up to alert us to any nefarious activity against our domains. To date, we’ve <em>never</em> had a data breach.</p>
+      <p>We also audit internal data access. If a 37signals employee wrongly accesses customer data, they will face penalties ranging from termination to prosecution. Again, to our knowledge, this hasn’t happened.</p>
+      <p>We have processes and defenses in place to keep our streak of 0 data breaches going. But in the unfortunate circumstances someone malicious does successfully mount an attack, we will immediately notify all affected customers.</p>
+
+      <h2 id="want-to-know-more">Want to know more?</h2>
+      <p><a href="/static/assets/98733db81f9860414079e986.pdf">We’ve got several pages of additional details in our security overview</a> for you. For HEY, our email service, we have also a dedicated page. Go to <a href="/external?target=https%3A%2F%2Fwww.hey.com%2Fsecurity%2F">hey.com/security</a> to learn more.</p>
+
+      <h2 id="standardized-security-questionnaires">Standardized security questionnaires</h2>
+      <p>For vendor security reviews, we publish our completed <a href="/policies/security/caiq/CAIQ_v4.1.html">CSA Consensus Assessments Initiative Questionnaire (CAIQ) v4.1</a>, also available as <a href="/static/assets/9cf33d9f4de623d153d9ba9a.pdf">a PDF</a>. It answers all 283 questions of the Cloud Security Alliance’s Cloud Controls Matrix v4.1 as a self-assessment. For higher-education reviews, we publish our completed <a href="/policies/security/hecvat/HECVAT_4.html">EDUCAUSE Higher Education Community Vendor Assessment Toolkit (HECVAT) 4</a>, also available as <a href="/static/assets/e4cb390d2a5c00ad6bc60f6c.pdf">a PDF</a>, <a href="/static/assets/a47b44704337968572446b3f.csv">a CSV</a>, and <a href="/static/assets/615a2fc33d58b18501ff5a3b.xlsx">the filled official workbook</a>. Summit, our colocation provider, publish their own <a href="/static/assets/1d6591ef3227d98fead1aa4e.pdf">SOC 3 report (PDF)</a> on the Security criteria for their IT services; the operators of the sites they use are carved out of it as subservice organizations, and their fuller SOC 2 Type II is available under NDA. Need a copy of our DPA or another questionnaire completed for your review? <a href="/external?target=mailto%3Asecurity%4037signals.com">Email our Security team</a>.</p>
+
+      <h2 id="have-a-concern-need-to-report-an-incident">Have a concern? Need to report an incident?</h2>
+      <p>Have you noticed abuse, misuse, an exploit, or experienced an incident with your account? Please visit our <a href="/policies/security/response">Security Response</a> page for details on how to securely submit a report.</p>
+
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+      <ul>
+  <li><a href="/external?target=https%3A%2F%2F1999.37signals.com" target="_blank" rel="noopener" aria-label="1999">1999</a></li>
+  <li><a href="/external?target=https%3A%2F%2F37signals.com%2Fbooks" aria-label="Books">Books</a></li>
+  <li><a href="/external?target=https%3A%2F%2F37signals.com%2Fthoughts" aria-label="Thoughts">Thoughts</a></li>
+  <li><a href="/external?target=https%3A%2F%2F37signals.com%2Fjobs" aria-label="Jobs">Jobs</a></li>
+  <li><a href="/external?target=https%3A%2F%2Fupdates.37signals.com" target="_blank" rel="noopener" aria-label="Updates">Updates</a></li>
+  <li><a href="/external?target=https%3A%2F%2F37signals.com%2Fpodcast" aria-label="Podcast">Podcast</a></li>
+  <li><a href="/external?target=https%3A%2F%2Fsupply.37signals.com" aria-label="Supply">Supply</a></li>
+  <li><a href="/external?target=https%3A%2F%2Fdev.37signals.com" aria-label="Dev">Dev</a></li>
+  <li><a href="/policies" aria-label="Policies">Policies</a></li>
+</ul>
+
+    </footer>
+
+  
+
+
+
+<script defer src="/static/local.js"></script></body></html>

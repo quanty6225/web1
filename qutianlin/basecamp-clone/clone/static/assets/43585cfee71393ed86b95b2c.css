@@ -1,0 +1,90 @@
+/* An assistant's setup steps, with its logo in a column to the left */
+.assistant {
+  display: grid;
+  gap: 0 0.65em;
+  grid-template-columns: 1.4375em 1fr;
+}
+
+.assistant__logo {
+  align-items: center;
+  display: flex;
+  font-size: var(--font-size-xx-large);
+  height: calc(1em * var(--line-height-x-tight));
+}
+
+.assistant__logo img {
+  display: block;
+  flex-shrink: 0;
+  height: 1.15em;
+  object-fit: contain;
+  object-position: left center;
+  width: 1.15em;
+}
+
+.text article > .assistant:first-child {
+  margin-top: -0.26875em;
+}
+
+.assistant__body > :first-child {
+  margin-top: 0;
+}
+
+.assistant__body > * + * {
+  margin-top: var(--spacing, 1.4em);
+}
+
+/* The connection address, set apart in a shaded block flush with the card's edges */
+.assistant-address {
+  --card-padding: calc(var(--space-neutral) / 0.625); /* .text__card padding in article ems */
+
+  background: oklch(from var(--color-canvas) l c h / 0.5);
+  border-top: var(--line);
+  margin-inline: calc(-1 * var(--card-padding));
+  padding: var(--card-padding);
+}
+
+.text article > .assistant-address:last-child {
+  margin-top: calc(var(--card-padding) - 0.39em);
+  margin-bottom: calc(-1 * var(--card-padding));
+}
+
+.assistant-address > :first-child {
+  margin-top: -0.39em;
+}
+
+.assistant-address > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.assistant-address > * + * {
+  margin-top: var(--spacing, 1.4em);
+}
+
+.assistant-address p {
+  font-weight: 600;
+}
+
+.assistant-address .codeblock__code {
+  background: var(--color-white);
+}
+
+@media(min-width: 64em) {
+
+  .assistant-address {
+    --card-padding: calc(var(--space-large) / 0.625);
+  }
+
+}
+
+@media(prefers-color-scheme: dark) {
+
+  .assistant-address {
+    background: oklch(var(--oklch-ink-inverted) / 0.3);
+  }
+
+  .assistant-address .codeblock__code {
+    background: var(--color-ink-3);
+  }
+
+}

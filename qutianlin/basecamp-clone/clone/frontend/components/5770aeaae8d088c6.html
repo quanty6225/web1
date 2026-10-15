@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html><head><style type="text/css">.turbo-progress-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #0076ff;
+  z-index: 2147483647;
+  transition:
+    width 300ms ease-out,
+    opacity 150ms 150ms ease-in;
+  transform: translate3d(0, 0, 0);
+}
+</style>
+<meta charset="utf-8">
+
+<title data-bridge-alt="Home">Home</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="none">
+
+<meta name="referrer" content="origin-when-cross-origin">
+
+<meta name="theme-color" content="hsl(202.5, 42.1%, 7.5%)" media="(prefers-color-scheme: dark)">
+
+<meta name="turbo-root" content="/6302022">
+
+<meta name="turbo-cache-control" content="cache">
+
+<meta name="turbo-prefetch" content="true">
+
+<meta name="current-env" content="production"><meta name="current-stage" content="production"><meta name="current-release" content="5f43bd">
+<meta name="current-account-public-id" content="6302022"><meta name="current-account-slug-path" content="/6302022"><meta name="current-account-pro-pack" content="false"><meta name="current-account-restricts-archive-and-trash" content="false"><meta name="current-account-voice-notes-enabled" content="true">
+<meta name="current-account-on-per-seat-business-model" content="false"><meta name="current-account-on-modern-business-model" content="true">
+
+<meta name="current-person-id" content="53382586"><meta name="current-person-gid" content="gid://bc3/Person/53382586"><meta name="current-person-name" content="Dee"><meta name="current-person-email-address" content="demo@basecamp.offline.invalid"><meta name="current-person-avatar-url" content="/api/avatar.svg"><meta name="current-person-owner" content="true"><meta name="current-person-admin" content="true"><meta name="current-person-staff" content="false"><meta name="current-person-client" content="false"><meta name="current-person-employee" content="true"><meta name="current-person-first-week-day-int" content="0"><meta name="current-person-first-time-booster" content="true"><meta name="current-person-time-format" content="twelve_hour"><meta name="current-page-exclude-from-recent-history" content="false"><meta name="current-page-type" content="home"><meta name="current-page-title" content="Home">
+
+
+<meta name="current-account-name" content="Dee">
+
+
+<meta name="assets-version" content="v1">
+
+<meta name="apple-itunes-app" content="app-id=1015603248">
+
+
+
+<link rel="stylesheet" href="/static/assets/0618d0b8f58901465b03a3ef.css" media="all" data-turbo-track="reload">
+<link rel="stylesheet" href="/static/assets/4994bc21ac250d6a0f6327ee.css" media="all" data-turbo-track="reload">
+<link rel="subresource" href="/static/assets/901561f033523a234d8cec5c.js" data-script="builds/rich_text" data-turbo-track="reload">
+<link rel="subresource" href="/static/assets/55d92447ff8accc81735f52a.js" data-script="@mermaid-js/tiny/dist/mermaid.tiny" data-turbo-track="reload">
+<template id="mermaid-diagram-template">
+  <figure class="mermaid-diagram" data-controller="dialog" data-dialog-modal-value="true" data-action="keydown.esc-&gt;dialog#closeIfOpen">
+    <div class="mermaid-diagram__inline"></div>
+
+    <button type="button" class="mermaid-diagram__expand btn btn--sm btn--icon btn--ghost" aria-label="Expand diagram" aria-haspopup="dialog" data-action="dialog#open">
+      <svg class="svg-icon svg-icon--expand" aria-hidden="true"><use href="/static/assets/1427e07e496172d3997dc188.svg#expand"></use></svg>
+    </button>
+
+    <dialog class="mermaid-diagram__dialog" inert="" aria-label="Diagram" data-dialog-target="dialog">
+      <button type="button" class="mermaid-diagram__close btn btn--icon btn--ghost" aria-label="Close" data-action="dialog#close">
+        <svg class="svg-icon svg-icon--x" aria-hidden="true"><use href="/static/assets/675483664aff3de45e409c28.svg#x"></use></svg>
+      </button>
+
+      <div class="mermaid-diagram__expanded"></div>
+    </dialog>
+  </figure>
+</template>
+
+
+<meta name="current-avatar-version" content="7694f4a66316e53c8cdd9d9954bd611d" data-turbo-track="reload">
+
+<link rel="apple-touch-icon" sizes="196x196" href="/static/assets/469491359b770d998bdb50ce.png">
+<link rel="shortcut icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+
+<meta name="turbo-refresh-method" content="morph"><meta name="turbo-refresh-scroll" content="preserve">
+<link rel="stylesheet" href="/static/local.css"></head>
+
+
+<body data-local-page="5770aeaae8d088c6" data-local-auth="true" data-source-comment-total="0"><turbo-frame refresh="morph" data-turbo-frame-target="element" data-turbo-frame-deep-link-target="frame" id="my_navigation_activity" target="_top" complete="">
+  <div data-controller="quick-find" data-quick-find-match-class="type-highlight">
+    <div class="perma-toolbar">
+  <div class="perma-toolbar__actions">
+    
+    <button type="button" class="tray__close btn btn--sm btn--icon btn--ghost app-mobile__hide" data-action="dialog#close" aria-label="Close">
+  <svg class="svg-icon svg-icon--x" aria-hidden="true"><use href="/static/assets/675483664aff3de45e409c28.svg#x"></use></svg>
+</button>
+
+  </div>
+</div>
+
+<header class="perma-header">
+  <h1 class="perma-header__title">My Activity</h1>
+    <div class="perma-header__content"><div class="filter">
+  <div class="filter-by-text">
+  <label for="activity-quick-find-filter" class="filter-by-text__hotkey" data-hotkey="f">
+    <span aria-hidden="true">Filter… <kbd class="keyboard-shortcut">F</kbd></span>
+    <span class="sr-only">Filter activity by name</span>
+  </label>
+
+  <input type="text" dir="auto" id="activity-quick-find-filter" data-turbo-permanent="" data-quick-find-target="query" data-action="input-&gt;quick-find#search keydown.enter-&gt;quick-find#search:stop:prevent keydown.esc-&gt;quick-find#dismiss:stop focusin-&gt;quick-find#preloadPages turbo:before-cache@document-&gt;quick-find#reset" placeholder=" " class="input outline-none filter-by-text__input" autocomplete="off">
+
+  <button type="button" class="search-query__icon" data-action="quick-find#clear" aria-label="Clear filter text">
+    <svg class="svg-icon svg-icon--x-circle-solid" aria-hidden="true"><use href="/static/assets/e507e2d7c3bf27cd3d14819a.svg#x-circle-solid"></use></svg>
+  </button>
+</div>
+
+  <span class="text-subtle text-14" hidden="" data-quick-find-target="noResults">No results</span>
+
+</div>
+</div>
+</header>
+
+
+    <section class="past-day-activity" data-quick-find-target="results">
+  <div id="my_activity-pagination-list" class="my_activity" data-controller="turbo-frame-pagination" data-turbo-frame-pagination-paginate-on-intersection-value="true">
+    <turbo-frame refresh="morph" role="presentation" id="my_activity-pagination-contents-2026-10-13-1" target="_top">
+        
+<section class="past-day-activity__day" id="timeline_day_2026_10_13">
+    
+<h2 class="past-day-activity__date-separator" data-controller="local-time" data-local-time-datetime-value="2026-10-13" data-local-time-rendered-value="true">
+  <span class="past-day-activity__date-label"><span data-local-time-target="pastPrefix">Today, </span>Tuesday, October 13</span>
+    
+  <span class="today-events__contributors">
+    <span class="today-events__contributors-label">1 person active today</span>
+    <span class="avatar-group avatar-group--x-small avatar-group--gapless flex-nowrap" role="group" aria-label="Active people">
+
+      <button type="button" data-behavior="rich_avatar" data-rich-avatar-url="/6302022/people/53382586/rich_avatar" class="avatar-button" aria-haspopup="dialog" aria-label="Dee"><img data-avatar-for-person-id="53382586" alt="Dee" title="Dee, Dee" class="avatar" loading="eager" decoding="async" src="/api/avatar.svg" width="130" height="130"></button>
+
+    </span>
+  </span>
+
+</h2>
+
+
+      
+  <div class="today-events timeline-activity-feed" id="today_snapshot">
+    
+  <div class="today-events-list" id="today_events_list">
+    
+<div class="today-events-list__item today-events-list__item--with-icon" data-quick-find-target="searchable" tabindex="-1" data-list-navigation-target="focusable" data-autofocus-target="field" data-action="keydown.enter-&gt;list-navigation#activate keydown.meta+enter-&gt;list-navigation#activate keydown.ctrl+enter-&gt;list-navigation#activate">
+  <div class="today-events-list__content">
+    <span class="today-events-list__time" data-controller="local-time" data-local-time-datetime-value="2026-10-13T17:05:59+08:00" data-local-time-rendered-value="true">
+      <span data-local-time-target="shortAgo" hidden=""></span>
+      <span data-local-time-target="fallback"><time datetime="2026-10-13T09:05:59Z" data-local="time" data-format="%l:%M%P" title="October 13, 2026 at 9:05am UTC" data-processed-at="2026-10-13T12:28:18.830Z" data-localized="">9:05am</time></span>
+    </span>
+    <div class="content-type-icon content-type-icon--dock content-type-icon--base bg-slate-50"><svg class="svg-icon svg-icon--grid-solid" aria-hidden="true"><use href="/static/assets/b141fc5d3244b8f4d0bb801c.svg#grid-solid"></use></svg></div>
+      <span class="today-events-list__avatars today-events-list__avatars--sentence">
+        <button type="button" data-behavior="rich_avatar" data-rich-avatar-url="/6302022/people/53382586/rich_avatar" class="avatar-button" aria-haspopup="dialog" aria-label="Dee"><img data-avatar-for-person-id="53382586" alt="Dee" title="Dee, Dee" class="avatar" loading="eager" decoding="async" src="/api/avatar.svg" width="80" height="80"></button>
+      </span>
+    <div class="today-events-list__text">
+      <span class="today-events-list__sentence">
+        <strong class="today-events-list__creator-name">Dee</strong>
+        created this project
+
+
+      </span>
+      
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  </div>
+
+</section>
+
+
+      
+</turbo-frame>  </div>
+</section>
+
+  </div>
+</turbo-frame>
+<script defer src="/static/local.js"></script></body></html>

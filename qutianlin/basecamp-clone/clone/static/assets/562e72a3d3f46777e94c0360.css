@@ -1,0 +1,91 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  padding-inline: var(--space-medium);
+  position: relative;
+  z-index: 1;
+}
+
+.table__card {
+  --table-border: var(--line);
+  --table-cell-padding: calc(0.3 * var(--font-size));
+  --table-padding: var(--space-neutral);
+
+  display: grid;
+  gap: var(--table-padding);
+  margin-inline: auto;
+  padding: var(--table-padding);
+  width: min(100%, 28em);
+}
+
+.table table {
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table table:has(thead) {
+  margin-top: -0.1575em;
+}
+
+.table table th {
+  font-size: var(--font-size-large);
+  font-weight: 800;
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--line-height-x-tight);
+  padding-bottom: 0.385em;
+  text-align: left;
+  text-wrap: balance;
+}
+
+.table table td {
+  border-bottom: var(--table-border);
+  font-size: var(--font-size-x-small);
+  letter-spacing: var(--letter-spacing);
+  padding-block: var(--table-cell-padding);
+  padding-right: 1em;
+  text-wrap: pretty;
+  vertical-align: middle;
+}
+
+.table table tbody tr:first-child td {
+  border-top: var(--table-border);
+}
+
+.table table td:last-child {
+  font-size: var(--font-size-xxx-small);
+  letter-spacing: var(--letter-spacing);
+  padding-right: 0;
+}
+
+.table table td kbd {
+  font-size: inherit;
+}
+
+@media(hover: hover) {
+
+  .table table tr td {
+    transition: background var(--transition);
+  }
+
+  .table table tr:hover td {
+    background: oklch(var(--oklch-ink) / 0.02);
+  }
+
+}
+
+@media(min-width: 64em) {
+
+  .table {
+    padding-inline: var(--space-x-large);
+  }
+
+  .table__card {
+    --table-padding: var(--space-large);
+  }
+
+  .table table td:first-child {
+    width: 50%;
+  }
+
+}

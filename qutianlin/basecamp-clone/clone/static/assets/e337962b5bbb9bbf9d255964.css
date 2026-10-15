@@ -1,0 +1,44 @@
+.site {
+  background: var(--color-canvas);
+  display: flex;
+  flex-direction: column;
+  overflow-x: clip;
+  padding-bottom: var(--space-x-large);
+  position: relative;
+}
+
+.main:has(> .site--stripped) {
+  flex: 1;
+}
+
+.site--stripped {
+  flex: 1;
+  justify-content: center;
+  padding-block: var(--space-x-large);
+}
+
+@media(min-width: 64em) {
+
+  .site {
+    margin-inline: var(--space-medium);
+    padding-bottom: var(--space-x-large);
+  }
+
+  .site--stripped {
+    margin-bottom: var(--space-medium);
+    padding-block: var(--space-x-large);
+  }
+
+}
+
+@media(prefers-color-scheme: dark) {
+
+  .site {
+    background: var(--color-ink-2);
+  }
+
+}
+
+.dark .site {
+  background: var(--color-ink-2);
+}

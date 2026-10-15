@@ -1,0 +1,64 @@
+.visual {
+  display: flex;
+  flex-direction: column;
+  padding-inline: var(--space-medium);
+  position: relative;
+  z-index: 1;
+}
+
+.visual figure {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5375em;
+  margin-inline: auto;
+  position: relative;
+  width: min(100%, 36em);
+}
+
+.visual figure > picture,
+.visual figure > img,
+.visual figure > video {
+  box-shadow: var(--box-shadow-card);
+  overflow: clip;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.visual--x-small figure {
+  width: min(100%, 14em);
+}
+
+.visual--small figure {
+  width: min(100%, 28em);
+}
+
+.visual--medium figure {
+  width: min(100%, 32em);
+}
+
+.visual--large figure {
+  width: min(100%, 40em);
+}
+
+.visual--row figure > picture,
+.visual--row figure > img,
+.visual--row figure > video {
+  flex: 1;
+  min-width: 0;
+}
+
+@media(min-width: 64em) {
+
+  .visual {
+    padding-inline: var(--space-x-large);
+  }
+
+  .visual--row figure {
+    align-items: end;
+    flex-direction: row;
+    gap: var(--space-medium);
+  }
+
+}

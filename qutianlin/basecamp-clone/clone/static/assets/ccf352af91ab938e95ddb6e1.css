@@ -1,0 +1,25 @@
+.cursor {
+  --cursor-height: 0.95em;
+
+  animation: blink 1s step-end infinite;
+  background-color: currentColor;
+  display: inline-block;
+  height: var(--cursor-height);
+  letter-spacing: normal;
+  margin-top: calc(var(--cursor-height) * -1);
+  overflow: hidden;
+  text-indent: 100%;
+  vertical-align: -0.0875em;
+  white-space: nowrap;
+  width: 0.6em;
+}
+
+
+
+@keyframes blink {
+
+  50% {
+    opacity: 0;
+  }
+
+}

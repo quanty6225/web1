@@ -1,0 +1,135 @@
+[
+  {
+    "route": "/help/2/article/201-project-permissions",
+    "capture_id": "help-answers-details-1791937922",
+    "source_key": "f605c4eba8206fc7",
+    "text": "Project permissions It helps to know who has the ability to perform certain actions in your projects! Creating: Any project member can add new items. Viewing: Client projects can help you restrict items from project members. You can also use loop in, to include folks outside the project on specific discussions. Editing and deleting: Admins can edit or delete any project item. Non-admins will only be able to edit or delete the discussions and comments they have created, and only for 15 minutes. Non-admins users can edit, delete, and complete any to-do list or task in a project, and any text document they created. Learn more about who can view which projects and people. Next help article: Archiving, deleting and renaming →",
+    "images": [],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/2/article/212-deleting-and-restoring-project-items",
+    "capture_id": "help-answers-details-1791937922",
+    "source_key": "b674727e9edf6b7f",
+    "text": "Deleting and restoring project items Deleting Click to view an item: If you're an admin, you'll see the option to delete or edit a post. Non-admins can only delete or edit items they've created. They can only delete or edit their comments on a post for 15 minutes. Deleting Files Delete files to free space in your account! To delete a file, just click on the Delete button in list view. Only admins can edit or delete items they did not create. Email signature attachments will be ignored as long as they are GIF, JPG, smaller than 5KB, and follow the \"image00#\" filename format. Images beginning with \"~WRD\" or \"compose-unknown-contact\" are also ignored. To-do lists, tasks, and events Hover over the title of a list or a task. You'll see a trash can icon pop up to the left. Click on that that to delete. Click the title of an event on the calendar. In the pop-up that appears, you'll see a trash can icon in the lower right corner of that box. Click on that to delete the event. Any member of a project can delete a to-do list, task, or event. Restore Deleted Items, or Delete Them Forever Don't panic if you delete something! You can restore deleted items for up to 30 days. To see all deleted items, find the Trash can on your Everything page. Here, you can see the history of all deleted items you had access to. Click on an individual item to restore it or delete it permanently. Individual comments can be restored right from the item's history. Anyone with access to a project can delete to-do lists, tasks and calendar events. Admins can restore those items. Other projects items can only be deleted and restored by admins. Next help article: Looping non-users into a discussion →",
+    "images": [
+      {
+        "src": "/static/assets/5bba59af6fa28221d77de4f7.png",
+        "alt": "Screenshot of  comments from an admin's perspective with an arrow pointing to the Delete option for one comment"
+      },
+      {
+        "src": "/static/assets/58f754c27d3280bab1c71b67.png",
+        "alt": "Screenshot of a file in the list view with an arrow pointing to the delete button"
+      },
+      {
+        "src": "/static/assets/970602bd0ceac6a71c24264b.png",
+        "alt": "Screenshot of a to-do with the mouse cursor hovered over it, revealing the Edit option"
+      },
+      {
+        "src": "/static/assets/4697ad406245b64102b08031.png",
+        "alt": "Screenshot of an event in the calendar"
+      },
+      {
+        "src": "/static/assets/a5d8692b2af11c6a3b9d7a1d.jpg",
+        "alt": "Screenshot of the Everything page"
+      },
+      {
+        "src": "/static/assets/41cb36a8d4a166670c8cf565.gif",
+        "alt": "Screenshot of a to-do in the trash can showing the options to permanently delete it or restore it"
+      },
+      {
+        "src": "/static/assets/fbd01fc82aa90598728ef34b.png",
+        "alt": ""
+      }
+    ],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/2/article/187-granting-and-revoking-project-access",
+    "capture_id": "help-answers-details-1791937922",
+    "source_key": "2d7d0d00789e48a7",
+    "text": "Granting and revoking project access Basecamp makes it a snap to add people to a project! To add someone directly to a specific project, go inside that project ... Then head to \"Invite more people.\" Are you working with clients? Enable the client project setting. Type a name or email address. Basecamp will suggest names if they're already members of your account. Otherwise, you can use someone's email address to invite them to Basecamp. They'll be automatically added to that project. Use Companies and Groups to invite multiple people at once. You can also set superpowers when you add new people to your account. Click \"Decide who can create projects ... \" Any project member is able to add new folks to that project. You can only add people to the projects you're a member of. Revoke Project Access Revoke project access on this page by clicking the \"Remove\" link under a person's name. The person will still be a member of your account, but they won't be able to view this project anymore. All comments, files, and anything else contributed by that person will be preserved in the project. Only admins and the account owner can revoke project access. The account owner can't be removed from projects. Next help article: Passwords and invitations →",
+    "images": [
+      {
+        "src": "/static/assets/e81f4c1e0f672572294edb01.png",
+        "alt": "Screenshot of the Projects page with an arrow pointing towards a project"
+      },
+      {
+        "src": "/static/assets/44103d1e0625aadcfba01166.gif",
+        "alt": "Screenshot showing an arrow pointing to the 'Invite more people' link"
+      },
+      {
+        "src": "/static/assets/e01d2715603eea4bbae98a05.png",
+        "alt": "Screenshot showing the invitation page with 'The Client' tab selected and an arrow pointing to the 'Yes, turn on client access for this project' button"
+      },
+      {
+        "src": "/static/assets/5f031579f99849556da9531c.png",
+        "alt": "Screenshot showing the invitation page showing a list of people's names and email addresses who are being invited to the project"
+      },
+      {
+        "src": "/static/assets/0814727600218d256c58843b.png",
+        "alt": "Screenshot showing a list of users on the project with checkboxes that show which permissions they have; 'Can create projects' and 'Admin'"
+      },
+      {
+        "src": "/static/assets/3ef2183f2ffefaaa1922e65a.png",
+        "alt": "Screenshot showing 3 users on the project with an arrow pointing towards the 'Remove' button under a user's name"
+      }
+    ],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/2/article/407-project-templates",
+    "capture_id": "help-answers-details-1791937922",
+    "source_key": "27dae8e4ebccc9ae",
+    "text": "Save Time with Project Templates Templates save you time by eliminating the hassle of repeating yourself on projects you set up over and over again.",
+    "images": [],
+    "embedded_media": [
+      "https://player.vimeo.com/video/394538011"
+    ]
+  },
+  {
+    "route": "/help/2/article/214-client-projects",
+    "capture_id": "help-answers-details-1791937922",
+    "source_key": "a433e7f471660986",
+    "text": "Client projects When you're working with a client, you don't necessarily want them to see all the work you do behind the scenes. Basecamp 2 lets you invite clients to your project, but keep certain items off limits. This 📹video has more about client projects! Set up a client project You can enable the client project when you start a project. You don't have to add clients just yet - Basecamp lets you plan ahead! You can restrict items as you create them, and when you add clients to the project, those items will be hidden away. You can set up client projects in templates too! You can also enable client projects by clicking Invite more people... ... and then clicking to the client tab. Need to move someone from your team to a client team? Click Everyone, then the person's ID, and then \"Superpowers and access to projects.\" You'll be able to switch them to a client team, and vice versa. Restricting Items from the Client When client projects are enabled, you'll see a check box that lets you restrict permissions for specific items in projects. Update permissions on existing items on the\"Edit\" screen. Basecamp lets you know which items are hidden from the client. Want to share an item with your client? Click the Change button to remove the permission setting. Anyone who can see an item can change the permission setting. Things to keep in mind: Comments inherit the permission setting of their parent item. If your clients can't see the original message, they can't see the rest of the discussion either. Forwarded emails cannot be made private. You can restrict an entire to-do list, but not an individual to-do. When you move or copy an item, the permission setting will be retained. The client can't keep anything hidden from you. When a client adds someone to the project, that person will automatically be a client as well. Learn more about permissions within your projects. Next help article: Searching in Basecamp →",
+    "images": [
+      {
+        "src": "/static/assets/e01d2715603eea4bbae98a05.png",
+        "alt": "Screenshot showing a new project being created with an arrow pointing to a button to turn on client access"
+      },
+      {
+        "src": "/static/assets/6b0a153f13120bc8795eaadc.png",
+        "alt": "Screenshot of a project page with an arrow pointing to the 'Invite more people' link"
+      },
+      {
+        "src": "/static/assets/c3481bb2492a828fb25147c6.png",
+        "alt": "Screenshot showing the invitation page with an arrow pointing to 'The Client' tab"
+      },
+      {
+        "src": "/static/assets/96ab41c8a9653831e2d1cba6.png",
+        "alt": "Screenshot of a user's project access page"
+      },
+      {
+        "src": "/static/assets/1150a84d9939530456ca1fde.png",
+        "alt": "Screenshot showing a message and the checkbox to prevent clients from viewing it"
+      },
+      {
+        "src": "/static/assets/61cabc8b584bc86e5978d02a.png",
+        "alt": "Screenshot showing the edit screen for a document and a checkbox to hide the document from the client"
+      },
+      {
+        "src": "/static/assets/ccbcd3167083e55a4de5cad0.png",
+        "alt": "Screenshot of a message with an indication below the message that the client cannot view it"
+      },
+      {
+        "src": "/static/assets/a62409a0994c7c88ef727d13.png",
+        "alt": "Screenshot of a project with an indicator that mentions the client cannot view the page"
+      },
+      {
+        "src": "/static/assets/022fdf353359651431a676e3.png",
+        "alt": "Screenshot of a page with an indicator mentioning the client cannot view it. An arrow points to the 'Change' button where the viewing permissions can be changed."
+      }
+    ],
+    "embedded_media": []
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "capture_id": "help-answers-details-1791937922",
+  "query": "project",
+  "items": [
+    {
+      "route": "/help/2/article/201-project-permissions",
+      "label": "Project permissions",
+      "snippet": "It helps to know who has the ability to perform certain actions in your projects! Creating: Any project member can add new items. Viewing: Client projects can help you restrict items from project"
+    },
+    {
+      "route": "/help/2/article/212-deleting-and-restoring-project-items",
+      "label": "Deleting and restoring project items",
+      "snippet": "Deleting Click to view an item: If you're an admin, you'll see the option to delete or edit a post. Non-admins can only delete or edit items they've created. They can only delete or edit their"
+    },
+    {
+      "route": "/help/2/article/187-granting-and-revoking-project-access",
+      "label": "Granting and revoking project access",
+      "snippet": "Basecamp makes it a snap to add people to a project! To add someone directly to a specific project, go inside that project ... Then head to \"Invite more people.\" Are you working with clients? Enable"
+    },
+    {
+      "route": "/help/2/article/407-project-templates",
+      "label": "Save Time with Project Templates",
+      "snippet": "Templates save you time by eliminating the hassle of repeating yourself on projects you set up over and over again."
+    },
+    {
+      "route": "/help/2/article/214-client-projects",
+      "label": "Client projects",
+      "snippet": "When you're working with a client, you don't necessarily want them to see all the work you do behind the scenes. Basecamp 2 lets you invite clients to your project, but keep certain items off limits."
+    },
+    {
+      "route": "/help/2/article/199-organizing-projects",
+      "label": "Organizing projects",
+      "snippet": "Projects are listed in alphabetical order, but you can organize them in a way that makes sense to you! View your projects as a list, as cards, or as a combination of the two. Move important projects"
+    },
+    {
+      "route": "/help/2/article/198-projects-101",
+      "label": "Projects 101",
+      "snippet": "Get started on a project A Basecamp project is a workspace where you collaborate with your team and collect your discussions, to-dos, documents and files all in one place. Projects can be used for"
+    },
+    {
+      "route": "/help/2/article/400-customize-projects-screen",
+      "label": "Customize Your Projects Screen",
+      "snippet": "Customize the view all of your projects with just a few simple tricks."
+    },
+    {
+      "route": "/help/2/article/405-move-items",
+      "label": "Move Items Between Projects",
+      "snippet": "You can move any discussions, to-dos, files, or dates from one project to another. Or, you can even move items into a brand new project."
+    },
+    {
+      "route": "/help/2/article/183-can-i-create-templates-for-recurring-projects",
+      "label": "Can I create templates for recurring projects?",
+      "snippet": "You sure as heck can! Check out this one-minute video about project templates in Basecamp 2. You can also move and copy project items."
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class=""><head>
+  <meta name="robots" content="noarchive">
+  <meta name="viewport" content="width=100%, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="referrer" content="origin-when-cross-origin">
+
+  <title>Basecamp Log In</title>
+
+  <link rel="shortcut icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <meta name="theme-color" content="#f5faf6">
+
+  <link rel="stylesheet" href="/static/assets/c79adbb889c3983a8cf4eced.css" media="all">
+
+  <link rel="stylesheet" href="/static/local.css"></head>
+
+<body class="basecamp login basecamp" data-local-page="7b052b6c8f6700e3" data-local-auth="false" data-source-comment-total="0">
+  <div class="flash push--bottom push--top hide txt--center" data-controller="cookie-check">
+  <h2 class="txt--red flush">Cookies are not enabled.</h2>
+  <p class="flush">You'll need to enable cookies in your browser for Basecamp to work properly.</p>
+</div>
+
+
+  
+<div class="brand-wrapper" data-state="username">
+  <div class="balloon">
+    <div class="hide--when-loading txt--left">
+      <h1>Log in to Basecamp Classic</h1>
+
+      
+      
+
+        <form action="/google_sign_in/authorization" accept-charset="UTF-8" method="post"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="proceed_to" value="/basecamp/session/create"><button type="submit" class="action_button">
+          <img width="28" height="28" class="action_button__img action_button__img--google" alt="Google" title="Google" src="/static/assets/80acc183a43fd82c50e2ce6b.svg" loading="eager"> Sign in with Google
+</button></form>
+      <div class="break txt--center txt--subtle push--top push_half--bottom">
+        <div class="break__content">Or, use my email address</div>
+      </div>
+
+      
+      
+
+      <form data-behavior="login_form captcha_form" data-profile-url="/session/profile" action="/session" accept-charset="UTF-8" method="post"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="product" id="product" value="basecamp">
+        
+        
+
+        <div class="field">
+  <label class="field__label" for="username">Email or username</label>
+  <input type="text" name="username" id="username" class="input--text" placeholder="e.g. julie.young@hey.com" autofocus="autofocus" autocomplete="on" autocorrect="off" autocapitalize="off" data-role="username">
+</div>
+
+<div class="push_half--bottom" style="display: none; margin-top: -13.6px;" data-role="unrecognized_notice_container">
+  <small class="txt--red">We couldn’t find that one. Want to try another?</small>
+</div>
+
+<div class="push_half--bottom" style="display: none; margin-top: -13.6px;" data-role="authenticates_with_google_notice_container">
+  <small class="txt--red">Please sign in with Google (up top ↑) or <a href="/password_resets/new">Reset your password</a></small>
+</div>
+
+<div class="field" style="display: none;" data-role="password_container">
+  <label class="field__label" for="password">Password</label>
+  <input type="password" name="password" id="password" autocomplete="current-password" autocorrect="off" autocapitalize="off" class="input--text">
+</div>
+
+<button name="button" type="button" class="action_button" data-role="next_button">Next</button>
+
+<input type="submit" name="commit" value="Log in" class="action_button primary" style="display: none;" disabled data-role="login_button">
+
+</form>    </div>
+
+    <h1 class="hide--unless-loading">Logging you in…</h1>
+    <div class="loading hide--unless-loading" id="progressBar" style="background-position: -1253px 0px;"></div>
+  </div>
+
+  <div class="footer">
+    <a href="/basecamp/forgot_password">Forgot your password?</a>
+
+  </div>
+</div>
+
+
+
+<script defer src="/static/local.js"></script></body></html>

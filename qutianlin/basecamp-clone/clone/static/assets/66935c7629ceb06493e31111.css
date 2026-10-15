@@ -1,0 +1,292 @@
+.paths-nav {
+  --paths-nav-gutter: max(var(--space-medium), (100% - 36em) / 2);
+
+  display: grid;
+  position: relative;
+  z-index: 1;
+}
+
+.paths-nav__container {
+  display: flex;
+  gap: var(--space-medium);
+  margin-block: calc(-1 * var(--space-medium));
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  padding-block: var(--space-medium);
+  padding-inline: var(--paths-nav-gutter);
+  user-select: none;
+  -webkit-user-select: none;
+  white-space: nowrap;
+}
+
+.paths-nav .paths-nav__container {
+  scroll-padding-inline: var(--paths-nav-gutter);
+}
+
+.paths-nav__container::-webkit-scrollbar {
+  height: 0;
+}
+
+.paths-nav__item {
+  cursor: pointer;
+  display: grid;
+  justify-items: center;
+  min-width: 6.83em;
+  padding-bottom: 1.65em;
+  position: relative;
+}
+
+.paths-nav__item .path {
+  background: var(--color-white);
+  box-shadow: var(--box-shadow-card);
+  display: grid;
+  grid-template-columns: initial;
+  height: 8.6625em;
+  place-items: center;
+  transition: transform var(--transition);
+  width: 100%;
+  will-change: transform;
+}
+
+.paths-nav__item .path__visual {
+  font-size: var(--font-size-xx-small);
+  margin-top: 0;
+  padding-bottom: 2.125em;
+  padding-top: 1em;
+}
+
+.paths-nav__item .path__visual svg {
+  height: 9.75em;
+}
+
+.paths-nav__item .path__visual svg path {
+  stroke-dasharray: 0 13;
+  stroke-width: 8;
+}
+
+.paths-nav__item .path__point:before {
+  background-color: var(--color-white);
+  background-size: 1.2em auto;
+  height: 1.4em;
+  width: 1.4em;
+}
+
+.paths-nav__item .path__point:last-child {
+  margin-top: 1.45em;
+}
+
+.paths-nav__item .path__point:last-child:before {
+  background-color: transparent;
+  background-size: 100% auto;
+  height: 1.8em;
+  width: 1.8em;
+}
+
+.paths-nav__item .path--alex-de-simone .path__point:first-child {
+  margin-left: -0.075em;
+  margin-top: -0.75em;
+}
+
+.paths-nav__item .path--alex-de-simone .path__point:last-child {
+  margin-left: 0.5em;
+}
+
+.paths-nav__item .path--brett-robison .path__point:first-child {
+  margin-left: 0.075em;
+  margin-top: -0.7375em;
+}
+
+.paths-nav__item .path--brett-robison .path__point:last-child {
+  margin-left: -0.525em;
+}
+
+.paths-nav__item .path--brian-garside .path__point:first-child {
+  margin-left: 0.05em;
+  margin-top: -0.7375em;
+}
+
+.paths-nav__item .path--brian-garside .path__point:last-child {
+  margin-left: 0.1em;
+}
+
+.paths-nav__item .path--dan-unger .path__point:first-child {
+  margin-left: -0.05em;
+  margin-top: -0.75em;
+}
+
+.paths-nav__item .path--dan-unger .path__point:last-child {
+  margin-left: 0.325em;
+}
+
+.paths-nav__item .path--doug-seidl .path__point:first-child {
+  margin-left: -0.075em;
+  margin-top: -0.7375em;
+}
+
+.paths-nav__item .path--doug-seidl .path__point:last-child {
+  margin-left: -0.475em;
+}
+
+.paths-nav__item .path--fernando-araujo .path__point:first-child {
+  margin-left: 0.125em;
+  margin-top: -0.725em;
+}
+
+.paths-nav__item .path--fernando-araujo .path__point:last-child {
+  margin-left: -0.45em;
+}
+
+.paths-nav__item .path--helen-ryan .path__point:first-child {
+  margin-left: -0.075em;
+  margin-top: -0.75em;
+}
+
+.paths-nav__item .path--helen-ryan .path__point:last-child {
+  margin-left: 0.475em;
+}
+
+.paths-nav__item .path--ian-parsons .path__point:first-child {
+  margin-left: 0.15em;
+  margin-top: -0.75em;
+}
+
+.paths-nav__item .path--ian-parsons .path__point:last-child {
+  margin-left: 0.35em;
+}
+
+.paths-nav__item .path--johanne-brierre .path__point:first-child {
+  margin-left: 0.5em;
+  margin-top: -0.7em;
+}
+
+.paths-nav__item .path--johanne-brierre .path__point:last-child {
+  margin-left: -0.35em;
+}
+
+.paths-nav__item .path--lucien-odey .path__point:first-child {
+  margin-left: -0.35em;
+  margin-top: -0.725em;
+}
+
+.paths-nav__item .path--lucien-odey .path__point:last-child {
+  margin-left: -0.4em;
+}
+
+.paths-nav__item .path--ryan-almusawi .path__point:first-child {
+  margin-left: -0.1em;
+  margin-top: -0.725em;
+}
+
+.paths-nav__item .path--ryan-almusawi .path__point:last-child {
+  margin-left: -1em;
+}
+
+.paths-nav__item .path--sebastien-bossi-croci .path__point:first-child {
+  margin-left: 0.05em;
+  margin-top: -0.7375em;
+}
+
+.paths-nav__item .path--sebastien-bossi-croci .path__point:last-child {
+  margin-left: -0.3em;
+}
+
+.paths-nav__item .path--stefan-strassburger .path__point:first-child {
+  margin-left: -0.05em;
+  margin-top: -0.75em;
+}
+
+.paths-nav__item .path--stefan-strassburger .path__point:last-child {
+  margin-left: 0.55em;
+}
+
+.paths-nav__item header {
+  bottom: 0;
+  display: grid;
+  font-family: var(--font-family-monaspace);
+  font-size: var(--font-size-xxx-small);
+  justify-items: center;
+  letter-spacing: normal;
+  line-height: var(--line-height);
+  position: absolute;
+  transition: transform var(--transition);
+}
+
+.paths-nav__item header .paths-nav__name {
+  font-size: var(--font-size-x-large);
+  text-transform: uppercase;
+  margin-top: -0.175em;
+}
+
+.paths-nav__item header .paths-nav__company {
+  font-size: var(--font-size-large);
+  margin-bottom: -0.5375em;
+}
+
+.paths-nav__controls {
+  bottom: calc(100% + var(--space-neutral));
+  right: var(--paths-nav-gutter);
+}
+
+@media(hover: hover) {
+
+  .paths-nav__item:focus .path,
+  .paths-nav__item:hover .path {
+    transform: translateY(-0.22em);
+  }
+
+  .paths-nav__item:focus header,
+  .paths-nav__item:hover header {
+    transform: translateY(-0.4em);
+  }
+
+}
+
+@media(min-width: 64em) {
+
+  .paths-nav {
+    --paths-nav-gutter: calc(var(--space-x-large) + var(--space-medium));
+
+    margin-inline: calc(-1 * var(--space-medium));
+  }
+
+  .site:has(.paths-nav) {
+    overflow-x: visible;
+  }
+
+}
+
+@media(prefers-color-scheme: dark) {
+
+  .paths-nav__item .path {
+    background: var(--color-ink-3);
+  }
+
+  .paths-nav__item .path__point:before {
+    background-color: var(--color-ink-3);
+  }
+
+  .paths-nav__item .path__svg svg path {
+    stroke: var(--color-ink);
+  }
+
+  .paths-nav__item .path__svg svg marker polygon {
+    fill: var(--color-ink);
+  }
+
+  .paths-nav__item .path__point:before {
+    background-color: var(--color-ink-3);
+  }
+
+  .paths-nav__item .path__point--logo-email:before {
+    background-image: url("/static/assets/82cd4205ce732287454153cb.svg");
+  }
+
+  .paths-nav__item .path__point--logo-notion:before {
+    background-image: url("/static/assets/2f1c6c16ac5b6be572514e9d.svg");
+  }
+
+  .paths-nav__item .path__point--logo-text:before {
+    background-image: url("/static/assets/dde34e1514d7340d29ffce14.svg");
+  }
+
+}

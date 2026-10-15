@@ -1,0 +1,37 @@
+.stamp {
+  display: inline-flex;
+  font-size: var(--font-size);
+  left: -0.175em;
+  line-height: 1;
+  margin: 0;
+  pointer-events: none;
+  position: absolute;
+  top: -0.375em;
+  transform: rotate(-7deg);
+}
+
+.stamp small {
+  background: var(--color-green-deep);
+  color: var(--color-white);
+  display: inline-flex;
+  font-size: var(--font-size-xxx-small);
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1em;
+  padding: 0.15em 0.3em;
+  text-transform: uppercase;
+}
+
+@media(hover: hover) {
+
+  .stamp {
+    transition: transform var(--transition);
+    will-change: transform;
+  }
+
+  li:has(> a:focus) > .stamp,
+  li:has(> a:hover) > .stamp {
+    transform: rotate(-10deg) scale(1.2) translate(-0.0625em, -0.025em);
+  }
+
+}

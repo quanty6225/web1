@@ -1,0 +1,451 @@
+{
+  "youtube:ciFlAht4WUI": {
+    "provider": "youtube",
+    "video_id": "ciFlAht4WUI",
+    "title": "Understanding the Basecamp Home Screen – Basecamp Basics",
+    "duration": 303,
+    "width": 1920,
+    "height": 1080,
+    "src": "/static/assets/8d3154d2bae3e68faa4369b0.mp4",
+    "poster": "/static/assets/5a1febeec94e0258d321507b.webp",
+    "tracks": [
+      {
+        "src": "/static/assets/a218bb89694867981bc445a1.vtt",
+        "srclang": "pt-BR",
+        "label": "Portuguese (Brazil)"
+      },
+      {
+        "src": "/static/assets/957638b5d3624e489bc9bb49.vtt",
+        "srclang": "es-419",
+        "label": "Spanish (Latin America)"
+      },
+      {
+        "src": "/static/assets/856b1f475603dd6dfd0ef81d.vtt",
+        "srclang": "en",
+        "label": "English (Original)"
+      }
+    ]
+  },
+  "youtube:Z2sfG3-TAKU": {
+    "provider": "youtube",
+    "video_id": "Z2sfG3-TAKU",
+    "title": "Starting a Basecamp Project – Basecamp Basics",
+    "duration": 216,
+    "width": 1920,
+    "height": 1080,
+    "src": "/static/assets/9db2f002bfe74974d6213023.mp4",
+    "poster": "/static/assets/25d52d9edd21b6bf54ca406b.webp",
+    "tracks": [
+      {
+        "src": "/static/assets/05fda4aaa2363e4e2c938967.vtt",
+        "srclang": "en",
+        "label": "English"
+      },
+      {
+        "src": "/static/assets/ae37da5100ac8a86f9ff0844.vtt",
+        "srclang": "pt-BR",
+        "label": "Portuguese (Brazil)"
+      },
+      {
+        "src": "/static/assets/3d7e78f76c6233aea52f8428.vtt",
+        "srclang": "es-419",
+        "label": "Spanish (Latin America)"
+      }
+    ]
+  },
+  "youtube:denGSVFU5bA": {
+    "provider": "youtube",
+    "video_id": "denGSVFU5bA",
+    "title": "Setting Up Basecamp Notifications – Basecamp Basics",
+    "duration": 236,
+    "width": 1920,
+    "height": 1080,
+    "src": "/static/assets/9b3a0d27c03a067ad2dce964.mp4",
+    "poster": "/static/assets/b6fa372c805d149f5d6e19e7.webp",
+    "tracks": [
+      {
+        "src": "/static/assets/b2b88a4fff307b300e35c0e9.vtt",
+        "srclang": "en",
+        "label": "English"
+      },
+      {
+        "src": "/static/assets/a6416726a3c9c2eb078eb68c.vtt",
+        "srclang": "pt-BR",
+        "label": "Portuguese (Brazil)"
+      },
+      {
+        "src": "/static/assets/5e9bb7f0ce8e58525e1d952d.vtt",
+        "srclang": "es-419",
+        "label": "Spanish (Latin America)"
+      }
+    ]
+  },
+  "youtube:Hc3VHTpjAcU": {
+    "provider": "youtube",
+    "video_id": "Hc3VHTpjAcU",
+    "title": "How does Basecamp work?",
+    "duration": 162,
+    "width": 1920,
+    "height": 1080,
+    "src": "/static/assets/6b1da6e8141f912f2fee0810.mp4",
+    "poster": "/static/assets/e9b04b93c69a244f90e1789d.webp",
+    "tracks": [
+      {
+        "src": "/static/assets/afc6d82b139c8611760665c8.vtt",
+        "srclang": "en",
+        "label": "English"
+      }
+    ]
+  },
+  "youtube:AuJ_zi7d9bw": {
+    "provider": "youtube",
+    "video_id": "AuJ_zi7d9bw",
+    "title": "New in Basecamp 5 — Keyboard shortcuts to help you get around faster",
+    "duration": 96,
+    "width": 1920,
+    "height": 1080,
+    "src": "/static/assets/293ff1ed33758b4493d55352.mp4",
+    "poster": "/static/assets/7a44502e85d93198e60d4cb7.webp",
+    "tracks": [
+      {
+        "src": "/static/assets/2495d0e32a8ce355bd177425.vtt",
+        "srclang": "en",
+        "label": "English"
+      }
+    ]
+  },
+  "youtube:Iuv2apgkQu0": {
+    "provider": "youtube",
+    "video_id": "Iuv2apgkQu0",
+    "title": "Moving Projects from Basecamp 2 to Basecamp 5",
+    "duration": 170,
+    "width": 1920,
+    "height": 1080,
+    "src": "/static/assets/9353fa5f32d0e37806a67d39.mp4",
+    "poster": "/static/assets/d1f7be42ea00543f80760eda.webp",
+    "tracks": [
+      {
+        "src": "/static/assets/74a5c71f57ccdbbb94055481.vtt",
+        "srclang": "en",
+        "label": "English"
+      }
+    ]
+  },
+  "youtube:5G62-xI8tHQ": {
+    "provider": "youtube",
+    "video_id": "5G62-xI8tHQ",
+    "title": "Inviting People to Collaborate in Basecamp – Basecamp Basics",
+    "duration": 164,
+    "width": 1920,
+    "height": 1080,
+    "src": "/static/assets/d07e10163f7ef84ad8417494.mp4",
+    "poster": "/static/assets/68318e324b0767629dfa00b6.webp",
+    "tracks": [
+      {
+        "src": "/static/assets/c85dabf146cae5ae35bc737b.vtt",
+        "srclang": "en",
+        "label": "English"
+      }
+    ]
+  },
+  "vimeo:394547865": {
+    "provider": "vimeo",
+    "video_id": "394547865",
+    "title": "Project access",
+    "duration": 32,
+    "width": 1280,
+    "height": 720,
+    "src": "/static/assets/2610535484f11075cc6b435e.mp4",
+    "poster": "/static/assets/24ed6f926eb64e28a79e6d26.jpg",
+    "tracks": [
+      {
+        "src": "/static/assets/d20da131a8638d17c573abcc.vtt",
+        "srclang": "en",
+        "label": "en"
+      }
+    ]
+  },
+  "vimeo:394506535": {
+    "provider": "vimeo",
+    "video_id": "394506535",
+    "title": "Basecamp 2 Tips and Tricks Class",
+    "duration": 897,
+    "width": 1920,
+    "height": 1080,
+    "src": "/static/assets/16d4c3ec068d9c1459b7b12f.mp4",
+    "poster": "/static/assets/e6082c7c18e5e7f5399b6312.jpg",
+    "tracks": [
+      {
+        "src": "/static/assets/cb61a7abb32d1255f7343439.vtt",
+        "srclang": "en",
+        "label": "en"
+      }
+    ]
+  },
+  "vimeo:394547827": {
+    "provider": "vimeo",
+    "video_id": "394547827",
+    "title": "Overview page",
+    "duration": 22,
+    "width": 1280,
+    "height": 720,
+    "src": "/static/assets/ab117f9248035f68f3431545.mp4",
+    "poster": "/static/assets/3641a541bda97ea11968b2c3.jpg",
+    "tracks": [
+      {
+        "src": "/static/assets/dc2cbdcaf346358141a66427.vtt",
+        "srclang": "en",
+        "label": "en"
+      }
+    ]
+  },
+  "vimeo:394547876": {
+    "provider": "vimeo",
+    "video_id": "394547876",
+    "title": "Rename a project",
+    "duration": 20,
+    "width": 1280,
+    "height": 720,
+    "src": "/static/assets/12d6a9e194b906d4229b6010.mp4",
+    "poster": "/static/assets/591c1cb3b293ebeccdf039e8.jpg",
+    "tracks": [
+      {
+        "src": "/static/assets/6a1a9dc090aa21d92e2af16a.vtt",
+        "srclang": "en",
+        "label": "en"
+      }
+    ]
+  },
+  "vimeo:394547921": {
+    "provider": "vimeo",
+    "video_id": "394547921",
+    "title": "Can I create subprojects?",
+    "duration": 62,
+    "width": 1280,
+    "height": 720,
+    "src": "/static/assets/d8f6c5fb2fe3bf0bb3ca701f.mp4",
+    "poster": "/static/assets/ec96d918d45be5a46070e451.jpg",
+    "tracks": [
+      {
+        "src": "/static/assets/9530f3f1ad78fa3e89214b36.vtt",
+        "srclang": "en",
+        "label": "en"
+      }
+    ]
+  },
+  "vimeo:394547789": {
+    "provider": "vimeo",
+    "video_id": "394547789",
+    "title": "Add files to messages",
+    "duration": 37,
+    "width": 1280,
+    "height": 720,
+    "src": "/static/assets/fe35f48a14f9ab635817d824.mp4",
+    "poster": "/static/assets/2b0b4e76924dab940bf0cf9a.jpg",
+    "tracks": [
+      {
+        "src": "/static/assets/9592f5ba91437a94bc1ed3c4.vtt",
+        "srclang": "en",
+        "label": "en"
+      }
+    ]
+  },
+  "vimeo:394547803": {
+    "provider": "vimeo",
+    "video_id": "394547803",
+    "title": "Move items",
+    "duration": 48,
+    "width": 1280,
+    "height": 720,
+    "src": "/static/assets/9f75f7d32e16147b7de1c4f5.mp4",
+    "poster": "/static/assets/7335469f2a02e08cee5da7c1.jpg",
+    "tracks": [
+      {
+        "src": "/static/assets/de912af7fc812783077ee1b7.vtt",
+        "srclang": "en",
+        "label": "en"
+      }
+    ]
+  },
+  "vimeo:394547756": {
+    "provider": "vimeo",
+    "video_id": "394547756",
+    "title": "Email-in a message",
+    "duration": 35,
+    "width": 1280,
+    "height": 720,
+    "src": "/static/assets/8b96d319acf20318f421b1c4.mp4",
+    "poster": "/static/assets/3d3dcfbc1f9838fb9174f55c.jpg",
+    "tracks": [
+      {
+        "src": "/static/assets/c48520afbce946fe0ec902ea.vtt",
+        "srclang": "en",
+        "label": "en"
+      }
+    ]
+  },
+  "vimeo:394547860": {
+    "provider": "vimeo",
+    "video_id": "394547860",
+    "title": "Private message",
+    "duration": 31,
+    "width": 1280,
+    "height": 720,
+    "src": "/static/assets/6f6b955a3d0312ddba99add3.mp4",
+    "poster": "/static/assets/b6b8f5d593b57308f7425f6a.jpg",
+    "tracks": [
+      {
+        "src": "/static/assets/39f730e2537332e665515968.vtt",
+        "srclang": "en",
+        "label": "en"
+      }
+    ]
+  },
+  "vimeo:394547871": {
+    "provider": "vimeo",
+    "video_id": "394547871",
+    "title": "Relate milestones & to-dos",
+    "duration": 36,
+    "width": 1280,
+    "height": 720,
+    "src": "/static/assets/793a6600bfced80a2863b171.mp4",
+    "poster": "/static/assets/a05d482de77a5bd6bb98025c.jpg",
+    "tracks": [
+      {
+        "src": "/static/assets/624321dad402df038f8c2144.vtt",
+        "srclang": "en",
+        "label": "en"
+      }
+    ]
+  },
+  "vimeo:394547852": {
+    "provider": "vimeo",
+    "video_id": "394547852",
+    "title": "Private list",
+    "duration": 24,
+    "width": 1280,
+    "height": 720,
+    "src": "/static/assets/f2f8fc9cf7fcb37984e86ce8.mp4",
+    "poster": "/static/assets/70d52fffceb714621a5ba8e7.jpg",
+    "tracks": [
+      {
+        "src": "/static/assets/8035adac015c4f03186c6ccb.vtt",
+        "srclang": "en",
+        "label": "en"
+      }
+    ]
+  },
+  "vimeo:394520159": {
+    "provider": "vimeo",
+    "video_id": "394520159",
+    "title": "Client Projects",
+    "duration": 93,
+    "width": 1920,
+    "height": 1080,
+    "src": "/static/assets/618b0773a7a768feb4af7261.mp4",
+    "poster": "/static/assets/0aadaf9a81c918f55a4f2cc6.jpg",
+    "tracks": [
+      {
+        "src": "/static/assets/ae21eea40d06ffd0d5d8ef7c.vtt",
+        "srclang": "en",
+        "label": "en"
+      }
+    ]
+  },
+  "vimeo:394547683": {
+    "provider": "vimeo",
+    "video_id": "394547683",
+    "title": "Calendar",
+    "duration": 152,
+    "width": 1280,
+    "height": 720,
+    "src": "/static/assets/bdca6cd7747e06bcd070d803.mp4",
+    "poster": "/static/assets/3d50e39abd90bc14d6420d5f.jpg",
+    "tracks": [
+      {
+        "src": "/static/assets/438760c7f3030a3b8465656e.vtt",
+        "srclang": "en",
+        "label": "en"
+      }
+    ]
+  },
+  "vimeo:394547673": {
+    "provider": "vimeo",
+    "video_id": "394547673",
+    "title": "Add & edit an event",
+    "duration": 30,
+    "width": 1280,
+    "height": 720,
+    "src": "/static/assets/f205877fd8126a12fd61c58b.mp4",
+    "poster": "/static/assets/3a6acd8b57cb53b365a4c8f2.jpg",
+    "tracks": [
+      {
+        "src": "/static/assets/daa455cb5d75a3d4f921d0ce.vtt",
+        "srclang": "en",
+        "label": "en"
+      }
+    ]
+  },
+  "vimeo:394547679": {
+    "provider": "vimeo",
+    "video_id": "394547679",
+    "title": "Phases",
+    "duration": 18,
+    "width": 1280,
+    "height": 720,
+    "src": "/static/assets/ca8590e97847c938b7c3ac4c.mp4",
+    "poster": "/static/assets/d43df7d7be9e77d57a9b262a.jpg",
+    "tracks": [
+      {
+        "src": "/static/assets/d33d5abd86d0355c10f8f148.vtt",
+        "srclang": "en",
+        "label": "en"
+      }
+    ]
+  },
+  "vimeo:394547724": {
+    "provider": "vimeo",
+    "video_id": "394547724",
+    "title": "Can I use iCal with Basecamp?",
+    "duration": 61,
+    "width": 1280,
+    "height": 720,
+    "src": "/static/assets/b6770c29ad96abe8a0ed9347.mp4",
+    "poster": "/static/assets/00b999f821733dab2ce465fa.jpg",
+    "tracks": [
+      {
+        "src": "/static/assets/96366c6ab0b4e7b89b740b7b.vtt",
+        "srclang": "en",
+        "label": "en"
+      }
+    ]
+  },
+  "vimeo:394547661": {
+    "provider": "vimeo",
+    "video_id": "394547661",
+    "title": "Basecamp and Google Calendar",
+    "duration": 34,
+    "width": 1280,
+    "height": 720,
+    "src": "/static/assets/3edc25cdfa7afeec036f30fc.mp4",
+    "poster": "/static/assets/6542969353f9f48407924a88.jpg",
+    "tracks": [
+      {
+        "src": "/static/assets/0ccd642dc0e28b995a00f668.vtt",
+        "srclang": "en",
+        "label": "en"
+      }
+    ]
+  },
+  "vimeo:394501765": {
+    "provider": "vimeo",
+    "video_id": "394501765",
+    "title": "Just-Invited-to-Basecamp-2",
+    "duration": 46,
+    "width": 1920,
+    "height": 1080,
+    "src": "/static/assets/542e4d27afa595a27ac7150f.mp4",
+    "poster": "/static/assets/e135ca6c1a9e2e659014e919.jpg",
+    "tracks": []
+  }
+}

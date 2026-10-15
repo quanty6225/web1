@@ -1,0 +1,288 @@
+.headline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-medium);
+  padding-inline: var(--space-medium);
+  position: relative;
+  z-index: 1;
+}
+
+.headline__header,
+.headline__article,
+.headline__footer,
+.headline__figure {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  position: relative;
+  text-align: center;
+  text-wrap: pretty;
+}
+
+.headline__header {
+  gap: 1.15em;
+  width: min(100%, 26em);
+}
+
+.headline__header h1,
+.headline__header h2,
+.headline__header h3,
+.headline__header h4,
+.headline__header h5,
+.headline__header h6 {
+  font-size: var(--font-size-xx-large);
+  font-weight: 800;
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--line-height-x-tight);
+  margin-bottom: -0.215em;
+  margin-top: -0.215em;
+  text-wrap: balance;
+}
+
+.headline__header :is(h1, h2, h3, h4, h5, h6) a {
+  font-weight: inherit;
+}
+
+.headline__header h1 a[href^="#"],
+.headline__header h2 a[href^="#"],
+.headline__header h3 a[href^="#"],
+.headline__header h4 a[href^="#"],
+.headline__header h5 a[href^="#"],
+.headline__header h6 a[href^="#"] {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.headline__header span {
+  display: inline-block;
+}
+
+.headline__header br {
+  display: none;
+}
+
+.headline__article {
+  gap: var(--space-medium);
+  width: min(100%, 26em);
+}
+
+.headline__article p {
+  font-size: var(--font-size-medium);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height-tight);
+  margin-bottom: -0.29em;
+  margin-top: -0.29em;
+}
+
+.headline__article p strong {
+  font-weight: 600;
+}
+
+.headline__article br {
+  display: none;
+}
+
+.headline__footer {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.6em 0.3em;
+  justify-content: center;
+  width: min(100%, 26em);
+}
+
+.headline__footer p {
+  color: oklch(var(--oklch-ink-5) / 0.85);
+  flex-basis: 100%;
+  font-size: var(--font-size-xxx-small);
+  font-style: italic;
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  margin-bottom: -0.275em;
+  margin-top: -0.185em;
+}
+
+.headline__figure {
+  width: min(100%, 26em);
+}
+
+.headline--article-narrow .headline__article {
+  width: min(100%, 23em);
+}
+
+.headline--article-wide .headline__article {
+  width: min(100%, 26em);
+}
+
+.headline__article.headline__article--narrow {
+  width: min(100%, 23em);
+}
+
+.headline--header-medium .headline__header :is(h1, h2, h3, h4, h5, h6) {
+  font-size: var(--font-size-x-large);
+}
+
+.headline--header-small .headline__header :is(h1, h2, h3, h4, h5, h6) {
+  font-size: var(--font-size-large);
+}
+
+.headline--align-left {
+  padding-inline: calc(var(--space-x-large) - var(--space-small));
+}
+
+.headline--align-left .headline__header,
+.headline--align-left .headline__article,
+.headline--align-left .headline__footer {
+  align-items: flex-start;
+  margin-inline: 0;
+  text-align: left;
+}
+
+@media(min-width: 64em) {
+
+  .headline {
+    padding-inline: var(--space-x-large);
+  }
+
+  .headline--align-left {
+    padding-inline: calc(var(--space-x-large) - var(--space-small));
+  }
+
+  .headline__header {
+    width: min(100%, 40em);
+  }
+
+  .headline__header h1,
+  .headline__header h2,
+  .headline__header h3,
+  .headline__article {
+    width: min(100%, 24em);
+  }
+
+  .headline__footer {
+    width: min(100%, 28em);
+  }
+
+  .headline__figure {
+    width: min(100%, 33em);
+  }
+
+  .headline--header-wide .headline__header h1,
+  .headline--header-wide .headline__header h2,
+  .headline--header-wide .headline__header h3 {
+    width: 100%;
+  }
+
+  .headline--article-snug .headline__article {
+    width: min(100%, 25em);
+  }
+
+  .headline--article-medium .headline__article {
+    width: min(100%, 28em);
+  }
+
+  .headline--article-wide .headline__article {
+    width: min(100%, 32em);
+  }
+
+  .headline__header h1,
+  .headline__header h2,
+  .headline__header h3 {
+    font-size: var(--font-size-xxx-large);
+  }
+
+  .headline--header-medium .headline__header :is(h1, h2, h3, h4, h5, h6) {
+    font-size: var(--font-size-xx-large);
+    width: auto;
+  }
+
+  .headline--header-small .headline__header :is(h1, h2, h3, h4, h5, h6) {
+    font-size: var(--font-size-x-large);
+    width: auto;
+  }
+
+  .headline__header br,
+  .headline__article br {
+    display: inline;
+  }
+
+}
+
+.headline--columns,
+.headline--columns-wide {
+  align-items: center;
+  margin-inline: auto;
+}
+
+.headline--columns .headline__column,
+.headline--columns-wide .headline__column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3em;
+}
+
+.headline__column--article-small .headline__article p {
+  font-size: var(--font-size-xx-small);
+  letter-spacing: var(--letter-spacing);
+  margin-bottom: -0.35em;
+  margin-top: -0.575em;
+}
+
+.headline__article .list {
+  padding-inline: 0;
+  width: 100%;
+}
+
+@media(min-width: 64em) {
+
+  .headline--columns,
+  .headline--columns-wide {
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 2em;
+    text-align: left;
+  }
+
+  .headline--columns .headline__column,
+  .headline--columns-wide .headline__column {
+    flex: 1;
+  }
+
+  .headline--columns .headline__column:first-child,
+  .headline--columns-wide .headline__column:first-child {
+    flex: 9;
+  }
+
+  .headline--columns .headline__column:last-child,
+  .headline--columns-wide .headline__column:last-child {
+    flex: 11;
+  }
+
+  .headline--columns .headline__column .headline__header,
+  .headline--columns .headline__column .headline__article,
+  .headline--columns .headline__column .headline__footer,
+  .headline--columns .headline__column .headline__figure,
+  .headline--columns-wide .headline__column .headline__header,
+  .headline--columns-wide .headline__column .headline__article,
+  .headline--columns-wide .headline__column .headline__footer,
+  .headline--columns-wide .headline__column .headline__figure {
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+
+  .headline--columns {
+    width: min(100%, 34em);
+  }
+
+  .headline--columns-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .headline--columns-wide {
+    width: min(100%, 40em);
+  }
+
+}

@@ -1,0 +1,375 @@
+[
+  {
+    "route": "/help/5/category/1145-apps-integrations",
+    "canonical_route": "/help/5/article/1200-apps-integrations",
+    "source_key": "00e11bbdeb4557d5",
+    "first_five": [
+      "/help/5/article/1146-basecamp-on-mobile",
+      "/help/5/article/1147-basecamp-on-desktop",
+      "/help/5/article/1148-third-party-integrations",
+      "/help/5/article/1151-building-on-basecamp",
+      "/help/5/article/1058-setting-up-the-basecamp-cli-with-claude-code"
+    ],
+    "source_item_count": 6
+  },
+  {
+    "route": "/help/2/category/418-moving-from-basecamp-classic-to-2",
+    "canonical_route": "/help/2/category/418-moving-from-basecamp-classic-to-2",
+    "source_key": "13617b3302173d9f",
+    "first_five": [
+      "/help/2/article/419-moving-from-basecamp-classic-to-basecamp-2",
+      "/help/2/article/420-basecamp-2-pricing-for-current-basecamp-classic-customers",
+      "/help/2/article/421-a-step-by-step-guide-to-importing-your-classic-projects-into-basecamp-2"
+    ],
+    "source_item_count": 3
+  },
+  {
+    "route": "/help/5/category/1125-field-guides",
+    "canonical_route": "/help/5/category/1125-field-guides",
+    "source_key": "2fb6074c189b2587",
+    "first_five": [
+      "/help/5/article/1114-teachers",
+      "/help/5/article/1112-students",
+      "/help/5/article/1113-real-estate-agents",
+      "/help/5/article/1111-home-and-families",
+      "/help/5/article/1115-sports-coaches"
+    ],
+    "source_item_count": 5
+  },
+  {
+    "route": "/help/5/category/1042-troubleshooting-faqs",
+    "canonical_route": "/help/5/article/1202-troubleshooting-faqs",
+    "source_key": "39d4f2bb6450c9c5",
+    "first_five": [
+      "/help/5/article/1105-browser-troubleshooting",
+      "/help/5/article/1106-system-requirements",
+      "/help/5/article/1168-why-do-i-keep-getting-a-new-sign-in-notification",
+      "/help/5/article/1056-enabling-microphone-access",
+      "/help/5/article/1165-using-basecamp-with-a-vpn"
+    ],
+    "source_item_count": 9
+  },
+  {
+    "route": "/help/2/category/393-faqs",
+    "canonical_route": "/help/2/category/393-faqs",
+    "source_key": "42a1bca5d5335229",
+    "first_five": [
+      "/help/2/article/173-can-i-add-a-logo-or-customize-basecamp-in-any-way",
+      "/help/2/article/174-how-can-i-add-new-versions-of-a-file",
+      "/help/2/article/175-how-do-i-access-basecamp-from-my-mobile-device",
+      "/help/2/article/177-how-can-i-pay-for-basecamp",
+      "/help/2/article/178-is-basecamp-available-in-other-languages"
+    ],
+    "source_item_count": 11
+  },
+  {
+    "route": "/help/2/category/195-you",
+    "canonical_route": "/help/2/category/195-you",
+    "source_key": "4a920b390634f651",
+    "first_five": [
+      "/help/2/article/227-the-me-page",
+      "/help/2/article/228-your-email-notifications",
+      "/help/2/article/229-your-password",
+      "/help/2/article/428-enable-two-factor-authentication",
+      "/help/2/article/415-log-in-with-google"
+    ],
+    "source_item_count": 10
+  },
+  {
+    "route": "/help/5/category/1153-personal-settings",
+    "canonical_route": "/help/5/article/1199-personal-settings",
+    "source_key": "4aa25ff2d0f2567e",
+    "first_five": [
+      "/help/5/article/1158-logging-in-and-out",
+      "/help/5/article/1156-password-two-factor-authentication",
+      "/help/5/article/1186-create-a-strong-password-to-protect-your-data",
+      "/help/5/article/1184-leaving-a-project-or-account",
+      "/help/5/article/1157-preferences"
+    ],
+    "source_item_count": 8
+  },
+  {
+    "route": "/help/2/category/394-video-tips-tricks",
+    "canonical_route": "/help/2/category/394-video-tips-tricks",
+    "source_key": "4e0002cb100bf95c",
+    "first_five": [
+      "/help/2/article/395-welcome",
+      "/help/2/article/396-basecamp-tips-tricks",
+      "/help/2/article/397-becoming-a-basecamp-pro",
+      "/help/2/article/398-client-intro",
+      "/help/2/article/399-client-projects"
+    ],
+    "source_item_count": 15
+  },
+  {
+    "route": "/help/classic/category/595-project-tools",
+    "canonical_route": "/help/classic/category/595-project-tools",
+    "source_key": "4e0424b3f4e4cc2d",
+    "first_five": [
+      "/help/classic/article/581-to-dos",
+      "/help/classic/article/583-milestones",
+      "/help/classic/article/582-calendar",
+      "/help/classic/article/584-messages-comments",
+      "/help/classic/article/585-files"
+    ],
+    "source_item_count": 9
+  },
+  {
+    "route": "/help/5/category/1206-moving-from-basecamp-2",
+    "canonical_route": "/help/5/article/1187-moving-from-basecamp-2-to-basecamp-5",
+    "source_key": "5c4f612683dcf9fa",
+    "first_five": [
+      "/help/5/article/1126-migrating-basecamp-2-projects",
+      "/help/5/article/1128-what-changed-in-from-basecamp-2-to-basecamp-5",
+      "/help/5/article/1127-what-to-do-with-basecamp-2-after-you-switch"
+    ],
+    "source_item_count": 3
+  },
+  {
+    "route": "/help/classic/category/541-security",
+    "canonical_route": "/help/classic/category/541-security",
+    "source_key": "66f69c594ca4d761",
+    "first_five": [
+      "/help/classic/article/542-security-basics",
+      "/help/classic/article/543-security-troubleshooting"
+    ],
+    "source_item_count": 2
+  },
+  {
+    "route": "/help/classic/category/563-notifications",
+    "canonical_route": "/help/classic/category/563-notifications",
+    "source_key": "715b56f87a9da682",
+    "first_five": [
+      "/help/classic/article/567-overview-announcement",
+      "/help/classic/article/592-classic-notifications",
+      "/help/classic/article/580-global-rss-feeds"
+    ],
+    "source_item_count": 3
+  },
+  {
+    "route": "/help/5/collection/1034-help-docs",
+    "canonical_route": "/help/5/article/1194-help-docs",
+    "source_key": "75690b47c6f61867",
+    "first_five": [
+      "/help/5/article/1177-notifications",
+      "/help/5/article/1131-keyboard-shortcuts",
+      "/help/5/article/1147-basecamp-on-desktop",
+      "/help/5/article/1179-where-did-that-go-in-basecamp-5",
+      "/help/5/article/1185-managing-people"
+    ],
+    "source_item_count": 21
+  },
+  {
+    "route": "/help/5/category/1124-the-basecamp-way",
+    "canonical_route": "/help/5/article/1204-the-37signals-way",
+    "source_key": "76acf36df74015a0",
+    "first_five": [
+      "/help/5/article/1064-how-we-work",
+      "/help/5/article/1065-the-six-week-cycle",
+      "/help/5/article/1066-tracking-work-on-the-hill-chart",
+      "/help/5/article/1067-replacing-the-status-meeting",
+      "/help/5/article/1069-running-a-customer-support-team"
+    ],
+    "source_item_count": 6
+  },
+  {
+    "route": "/help/2/category/196-going-mobile",
+    "canonical_route": "/help/2/category/196-going-mobile",
+    "source_key": "972f66b00a5e3122",
+    "first_five": [
+      "/help/2/article/234-basecamp-on-your-mobile-device",
+      "/help/2/article/235-mobile-views-ins-and-out",
+      "/help/2/article/236-create-a-shortcut",
+      "/help/2/article/237-mobile-view-calendar-and-dates",
+      "/help/2/article/238-android-app"
+    ],
+    "source_item_count": 6
+  },
+  {
+    "route": "/help/classic/category/544-projects",
+    "canonical_route": "/help/classic/category/544-projects",
+    "source_key": "9e55e7a04995fbbf",
+    "first_five": [
+      "/help/classic/article/558-new-classic-project",
+      "/help/classic/article/565-modify-project",
+      "/help/classic/article/561-project-permissions-access",
+      "/help/classic/article/559-add-people-companies-to-projects",
+      "/help/classic/article/562-changing-a-projects-company"
+    ],
+    "source_item_count": 7
+  },
+  {
+    "route": "/help/5/category/1053-getting-started",
+    "canonical_route": "/help/5/article/1191-getting-started",
+    "source_key": "9fce26826615b2fd",
+    "first_five": [
+      "/help/5/article/1062-getting-started-as-an-owner",
+      "/help/5/article/1088-getting-started-as-a-team-member",
+      "/help/5/article/1087-getting-started-as-a-client",
+      "/help/5/article/1176-creating-and-setting-up-a-project",
+      "/help/5/article/1159-the-home-screen"
+    ],
+    "source_item_count": 6
+  },
+  {
+    "route": "/help/2/category/253-moving-from-basecamp-2-to-3",
+    "canonical_route": "/help/2/category/253-moving-from-basecamp-2-to-3",
+    "source_key": "a39d76d1dc9a25da",
+    "first_five": [
+      "/help/2/article/256-moving-projects-from-basecamp-2-to-5",
+      "/help/2/article/258-keeping-basecamp-2-or-classic-for-free"
+    ],
+    "source_item_count": 2
+  },
+  {
+    "route": "/help/2/category/197-account-billing",
+    "canonical_route": "/help/2/category/197-account-billing",
+    "source_key": "abb6671d65a87b85",
+    "first_five": [
+      "/help/2/article/240-the-account-page",
+      "/help/2/article/241-billing-info-and-plan-upgrades",
+      "/help/2/article/242-invoices",
+      "/help/2/article/243-canceling-and-pausing",
+      "/help/2/article/244-plans-and-pricing"
+    ],
+    "source_item_count": 14
+  },
+  {
+    "route": "/help/5/category/1047-working-with-your-team",
+    "canonical_route": "/help/5/article/1195-working-with-people",
+    "source_key": "af2df23392e1636e",
+    "first_five": [
+      "/help/5/article/1060-inviting-people",
+      "/help/5/article/1073-adding-people-to-a-project",
+      "/help/5/article/1180-changing-user-types",
+      "/help/5/article/1171-permissions",
+      "/help/5/article/1082-what-clients-can-see-and-do"
+    ],
+    "source_item_count": 17
+  },
+  {
+    "route": "/help/5/category/1043-account-billing",
+    "canonical_route": "/help/5/article/1201-account-billing-and-settings",
+    "source_key": "b7a7eed4290791c8",
+    "first_five": [
+      "/help/5/article/1137-handling-billing-and-invoices",
+      "/help/5/article/1144-basecamp-for-free",
+      "/help/5/article/1141-cancel-your-basecamp-account",
+      "/help/5/article/1132-adminland",
+      "/help/5/article/1136-owner-and-admin-actions"
+    ],
+    "source_item_count": 16
+  },
+  {
+    "route": "/help/2/category/193-projects",
+    "canonical_route": "/help/2/category/193-projects",
+    "source_key": "bd15d5636bf3419b",
+    "first_five": [
+      "/help/2/article/198-projects-101",
+      "/help/2/article/199-organizing-projects",
+      "/help/2/article/200-keeping-current",
+      "/help/2/article/201-project-permissions",
+      "/help/2/article/202-archiving-deleting-and-renaming"
+    ],
+    "source_item_count": 20
+  },
+  {
+    "route": "/help/classic/category/547-people-companies",
+    "canonical_route": "/help/classic/category/547-people-companies",
+    "source_key": "c5e61adb56d84be1",
+    "first_five": [
+      "/help/classic/article/572-my-info",
+      "/help/classic/article/574-log-in-to-classic",
+      "/help/classic/article/575-add-people",
+      "/help/classic/article/559-add-people-companies-to-projects",
+      "/help/classic/article/576-people-permissions"
+    ],
+    "source_item_count": 10
+  },
+  {
+    "route": "/help/2/category/185-working-with-people",
+    "canonical_route": "/help/2/category/185-working-with-people",
+    "source_key": "d5dbd9d5efb59f1e",
+    "first_five": [
+      "/help/2/article/186-adding-and-removing-people",
+      "/help/2/article/187-granting-and-revoking-project-access",
+      "/help/2/article/188-passwords-and-invitations",
+      "/help/2/article/189-organize-people-into-companies",
+      "/help/2/article/190-who-can-see-what"
+    ],
+    "source_item_count": 7
+  },
+  {
+    "route": "/help/classic/category/548-permissions-privacy",
+    "canonical_route": "/help/classic/category/548-permissions-privacy",
+    "source_key": "d93cb2b651619e4e",
+    "first_five": [
+      "/help/classic/article/576-people-permissions",
+      "/help/classic/article/578-admin-permissions",
+      "/help/classic/article/561-project-permissions-access"
+    ],
+    "source_item_count": 3
+  },
+  {
+    "route": "/help/classic/category/549-dashboard",
+    "canonical_route": "/help/classic/category/549-dashboard",
+    "source_key": "db835c25a96f1dbb",
+    "first_five": [
+      "/help/classic/article/579-dashboard",
+      "/help/classic/article/580-global-rss-feeds"
+    ],
+    "source_item_count": 2
+  },
+  {
+    "route": "/help/5/category/1041-using-basecamp",
+    "canonical_route": "/help/5/article/1203-using-basecamp",
+    "source_key": "f13f28efa3489e52",
+    "first_five": [
+      "/help/5/article/1176-creating-and-setting-up-a-project",
+      "/help/5/article/1094-project-and-list-templates",
+      "/help/5/article/1075-message-board",
+      "/help/5/article/1077-to-dos",
+      "/help/5/article/1079-docs-and-files"
+    ],
+    "source_item_count": 33
+  },
+  {
+    "route": "/help/2/category/194-calendar",
+    "canonical_route": "/help/2/category/194-calendar",
+    "source_key": "f4f62a90e8a818b7",
+    "first_five": [
+      "/help/2/article/219-basecamp-calendars",
+      "/help/2/article/220-add-and-edit-events",
+      "/help/2/article/221-calendar-notifications",
+      "/help/2/article/222-syncing-your-calendars",
+      "/help/2/article/223-recurring-events"
+    ],
+    "source_item_count": 8
+  },
+  {
+    "route": "/help/5/collection/1121-learning-center",
+    "canonical_route": "/help/5/article/1192-learning-center",
+    "source_key": "f8208378bfb396a2",
+    "first_five": [
+      "/help/5/article/1113-real-estate-agents",
+      "/help/5/article/1188-the-basecamp-community",
+      "/help/5/article/1064-how-we-work",
+      "/help/5/article/1065-the-six-week-cycle",
+      "/help/5/article/1066-tracking-work-on-the-hill-chart"
+    ],
+    "source_item_count": 10
+  },
+  {
+    "route": "/help/classic/category/523-billing-account",
+    "canonical_route": "/help/classic/category/523-billing-account",
+    "source_key": "fcee41d711a63f80",
+    "first_five": [
+      "/help/classic/article/533-create-a-classic-account",
+      "/help/classic/article/526-account-ownership",
+      "/help/classic/article/525-prices-plans",
+      "/help/classic/article/593-payment-invoices",
+      "/help/classic/article/527-cancellation-refund"
+    ],
+    "source_item_count": 7
+  }
+]

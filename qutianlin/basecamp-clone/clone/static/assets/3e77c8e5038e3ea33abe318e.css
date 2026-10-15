@@ -1,0 +1,256 @@
+.button {
+  align-items: center;
+  background: var(--color-blue);
+  color: var(--color-white);
+  cursor: pointer;
+  display: flex;
+  font-feature-settings: 'c2sc', 'smcp', 'ss05';
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing);
+  line-height: 1em;
+  padding: 1em 1.1em;
+  place-content: center;
+  pointer-events: auto;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.button:not(.button--app, .button--canvas, .button--deny, .button--grant, .button--green, .button--signup, .button--subtle, .button--text, .button--white) {
+  background-image: var(--background-blue-light);
+}
+
+.button span {
+  display: block;
+  margin-bottom: -0.1875em;
+  margin-top: -0.2125em;
+  z-index: 1;
+}
+
+.button__arrow {
+  display: inline-block;
+  font-family: var(--font-family-martian-mono);
+  font-size: var(--font-size-xx-large);
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: normal;
+  line-height: 0;
+  margin-right: 0.325em;
+  vertical-align: -0.075em;
+}
+
+.button--app {
+  background: var(--color-ink);
+  padding: 0;
+}
+
+.button--app img {
+  display: block;
+  height: 2.6em;
+  width: auto;
+}
+
+.button--green {
+  background: var(--color-green);
+  color: var(--color-white);
+}
+
+.button--white {
+  background: var(--color-white);
+  color: var(--color-ink);
+}
+
+.button--signup {
+  background: url("/static/assets/52160209ab253cc880735151.webp") 0.6em center / 1.55em auto no-repeat, var(--background-blue-light);
+  box-shadow: var(--box-shadow-button);
+  padding-left: 2.6em;
+}
+
+.button--deny {
+  background: oklch(var(--oklch-white) / 0.1);
+  color: var(--color-white);
+}
+
+.button--grant {
+  background: var(--color-white);
+  color: var(--color-ink);
+}
+
+.button--icon {
+  padding-left: 2.1em;
+}
+
+.button--icon:before {
+  aspect-ratio: 1;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  content: '';
+  display: flex;
+  left: 0.6em;
+  position: absolute;
+  width: 1.2em;
+}
+
+.button--icon-github:before {
+  background-image: url("/static/assets/796f1f750af168731fa35286.svg");
+  left: 0.725em;
+  width: 1em;
+}
+
+.button--icon-basecamp:before {
+  background-image: url("/static/assets/432a51384a600d96ba70c07c.svg");
+}
+
+.button--back:before {
+  background-image: url("/static/assets/9b1aed4cfa239d0d3cb1ae5b.svg");
+}
+
+.button--text {
+  background: transparent;
+  color: var(--color-ink);
+}
+
+.button--subtle {
+  background: oklch(var(--oklch-ink) / 0.05);
+  color: var(--color-ink);
+}
+
+.button--canvas {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+}
+
+.button--size-small {
+  font-size: var(--font-size-xx-small);
+  padding: 0.9em 1em;
+}
+
+.button--size-large {
+  font-size: var(--font-size-medium);
+}
+
+@media(hover: hover) {
+
+  .button {
+    transition:
+      background-color var(--transition),
+      color var(--transition)
+    ;
+  }
+
+  .button:focus,
+  .button:hover {
+    background-color: var(--color-blue-hover);
+    color: var(--color-white);
+  }
+
+  .button--glow {
+    --pointer-x-px: calc(var(--pointer-x) * 1px);
+    --pointer-y-px: calc(var(--pointer-y) * 1px);
+
+    overflow: clip;
+    position: relative;
+  }
+
+  .button--glow:after {
+    background: radial-gradient(
+      8em circle at var(--pointer-x-px, 50%) var(--pointer-y-px, 50%),
+      oklch(var(--oklch-white) / 0.1),
+      oklch(var(--oklch-white) / 0)
+    );
+    content: '';
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity var(--transition);
+  }
+
+  .button--glow:focus:after,
+  .button--glow:focus-within:after,
+  .button--glow:hover:after {
+    opacity: 1;
+  }
+
+  .button--app:focus,
+  .button--app:hover {
+    background-color: var(--color-ink-hover);
+  }
+
+  .button--green:focus,
+  .button--green:hover {
+    background-color: var(--color-green-hover);
+    color: var(--color-white);
+  }
+
+  .button--white:focus,
+  .button--white:hover {
+    background-color: var(--color-white);
+    color: var(--color-ink);
+  }
+
+  .button--text:focus,
+  .button--text:hover {
+    background-color: oklch(var(--oklch-ink) / 0.08);
+    color: var(--color-ink);
+  }
+
+  .button--subtle:focus,
+  .button--subtle:hover {
+    background-color: oklch(var(--oklch-ink) / 0.08);
+    color: var(--color-ink);
+  }
+
+  .button--canvas:focus,
+  .button--canvas:hover {
+    background-color: var(--color-canvas-hover);
+    color: var(--color-ink);
+  }
+
+  .button--deny:focus,
+  .button--deny:hover {
+    background: oklch(var(--oklch-white) / 0.15);
+    color: var(--color-white);
+  }
+
+  .button--grant:focus,
+  .button--grant:hover {
+    background: oklch(var(--oklch-white) / 0.9);
+    color: var(--color-ink);
+  }
+
+}
+
+@media(prefers-color-scheme: dark) {
+
+  .button--app {
+    background: var(--color-ink-inverted);
+  }
+
+  .button--canvas {
+    background: var(--color-ink-2);
+  }
+
+  .button--white {
+    color: var(--color-ink-inverted);
+  }
+
+  .button--app:focus,
+  .button--app:hover {
+    background-color: var(--color-ink-inverted-hover);
+  }
+
+  .button--canvas:focus,
+  .button--canvas:hover {
+    background-color: var(--color-ink-3);
+  }
+
+  .button--white:focus,
+  .button--white:hover {
+    color: var(--color-ink-inverted);
+  }
+
+}

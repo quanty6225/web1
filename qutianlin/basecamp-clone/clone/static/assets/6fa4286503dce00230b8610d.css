@@ -1,0 +1,158 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Sharpie';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/static/assets/747852560124f8b3b946d1ab.woff") format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Martian Mono';
+  font-style: normal;
+  font-weight: 100 800;
+  src: url("/static/assets/1e0b85333738d47d00a7a2c7.woff2") format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Monaspace';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url("/static/assets/b1c91bdd47bd4d007fa72505.woff2") format('woff2'),
+    url("/static/assets/675cb6612db8ece36656849b.woff") format('woff')
+  ;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Graphik';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("/static/assets/78e08fbfe8d1df8730c0f174.woff2") format('woff2'),
+    url("/static/assets/7d62f1c73cf24f533999ef75.woff") format('woff')
+  ;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Graphik';
+  font-style: italic;
+  font-weight: 400;
+  src:
+    url("/static/assets/6d7338095a250ead30376226.woff2") format('woff2'),
+    url("/static/assets/9ecf4301b81d7897c70c320b.woff") format('woff')
+  ;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Graphik';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url("/static/assets/d3265aee748bb52c83d088a7.woff2") format('woff2'),
+    url("/static/assets/e964c04435d7155a4a5340e0.woff") format('woff')
+  ;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Graphik';
+  font-style: italic;
+  font-weight: 500;
+  src:
+    url("/static/assets/fad6b536f6d20a6a967ab0aa.woff2") format('woff2'),
+    url("/static/assets/3b83f019d168e7543f98a654.woff") format('woff')
+  ;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Graphik';
+  font-style: normal;
+  font-weight: 600;
+  src:
+    url("/static/assets/be80f46bafc190e1bf574941.woff2") format('woff2'),
+    url("/static/assets/a9eb154173dd1f96ffb380f6.woff") format('woff')
+  ;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Graphik';
+  font-style: italic;
+  font-weight: 600;
+  src:
+    url("/static/assets/0d0b3be7b873bfc560761a32.woff2") format('woff2'),
+    url("/static/assets/7248dce8a023b0578d8fcea8.woff") format('woff')
+  ;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Graphik';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url("/static/assets/a8b564c922de1007c821552c.woff2") format('woff2'),
+    url("/static/assets/440de5b26593d940dcb82fcd.woff") format('woff')
+  ;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Graphik';
+  font-style: italic;
+  font-weight: 700;
+  src:
+    url("/static/assets/83dd56551c776a135a80b0a7.woff2") format('woff2'),
+    url("/static/assets/044e3b1f75047189dfc81877.woff") format('woff')
+  ;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Graphik';
+  font-style: normal;
+  font-weight: 800;
+  src:
+    url("/static/assets/6d7b4ec34055702d5234ce70.woff2") format('woff2'),
+    url("/static/assets/cee7abd22e1416b6fe34501c.woff") format('woff')
+  ;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Graphik';
+  font-style: italic;
+  font-weight: 800;
+  src:
+    url("/static/assets/7de464fe94a0c729f586656b.woff2") format('woff2'),
+    url("/static/assets/d0af20e811094edbbf554a5a.woff") format('woff')
+  ;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Graphik';
+  font-style: normal;
+  font-weight: 900;
+  src:
+    url("/static/assets/405806ef3f6dc7b6142817bb.woff2") format('woff2'),
+    url("/static/assets/a44f9dbcc27c35c7b87e7608.woff") format('woff')
+  ;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Graphik';
+  font-style: italic;
+  font-weight: 900;
+  src:
+    url("/static/assets/8e8f6abb4c64d7c3f2f977ca.woff2") format('woff2'),
+    url("/static/assets/57a426bc8239cc76c0674691.woff") format('woff')
+  ;
+}

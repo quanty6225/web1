@@ -1,0 +1,233 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  padding-inline: var(--space-medium);
+  position: relative;
+  width: min(100%, 34em);
+}
+
+.list article {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-x-small);
+  gap: 0.8em;
+  letter-spacing: var(--letter-spacing);
+  margin-bottom: -0.375em;
+  margin-top: -0.2925em;
+}
+
+.list article ul {
+  list-style: disc;
+  padding-left: 1em;
+}
+
+.list article ul li + li {
+  margin-top: 0.8em;
+}
+
+.list__card {
+  padding: var(--space-neutral);
+}
+
+.list--pills {
+  padding-inline: var(--space-neutral);
+  width: min(100%, 29em);
+}
+
+.list--pills article {
+  font-size: var(--font-size-small);
+  margin: 0;
+}
+
+.list--pills article strong {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.list--pills article ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em 0.5em;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+}
+
+.list--pills article ul li {
+  display: flex;
+}
+
+.list--pills article ul li + li {
+  margin-top: 0;
+}
+
+.list--pills article ul li span,
+.list--pills article ul li a {
+  align-content: center;
+  background: var(--color-white);
+  border-radius: 2.2em;
+  box-shadow: var(--box-shadow);
+  color: inherit;
+  display: block;
+  font-weight: inherit;
+  height: 2.2em;
+  line-height: 1em;
+  overflow: clip;
+  padding-inline: 1em;
+  text-decoration: none;
+  text-wrap: nowrap;
+}
+
+.list--checks article {
+  font-size: var(--font-size-small);
+  gap: 0.6em;
+  text-align: left;
+}
+
+.list--checks article ul {
+  display: grid;
+  gap: 0.1625em;
+  list-style: none;
+  padding-left: 0;
+}
+
+.list--checks article ul li {
+  padding-left: 1.4em;
+  position: relative;
+}
+
+.list--checks article ul li + li {
+  margin-top: 0;
+}
+
+.list--checks article ul li:before {
+  align-items: start;
+  background: url("/static/assets/b7a35cad69bf110f906881fa.svg") center / 0.45em auto no-repeat var(--color-green);
+  border-radius: 100%;
+  content: '';
+  display: flex;
+  height: 1em;
+  justify-content: center;
+  left: 0;
+  line-height: 1;
+  pointer-events: none;
+  position: absolute;
+  top: 0.2325em;
+  width: 1em;
+}
+
+.list--yes article ul li:after {
+  background: var(--color-highlight);
+  color: var(--color-ink);
+  content: 'YES!';
+  display: inline-block;
+  font-family: var(--font-family-sharpie);
+  font-size: var(--font-size-large);
+  font-variant-ligatures: none;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1;
+  margin-left: 0.5em;
+  padding: 0.1875em 0.35em 0.2625em 0.35em;
+  pointer-events: none;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+
+.list--yes article ul li:nth-child(odd):after {
+  transform: rotate(-3deg) translateY(0.1em);
+}
+
+.list--checks {
+  width: min(100%, 25em);
+}
+
+.list--yes article ul li:nth-child(even):after {
+  transform: rotate(3deg) translateY(0.2em);
+}
+
+.list--numbers {
+  width: min(100%, 30em);
+}
+
+.list--numbers article {
+  font-size: var(--font-size-small);
+  margin-bottom: -0.39em;
+  margin-top: -0.39em;
+  text-align: left;
+}
+
+.list--numbers article ol {
+  display: grid;
+  gap: 0.6em;
+  list-style: decimal;
+  padding-left: 2em;
+}
+
+.list--numbers article ol li::marker {
+  color: oklch(var(--oklch-ink) / 0.35);
+  font-family: var(--font-family-martian-mono);
+  font-size: var(--font-size-medium);
+  font-weight: 350;
+  letter-spacing: normal;
+}
+
+@media(hover: hover) {
+
+  .list--pills article ul li a {
+    transition:
+      background var(--transition),
+      box-shadow var(--transition),
+      color var(--transition)
+    ;
+  }
+
+  .list--pills article ul li a:focus,
+  .list--pills article ul li a:hover {
+    background: var(--color-white);
+    box-shadow: var(--box-shadow);
+    color: inherit;
+  }
+
+}
+
+@media(min-width: 64em) {
+
+  .list {
+    padding-inline: var(--space-x-large);
+  }
+
+  .list__card {
+    padding: var(--space-large);
+  }
+
+  .list--pills {
+    padding-inline: var(--space-x-large);
+    width: min(100%, 42em);
+  }
+
+  .list--checks {
+    padding-inline: var(--space-x-large);
+    width: min(100%, 29em);
+  }
+
+  .list--numbers article ol {
+    padding-left: 0;
+  }
+
+}
+
+@media(prefers-color-scheme: dark) {
+
+  .list--pills article ul li span,
+  .list--pills article ul li a {
+    background: var(--color-ink-3);
+  }
+
+  .list--pills article ul li a:focus,
+  .list--pills article ul li a:hover {
+    background: var(--color-ink-3);
+  }
+
+}

@@ -1,0 +1,491 @@
+[
+  {
+    "route": "/help/2/article/242-invoices",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "92f13803d373eb10",
+    "text": "Invoices Customize your invoice to include your company name and address or other important information. Add another recipient to make sure that billing is handled smoothly! Click to your Account page... And click the link to make your updates. Enter the new email address or your custom info. Hit save, and you're all set! We'll still send an invoice to the account owner each month. Find Past Invoices Need a past invoice? They're all listed on your Account page: Next help article: Canceling and pausing →",
+    "images": [
+      {
+        "src": "/static/assets/e66d78ef0805be5b8709a7df.gif",
+        "alt": "A screenshot with an arrow pointing to the Account page link"
+      },
+      {
+        "src": "/static/assets/e459fc0c0affd480de778bb9.png",
+        "alt": "A screenshot of the Account page showing the Invoices section with an arrow pointing to the 'Change invoice details' link"
+      },
+      {
+        "src": "/static/assets/7cd2a16736778b2ba887ccfd.png",
+        "alt": "A screenshot of the invoice settings page showing the field where the account owner can enter a different email address to receive invoices"
+      },
+      {
+        "src": "/static/assets/e2d23595522c4bdc0eeda6f7.png",
+        "alt": "Screenshot of a blue arrow pointing to the "
+      }
+    ],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/2/article/198-projects-101",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "124f4a85e041a51d",
+    "text": "Projects 101 Get started on a project A Basecamp project is a workspace where you collaborate with your team and collect your discussions, to-dos, documents and files all in one place. Projects can be used for anything from building a new app, to serving as a company watercooler, to organizing a family vacation. Here's how to use them! Click the \"New Project\" button: It's located on the left side of your projects screen. Only administrators, the account owner and people given permission to create a project will see the \"New Project\" button. Pick a template or a blank project: If you've created templates, you can start a project using one of them. For now, we'll pick a blank project. Name it! Give the project a name, and add your team. Start typing the names of the folks you'll be working with. Use companies and groups to add people quickly. Enable the client access to keep items off limits from your clients Now you're ready to work! Start a discussion: Fill people in on project details and get their feedback. Make a To-do list: Create tasks, and assign them to people. Dated to-dos will appear on your Calendar. Share documents and images: Upload files to the \"Files\" page. You can attach files to comments as well Use a Text Document: Share your notes and ideas. Your team can edit text docs collaboratively. Have an upcoming event or deadline? Add it to the Dates page. When you do, you'll see it on your Calendar. Create single-day events or events that span multiple days. Want to see some examples of finished projects? Check out the Public Projects page! Next help article: Organizing Projects →",
+    "images": [
+      {
+        "src": "/static/assets/401988c9af129682a5ae0e0c.png",
+        "alt": "A screenshot with an arrow pointing to the 'New project' button"
+      },
+      {
+        "src": "/static/assets/49189de6e67cf404982f2217.png",
+        "alt": "A screenshot showing a blank project and a template"
+      },
+      {
+        "src": "/static/assets/7a374a32efe6acd236026c42.png",
+        "alt": "A screenshot showing the project creation page"
+      },
+      {
+        "src": "/static/assets/a56c2cfdbb7673c8fa7660ca.png",
+        "alt": "A screenshot showing a brand new project page"
+      },
+      {
+        "src": "/static/assets/ef6755db2672ee1f1631b80b.png",
+        "alt": "A screenshot showing a new discussion"
+      },
+      {
+        "src": "/static/assets/ba66d4980cde72680ca07fa7.png",
+        "alt": "A screenshot showing a new to-do list"
+      },
+      {
+        "src": "/static/assets/ac6381157416cd989e5a7a69.png",
+        "alt": "A screenshot showing the files page"
+      },
+      {
+        "src": "/static/assets/cf84a71fd9298963c42856be.png",
+        "alt": "A screenshot showing a new text document"
+      },
+      {
+        "src": "/static/assets/b3c269c126402a48db653bd5.png",
+        "alt": "A screenshot showing the calendar page"
+      }
+    ],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/5/article/1058-setting-up-the-basecamp-cli-with-claude-code",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "296975a891a7d2ba",
+    "text": "Setting up the Basecamp CLI with Claude Code This guide walks through installing the Basecamp CLI and connecting it to Claude Code on a Mac or Windows machine. Before you start, you'll need an active Claude subscription. If you don't have one yet, sign up at claude.ai before continuing. Mac Windows Install Claude Code Open Terminal. You can find it by searching \"Terminal\" in Spotlight (⌘ + Space). Go to Claude Code quickstart and copy the install command, or paste this directly into Terminal and hit Enter: curl -fsSL https://claude.ai/install.sh | bash This may take a few minutes to download and install. Once installation finishes, you may see a PATH setup command at the end of the output. If you do, copy the full line, paste it into Terminal, and hit Enter: echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.zshrc && source ~/.zshrc Start Claude Code by typing claude and hitting Enter. Follow the prompts to authorize your account. Claude will open a browser window — review the permissions and click Authorize. Back in Terminal, hit Enter to complete login. Once setup is confirmed, exit Claude Code by typing /exit and hitting Enter. Install the Basecamp CLI Go to basecamp.com/agents and copy the Quick Start command, or paste this directly into Terminal and hit Enter: curl -fsSL https://basecamp.com/install-cli | bash A browser window will open asking you to authorize Basecamp access — click Yes, I'll allow access. Back in Terminal, follow the prompts to select your account, set project defaults, and install the agent skill. That's it — Claude Code and Basecamp are connected. Type claude in Terminal any time to start prompting. Prefer to follow along with video? Watch the setup walkthrough on YouTube and the full examples playlist to see what's possible once you're up and running. Install Claude Download the Claude desktop app at code.claude.com/docs/en/desktop-quickstart. Open the installer and follow the setup instructions. Claude should open on its own once installed. If not, open it manually. Click the Code tab at the top of the window. Install the Basecamp CLI In Claude, enter this prompt: Install the Basecamp CLI using the quickstart instructions on basecamp.com/agents Claude will ask for permission to access certain paths — click Allow Once for each. When Claude asks if you want to log in to Basecamp, type: yes please login to my Basecamp account A Basecamp authentication window will open in your browser — click Yes, I'll allow access. If you have multiple Basecamp accounts, select your default account when prompted. You're ready to go. Here's an example first prompt to try: Create a new project called Basecamp Agent Use. Create a message on the message board that explains best practices for using an agent with Basecamp. Then create 15 todos of great prompts that put agents to good use in Basecamp. Assign them to me and schedule them across the next two days.",
+    "images": [],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/5/article/1062-getting-started-as-an-owner",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "eacacc4fda1f9194",
+    "text": "Getting started as an owner Welcome to Basecamp. This is where your team communicates, organizes work, shares progress, and keeps decisions in one place. Use Basecamp to plan projects, track tasks, reduce meetings, and ship great work. This guide will get you up and running with Basecamp in just a few steps. Jump to: Create your account Get oriented in a project Create your account Sign up for a new free trial account. Once you’re signed into your new account: Bookmark the Basecamp login page in your browser so it’s easy to return later Or download the app Get oriented in a project When you create a new account, take the ~3-minute onboarding tour. If you decide to skip it, open and explore the built-in \"Getting Started\" project. Level up by completing the to-dos in the “Learning the Basics” To-do list tool. There's also a sample project called \"Making a Podcast\" that showcases how we use Basecamp to make a podcast called REWORK. Take a few minutes and click around to get a feel for how projects are organized and how you and your team can use Basecamp day to day.",
+    "images": [
+      {
+        "src": "/static/assets/a02de38bce02508f23a10480.png",
+        "alt": "Screenshot of a a user's Home screen with the Getting started project outlined in a red box."
+      }
+    ],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/5/article/1069-running-a-customer-support-team",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "01015f064eb9eeb2",
+    "text": "Running a customer support team The Basecamp support team is a fully remote team that spans seven time zones and helps our customers 24 hours a day, seven days a week. With a very distributed team, it’s tough to get everyone on the same page. It can be even harder to keep them there. The tools inside our team project ensures that everyone has answers to questions like “What are the common cases we’ve seen this week?” or “Where’s the outline for our online classes?” Here's an insider's look at how our team uses Basecamp to stay organized. Jump to: Chatting with the team Posting updates Creating space with the Calendar Checking in without meetings Organizing resources Tracking work across teams Chatting with the team With our team entirely remote, it helps to have a place to chat in real time. The Chat tool gives everyone a place to talk instantly about anything. It’s where the team goes to ask others about a particularly interesting customer email. Or share the latest Taylor Swift music video. We've even had some fun GIF battles there. As shifts come online and then sign off at the end of the day, there's a flurry of hellos and goodbyes. It’s a powerful tool for making sure that your team feels connected, even if they are on the other side of the planet. Posting updates While Chat is great for those real time chats, it’s not designed to be an all-day meeting. For updates and other messages that the entire team need to see, we use the Message Board. Instead of that message being lost in the never-ending conveyor belt of a chat, it’s right there on the Message Board. Creating space with the Calendar Any events related to the team go on the Calendar. These events can be customer trainings or calls, our regular 1:1s, and time off for vacation or appointments. We also schedule time to work on side projects or anything else that takes us out of our email queue. By putting time out of emails on the Calendar, there's space for everyone to work on a range of projects. Without that space, a support team could quickly end up as queue monkeys racing through email after email. Checking in without meetings We don't need status meetings because we've got something better — Automatic check-ins. With the Automatic Check-in tool, we regularly ask everyone on the team a few things. The check-in allows us to talk about questions like “What was a common issue that you saw this week?” or \"What's a great support tip to share with the team?\" Organizing resources The Docs and Files tool gets a lot of use. It’s the go-to place for files, the online class resources, customer ideas, and anything else the team might need. Everything’s organized by topics using the folder option. And a few of those folders include Readme docs to give a person the gist of that folder and how to use it. Tracking work across teams When a customer reaches out with an issue, we'll first troubleshoot to see if they've encountered a bug. After it's confirmed, we'll rope in the programming team to help by adding a Card to the \"Bug\" Card Table inside our \"Basecamp Web\" project. The first stop for every new bug is the “Triage” column. This gives us an easy place to quickly add new bugs. The Card name is kept short for easy reference. The notes field contains any details, screenshots, links back to the case, and anything else that might be helpful. From the “Triage” list, the bug is then either assigned or grabbed by a programmer who sees one they want to fix. Here’s a full thread where a bug was added as a card by Joan (from the support team), discussed between a programmer and product designer, and then fixed: Since Joan was the creator of the Card, they were automatically notified throughout the process so they could keep the customer in the loop.",
+    "images": [
+      {
+        "src": "/static/assets/9c4c8f7428f0b0d330293520.png",
+        "alt": "Screenshot of a customer support team Chat. A few people are chatting and some posted Hey girl notification sounds."
+      },
+      {
+        "src": "/static/assets/3b0cb057e0c9f266e25561a3.png",
+        "alt": "Screenshot of a Message Board post for an EU/APAC Customer support position. A few employees left comments below the post."
+      },
+      {
+        "src": "/static/assets/534012a300b711651766008e.png",
+        "alt": "Screenshot of the Basecamp Calendar showing calendars from all projects that user has access to."
+      },
+      {
+        "src": "/static/assets/8e37fa158710f0e5fdd8301a.png",
+        "alt": ""
+      },
+      {
+        "src": "/static/assets/f5bf64e05b2d3d1fb945853a.png",
+        "alt": "Screenshot of the Docs & Files page for the Customer support team. This page shows a ReadMe document and 4 different folders. Each folder is customized to be a different color — yellow, purple, red, and blue."
+      },
+      {
+        "src": "/static/assets/1edb0da8167e8b1cecf0b80e.png",
+        "alt": "Screenshot of a Card Table used for tracking Bugs."
+      },
+      {
+        "src": "/static/assets/f0113900b6e94c9e433239fd.png",
+        "alt": "A screenshot of a Card in Basecamp that is tracking a bug, including the conversation with a programmer and product designer. The card was completed by another product designer."
+      }
+    ],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/5/article/1075-message-board",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "8549f0707630ab00",
+    "text": "Message Board Message Board posts are designed for announcements, updates, and longer discussions that your team may need to revisit later. Replies stay connected to the original post, making the Message Board a good place for conversations that should remain easy to find over time. Jump to: Creating a message Choosing who to notify Scheduling a message Categorizing messages Pinning messages Sorting and filtering messages Formatting text and adding images To access the Message Board, open a project and click Message Board. Creating a message From the Message Board, click + New message, or press Shift + M to start a new post. You can also hover over the Message Board tool and click New message. Give your post a title, add your content, and choose a category if needed, then post it when you’re ready. 🗒️ Note: Messages can only be edited by their creator or by an admin or owner. Choosing who to notify Before posting, choose who should be notified about the message. Notify everyone on the project, only specific people, or no one at all. Notification settings don’t change who can view the message. If you’re not ready to post yet, save the message as a draft and come back to it later. Scheduling a message Schedule a message to post later using the 🕒 clock icon in the top right corner while editing. Scheduled messages appear in your drafts, and the Message Board shows a reminder when drafts or scheduled posts exist. To update or remove the schedule, open the draft, click Continue editing, then adjust the timing using the 🕒 icon. A scheduled message remains a draft if: the author is removed from the project the author is removed from the account the account becomes inactive or canceled Categorizing messages Use categories to organize your Message Board and make related posts easier to scan. Choose a category while creating a message. Categories appear alongside posts and can be filtered using the Categories menu at the top of the Message Board. Anyone on the project can apply categories to messages. Admins and account owners can rename or customize available categories. Pinning messages Pin important messages to keep them at the top of the Message Board. Open the ••• menu on a message and select Pin. Pinned messages appear in a separate section at the top of the Message Board. You can pin up to 10 messages at a time. Pinned messages included in project templates carry over into projects created from that template. Sorting and filtering messages Use the controls at the top of the Message Board to change how messages are displayed. Filter by category, search for specific posts, or sort messages by newest post, latest comment activity, or alphabetically (A-Z). Sorting applies to everyone on the project, but only affects the current Message Board. Sorting is not available to client users. Formatting text and adding images Use the editor toolbar to format your message and add images or attachments. Insert images or files directly into a post, add lists and links, and format text while writing. 💡Tip: For a full guide to formatting across Basecamp, see Formatting text in Basecamp.",
+    "images": [
+      {
+        "src": "/static/assets/d0ab90c7ebea0647c3890eff.png",
+        "alt": "a screenshot of a box around the new message box on a project screen"
+      },
+      {
+        "src": "/static/assets/f7be62fa2749e1c2362fb009.png",
+        "alt": "a screenshot of a new message board post screen"
+      },
+      {
+        "src": "/static/assets/2aa4a9489fb1e49c7e50f4bc.png",
+        "alt": "a screnshot of a box around the edit your scheduled message link on the message board tool"
+      },
+      {
+        "src": "/static/assets/83fd5532a7bb8ea8b65da616.png",
+        "alt": "a screenshot of a box around the category options on a new message board post"
+      },
+      {
+        "src": "/static/assets/61d6fe941afc206c11ed05d7.png",
+        "alt": "a screenshot of a box around the pin option in the message board menu"
+      },
+      {
+        "src": "/static/assets/f5a8fe1e89717824817713f1.png",
+        "alt": "a screenshot of a box around the pinned messages on the top of the message board tool"
+      },
+      {
+        "src": "/static/assets/8028439971eb9d2f0288f764.png",
+        "alt": "a screenshot of a box around the filtering and sorting options for the message board"
+      }
+    ],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/5/article/1077-to-dos",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "00e9dd9b3fa17128",
+    "text": "To-Dos and Lists Your team knows what to do, but they need to see the way forward. Break down your team's work into manageable tasks and subtasks with to-do lists. They're great for work that can be planned, assigned, and completed step by step. They’re built for checklist-style work - clear tasks, clear owners, and clear progress from start to finish. For more visual, status-based workflows, use the Card Table. Jump to: Creating to-dos Creating a to-do list Importing to-dos Adding and managing to-dos Assigning and scheduling Subtasks Recurring to-dos Working with multiple to-dos Grouping to-dos Notifications Viewing your tasks To access To-dos, open a project and click To-dos. Creating to-dos Click Add a to-do to create a new item. Give it a title, then add notes, assign it, add subtasks, and set a due date. You can leave to-dos ungrouped for now, or organize them into lists later. 📝NOTE: Clients cannot see loose to-dos. Creating a to-do list To organize your work, create a to-do list. Click + Make a list to create a new list. Give it a title, and add a description if needed. Add notes, files, or links to the description. A progress pie chart at the top of each list shows how many to-dos have been completed. When a project has completed to-do lists, use the Show completed lists toggle to show or hide them from the page. You can also use a template to create a new list, or track the list on a Hill Chart. 💡 TIP: If you create the same list often, save it as a template to reuse later. Use the more options menu \"•••\" located on the top right of a list to create a template from that list to use later! Importing to-dos Import to-dos from a Markdown or text file by dropping a .md , .markdown , or .txt file onto the To-dos tool card, a To-dos page, a to-do list, or a to-do group. Basecamp uses the formatting in your file to create the list: Bullets become to-dos Indented bullets become subtasks of the to-do above them Headings become lists when you drop the file on a To-dos page Headings become groups when you drop the file on a To-do list Checked boxes mark to-dos as completed For bullets, you can use - , * , + , • , – , or — . Use checked boxes like [x] , [✓] , [✔] , and [✅] to import completed to-dos. Basecamp also recognizes [X] , [☑] , [√] , [✗] , [✘] , [❌]. Spaces inside brackets like [ ✘ ] will work too. To leave a to-do open, use [ ] or [] . Basecamp checks the file before importing anything. If something needs fixing, you’ll see an error that points to the line to update. Files can be up to 100 KB and include up to 500 to-dos and subtasks. 🗒️ Note: Importing to-dos is available on desktop only. Clients cannot import to-dos. Adding and managing to-dos Once you’ve created a list, start adding to-dos. Click Add a to-do to create a new item. Give your to-do a title, then add notes, assign it, add subtasks, and set a due date. Click a to-do or list title to edit it. You can drag and drop to-dos within a list or move them between lists. Entire lists can be reordered the same way. Assigning and scheduling Assign to-dos to clarify responsibilities and keep work moving. Start typing a name in the Assigned to field and select from the list. When assigned, the person will be notified and can mark the to-do complete when finished. Set a due date or date range to keep work on track. Assigned to-dos appear on a person’s Assignments page. To-dos with due dates appear on your Calendar, as well as in your My Tasks, and can send “Due soon” reminders. Subtasks Use subtasks to break a to-do into smaller pieces. Subtasks can be assigned to a person and given a due date. Each subtask can be completed independently without affecting the overall to-do, so work can move forward as needed. Recurring to-dos Set a to-do to repeat automatically on a schedule. When creating a dated to-do, choose how often it should repeat - daily, weekly, monthly, or custom intervals. Recurring to-dos create a series: The primary to-do (🔄) controls the schedule Individual instances (🗓️) are created automatically If a to-do isn’t completed before the next one is created, it becomes overdue. To update all future to-dos, edit the primary to-do. To change just one occurrence, edit an individual instance. Deleting or archiving the primary to-do stops future to-dos from being created. Working with multiple to-dos Select multiple to-dos in the same list to make changes in bulk. Click the ⋮ menu next to a to-do, then hold Command (Mac) or Control (Windows/Linux) and click additional to-dos to select more. To select a range of to-dos, hold Shift. From there, you can: Assign multiple to-dos Change due dates Shift dates forward Move or copy to another location Archive or delete to-dos Group to-dos Grouping to-dos Use groups to organize to-dos within a list. Groups help organize work by phase, team, category, or any other structure you need. To create a group, select multiple to-dos, click the ⋮ menu, then choose Group them... You can drag to-dos between groups and reorder groups as needed. If a group grows into something larger, turn it into its own list using New list from group from the group’s ⋮ menu. Notifications Stay updated when new to-dos are added to a list. Open a to-do list, click the ••• menu, then select Notify me when new to-dos are added. You’ll receive notifications when new to-dos are added to that list. These are personal settings - others need to opt in separately. Turn notifications off the same way. To follow activity on a specific to-do, open it and click Notify me at the bottom. Once subscribed, you’ll receive updates when someone comments on or completes that to-do. Viewing your tasks See your assigned work and what’s due today from anywhere in Basecamp. To open your tasks, press Shift + T, or select My Tasks from the bottom bar. To move a task to Up Next from your My Tasks page, hover over a task and click the ↑ to move it. To remove a task from Up Next, click the ↓ to put it back in the original list. Tasks due today appear in the Due Today section of My bar. Press Shift + V or select Due Today from the bottom bar to see everything that needs attention across your projects.",
+    "images": [
+      {
+        "src": "/static/assets/bf63023498cba131e539af1e.png",
+        "alt": "a screenshot showing a box around the add a to-do button on the to-do tool"
+      },
+      {
+        "src": "/static/assets/13d6fe5a9bb9dffca64a6066.png",
+        "alt": "a screenshot showing a box around the +new list button on a to-do tool"
+      },
+      {
+        "src": "/static/assets/fb82b4db16a6216cd74151cd.png",
+        "alt": "a screenshot showing a box around the pie chart next to do a to-do list"
+      },
+      {
+        "src": "/static/assets/1f9459ecb73fdb5b47ab091d.png",
+        "alt": "a screenshot with a box around the show completed lists toggle on the to-do tool"
+      },
+      {
+        "src": "/static/assets/967a784928977291dcdf0f51.png",
+        "alt": "a screenshot showing the options you have when adding a new to-do"
+      },
+      {
+        "src": "/static/assets/3594509ac4e0efd2512eac17.png",
+        "alt": "a screnshot showing what happens when you type a name into the assigned box on a to-do"
+      },
+      {
+        "src": "/static/assets/bdacadb4eb4b24894c5f4cac.png",
+        "alt": "a screenshot showing the subtask section of a to-do and the options you have"
+      },
+      {
+        "src": "/static/assets/a2f51991863575943d12807d.png",
+        "alt": "a screenshot showing the options you have when setting a to-do to repeat"
+      },
+      {
+        "src": "/static/assets/5bd57438d9c9fc9d2e4b7584.png",
+        "alt": "a screenshot showing the options when you have multiple to-dos selected"
+      },
+      {
+        "src": "/static/assets/ee2019a60e4dbbe235c8420c.png",
+        "alt": "a screenshot with a box around the menu option to group to-dos together"
+      },
+      {
+        "src": "/static/assets/b4db62755a152314c4c3dde8.png",
+        "alt": "a screenshot with a box around the new list from group option when you select the menu for a group"
+      },
+      {
+        "src": "/static/assets/c3372e0d394e17d9111be1de.png",
+        "alt": "a screenshot with a box around the menu option on a to-do list to notify me when new to-dos are added to this list"
+      },
+      {
+        "src": "/static/assets/9f535da5d83b7ec14e1ec7ac.png",
+        "alt": "a screenshot with a box around the notify me option at the bottom of an individual to-do"
+      }
+    ],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/5/article/1079-docs-and-files",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "4b00c5eaef2bf62d",
+    "text": "Docs & Files Docs & Files is where you store and organize documents, files, and links for a project. It’s designed for keeping reference material in one place - things your team needs to access, share, and come back to over time. Use it for anything that doesn’t belong in a conversation but still needs to be easy to find later. Jump to: Adding files Creating documents Finding and filtering files Organizing files and folders Working with file versions Linking to cloud files Viewing files Sharing with a public link Downloading To access Docs & Files, open a project and click Docs & Files. Adding files Add files to your project to share and keep them organized. Click + New to upload a file, or drag and drop a file into Docs & Files. You can rename files and add notes after uploading to give more context. Files must be uploaded or dragged in - copy and paste isn’t supported. 📝 NOTE: File size limits apply. Standalone file uploads support files up to 5 GB. Files attached to a document can be up to 10 GB. To upload a file larger than 5 GB, create a document and attach the file to it instead. Creating documents Create a document to write and share content with your team. Click + New, then select Start a new doc. You can also hover over Docs & Files and click New document. Add your content, choose who to notify, and post it when you’re ready. After posting, other users can comment and be notified. To save drafts or schedule a document to post later, see Drafts. Finding and filtering files Use the filters at the top of Docs & Files to quickly find what you’re looking for. Filter by file type, search for specific items, or sort items by name, created, modified, or manually. You can view your files in a grid or list view. Sorting and filtering only apply to your current Docs & Files view. Organizing files and folders Use folders to keep your Docs & Files organized. To create a folder, click + New, then select Make a new folder. In the list view, click a folder icon to expand it directly to browse its contents without leaving the page. Multiple folders can stay open at the same time. Turn on Keep folders open to automatically expand all folders. If you manually collapse a folder, the toggle turns off automatically. Drag files, documents, or links into folders to organize related work together. Move items using the ⋮ menu and selecting Move. You can also select multiple items to perform bulk actions like moving, copying, downloading, archiving, deleting, or changing colors. 💡 TIP: Select multiple items using Command (Mac) or Control (Windows/Linux), or hold Shift to select a range. Once selected, use the ⋮ menu to move, copy, download, archive, delete, or change colors in bulk. Working with file versions Add a new version of a file by clicking on Replace with a new version under the current file. View all previous versions by clicking on See all versions. Linking to cloud files Link to files stored in other services to keep everything connected. Click + New, then choose a service or External Service. Add a title and link, then post it to your project. Linked files open in their original service. You’ll need access and the correct permissions to view them. Viewing files Click a file or image to open a preview. Preview images, PDFs, and uploaded files directly in Docs & Files. Use the arrows to move between files, open the full item, or download it. Basecamp Docs and linked cloud files open on their own page instead of in the preview. Sharing with a public link Share a file or document with people outside your project using a public link. Open the file or document, click the ••• menu, then select Get a public link. Anyone with the link can view the item without needing access to your Basecamp project. For more details about managing public links, see Public Links. Downloading Download files or folders to use them outside of Basecamp. Open a folder, click the ••• menu, then select Download this folder. 📝NOTE: Large folders may take a moment to prepare before downloading.",
+    "images": [
+      {
+        "src": "/static/assets/4af0be538d734eb5ad0d8b60.png",
+        "alt": ""
+      },
+      {
+        "src": "/static/assets/c22861411b94f69c0eb1aaf6.png",
+        "alt": "a screenshot of the new doc creation page"
+      },
+      {
+        "src": "/static/assets/38011682bf10702af7df36f3.png",
+        "alt": "a screenshot of the filter and sorting options in Docs & Files."
+      },
+      {
+        "src": "/static/assets/0d507b5e9a68710fd3465363.png",
+        "alt": ""
+      },
+      {
+        "src": "/static/assets/922c0eb7d986c88c503d771c.png",
+        "alt": "a screenshot showing a box around the move option in the docs menu"
+      },
+      {
+        "src": "/static/assets/2b30a196aa305b749bc96c3b.png",
+        "alt": "a screenshot of a box around the replace with a new version link on a doc"
+      },
+      {
+        "src": "/static/assets/2a563f52692d07e420635bb2.png",
+        "alt": "a screenshot of the add an external service link options"
+      },
+      {
+        "src": "/static/assets/79b9f21219c639d2650bcd63.png",
+        "alt": "a screenshot showing a file preview with an arrow to move to next or download the file"
+      },
+      {
+        "src": "/static/assets/3e8a7edc6b786621943725d2.png",
+        "alt": "a screenshot of a box around the get a public link option in the menu"
+      },
+      {
+        "src": "/static/assets/aebac6001c0be8933913d120.png",
+        "alt": "a screenshot of a box around the download this folder menu option"
+      }
+    ],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/5/article/1087-getting-started-as-a-client",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "7c6599ac99d1b501",
+    "text": "Getting started as a client Welcome to Basecamp. This is where your project team keeps conversations, files, updates, and next steps together in one place. Know where things stand without sorting through long email threads or meetings. This guide gets you set up and ready to work in Basecamp. Jump to: Accept your invite and log in Find your project Know who to contact Accept your invite and log in Before you can access a Basecamp account, you’ll need to accept the invitation sent to your email. Once you’re signed into your new account: Bookmark the Basecamp login page in your browser so it’s easy to return later Or download the app for your device 💡Tip: You can stay involved without logging in every time by replying to Basecamp notifications directly from your email. Your response will appear in the right place in the project automatically. Find your project Once you’re signed in, open the project on your Home screen. This is where all the work will happen. As you explore, look for: Message Board posts for announcements, updates, and questions To-dos for next steps Docs and files for shared reference Learn more in the Using Basecamp as a Client guide. Know who to contact If you have a question about the project, the best place to ask is right in Basecamp. Ping someone on the project @mention someone in Chat If you need help with your Basecamp account (how to log in or delete a comment), contact Basecamp support.",
+    "images": [],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/5/article/1082-what-clients-can-see-and-do",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "74827ee824863b88",
+    "text": "What Clients can see and do When a client logs into Basecamp, their view of a project looks similar to your team's, but they only see what you've made visible to them. Everything starts private. You control what gets shared, item by item. Jump to: What clients can do What clients can't do Choosing what to show clients How visibility works for specific items Seeing what's visible to a client Changing visibility after posting What clients can do Clients have real access to the project, they're not just passive viewers. Within what's been made visible to them, clients can: Post messages, comments, to-dos, and files Respond to automatic check-in questions they've been added to Use Pings with anyone they share a project with, and with admins and account owners What clients can't do Clients do have some meaningful limitations compared to your team. They can't: See visibility flags or badges indicating what's private vs. visible Share items publicly See Hill Charts Use loose to-dos Create new projects Add or remove people from projects Administer a project: no editing the project name or description, no modifying tools, no setting up chatbots or webhooks, no archiving or trashing Be made admins on the account Mention Groups that include people who don't already have access, in Invite-only projects Choosing what to show clients When you post something in a client project, you'll be asked whether it's private to your team or visible to the client. You make this choice at the time of posting for most items. Once you make an item visible to a client, they can also see: All existing comments on that item Chat lines within any Chat tool you make visible Answers to any check-in question you make visible Nested items within any folder you make visible To-do groups within any to-do list you make visible Clients will also be notified of future comments, chat lines, and check-in answers on anything they can see. In the case of a check-in, the client is subscribed to answers but won't be asked the question themselves. NOTE: While an item is set to \"Our team only,\" you can't @mention clients or add them as subscribers. Switch visibility to allow client access first. How visibility works for specific items Not everything follows the same rules. Some items you control individually, some inherit visibility from a parent item, and some are always private. Individual Inherited Always private You set visibility for these items yourself at the time of posting: Individual messages on the Message Board Individual events on the Schedule To-do lists Card Tables Check-in questions Docs, uploads, and Google Docs at the root of Docs & Files These items take their visibility from a parent item — you don't set them individually: To-do groups inherit from their to-do list To-dos inherit from their to-do list Cards inherit from their Card Table Check-in answers inherit from their question Comments inherit from the item they're on Docs, uploads, and Google Docs inside a folder inherit from the folder These are private by default and follow all-or-nothing rules: Chat — the entire Chat tool is private by default. You can make it visible to clients, but not individual messages within it. Forwards — you can share the entire Forwards tool with a client, but not individual forwards within it. Folders — you can share an entire folder with a client, but not individual items inside a private folder. To share one item from a private folder, move it to a client-visible folder first. Seeing what's visible to a client Every item in the project shows a flag indicating whether it's visible to the client or private to your team. Changing visibility after posting To change the visibility of an item after it's been posted, click \"Change\" on the visibility flag at the top of the item.",
+    "images": [
+      {
+        "src": "/static/assets/400861f282f7b7869327d29f.png",
+        "alt": "A screenshot of the options at the bottom of a new message draft, showing options to share the post with the client and notify people. "
+      },
+      {
+        "src": "/static/assets/9f94aa690631afc572f82ca3.png",
+        "alt": "A screenshot of messages in a project showing visibility flags"
+      },
+      {
+        "src": "/static/assets/90f22f13dca8c0827d49fb78.png",
+        "alt": "A screenshot of a side-by-side comparison of client view vs team view of the same project"
+      },
+      {
+        "src": "/static/assets/3572f71bd06e7e8be9f4b4bc.png",
+        "alt": "A screenshot of a message with the client visibility tag highlighted in red."
+      }
+    ],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/5/article/1088-getting-started-as-a-team-member",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "6ad0fc1db753fb9e",
+    "text": "Getting started as a team member Welcome to Basecamp. This is where your team keeps conversations, work, and decisions together. Everyone stays in the loop without constant meetings or messages. This guide gets you set up and ready to work in Basecamp. Jump to: Accept your invite and log in Get oriented in a project Accept your invite and log in Before you can access a Basecamp account, you’ll need to accept the invitation sent to your email. Once you’re signed into your new account: Bookmark the Basecamp login page in your browser so it’s easy to return later Or download the app Get oriented in a project Work in Basecamp happens inside projects. Each project holds the messages, to-dos, files, and schedules related to that work. You may already have access to an active project, but if you want a place to explore without affecting real work, open the “Making a Podcast” sample project. As you check things out, look for: Message Board posts for announcements, updates, and questions To-dos for next steps Docs and files for shared reference This is a good time to get a feel for where things live. You can always check out our Quick demo for more details. Learn more: Join a live class Explore the Learning center",
+    "images": [],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/5/article/1136-owner-and-admin-actions",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "f9a0e6d061290164",
+    "text": "Owner and Admin Actions Adminland is organized around two tiers of users. Administrators manage the people and structural settings that keep the account running day-to-day. Account owners can do all of that, plus control billing, storage, and anything that affects the account as a whole. Jump to: Admin actions Owner actions Transferring account ownership To get to Adminland, click the ⚿ Adminland button on the left side of the Home page, or type \"Admin\" in the Jump bar and hit Enter. Admin actions These options are available to anyone with administrator or owner status on the account. Manage people Add new users, remove existing ones, update someone's info, and manage project access across the account. Add/remove administrators Grant or revoke administrator status for anyone on the account. Admins can promote other admins, but only owners can promote someone to owner status. Manage groups Create and edit groups of people to make adding multiple users to projects faster. Groups aren't a permission level — they're a shortcut for bulk access management. Manage companies Add, rename, or delete the companies and organizations associated with your account. This is also where you control which projects a client company can see. Rename project tools Change the default names for tools within projects. For example, renaming \"Message Board\" to \"Announcements\" or \"Docs & Files\" to \"Vendor Forms.\" Change message categories Add, edit, or remove the categories available when posting to a Message Board. Categories are account-wide, so changes here apply to every project. Move projects from Basecamp 2 to Basecamp 5 If you have projects in an older Basecamp 2 account, this is where you import them. The import tool walks you through the process step-by-step. Merge people If someone appears on the account twice, usually under two different email addresses, you can merge the two profiles into one. One profile is designated the winner and inherits the other's project access, to-do assignments, and reminders. Merging cannot be undone. See Merging People before you proceed. Change Ping & Chat history settings Adjust how long Basecamp retains Ping and Chat transcripts. By default, history is kept for the life of the account. Owner actions Account owners have access to everything above, plus the following. Handle billing, invoices, packages, and upgrades Update your credit card, download past invoices, change your plan, and manage upgrades. See Handling Billing and Invoices for the full how-to. Manage storage Check your current storage usage, free up space, or purchase additional storage. See Manage Storage for details. Add/remove account owners Designate additional co-owners or remove existing ones. Having at least one co-owner is recommended. Owners are the only people who can handle billing and account-level settings, so a backup matters if you're ever unavailable. Rename this account Change the name of your Basecamp account as it appears across the product. Renaming the account does not change your Company name. View everything in the trash See a full account-wide list of everything deleted across all projects, ordered from oldest to newest. Click any item to restore it, view it, or permanently delete it. ⚠️ NOTE: Comments, Chat messages, and Pings are deleted immediately when trashed. They don't appear here and cannot be restored. Reassign someone's to-dos Move all of a person's assigned to-dos to someone else, either across the entire account or within a specific project. Useful when someone leaves the team or changes roles. You'll receive an email confirmation when the reassignment is complete. Access any project Add yourself to any project on the account, including ones you weren't originally invited to. Admins can only access projects they've been added to, this permission is restricted to Account Owners Export data from this account Download a full export of your account data as HTML files. See Export Your Basecamp Data for what's included and how Ping exports work. Manage public items View everything on the account that has an active public link, unpublish individual items, or unpublish everything at once. Require two-factor authentication Enforce 2FA for all account members. Once enabled, anyone who hasn't set up 2FA will be prompted to do so on their next login. See: 2FA instructions. NOTE: Clients are not affected by this permission and can still access your account without 2FA. Cancel this account Cancellation takes effect immediately. See Cancel Your Basecamp Account for what happens to your data and how to export it first. Transferring account ownership If the original account owner is no longer available and ownership needs to be transferred, contact the Basecamp support team. If the account is owned by a legal entity, we may require verification that the request is coming from a top-level organizational leader — and in some cases, a properly served court order. Email support to start the process.",
+    "images": [],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/5/article/1148-third-party-integrations",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "23347bae332edd34",
+    "text": "Third-party apps and integrations Basecamp has a public API, and a growing number of third-party tools have built integrations that connect Basecamp to the rest of your workflow. Browse the full list at basecamp.com/integrations. What kinds of integrations are available Removing an integration Getting support for an integration What kinds of integrations are available Automation and connectivity Tools that connect Basecamp to other apps in your stack — syncing to-dos, triggering actions when things change in Basecamp, or posting updates between tools. If you've used something like Zapier before, this is that category. Time tracking and invoicing Tools that add time-tracking to your to-dos and card table items, generate timesheets, or connect Basecamp projects to invoicing and accounting software. Reporting and planning Tools that pull Basecamp data into dashboards, charts, or more detailed reporting views than what's built into Basecamp directly. 🗒️ NOTE: This isn't an exhaustive list of categories — the integrations page may include tools that span multiple areas or don't fit neatly into any of the above. Removing an integration To disconnect an integration from your Basecamp account, reset your password. This revokes access tokens for any third-party apps connected to your account. You can reset your password from the sign-in page. Getting support for an integration All integrations listed on basecamp.com/integrations are built and maintained by their respective third-party teams — not by Basecamp. If an integration isn't working as expected, reach out to that product's support team directly.",
+    "images": [],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/5/article/1151-building-on-basecamp",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "5153bcc01c559c25",
+    "text": "Building on Basecamp Basecamp has a public API and a suite of official developer tools for building integrations, automations, and custom workflows. This article is for developers — if you're looking for ready-made third-party integrations, see Third-Party Integrations instead. The Basecamp API The Basecamp SDK Chatbots Webhooks Listing your integration The Basecamp API Integrate your own app or service with Basecamp. Use the API to create projects, manage to-dos, post messages, handle files, and more. All requests go over HTTPS and authenticate with OAuth 2.0. Example: automatically create a new Basecamp project and populate it with a standard set of to-do lists every time a client signs a contract in your CRM. The full API reference, including authentication details, pagination, rate limits, and endpoint documentation, lives on GitHub: github.com/basecamp/bc3-api. 🗒️ NOTE: The first rate limit you'll commonly hit is 50 requests per 10-second period per IP address. The API docs cover rate limiting and how to handle it gracefully. The Basecamp SDK Work with the Basecamp API in your language of choice without building HTTP clients from scratch. The SDK also ships an OpenAPI spec if you prefer code generation. Example: build an internal Python script that pulls all overdue to-dos across your account each morning and emails a summary to your team. Available for: Go, Ruby, Python, TypeScript, Swift, and Kotlin. Full SDK documentation: github.com/basecamp/basecamp-sdk. Chatbots Post updates from external services directly into a Basecamp Chat room — no manual copy-pasting required. Example: route GitHub deployment notifications into your team's Chat room so everyone sees when a release goes out. To set one up, open a project, go to Chat, click •••, and select Configure chatbots. Each chatbot gets a unique URL that accepts incoming payloads. For the full payload format and options, see the Chatbots API guide. Webhooks Get notified the instant something happens in your Basecamp account — a to-do is completed, a message is posted, a file is uploaded — without polling the API. Basecamp sends a POST request to your server the moment the event occurs. Example: trigger an automated Slack notification to a client channel whenever a to-do assigned to them gets marked complete. Webhooks are configured per project. Go to the more options menu \"•••\" located on the top right of the project to create or manage your webhook. For the full list of subscribable events and payload shapes, see the Webhooks API guide. Listing your integration If you've built something on the Basecamp API and want it listed on basecamp.com/integrations, open a pull request on the bc3-integrations repository. The README there has everything you need.",
+    "images": [],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/5/article/1157-preferences",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "c2aba783d83f7290",
+    "text": "Personal Preferences (dark mode, time zone, 24h format) Set your appearance, time zone, and date and time format from Preferences. These settings are specific to each Basecamp account — if you belong to multiple accounts, set them separately in each one. Go to Account & Settings → Preferences. Appearance Set your appearance to Always light, Always dark, or Same as OS. If you choose Same as OS, Basecamp follows your device's light and dark mode setting automatically. Time zone Your time zone setting controls when Basecamp sends you notification emails. Keep it set to wherever you're working. Basecamp adjusts event times automatically based on your device's clock. Your Preferences time zone doesn't update automatically when you travel, but Basecamp will notice if your device time zone has changed and will ask you if you want to update your notifications time zone. Example: Liza is in Seattle (PT) and creates an event for tomorrow at 10am. Her colleague Tina in Baltimore (ET) sees the same event on her calendar at 1pm — Basecamp has automatically converted the time. Later that day, Liza flies to Chicago and her device switches to CT. The event now shows as 12pm on her calendar. Basecamp notices her device time zone has changed and asks if she'd like to update her notifications time zone to match. Date and time format Set your First day of the week to any day — this affects the date picker used for scheduling events and to-dos. Set your Time format to 12-hour or 24-hour display.",
+    "images": [],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/5/article/1158-logging-in-and-out",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "5fa7ac33b4c1625d",
+    "text": "Logging In and Out Log in at basecamp.com by clicking Sign in and entering your email address and password. To log out, go to your profile picture and click Log out — this logs you out of all Basecamp accounts on that device. Signing in with Google Sign in with your Google account instead of a password by clicking Sign in with Google on the login page. To set this up, go the Launchpad login options and click Switch to Google. To stop using Google to log in, return to the same page and select Switch to email. Trouble logging in \"We couldn't find that one\" — The email address you entered isn't linked to a Basecamp account. Check for typos, or try another email address if you use more than one. If you haven't accepted your invitation to the account yet, ask someone on the account to resend it. \"We didn't recognize that password\" — Click Forgot your password? on the sign-in page to send yourself a reset email. Check your spam folder if it doesn't arrive within a few minutes. If the new password works in a different browser but not your usual one, clear your cache and cookies. Two-factor authentication issues — See our guide to Passwords and two-factor authentication. 📝 NOTE: Basecamp does not support SSO or SAML authentication.",
+    "images": [],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/5/article/1165-using-basecamp-with-a-vpn",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "1aa229960fb62c11",
+    "text": "Using Basecamp with a VPN Basecamp works fine with VPNs. Occasionally, though, a VPN's IP address gets flagged by our security systems, usually because others using the same VPN have triggered our filters. If you're seeing a \"You've been blocked\" page, here's what's happening and how to fix it: How VPN blocking works VPNs route your traffic through a shared IP address. If someone else using that same IP has done something suspicious, our security systems may block it automatically, even if you haven't done anything wrong. This is why Basecamp might block you while other sites don't. Getting unblocked Connect to a different server or location in your VPN app. That gives you a fresh IP address that hasn't been flagged, and access is usually restored immediately. If you keep getting blocked after switching servers, try a few different locations. We can't permanently safelist specific VPN IP addresses, but switching servers will frequently resolve issues. If none of them work, contact our support team. If you're seeing the block page and you're not using a VPN, reach out to support directly and we'll get you unblocked.",
+    "images": [],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/5/article/1159-the-home-screen",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "8a42acae2a0b88e0",
+    "text": "The Home Screen The Home screen is your starting point in Basecamp: open projects, organize your workspace, and get a quick view of what’s happening across your account. Return to it anytime by clicking Home in the top left or pressing Shift + H. Jump to: Navigation and shortcuts Projects and folders Account activity Navigation and shortcuts At the top of the Home screen, you’ll find quick links to key areas of Basecamp: Activity Calendar Reports Everything Use the buttons on the left to quick create a project, a folder, invite users to your account, or access Adminland. Projects and folders Your projects appear as cards in the center of the Home screen. To create a new project, click on + Make a new project on the left. Group projects into folders to organize related work together, then click a folder to open and browse the projects inside. From an open folder, you can also view Activity and Mission Control for just the projects in that folder. Star important projects to keep them easy to spot. Search for the project you want to star, then click the icon to the left of the name. This will add the project to your home screen. Click the star on the home screen to remove it. To create a folder, click Add a folder on the left side of your home screen. Rename folders, change their color or logo, and drag projects in or out to organize your workspace. In light mode, click the 💧 droplet icon on the left of your home screen to cycle through different background colors across Basecamp. NOTE: The Home screen shows your folders, starred projects, and up to 10 recently visited unstarred projects. Account activity On the right side, you’ll see recent activity across your account. This gives you a quick snapshot of what’s happening - like new messages, comments, and updates. For real-time updates and notifications, open the notification Sidebar from My bar. Click View all to see more activity.",
+    "images": [
+      {
+        "src": "/static/assets/616c610ce289713df235a08a.png",
+        "alt": ""
+      },
+      {
+        "src": "/static/assets/0ff40d51d74689ce99033e0b.png",
+        "alt": ""
+      },
+      {
+        "src": "/static/assets/b05e22917ff7f29afe983e1c.png",
+        "alt": ""
+      },
+      {
+        "src": "/static/assets/ecf98671ccc1cab71e144bf2.png",
+        "alt": ""
+      },
+      {
+        "src": "/static/assets/2539c139dc9567c76de74f8f.png",
+        "alt": ""
+      },
+      {
+        "src": "/static/assets/918bb571ac483878095b8126.png",
+        "alt": ""
+      }
+    ],
+    "embedded_media": [
+      {
+        "source_url": "https://www.youtube.com/embed/ciFlAht4WUI",
+        "status": "local-playback-validated",
+        "video_key": "youtube:ciFlAht4WUI",
+        "src": "/static/assets/8d3154d2bae3e68faa4369b0.mp4"
+      }
+    ]
+  },
+  {
+    "route": "/help/5/article/1184-leaving-a-project-or-account",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "64ffc1ae4ef26cf5",
+    "text": "Leaving a Project or Account Sometimes you're done with a project, or you're moving on from an account entirely. Both are straightforward — you can remove yourself without needing to ask an admin. Leave a project Leave an account Leave a project Open the project and click the ••• menu in the top right. Choose Leave the project. You'll no longer see that project in your project list. NOTE: If you were added as a client, you'll need an admin or account owner to remove you from the project. Leave an account Click your profile picture in the bottom left of the screen and go to Account & Settings → Profile, Password, 2FA. Scroll down and click Remove me from this account. You can also get there by clicking your profile picture anywhere it appears — like in a recent chat message — and choosing Edit my profile. That brings you to the same page. You'll see a confirmation screen with the option to send a personal note to the account owner before you go. NOTE: Account owners can't use this option. If you're an owner, you'll need to add a co-owner first, then have them remove you from ownership before you can leave.",
+    "images": [],
+    "embedded_media": []
+  },
+  {
+    "route": "/help/5/article/1176-creating-and-setting-up-a-project",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "1001da45249fc569",
+    "text": "Creating and setting up a Project Work happens in Projects. Each project is its own space — with whatever tools your team needs to communicate, organize work, share files, and hit deadlines. Create one for every significant thing you have going on: a client engagement, a product launch, an internal initiative, a recurring process. Jump to: Creating a project Adding tools Adding multiple tools Renaming tools Spotlight Invite-only vs. All-Access Inviting people Project settings Wallpaper More Options Creating a project From the Home page, click + Make a new project. Give the project a name and an optional description, then click Create project. The description shows up on the project card on your Home page, so a sentence or two about the project's purpose is enough. Your new project starts completely empty. No tools are added by default — you choose exactly what you need. 🗒️ Note: Do the same kinds of projects over and over? Save yourself time with a template. See our Templates article to learn how. Adding tools Click the + button inside the project to add a tool. Every tool available in Basecamp is listed there: Message Board — post announcements, proposals, updates, and discussions To-dos — create lists, assign tasks, and set due dates Docs & Files — store documents, files, and images Calendar — schedule events and track deadlines Chat — a real-time room for team conversation Card Table — a kanban-style board for visual workflow tracking Automatic Check-ins — recurring questions that post on a schedule Email Forwards — route emails into a project External Link — add a direct link to an outside service like GitHub, Zoom, or Google Drive Click any tool to add it to the project. Tools appear in the order you add them, and you can rearrange them anytime. 💡 TIP: Account owners and administrators can set default names for project tools in Adminland. See Owner and Admin Actions Adding multiple tools You can add more than one instance of a tool to a project. This comes in handy when you want to separate unrelated work. For example, two To-dos lists for different workstreams, or two Message Boards for internal and client-facing updates. Click + and select the same tool again to add another tool. A few things to know about multiple tool instances: Additional Chat rooms don't automatically include everyone on the project. People need to follow the room or be @mentioned to receive notifications from it. Additional Message Boards inherit the categories configured in Adminland but can be customized independently from the project's ••• menu. Additional Calendars can be configured to show events only, or both events and dated to-dos — useful if you want one calendar for scheduling and another for assignment tracking. To remove an extra tool instance, the tool must be completely empty first. Delete all content inside it, then use the \"trash\" icon on the bottom right of the tool to remove it. Renaming tools Every tool can be renamed to fit your needs, like a different language or context. Click directly on the tool's title to make it editable, type the new name, and press Enter. Renamed tools are visible to everyone on the project. Renaming a tool here only affects this project, it doesn't change the default name in other projects. Spotlight Highlight what's important by using the Spotlight feature. Use Spotlights to bring any item to the top of project: a \"Read me first\" message, next week’s launch plan, this week’s to-dos, what’s shipping, or assets everyone needs. Only team users can add a spotlight. To add a spotlight, use the more options menu \"•••\" located on the top right of any item and click 'Spotlight on project page'. You can remove the item from the Spotlight using the same menu. Invite-only vs. All-Access New projects are Invite-only by default. Only people you explicitly invite can see and access the project. All-Access projects are open to everyone on your account. Users can also find and join All-Access projects from the list of projects on the Home page. To change a project's access type, click the People icon at the top left of the project and click 'switch to All-Access. A few things to keep in mind: Only the project creator, account admins, and owners can change a project's access type. Clients can only be added to projects manually — they can't join via an All-Access link regardless of project type. In Invite-only projects, clients can't @mention groups that include people who don't already have access. Inviting people To add people to a project, click the People icon at the top left of the project. For the full how-to on inviting team members and clients, see Adding People to a Project. Project settings Click ••• > Project settings to update the project's details and toggle optional features. Logo — add a logo or image to your project. Name and description — update the project name or description at any time. Starts/Ends — set the project’s start and end dates. These dates appear at the top of the project and in Reports. Show progress — toggle on to display a gauge at the top of the project showing its overall progress and status. See the Needle for details. Timesheet — toggle on to enable time tracking for this project. Time tracking requires the Timesheet add-on or a Pro or Unlimited Edition subscription. Wallpaper — upload a background image for your project. Wallpaper Customize your project by adding a wallpaper. Click ••• > Project settings, click the image box in the Wallpaper section, and choose an image from your device. Choose Fill screen to have the image fill the background or Tile to repeat the image, then click Save. 💡 Tip: A high-resolution image works best for wallpapers. Try an image around 2560 px wide, or a 16:9 image like 2560 × 1440. Some cropping may happen on different screen sizes. Images can be up to 10 MB. More options Click the ••• menu at the top right of the project to access more options: Project settings — update the name, description, start/end dates, Needle, Timesheet, and Wallpaper. Customize project tools — rename tools or toggle existing ones on and off Save as project template — create a reusable template from this project's current setup, including tools, to-do lists, and any content you want to reuse Leave this project — remove yourself from the project. You can only do this if there are other users on the project Copy Link — copy the URL of the project to share with others Archive or Delete — Archiving hides the project from the Home page but keeps all data intact; accessible from the project directory. Deleting permanently removes the project after a short confirmation period 🗒️ NOTE: Archiving and deleting projects requires admin, owner, or project creator status unless your account has the Admin Pro Pack restriction enabled. See Admin Pro Pack.",
+    "images": [
+      {
+        "src": "/static/assets/6a0981b64e3fd0d4c782f3de.png",
+        "alt": "Screenshot of a blank project canvas with the + button visible"
+      },
+      {
+        "src": "/static/assets/fa04ceeea7604971eef77d45.png",
+        "alt": "Screenshot of the tool picker showing the full list of available tools"
+      },
+      {
+        "src": "/static/assets/2f6aad7f602590b7ea4fad65.png",
+        "alt": "Screenshot showing a “Due Dates” panel next to a “To-dos” list. The trash icon at the bottom-right of the Due Dates panel is highlighted in red."
+      },
+      {
+        "src": "/static/assets/69753e008c0def714a243992.png",
+        "alt": ""
+      },
+      {
+        "src": "/static/assets/35e16dd310b460058fe26dea.png",
+        "alt": ""
+      },
+      {
+        "src": "/static/assets/d7555b0918d47ac38e533eb6.png",
+        "alt": ""
+      },
+      {
+        "src": "/static/assets/94cbf9a65530b8b4a821008c.png",
+        "alt": "Screenshot of a Basecamp project’s settings showing start and end dates, the progress gauge and Timesheet toggled on, wallpaper options, and Save and Never mind buttons."
+      },
+      {
+        "src": "/static/assets/6c878e3855d683fe90a14101.png",
+        "alt": "Screenshot of the project settings for “GH Designs: Logo Redesign” showing a tiled wallpaper image applied around the project, with options to switch between Fill screen and Tile."
+      },
+      {
+        "src": "/static/assets/8533939a06d61f07c43f1331.png",
+        "alt": ""
+      }
+    ],
+    "embedded_media": [
+      {
+        "source_url": "https://www.youtube.com/embed/Z2sfG3-TAKU",
+        "status": "local-playback-validated",
+        "video_key": "youtube:Z2sfG3-TAKU",
+        "src": "/static/assets/9db2f002bfe74974d6213023.mp4"
+      }
+    ]
+  },
+  {
+    "route": "/help/5/article/1185-managing-people",
+    "capture_id": "basecamp-help-quotas-1791933983",
+    "source_key": "dbf0ec5e91ba57d1",
+    "text": "Managing people Administrators and account owners can make changes to a user's profile information and access from the \"Manage people\" page in Adminland. Jump to: Changing someone's info Selecting project access Deactivating 2FA Sending a link to log in Changing someone's info From the \"Manage people\" screen, click the more options ••• menu located to the right of a user's name, and select the \"Edit info\" option. From there, owners and admins can update their job title, company/organization, time zone, project access, and remove users from the account. 🗒️ Note: It's not possible to change another user's name or email address after they've accepted their invite. Users can make their own changes here. Selecting project access Click the more options ••• menu located to the right of a user's name and select \"Change access\" to update the projects they can access. Admins and owners can also change a user's type on the bottom this page. 🗒️ Note: To add someone to your team, update their company to the account's primary company from the \"Edit info\" screen. Deactivating 2FA If a user lost access to their 2FA app and recovery codes, an account owner or admin can turn off the 2FA enabled on their login. From the \"Manage people\" page in Adminland, click the more options menu ••• located to the right of the user's profile and select the \"Turn off 2FA\" option: Sending a link to log in If a new user has trouble finding their invitation, click the more options menu ••• located to the right of the user's profile, and click the \"Send a link to log in\" option: Basecamp will email the new user another invitation to join your Basecamp account. The email includes a unique link they’ll use to create their user account. After that, they'll be all set to log in on a web browser or app. 🗒️ Note: New users need to accept their email invitation before they can log in.",
+    "images": [
+      {
+        "src": "/static/assets/c817fc3243549c0ec713f769.png",
+        "alt": "Screenshot of a user's more options menu opened. The Edit info option is outlined in a red box."
+      },
+      {
+        "src": "/static/assets/8515fd54c6f36b5308fd4c38.png",
+        "alt": "Screenshot of a user's more options menu opened. The Change access option is outlined in a red box."
+      },
+      {
+        "src": "/static/assets/62a224ffe9c1d02f732a1195.png",
+        "alt": "Screenshot of a user's more options menu opened. The Turn off 2FA option is outlined in a red box."
+      },
+      {
+        "src": "/static/assets/e72187e73706185ccb2e678f.png",
+        "alt": ""
+      }
+    ],
+    "embedded_media": []
+  }
+]

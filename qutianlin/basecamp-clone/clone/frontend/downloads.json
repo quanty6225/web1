@@ -1,0 +1,112 @@
+{
+  "/policies/privacy/dpa.md": {
+    "file": "db3427b98a24336489c5a0e8.md",
+    "name": "dpa.md",
+    "type": "application/octet-stream"
+  },
+  "/policies/security/hecvat/HECVAT_4.csv": {
+    "file": "a47b44704337968572446b3f.csv",
+    "name": "HECVAT_4.csv",
+    "type": "application/octet-stream"
+  },
+  "/policies/security/hecvat/Basecamp_HECVAT_4.1.6.xlsx": {
+    "file": "615a2fc33d58b18501ff5a3b.xlsx",
+    "name": "Basecamp_HECVAT_4.1.6.xlsx",
+    "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+  },
+  "/6302022/buckets/49234166/schedule_entries/10398823724.ics": {
+    "file": "685276de5c0249f2576a5f86.ics",
+    "name": "10398823724.ics",
+    "type": "text/calendar"
+  },
+  "/shapeup/shape-up.pdf": {
+    "file": "622330a998d1227f4f05558a.pdf",
+    "name": "shape-up.pdf",
+    "type": "application/pdf"
+  },
+  "/gettingreal/getting-real.pdf": {
+    "file": "fa00098b27a885b28a4abcf1.pdf",
+    "name": "getting-real.pdf",
+    "type": "application/pdf"
+  },
+  "/policies/privacy/regulations/dpa/Data_Processing_Addendum_current.pdf": {
+    "file": "f9e2406399875cc69f10cd67.pdf",
+    "name": "Data_Processing_Addendum_current.pdf",
+    "type": "application/pdf"
+  },
+  "/6302022/buckets/49234166/schedule_entries/10398823727.ics": {
+    "file": "a5c512008613fab780b2646e.ics",
+    "name": "basecamp-calendar.ics",
+    "type": "text/calendar"
+  },
+  "/desktop/Basecamp.dmg": {
+    "file": "ea98b75681a98958d98dbe0b.dmg",
+    "name": "Basecamp.dmg",
+    "type": "application/x-apple-diskimage"
+  },
+  "/desktop/Basecamp-setup.exe": {
+    "file": "4339353ba38c8f61e44b1574.exe",
+    "name": "Basecamp-setup.exe",
+    "type": "application/x-msdownload"
+  },
+  "/policies/security/pci/Basecamp_PCI_DSS_Certificate_of_Compliance_2026.pdf": {
+    "file": "f0203ab2a33d81fef5cda3ca.pdf",
+    "name": "Basecamp_PCI_DSS_Certificate_of_Compliance_2026.pdf",
+    "type": "application/pdf"
+  },
+  "/policies/security/37signals-security-overview.pdf": {
+    "file": "98733db81f9860414079e986.pdf",
+    "name": "37signals-security-overview.pdf",
+    "type": "application/pdf"
+  },
+  "/policies/security/caiq/CAIQ_v4.1_current.pdf": {
+    "file": "9cf33d9f4de623d153d9ba9a.pdf",
+    "name": "CAIQ_v4.1_current.pdf",
+    "type": "application/pdf"
+  },
+  "/policies/security/hecvat/HECVAT_4_current.pdf": {
+    "file": "e4cb390d2a5c00ad6bc60f6c.pdf",
+    "name": "HECVAT_4_current.pdf",
+    "type": "application/pdf"
+  },
+  "/policies/security/summit/Summit_Hosting_SOC_3_2026.pdf": {
+    "file": "1d6591ef3227d98fead1aa4e.pdf",
+    "name": "Summit_Hosting_SOC_3_2026.pdf",
+    "type": "application/pdf"
+  },
+  "/policies/accessibility/basecamp-accessibility-conformance-report.pdf": {
+    "file": "fe401039b8849d4b62ab4d4d.pdf",
+    "name": "basecamp-accessibility-conformance-report.pdf",
+    "type": "application/pdf"
+  },
+  "/desktop/Basecamp-mac-arm64.dmg": {
+    "file": "7f6f782e29baba413eef1281.dmg",
+    "name": "Basecamp-mac-arm64.dmg",
+    "type": "application/x-apple-diskimage"
+  },
+  "/desktop/Basecamp-mac-x64.dmg": {
+    "file": "c50e2b0e415e2e2c1bc0d55b.dmg",
+    "name": "Basecamp-mac-x64.dmg",
+    "type": "application/x-apple-diskimage"
+  },
+  "/6302022/buckets/49234166/schedule_entries/10398823702.ics": {
+    "file": "15793267f71df50bd02e6ab4.ics",
+    "name": "basecamp-calendar.ics",
+    "type": "text/calendar"
+  },
+  "/6302022/calendar/feed/local-c65afb0b0a6bfabe.ics": {
+    "file": "f1a58a79680ad3a556670c83.ics",
+    "name": "basecamp-calendar.ics",
+    "type": "text/calendar"
+  },
+  "/6302022/buckets/49234166/schedules/10398823037/feed/local-c65afb0b0a6bfabe.ics": {
+    "file": "f3c20080be4da6332eedc49e.ics",
+    "name": "basecamp-calendar.ics",
+    "type": "text/calendar"
+  },
+  "/6302022/buckets/49234164/schedules/10398822970/feed/local-c65afb0b0a6bfabe.ics": {
+    "file": "6601b7bb1226ff3968606a4e.ics",
+    "name": "basecamp-calendar.ics",
+    "type": "text/calendar"
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "type": "person",
+    "value": 53382586,
+    "name": "{{name}}",
+    "client": false,
+    "agent": false,
+    "employee": true,
+    "avatar_url": "/api/avatar.svg",
+    "company_id": 4267459,
+    "company_name": "{{company}}",
+    "mentionable": {
+      "sgid": "local-person-53382586",
+      "gid": "gid://bc3/Person/53382586",
+      "name": "{{name}}",
+      "type": "person"
+    },
+    "rank": 1
+  }
+]
