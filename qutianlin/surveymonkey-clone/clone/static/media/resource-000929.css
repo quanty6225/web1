@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/static/media/resource-011313.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  src: url("/static/media/resource-011316.ttf") format('truetype');
+}

@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Asap';
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: normal;
+  src: url("/static/media/resource-011298.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Asap';
+  font-style: italic;
+  font-weight: 700;
+  font-stretch: normal;
+  src: url("/static/media/resource-011310.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Asap';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  src: url("/static/media/resource-011299.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Asap';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  src: url("/static/media/resource-011300.ttf") format('truetype');
+}

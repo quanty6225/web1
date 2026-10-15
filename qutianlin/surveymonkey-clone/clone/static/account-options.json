@@ -1,0 +1,367 @@
+{
+  "languageid": [
+    {
+      "value": "4",
+      "label": "Dansk"
+    },
+    {
+      "value": "8",
+      "label": "Deutsch"
+    },
+    {
+      "value": "1",
+      "label": "English"
+    },
+    {
+      "value": "19",
+      "label": "Español"
+    },
+    {
+      "value": "7",
+      "label": "Français"
+    },
+    {
+      "value": "10",
+      "label": "Italiano"
+    },
+    {
+      "value": "5",
+      "label": "Nederlands"
+    },
+    {
+      "value": "14",
+      "label": "Norsk"
+    },
+    {
+      "value": "17",
+      "label": "Português"
+    },
+    {
+      "value": "6",
+      "label": "Suomi"
+    },
+    {
+      "value": "20",
+      "label": "Svenska"
+    },
+    {
+      "value": "21",
+      "label": "Türkçe"
+    },
+    {
+      "value": "18",
+      "label": "Русский"
+    },
+    {
+      "value": "3",
+      "label": "中文(繁體)"
+    },
+    {
+      "value": "11",
+      "label": "日本語"
+    },
+    {
+      "value": "12",
+      "label": "한국어"
+    }
+  ],
+  "timezoneid": [
+    {
+      "value": "1",
+      "label": "(UTC-11:00) Samoa"
+    },
+    {
+      "value": "2",
+      "label": "(UTC-10:00) Hawaii"
+    },
+    {
+      "value": "3",
+      "label": "(UTC-09:00) Alaska"
+    },
+    {
+      "value": "4",
+      "label": "(UTC-08:00) Pacific Time (US & Canada)"
+    },
+    {
+      "value": "10",
+      "label": "(UTC-07:00) Mountain Time (US & Canada)"
+    },
+    {
+      "value": "13",
+      "label": "(UTC-07:00) Chihuahua, La Paz, Mazatlan"
+    },
+    {
+      "value": "15",
+      "label": "(UTC-07:00) Arizona"
+    },
+    {
+      "value": "20",
+      "label": "(UTC-06:00) Central Time (US & Canada)"
+    },
+    {
+      "value": "25",
+      "label": "(UTC-06:00) Saskatchewan"
+    },
+    {
+      "value": "30",
+      "label": "(UTC-06:00) Guadalajara, Mexico City, Monterrey"
+    },
+    {
+      "value": "33",
+      "label": "(UTC-06:00) Central America"
+    },
+    {
+      "value": "35",
+      "label": "(UTC-05:00) Eastern Time (US & Canada)"
+    },
+    {
+      "value": "40",
+      "label": "(UTC-05:00) Indiana (East)"
+    },
+    {
+      "value": "45",
+      "label": "(UTC-05:00) Bogota, Lima, Quito"
+    },
+    {
+      "value": "50",
+      "label": "(UTC-04:00) Atlantic Time (Canada)"
+    },
+    {
+      "value": "55",
+      "label": "(UTC-04:00) Georgetown, La Paz, Manaus, San Juan"
+    },
+    {
+      "value": "56",
+      "label": "(UTC-04:00) Santiago"
+    },
+    {
+      "value": "60",
+      "label": "(UTC-03:30) Newfoundland"
+    },
+    {
+      "value": "65",
+      "label": "(UTC-03:00) Brasilia"
+    },
+    {
+      "value": "70",
+      "label": "(UTC-03:00) Buenos Aires"
+    },
+    {
+      "value": "73",
+      "label": "(UTC-03:00) Greenland"
+    },
+    {
+      "value": "75",
+      "label": "(UTC-02:00) Mid-Atlantic"
+    },
+    {
+      "value": "80",
+      "label": "(UTC-01:00) Azores"
+    },
+    {
+      "value": "83",
+      "label": "(UTC-01:00) Cape Verde Is."
+    },
+    {
+      "value": "85",
+      "label": "(UTC) Dublin, Edinburgh, Lisbon, London"
+    },
+    {
+      "value": "90",
+      "label": "(UTC) Monrovia, Reykjavik"
+    },
+    {
+      "value": "95",
+      "label": "(UTC+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague"
+    },
+    {
+      "value": "100",
+      "label": "(UTC+01:00) Sarajevo, Skopje, Warsaw, Zagreb"
+    },
+    {
+      "value": "105",
+      "label": "(UTC+01:00) Brussels, Copenhagen, Madrid, Paris"
+    },
+    {
+      "value": "110",
+      "label": "(UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna"
+    },
+    {
+      "value": "113",
+      "label": "(UTC+01:00) West Central Africa"
+    },
+    {
+      "value": "120",
+      "label": "(UTC+02:00) Cairo"
+    },
+    {
+      "value": "125",
+      "label": "(UTC+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius"
+    },
+    {
+      "value": "130",
+      "label": "(UTC+02:00) Athens, Bucharest, Istanbul"
+    },
+    {
+      "value": "135",
+      "label": "(UTC+02:00) Jerusalem"
+    },
+    {
+      "value": "140",
+      "label": "(UTC+02:00) Harare, Pretoria"
+    },
+    {
+      "value": "115",
+      "label": "(UTC+02:00) Minsk"
+    },
+    {
+      "value": "145",
+      "label": "(UTC+03:00) Moscow, St. Petersburg, Volgograd"
+    },
+    {
+      "value": "150",
+      "label": "(UTC+03:00) Kuwait, Riyadh"
+    },
+    {
+      "value": "155",
+      "label": "(UTC+03:00) Nairobi"
+    },
+    {
+      "value": "158",
+      "label": "(UTC+03:00) Baghdad"
+    },
+    {
+      "value": "160",
+      "label": "(UTC+03:30) Tehran"
+    },
+    {
+      "value": "165",
+      "label": "(UTC+04:00) Abu Dhabi, Muscat"
+    },
+    {
+      "value": "170",
+      "label": "(UTC+04:00) Baku"
+    },
+    {
+      "value": "175",
+      "label": "(UTC+04:30) Kabul"
+    },
+    {
+      "value": "180",
+      "label": "(UTC+05:00) Ekaterinburg"
+    },
+    {
+      "value": "185",
+      "label": "(UTC+05:00) Tashkent"
+    },
+    {
+      "value": "195",
+      "label": "(UTC+06:00) Astana"
+    },
+    {
+      "value": "190",
+      "label": "(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi"
+    },
+    {
+      "value": "200",
+      "label": "(UTC+05:30) Sri Jayawardenepura"
+    },
+    {
+      "value": "193",
+      "label": "(UTC+05:45) Kathmandu"
+    },
+    {
+      "value": "203",
+      "label": "(UTC+06:30) Yangon (Rangoon)"
+    },
+    {
+      "value": "201",
+      "label": "(UTC+06:00) Novosibirsk"
+    },
+    {
+      "value": "205",
+      "label": "(UTC+07:00) Bangkok, Hanoi, Jakarta"
+    },
+    {
+      "value": "207",
+      "label": "(UTC+07:00) Krasnoyarsk"
+    },
+    {
+      "value": "210",
+      "label": "(UTC+08:00) Beijing, Chongqing, Hong Kong, Urumqi"
+    },
+    {
+      "value": "215",
+      "label": "(UTC+08:00) Kuala Lumpur, Singapore"
+    },
+    {
+      "value": "220",
+      "label": "(UTC+08:00) Taipei"
+    },
+    {
+      "value": "225",
+      "label": "(UTC+08:00) Perth"
+    },
+    {
+      "value": "227",
+      "label": "(UTC+08:00) Irkutsk"
+    },
+    {
+      "value": "230",
+      "label": "(UTC+09:00) Seoul"
+    },
+    {
+      "value": "235",
+      "label": "(UTC+09:00) Osaka, Sapporo, Tokyo"
+    },
+    {
+      "value": "240",
+      "label": "(UTC+09:00) Yakutsk"
+    },
+    {
+      "value": "245",
+      "label": "(UTC+09:30) Darwin"
+    },
+    {
+      "value": "250",
+      "label": "(UTC+09:30) Adelaide"
+    },
+    {
+      "value": "255",
+      "label": "(UTC+10:00) Canberra, Melbourne, Sydney"
+    },
+    {
+      "value": "260",
+      "label": "(UTC+10:00) Brisbane"
+    },
+    {
+      "value": "265",
+      "label": "(UTC+10:00) Hobart"
+    },
+    {
+      "value": "270",
+      "label": "(UTC+10:00) Vladivostok"
+    },
+    {
+      "value": "275",
+      "label": "(UTC+10:00) Guam, Port Moresby"
+    },
+    {
+      "value": "280",
+      "label": "(UTC+11:00) Magadan, Solomon Is., New Caledonia"
+    },
+    {
+      "value": "285",
+      "label": "(UTC+12:00) Fiji"
+    },
+    {
+      "value": "290",
+      "label": "(UTC+12:00) Auckland, Wellington"
+    },
+    {
+      "value": "300",
+      "label": "(UTC+13:00) Nuku'alofa"
+    }
+  ],
+  "source": "account-dialog-fields.json"
+}

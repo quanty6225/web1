@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Gaegu';
+  font-style: normal;
+  font-weight: 300;
+  src: url("/static/media/resource-011321.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Gaegu';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/static/media/resource-011337.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Gaegu';
+  font-style: normal;
+  font-weight: 700;
+  src: url("/static/media/resource-011332.ttf") format('truetype');
+}

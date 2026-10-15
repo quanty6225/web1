@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'IM Fell English';
+  font-style: italic;
+  font-weight: 400;
+  src: url("/static/media/resource-011282.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'IM Fell English';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/static/media/resource-011281.ttf") format('truetype');
+}

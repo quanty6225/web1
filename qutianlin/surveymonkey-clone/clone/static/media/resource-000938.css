@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  src: url("/static/media/resource-011339.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  src: url("/static/media/resource-011336.ttf") format('truetype');
+}

@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Ruda';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/static/media/resource-011315.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Ruda';
+  font-style: normal;
+  font-weight: 700;
+  src: url("/static/media/resource-011318.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Ruda';
+  font-style: normal;
+  font-weight: 900;
+  src: url("/static/media/resource-011320.ttf") format('truetype');
+}

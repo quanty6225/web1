@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 17">
+    <path stroke="#000" d="m15.846 16.984.008-9.907M13.702 15.331l.007-8.256M11.558 13.127l.005-6.054M9.414 11.474l.003-4.403"/>
+    <path stroke="#000" d="M0-.5h9.907" transform="matrix(.00003 1 -1 -.00003 .359 .973)"/>
+    <path stroke="#000" d="M0-.5h8.256" transform="rotate(89.998 -.06 2.564) skewX(-.003)"/>
+    <path stroke="#000" d="M0-.5h6.054" transform="rotate(89.998 -.09 4.737) skewX(-.003)"/>
+    <path stroke="#000" d="M0-.5h4.403" transform="rotate(89.998 .157 6.634) skewX(-.003)"/>
+</svg>

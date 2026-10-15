@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Enriqueta';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/static/media/resource-011323.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Enriqueta';
+  font-style: normal;
+  font-weight: 700;
+  src: url("/static/media/resource-011330.ttf") format('truetype');
+}

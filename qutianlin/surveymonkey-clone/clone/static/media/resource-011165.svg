@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<title>CircleCheckmark/Green Copy 24</title>
+<desc>Created with Sketch.</desc>
+<g fill="none" fill-rule="evenodd">
+<g transform="translate(-584 -638)">
+<g transform="translate(584 638)">
+<path d="m7.5264 15.053c4.1567 0 7.5264-3.3697 7.5264-7.5264 0-4.1567-3.3697-7.5264-7.5264-7.5264-4.1567 0-7.5264 3.3697-7.5264 7.5264 0 4.1567 3.3697 7.5264 7.5264 7.5264z" fill="#00BF6F" fill-rule="nonzero"/>
+<g transform="translate(4.704 5.6448)" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4676">
+<polyline points="0 2.5017 2.3309 5.5037 6.6044 0"/>
+</g>
+</g>
+</g>
+</g>
+</svg>

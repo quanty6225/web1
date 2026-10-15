@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'BioRhyme';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  src: url("/static/media/resource-011306.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'BioRhyme';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  src: url("/static/media/resource-011307.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'BioRhyme';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  src: url("/static/media/resource-011311.ttf") format('truetype');
+}

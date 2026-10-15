@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Crete Round';
+  font-style: italic;
+  font-weight: 400;
+  src: url("/static/media/resource-011270.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Crete Round';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/static/media/resource-011259.ttf") format('truetype');
+}

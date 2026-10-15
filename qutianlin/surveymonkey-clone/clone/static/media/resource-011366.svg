@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="81px" height="50px" viewBox="0 0 81 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>right-on</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="text-right-on">
+            <path d="M2,0.5 C1.17157288,0.5 0.5,1.17157288 0.5,2 L0.5,48 C0.5,48.8284271 1.17157288,49.5 2,49.5 L79,49.5 C79.8284271,49.5 80.5,48.8284271 80.5,48 L80.5,2 C80.5,1.17157288 79.8284271,0.5 79,0.5 L2,0.5 Z" id="Rectangle-7" stroke="#6B787F" fill="#6B787F"></path>
+            <g id="Group" transform="translate(42.000000, 20.000000)" fill="#FFFFFF">
+                <rect id="Rectangle-6" x="0" y="0" width="27" height="3"></rect>
+                <rect id="Rectangle-6" x="0" y="4" width="16" height="3"></rect>
+                <rect id="Rectangle-6" x="0" y="8" width="18" height="3"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
