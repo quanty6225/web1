@@ -1,0 +1,209 @@
+<!DOCTYPE html><html><head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0">
+
+	<title>Photopea - Layers</title>
+
+	<link rel="stylesheet" href="/help-assets/62729d26839014fe5e78.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="/help-assets/91164050ded8e7cc39a6">
+	<style>
+		#burger  {  position:fixed;  top:8px; left:8px;  background-color:white;  padding: 2px 8px;  border-radius:8px;  font-size:1.4em;  }
+	</style>
+	
+	<script>
+		
+		function onResize() {
+			var tiny = window.innerWidth<500;
+			var cont=document.getElementById("content");
+			var side=document.getElementById("sidebar");
+			var burg=document.getElementById("burger" );
+			cont.style.width= tiny ? "100%"  : "77%";
+			side.setAttribute("style", tiny ? "position:fixed; overflow-y:scroll; background-color:white; width:200px; height:calc(100% - 70px); top:40px; left:0; padding:0.5em; display:none;" : "width:23%");
+			burg.setAttribute("style", tiny ? "display:inline-block":"display:none");
+		}
+		function showhide() {
+			var side=document.getElementById("sidebar" );
+			side.style.display = (side.style.display=="none" ? "inline-block" : "none");
+		}
+		addEventListener("resize", onResize);
+		addEventListener("load"  , onResize);
+	</script>
+<style>img{max-width:100%;height:auto}#content{box-sizing:border-box;min-width:0}#content pre{overflow:auto}</style></head>
+
+<body>
+<div id="page">
+	<div id="header"> 
+		<a href="/learn/" class="title">Learn Photopea</a> 
+		<!--<p>Web-based image editor.</p>-->
+		<a href="/boundary?url=https%3A%2F%2Fblog.photopea.com">Blog</a> |
+		<a class="curr" href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn">Learn</a> |
+		<a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Ftuts">Tutorials</a> |
+		<a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Ftemplates">Templates</a> |
+		<a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Fapi">API</a> |
+		<a href="/boundary?url=https%3A%2F%2Fwww.facebook.com%2Fphotopea"><img src="/help-assets/2cd6450f1d9cabf22387.svg"></a> |
+		<a href="/boundary?url=https%3A%2F%2Fwww.twitter.com%2Fphotopeacom"><img src="/help-assets/1c67c8fc99d8ba238049.svg"></a> 
+	</div>	
+	<div id="main" style="max-width:1000px;">
+		<div id="burger" style="display:none" onclick="showhide()">☰</div>
+		<div id="sidebar" style="width:23%">
+			<input type="text" id="search" placeholder="Search..." style="font-size:1em; padding:6px 8px; width:75%;  border:1px solid #aaa;  border-radius:4px; margin-bottom:12px;">			
+			<h3>Topics</h3>
+			<ul>
+			<li class="lvl0"><a href="/learn/">Introduction</a></li>
+			<li class="lvl0"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fworkspace">Workspace</a></li>
+			<li class="lvl1"><a href="/learn/opening-saving">Open and Save</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fnavigation">Navigation</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fimage-size">Image size</a></li>
+			<li class="lvl0 active"><a href="/learn/layers">Layers</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fmasks">Masks</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Flayer-styles">Layer Styles</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fsmart-objects">Smart Objects</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fother-layers">Other Layers</a></li>
+			<li class="lvl0"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Flayer-manipulation">Layer Editing</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Ffree-transform">Free Transform</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fadjustments-filters">Adjust. &amp; Filters</a></li>
+			<li class="lvl0"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fselections">Selections</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fcreating-selections">Make Selections</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fadvanced-selecting">Advanced Selecting</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Frefine-edge">Refine Edge</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fmoving-selected-data">Move Selected Data</a></li>
+			<li class="lvl0"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fchannels">Channels</a></li>
+			<li class="lvl0"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fbrush-tools">Brush Tools</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fbt-basic">Basic Tools</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fbt-advanced">Advanced Tools</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fbt-smart">Smart Tools</a></li>
+			<li class="lvl0"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Ftext">Text</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Ftext-style">Text Style</a></li>
+			<li class="lvl0"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fvector-graphics">Vector Graphics</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fvg-structure">The Structure</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fvg-manipulation">Editing Shapes</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fvg-creating">Creating Shapes</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fvg-vectorize">Vectorize Bitmap</a></li>
+			<li class="lvl0"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fvideo">Video editing</a></li>
+			<li class="lvl0"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fautomate">Automate</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Factions">Actions</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fscripts">Scripts</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fvariables">Variables</a></li>
+			<li class="lvl0"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fother">Other</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fstorages">Storages</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fartboards">Artboards</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fcolor-spaces">Color Spaces</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fguides-grid-snapping">Guides &amp; Snapping</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fanimations">Animations</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fslices">Slices</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fvanishing-point">Vanishing Point Filter</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fblur-gallery">Blur Gallery Filter</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Flayer-comps">Layer Comps</a></li>
+			</ul>
+		</div>
+		<div id="content" style="width: 77%;">
+			<div class="post">			
+<h1>Layers</h1>
+
+<p>Each PSD document consists of <b>layers</b>. The layer represents some part of the image.
+It is usually an area filled with transparent, partially transparent or opaque pixels.</p>
+
+<p>Layers are rendered one on top of another, to create the final image.
+You usually edit just one layer at a time. Changing (moving, rotating, drawing into) one layer has no effect on other layers.</p>
+
+<img src="/help-assets/4c78a8d09e6cadd6f797.png" class="fullw">
+
+<h2>Layers panel</h2>
+
+<p><b>Layers panel</b> is the main place for working with the layer structure of the document. You can find it in the sidebar on the right.
+It contains the list of all layers and their thumbnails. 
+Layers at the bottom of the list are the layers "in the back", while layers at the top are the layers "in the front".</p>
+
+<p>When we have many layers, we need to choose one, wich we want to work with. 
+A layer can be <b>selected</b> simply by clicking on it (on its name or on its thumbnail) in the Layers panel.</p>
+
+<p>Sometimes we need to select multiple layers at the same time. E.g. if we want to rotate all of them by the same angle, or delete them all at once.
+When one or more layers are selected, hold the Ctrl key and click on other layers, to add them to the selection, 
+or click on already selected layers (while still holding Ctrl) to unselect them.</p>
+
+<h2>Folders of layers</h2>
+
+<p>When we have hundreds or even thousands of layers in our document, working with them in the Layers panel can be very hard.
+We would need to scroll the list for a long time to find a specific layer. But there is a solution.</p>
+
+<p>Photopea (as well as many other image editors) allows you to create <b>folders of layers</b>. You can put related layers
+inside one folder. Folders can contain other folders. The folder can be folded and unfolded, just like the folder in your computer.</p>
+
+<img src="/help-assets/f0cc35b30631a065d071.png">
+
+<p>When you select a folder (e.g. by clicking on it), all its content is also selected (even though it is not highlighted in the panel). 
+By moving / rotating / deleting one folder, you also move / rotate / delete all the content of that folder.</p>
+
+<h2>Basic layer properties</h2>
+
+<p>There are several basic properties of the layer, that you can change in the Layers panel. 
+The main property is the <b>visibility</b>, which you can switch by clicking the eye icon of a layer (or a folder).
+When some layer is selected, you can edit the <b><a href="/boundary?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBlend_modes">blend mode</a></b>
+and the <b>opacity</b> of that layer at the top of the Layers panel.</p>
+
+<img src="/help-assets/2867ec152c53a8715280.png" style="width:40%">
+
+<p>Each layer can be <b>locked</b> in several ways:</p>
+<ul>
+	<li><b>Transparency</b> - the transparency is locked (you can paint only into non-empty areas)</li>
+	<li><b>Pixels</b> - pixel data is locked (you can not paint into the layer)</li>
+	<li><b>Position</b> - position is locked (you can not move the layer, rotate it, etc.)</li>
+	<li><b>All</b> - all previous locks at once</li>
+</ul>
+
+
+<p>Each layer has the name, which can help you understand the sturcture of large documents. 
+Double-click the name of the layer, then you can enter a new name. After you type a new name, 
+press Enter to confirm it, or Escape to return to the previous name.</p>
+
+
+<h2>Changing the structure</h2>
+
+<p>You can drag and drop layers inside the Layers panel. This way, you can reorder layers (e.g. put the layers from the back to the front), 
+place layers into folders (or take them out of folders), put a folder into another folder etc. 
+By selecting multiple layers (folders), you can drag all of them at the same time.</p>
+
+<p>You can find several basic buttons at the bottom of the Layers panel.</p>
+
+<img src="/help-assets/cf4602e1ad3b994e8e32.png">
+
+<p>The <b>garbage bin</b> button lets you delete all selected layers. 
+The <b>New Layer</b> button will add a new empty layer on top of the current layer (the one that is selected).
+The <b>New Folder</b> button will add a new empty folder on top of the current layer. The last button creates the raster mask on the current layer.
+Similar options are also available by clicking the <b>Layer</b> button in the menu at the top, or by right-clicking a specific layer in the Layers panel.</p>
+
+<p>Another useful operation is <b>duplicating</b> the layer (right-click - Duplicate, or Ctrl+J).
+You can also duplicate layers between different documents (right-click - Duplicate into).
+Another convinient way to duplicate layers is to drag them to "another panel" with a Move tool. 
+Choose a Move tool, click on the layer (in the workspace), 
+drag it over the label of another document and wait until documents are switched.
+Now, you can move the layer iside this second document and release the mouse.
+</p>
+
+<img src="/help-assets/b5070e608d9be7f4778f.png">
+
+<p><b>Merging</b> multiple layers into a single layer is also useful (right-click - Merge down or Merge layers).</p>
+
+
+
+			
+			</div>
+			
+			
+			<p style="margin-top:2em">Do you need help? Ask us at <a href="/boundary?url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fphotopea%2F" target="_blank">our Reddit</a>!</p>
+		</div>
+	</div>
+	<div id="footer">© 2013-2026 support@photopea.com</div>
+	<script>
+	  var inp = document.getElementById("search");
+	  inp.addEventListener("keyup", function(e) {
+			if(e.code=="Enter") {
+				var url = "/boundary?url=https%3A%2F%2Fwww.google.com/search?q="+encodeURIComponent(inp.value)+"+site%3Aphotopea.com%2Flearn";
+				window.open(url, "_self");
+			}
+		  
+	  }, false);
+	</script>
+</div>
+
+
+</body></html>

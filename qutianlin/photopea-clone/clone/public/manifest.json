@@ -1,0 +1,63 @@
+{
+	"name": "Photopea",
+	"short_name": "Photopea",
+	"display": "standalone",
+	"display_override": ["window-controls-overlay"],
+	"icons": [
+		{  "src": "promo/icon512.png",     "type": "image/png", "sizes": "512x512"  },
+		{  "src": "promo/maskable512.png", "type": "image/png", "sizes": "512x512", "purpose":"maskable"  }  
+	],
+	"start_url": "/",
+	"background_color":"#0f171d",
+	"theme_color": "#474747",
+	"file_handlers": [
+		{ "action": "/", "accept": {  "image/psd" : [ ".psd" ]  } },
+		{ "action": "/", "accept": {  "image/jpeg": [ ".jpeg", ".jpg" ]  } },
+		{ "action": "/", "accept": {  "image/png" : [ ".png" ]  } },
+		{ "action": "/", "accept": {  "image/webp": [ ".webp" ]  } },
+		{ "action": "/", "accept": {  "image/bmp" : [ ".bmp" ]  } },
+		{ "action": "/", "accept": {  "image/gif" : [ ".gif" ]  } },
+		{ "action": "/", "accept": {  "image/svg+xml": [ ".svg" ]  } },
+		{ "action": "/", "accept": {  "application/pdf" : [ ".pdf" ]  } },
+		{ "action": "/", "accept": {  "image/tiff": [ ".tif", ".tiff" ]  } },
+		{ "action": "/", "accept": {  "image/ai"  : [ ".ai"  ]  } },
+		
+		{ "action": "/", "accept": {  "image/psb": [ ".psb" ]  } },
+		{ "action": "/", "accept": {  "image/xcf": [ ".xcf" ]  } },
+		{ "action": "/", "accept": {  "image/sketch": [ ".sketch" ]  } },
+		{ "action": "/", "accept": {  "image/xd" : [ ".xd"  ]  } },
+		{ "action": "/", "accept": {  "image/pxd": [ ".pxd" ]  } },
+		{ "action": "/", "accept": {  "image/cdr": [ ".cdr" ]  } },
+		{ "action": "/", "accept": {  "image/eps": [ ".eps", ".ps" ]  } },
+		
+		
+		{ "action": "/", "accept": {  "image/x-icon": [ ".ico" ]  } },
+		{ "action": "/", "accept": {  "image/jpx": [ ".jpx" ]  } },
+		{ "action": "/", "accept": {  "image/jp2": [ ".jp2" ]  } },
+		
+		{ "action": "/", "accept": {  "image/x-tga": [ ".tga" ]  } },
+		
+		{ "action": "/", "accept": {  "image/vnd-ms.dds": [ ".dds" ]  } },
+		
+		{ "action": "/", "accept": {  "image/x-adobe-dng": [ ".dng" ]  } },
+		{ "action": "/", "accept": {  "image/x-nikon-nef": [ ".nef" ]  } },
+		{ "action": "/", "accept": {  "image/x-canon-cr2": [ ".cr2", ".cr3" ]  } },
+		{ "action": "/", "accept": {  "image/x-sony-arw" : [ ".arw" ]  } },
+		{ "action": "/", "accept": {  "image/x-fuji-raf" : [ ".raf" ]  } },
+		{ "action": "/", "accept": {  "image/x-olympus-orf": [ ".orf" ]  } },
+		{ "action": "/", "accept": {  "image/x-panasonic-raw": [ ".rw2" ]  } }
+	],
+	"share_target": {
+		"action": "/",
+		"method": "POST",
+		"enctype": "multipart/form-data",
+		"params": {
+			"files": [
+			{
+				"name": "image",
+				"accept": ["image/jpeg", "image/png", "image/webp", "image/gif"]
+			}
+		  ]
+		}
+	}
+}

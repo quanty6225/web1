@@ -1,0 +1,142 @@
+<!DOCTYPE html><html><head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0">
+
+	<title>Photopea - Introduction</title>
+
+	<link rel="stylesheet" href="/help-assets/62729d26839014fe5e78.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="/help-assets/91164050ded8e7cc39a6">
+	<style>
+		#burger  {  position:fixed;  top:8px; left:8px;  background-color:white;  padding: 2px 8px;  border-radius:8px;  font-size:1.4em;  }
+	</style>
+	
+	<script>
+		
+		function onResize() {
+			var tiny = window.innerWidth<500;
+			var cont=document.getElementById("content");
+			var side=document.getElementById("sidebar");
+			var burg=document.getElementById("burger" );
+			cont.style.width= tiny ? "100%"  : "77%";
+			side.setAttribute("style", tiny ? "position:fixed; overflow-y:scroll; background-color:white; width:200px; height:calc(100% - 70px); top:40px; left:0; padding:0.5em; display:none;" : "width:23%");
+			burg.setAttribute("style", tiny ? "display:inline-block":"display:none");
+		}
+		function showhide() {
+			var side=document.getElementById("sidebar" );
+			side.style.display = (side.style.display=="none" ? "inline-block" : "none");
+		}
+		addEventListener("resize", onResize);
+		addEventListener("load"  , onResize);
+	</script>
+<style>img{max-width:100%;height:auto}#content{box-sizing:border-box;min-width:0}#content pre{overflow:auto}</style></head>
+
+<body>
+<div id="page">
+	<div id="header"> 
+		<a href="/learn/" class="title">Learn Photopea</a> 
+		<!--<p>Web-based image editor.</p>-->
+		<a href="/boundary?url=https%3A%2F%2Fblog.photopea.com">Blog</a> |
+		<a class="curr" href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn">Learn</a> |
+		<a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Ftuts">Tutorials</a> |
+		<a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Ftemplates">Templates</a> |
+		<a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Fapi">API</a> |
+		<a href="/boundary?url=https%3A%2F%2Fwww.facebook.com%2Fphotopea"><img src="/help-assets/2cd6450f1d9cabf22387.svg"></a> |
+		<a href="/boundary?url=https%3A%2F%2Fwww.twitter.com%2Fphotopeacom"><img src="/help-assets/1c67c8fc99d8ba238049.svg"></a> 
+	</div>	
+	<div id="main" style="max-width:1000px;">
+		<div id="burger" style="display:none" onclick="showhide()">☰</div>
+		<div id="sidebar" style="width:23%">
+			<input type="text" id="search" placeholder="Search..." style="font-size:1em; padding:6px 8px; width:75%;  border:1px solid #aaa;  border-radius:4px; margin-bottom:12px;">			
+			<h3>Topics</h3>
+			<ul>
+			<li class="lvl0 active"><a href="/learn/">Introduction</a></li>
+			<li class="lvl0"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fworkspace">Workspace</a></li>
+			<li class="lvl1"><a href="/learn/opening-saving">Open and Save</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fnavigation">Navigation</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fimage-size">Image size</a></li>
+			<li class="lvl0"><a href="/learn/layers">Layers</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fmasks">Masks</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Flayer-styles">Layer Styles</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fsmart-objects">Smart Objects</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fother-layers">Other Layers</a></li>
+			<li class="lvl0"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Flayer-manipulation">Layer Editing</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Ffree-transform">Free Transform</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fadjustments-filters">Adjust. &amp; Filters</a></li>
+			<li class="lvl0"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fselections">Selections</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fcreating-selections">Make Selections</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fadvanced-selecting">Advanced Selecting</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Frefine-edge">Refine Edge</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fmoving-selected-data">Move Selected Data</a></li>
+			<li class="lvl0"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fchannels">Channels</a></li>
+			<li class="lvl0"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fbrush-tools">Brush Tools</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fbt-basic">Basic Tools</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fbt-advanced">Advanced Tools</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fbt-smart">Smart Tools</a></li>
+			<li class="lvl0"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Ftext">Text</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Ftext-style">Text Style</a></li>
+			<li class="lvl0"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fvector-graphics">Vector Graphics</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fvg-structure">The Structure</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fvg-manipulation">Editing Shapes</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fvg-creating">Creating Shapes</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fvg-vectorize">Vectorize Bitmap</a></li>
+			<li class="lvl0"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fvideo">Video editing</a></li>
+			<li class="lvl0"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fautomate">Automate</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Factions">Actions</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fscripts">Scripts</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fvariables">Variables</a></li>
+			<li class="lvl0"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fother">Other</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fstorages">Storages</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fartboards">Artboards</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fcolor-spaces">Color Spaces</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fguides-grid-snapping">Guides &amp; Snapping</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fanimations">Animations</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fslices">Slices</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fvanishing-point">Vanishing Point Filter</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Fblur-gallery">Blur Gallery Filter</a></li>
+			<li class="lvl1"><a href="/boundary?url=https%3A%2F%2Fwww.photopea.com%2Flearn%2Flayer-comps">Layer Comps</a></li>
+			</ul>
+		</div>
+		<div id="content" style="width: 77%;">
+			<div class="post">			
+<h1>Introduction</h1>
+
+<p>Photopea is an advanced image editor, which can work with both raster and vector graphics.
+You can use it for simple tasks, such as resizing images, as well as complex tasks, such as designing webpages, 
+creating illustrations, processing photographs and more.</p>
+
+<p>This website will teach you how to use Photopea <b>step by step</b>. We will start with basic tasks 
+and gradually progress to more complex features. The chapters (on the left) have been organized,
+such that each chapter uses only the knowledge from previous chapters, so you can learn effectively and efficiently.</p>
+
+<h3>Colors</h3>
+<p>Photopea can work with many different color spaces (defined e.g. by the ICC profile inside your file), and the 8, 16 or 32-bit color depth.</p>
+
+<h2>Starting and using Photopea</h2>
+
+<p>Photopea editor works in a web browser. It can be started by going to <a href="/boundary?url=https%3A%2F%2Fwww.Photopea.com">www.Photopea.com</a>.
+Photopea can run on any device (desktop, laptop, tablet, phone or any other computer), but for the best comfort, 
+we recommend having a big screen, a precise pointing device (a mouse or a stylus) and a keyboard.</p>
+
+<p>Photopea runs completely in your device, just like Sketch or Photoshop do. It does not upload any of your files to the internet. 
+You can load Photopea.com, disconnect from the internet and keep using it completely offline.
+None of your files ever leaves your computer.</p>			
+			</div>
+			
+			
+			<p style="margin-top:2em">Do you need help? Ask us at <a href="/boundary?url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fphotopea%2F" target="_blank">our Reddit</a>!</p>
+		</div>
+	</div>
+	<div id="footer">© 2013-2026 support@photopea.com</div>
+	<script>
+	  var inp = document.getElementById("search");
+	  inp.addEventListener("keyup", function(e) {
+			if(e.code=="Enter") {
+				var url = "/boundary?url=https%3A%2F%2Fwww.google.com/search?q="+encodeURIComponent(inp.value)+"+site%3Aphotopea.com%2Flearn";
+				window.open(url, "_self");
+			}
+		  
+	  }, false);
+	</script>
+</div>
+
+
+</body></html>

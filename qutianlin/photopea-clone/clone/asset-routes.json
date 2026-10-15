@@ -1,0 +1,186 @@
+{
+  "https://www.photopea.com/": {
+    "path": "/index.html",
+    "mime": "text/html"
+  },
+  "https://www.photopea.com/img/table.webp": {
+    "path": "/img/table.webp",
+    "mime": "image/webp"
+  },
+  "https://www.photopea.com/promo/icon512.png": {
+    "path": "/promo/icon512.png",
+    "mime": "image/png"
+  },
+  "https://www.photopea.com/img/hand_phone.webp": {
+    "path": "/img/hand_phone.webp",
+    "mime": "image/webp"
+  },
+  "https://www.photopea.com/img/laptop.webp": {
+    "path": "/img/laptop.webp",
+    "mime": "image/webp"
+  },
+  "https://www.photopea.com/style/all10.css": {
+    "path": "/style/all10.css",
+    "mime": "text/css"
+  },
+  "https://www.photopea.com/code/ext/ext1791885294.js": {
+    "path": "/code/ext/ext1791885294.js",
+    "mime": "application/javascript"
+  },
+  "https://www.photopea.com/code/dbs/DBS1781343324.js": {
+    "path": "/code/dbs/DBS1781343324.js",
+    "mime": "application/javascript"
+  },
+  "https://www.photopea.com/code/pp/pp1791900507.js": {
+    "path": "/code/pp/pp1791900507.js",
+    "mime": "application/javascript"
+  },
+  "https://www.photopea.com/promo/icon512_vp.png": {
+    "path": "/promo/icon512_vp.png",
+    "mime": "image/png"
+  },
+  "https://www.photopea.com/promo/icon512_jp.png": {
+    "path": "/promo/icon512_jp.png",
+    "mime": "image/png"
+  },
+  "https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2": {
+    "path": "/vendor-assets/6b4c7be744dcc938b873.woff2",
+    "mime": "font/woff2"
+  },
+  "https://www.photopea.com/rsrc/basic/basic.zip": {
+    "path": "/rsrc/basic/basic.zip",
+    "mime": "application/zip"
+  },
+  "https://www.photopea.com/img/pp_tall.png": {
+    "path": "/img/pp_tall.png",
+    "mime": "image/png"
+  },
+  "https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTVOmu1aB.woff2": {
+    "path": "/vendor-assets/a5066798c49fd59a4b59.woff2",
+    "mime": "font/woff2"
+  },
+  "https://www.photopea.com/plugins/gallery.json": {
+    "path": "/plugins/gallery.json",
+    "mime": "application/json"
+  },
+  "https://www.photopea.com/img/nft.png": {
+    "path": "/img/nft.png",
+    "mime": "image/png"
+  },
+  "https://www.photopea.com/img/exts.png": {
+    "path": "/img/exts.png",
+    "mime": "image/png"
+  },
+  "https://www.photopea.com/rsrc/fonts/fs/Benne-Regular.otf": {
+    "path": "/rsrc/fonts/fs/Benne-Regular.otf",
+    "mime": "font/otf"
+  },
+  "https://www.photopea.com/rsrc/fonts/fs/Oswald-LightItalic.otf": {
+    "path": "/rsrc/fonts/fs/Oswald-LightItalic.otf",
+    "mime": "font/otf"
+  },
+  "https://www.photopea.com/rsrc/fonts/fs/ZillaSlabHighlight-Bold.otf": {
+    "path": "/rsrc/fonts/fs/ZillaSlabHighlight-Bold.otf",
+    "mime": "font/otf"
+  },
+  "https://www.photopea.com/rsrc/fonts/fs/Archivo-SemiBold.otf": {
+    "path": "/rsrc/fonts/fs/Archivo-SemiBold.otf",
+    "mime": "font/otf"
+  },
+  "https://www.photopea.com/rsrc/fonts/fs/IBMPlexSerif-SemiBold.otf": {
+    "path": "/rsrc/fonts/fs/IBMPlexSerif-SemiBold.otf",
+    "mime": "font/otf"
+  },
+  "https://www.photopea.com/rsrc/fonts/fs/Amiko-Bold.otf": {
+    "path": "/rsrc/fonts/fs/Amiko-Bold.otf",
+    "mime": "font/otf"
+  },
+  "https://www.photopea.com/rsrc/fonts/fs/TeXGyreCursor-BoldItalic.otf": {
+    "path": "/rsrc/fonts/fs/TeXGyreCursor-BoldItalic.otf",
+    "mime": "font/otf"
+  },
+  "https://www.photopea.com/rsrc/fonts/fs/NewAthenaUnicode.otf": {
+    "path": "/rsrc/fonts/fs/NewAthenaUnicode.otf",
+    "mime": "font/otf"
+  },
+  "https://www.photopea.com/rsrc/fonts/fs/CormorantInfant-Medium.otf": {
+    "path": "/rsrc/fonts/fs/CormorantInfant-Medium.otf",
+    "mime": "font/otf"
+  },
+  "https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTUGmu1aB.woff2": {
+    "path": "/vendor-assets/cc3f56e7b1b79b65e75c.woff2",
+    "mime": "font/woff2"
+  },
+  "https://blog.photopea.com/wp-content/themes/simplex/style.css": {
+    "path": "/help-assets/62729d26839014fe5e78.css",
+    "mime": "text/css"
+  },
+  "https://photopea.com/img/facebook.svg": {
+    "path": "/help-assets/2cd6450f1d9cabf22387.svg",
+    "mime": "image/svg+xml"
+  },
+  "https://www.photopea.com/manifest.json": {
+    "path": "/manifest.json",
+    "mime": "application/json"
+  },
+  "https://i.imgur.com/qu5XzNK.png": {
+    "path": "/help-assets/2867ec152c53a8715280.png",
+    "mime": "image/png"
+  },
+  "https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkWVAexQ.ttf": {
+    "path": "/help-assets/669f941654e04a23be81.ttf",
+    "mime": "font/ttf"
+  },
+  "https://i.imgur.com/cloz3K1.png": {
+    "path": "/help-assets/b5070e608d9be7f4778f.png",
+    "mime": "image/png"
+  },
+  "https://i.imgur.com/1TcORWo.png": {
+    "path": "/help-assets/f0cc35b30631a065d071.png",
+    "mime": "image/png"
+  },
+  "https://www.photopea.com/img/goats.mp4": {
+    "path": "/img/goats.mp4",
+    "mime": "video/mp4"
+  },
+  "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVc.ttf": {
+    "path": "/help-assets/650dac2664ae60a7d48b.ttf",
+    "mime": "font/ttf"
+  },
+  "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVc.ttf": {
+    "path": "/help-assets/22d43f06832a07ed16aa.ttf",
+    "mime": "font/ttf"
+  },
+  "https://photopea.com/img/twitter.svg": {
+    "path": "/help-assets/1c67c8fc99d8ba238049.svg",
+    "mime": "image/svg+xml"
+  },
+  "https://i.imgur.com/34MoKlQ.png": {
+    "path": "/help-assets/4c78a8d09e6cadd6f797.png",
+    "mime": "image/png"
+  },
+  "https://i.imgur.com/ote9014.png": {
+    "path": "/help-assets/cf4602e1ad3b994e8e32.png",
+    "mime": "image/png"
+  },
+  "https://i.imgur.com/UNQ83Wm.png": {
+    "path": "/help-assets/8d6ca5697ba426520bf7.png",
+    "mime": "image/png"
+  },
+  "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i": {
+    "path": "/help-assets/91164050ded8e7cc39a6",
+    "mime": "text/css"
+  },
+  "https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkyFjWVAexQ.ttf": {
+    "path": "/help-assets/a624ce6774cfe835f241.ttf",
+    "mime": "font/ttf"
+  },
+  "https://fonts.gstatic.com/s/opensans/v40/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuU6F.woff2": {
+    "path": "/vendor-assets/bc891e6979b883c24f89.woff2",
+    "mime": "font/woff2"
+  },
+  "https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu1aB.woff2": {
+    "path": "/vendor-assets/65e6ddce9ba4172dae70.woff2",
+    "mime": "font/woff2"
+  }
+}
