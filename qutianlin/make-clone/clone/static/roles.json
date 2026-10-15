@@ -1,0 +1,2294 @@
+{
+  "15": {
+    "name": "App Developer",
+    "description": "Access to build and test app integrations using Make's developer tools.",
+    "permissions": [
+      {
+        "name": "Manage payments",
+        "description": "Can view and edit subscription settings, apply coupons, and purchase extra credits for the organization.",
+        "enabled": false,
+        "requires": [
+          "View payments"
+        ],
+        "group": "Billing"
+      },
+      {
+        "name": "Manage payment methods",
+        "description": "Can add, edit, and remove payment methods for the organization.",
+        "enabled": false,
+        "requires": [
+          "View payments"
+        ],
+        "group": "Billing"
+      },
+      {
+        "name": "View all payment methods",
+        "description": "Can view all payment methods saved for the organization.",
+        "enabled": false,
+        "requires": [
+          "View payments"
+        ],
+        "group": "Billing"
+      },
+      {
+        "name": "View payments",
+        "description": "Can view payment history and invoices for the organization.",
+        "enabled": false,
+        "requires": [],
+        "group": "Billing"
+      },
+      {
+        "name": "Create child organizations",
+        "description": "Can create child organizations under the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all child organizations"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "Edit child organizations",
+        "description": "Can edit settings and credit allocation for any child organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all child organizations"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "View all child organizations",
+        "description": "Can view all child organizations, their credit consumption, and data transfer.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "Unlink child organizations",
+        "description": "Can unlink any child organization without deleting it, which removes the ability to see and manage it.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all child organizations"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "Manage scenario properties",
+        "description": "Can create, edit, and delete any custom scenario property.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Create organization variables",
+        "description": "Can create custom variables that anyone in the organization can use in scenarios.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all organization variables"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Delete organization variables",
+        "description": "Can permanently delete any custom variable, which may cause scenarios using it to stop working or run differently.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all organization variables"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Edit organization variables",
+        "description": "Can edit the type and values of any organization variable, which may cause scenarios using it to stop working or run differently.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all organization variables"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "View all organization variables",
+        "description": "Can view all organization variables and their values.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Create event subscriptions",
+        "description": "Can create event subscriptions in the organization.",
+        "enabled": false,
+        "requires": [
+          "View event subscriptions"
+        ],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "Delete event subscriptions",
+        "description": "Can permanently delete any event subscription in the organization, which stops its future event deliveries.",
+        "enabled": false,
+        "requires": [
+          "View event subscriptions"
+        ],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "Edit event subscriptions",
+        "description": "Can edit any event subscription in the organization, including activating or deactivating it and resending deliveries.",
+        "enabled": false,
+        "requires": [
+          "View event subscriptions"
+        ],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "View event subscriptions",
+        "description": "Can view all event subscriptions in the organization, including their details, payloads, and responses.",
+        "enabled": false,
+        "requires": [],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "Manage custom roles",
+        "description": "Can create, edit, and delete any custom role for the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all users"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "Manage users",
+        "description": "Can invite and remove users in the organization, and assign roles.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all users"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "View all users",
+        "description": "Can view all users in the organization, including their roles and status.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "Manage SSO users",
+        "description": "Can create and edit user accounts in organizations with SSO enabled before users log in for the first time.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all users"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "Manage on-prem agents",
+        "description": "Can add, edit, and remove on-prem agents, which may cause scenarios using them to stop working or run differently.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all on-prem agents"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "View all on-prem agents",
+        "description": "Can view all on-prem agents and their status.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "Use on-prem agents",
+        "description": "Can use on-prem agents when creating connected systems.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all on-prem agents"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "Manage connected systems",
+        "description": "Can add, edit, and remove connected systems, which may cause scenarios using them to stop working or run differently.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all connected systems"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "View all connected systems",
+        "description": "Can view all connected systems set up through on-prem agents.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "Use connected systems",
+        "description": "Can use connected systems when creating connections.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all connected systems"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "View analytics",
+        "description": "Can view the analytics dashboard for the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage installed apps",
+        "description": "Can install and uninstall apps from the marketplace for anyone in the organization to use.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View audit logs",
+        "description": "Can view audit logs for all organization activity.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View credit details",
+        "description": "Can view credit usage and history for the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Edit organization",
+        "description": "Can edit organization settings, including name and details.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage feature controls",
+        "description": "Can enable or disable AI and beta features for the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View all installed apps",
+        "description": "Can view all apps installed for the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View organization details",
+        "description": "Can view organization settings, including name, region, and timezone.",
+        "enabled": true,
+        "requires": [],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage SSO settings",
+        "description": "Can enable or disable SSO and manage settings for the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage teams",
+        "description": "Can manage all teams with full admin access, and automatically becomes a team admin in each one. This role can't be changed.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "Manage private spaces",
+        "description": "Can create, edit, and delete private spaces for anyone in the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "View own private space",
+        "description": "Can view only their own private space, but not those of others.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "Add teams",
+        "description": "Can create teams in the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "Manage team credit limits",
+        "description": "Can set and edit credit limits for any team in the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      }
+    ]
+  },
+  "16": {
+    "name": "Guest",
+    "description": "Read-only access to organization resources.",
+    "permissions": [
+      {
+        "name": "Manage payments",
+        "description": "Can view and edit subscription settings, apply coupons, and purchase extra credits for the organization.",
+        "enabled": false,
+        "requires": [
+          "View payments"
+        ],
+        "group": "Billing"
+      },
+      {
+        "name": "Manage payment methods",
+        "description": "Can add, edit, and remove payment methods for the organization.",
+        "enabled": false,
+        "requires": [
+          "View payments"
+        ],
+        "group": "Billing"
+      },
+      {
+        "name": "View all payment methods",
+        "description": "Can view all payment methods saved for the organization.",
+        "enabled": false,
+        "requires": [
+          "View payments"
+        ],
+        "group": "Billing"
+      },
+      {
+        "name": "View payments",
+        "description": "Can view payment history and invoices for the organization.",
+        "enabled": false,
+        "requires": [],
+        "group": "Billing"
+      },
+      {
+        "name": "Create child organizations",
+        "description": "Can create child organizations under the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all child organizations"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "Edit child organizations",
+        "description": "Can edit settings and credit allocation for any child organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all child organizations"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "View all child organizations",
+        "description": "Can view all child organizations, their credit consumption, and data transfer.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "Unlink child organizations",
+        "description": "Can unlink any child organization without deleting it, which removes the ability to see and manage it.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all child organizations"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "Manage scenario properties",
+        "description": "Can create, edit, and delete any custom scenario property.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Create organization variables",
+        "description": "Can create custom variables that anyone in the organization can use in scenarios.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all organization variables"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Delete organization variables",
+        "description": "Can permanently delete any custom variable, which may cause scenarios using it to stop working or run differently.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all organization variables"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Edit organization variables",
+        "description": "Can edit the type and values of any organization variable, which may cause scenarios using it to stop working or run differently.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all organization variables"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "View all organization variables",
+        "description": "Can view all organization variables and their values.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Create event subscriptions",
+        "description": "Can create event subscriptions in the organization.",
+        "enabled": false,
+        "requires": [
+          "View event subscriptions"
+        ],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "Delete event subscriptions",
+        "description": "Can permanently delete any event subscription in the organization, which stops its future event deliveries.",
+        "enabled": false,
+        "requires": [
+          "View event subscriptions"
+        ],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "Edit event subscriptions",
+        "description": "Can edit any event subscription in the organization, including activating or deactivating it and resending deliveries.",
+        "enabled": false,
+        "requires": [
+          "View event subscriptions"
+        ],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "View event subscriptions",
+        "description": "Can view all event subscriptions in the organization, including their details, payloads, and responses.",
+        "enabled": false,
+        "requires": [],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "Manage custom roles",
+        "description": "Can create, edit, and delete any custom role for the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all users"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "Manage users",
+        "description": "Can invite and remove users in the organization, and assign roles.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all users"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "View all users",
+        "description": "Can view all users in the organization, including their roles and status.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "Manage SSO users",
+        "description": "Can create and edit user accounts in organizations with SSO enabled before users log in for the first time.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all users"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "Manage on-prem agents",
+        "description": "Can add, edit, and remove on-prem agents, which may cause scenarios using them to stop working or run differently.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all on-prem agents"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "View all on-prem agents",
+        "description": "Can view all on-prem agents and their status.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "Use on-prem agents",
+        "description": "Can use on-prem agents when creating connected systems.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all on-prem agents"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "Manage connected systems",
+        "description": "Can add, edit, and remove connected systems, which may cause scenarios using them to stop working or run differently.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all connected systems"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "View all connected systems",
+        "description": "Can view all connected systems set up through on-prem agents.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "Use connected systems",
+        "description": "Can use connected systems when creating connections.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all connected systems"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "View analytics",
+        "description": "Can view the analytics dashboard for the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage installed apps",
+        "description": "Can install and uninstall apps from the marketplace for anyone in the organization to use.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View audit logs",
+        "description": "Can view audit logs for all organization activity.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View credit details",
+        "description": "Can view credit usage and history for the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Edit organization",
+        "description": "Can edit organization settings, including name and details.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage feature controls",
+        "description": "Can enable or disable AI and beta features for the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View all installed apps",
+        "description": "Can view all apps installed for the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View organization details",
+        "description": "Can view organization settings, including name, region, and timezone.",
+        "enabled": true,
+        "requires": [],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage SSO settings",
+        "description": "Can enable or disable SSO and manage settings for the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage teams",
+        "description": "Can manage all teams with full admin access, and automatically becomes a team admin in each one. This role can't be changed.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "Manage private spaces",
+        "description": "Can create, edit, and delete private spaces for anyone in the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "View own private space",
+        "description": "Can view only their own private space, but not those of others.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "Add teams",
+        "description": "Can create teams in the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "Manage team credit limits",
+        "description": "Can set and edit credit limits for any team in the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      }
+    ]
+  },
+  "11": {
+    "name": "Owner",
+    "description": "Full access to the organization, including billing, user management, and the ability to delete or transfer ownership.",
+    "permissions": [
+      {
+        "name": "Manage payments",
+        "description": "Can view and edit subscription settings, apply coupons, and purchase extra credits for the organization.",
+        "enabled": true,
+        "requires": [
+          "View payments"
+        ],
+        "group": "Billing"
+      },
+      {
+        "name": "Manage payment methods",
+        "description": "Can add, edit, and remove payment methods for the organization.",
+        "enabled": true,
+        "requires": [
+          "View payments"
+        ],
+        "group": "Billing"
+      },
+      {
+        "name": "View all payment methods",
+        "description": "Can view all payment methods saved for the organization.",
+        "enabled": true,
+        "requires": [
+          "View payments"
+        ],
+        "group": "Billing"
+      },
+      {
+        "name": "View payments",
+        "description": "Can view payment history and invoices for the organization.",
+        "enabled": true,
+        "requires": [],
+        "group": "Billing"
+      },
+      {
+        "name": "Create child organizations",
+        "description": "Can create child organizations under the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all child organizations"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "Edit child organizations",
+        "description": "Can edit settings and credit allocation for any child organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all child organizations"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "View all child organizations",
+        "description": "Can view all child organizations, their credit consumption, and data transfer.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "Unlink child organizations",
+        "description": "Can unlink any child organization without deleting it, which removes the ability to see and manage it.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all child organizations"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "Manage scenario properties",
+        "description": "Can create, edit, and delete any custom scenario property.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Create organization variables",
+        "description": "Can create custom variables that anyone in the organization can use in scenarios.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all organization variables"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Delete organization variables",
+        "description": "Can permanently delete any custom variable, which may cause scenarios using it to stop working or run differently.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all organization variables"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Edit organization variables",
+        "description": "Can edit the type and values of any organization variable, which may cause scenarios using it to stop working or run differently.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all organization variables"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "View all organization variables",
+        "description": "Can view all organization variables and their values.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Create event subscriptions",
+        "description": "Can create event subscriptions in the organization.",
+        "enabled": true,
+        "requires": [
+          "View event subscriptions"
+        ],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "Delete event subscriptions",
+        "description": "Can permanently delete any event subscription in the organization, which stops its future event deliveries.",
+        "enabled": true,
+        "requires": [
+          "View event subscriptions"
+        ],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "Edit event subscriptions",
+        "description": "Can edit any event subscription in the organization, including activating or deactivating it and resending deliveries.",
+        "enabled": true,
+        "requires": [
+          "View event subscriptions"
+        ],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "View event subscriptions",
+        "description": "Can view all event subscriptions in the organization, including their details, payloads, and responses.",
+        "enabled": true,
+        "requires": [],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "Manage custom roles",
+        "description": "Can create, edit, and delete any custom role for the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all users"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "Manage users",
+        "description": "Can invite and remove users in the organization, and assign roles.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all users"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "View all users",
+        "description": "Can view all users in the organization, including their roles and status.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "Manage SSO users",
+        "description": "Can create and edit user accounts in organizations with SSO enabled before users log in for the first time.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all users"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "Manage on-prem agents",
+        "description": "Can add, edit, and remove on-prem agents, which may cause scenarios using them to stop working or run differently.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all on-prem agents"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "View all on-prem agents",
+        "description": "Can view all on-prem agents and their status.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "Use on-prem agents",
+        "description": "Can use on-prem agents when creating connected systems.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all on-prem agents"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "Manage connected systems",
+        "description": "Can add, edit, and remove connected systems, which may cause scenarios using them to stop working or run differently.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all connected systems"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "View all connected systems",
+        "description": "Can view all connected systems set up through on-prem agents.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "Use connected systems",
+        "description": "Can use connected systems when creating connections.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all connected systems"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "View analytics",
+        "description": "Can view the analytics dashboard for the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage installed apps",
+        "description": "Can install and uninstall apps from the marketplace for anyone in the organization to use.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View audit logs",
+        "description": "Can view audit logs for all organization activity.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View credit details",
+        "description": "Can view credit usage and history for the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Edit organization",
+        "description": "Can edit organization settings, including name and details.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage feature controls",
+        "description": "Can enable or disable AI and beta features for the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View all installed apps",
+        "description": "Can view all apps installed for the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View organization details",
+        "description": "Can view organization settings, including name, region, and timezone.",
+        "enabled": true,
+        "requires": [],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage SSO settings",
+        "description": "Can enable or disable SSO and manage settings for the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage teams",
+        "description": "Can manage all teams with full admin access, and automatically becomes a team admin in each one. This role can't be changed.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "Manage private spaces",
+        "description": "Can create, edit, and delete private spaces for anyone in the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "View own private space",
+        "description": "Can view only their own private space, but not those of others.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "Add teams",
+        "description": "Can create teams in the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "Manage team credit limits",
+        "description": "Can set and edit credit limits for any team in the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      }
+    ]
+  },
+  "14": {
+    "name": "Accountant",
+    "description": "Access to financial reports and billing information.",
+    "permissions": [
+      {
+        "name": "Manage payments",
+        "description": "Can view and edit subscription settings, apply coupons, and purchase extra credits for the organization.",
+        "enabled": false,
+        "requires": [
+          "View payments"
+        ],
+        "group": "Billing"
+      },
+      {
+        "name": "Manage payment methods",
+        "description": "Can add, edit, and remove payment methods for the organization.",
+        "enabled": false,
+        "requires": [
+          "View payments"
+        ],
+        "group": "Billing"
+      },
+      {
+        "name": "View all payment methods",
+        "description": "Can view all payment methods saved for the organization.",
+        "enabled": true,
+        "requires": [
+          "View payments"
+        ],
+        "group": "Billing"
+      },
+      {
+        "name": "View payments",
+        "description": "Can view payment history and invoices for the organization.",
+        "enabled": true,
+        "requires": [],
+        "group": "Billing"
+      },
+      {
+        "name": "Create child organizations",
+        "description": "Can create child organizations under the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all child organizations"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "Edit child organizations",
+        "description": "Can edit settings and credit allocation for any child organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all child organizations"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "View all child organizations",
+        "description": "Can view all child organizations, their credit consumption, and data transfer.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "Unlink child organizations",
+        "description": "Can unlink any child organization without deleting it, which removes the ability to see and manage it.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all child organizations"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "Manage scenario properties",
+        "description": "Can create, edit, and delete any custom scenario property.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Create organization variables",
+        "description": "Can create custom variables that anyone in the organization can use in scenarios.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all organization variables"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Delete organization variables",
+        "description": "Can permanently delete any custom variable, which may cause scenarios using it to stop working or run differently.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all organization variables"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Edit organization variables",
+        "description": "Can edit the type and values of any organization variable, which may cause scenarios using it to stop working or run differently.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all organization variables"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "View all organization variables",
+        "description": "Can view all organization variables and their values.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Create event subscriptions",
+        "description": "Can create event subscriptions in the organization.",
+        "enabled": false,
+        "requires": [
+          "View event subscriptions"
+        ],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "Delete event subscriptions",
+        "description": "Can permanently delete any event subscription in the organization, which stops its future event deliveries.",
+        "enabled": false,
+        "requires": [
+          "View event subscriptions"
+        ],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "Edit event subscriptions",
+        "description": "Can edit any event subscription in the organization, including activating or deactivating it and resending deliveries.",
+        "enabled": false,
+        "requires": [
+          "View event subscriptions"
+        ],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "View event subscriptions",
+        "description": "Can view all event subscriptions in the organization, including their details, payloads, and responses.",
+        "enabled": false,
+        "requires": [],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "Manage custom roles",
+        "description": "Can create, edit, and delete any custom role for the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all users"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "Manage users",
+        "description": "Can invite and remove users in the organization, and assign roles.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all users"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "View all users",
+        "description": "Can view all users in the organization, including their roles and status.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "Manage SSO users",
+        "description": "Can create and edit user accounts in organizations with SSO enabled before users log in for the first time.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all users"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "Manage on-prem agents",
+        "description": "Can add, edit, and remove on-prem agents, which may cause scenarios using them to stop working or run differently.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all on-prem agents"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "View all on-prem agents",
+        "description": "Can view all on-prem agents and their status.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "Use on-prem agents",
+        "description": "Can use on-prem agents when creating connected systems.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all on-prem agents"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "Manage connected systems",
+        "description": "Can add, edit, and remove connected systems, which may cause scenarios using them to stop working or run differently.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all connected systems"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "View all connected systems",
+        "description": "Can view all connected systems set up through on-prem agents.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "Use connected systems",
+        "description": "Can use connected systems when creating connections.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all connected systems"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "View analytics",
+        "description": "Can view the analytics dashboard for the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage installed apps",
+        "description": "Can install and uninstall apps from the marketplace for anyone in the organization to use.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View audit logs",
+        "description": "Can view audit logs for all organization activity.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View credit details",
+        "description": "Can view credit usage and history for the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Edit organization",
+        "description": "Can edit organization settings, including name and details.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage feature controls",
+        "description": "Can enable or disable AI and beta features for the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View all installed apps",
+        "description": "Can view all apps installed for the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View organization details",
+        "description": "Can view organization settings, including name, region, and timezone.",
+        "enabled": true,
+        "requires": [],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage SSO settings",
+        "description": "Can enable or disable SSO and manage settings for the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage teams",
+        "description": "Can manage all teams with full admin access, and automatically becomes a team admin in each one. This role can't be changed.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "Manage private spaces",
+        "description": "Can create, edit, and delete private spaces for anyone in the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "View own private space",
+        "description": "Can view only their own private space, but not those of others.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "Add teams",
+        "description": "Can create teams in the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "Manage team credit limits",
+        "description": "Can set and edit credit limits for any team in the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      }
+    ]
+  },
+  "13": {
+    "name": "Member",
+    "description": "Access to run scenarios and manage personal connections and data.",
+    "permissions": [
+      {
+        "name": "Manage payments",
+        "description": "Can view and edit subscription settings, apply coupons, and purchase extra credits for the organization.",
+        "enabled": false,
+        "requires": [
+          "View payments"
+        ],
+        "group": "Billing"
+      },
+      {
+        "name": "Manage payment methods",
+        "description": "Can add, edit, and remove payment methods for the organization.",
+        "enabled": false,
+        "requires": [
+          "View payments"
+        ],
+        "group": "Billing"
+      },
+      {
+        "name": "View all payment methods",
+        "description": "Can view all payment methods saved for the organization.",
+        "enabled": false,
+        "requires": [
+          "View payments"
+        ],
+        "group": "Billing"
+      },
+      {
+        "name": "View payments",
+        "description": "Can view payment history and invoices for the organization.",
+        "enabled": false,
+        "requires": [],
+        "group": "Billing"
+      },
+      {
+        "name": "Create child organizations",
+        "description": "Can create child organizations under the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all child organizations"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "Edit child organizations",
+        "description": "Can edit settings and credit allocation for any child organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all child organizations"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "View all child organizations",
+        "description": "Can view all child organizations, their credit consumption, and data transfer.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "Unlink child organizations",
+        "description": "Can unlink any child organization without deleting it, which removes the ability to see and manage it.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all child organizations"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "Manage scenario properties",
+        "description": "Can create, edit, and delete any custom scenario property.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Create organization variables",
+        "description": "Can create custom variables that anyone in the organization can use in scenarios.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all organization variables"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Delete organization variables",
+        "description": "Can permanently delete any custom variable, which may cause scenarios using it to stop working or run differently.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all organization variables"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Edit organization variables",
+        "description": "Can edit the type and values of any organization variable, which may cause scenarios using it to stop working or run differently.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all organization variables"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "View all organization variables",
+        "description": "Can view all organization variables and their values.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Create event subscriptions",
+        "description": "Can create event subscriptions in the organization.",
+        "enabled": false,
+        "requires": [
+          "View event subscriptions"
+        ],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "Delete event subscriptions",
+        "description": "Can permanently delete any event subscription in the organization, which stops its future event deliveries.",
+        "enabled": false,
+        "requires": [
+          "View event subscriptions"
+        ],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "Edit event subscriptions",
+        "description": "Can edit any event subscription in the organization, including activating or deactivating it and resending deliveries.",
+        "enabled": false,
+        "requires": [
+          "View event subscriptions"
+        ],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "View event subscriptions",
+        "description": "Can view all event subscriptions in the organization, including their details, payloads, and responses.",
+        "enabled": false,
+        "requires": [],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "Manage custom roles",
+        "description": "Can create, edit, and delete any custom role for the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all users"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "Manage users",
+        "description": "Can invite and remove users in the organization, and assign roles.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all users"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "View all users",
+        "description": "Can view all users in the organization, including their roles and status.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "Manage SSO users",
+        "description": "Can create and edit user accounts in organizations with SSO enabled before users log in for the first time.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all users"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "Manage on-prem agents",
+        "description": "Can add, edit, and remove on-prem agents, which may cause scenarios using them to stop working or run differently.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all on-prem agents"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "View all on-prem agents",
+        "description": "Can view all on-prem agents and their status.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "Use on-prem agents",
+        "description": "Can use on-prem agents when creating connected systems.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all on-prem agents"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "Manage connected systems",
+        "description": "Can add, edit, and remove connected systems, which may cause scenarios using them to stop working or run differently.",
+        "enabled": false,
+        "requires": [
+          "View organization details",
+          "View all connected systems"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "View all connected systems",
+        "description": "Can view all connected systems set up through on-prem agents.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "Use connected systems",
+        "description": "Can use connected systems when creating connections.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all connected systems"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "View analytics",
+        "description": "Can view the analytics dashboard for the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage installed apps",
+        "description": "Can install and uninstall apps from the marketplace for anyone in the organization to use.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View audit logs",
+        "description": "Can view audit logs for all organization activity.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View credit details",
+        "description": "Can view credit usage and history for the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Edit organization",
+        "description": "Can edit organization settings, including name and details.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage feature controls",
+        "description": "Can enable or disable AI and beta features for the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View all installed apps",
+        "description": "Can view all apps installed for the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View organization details",
+        "description": "Can view organization settings, including name, region, and timezone.",
+        "enabled": true,
+        "requires": [],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage SSO settings",
+        "description": "Can enable or disable SSO and manage settings for the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage teams",
+        "description": "Can manage all teams with full admin access, and automatically becomes a team admin in each one. This role can't be changed.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "Manage private spaces",
+        "description": "Can create, edit, and delete private spaces for anyone in the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "View own private space",
+        "description": "Can view only their own private space, but not those of others.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "Add teams",
+        "description": "Can create teams in the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "Manage team credit limits",
+        "description": "Can set and edit credit limits for any team in the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      }
+    ]
+  },
+  "12": {
+    "name": "Admin",
+    "description": "Full access to organization settings, users, and billing. Cannot delete the organization or transfer ownership.",
+    "permissions": [
+      {
+        "name": "Manage payments",
+        "description": "Can view and edit subscription settings, apply coupons, and purchase extra credits for the organization.",
+        "enabled": true,
+        "requires": [
+          "View payments"
+        ],
+        "group": "Billing"
+      },
+      {
+        "name": "Manage payment methods",
+        "description": "Can add, edit, and remove payment methods for the organization.",
+        "enabled": true,
+        "requires": [
+          "View payments"
+        ],
+        "group": "Billing"
+      },
+      {
+        "name": "View all payment methods",
+        "description": "Can view all payment methods saved for the organization.",
+        "enabled": true,
+        "requires": [
+          "View payments"
+        ],
+        "group": "Billing"
+      },
+      {
+        "name": "View payments",
+        "description": "Can view payment history and invoices for the organization.",
+        "enabled": true,
+        "requires": [],
+        "group": "Billing"
+      },
+      {
+        "name": "Create child organizations",
+        "description": "Can create child organizations under the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all child organizations"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "Edit child organizations",
+        "description": "Can edit settings and credit allocation for any child organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all child organizations"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "View all child organizations",
+        "description": "Can view all child organizations, their credit consumption, and data transfer.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "Unlink child organizations",
+        "description": "Can unlink any child organization without deleting it, which removes the ability to see and manage it.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all child organizations"
+        ],
+        "group": "Child organizations"
+      },
+      {
+        "name": "Manage scenario properties",
+        "description": "Can create, edit, and delete any custom scenario property.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Create organization variables",
+        "description": "Can create custom variables that anyone in the organization can use in scenarios.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all organization variables"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Delete organization variables",
+        "description": "Can permanently delete any custom variable, which may cause scenarios using it to stop working or run differently.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all organization variables"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Edit organization variables",
+        "description": "Can edit the type and values of any organization variable, which may cause scenarios using it to stop working or run differently.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all organization variables"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "View all organization variables",
+        "description": "Can view all organization variables and their values.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Custom variables"
+      },
+      {
+        "name": "Create event subscriptions",
+        "description": "Can create event subscriptions in the organization.",
+        "enabled": true,
+        "requires": [
+          "View event subscriptions"
+        ],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "Delete event subscriptions",
+        "description": "Can permanently delete any event subscription in the organization, which stops its future event deliveries.",
+        "enabled": true,
+        "requires": [
+          "View event subscriptions"
+        ],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "Edit event subscriptions",
+        "description": "Can edit any event subscription in the organization, including activating or deactivating it and resending deliveries.",
+        "enabled": true,
+        "requires": [
+          "View event subscriptions"
+        ],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "View event subscriptions",
+        "description": "Can view all event subscriptions in the organization, including their details, payloads, and responses.",
+        "enabled": true,
+        "requires": [],
+        "group": "Event subscriptions"
+      },
+      {
+        "name": "Manage custom roles",
+        "description": "Can create, edit, and delete any custom role for the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all users"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "Manage users",
+        "description": "Can invite and remove users in the organization, and assign roles.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all users"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "View all users",
+        "description": "Can view all users in the organization, including their roles and status.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "Manage SSO users",
+        "description": "Can create and edit user accounts in organizations with SSO enabled before users log in for the first time.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all users"
+        ],
+        "group": "Members"
+      },
+      {
+        "name": "Manage on-prem agents",
+        "description": "Can add, edit, and remove on-prem agents, which may cause scenarios using them to stop working or run differently.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all on-prem agents"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "View all on-prem agents",
+        "description": "Can view all on-prem agents and their status.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "Use on-prem agents",
+        "description": "Can use on-prem agents when creating connected systems.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all on-prem agents"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "Manage connected systems",
+        "description": "Can add, edit, and remove connected systems, which may cause scenarios using them to stop working or run differently.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all connected systems"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "View all connected systems",
+        "description": "Can view all connected systems set up through on-prem agents.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "Use connected systems",
+        "description": "Can use connected systems when creating connections.",
+        "enabled": true,
+        "requires": [
+          "View organization details",
+          "View all connected systems"
+        ],
+        "group": "On-prem agents"
+      },
+      {
+        "name": "View analytics",
+        "description": "Can view the analytics dashboard for the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage installed apps",
+        "description": "Can install and uninstall apps from the marketplace for anyone in the organization to use.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View audit logs",
+        "description": "Can view audit logs for all organization activity.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View credit details",
+        "description": "Can view credit usage and history for the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Edit organization",
+        "description": "Can edit organization settings, including name and details.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage feature controls",
+        "description": "Can enable or disable AI and beta features for the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View all installed apps",
+        "description": "Can view all apps installed for the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "View organization details",
+        "description": "Can view organization settings, including name, region, and timezone.",
+        "enabled": true,
+        "requires": [],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage SSO settings",
+        "description": "Can enable or disable SSO and manage settings for the organization.",
+        "enabled": false,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Organization"
+      },
+      {
+        "name": "Manage teams",
+        "description": "Can manage all teams with full admin access, and automatically becomes a team admin in each one. This role can't be changed.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "Manage private spaces",
+        "description": "Can create, edit, and delete private spaces for anyone in the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "View own private space",
+        "description": "Can view only their own private space, but not those of others.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "Add teams",
+        "description": "Can create teams in the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      },
+      {
+        "name": "Manage team credit limits",
+        "description": "Can set and edit credit limits for any team in the organization.",
+        "enabled": true,
+        "requires": [
+          "View organization details"
+        ],
+        "group": "Teams"
+      }
+    ]
+  }
+}

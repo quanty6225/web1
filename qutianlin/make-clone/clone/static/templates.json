@@ -1,0 +1,365 @@
+[
+  {
+    "path": "/templates/10570-create-new-completions-with-openai-chatgpt-from-new-rows-in-google-sheets",
+    "title": "Generate ChatGPT Completions from Google Sheets Rows",
+    "uses": 110491,
+    "icons": [
+      "/static/img/packages/google-sheets_64.png",
+      "/static/img/packages/openai-gpt-3_64.png"
+    ],
+    "detail": true,
+    "description": "Org\nScenarios\nAI Agents\nCredentials\nWebhooks\nMCP Toolboxes\nTemplates\nData\nstores\nDevices\nData structures\nCustom\nApps",
+    "modules": [
+      "google-sheets",
+      "openai"
+    ],
+    "summary": "Effortlessly enhance your content creation process by integrating ChatGPT with Google Sheets. This powerful template allows you to automatically generate relevant completions, ranging from SEO keywords to custom responses, boosting productivity and content quality with ease. Learn more",
+    "extra": "",
+    "icon_meta": [
+      {
+        "path": "/static/img/packages/google-sheets_64.png",
+        "color": "rgb(15, 167, 99)",
+        "name": "Google Sheets"
+      },
+      {
+        "path": "/static/img/packages/openai-gpt-3_64.png",
+        "color": "rgb(14, 147, 114)",
+        "name": "OpenAI (ChatGPT, Whisper)"
+      }
+    ],
+    "preview": "/static/assets/29ef9250cd6f2cb9929fb3d62114c2729e998486e9d60033ad688ede6cb5b068.png"
+  },
+  {
+    "path": "/templates/10813-generate-telegram-bot-responses-with-ai",
+    "title": "ChatGPT-Powered Telegram Bot for Instant Replies",
+    "uses": 42075,
+    "icons": [
+      "/static/img/packages/telegram_64.png",
+      "/static/img/packages/openai-gpt-3_64.png"
+    ],
+    "detail": true,
+    "description": "Org\nScenarios\nAI Agents\nCredentials\nWebhooks\nMCP Toolboxes\nTemplates\nData\nstores\nDevices\nData structures\nCustom\nApps",
+    "modules": [
+      "telegram",
+      "openai",
+      "telegram"
+    ],
+    "summary": "Elevate your Telegram channel with our ChatGPT-powered bot. Deliver instant, smart responses to user queries, enhancing engagement and customer satisfaction effortlessly.",
+    "extra": "",
+    "icon_meta": [
+      {
+        "path": "/static/img/packages/telegram_64.png",
+        "color": "rgb(23, 156, 222)",
+        "name": "Telegram Bot"
+      },
+      {
+        "path": "/static/img/packages/openai-gpt-3_64.png",
+        "color": "rgb(14, 147, 114)",
+        "name": "OpenAI (ChatGPT, Whisper)"
+      }
+    ],
+    "preview": "/static/assets/1014b3676e6c872663fc9e92fe1a9a1bd17b374915b0f7fbc22e5f9d49ce3ba5.png"
+  },
+  {
+    "path": "/templates/5893-add-data-to-a-google-sheet-received-from-a-webhook",
+    "title": "Add webhook data to a Google Sheet",
+    "uses": 41534,
+    "icons": [
+      "/static/img/packages/gateway_64.png",
+      "/static/img/packages/google-sheets_64.png"
+    ],
+    "detail": true,
+    "description": "Org\nScenarios\nAI Agents\nCredentials\nWebhooks\nMCP Toolboxes\nTemplates\nData\nstores\nDevices\nData structures\nCustom\nApps",
+    "modules": [
+      "webhook",
+      "google-sheets"
+    ],
+    "summary": "Use this automation to instantly capture data from a webhook and automatically add it as a new row in a Google Sheet. This is ideal for real-time data logging, form submissions, or any event-driven updates that must be stored in a spreadsheet.\nLearn more about webhooks!",
+    "extra": "",
+    "icon_meta": [
+      {
+        "path": "/static/img/packages/gateway_64.png",
+        "color": "rgb(199, 58, 99)",
+        "name": "Webhooks"
+      },
+      {
+        "path": "/static/img/packages/google-sheets_64.png",
+        "color": "rgb(14, 150, 89)",
+        "name": "Google Sheets"
+      }
+    ],
+    "preview": "/static/assets/a53a88d9ae816fd25e7b6e8ecb31b9aefd0a2540de3d5109ec0725f5033946af.png"
+  },
+  {
+    "path": "/templates/5770-send-a-gmail-email-from-a-new-google-sheets-row",
+    "title": "Send a Gmail email from a new Google Sheets row",
+    "uses": 40259,
+    "icons": [
+      "/static/img/packages/google-sheets_64.png",
+      "/static/img/packages/google-email_64.png"
+    ],
+    "detail": true,
+    "description": "Org\nScenarios\nAI Agents\nCredentials\nWebhooks\nMCP Toolboxes\nTemplates\nData\nstores\nDevices\nData structures\nCustom\nApps",
+    "modules": [
+      "google-sheets",
+      "gmail"
+    ],
+    "summary": "Effortlessly send Gmail messages when a new row is added to your Google Sheets. Just ensure your spreadsheet includes these columns:\n\nEmail Address\n\nSubject\n\nContent",
+    "extra": "",
+    "icon_meta": [
+      {
+        "path": "/static/img/packages/google-sheets_64.png",
+        "color": "rgb(15, 167, 99)",
+        "name": "Google Sheets"
+      },
+      {
+        "path": "/static/img/packages/google-email_64.png",
+        "color": "rgb(239, 41, 27)",
+        "name": "Gmail"
+      }
+    ],
+    "preview": "/static/assets/e41a5fada0550e218a6bb5ae2b74d186c54f3e80cfe1d4cded74a6d6e5862d7f.png"
+  },
+  {
+    "path": "/templates/10260-create-a-basic-chatbot-for-whatsapp",
+    "title": "Create a basic chatbot for WhatsApp",
+    "uses": 40101,
+    "icons": [
+      "/static/img/packages/whatsapp-business-cloud_64.png"
+    ],
+    "detail": true,
+    "description": "Org\nScenarios\nAI Agents\nCredentials\nWebhooks\nMCP Toolboxes\nTemplates\nData\nstores\nDevices\nData structures\nCustom\nApps",
+    "modules": [
+      "webhook",
+      "openai"
+    ],
+    "summary": "This template shows how to create a basic chatbot for WhatsApp. Every time a new message is received, Make will automatically answer it with the \"Send a Message\" module. To create more complex chatbots, you can add routers and filters.",
+    "extra": "",
+    "icon_meta": [
+      {
+        "path": "/static/img/packages/whatsapp-business-cloud_64.png",
+        "color": "rgb(37, 211, 102)",
+        "name": "WhatsApp Business Cloud"
+      },
+      {
+        "path": "/static/img/packages/whatsapp-business-cloud_64.png",
+        "color": "rgb(33, 190, 92)",
+        "name": "WhatsApp Business Cloud"
+      }
+    ],
+    "preview": "/static/assets/61242aafc4a3ec7dbc7b742c32b66ff14f5dd74f16baf36ed70c9a3c6625c3e2.png"
+  },
+  {
+    "path": "/templates/4219-save-new-facebook-lead-ads-leads-into-google-sheets",
+    "title": "Sync Facebook Lead Ads leads with Google Sheets",
+    "uses": 39059,
+    "icons": [
+      "/static/img/packages/facebook-lead-ads_64.png",
+      "/static/img/packages/google-sheets_64.png"
+    ],
+    "detail": false,
+    "description": "",
+    "modules": [],
+    "summary": "Seamlessly capture and organize new Facebook Lead Ads leads by automatically adding them to a Google Sheets spreadsheet. Streamline your lead management process and enhance productivity with this efficient automation solution.",
+    "extra": "",
+    "icon_meta": [
+      {
+        "path": "/static/img/packages/facebook-lead-ads_64.png",
+        "color": "rgb(24, 119, 242)",
+        "name": "Facebook Lead Ads"
+      },
+      {
+        "path": "/static/img/packages/google-sheets_64.png",
+        "color": "rgb(14, 150, 89)",
+        "name": "Google Sheets"
+      }
+    ],
+    "preview": "/static/assets/584df13036dd394a55ab30ac544b589b17afc93d7624db60ba893cd6dad3140d.png"
+  },
+  {
+    "path": "/templates/12103-summarize-content-with-chatgpt-from-a-monitored-site-using-browse-ai-and-create-a-social-media-posts",
+    "title": "Summarize website content and create social media posts with ChatGPT and Browse AI",
+    "uses": 23918,
+    "icons": [
+      "/static/img/packages/browse-ai_64.png",
+      "/static/img/packages/builtin_64.png",
+      "/static/img/packages/openai-gpt-3_64.png"
+    ],
+    "detail": false,
+    "description": "",
+    "modules": [],
+    "summary": "Harness the power of ChatGPT and Browse AI to turn monitored website content into captivating social media posts. Perfect for creating and sharing content on autopilot, ensuring your social media channels stay active and engaging effortlessly.",
+    "extra": "+2",
+    "icon_meta": [
+      {
+        "path": "/static/img/packages/browse-ai_64.png",
+        "color": "rgb(66, 48, 125)",
+        "name": "Browse AI"
+      },
+      {
+        "path": "/static/img/packages/builtin_64.png",
+        "color": "rgb(92, 176, 64)",
+        "name": "Flow Control"
+      },
+      {
+        "path": "/static/img/packages/openai-gpt-3_64.png",
+        "color": "rgb(16, 163, 127)",
+        "name": "OpenAI (ChatGPT, Whisper)"
+      }
+    ],
+    "preview": "/static/assets/898fef446941c53b4bd7db22efcf1e3afce62a4f38d81751956d5e57d3e66752.png"
+  },
+  {
+    "path": "/templates/2-add-new-incoming-emails-to-a-google-sheets-spreadsheet-as-a-new-row",
+    "title": "Add new incoming emails to a Google Sheets spreadsheet as a new row",
+    "uses": 23535,
+    "icons": [
+      "/static/img/packages/email_64.png",
+      "/static/img/packages/google-sheets_64.png"
+    ],
+    "detail": false,
+    "description": "",
+    "modules": [],
+    "summary": "Every time you receive a new email, Make will automatically add selected data from the email to a new row in a Google Sheets spreadsheet.",
+    "extra": "",
+    "icon_meta": [
+      {
+        "path": "/static/img/packages/email_64.png",
+        "color": "rgb(235, 87, 104)",
+        "name": "Email"
+      },
+      {
+        "path": "/static/img/packages/google-sheets_64.png",
+        "color": "rgb(14, 150, 89)",
+        "name": "Google Sheets"
+      }
+    ],
+    "preview": "/static/assets/f59956357b0421cb2918c95960f851fd0a8a63e8b9ed69f7ae2fa0d82636484d.png"
+  },
+  {
+    "path": "/templates/1686-save-new-gmail-attachments-to-google-drive",
+    "title": "Save new Gmail attachments to Google Drive",
+    "uses": 21655,
+    "icons": [
+      "/static/img/packages/google-email_64.png",
+      "/static/img/packages/builtin_64.png",
+      "/static/img/packages/google-drive_64.png"
+    ],
+    "detail": false,
+    "description": "",
+    "modules": [],
+    "summary": "Automatically save incoming Gmail attachments in your Google Drive!",
+    "extra": "",
+    "icon_meta": [
+      {
+        "path": "/static/img/packages/google-email_64.png",
+        "color": "rgb(241, 67, 54)",
+        "name": "Gmail"
+      },
+      {
+        "path": "/static/img/packages/builtin_64.png",
+        "color": "rgb(92, 176, 64)",
+        "name": "Flow Control"
+      },
+      {
+        "path": "/static/img/packages/google-drive_64.png",
+        "color": "rgb(252, 205, 72)",
+        "name": "Google Drive"
+      }
+    ],
+    "preview": "/static/assets/cae6c9a2002fae3ef2bbe2a8d25eebd5a3542c18bdde5f6d81f00feb5d6eff66.png"
+  },
+  {
+    "path": "/templates/6407-create-new-google-calendar-events-from-notion-database-items",
+    "title": "Sync Notion Databases to Google Calendar",
+    "uses": 20005,
+    "icons": [
+      "/static/img/packages/notion_64.png",
+      "/static/img/packages/builtin_64.png",
+      "/static/img/packages/google-calendar_64.png"
+    ],
+    "detail": false,
+    "description": "",
+    "modules": [],
+    "summary": "Sync your Notion meetings database with Google Calendar by automatically creating, updating and deleting events.\nThe template setup assumes you have a Notion database where all your meeting information is stored. Each item (page) on the database is a new meeting and it includes values for all the properties as showcased in this example.",
+    "extra": "",
+    "icon_meta": [
+      {
+        "path": "/static/img/packages/notion_64.png",
+        "color": "rgb(0, 0, 0)",
+        "name": "Notion"
+      },
+      {
+        "path": "/static/img/packages/builtin_64.png",
+        "color": "rgb(92, 176, 64)",
+        "name": "Flow Control"
+      },
+      {
+        "path": "/static/img/packages/google-calendar_64.png",
+        "color": "rgb(0, 126, 229)",
+        "name": "Google Calendar"
+      }
+    ],
+    "preview": "/static/assets/d9c777adae42679aa8f4f7aab00c8410db31b48e76b3eb0949b93ddbbc3f97a2.png"
+  },
+  {
+    "path": "/templates/11243-summarize-emails-with-openai-and-send-it-on-slack",
+    "title": "Summarize emails with Gmail and OpenAI then send it on Slack",
+    "uses": 19457,
+    "icons": [
+      "/static/img/packages/google-email_64.png",
+      "/static/img/packages/openai-gpt-3_64.png",
+      "/static/img/packages/slack_64.png"
+    ],
+    "detail": false,
+    "description": "",
+    "modules": [],
+    "summary": "Leverage OpenAI technology to simplify email content, enabling quick overviews and easy sharing with your team on Slack for better communication and improved productivity.",
+    "extra": "",
+    "icon_meta": [
+      {
+        "path": "/static/img/packages/google-email_64.png",
+        "color": "rgb(241, 67, 54)",
+        "name": "Gmail"
+      },
+      {
+        "path": "/static/img/packages/openai-gpt-3_64.png",
+        "color": "rgb(14, 147, 114)",
+        "name": "OpenAI (ChatGPT, Whisper)"
+      },
+      {
+        "path": "/static/img/packages/slack_64.png",
+        "color": "rgb(74, 21, 75)",
+        "name": "Slack"
+      }
+    ],
+    "preview": "/static/assets/1d866b9e92c61ddbf67810cdcecd210044a1cf7c270ebbeef8550a278d0776be.png"
+  },
+  {
+    "path": "/templates/2127-save-telegram-messages-to-a-google-sheets-spreadsheet",
+    "title": "Save Telegram messages to a Google Sheets spreadsheet",
+    "uses": 18774,
+    "icons": [
+      "/static/img/packages/telegram_64.png",
+      "/static/img/packages/google-sheets_64.png"
+    ],
+    "detail": false,
+    "description": "",
+    "modules": [],
+    "summary": "Every time a new message is posted to a specified Telegram chat/channel, Make will automatically add that message to your Google Sheets spreadsheet as a new row. The template uses this example spreadsheet.",
+    "extra": "",
+    "icon_meta": [
+      {
+        "path": "/static/img/packages/telegram_64.png",
+        "color": "rgb(23, 156, 222)",
+        "name": "Telegram Bot"
+      },
+      {
+        "path": "/static/img/packages/google-sheets_64.png",
+        "color": "rgb(14, 150, 89)",
+        "name": "Google Sheets"
+      }
+    ],
+    "preview": "/static/assets/532ba370782add12c413a8555de3b82a165e3e49b07083e8518d4c5446f9b2b3.png"
+  }
+]
