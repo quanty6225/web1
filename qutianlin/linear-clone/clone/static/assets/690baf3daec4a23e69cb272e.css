@@ -1,0 +1,5 @@
+@charset "UTF-8";
+@layer reset, base, app.base;
+@charset "UTF-8";
+@layer reset, base, app.base;
+@media (max-width:1024px){.-fwaFq_layout{overflow:hidden}}.-fwaFq_layout .-fwaFq_container{--prose-max-width:736px;max-width:736px}@font-face{font-family:Tiempos Headline;font-display:block;font-weight:400;src:url("/static/assets/2718341372de2c853f121ee2.bin")format("woff2")}

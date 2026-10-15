@@ -1,0 +1,40 @@
+{
+  "packages": [
+    {
+      "package": "highlight.js",
+      "version": "11.11.1",
+      "url": "https://registry.npmjs.org/highlight.js/-/highlight.js-11.11.1.tgz",
+      "integrity": "sha512-Xwwo44whKBVCYoliBQwaPvtd/2tYFkRQtXDWj1nackaV2JPXx3L0+Jvd8/qCJ2p+ML0/XVkJ2q+Mr+UVdpJK5w==",
+      "purpose": "local runtime highlighting/language detection"
+    },
+    {
+      "package": "esbuild",
+      "version": "0.25.12",
+      "url": "https://registry.npmjs.org/esbuild/-/esbuild-0.25.12.tgz",
+      "integrity": "sha512-bbPBYYrtZbkt6Os6FiTLCTFxvq4tt3JKall1vRwshA3fdVztsLAatFaZobhkBC8/BrPetoa0oksYoKXoG4ryJg==",
+      "purpose": "build-time bundling only"
+    },
+    {
+      "package": "guesslang-js",
+      "version": "0.0.3",
+      "url": "https://registry.npmjs.org/guesslang-js/-/guesslang-js-0.0.3.tgz",
+      "integrity": "sha512-0J0qqjsF6UZw4fxauXuIRfh/1KBeNKloAva/ZdJhlEmbEEsJjjsyXfDIAxuxapatH8b7Am22kVla45NNlGiDlg==",
+      "purpose": "local runtime highlighting/language detection"
+    }
+  ],
+  "runtime_files": [
+    {
+      "file": "clone/static/document-editor/highlight.js",
+      "sha256": "f05aeba52b380ee0fa326e30416244ce0b97019937b5ffb455cac473ffd4e4c0"
+    },
+    {
+      "file": "clone/static/document-editor/guesslang.js",
+      "sha256": "0fa90d83f610fd0d04dbe283124cb6bbde62de54dbc20ec896b5e13cde1ed83a"
+    }
+  ],
+  "source_language_catalog": "clone/static/document-editor/code-languages.json",
+  "source_helper_sha256": "2deb72d4531faa901e83f6838687e92a574432b3c5499276e313a312847baa24",
+  "model_weights_sha256": "fab6442698f64d5b1d2df052061d12bafd570330556819d29f48c7bcbb5889f7",
+  "source_and_public_package_model_weights_match": true,
+  "build_note": "guesslang-js distribution gzip layer decompressed into the unmodified inner UMD bundle, avoiding its outer eval loader under the local self-only CSP. Source application code is not shipped. Confidence adjustments and selection thresholds follow inspected source helper."
+}

@@ -1,0 +1,5 @@
+@charset "UTF-8";
+@layer reset, base, app.base;
+@charset "UTF-8";
+@layer reset, base, app.base;
+._2B_GW_logo{opacity:var(--quote-logo-opacity,.2);mix-blend-mode:overlay;position:absolute;inset:0}._2B_GW_openai{--quote-logo-opacity:.55}._2B_GW_cursor{--quote-logo-opacity:.07}

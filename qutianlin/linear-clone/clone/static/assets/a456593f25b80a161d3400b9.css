@@ -1,0 +1,5 @@
+@charset "UTF-8";
+@layer reset, base, app.base;
+@charset "UTF-8";
+@layer reset, base, app.base;
+._0OHENa_bullets{flex-direction:column;gap:24px;padding-right:80px;display:flex}@media (max-width:1024px){._0OHENa_bullets{padding-right:0}}@media (max-width:640px){._0OHENa_bullets{gap:16px}}._0OHENa_items{flex-direction:column;gap:8px;display:flex}@media (max-width:640px){._0OHENa_items{gap:4px}}._0OHENa_item{align-items:center;gap:12px;display:flex}@media (max-width:640px){._0OHENa_item{gap:10px}._0OHENa_item svg{width:14px;height:14px}}.Ej7Uiq_root{column-gap:0}@media (max-width:640px){.Ej7Uiq_root{row-gap:48px}}.Ej7Uiq_leftColumn{top:calc(var(--header-height) + 24px);align-self:start;position:sticky}@media (max-width:768px){.Ej7Uiq_leftColumn{position:static}}

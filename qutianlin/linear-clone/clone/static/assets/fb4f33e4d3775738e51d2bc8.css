@@ -1,0 +1,5 @@
+@charset "UTF-8";
+@layer reset, base, app.base;
+@charset "UTF-8";
+@layer reset, base, app.base;
+.z1_5VG_stats{grid-template-columns:2fr 1fr 1fr;padding-bottom:96px;display:grid}@media (max-width:1024px){.z1_5VG_stats{grid-template-columns:1fr 1fr;padding-bottom:64px}.z1_5VG_statSpacer{display:none}}.z1_5VG_stat{padding-inline:var(--homepage-padding-inset);flex-direction:column;gap:12px;display:flex}.z1_5VG_statDivider{border-left:1px solid var(--color-border-translucent-strong)}.z1_5VG_quoteBlock{flex-direction:column;gap:48px;display:flex}.WPpKnW_root{overflow-x:hidden}

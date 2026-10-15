@@ -1,0 +1,1130 @@
+{
+  "/integrations/sentry-agent": {
+    "parent": "/integrations/agents",
+    "text": "Sentry Agent\n\nResolve Linear Issues with Seer by Sentry"
+  },
+  "/integrations/minds": {
+    "parent": "/integrations/agents",
+    "text": "Minds\nGet research feedback from your target audience on any Linear issue"
+  },
+  "/integrations/boxesdev": {
+    "parent": "/integrations/agents",
+    "text": "Boxes.dev\nAssign issues to Claude Code and Codex on cloud devboxes in Boxes.dev"
+  },
+  "/integrations/sanity-content-agent": {
+    "parent": "/integrations/agents",
+    "text": "Sanity Content Agent\nDelegate content work to Sanity directly from Linear"
+  },
+  "/integrations/coco-by-cotera": {
+    "parent": "/integrations/agents",
+    "text": "Coco by Cotera\nCoco brings the full power of Cotera's AI agent platform directly into Linear"
+  },
+  "/integrations/sinatra": {
+    "parent": "/integrations/agents",
+    "text": "Sinatra\nAssign issues to Sinatra and draft pull requests"
+  },
+  "/integrations/merlin": {
+    "parent": "/integrations/agents",
+    "text": "Merlin\nDelegate Linear issues to Claude Code and Codex running on your team's own machines"
+  },
+  "/integrations/camber": {
+    "parent": "/integrations/agents",
+    "text": "Camber\nAssign Linear issues to Camber data agents"
+  },
+  "/integrations/cyrus": {
+    "parent": "/integrations/agents",
+    "text": "Cyrus\nYour Claude Code powered Linear agent that runs anywhere"
+  },
+  "/integrations/pixelesq": {
+    "parent": "/integrations/agents",
+    "text": "Pixelesq\nBuild and update websites directly from Linear issues"
+  },
+  "/integrations/tierzero": {
+    "parent": "/integrations/agents",
+    "text": "TierZero Agent\nDebug and fix issues with TierZero"
+  },
+  "/integrations/ranger": {
+    "parent": "/integrations/agents",
+    "text": "Ranger\nEnhance bug formatting and generate test plans"
+  },
+  "/integrations/reflag": {
+    "parent": "/integrations/agents",
+    "text": "Reflag\nCreate and manage feature flags"
+  },
+  "/integrations/stilla": {
+    "parent": "/integrations/agents",
+    "text": "Stilla\nAdd context from meetings and drafts code changes"
+  },
+  "/integrations/panaptico": {
+    "parent": "/integrations/agents",
+    "text": "Panaptico\nSolve issues and execute changes on your IT infrastructure"
+  },
+  "/integrations/tembo": {
+    "parent": "/integrations/agents",
+    "text": "Tembo\nDelegate work to any coding agent with Tembo"
+  },
+  "/integrations/larridin": {
+    "parent": "/integrations/agents",
+    "text": "Larridin\nDeveloper productivity intelligence — from what shipped, to code quality and AI costs"
+  },
+  "/integrations/solo": {
+    "parent": "/integrations/agents",
+    "text": "Solo\nAnswer questions from codebase using Solo"
+  },
+  "/integrations/warp": {
+    "parent": "/integrations/agents",
+    "text": "Warp\nTurn Linear issues into work for your factory"
+  },
+  "/integrations/cellcog": {
+    "parent": "/integrations/agents",
+    "text": "CellCog\nDelegate issues to CellCog for research, documents, images, video, audio and more"
+  },
+  "/integrations/codesmith": {
+    "parent": "/integrations/agents",
+    "text": "[code]smith\nDelegate any issue to [code]smith"
+  },
+  "/integrations/testifly": {
+    "parent": "/integrations/agents",
+    "text": "Testifly\nAutomate your Issues/Projects with E2E Web-Automation"
+  },
+  "/integrations/dash0": {
+    "parent": "/integrations/agents",
+    "text": "Dash0\nAsk @Dash0 to ask about your monitored systems"
+  },
+  "/integrations/jellyfish-agent": {
+    "parent": "/integrations/agents",
+    "text": "Jellyfish Agent\nCollect and summarize DevEx feedback in context"
+  },
+  "/integrations/replicas": {
+    "parent": "/integrations/agents",
+    "text": "Replicas\nComplete issues with Replicas SWE Agents"
+  },
+  "/integrations/blocks": {
+    "parent": "/integrations/agents",
+    "text": "Blocks\nThe Agentic Software Factory for Linear"
+  },
+  "/changelog/2026-05-27-linear-diffs": {
+    "parent": "/now/coding-sessions-for-linear-agent",
+    "text": "Diffs"
+  },
+  "/now/self-driving-saas": {
+    "parent": "/now/coding-sessions-for-linear-agent",
+    "text": "Self-driving SaaS"
+  },
+  "/integrations/neat": {
+    "parent": "/integrations/vs-code",
+    "text": "Neat\nBy Neat Technologies, Inc.\nSee important Linear notifications on your menu bar and desktop"
+  },
+  "/now/quality-wednesdays": {
+    "parent": "/now/author/tuomas-artman",
+    "text": "Quality Wednesdays: How we trained our team to see what doesn’t work\nTuomas Artman·Aug 13, 2025"
+  },
+  "/now/how-we-built-multi-region-support-for-linear": {
+    "parent": "/now/author/tuomas-artman",
+    "text": "How we built multi-region support for Linear\nSean McGivern, Tuomas Artman·May 23, 2024"
+  },
+  "/now/rethinking-the-startup-mvp-building-a-competitive-product": {
+    "parent": "/now/author/tuomas-artman",
+    "text": "Rethinking the startup MVP: Building a competitive product\nTuomas Artman·Feb 28, 2024"
+  },
+  "/now/linear-incident-on-jan-24th-2024": {
+    "parent": "/now/author/tuomas-artman",
+    "text": "Post mortem on Linear incident from Jan 24th, 2024\nJori Lallo, Tuomas Artman, and more·Jan 30, 2024"
+  },
+  "/integrations/gong": {
+    "parent": "/integrations/customer-experience",
+    "text": "Gong\n\nAutomatically create customer requests from Gong calls"
+  },
+  "/integrations/happyfox": {
+    "parent": "/integrations/customer-experience",
+    "text": "HappyFox Help Desk\nCreate and link issues directly from HappyFox Help Desk"
+  },
+  "/integrations/issuelinker": {
+    "parent": "/integrations/customer-experience",
+    "text": "HubSpot Sync by IssueLinker\nTwo-way sync between HubSpot tickets and Linear issues, with bidirectional comment and status sync."
+  },
+  "/integrations/prodpad": {
+    "parent": "/integrations/customer-experience",
+    "text": "ProdPad\nAlign and decide in ProdPad, and sync ideas and initiatives to Linear"
+  },
+  "/integrations/lane": {
+    "parent": "/integrations/customer-experience",
+    "text": "Lane\nCreate Linear issues from prioritized customer signals"
+  },
+  "/integrations/formspree": {
+    "parent": "/integrations/customer-experience",
+    "text": "Formspree\nCreate Linear Issues from Form Submissions with Formspree"
+  },
+  "/integrations/hipporello-service-desk": {
+    "parent": "/integrations/customer-experience",
+    "text": "Hipporello Service Desk\nCustomer support, inside Linear"
+  },
+  "/integrations/feedovate": {
+    "parent": "/integrations/customer-experience",
+    "text": "Feedovate\nTurn customer feedback into actionable Linear issues"
+  },
+  "/integrations/fernand": {
+    "parent": "/integrations/customer-experience",
+    "text": "Fernand\nCreate and sync Linear issues to your customer conversations on Fernand"
+  },
+  "/integrations/olvy": {
+    "parent": "/integrations/customer-experience",
+    "text": "Olvy\nConvert user feedback into issues and collaborate with complete context"
+  },
+  "/integrations/cycle": {
+    "parent": "/integrations/customer-experience",
+    "text": "Cycle\nTurns product feedback into customer engagement"
+  },
+  "/integrations/supportbee": {
+    "parent": "/integrations/customer-experience",
+    "text": "SupportBee\nTurn Support Tickets into Linear Issues"
+  },
+  "/integrations/arkweaver": {
+    "parent": "/integrations/customer-experience",
+    "text": "Arkweaver\nAutomatically message the right customers and teammates when Linear Projects go live."
+  },
+  "/integrations/lightfield": {
+    "parent": "/integrations/customer-experience",
+    "text": "Lightfield\nCreate issues from customer conversations in Lightfield"
+  },
+  "/integrations/pylon": {
+    "parent": "/integrations/customer-experience",
+    "text": "Pylon\nKeep a tight feedback loop with customers and streamline bug reports"
+  },
+  "/integrations/index": {
+    "parent": "/integrations/customer-experience",
+    "text": "Index\nThe Productboard and Jira Product Discovery alternative for Product Management on Linear"
+  },
+  "/integrations/lindie": {
+    "parent": "/integrations/customer-experience",
+    "text": "Lindie\nView-only links to share your Linear projects"
+  },
+  "/integrations/startdeliver": {
+    "parent": "/integrations/customer-experience",
+    "text": "Startdeliver\nSeamlessly sync customer tasks and comments between Startdeliver and Linear"
+  },
+  "/integrations/fibery": {
+    "parent": "/integrations/customer-experience",
+    "text": "Fibery\nSync your Linear data to Fibery and connect product management with execution"
+  },
+  "/integrations/leanbe": {
+    "parent": "/integrations/customer-experience",
+    "text": "Leanbe\nSimplify the transition of your product ideas into market-ready solutions"
+  },
+  "/integrations/craft_io": {
+    "parent": "/integrations/customer-experience",
+    "text": "Craft.io\nConnect product planning in Craft.io with Linear issues"
+  },
+  "/integrations/dixa": {
+    "parent": "/integrations/customer-experience",
+    "text": "Dixa\nConnect your CS and product teams"
+  },
+  "/integrations/kraftful": {
+    "parent": "/integrations/customer-experience",
+    "text": "Kraftful\nTurn customer calls, surveys, reviews, and support tickets into Linear issues"
+  },
+  "/integrations/helium-rooms": {
+    "parent": "/integrations/customer-experience",
+    "text": "Helium Rooms\nShare Linear boards with clients"
+  },
+  "/integrations/unthread": {
+    "parent": "/integrations/customer-experience",
+    "text": "Unthread\nAutomatically track & resolve support tickets right from Slack using AI"
+  },
+  "/integrations/feedvote": {
+    "parent": "/integrations/customer-experience",
+    "text": "Feedvote\nTurn Linear into a client portal and public roadmap"
+  },
+  "/integrations/ducalis": {
+    "parent": "/integrations/customer-experience",
+    "text": "Ducalis\nPrioritize Linear backlog, capture and link user requests, and write changelog on autopilot"
+  },
+  "/integrations/atlas-support": {
+    "parent": "/integrations/customer-experience",
+    "text": "Atlas Support\nKeep a tight feedback loop with customers and streamline customer requests"
+  },
+  "/integrations/initdesk": {
+    "parent": "/integrations/customer-experience",
+    "text": "initdesk\nCreate and link Linear issues directly from initdesk tickets"
+  },
+  "/integrations/helpscout": {
+    "parent": "/integrations/customer-experience",
+    "text": "Help Scout\nUse Linear to track and manage issues without leaving Help Scout"
+  },
+  "/integrations/harvestr": {
+    "parent": "/integrations/customer-experience",
+    "text": "Harvestr\nTurn customer feedback into prioritized Linear issues"
+  },
+  "/integrations/buildbetter": {
+    "parent": "/integrations/customer-experience",
+    "text": "BuildBetter\nTurn customer insights into issues and close the loop"
+  },
+  "/integrations/survicate": {
+    "parent": "/integrations/customer-experience",
+    "text": "Survicate\nTurn customer feedback into Linear issues — without leaving your workflow."
+  },
+  "/integrations/dovetail": {
+    "parent": "/integrations/customer-experience",
+    "text": "Dovetail\nCreate and link issues from customer intelligence in Dovetail"
+  },
+  "/integrations/featurebase": {
+    "parent": "/integrations/customer-experience",
+    "text": "Featurebase\nAutomate feedback and feature request collection with public suggestion boards"
+  },
+  "/integrations/chatwoot": {
+    "parent": "/integrations/customer-experience",
+    "text": "Chatwoot\nCreate and link issues directly from your conversation window"
+  },
+  "/integrations/deskpro": {
+    "parent": "/integrations/customer-experience",
+    "text": "Deskpro\nManage your Linear issues and projects from Deskpro"
+  },
+  "/integrations/sparrowdesk": {
+    "parent": "/integrations/customer-experience",
+    "text": "SparrowDesk\nCreate and link Linear issues from SparrowDesk"
+  },
+  "/now/dashboards-best-practices": {
+    "parent": "/learn/insights-and-analytics",
+    "text": "these best practices"
+  },
+  "/now/how-we-built-triage-intelligence": {
+    "parent": "/now/author/yann-edern-gillet",
+    "text": "How we built Triage Intelligence\nYann-Edern Gillet, Matthijs Wolting·Sep 03, 2025"
+  },
+  "/changelog/2026-08-20-coding-environments": {
+    "parent": "/changelog",
+    "text": "Coding sessions: environments, browser use, and updated pricing"
+  },
+  "/changelog/2026-08-13-team-initiatives": {
+    "parent": "/changelog",
+    "text": "Team initiatives"
+  },
+  "/changelog/2026-07-30-coding-sessions-on-mobile": {
+    "parent": "/changelog",
+    "text": "Coding sessions on mobile"
+  },
+  "/changelog/2026-07-23-agent-assisted-editing": {
+    "parent": "/changelog",
+    "text": "Text attribution and agent-assisted editing"
+  },
+  "/changelog/2026-07-02-initiative-properties": {
+    "parent": "/changelog",
+    "text": "Initiative properties"
+  },
+  "/changelog/page/2": {
+    "parent": "/changelog",
+    "text": "Older updates"
+  },
+  "/now/author/romain-cascino": {
+    "parent": "/blog/how-we-redesigned-the-linear-ui",
+    "text": "Romain Cascino, Engineering"
+  },
+  "/now/author/tyler-black": {
+    "parent": "/now/why-and-how-scale-migrated-to-linear",
+    "text": "Tyler Black"
+  },
+  "/integrations/glean": {
+    "parent": "/integrations/collaboration",
+    "text": "Glean\n\nSearch Linear for instant insights"
+  },
+  "/integrations/range": {
+    "parent": "/integrations/collaboration",
+    "text": "Range\nPull Linear issues into async check-ins to keep your software development team in sync"
+  },
+  "/integrations/slab": {
+    "parent": "/integrations/collaboration",
+    "text": "Slab\nBuild a culture of knowledge-sharing"
+  },
+  "/integrations/roadmark": {
+    "parent": "/integrations/collaboration",
+    "text": "Roadmark\nTurn a Linear initiative into a roadmap you can share"
+  },
+  "/integrations/otter-ai": {
+    "parent": "/integrations/collaboration",
+    "text": "Otter.ai\nBring meeting insights into Linear Agent to turn discussions into actionable work"
+  },
+  "/integrations/tana": {
+    "parent": "/integrations/collaboration",
+    "text": "Tana\nTurn meeting discussions into Linear issues"
+  },
+  "/integrations/agiled": {
+    "parent": "/integrations/collaboration",
+    "text": "Agiled\nImport Linear projects, issues, and teams into Agiled with member matching"
+  },
+  "/integrations/approveit": {
+    "parent": "/integrations/collaboration",
+    "text": "Approveit\nTurn approved requests into Linear issues, and send Linear issues out for approval"
+  },
+  "/integrations/fillout": {
+    "parent": "/integrations/collaboration",
+    "text": "Fillout\nCreate Linear issues from a customizable intake form"
+  },
+  "/integrations/morgen": {
+    "parent": "/integrations/collaboration",
+    "text": "Morgen\nSchedule and time block your Linear issues in any calendar using Morgen"
+  },
+  "/integrations/next": {
+    "parent": "/integrations/collaboration",
+    "text": "NEXT\nCreates Linear issues with NEXT highlights as evidence"
+  },
+  "/integrations/cardinal": {
+    "parent": "/integrations/collaboration",
+    "text": "Cardinal\nFind feature specs (PRDs) and customer feedback to easily align and collaborate across teams"
+  },
+  "/integrations/teamplify": {
+    "parent": "/integrations/collaboration",
+    "text": "Teamplify\nAnalyze and improve your team collaboration, boost productivity"
+  },
+  "/integrations/kollabe": {
+    "parent": "/integrations/collaboration",
+    "text": "Kollabe\nEstimate Linear issues in Kollabe's Planning Poker"
+  },
+  "/integrations/read-ai": {
+    "parent": "/integrations/collaboration",
+    "text": "Read AI\nCreate issues directly from meetings with Read AI"
+  },
+  "/integrations/locu": {
+    "parent": "/integrations/collaboration",
+    "text": "Locu\nImport Linear issues into Locu"
+  },
+  "/integrations/commented": {
+    "parent": "/integrations/collaboration",
+    "text": "Commented\nCollect pinned feedback and collaborate intuitively on any web and mobile projects"
+  },
+  "/integrations/fellow": {
+    "parent": "/integrations/collaboration",
+    "text": "Fellow\nStreamline issue tracking in meeting agendas and notes"
+  },
+  "/integrations/lincal": {
+    "parent": "/integrations/collaboration",
+    "text": "LinCal\nPlan your work on a calendar with LinCal"
+  },
+  "/integrations/guru": {
+    "parent": "/integrations/collaboration",
+    "text": "Guru\nConnect Linear and Guru for instant, AI-powered answers"
+  },
+  "/integrations/planningpoker-live": {
+    "parent": "/integrations/collaboration",
+    "text": "PlanningPoker.live\nGet accurate estimates for your next sprint with PlanningPoker.live for Linear issues"
+  },
+  "/integrations/hotjar": {
+    "parent": "/integrations/collaboration",
+    "text": "Hotjar\nReport issues directly from Hotjar"
+  },
+  "/integrations/steelsync": {
+    "parent": "/integrations/collaboration",
+    "text": "SteelSync\nShare all your Linear information with private/public board views"
+  },
+  "/integrations/fireflies-ai": {
+    "parent": "/integrations/collaboration",
+    "text": "Fireflies.ai\nAutomatically create tasks in Linear from AI-generated meeting action items in Fireflies"
+  },
+  "/integrations/superlist": {
+    "parent": "/integrations/collaboration",
+    "text": "Superlist\nSee assigned issues from Linear in Superlist, get updates and see comments"
+  },
+  "/integrations/superduty": {
+    "parent": "/integrations/collaboration",
+    "text": "SuperDuty\nAutomatically assign SuperDuty member to triage"
+  },
+  "/integrations/timing": {
+    "parent": "/integrations/collaboration",
+    "text": "Timing\nTrack time spent on Linear issues from your Mac"
+  },
+  "/integrations/alignear": {
+    "parent": "/integrations/collaboration",
+    "text": "Alignear\nClient portal, automated cycle reports, AI agent, and client requests for Linear"
+  },
+  "/integrations/sunsama": {
+    "parent": "/integrations/collaboration",
+    "text": "Sunsama\nPull your Linear issues into your daily plan in Sunsama"
+  },
+  "/integrations/whimsical": {
+    "parent": "/integrations/collaboration",
+    "text": "Whimsical\nPreview Linear issues and projects in Whimsical files"
+  },
+  "/integrations/joyn": {
+    "parent": "/integrations/collaboration",
+    "text": "Joyn\nKeep track of product progress and automatically translate for customer-facing teams"
+  },
+  "/integrations/steady": {
+    "parent": "/integrations/collaboration",
+    "text": "Steady\nAutomatically include Linear activity in smart async check-ins"
+  },
+  "/integrations/one-horizon": {
+    "parent": "/integrations/collaboration",
+    "text": "One Horizon\nPull your Linear activity into One Horizon for daily recaps, team insights, and standups"
+  },
+  "/integrations/dailybot": {
+    "parent": "/integrations/collaboration",
+    "text": "DailyBot\nEffortless issue tracking for asynchronous daily stand-ups"
+  },
+  "/integrations/livecycle": {
+    "parent": "/integrations/collaboration",
+    "text": "Livecycle\nConnect your PR reviews with Linear"
+  },
+  "/integrations/clearfeed": {
+    "parent": "/integrations/collaboration",
+    "text": "ClearFeed\nConnect ClearFeed with Linear to efficiently manage and track issues from Slack"
+  },
+  "/integrations/usersnap": {
+    "parent": "/integrations/collaboration",
+    "text": "Usersnap\nCollect issues, ideas, surveys and streamline to Linear"
+  },
+  "/integrations/thena": {
+    "parent": "/integrations/collaboration",
+    "text": "Thena\nConnect Linear tickets to Thena requests and receive updates on status changes"
+  },
+  "/integrations/himala": {
+    "parent": "/integrations/collaboration",
+    "text": "himala\nAutomatically sync Linear issues to your meetings and update them from himala’s notes"
+  },
+  "/integrations/claap": {
+    "parent": "/integrations/collaboration",
+    "text": "Claap\nRecord bugs and directly create issues in Linear"
+  },
+  "/integrations/korl": {
+    "parent": "/integrations/collaboration",
+    "text": "Korl\nAuto-generate beautiful product presentations and updates from your project data in Linear"
+  },
+  "/integrations/teamoclock": {
+    "parent": "/integrations/collaboration",
+    "text": "Team O'clock\nEstimate Linear issues using planning poker, publish and sync Team O’clock retrospective action items in Linear"
+  },
+  "/integrations/parabol": {
+    "parent": "/integrations/collaboration",
+    "text": "Parabol\nConnect your workflow to Parabol meetings"
+  },
+  "/integrations/hypercontext": {
+    "parent": "/integrations/collaboration",
+    "text": "Hypercontext\nPreview Linear content in your meeting agendas"
+  },
+  "/integrations/screenpresso": {
+    "parent": "/integrations/collaboration",
+    "text": "Screenpresso\nEffectively report an issue with embedded screenshots and videos"
+  },
+  "/integrations/slite": {
+    "parent": "/integrations/collaboration",
+    "text": "Slite\nEmbed and preview issues, directly in Slite"
+  },
+  "/integrations/granola": {
+    "parent": "/integrations/collaboration",
+    "text": "Granola\nTurn meetings into action items automatically"
+  },
+  "/integrations/teamretro": {
+    "parent": "/integrations/collaboration",
+    "text": "TeamRetro\nAutomatically publish your TeamRetro action items as Linear issues"
+  },
+  "/integrations/float": {
+    "parent": "/integrations/collaboration",
+    "text": "Float\nPlan your team’s capacity each cycle with Float"
+  },
+  "/integrations/plandeck": {
+    "parent": "/integrations/collaboration",
+    "text": "Plandeck\nCross-team critical path from your Linear issues"
+  },
+  "/integrations/clay": {
+    "parent": "/integrations/collaboration",
+    "text": "Clay\nCreate and find issues directly from Clay"
+  },
+  "/integrations/userback": {
+    "parent": "/integrations/collaboration",
+    "text": "Userback\nGet visual feedback and bug reports from apps and websites directly in Linear"
+  },
+  "/integrations/gitbook": {
+    "parent": "/integrations/collaboration",
+    "text": "GitBook\nEmbed Linear issues directly in your GitBook documentation"
+  },
+  "/now/building-what-customers-need": {
+    "parent": "/now/designing-remote-work-at-linear",
+    "text": "build what customers need"
+  },
+  "/now/the-profitable-startup": {
+    "parent": "/now/designing-remote-work-at-linear",
+    "text": "Profitability"
+  },
+  "/integrations/datadog": {
+    "parent": "/integrations/engineering",
+    "text": "Datadog\n\nCreate Linear issues from Datadog Cases and Monitors"
+  },
+  "/integrations/retool": {
+    "parent": "/integrations/engineering",
+    "text": "Retool\nCreate, update, and analyze Linear issues in custom internal tools"
+  },
+  "/integrations/delvyn-studio": {
+    "parent": "/integrations/engineering",
+    "text": "Delvyn Studio\nTurn product vision, OKRs, and discovery into AI-ready specs"
+  },
+  "/integrations/deviera": {
+    "parent": "/integrations/engineering",
+    "text": "Deviera\nAutomatically turn engineering signals into Linear issues"
+  },
+  "/integrations/groundcover": {
+    "parent": "/integrations/engineering",
+    "text": "groundcover\nTurn alerts in groundcover into issues"
+  },
+  "/integrations/eodly": {
+    "parent": "/integrations/engineering",
+    "text": "Eodly\nCheck your team's daily updates against Linear activity"
+  },
+  "/integrations/better-stack": {
+    "parent": "/integrations/engineering",
+    "text": "Better Stack\nCreate Linear issues from incidents, errors and AI SRE investigations"
+  },
+  "/integrations/test-orchestrator": {
+    "parent": "/integrations/engineering",
+    "text": "TestOrchestrator\nLink, generate, and update test cases from Linear, with results posted back automatically"
+  },
+  "/integrations/appdeploy": {
+    "parent": "/integrations/engineering",
+    "text": "AppDeploy\nPublish real web apps directly from Linear"
+  },
+  "/integrations/all-quiet": {
+    "parent": "/integrations/engineering",
+    "text": "All Quiet\nCreate Linear issues from incidents reported from your website's monitoring and observability stack"
+  },
+  "/integrations/truto": {
+    "parent": "/integrations/engineering",
+    "text": "Truto\nBuild a customer-facing Linear integration 100x faster"
+  },
+  "/integrations/github-enterprise-cloud": {
+    "parent": "/integrations/engineering",
+    "text": "GitHub Enterprise Cloud\nAutomate your pull request and commit workflows and keep issues synced both ways"
+  },
+  "/integrations/warestack": {
+    "parent": "/integrations/engineering",
+    "text": "Warestack\nSend GitHub event updates into Linear as comments"
+  },
+  "/integrations/testmo": {
+    "parent": "/integrations/engineering",
+    "text": "Testmo\nManage software testing and link test results to Linear issues"
+  },
+  "/integrations/netlify": {
+    "parent": "/integrations/engineering",
+    "text": "Netlify\nShare, review, and manage feedback on your web projects"
+  },
+  "/integrations/triggerdotdev": {
+    "parent": "/integrations/engineering",
+    "text": "Trigger.dev\nFull control of Linear, directly from your codebase"
+  },
+  "/integrations/merge": {
+    "parent": "/integrations/engineering",
+    "text": "Merge\nAdd a Linear integration to your product with Merge"
+  },
+  "/integrations/runframe": {
+    "parent": "/integrations/engineering",
+    "text": "Runframe\nCreate issues from incidents and follow-up action items"
+  },
+  "/integrations/qodo": {
+    "parent": "/integrations/engineering",
+    "text": "Qodo\nAgentic AI for reviewing, testing, and generating code"
+  },
+  "/integrations/posthog": {
+    "parent": "/integrations/engineering",
+    "text": "PostHog\nCreate and link issues directly from PostHog"
+  },
+  "/integrations/test-management-by-testsigma": {
+    "parent": "/integrations/engineering",
+    "text": "Test Management by Testsigma\nAuto-detect cycles and generate traceable tests with AI"
+  },
+  "/integrations/aldena": {
+    "parent": "/integrations/engineering",
+    "text": "Aldena\nTurn issues into pull requests with a team of AI agents"
+  },
+  "/integrations/iterationx": {
+    "parent": "/integrations/engineering",
+    "text": "Iteration X\nCreate new bug reports directly from your browser"
+  },
+  "/integrations/spike": {
+    "parent": "/integrations/engineering",
+    "text": "Spike\nSync incidents, statuses, and comments between Spike and Linear"
+  },
+  "/integrations/todo-comments": {
+    "parent": "/integrations/engineering",
+    "text": "Todo comments for Linear\nCreate, track, link and reference tasks right from your code comments"
+  },
+  "/integrations/testomat": {
+    "parent": "/integrations/engineering",
+    "text": "Testomat\nTest management process centralized in one place, manual and automated"
+  },
+  "/integrations/pagerly": {
+    "parent": "/integrations/engineering",
+    "text": "Pagerly\nManage triage responsibility directly in Linear with Slack Round Robin Rotations"
+  },
+  "/integrations/shake": {
+    "parent": "/integrations/engineering",
+    "text": "Shake\nGet detailed issue reports from your app directly to Linear"
+  },
+  "/integrations/runway": {
+    "parent": "/integrations/engineering",
+    "text": "Runway\nManage and automate your team's mobile releases"
+  },
+  "/integrations/pensar": {
+    "parent": "/integrations/engineering",
+    "text": "Pensar\nSync issues directly from Pensar"
+  },
+  "/integrations/axolo": {
+    "parent": "/integrations/engineering",
+    "text": "Axolo\nMake code reviews easier by syncing your pull request channels with your Linear issues"
+  },
+  "/integrations/specbot": {
+    "parent": "/integrations/engineering",
+    "text": "SpecBot\nQuality gates for human and AI-created Linear issues"
+  },
+  "/integrations/testiny": {
+    "parent": "/integrations/engineering",
+    "text": "Testiny\nManage tests and link Linear issues as defects or requirements to test cases, results or runs"
+  },
+  "/integrations/spades": {
+    "parent": "/integrations/engineering",
+    "text": "Spades\nEstimate issue effort as a team"
+  },
+  "/integrations/coderabbit": {
+    "parent": "/integrations/engineering",
+    "text": "CodeRabbit\nAI code reviews"
+  },
+  "/integrations/kualitee": {
+    "parent": "/integrations/engineering",
+    "text": "Kualitee\nKeep your teams in sync by connecting Linear and Kualitee issues"
+  },
+  "/integrations/modem": {
+    "parent": "/integrations/engineering",
+    "text": "Modem\nCreate issues from customer feedback"
+  },
+  "/now/author/kenneth-skovhus": {
+    "parent": "/now/styling-linear-for-the-future-stylex",
+    "text": "Kenneth Skovhus"
+  },
+  "/now/behind-the-latest-design-refresh": {
+    "parent": "/now/styling-linear-for-the-future-stylex",
+    "text": "redesign"
+  },
+  "/now/linear-agent-bug-fix": {
+    "parent": "/now",
+    "text": "Teaching an agent to auto-fix bugs\nSome bugs at Linear now get fixed before a single engineer picks them up. Igor has been teaching Linear Agent to catch them in triage and ship the fix on its own.\nIgor Sechyn\n·\nJun 12, 2026\n→"
+  },
+  "/now/reviewing-code-in-the-agent-era": {
+    "parent": "/now",
+    "text": "Reviewing code in the agent era\nAgentic coding has puts real pressure on review. One of our engineers shares how he uses Linear Diffs to hold his bar high without drowning in pull requests.\nMaciek Pekala\n·\nJun 10, 2026\n→"
+  },
+  "/now/output-isn-t-design": {
+    "parent": "/now",
+    "text": "Output isn’t design\nDesign keeps being misunderstood in our industry. New tools keep promising to generate interfaces faster, move words to product instantly, or collapse design directly into code. The assumption behind them is clear: that design is the act of producing.\nKarri Saarinen\n·\nApr 17, 2026\n→"
+  },
+  "/now/how-we-use-linear-agent-at-linear": {
+    "parent": "/now",
+    "text": "How we use Linear Agent at Linear\nRhea Purohit·Apr 10, 2026"
+  },
+  "/now/linear-incident-on-mar-24th-2026": {
+    "parent": "/now",
+    "text": "Post mortem on Linear security incident on March 24th, 2026\nJamie Finnigan·Apr 06, 2026"
+  },
+  "/now/design-is-more-than-code": {
+    "parent": "/now",
+    "text": "Design is more than code\nKarri Saarinen·Dec 19, 2025"
+  },
+  "/now/linear-liquid-glass": {
+    "parent": "/now",
+    "text": "A Linear spin on Liquid Glass\nRobb Böhnke·Oct 21, 2025"
+  },
+  "/now/author/matthijs-wolting": {
+    "parent": "/now/how-we-built-linear-agent",
+    "text": "Matthijs Wolting"
+  },
+  "/integrations/replit": {
+    "parent": "/integrations",
+    "text": "Replit\nBy Replit\nBuild Apps & Automations"
+  },
+  "/integrations/fivetran": {
+    "parent": "/integrations",
+    "text": "Fivetran\nBy Fivetran\nSync your Linear data with the Fivetran connector"
+  },
+  "/integrations/supernormal": {
+    "parent": "/integrations",
+    "text": "Supernormal\nBy Supernormal\nGo from discussion to Linear issues in seconds"
+  },
+  "/integrations/security-and-compliance": {
+    "parent": "/integrations",
+    "text": "Security & Compliance"
+  },
+  "/integrations/fencer": {
+    "parent": "/integrations",
+    "text": "Fencer\nBy Fencer\nCreate and link issues directly from Fencer"
+  },
+  "/integrations/secureslate": {
+    "parent": "/integrations",
+    "text": "SecureSlate\nBy SecureSlate\nCreate and link SecureSlate security tickets to Linear"
+  },
+  "/integrations/vanta": {
+    "parent": "/integrations",
+    "text": "Vanta\nBy Vanta\nAutomate compliance. Simplify security. Demonstrate trust."
+  },
+  "/integrations/kawach-ai": {
+    "parent": "/integrations",
+    "text": "Kawach AI\nBy Kreeti Technologies\nKeep your workspace compliant with org policies using Kawach.AI"
+  },
+  "/integrations/drata": {
+    "parent": "/integrations",
+    "text": "Drata\nBy Drata\nSimplify risk and managing frameworks like SOC 2, ISO 27001, PCI and more"
+  },
+  "/integrations/simplebackups": {
+    "parent": "/integrations",
+    "text": "SimpleBackups\nBy SimpleBackups\nNever lose an issue, project, or cycle"
+  },
+  "/integrations/analytics": {
+    "parent": "/integrations",
+    "text": "Analytics"
+  },
+  "/integrations/airbyte": {
+    "parent": "/integrations",
+    "text": "Airbyte\nBy Linear\nConnect Linear to Airbyte and consolidate data in data warehouses, lakes, and databases"
+  },
+  "/integrations/span": {
+    "parent": "/integrations",
+    "text": "Span\nBy Span\nSee how work translates into engineering impact"
+  },
+  "/integrations/jellyfish": {
+    "parent": "/integrations",
+    "text": "Jellyfish\nBy Jellyfish\nDeveloper productivity insights and AI impact signals in one dashboard"
+  },
+  "/integrations/tella": {
+    "parent": "/integrations",
+    "text": "Tella\nBy Tella\nEmbed Tella videos in Linear"
+  },
+  "/now/how-we-built-project-updates": {
+    "parent": "/now/author/andreas-eldh",
+    "text": "How we built Project Updates\nAndreas Eldh·Aug 10, 2022"
+  },
+  "/now/invisible-details": {
+    "parent": "/now/author/andreas-eldh",
+    "text": "Invisible details - Building contextual menus\nAndreas Eldh·Sep 17, 2020"
+  },
+  "/now/design-for-the-ai-age": {
+    "parent": "/now/author/karri-saarinen",
+    "text": "Design for the AI age\nKarri Saarinen·Apr 07, 2025"
+  },
+  "/now/descript-internal-guide-for-using-linear": {
+    "parent": "/now/author/karri-saarinen",
+    "text": "Descript’s internal guide for using Linear as your work operating system\nKarri Saarinen·Jan 31, 2024"
+  },
+  "/now/welcoming-cristina-cordova-to-linear": {
+    "parent": "/now/author/karri-saarinen",
+    "text": "Welcoming Cristina Cordova to Linear\nKarri Saarinen·May 23, 2023"
+  },
+  "/now/fast-growing-startups-are-built-on-linear": {
+    "parent": "/now/author/karri-saarinen",
+    "text": "Fast growing startups are built on Linear\nKarri Saarinen·Jun 29, 2021"
+  },
+  "/now/building-at-the-early-stage": {
+    "parent": "/now/author/karri-saarinen",
+    "text": "Building at the early stage\nKarri Saarinen·Jan 21, 2021"
+  },
+  "/now/practices-for-building-linear-is-now-open-for-all": {
+    "parent": "/now/author/karri-saarinen",
+    "text": "Practices for Building — Linear is now open for all\nKarri Saarinen·Jun 30, 2020"
+  },
+  "/now/startups-write-changelogs": {
+    "parent": "/now/author/karri-saarinen",
+    "text": "Startups, Write Changelogs\nKarri Saarinen·May 18, 2020"
+  },
+  "/now/linear-s-next-chapter-announcing-our-usd4-2m-seed-round": {
+    "parent": "/now/author/karri-saarinen",
+    "text": "Linear’s Next Chapter: Announcing our $4.2M Seed Round\nKarri Saarinen·Nov 21, 2019"
+  },
+  "/now/linear-2021-wrapped": {
+    "parent": "/now/author/julian-lehr",
+    "text": "Linear – 2021 Wrapped\nJulian Lehr·Dec 17, 2021"
+  },
+  "/integrations/dust": {
+    "parent": "/integrations/ai-clients",
+    "text": "Dust\nBuild AI workflows with Linear issues"
+  },
+  "/integrations/google-adk": {
+    "parent": "/integrations/ai-clients",
+    "text": "ADK\nConnect your Google ADK agents to Linear"
+  },
+  "/integrations/cleanslate": {
+    "parent": "/integrations/ai-clients",
+    "text": "CleanSlate\nSearch, create, update, and discuss Linear issues with CleanSlate agents"
+  },
+  "/integrations/lovable-mcp": {
+    "parent": "/integrations/ai-clients",
+    "text": "Lovable MCP\nBuild and deploy apps from Linear with Lovable"
+  },
+  "/integrations/hookshot-proteges": {
+    "parent": "/integrations/ai-clients",
+    "text": "Hookshot Proteges\nDeploy production agents your team can trust and audit"
+  },
+  "/integrations/tusk": {
+    "parent": "/integrations/ai-clients",
+    "text": "Tusk\nGenerate unit tests with AI using Linear issues as context"
+  },
+  "/integrations/jules-mcp": {
+    "parent": "/integrations/ai-clients",
+    "text": "Jules MCP\nConnect Jules to the Linear MCP server"
+  },
+  "/integrations/spellar-ai": {
+    "parent": "/integrations/ai-clients",
+    "text": "Spellar AI\nExport tasks from your meetings with one click in Spellar"
+  },
+  "/integrations/agno": {
+    "parent": "/integrations/ai-clients",
+    "text": "Agno\nBuild lightning-fast, multi-modal Reasoning Agents"
+  },
+  "/integrations/producta": {
+    "parent": "/integrations/ai-clients",
+    "text": "Producta\nAI to automate solving your issues"
+  },
+  "/integrations/postman-agent-mode": {
+    "parent": "/integrations/ai-clients",
+    "text": "Postman Agent Mode\nCreate, update, and query Linear issues from Postman Agent Mode"
+  },
+  "/integrations/type": {
+    "parent": "/integrations/ai-clients",
+    "text": "Type\nBuild collaborative AI automations with Claude or Codex"
+  },
+  "/integrations/systemprompt": {
+    "parent": "/integrations/ai-clients",
+    "text": "Systemprompt.io\nManage MCP servers from your mobile"
+  },
+  "/integrations/rize-ai": {
+    "parent": "/integrations/ai-clients",
+    "text": "Rize AI Time Tracker\nAutomatically track time to Linear task and projects"
+  },
+  "/integrations/attio-agents": {
+    "parent": "/integrations/ai-clients",
+    "text": "Attio Agents\nConnect Attio Agents to the Linear MCP Server"
+  },
+  "/integrations/apx": {
+    "parent": "/integrations/ai-clients",
+    "text": "APX\nDetect and fix issues in DataDog and Postgres with AI agents"
+  },
+  "/integrations/alkemi": {
+    "parent": "/integrations/ai-clients",
+    "text": "Alkemi\nGet insight into product and engineering progress with Alkemi"
+  },
+  "/integrations/notion-agent": {
+    "parent": "/integrations/ai-clients",
+    "text": "Notion Custom Agents\nConnect Notion Custom Agents to the Linear MCP Server"
+  },
+  "/integrations/super": {
+    "parent": "/integrations/ai-clients",
+    "text": "Super\nTurn Linear data into instant answers & AI agents for your whole team"
+  },
+  "/integrations/lovable": {
+    "parent": "/integrations/ai-clients",
+    "text": "Lovable\nBuild apps from your Linear issues"
+  },
+  "/integrations/graph": {
+    "parent": "/integrations/ai-clients",
+    "text": "Graph\nThe AI client for Engineering teams"
+  },
+  "/integrations/builder-io-mcp": {
+    "parent": "/integrations/ai-clients",
+    "text": "Builder.io MCP Server\nConnect Builder.io to the Linear MCP server"
+  },
+  "/integrations/11ai": {
+    "parent": "/integrations/ai-clients",
+    "text": "11.ai\nThe voice first personal assistant powered by MCP"
+  },
+  "/integrations/contextstream": {
+    "parent": "/integrations/ai-clients",
+    "text": "ContextStream\nPersistent project memory for AI coding agents"
+  },
+  "/integrations/arc": {
+    "parent": "/integrations/bug-reporting",
+    "text": "Arc\nCreate new issues right from your browser command bar"
+  },
+  "/integrations/qa-sphere": {
+    "parent": "/integrations/bug-reporting",
+    "text": "QA Sphere\nCreate and link issues from QA Sphere test results"
+  },
+  "/integrations/currents": {
+    "parent": "/integrations/bug-reporting",
+    "text": "Currents\nReport failing tests from Currents as Linear issues"
+  },
+  "/integrations/huddlekit": {
+    "parent": "/integrations/bug-reporting",
+    "text": "Huddlekit\nTurn client comments on your live website into Linear issues, with status synced both ways"
+  },
+  "/integrations/subtext": {
+    "parent": "/integrations/bug-reporting",
+    "text": "Subtext\nTriage issues with evidence from real user sessions"
+  },
+  "/integrations/sleekplan": {
+    "parent": "/integrations/bug-reporting",
+    "text": "Sleekplan\nTurn Sleekplan customer feedback into Linear issues with two-way status sync"
+  },
+  "/integrations/ybug": {
+    "parent": "/integrations/bug-reporting",
+    "text": "Ybug\nTurn visual website feedback into ready-to-triage Linear issues"
+  },
+  "/integrations/betterbugs": {
+    "parent": "/integrations/bug-reporting",
+    "text": "BetterBugs\nA visual bug-reporting browser extension that integrates with Linear"
+  },
+  "/integrations/talkthrough": {
+    "parent": "/integrations/bug-reporting",
+    "text": "TalkThrough\nVoice and drawing-driven notation tool"
+  },
+  "/integrations/testdino": {
+    "parent": "/integrations/bug-reporting",
+    "text": "TestDino\nRaise Issues & Bugs from TestDino to Linear"
+  },
+  "/integrations/bugherd": {
+    "parent": "/integrations/bug-reporting",
+    "text": "BugHerd\nMake it easy for your clients and team to report bugs and mark up changes for their website"
+  },
+  "/integrations/lay": {
+    "parent": "/integrations/bug-reporting",
+    "text": "Lay\nCollect feedback on any UI element and create Linear issues from it"
+  },
+  "/integrations/supercut": {
+    "parent": "/integrations/bug-reporting",
+    "text": "Supercut\nTurn Supercut recordings into Linear issues"
+  },
+  "/integrations/flare": {
+    "parent": "/integrations/bug-reporting",
+    "text": "Flare\nAutomatically link Linear issues with Flare errors and keep them in sync"
+  },
+  "/integrations/capture-dev": {
+    "parent": "/integrations/bug-reporting",
+    "text": "Capture.dev\nCapture feedback and bugs from your website and send them to Linear"
+  },
+  "/integrations/testcollab": {
+    "parent": "/integrations/bug-reporting",
+    "text": "TestCollab\nSync TestCollab defects with Linear issues"
+  },
+  "/integrations/feedbucket": {
+    "parent": "/integrations/bug-reporting",
+    "text": "Feedbucket\nSubmit website feedback straight into Linear"
+  },
+  "/integrations/laravel-nightwatch": {
+    "parent": "/integrations/bug-reporting",
+    "text": "Laravel Nightwatch\nCreate and link Linear issues directly from Nightwatch"
+  },
+  "/integrations/testmu-ai": {
+    "parent": "/integrations/bug-reporting",
+    "text": "TestMu AI\nOne-click bug logging from TestMu AI to your Linear projects"
+  },
+  "/integrations/testlodge": {
+    "parent": "/integrations/bug-reporting",
+    "text": "TestLodge\nAutomatically create issues in Linear whenever a test fails"
+  },
+  "/integrations/reflect": {
+    "parent": "/integrations/bug-reporting",
+    "text": "Reflect\nCreate automated end-to-end tests for your web application"
+  },
+  "/integrations/canva-connector": {
+    "parent": "/integrations/media-and-design",
+    "text": "Canva AI Connector\nCreate and link Linear workflow content directly within Canva"
+  },
+  "/now/author/peter-travers": {
+    "parent": "/now/rebuilding-delta-sync-read-path",
+    "text": "Peter Travers"
+  },
+  "/integrations/nexupira": {
+    "parent": "/integrations/automations",
+    "text": "NEXUPIRA\n\nConnect Linear so NEXUPIRA's AI agents can create, update, search, and comment on issues"
+  },
+  "/integrations/ifttt": {
+    "parent": "/integrations/automations",
+    "text": "IFTTT\nConnect Linear to 1000+ apps and devices, no code required"
+  },
+  "/integrations/lineguard": {
+    "parent": "/integrations/automations",
+    "text": "LineGuard\nEnforce required fields and process rules on every issue change"
+  },
+  "/integrations/unito": {
+    "parent": "/integrations/automations",
+    "text": "Unito\n2-way sync between Linear and HubSpot, Salesforce, ServiceNow, GitLab, Jira & more"
+  },
+  "/integrations/shipam": {
+    "parent": "/integrations/automations",
+    "text": "Shipam\nTurn completed Linear projects and cycles into launch-page drafts"
+  },
+  "/integrations/tactiq": {
+    "parent": "/integrations/automations",
+    "text": "Tactiq\nAutomatically create detailed Linear issues from meeting transcripts"
+  },
+  "/integrations/viasocket": {
+    "parent": "/integrations/automations",
+    "text": "viaSocket\nAutomate creating and updating projects and issues"
+  },
+  "/integrations/jotform": {
+    "parent": "/integrations/automations",
+    "text": "Jotform\nTurn Jotform submissions, signed documents, and workflow activity into Linear issues"
+  },
+  "/integrations/harvest": {
+    "parent": "/integrations/automations",
+    "text": "Harvest\nCreate Harvest time entries for your issues without having to switch apps"
+  },
+  "/integrations/integrately": {
+    "parent": "/integrations/automations",
+    "text": "Integrately\nBuild automated workflows to create, search and update Linear issues"
+  },
+  "/integrations/capybara": {
+    "parent": "/integrations/automations",
+    "text": "Capybara\nCreate Linear issues and comments based on Jira tasks"
+  },
+  "/integrations/monkedo": {
+    "parent": "/integrations/automations",
+    "text": "Monkedo\nIntegrate over 400 popular apps by connecting Monkedo to Linear"
+  },
+  "/integrations/tally": {
+    "parent": "/integrations/automations",
+    "text": "Tally\nCreate issues in Linear for new Tally form submissions"
+  },
+  "/integrations/required": {
+    "parent": "/integrations/automations",
+    "text": "Required\nEstablish required fields to move issues through your Linear workflow"
+  },
+  "/integrations/latenode": {
+    "parent": "/integrations/automations",
+    "text": "Latenode\nConnect Linear with Latenode for enhanced workflow automation"
+  },
+  "/integrations/suretriggers": {
+    "parent": "/integrations/automations",
+    "text": "SureTriggers\nSeamlessly connect your apps and services to automate repetitive tasks using SureTriggers"
+  },
+  "/integrations/langsmith-agent-builder": {
+    "parent": "/integrations/automations",
+    "text": "LangSmith Agent Builder\nCreate an AI agent that uses Linear"
+  },
+  "/integrations/quicktion": {
+    "parent": "/integrations/automations",
+    "text": "Quicktion\nQuicktion turns forwarded emails into Linear issues"
+  },
+  "/integrations/n8n": {
+    "parent": "/integrations/automations",
+    "text": "n8n\nBuild workflows that automatically manage your issues"
+  },
+  "/integrations/jet-admin": {
+    "parent": "/integrations/automations",
+    "text": "Jet Admin\nNo-Code Web App Builder"
+  },
+  "/integrations/circleback": {
+    "parent": "/integrations/automations",
+    "text": "Circleback\nAutomatically create Linear issues from meeting action items"
+  },
+  "/integrations/traqq": {
+    "parent": "/integrations/automations",
+    "text": "Traqq\nTrack time in Linear with Traqq"
+  },
+  "/integrations/snoozethis": {
+    "parent": "/integrations/automations",
+    "text": "SnoozeThis\nSnoozeThis is a bot that holds on to your blocked issues"
+  },
+  "/integrations/make": {
+    "parent": "/integrations/automations",
+    "text": "Make\nConnect Linear with over 1,900 SaaS tools to automate business workflows"
+  },
+  "/integrations/lindy": {
+    "parent": "/integrations/automations",
+    "text": "Lindy\nAutomate your Linear workflows with AI"
+  },
+  "/integrations/formcrafts": {
+    "parent": "/integrations/automations",
+    "text": "Formcrafts\nCreate issues in Linear using powerful intake forms"
+  }
+}

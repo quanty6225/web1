@@ -1,0 +1,3 @@
+@charset "UTF-8";
+@layer reset, base, app.base;
+.shFOAG_wrapper{width:100%;height:100%;position:relative;overflow:hidden}.shFOAG_cursor,.shFOAG_cursorSmall{border-radius:var(--radius-full);background:#101213;width:4px;height:24px;position:absolute}.shFOAG_cursor{top:17%;left:20%}.shFOAG_cursorSmall{top:12.5%;left:12.5%}

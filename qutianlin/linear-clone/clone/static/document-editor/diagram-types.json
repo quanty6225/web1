@@ -1,0 +1,22 @@
+[
+  "flowchart",
+  "flowchart-v2",
+  "sequence",
+  "class",
+  "classDiagram",
+  "stateDiagram",
+  "er",
+  "journey",
+  "gantt",
+  "pie",
+  "quadrantChart",
+  "requirement",
+  "gitGraph",
+  "timeline",
+  "sankey",
+  "xychart",
+  "block",
+  "packet",
+  "kanban",
+  "c4"
+]

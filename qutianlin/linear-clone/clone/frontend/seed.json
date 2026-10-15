@@ -1,0 +1,54 @@
+[
+  {
+    "id": "QQQ-1",
+    "title": "Get familiar with Linear",
+    "description": "Welcome to Linear!\u00a0Watch an introductory video and access a list of resources below.Elapsed00:00Duration03:590.25\u00d70.5\u00d70.75\u00d71\u00d71.25\u00d71.5\u00d71.75\u00d72\u00d7Choose your setup guide based on your company stage:Small teams\u200bFor early-stage startups and projectsStartups & mid-size companies\u200bFor growing teams with cross-functional needsLarge & scaling companies\u200bFor enterprise and high-growth teams with complex workflowsNeed help getting started?Join our Slack community\u200bConnect with other Linear users and get tipsJoin a live onboarding session\u200bLearn the essentials and see demos of core workflowsIf you have any questions hit ? in the bottom left > Contact us.",
+    "status": "Todo",
+    "priority": "No priority",
+    "assignee": null,
+    "labels": [],
+    "project": null,
+    "comments": [],
+    "subissues": [],
+    "source": "run/capture/linear-20261013T123700Z/auth/070971318e099926.json"
+  },
+  {
+    "id": "QQQ-4",
+    "title": "Set up your teams",
+    "description": "This workspace is a container for your organization\u2019s work.\u00a0Learn more about Workspaces\u200bHow to configure settings and workflows\u00a0Teams are how you organize people and work in Linear.Learn about Teams\u200bHow to structure teams and configure workflowsTeams are made of members with defined roles (Admin, Member, Guest).Learn more about Members\u200bAdd your team and assign rolesReady to add your team? Invite via CSV or a unique link in settings.",
+    "status": "Todo",
+    "priority": "No priority",
+    "assignee": null,
+    "labels": [],
+    "project": null,
+    "comments": [],
+    "subissues": [],
+    "source": "run/capture/linear-20261013T123700Z/auth/dc0deb683ca18672.json"
+  },
+  {
+    "id": "QQQ-2",
+    "title": "Connect your tools",
+    "description": "Integrations turn Linear into your source of truth around product development. Keep data in sync, and eliminate manual updates between tools.Key integrationsSlack\u200bCreate issues from Slack messages and sync threadsGitHub / GitLab\u200bAutomate your pull request, commit workflows, and keep issues synced both waysAgents\u200bDeploy AI agents that work alongside you as teammatesBrowse all integrationsDiscover 150+ available connections in our integration directory \u2013 from bug creation via support tools (Intercom, Zendesk), to issues created from design explorations (Figma).Linear APIIf you need something more custom, you can build directly on the Linear API (built on GraphQL). See our Dev Docs to learn more.",
+    "status": "Todo",
+    "priority": "No priority",
+    "assignee": null,
+    "labels": [],
+    "project": null,
+    "comments": [],
+    "subissues": [],
+    "source": "run/capture/linear-20261013T123700Z/auth/999ccccbf4dc12e5.json"
+  },
+  {
+    "id": "QQQ-3",
+    "title": "Import your data",
+    "description": "Sync data between Linear and your other tools.Whether you're exploring Linear, running a pilot, or ready for full migration, we\u2019ve got you covered.\u00a0Exploring Linear:Pitch Linear\u200bBuild your business case and get organizational buy-inRun a pilot\u200bTest Linear with a small team before rolling out company-wideReady to migrate:Migration guide \u200bStep-by-step process for importing data and rolling out LinearIf you have any questions hit ? in the bottom left > Contact us.",
+    "status": "Todo",
+    "priority": "No priority",
+    "assignee": null,
+    "labels": [],
+    "project": null,
+    "comments": [],
+    "subissues": [],
+    "source": "run/capture/linear-20261013T123700Z/auth-retry/58c26ec40b777699.json"
+  }
+]

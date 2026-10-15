@@ -1,0 +1,307 @@
+[
+  {
+    "id": "bash",
+    "aliases": [
+      "bash"
+    ],
+    "name": "Bash"
+  },
+  {
+    "id": "csharp",
+    "aliases": [
+      "cs",
+      "csharp"
+    ],
+    "name": "C#"
+  },
+  {
+    "id": "cpp",
+    "aliases": [
+      "cpp"
+    ],
+    "name": "C++"
+  },
+  {
+    "id": "scss",
+    "aliases": [
+      "css",
+      "scss"
+    ],
+    "name": "CSS"
+  },
+  {
+    "id": "clojure",
+    "aliases": [
+      "clj",
+      "clojure"
+    ],
+    "name": "Clojure"
+  },
+  {
+    "id": "cypher",
+    "aliases": [
+      "cypher",
+      "cql",
+      "neo4j"
+    ],
+    "name": "Cypher"
+  },
+  {
+    "id": "dart",
+    "aliases": [
+      "dart"
+    ],
+    "name": "Dart"
+  },
+  {
+    "id": "diff",
+    "aliases": [
+      "diff"
+    ],
+    "name": "Diff"
+  },
+  {
+    "id": "elixir",
+    "aliases": [
+      "elixir"
+    ],
+    "name": "Elixir"
+  },
+  {
+    "id": "excel",
+    "aliases": [
+      "excel",
+      "xls",
+      "xlsx"
+    ],
+    "name": "Excel"
+  },
+  {
+    "id": "golang",
+    "aliases": [
+      "go",
+      "golang"
+    ],
+    "name": "Golang"
+  },
+  {
+    "id": "graphql",
+    "aliases": [
+      "graphql",
+      "gql"
+    ],
+    "name": "GraphQL"
+  },
+  {
+    "id": "html",
+    "aliases": [
+      "html"
+    ],
+    "name": "HTML"
+  },
+  {
+    "id": "haskell",
+    "aliases": [
+      "hs",
+      "haskell"
+    ],
+    "name": "Haskell"
+  },
+  {
+    "id": "json",
+    "aliases": [
+      "json"
+    ],
+    "name": "JSON"
+  },
+  {
+    "id": "java",
+    "aliases": [
+      "java"
+    ],
+    "name": "Java"
+  },
+  {
+    "id": "javascript",
+    "aliases": [
+      "js",
+      "jsx",
+      "javascript"
+    ],
+    "name": "JavaScript"
+  },
+  {
+    "id": "kotlin",
+    "aliases": [
+      "kt",
+      "kotlin"
+    ],
+    "name": "Kotlin"
+  },
+  {
+    "id": "makefile",
+    "aliases": [
+      "makefile"
+    ],
+    "name": "Makefile"
+  },
+  {
+    "id": "markdown",
+    "aliases": [
+      "md",
+      "markdown"
+    ],
+    "name": "Markdown"
+  },
+  {
+    "id": "ocaml",
+    "aliases": [
+      "ocaml"
+    ],
+    "name": "OCaml"
+  },
+  {
+    "id": "php",
+    "aliases": [
+      "php"
+    ],
+    "name": "PHP"
+  },
+  {
+    "id": "perl",
+    "aliases": [
+      "pl",
+      "perl"
+    ],
+    "name": "Perl"
+  },
+  {
+    "id": "plaintext",
+    "aliases": [
+      "plaintext",
+      "txt",
+      "text"
+    ],
+    "name": "Plaintext"
+  },
+  {
+    "id": "protobuf",
+    "aliases": [
+      "protobuf",
+      "proto"
+    ],
+    "name": "Protocol Buffers"
+  },
+  {
+    "id": "python",
+    "aliases": [
+      "py",
+      "python"
+    ],
+    "name": "Python"
+  },
+  {
+    "id": "r",
+    "aliases": [
+      "r"
+    ],
+    "name": "R"
+  },
+  {
+    "id": "rescript",
+    "aliases": [
+      "res",
+      "resi"
+    ],
+    "name": "ReScript"
+  },
+  {
+    "id": "reasonml",
+    "aliases": [
+      "re"
+    ],
+    "name": "ReasonML"
+  },
+  {
+    "id": "ruby",
+    "aliases": [
+      "ruby",
+      "rb"
+    ],
+    "name": "Ruby"
+  },
+  {
+    "id": "rust",
+    "aliases": [
+      "rs",
+      "rust"
+    ],
+    "name": "Rust"
+  },
+  {
+    "id": "sql",
+    "aliases": [
+      "sql"
+    ],
+    "name": "SQL"
+  },
+  {
+    "id": "swift",
+    "aliases": [
+      "swift"
+    ],
+    "name": "Swift"
+  },
+  {
+    "id": "verilog",
+    "aliases": [
+      "verilog",
+      "systemverilog",
+      "sv",
+      "svh",
+      "v"
+    ],
+    "name": "SystemVerilog"
+  },
+  {
+    "id": "toml",
+    "aliases": [
+      "toml",
+      "ini"
+    ],
+    "name": "TOML"
+  },
+  {
+    "id": "terraform",
+    "aliases": [
+      "terraform",
+      "tf",
+      "hcl"
+    ],
+    "name": "Terraform"
+  },
+  {
+    "id": "typescript",
+    "aliases": [
+      "typescript",
+      "ts",
+      "tsx"
+    ],
+    "name": "TypeScript"
+  },
+  {
+    "id": "xml",
+    "aliases": [
+      "xml"
+    ],
+    "name": "XML"
+  },
+  {
+    "id": "yaml",
+    "aliases": [
+      "yaml",
+      "yml"
+    ],
+    "name": "YAML"
+  }
+]

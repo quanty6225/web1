@@ -1,0 +1,5 @@
+@charset "UTF-8";
+@layer reset, base, app.base;
+@charset "UTF-8";
+@layer reset, base, app.base;
+.Rhmh0G_outer{max-width:var(--homepage-max-width);padding-inline:var(--homepage-outer-padding);width:100%;margin-inline:auto}.Rhmh0G_inner{max-width:var(--homepage-max-width);width:100%;margin-inline:auto}.Rhmh0G_description{display:inline-block}@media (max-width:1280px){.Rhmh0G_description{max-width:378px}}@media (max-width:768px){.Rhmh0G_description{max-width:320px}}.Rhmh0G_media{max-width:var(--homepage-max-width);padding-inline:var(--homepage-outer-padding);margin-inline:auto}@media (max-width:768px){.Rhmh0G_media{padding-inline:0}.Rhmh0G_media *{border-radius:0!important}}@media (max-width:1280px){.Rhmh0G_descriptionRow{align-items:baseline}}@media (max-width:1024px){.Rhmh0G_descriptionRow{flex-direction:column;align-items:flex-start;gap:20px}}

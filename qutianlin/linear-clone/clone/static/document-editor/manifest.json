@@ -1,0 +1,9 @@
+{
+  "source_capture": "run/capture/linear-issue-extra-forms-20261013T200155Z/000.html",
+  "source_route_family": "/qqq153/document/:id",
+  "fields": [
+    "Document title",
+    "Document content"
+  ],
+  "writes": "blocked during source observation"
+}

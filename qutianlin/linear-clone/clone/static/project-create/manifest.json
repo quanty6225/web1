@@ -1,0 +1,13 @@
+{
+  "source_capture_ids": [
+    "linear-empty-forms-20261013T171045Z",
+    "linear-project-branches-20261013T173053Z"
+  ],
+  "source_route": "/qqq153/projects/all",
+  "icons": 182,
+  "components": [
+    "Create project",
+    "Create milestone",
+    "Choose icon"
+  ]
+}

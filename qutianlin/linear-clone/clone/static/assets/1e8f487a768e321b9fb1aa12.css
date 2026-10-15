@@ -1,0 +1,3 @@
+@charset "UTF-8";
+@layer reset, base, app.base;
+.XB4soq_input{-webkit-appearance:none;appearance:none;border:1px solid var(--color-border-translucent);background:var(--color-bg-translucent);width:100%;height:40px;caret-color:var(--color-brand-bg);border-radius:8px;outline:none;padding:0 10px;font-size:14px;line-height:21px}.XB4soq_input::placeholder{-webkit-user-select:none;user-select:none;color:var(--color-text-tertiary)}.XB4soq_input:placeholder-shown{text-transform:none!important}@media (max-width:640px){.XB4soq_input{font-size:16px;line-height:25px}}

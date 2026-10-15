@@ -1,0 +1,650 @@
+[
+  {
+    "name": "+1",
+    "emoji": "👍"
+  },
+  {
+    "name": "ok_hand",
+    "emoji": "👌"
+  },
+  {
+    "name": "pray",
+    "emoji": "🙏"
+  },
+  {
+    "name": "joy",
+    "emoji": "😂"
+  },
+  {
+    "name": "heart",
+    "emoji": "❤️"
+  },
+  {
+    "name": "eyes",
+    "emoji": "👀"
+  },
+  {
+    "name": "white_check_mark",
+    "emoji": "✅"
+  },
+  {
+    "name": "slightly_smiling_face",
+    "emoji": "🙂"
+  },
+  {
+    "name": "smiley",
+    "emoji": "😃"
+  },
+  {
+    "name": "smile",
+    "emoji": "😄"
+  },
+  {
+    "name": "grinning",
+    "emoji": "😀"
+  },
+  {
+    "name": "thinking_face",
+    "emoji": "🤔"
+  },
+  {
+    "name": "sweat_smile",
+    "emoji": "😅"
+  },
+  {
+    "name": "warning",
+    "emoji": "⚠️"
+  },
+  {
+    "name": "confused",
+    "emoji": "😕"
+  },
+  {
+    "name": "x",
+    "emoji": "❌"
+  },
+  {
+    "name": "raised_hands",
+    "emoji": "🙌"
+  },
+  {
+    "name": "tada",
+    "emoji": "🎉"
+  },
+  {
+    "name": "wink",
+    "emoji": "😉"
+  },
+  {
+    "name": "blush",
+    "emoji": "😊"
+  },
+  {
+    "name": "shrug",
+    "emoji": "🤷"
+  },
+  {
+    "name": "wave",
+    "emoji": "👋"
+  },
+  {
+    "name": "question",
+    "emoji": "❓"
+  },
+  {
+    "name": "grin",
+    "emoji": "😁"
+  },
+  {
+    "name": "laughing",
+    "emoji": "😆"
+  },
+  {
+    "name": "rolling_on_the_floor_laughing",
+    "emoji": "🤣"
+  },
+  {
+    "name": "upside_down_face",
+    "emoji": "🙃"
+  },
+  {
+    "name": "melting_face",
+    "emoji": "🫠"
+  },
+  {
+    "name": "innocent",
+    "emoji": "😇"
+  },
+  {
+    "name": "smiling_face_with_3_hearts",
+    "emoji": "🥰"
+  },
+  {
+    "name": "heart_eyes",
+    "emoji": "😍"
+  },
+  {
+    "name": "star-struck",
+    "emoji": "🤩"
+  },
+  {
+    "name": "kissing_heart",
+    "emoji": "😘"
+  },
+  {
+    "name": "kissing",
+    "emoji": "😗"
+  },
+  {
+    "name": "relaxed",
+    "emoji": "☺️"
+  },
+  {
+    "name": "kissing_closed_eyes",
+    "emoji": "😚"
+  },
+  {
+    "name": "kissing_smiling_eyes",
+    "emoji": "😙"
+  },
+  {
+    "name": "smiling_face_with_tear",
+    "emoji": "🥲"
+  },
+  {
+    "name": "yum",
+    "emoji": "😋"
+  },
+  {
+    "name": "stuck_out_tongue",
+    "emoji": "😛"
+  },
+  {
+    "name": "stuck_out_tongue_winking_eye",
+    "emoji": "😜"
+  },
+  {
+    "name": "zany_face",
+    "emoji": "🤪"
+  },
+  {
+    "name": "stuck_out_tongue_closed_eyes",
+    "emoji": "😝"
+  },
+  {
+    "name": "money_mouth_face",
+    "emoji": "🤑"
+  },
+  {
+    "name": "hugging_face",
+    "emoji": "🤗"
+  },
+  {
+    "name": "face_with_hand_over_mouth",
+    "emoji": "🤭"
+  },
+  {
+    "name": "face_with_open_eyes_and_hand_over_mouth",
+    "emoji": "🫢"
+  },
+  {
+    "name": "face_with_peeking_eye",
+    "emoji": "🫣"
+  },
+  {
+    "name": "shushing_face",
+    "emoji": "🤫"
+  },
+  {
+    "name": "saluting_face",
+    "emoji": "🫡"
+  },
+  {
+    "name": "zipper_mouth_face",
+    "emoji": "🤐"
+  },
+  {
+    "name": "face_with_raised_eyebrow",
+    "emoji": "🤨"
+  },
+  {
+    "name": "neutral_face",
+    "emoji": "😐"
+  },
+  {
+    "name": "expressionless",
+    "emoji": "😑"
+  },
+  {
+    "name": "no_mouth",
+    "emoji": "😶"
+  },
+  {
+    "name": "dotted_line_face",
+    "emoji": "🫥"
+  },
+  {
+    "name": "face_in_clouds",
+    "emoji": "😶‍🌫️"
+  },
+  {
+    "name": "smirk",
+    "emoji": "😏"
+  },
+  {
+    "name": "unamused",
+    "emoji": "😒"
+  },
+  {
+    "name": "face_with_rolling_eyes",
+    "emoji": "🙄"
+  },
+  {
+    "name": "grimacing",
+    "emoji": "😬"
+  },
+  {
+    "name": "face_exhaling",
+    "emoji": "😮‍💨"
+  },
+  {
+    "name": "lying_face",
+    "emoji": "🤥"
+  },
+  {
+    "name": "relieved",
+    "emoji": "😌"
+  },
+  {
+    "name": "pensive",
+    "emoji": "😔"
+  },
+  {
+    "name": "sleepy",
+    "emoji": "😪"
+  },
+  {
+    "name": "drooling_face",
+    "emoji": "🤤"
+  },
+  {
+    "name": "sleeping",
+    "emoji": "😴"
+  },
+  {
+    "name": "mask",
+    "emoji": "😷"
+  },
+  {
+    "name": "face_with_thermometer",
+    "emoji": "🤒"
+  },
+  {
+    "name": "face_with_head_bandage",
+    "emoji": "🤕"
+  },
+  {
+    "name": "nauseated_face",
+    "emoji": "🤢"
+  },
+  {
+    "name": "face_vomiting",
+    "emoji": "🤮"
+  },
+  {
+    "name": "sneezing_face",
+    "emoji": "🤧"
+  },
+  {
+    "name": "hot_face",
+    "emoji": "🥵"
+  },
+  {
+    "name": "cold_face",
+    "emoji": "🥶"
+  },
+  {
+    "name": "woozy_face",
+    "emoji": "🥴"
+  },
+  {
+    "name": "dizzy_face",
+    "emoji": "😵"
+  },
+  {
+    "name": "face_with_spiral_eyes",
+    "emoji": "😵‍💫"
+  },
+  {
+    "name": "exploding_head",
+    "emoji": "🤯"
+  },
+  {
+    "name": "face_with_cowboy_hat",
+    "emoji": "🤠"
+  },
+  {
+    "name": "partying_face",
+    "emoji": "🥳"
+  },
+  {
+    "name": "disguised_face",
+    "emoji": "🥸"
+  },
+  {
+    "name": "sunglasses",
+    "emoji": "😎"
+  },
+  {
+    "name": "nerd_face",
+    "emoji": "🤓"
+  },
+  {
+    "name": "face_with_monocle",
+    "emoji": "🧐"
+  },
+  {
+    "name": "face_with_diagonal_mouth",
+    "emoji": "🫤"
+  },
+  {
+    "name": "worried",
+    "emoji": "😟"
+  },
+  {
+    "name": "slightly_frowning_face",
+    "emoji": "🙁"
+  },
+  {
+    "name": "white_frowning_face",
+    "emoji": "☹️"
+  },
+  {
+    "name": "open_mouth",
+    "emoji": "😮"
+  },
+  {
+    "name": "hushed",
+    "emoji": "😯"
+  },
+  {
+    "name": "astonished",
+    "emoji": "😲"
+  },
+  {
+    "name": "flushed",
+    "emoji": "😳"
+  },
+  {
+    "name": "pleading_face",
+    "emoji": "🥺"
+  },
+  {
+    "name": "face_holding_back_tears",
+    "emoji": "🥹"
+  },
+  {
+    "name": "frowning",
+    "emoji": "😦"
+  },
+  {
+    "name": "anguished",
+    "emoji": "😧"
+  },
+  {
+    "name": "fearful",
+    "emoji": "😨"
+  },
+  {
+    "name": "cold_sweat",
+    "emoji": "😰"
+  },
+  {
+    "name": "disappointed_relieved",
+    "emoji": "😥"
+  },
+  {
+    "name": "cry",
+    "emoji": "😢"
+  },
+  {
+    "name": "sob",
+    "emoji": "😭"
+  },
+  {
+    "name": "scream",
+    "emoji": "😱"
+  },
+  {
+    "name": "confounded",
+    "emoji": "😖"
+  },
+  {
+    "name": "persevere",
+    "emoji": "😣"
+  },
+  {
+    "name": "disappointed",
+    "emoji": "😞"
+  },
+  {
+    "name": "sweat",
+    "emoji": "😓"
+  },
+  {
+    "name": "weary",
+    "emoji": "😩"
+  },
+  {
+    "name": "tired_face",
+    "emoji": "😫"
+  },
+  {
+    "name": "yawning_face",
+    "emoji": "🥱"
+  },
+  {
+    "name": "triumph",
+    "emoji": "😤"
+  },
+  {
+    "name": "rage",
+    "emoji": "😡"
+  },
+  {
+    "name": "angry",
+    "emoji": "😠"
+  },
+  {
+    "name": "face_with_symbols_on_mouth",
+    "emoji": "🤬"
+  },
+  {
+    "name": "smiling_imp",
+    "emoji": "😈"
+  },
+  {
+    "name": "imp",
+    "emoji": "👿"
+  },
+  {
+    "name": "skull",
+    "emoji": "💀"
+  },
+  {
+    "name": "skull_and_crossbones",
+    "emoji": "☠️"
+  },
+  {
+    "name": "hankey",
+    "emoji": "💩"
+  },
+  {
+    "name": "clown_face",
+    "emoji": "🤡"
+  },
+  {
+    "name": "japanese_ogre",
+    "emoji": "👹"
+  },
+  {
+    "name": "japanese_goblin",
+    "emoji": "👺"
+  },
+  {
+    "name": "ghost",
+    "emoji": "👻"
+  },
+  {
+    "name": "alien",
+    "emoji": "👽"
+  },
+  {
+    "name": "space_invader",
+    "emoji": "👾"
+  },
+  {
+    "name": "robot_face",
+    "emoji": "🤖"
+  },
+  {
+    "name": "raised_back_of_hand",
+    "emoji": "🤚"
+  },
+  {
+    "name": "raised_hand_with_fingers_splayed",
+    "emoji": "🖐️"
+  },
+  {
+    "name": "hand",
+    "emoji": "✋"
+  },
+  {
+    "name": "spock-hand",
+    "emoji": "🖖"
+  },
+  {
+    "name": "rightwards_hand",
+    "emoji": "🫱"
+  },
+  {
+    "name": "leftwards_hand",
+    "emoji": "🫲"
+  },
+  {
+    "name": "palm_down_hand",
+    "emoji": "🫳"
+  },
+  {
+    "name": "palm_up_hand",
+    "emoji": "🫴"
+  },
+  {
+    "name": "pinched_fingers",
+    "emoji": "🤌"
+  },
+  {
+    "name": "pinching_hand",
+    "emoji": "🤏"
+  },
+  {
+    "name": "v",
+    "emoji": "✌️"
+  },
+  {
+    "name": "crossed_fingers",
+    "emoji": "🤞"
+  },
+  {
+    "name": "hand_with_index_finger_and_thumb_crossed",
+    "emoji": "🫰"
+  },
+  {
+    "name": "i_love_you_hand_sign",
+    "emoji": "🤟"
+  },
+  {
+    "name": "the_horns",
+    "emoji": "🤘"
+  },
+  {
+    "name": "call_me_hand",
+    "emoji": "🤙"
+  },
+  {
+    "name": "point_left",
+    "emoji": "👈"
+  },
+  {
+    "name": "point_right",
+    "emoji": "👉"
+  },
+  {
+    "name": "point_up_2",
+    "emoji": "👆"
+  },
+  {
+    "name": "middle_finger",
+    "emoji": "🖕"
+  },
+  {
+    "name": "point_down",
+    "emoji": "👇"
+  },
+  {
+    "name": "point_up",
+    "emoji": "☝️"
+  },
+  {
+    "name": "index_pointing_at_the_viewer",
+    "emoji": "🫵"
+  },
+  {
+    "name": "-1",
+    "emoji": "👎"
+  },
+  {
+    "name": "fist",
+    "emoji": "✊"
+  },
+  {
+    "name": "facepunch",
+    "emoji": "👊"
+  },
+  {
+    "name": "left-facing_fist",
+    "emoji": "🤛"
+  },
+  {
+    "name": "right-facing_fist",
+    "emoji": "🤜"
+  },
+  {
+    "name": "clap",
+    "emoji": "👏"
+  },
+  {
+    "name": "heart_hands",
+    "emoji": "🫶"
+  },
+  {
+    "name": "open_hands",
+    "emoji": "👐"
+  },
+  {
+    "name": "palms_up_together",
+    "emoji": "🤲"
+  },
+  {
+    "name": "handshake",
+    "emoji": "🤝"
+  },
+  {
+    "name": "writing_hand",
+    "emoji": "✍️"
+  },
+  {
+    "name": "nail_care",
+    "emoji": "💅"
+  }
+]

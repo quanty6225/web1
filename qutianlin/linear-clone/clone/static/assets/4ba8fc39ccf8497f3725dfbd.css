@@ -1,0 +1,5 @@
+@charset "UTF-8";
+@layer reset, base, app.base;
+@charset "UTF-8";
+@layer reset, base, app.base;
+.f8wWCG_root{grid-template-columns:var(--1fr) 64px var(--1fr) 64px var(--1fr);gap:64px 0;display:grid}@media (max-width:1024px){.f8wWCG_root{grid-template-columns:var(--1fr) var(--1fr);gap:48px 32px}}@media (max-width:640px){.f8wWCG_root{grid-template-columns:var(--1fr)}}

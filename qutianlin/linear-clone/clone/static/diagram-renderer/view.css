@@ -1,0 +1,2 @@
+@font-face{font-family:"Berkeley Mono";font-weight:100 900;src:url('/static/assets/ab475c71028644dbd5fceb35.bin') format('woff2')}
+html,body{margin:0;padding:0;overflow:hidden;background:transparent;font-family:"Berkeley Mono",monospace}main>svg{display:block;max-width:100%;height:auto}svg text,svg tspan,svg foreignObject{font-family:"Berkeley Mono",monospace!important}#rendering{position:fixed;left:-10000px;top:-10000px;width:1024px;visibility:hidden;contain:layout paint size}

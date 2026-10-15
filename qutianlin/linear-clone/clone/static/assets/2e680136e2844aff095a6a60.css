@@ -1,0 +1,3 @@
+@charset "UTF-8";
+@layer reset, base, app.base;
+.BsOu4G_content{width:60ch;max-width:calc(100vw - 32px);top:25%}.BsOu4G_header{justify-content:space-between}.BsOu4G_copyRow{background:var(--color-bg-secondary);border:1px solid var(--color-border-primary);border-radius:6px;padding:4px 4px 4px 16px}.BsOu4G_code{word-break:break-all;flex:1}.BsOu4G_body{padding-block:8px}

@@ -1,0 +1,25 @@
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+export const viewURL=view=>'/qqq153/team/'+(view.team||document.body.dataset.activeTeam||'QQQ')+'/view/'+encodeURIComponent(view.id);
+export function createViewManager({api,menu,modal,closeDialog,closeMenu,copy,toast,refresh,getState,getExpression}){
+ let template;
+ const current=()=>getState()?.views?.find(v=>v.id===document.body.dataset.viewId);
+ const action=fn=>e=>{e.preventDefault();e.stopPropagation();Promise.resolve().then(fn).catch(e=>toast(e.message));};
+ async function patch(view,changes){await api('/api/entities/views/'+view.id,'PATCH',{...changes,revision:view.revision});await refresh();}
+ function edit(view,duplicate=false){if(!duplicate){location.href=viewURL(view)+'/edit';return;}const draft={title:view.title,description:view.description||'',filters:view.filters||{and:[]},returnTo:viewURL(view),...(!duplicate?{id:view.id,revision:view.revision}:{})};sessionStorage.setItem('linear-view-draft',JSON.stringify(draft));location.href='/qqq153/team/'+(view.team||document.body.dataset.activeTeam||'QQQ')+'/view/new';}
+ function options(anchor,view){menu(anchor,[{text:'Edit…',action:()=>edit(view)},{text:'Duplicate…',action:()=>edit(view,true)},{text:view.favorite?'Unfavorite':'Favorite',action:()=>patch(view,{favorite:!view.favorite})},{text:'Copy link',action:()=>copy(location.origin+viewURL(view))},{text:'Delete',action:()=>modal('Delete view','<p>'+esc(view.title)+'</p>','Delete',async()=>{await api('/api/entities/views/'+view.id,'DELETE');closeDialog();location.href='/qqq153/views/issues';},true)}]);}
+ async function favorites(){
+  $$('[data-view-favorite]').forEach(x=>x.remove());const views=(getState()?.views||[]).filter(x=>x.favorite),button=$('button[aria-controls="sidebarFavorites"]'),section=button?.closest('[data-sidebar-section]');if(!views.length||!section)return;
+  template ||=await fetch('/static/project-label-page/favorite.html').then(r=>r.text());let list=$('#sidebarFavorites');if(!list){list=document.createElement('div');list.id='sidebarFavorites';button.parentElement.after(list);}button.disabled=false;section.parentElement.inert=false;Object.assign(section.parentElement.style,{height:'auto',opacity:'1',transform:'none'});
+  for(const view of views){const t=document.createElement('template');t.innerHTML=template;const a=t.content.firstElementChild;a.removeAttribute('data-project-label-favorite');a.dataset.viewFavorite=view.id;a.href=viewURL(view);const title=$('[data-project-label-favorite-title]',a);title.textContent=view.title;title.title=view.title;const remove=$('[aria-label="Remove favorite"]',a);remove.onclick=action(()=>patch(view,{favorite:false}));remove.onkeydown=e=>{if(['Enter',' '].includes(e.key)){e.preventDefault();remove.click();}};a.oncontextmenu=action(()=>options(a,view));list.append(a);}
+ }
+ async function render(){await favorites();
+  for(const card of $$('[data-record][data-kind=views]')){const value=getState().views.find(v=>v.id===card.dataset.record);if(value)card.oncontextmenu=action(()=>options(card,value));}
+const view=current();if(!view)return;document.title=view.title+' – Linear';for(const a of $$('[data-saved-view-title]')){const leaf=$$('span',a).find(x=>!x.children.length&&x.textContent.trim());if(leaf)leaf.textContent=view.title;else if(!a.children.length)a.textContent=view.title;a.oncontextmenu=action(()=>options(a,view));}
+  const star=$('main button[aria-label="Add to favorites"],main button[aria-label="Remove from favorites"]');if(star){star.setAttribute('aria-label',view.favorite?'Remove from favorites':'Add to favorites');star.setAttribute('aria-checked',String(!!view.favorite));star.onclick=action(()=>patch(view,{favorite:!view.favorite}));}
+ }
+ function editForm(view){const name=$('input[placeholder="All issues"]'),description=$('input[placeholder="Description (optional)"]');name.setAttribute('aria-label','View name');description.setAttribute('aria-label','View description');name.value=view.title;description.value=view.description||'';for(const b of $$('main button')){if(b.textContent.trim()==='Save')b.onclick=action(async()=>{await api('/api/entities/views/'+view.id,'PATCH',{title:name.value.trim()||name.placeholder,description:description.value,filters:getExpression(),revision:view.revision});location.href=viewURL(view);});if(b.textContent.trim()==='Cancel')b.onclick=action(()=>{location.href=viewURL(view);});}}
+ async function saveFilters(){const view=current();if(!view)return;await patch(view,{filters:getExpression()});toast('View saved');}
+ function handleClick(button){const view=current();if(!view)return false;if(['Add to favorites','Remove from favorites'].includes(button.getAttribute('aria-label'))){patch(view,{favorite:!view.favorite}).catch(e=>toast(e.message));return true;}return false;}
+ return {render,saveFilters,handleClick,editForm};
+}

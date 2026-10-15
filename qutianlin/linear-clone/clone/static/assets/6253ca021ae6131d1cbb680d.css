@@ -1,0 +1,5 @@
+@charset "UTF-8";
+@layer reset, base, app.base;
+@charset "UTF-8";
+@layer reset, base, app.base;
+.I69PJq_dateBar{background:var(--color-border-primary);opacity:.6;width:1px;height:100%;margin-top:9px;margin-left:9px;position:absolute}@media (max-width:640px){.I69PJq_dateBar{display:none}}.I69PJq_changelogLeft{height:fit-content;top:calc(var(--header-height) + 24px);margin-bottom:16px;padding-left:24px;position:sticky}@media (max-width:640px){.I69PJq_changelogLeft{opacity:.75;padding-left:0;position:relative;top:20px}}.I69PJq_changelogLeft:after{content:"";background:var(--color-border-tertiary);border-radius:100%;width:7px;height:7px;position:absolute;top:50%;left:9.5px;transform:translate(-50%,-50%)}@media (max-width:640px){.I69PJq_changelogLeft:after{display:none}}.I69PJq_changelogLeft[data-index="0"]:after{background:var(--color-orange)}.I69PJq_changelogEntry:last-of-type .I69PJq_changelogLeft{position:relative;top:0}.I69PJq_changelogEntry:last-of-type .I69PJq_dateBar{display:none}

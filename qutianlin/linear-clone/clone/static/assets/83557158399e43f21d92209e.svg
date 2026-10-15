@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 576 320" height="320" width="576">
+<rect fill="#F5F5F5" height="320" width="576"></rect>
+<g id="Emily Edit (8.14)">
+<path fill="#D0D6E0" d="M-10106 -2762C-10106 -2763.1 -10105.1 -2764 -10104 -2764H4766C4767.1 -2764 4768 -2763.1 4768 -2762V4083C4768 4084.1 4767.1 4085 4766 4085H-10104C-10105.1 4085 -10106 4084.1 -10106 4083V-2762Z"></path>
+<path fill-opacity="0.1" fill="black" d="M-10104 -2764V-2763H4766V-2764V-2765H-10104V-2764ZM4768 -2762H4767V4083H4768H4769V-2762H4768ZM4766 4085V4084H-10104V4085V4086H4766V4085ZM-10106 4083H-10105V-2762H-10106H-10107V4083H-10106ZM-10104 4085V4084C-10104.6 4084 -10105 4083.55 -10105 4083H-10106H-10107C-10107 4084.66 -10105.7 4086 -10104 4086V4085ZM4768 4083H4767C4767 4083.55 4766.55 4084 4766 4084V4085V4086C4767.66 4086 4769 4084.66 4769 4083H4768ZM4766 -2764V-2763C4766.55 -2763 4767 -2762.55 4767 -2762H4768H4769C4769 -2763.66 4767.66 -2765 4766 -2765V-2764ZM-10104 -2764V-2765C-10105.7 -2765 -10107 -2763.66 -10107 -2762H-10106H-10105C-10105 -2762.55 -10104.6 -2763 -10104 -2763V-2764Z"></path>
+<g id="Cycles">
+<rect fill="#0F1011" rx="6" height="4000" width="640" y="-312" x="-32"></rect>
+<rect stroke-opacity="0.05" stroke="white" rx="5.5" height="3999" width="639" y="-311.5" x="-31.5"></rect>
+<g id="Content">
+<g id="Intro">
+<g id="Media Container">
+<g id="Media">
+<g clip-path="url(#clip0_975_114667)">
+<rect fill="#0F1011" height="320" width="576"></rect>
+<g id="Graph">
+<g id="Graph_2">
+<g clip-path="url(#clip1_975_114667)" id="Overrun">
+<g id="Hatch">
+<line stroke-opacity="0.08" stroke="white" y2="94.2251" x2="535.068" y1="235.646" x1="393.646" id="Line"></line>
+<line stroke-opacity="0.08" stroke="white" y2="110.225" x2="535.068" y1="251.646" x1="393.646" id="Line_2"></line>
+<line stroke-opacity="0.08" stroke="white" y2="126.225" x2="535.068" y1="267.646" x1="393.646" id="Line_3"></line>
+<line stroke-opacity="0.08" stroke="white" y2="142.225" x2="535.068" y1="283.646" x1="393.646" id="Line_4"></line>
+<line stroke-opacity="0.08" stroke="white" y2="158.225" x2="535.068" y1="299.646" x1="393.646" id="Line_5"></line>
+<line stroke-opacity="0.08" stroke="white" y2="174.225" x2="535.068" y1="315.646" x1="393.646" id="Line_6"></line>
+<line stroke-opacity="0.08" stroke="white" y2="190.225" x2="535.068" y1="331.646" x1="393.646" id="Line_7"></line>
+<line stroke-opacity="0.08" stroke="white" y2="206.225" x2="535.068" y1="347.646" x1="393.646" id="Line_8"></line>
+<line stroke-opacity="0.08" stroke="white" y2="222.225" x2="535.068" y1="363.646" x1="393.646" id="Line_9"></line>
+<line stroke-opacity="0.08" stroke="white" y2="238.225" x2="535.068" y1="379.646" x1="393.646" id="Line_10"></line>
+<line stroke-opacity="0.08" stroke="white" y2="254.225" x2="535.068" y1="395.646" x1="393.646" id="Line_11"></line>
+<line stroke-opacity="0.08" stroke="white" y2="78.2251" x2="535.068" y1="219.646" x1="393.646" id="Line_12"></line>
+<line stroke-opacity="0.08" stroke="white" y2="62.2251" x2="535.068" y1="203.646" x1="393.646" id="Line_13"></line>
+<line stroke-opacity="0.08" stroke="white" y2="46.2251" x2="535.068" y1="187.646" x1="393.646" id="Line_14"></line>
+<line stroke-opacity="0.08" stroke="white" y2="30.2251" x2="535.068" y1="171.646" x1="393.646" id="Line_15"></line>
+<line stroke-opacity="0.08" stroke="white" y2="14.2251" x2="535.068" y1="155.646" x1="393.646" id="Line_16"></line>
+<line stroke-opacity="0.08" stroke="white" y2="-1.77491" x2="535.068" y1="139.646" x1="393.646" id="Line_17"></line>
+<line stroke-opacity="0.08" stroke="white" y2="-17.7749" x2="535.068" y1="123.646" x1="393.646" id="Line_18"></line>
+<line stroke-opacity="0.08" stroke="white" y2="-33.7749" x2="535.068" y1="107.646" x1="393.646" id="Line_19"></line>
+<line stroke-opacity="0.08" stroke="white" y2="-49.7749" x2="535.068" y1="91.6464" x1="393.646" id="Line_20"></line>
+<line stroke-opacity="0.08" stroke="white" y2="-65.7749" x2="535.068" y1="75.6464" x1="393.646" id="Line_21"></line>
+</g>
+</g>
+<g id="Line_22">
+<path stroke-linecap="round" stroke="#2E2E32" d="M40 188H68.997C90.7738 188 112.326 183.594 132.355 175.048C153.218 166.147 171.97 152.95 187.391 136.317L196.895 126.066C216.403 105.024 240.211 88.4262 266.701 77.3993L274.588 74.1163C283.518 70.3992 292.694 67.2849 302.186 65.4237C314.624 62.9847 333.349 60 350.5 60H411.75H473.875H536" id="Scope"></path>
+<path stroke-linecap="round" stroke="#62666D" d="M40 260L76.0691 226.984C93.1595 211.341 113.392 199.524 135.414 192.325C154.311 186.147 171.918 176.561 187.362 164.04L197.997 155.417C216.842 140.139 238.309 128.417 261.349 120.823L262.262 120.523C279.342 114.894 297.105 111.594 315.068 110.713L350 109" id="Started"></path>
+<path stroke-linecap="round" stroke="#D0D6E0" d="M40 260L102 241.323L122.057 234.61C149.645 225.376 174.725 209.888 195.336 189.357L196.704 187.994C216.305 168.47 240.134 153.714 266.348 144.869C280.725 140.018 295.657 136.999 310.79 135.886L350 133" id="Completed - Line"></path>
+<path fill="url(#paint0_linear_975_114667)" d="M102 241.323L40 260H350V133L310.79 135.886C295.657 136.999 280.725 140.018 266.348 144.869C240.134 153.714 216.305 168.47 196.704 187.994L195.336 189.357C174.725 209.888 149.645 225.376 122.057 234.61L102 241.323Z" id="Completed - Fill"></path>
+</g>
+<g clip-path="url(#clip2_975_114667)" id="Bars">
+<path stroke-width="6" stroke="#62666D" d="M119.5 248V260" id="Bar"></path>
+<path stroke-width="6" stroke="#62666D" d="M196.5 212V260" id="Bar_2"></path>
+<path stroke-width="6" stroke="#62666D" d="M273.5 196V260" id="Bar_3"></path>
+<path stroke-width="6" stroke="#62666D" d="M350.5 224V260" id="Bar_4"></path>
+</g>
+<line stroke="#8A8F98" y2="60" x2="393.5" y1="260" x1="393.5" opacity="0.2" id="Verts"></line>
+<line stroke="#8A8F98" y2="60" x2="350.5" y1="260" x1="350.5" opacity="0.2" id="Verts_2"></line>
+<path stroke="#8A8F98" d="M40 260.5L536 260.5" opacity="0.2" id="Verts_3"></path>
+<circle fill="#62666D" r="2.5" cy="109" cx="350.5" id="Ellipse 409"></circle>
+<circle fill="#D0D6E0" r="2.5" cy="133" cx="350.5" id="Ellipse 410"></circle>
+</g>
+</g>
+<line stroke-opacity="0.05" stroke="white" y2="-20" x2="39.5" y1="340" x1="39.5" id="Keyline"></line>
+<line stroke-opacity="0.05" stroke="white" y2="-20" x2="536.5" y1="340" x1="536.5" id="Keyline_2"></line>
+<line stroke-opacity="0.05" stroke="white" y2="59.5" x2="576" y1="59.5" id="Line 1437"></line>
+<line stroke-opacity="0.05" stroke="white" y2="260.5" x2="576" y1="260.5" id="Line 1439"></line>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" y2="133" x2="197.183" y1="260" x1="197.183" id="paint0_linear_975_114667">
+<stop stop-opacity="0" stop-color="#62666D"></stop>
+<stop stop-opacity="0.2" stop-color="#62666D" offset="1"></stop>
+</linearGradient>
+<clipPath id="clip0_975_114667">
+<rect fill="white" height="320" width="576"></rect>
+</clipPath>
+<clipPath id="clip1_975_114667">
+<rect transform="translate(394 60)" fill="white" height="200" width="142"></rect>
+</clipPath>
+<clipPath id="clip2_975_114667">
+<rect transform="translate(40 145)" fill="white" height="115" width="313"></rect>
+</clipPath>
+</defs>
+</svg>

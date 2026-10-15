@@ -1,0 +1,17 @@
+{
+  "pages": [
+    {
+      "route": "/qqq153/settings/teams/QQQ/recurring-issues",
+      "file": "list.html",
+      "capture_id": "linear-recurring-editor-round2-20261014T065258Z",
+      "source_file": "000-list.html"
+    },
+    {
+      "route": "/qqq153/settings/teams/QQQ/recurring-issues/new",
+      "file": "editor.html",
+      "capture_id": "linear-recurring-editor-round2-20261014T065258Z",
+      "source_file": "001-new.html"
+    }
+  ],
+  "source_writes": "blocked"
+}

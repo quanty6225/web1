@@ -1,0 +1,704 @@
+WEBVTT
+
+01:00:00.000 --> 01:00:01.833
+<b>I've been using linear for years now.</b>
+
+
+01:00:01.833 --> 01:00:03.625
+<b>I've been using it in a way that I think</b>
+
+
+01:00:04.041 --> 01:00:05.833
+<b>helps us organize all of our projects</b>
+
+
+01:00:06.250 --> 01:00:08.291
+<b>and teams and sort of sprints.</b>
+
+
+01:00:08.291 --> 01:00:09.625
+<b>From what I heard even before I joined.</b>
+
+
+01:00:10.250 --> 01:00:11.041
+<b>the way in which we</b>
+
+
+01:00:11.041 --> 01:00:12.375
+<b>originally would track.</b>
+
+
+01:00:12.375 --> 01:00:14.083
+<b>for example. bugs before release</b>
+
+
+01:00:14.500 --> 01:00:16.666
+<b>was one text document in our code base</b>
+
+
+01:00:16.958 --> 01:00:17.958
+<b>that people would add to.</b>
+
+
+01:00:18.500 --> 01:00:20.291
+<b>So it was literally the purest</b>
+
+
+01:00:20.291 --> 01:00:22.000
+<b>form of no sort of structure.</b>
+
+
+01:00:23.375 --> 01:00:23.791
+<b>Cursor is very</b>
+
+
+01:00:23.791 --> 01:00:25.750
+<b>decentralized and very IC driven.</b>
+
+
+01:00:26.291 --> 01:00:28.083
+<b>which means that there's</b>
+
+
+01:00:28.083 --> 01:00:29.625
+<b>kind of a battle of tools</b>
+
+
+01:00:29.875 --> 01:00:32.000
+<b>that will survive via adoption.</b>
+
+
+01:00:32.458 --> 01:00:33.708
+<b>And I think linear has been one.</b>
+
+
+01:00:33.708 --> 01:00:34.708
+<b>As we've grown.</b>
+
+
+01:00:34.958 --> 01:00:36.250
+<b>especially over the past year.</b>
+
+
+01:00:36.583 --> 01:00:37.500
+<b>we've moved to</b>
+
+
+01:00:37.500 --> 01:00:39.541
+<b>organizing things around releases</b>
+
+
+01:00:39.708 --> 01:00:40.375
+<b>where anyone on the</b>
+
+
+01:00:40.375 --> 01:00:41.791
+<b>team can use the Slack bot.</b>
+
+
+01:00:42.333 --> 01:00:44.541
+<b>create a bug. almost</b>
+
+
+01:00:44.541 --> 01:00:45.416
+<b>everything is tracked.</b>
+
+
+01:00:46.458 --> 01:00:47.833
+<b>And then we triage those</b>
+
+
+01:00:47.833 --> 01:00:49.541
+<b>bugs across people on the team.</b>
+
+
+01:00:49.541 --> 01:00:50.291
+<b>We've built a lot of</b>
+
+
+01:00:50.291 --> 01:00:51.500
+<b>integrations into linear.</b>
+
+
+01:00:51.500 --> 01:00:52.625
+<b>like our cloud agents. a</b>
+
+
+01:00:52.625 --> 01:00:53.708
+<b>lot of Slack integrations.</b>
+
+
+01:00:54.000 --> 01:00:55.208
+<b>Those are bi-directional.</b>
+
+
+01:00:55.208 --> 01:00:55.958
+<b>meaning that updates</b>
+
+
+01:00:55.958 --> 01:00:57.041
+<b>go from linear to Slack</b>
+
+
+01:00:57.291 --> 01:00:59.208
+<b>and issues go also from Slack to linear.</b>
+
+
+01:00:59.541 --> 01:01:00.458
+<b>What I really love about</b>
+
+
+01:01:00.458 --> 01:01:02.041
+<b>it is just the modularity.</b>
+
+
+01:01:02.291 --> 01:01:03.375
+<b>As you go through different stages.</b>
+
+
+01:01:03.875 --> 01:01:05.458
+<b>cursor especially. of the team growing</b>
+
+
+01:01:05.458 --> 01:01:06.416
+<b>and things changing.</b>
+
+
+01:01:06.958 --> 01:01:08.125
+<b>linear is actually really adaptive</b>
+
+
+01:01:08.500 --> 01:01:09.875
+<b>and able to change</b>
+
+
+01:01:09.875 --> 01:01:11.083
+<b>with the team as we grow</b>
+
+
+01:01:11.416 --> 01:01:12.416
+<b>and try different processes.</b>
+
+
+01:01:13.041 --> 01:01:13.708
+<b>Just the ease of</b>
+
+
+01:01:13.708 --> 01:01:15.958
+<b>customization and the reliability</b>
+
+
+01:01:16.291 --> 01:01:16.958
+<b>and the ability to</b>
+
+
+01:01:16.958 --> 01:01:19.166
+<b>support five to 10 products</b>
+
+
+01:01:19.291 --> 01:01:20.166
+<b>across every operating</b>
+
+
+01:01:20.166 --> 01:01:21.541
+<b>system has been essential.</b>
+
+
+01:01:23.875 --> 01:01:25.666
+<b>What's changed with the</b>
+
+
+01:01:25.666 --> 01:01:26.916
+<b>agent integration as a linear</b>
+
+
+01:01:27.291 --> 01:01:29.208
+<b>is it's almost like the default</b>
+
+
+01:01:29.208 --> 01:01:30.625
+<b>is that something gets worked on.</b>
+
+
+01:01:30.625 --> 01:01:31.333
+<b>The cursor linear</b>
+
+
+01:01:31.333 --> 01:01:33.041
+<b>integration has allowed us</b>
+
+
+01:01:33.041 --> 01:01:33.916
+<b>to really tighten the</b>
+
+
+01:01:33.916 --> 01:01:35.500
+<b>loop between problem</b>
+
+
+01:01:35.708 --> 01:01:37.583
+<b>or feature request and implementation.</b>
+
+
+01:01:38.041 --> 01:01:39.000
+<b>Before it's easy for</b>
+
+
+01:01:39.000 --> 01:01:40.875
+<b>something to kind of be discussed</b>
+
+
+01:01:40.875 --> 01:01:41.541
+<b>but lost.</b>
+
+
+01:01:41.833 --> 01:01:43.625
+<b>And because we're pretty diligent now</b>
+
+
+01:01:43.625 --> 01:01:45.041
+<b>about tracking things.</b>
+
+
+01:01:45.041 --> 01:01:46.333
+<b>when we open up linear.</b>
+
+
+01:01:46.333 --> 01:01:47.291
+<b>you see that the cursor agent</b>
+
+
+01:01:47.291 --> 01:01:48.625
+<b>has already started running.</b>
+
+
+01:01:48.625 --> 01:01:50.000
+<b>And so there's already a PR open</b>
+
+
+01:01:50.166 --> 01:01:51.375
+<b>and you're able to test it out.</b>
+
+
+01:01:51.416 --> 01:01:52.666
+<b>And whether you want</b>
+
+
+01:01:52.666 --> 01:01:53.708
+<b>to merge it in or not.</b>
+
+
+01:01:53.708 --> 01:01:55.500
+<b>all of that is tracked and kept in sync.</b>
+
+
+01:01:56.000 --> 01:01:56.916
+<b>Users don't have to</b>
+
+
+01:01:56.916 --> 01:01:58.000
+<b>take the linear issue.</b>
+
+
+01:01:58.000 --> 01:01:58.833
+<b>copy and paste it.</b>
+
+
+01:01:58.833 --> 01:01:59.875
+<b>put it into the agent and</b>
+
+
+01:01:59.875 --> 01:02:00.875
+<b>then get back to their work.</b>
+
+
+01:02:00.875 --> 01:02:02.000
+<b>It really kind of</b>
+
+
+01:02:02.000 --> 01:02:03.291
+<b>compresses not just in terms</b>
+
+
+01:02:03.500 --> 01:02:05.375
+<b>of being essential and unifying place</b>
+
+
+01:02:05.375 --> 01:02:06.500
+<b>for all the things that are going on</b>
+
+
+01:02:06.500 --> 01:02:07.375
+<b>and seeing those threads.</b>
+
+
+01:02:07.750 --> 01:02:09.208
+<b>but also just pushes</b>
+
+
+01:02:09.208 --> 01:02:11.250
+<b>us to ship more things</b>
+
+
+01:02:12.000 --> 01:02:13.416
+<b>because we are actually</b>
+
+
+01:02:13.416 --> 01:02:14.958
+<b>biasing more towards action</b>
+
+
+01:02:15.208 --> 01:02:16.166
+<b>than just discussion.</b>
+
+
+01:02:16.583 --> 01:02:17.375
+<b>We and a lot of our</b>
+
+
+01:02:17.375 --> 01:02:18.666
+<b>customers are using linear.</b>
+
+
+01:02:19.083 --> 01:02:19.958
+<b>which means that we can just</b>
+
+
+01:02:19.958 --> 01:02:21.541
+<b>so quickly internally dog food</b>
+
+
+01:02:21.541 --> 01:02:22.291
+<b>a version of that.</b>
+
+
+01:02:22.291 --> 01:02:23.541
+<b>Meaning in two or three days.</b>
+
+
+01:02:23.750 --> 01:02:24.500
+<b>we could have an act</b>
+
+
+01:02:24.500 --> 01:02:26.041
+<b>cursor go fix this linear issue.</b>
+
+
+01:02:26.500 --> 01:02:27.291
+<b>I think that has evolved</b>
+
+
+01:02:27.291 --> 01:02:27.791
+<b>to a really</b>
+
+
+01:02:27.791 --> 01:02:29.458
+<b>sophisticated and rich experience.</b>
+
+
+01:02:29.458 --> 01:02:30.333
+<b>So the agent SDK.</b>
+
+
+01:02:31.458 --> 01:02:32.458
+<b>reporting back different</b>
+
+
+01:02:32.458 --> 01:02:33.625
+<b>tool use and conversation</b>
+
+
+01:02:33.625 --> 01:02:34.791
+<b>and supporting follow-ups</b>
+
+
+01:02:34.791 --> 01:02:36.500
+<b>and letting you click right</b>
+
+
+01:02:36.500 --> 01:02:37.916
+<b>into PRs and opening cursor.</b>
+
+
+01:02:38.250 --> 01:02:39.458
+<b>that has evolved over time.</b>
+
+
+01:02:39.458 --> 01:02:40.166
+<b>I think a big part was</b>
+
+
+01:02:40.166 --> 01:02:41.166
+<b>internal dog fooding.</b>
+
+
+01:02:41.250 --> 01:02:42.083
+<b>We get feedback from</b>
+
+
+01:02:42.083 --> 01:02:43.333
+<b>so many varied places.</b>
+
+
+01:02:43.333 --> 01:02:44.166
+<b>We have our own forums</b>
+
+
+01:02:44.166 --> 01:02:46.375
+<b>where tons of cursor users</b>
+
+
+01:02:46.375 --> 01:02:48.541
+<b>and ambassadors are finding things</b>
+
+
+01:02:48.541 --> 01:02:49.750
+<b>that they want to improve or fix.</b>
+
+
+01:02:50.333 --> 01:02:51.416
+<b>On Twitter. there are so</b>
+
+
+01:02:51.416 --> 01:02:52.250
+<b>many different threads.</b>
+
+
+01:02:52.333 --> 01:02:53.291
+<b>And so yes. it's a lot of</b>
+
+
+01:02:53.291 --> 01:02:55.250
+<b>information to sort of collect.</b>
+
+
+01:02:55.875 --> 01:02:58.000
+<b>There's duplication. things to triage.</b>
+
+
+01:02:58.083 --> 01:02:59.000
+<b>At Cursor. I see</b>
+
+
+01:02:59.000 --> 01:03:00.250
+<b>engineers are responsible</b>
+
+
+01:03:00.541 --> 01:03:01.416
+<b>for delivering features.</b>
+
+
+01:03:01.916 --> 01:03:02.625
+<b>That means when there's a</b>
+
+
+01:03:02.625 --> 01:03:03.416
+<b>new part of the product.</b>
+
+
+01:03:03.625 --> 01:03:04.750
+<b>there's one or maybe two</b>
+
+
+01:03:04.750 --> 01:03:06.000
+<b>people responsible for it.</b>
+
+
+01:03:06.333 --> 01:03:07.166
+<b>And so what triage</b>
+
+
+01:03:07.166 --> 01:03:08.500
+<b>intelligence lets us do</b>
+
+
+01:03:08.833 --> 01:03:09.708
+<b>is it lets us direct</b>
+
+
+01:03:09.708 --> 01:03:10.666
+<b>the issues that matter</b>
+
+
+01:03:10.833 --> 01:03:12.041
+<b>to those one or two people</b>
+
+
+01:03:12.125 --> 01:03:12.583
+<b>without meeting</b>
+
+
+01:03:12.583 --> 01:03:14.500
+<b>meetings or sprint planning.</b>
+
+
+01:03:14.500 --> 01:03:16.541
+<b>It lets us take the single issue.</b>
+
+
+01:03:16.541 --> 01:03:17.208
+<b>figure out who's</b>
+
+
+01:03:17.208 --> 01:03:18.083
+<b>supposed to be the right owner</b>
+
+
+01:03:18.083 --> 01:03:19.333
+<b>and send it directly to them</b>
+
+
+01:03:19.333 --> 01:03:20.666
+<b>versus having a process</b>
+
+
+01:03:20.666 --> 01:03:21.541
+<b>where we go through meetings.</b>
+
+
+01:03:22.000 --> 01:03:22.500
+<b>The way I would say</b>
+
+
+01:03:22.500 --> 01:03:24.041
+<b>something is actually defined</b>
+
+
+01:03:24.041 --> 01:03:25.000
+<b>and is that gonna get fixed</b>
+
+
+01:03:25.000 --> 01:03:26.541
+<b>is only if it's able to be</b>
+
+
+01:03:26.541 --> 01:03:27.916
+<b>ticketed and spelled out.</b>
+
+
+01:03:28.208 --> 01:03:29.166
+<b>Otherwise things can</b>
+
+
+01:03:29.166 --> 01:03:31.208
+<b>easily get lost in the tracks</b>
+
+
+01:03:31.208 --> 01:03:32.458
+<b>or in the gaps between</b>
+
+
+01:03:32.666 --> 01:03:33.125
+<b>all these different</b>
+
+
+01:03:33.125 --> 01:03:34.208
+<b>surface areas that we have.</b>
+
+
+01:03:35.000 --> 01:03:37.500
+<b>I would say linear is truly the best</b>
+
+
+01:03:37.500 --> 01:03:38.625
+<b>product in its space.</b>
+
+
+01:03:39.041 --> 01:03:41.708
+<b>It not only is a well-crafted product</b>
+
+
+01:03:41.833 --> 01:03:43.458
+<b>that inspires builders</b>
+
+
+01:03:43.458 --> 01:03:44.916
+<b>as they are building their own products.</b>
+
+
+01:03:45.291 --> 01:03:47.291
+<b>You know. I put linear in a very high</b>
+
+
+01:03:47.291 --> 01:03:48.750
+<b>craft tier of products.</b>
+
+
+01:03:49.291 --> 01:03:51.666
+<b>We'd like cursor to be in that same tier.</b>
+
+
+01:03:52.083 --> 01:03:53.125
+<b>I think so much of what</b>
+
+
+01:03:53.125 --> 01:03:54.625
+<b>it means to build something</b>
+
+
+01:03:54.625 --> 01:03:55.583
+<b>is to be able to</b>
+
+
+01:03:55.583 --> 01:03:57.458
+<b>properly clarify. define.</b>
+
+
+01:03:57.958 --> 01:03:58.750
+<b>and assign things</b>
+
+
+01:03:58.750 --> 01:03:59.500
+<b>and keep track of</b>
+
+
+01:03:59.500 --> 01:04:00.375
+<b>whether they're done or not.</b>
+
+
+01:04:00.750 --> 01:04:02.291
+<b>Linear actually is the best way</b>
+
+
+01:04:02.291 --> 01:04:04.458
+<b>to not just organize tickets.</b>
+
+
+01:04:04.458 --> 01:04:06.250
+<b>It's actually the best way to organize</b>
+
+
+01:04:06.625 --> 01:04:07.875
+<b>the things you're trying to get done</b>
+
+
+01:04:08.000 --> 01:04:09.416
+<b>across an engineering organization.</b>
+
+
+01:04:09.875 --> 01:04:10.500
+<b>If you want me to make</b>
+
+
+01:04:10.500 --> 01:04:11.916
+<b>any more of linear comments.</b>
+
+
+01:04:11.916 --> 01:04:12.958
+<b>I love the keyboard shortcuts.</b>
+
+
+01:04:13.458 --> 01:04:15.166
+<b>Like. you know. I love the speed.</b>
+
+
+01:04:15.583 --> 01:04:16.708
+<b>I love that I report bugs</b>
+
+
+01:04:16.708 --> 01:04:17.791
+<b>in our shared Slack channel</b>
+
+
+01:04:18.083 --> 01:04:19.500
+<b>and you fix them the next day.</b>

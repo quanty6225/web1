@@ -1,0 +1,17 @@
+{
+  "pages": [
+    {
+      "route": "/qqq153/settings/templates/issue/new",
+      "file": "workspace.html",
+      "capture_id": "linear-issue-template-round2-20261014T063708Z",
+      "source_file": "002-standard.html"
+    },
+    {
+      "route": "/qqq153/settings/teams/QQQ/templates/issue/new",
+      "file": "team.html",
+      "capture_id": "linear-issue-template-round2-20261014T063708Z",
+      "source_file": "003-team.html"
+    }
+  ],
+  "source_writes": "blocked"
+}

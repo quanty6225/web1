@@ -1,0 +1,21 @@
+{
+  "pages": [
+    {
+      "route": "/qqq153/settings/new-team",
+      "file": "teams.html",
+      "capture_id": "linear-workspaces-round3-20261014T085123Z"
+    },
+    {
+      "route": "/qqq153/settings/import-export/migration-assistant?service=linearV2",
+      "file": "import.html",
+      "capture_id": "linear-workspaces-round3-20261014T085123Z"
+    },
+    {
+      "route": "/join",
+      "file": "create.html",
+      "capture_id": "linear-workspaces-round3-20261014T085416Z",
+      "capture_file": "workspace-create.html"
+    }
+  ],
+  "source_writes": "blocked"
+}

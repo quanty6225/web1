@@ -1,0 +1,3 @@
+@charset "UTF-8";
+@layer reset, base, app.base;
+.PfzYrG_root{pointer-events:none;-webkit-user-select:none;user-select:none;position:absolute;inset:0}@media not (prefers-reduced-motion:no-preference){.PfzYrG_video{display:none}}@media (prefers-reduced-motion:no-preference){.PfzYrG_image{display:none}}.PfzYrG_video,.PfzYrG_image{object-fit:cover;width:100%;height:100%}

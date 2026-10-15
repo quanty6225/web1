@@ -1,0 +1,5 @@
+@charset "UTF-8";
+@layer reset, base, app.base;
+@charset "UTF-8";
+@layer reset, base, app.base;
+.WY_epa_root{align-items:center;min-width:0;margin:0;padding:0;list-style:none;display:flex}.WY_epa_item{color:currentColor;white-space:nowrap;margin:0;padding:0}.WY_epa_item.WY_epa_truncate{text-overflow:ellipsis;overflow:hidden}.WY_epa_item:not(:last-child):after{content:"/" / "";color:var(--color-text-quaternary);alt:" ";white-space:nowrap;flex-shrink:0;margin-inline:8px;display:inline-block}

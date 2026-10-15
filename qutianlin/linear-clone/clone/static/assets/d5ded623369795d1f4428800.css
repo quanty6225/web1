@@ -1,0 +1,3 @@
+@charset "UTF-8";
+@layer reset, base, app.base;
+.DEHQBW_job{background-image:linear-gradient(to right, var(--color-border-primary) 50%, #fff0 0%);background-position:bottom;background-repeat:repeat-x;background-size:8px 1px;align-items:center;width:100%;min-height:80px;padding-block:12px;display:flex}.DEHQBW_job>div{width:100%}.DEHQBW_job:focus-visible{border-radius:16px}.DEHQBW_applyButton{color:var(--color-link-primary);transition:color .16s var(--ease-out-quad)}.DEHQBW_department{border-bottom:1px solid var(--color-border-primary);margin-top:40px;padding-block:16px}.DEHQBW_section:first-of-type .DEHQBW_department{margin-top:48px}@media (max-width:768px){.DEHQBW_section:first-of-type .DEHQBW_department{margin-top:24px}}

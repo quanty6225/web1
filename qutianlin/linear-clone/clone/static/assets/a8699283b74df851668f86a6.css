@@ -1,0 +1,5 @@
+@charset "UTF-8";
+@layer reset, base, app.base;
+@charset "UTF-8";
+@layer reset, base, app.base;
+.ko0qIq_h1{font-size:128px;line-height:1}@media (max-width:768px){.ko0qIq_h1{font-size:48px}}.ko0qIq_divider{background-image:linear-gradient(to right, var(--color-border-tertiary) 50%, #fff0 0%);opacity:.4;background-position:bottom;background-repeat:repeat-x;background-size:8px 1px;width:calc(100% + 4px);height:1px;margin-block:28px;margin-inline:-2px}.ko0qIq_topWrapper{align-items:center}.ko0qIq_topWrapper p,.ko0qIq_topWrapper h1{text-align:center}@media (max-width:640px){.ko0qIq_topWrapper{align-items:flex-start}.ko0qIq_topWrapper p,.ko0qIq_topWrapper h1{text-align:left}}

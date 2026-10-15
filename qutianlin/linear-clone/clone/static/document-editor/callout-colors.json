@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Grey",
+    "value": "lch(67.969% 3.577 260.65)"
+  },
+  {
+    "name": "Dark Grey",
+    "value": "#95a2b3"
+  },
+  {
+    "name": "Purple",
+    "value": "lch(48% 59.31 288.43)"
+  },
+  {
+    "name": "Teal",
+    "value": "#26b5ce"
+  },
+  {
+    "name": "Green",
+    "value": "#4cb782"
+  },
+  {
+    "name": "Yellow",
+    "value": "lch(80% 90 85)"
+  },
+  {
+    "name": "Orange",
+    "value": "lch(67.969% 62.082 61.651)"
+  },
+  {
+    "name": "Pink",
+    "value": "lch(67.969% 19.321 31.72)"
+  },
+  {
+    "name": "Red",
+    "value": "#eb5757"
+  }
+]

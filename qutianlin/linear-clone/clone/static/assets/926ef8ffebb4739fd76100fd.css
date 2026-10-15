@@ -1,0 +1,5 @@
+@charset "UTF-8";
+@layer reset, base, app.base;
+@charset "UTF-8";
+@layer reset, base, app.base;
+.Jbvjba_root{flex-direction:column;gap:18px;padding:80px 0 72px;display:flex}.Jbvjba_root[data-tabs=true]{padding-bottom:40px}.Jbvjba_title{text-box:trim-both cap alphabetic}.Jbvjba_tab[data-active=true]{color:var(--color-text-primary);font-weight:var(--font-weight-normal)}@media (any-hover:hover){.Jbvjba_tab:hover{color:var(--color-text-primary)}}.Jbvjba_tabRow{height:40px}@media (max-width:768px){.Jbvjba_tabs{margin-inline:calc(var(--page-padding-right) * -1);padding-inline:var(--page-padding-right);-webkit-mask-image:linear-gradient(to right, transparent, black var(--page-padding-left), black calc(100% - var(--page-padding-right)), transparent);-webkit-mask-image:linear-gradient(to right, transparent, black var(--page-padding-left), black calc(100% - var(--page-padding-right)), transparent);mask-image:linear-gradient(to right, transparent, black var(--page-padding-left), black calc(100% - var(--page-padding-right)), transparent);margin-bottom:-12px;padding-bottom:12px;overflow-x:auto}}

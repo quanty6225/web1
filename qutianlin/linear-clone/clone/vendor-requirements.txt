@@ -1,0 +1,12 @@
+asn1crypto==1.5.1
+cbor2==6.1.5
+cffi==2.1.1
+cryptography==50.0.2
+pyOpenSSL==26.4.0
+pycparser==3.11
+typing_extensions==4.16.0
+webauthn==2.2.0
+reportlab==5.0.1
+pillow==12.3.0
+charset-normalizer==3.5.2
+tzdata==2026.2

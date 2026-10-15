@@ -1,0 +1,14 @@
+{
+  "source_fonts": [
+    "https://static.linear.app/fonts/InterVariable.woff2?v=4.1",
+    "https://static.linear.app/fonts/InterVariable-Italic.woff2?v=4.1"
+  ],
+  "conversion": "fontTools 4.66.1, Brotli 1.2.0; wght 400/700, opsz 14, sfnt TrueType output",
+  "license_source": "https://raw.githubusercontent.com/rsms/inter/master/LICENSE.txt",
+  "outputs": {
+    "InterItalic-Regular.ttf": "1bf2eed182157123feb3301763c06b6ca2c9eaea6539bf0e1f3e235ae5c8dd7e",
+    "Inter-Regular.ttf": "9bcc0b89c8fd2a8e6f95d1d438e67fb82c0858270ed8945ec0d886e740b0c80b",
+    "Inter-Bold.ttf": "b7ba2f89ddf541ca41751560764805b39b43c7c9247e83e2be7872dafbb69831",
+    "InterItalic-Bold.ttf": "7feb9a66b3bfc19f6dee02ef3727eac763b13cf3126fff6bb28583961adfabf9"
+  }
+}

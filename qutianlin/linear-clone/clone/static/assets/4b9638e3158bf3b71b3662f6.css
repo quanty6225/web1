@@ -1,0 +1,3 @@
+@charset "UTF-8";
+@layer reset, base, app.base;
+.b6oLUa_root{background:var(--color-line-tertiary);border-radius:var(--radius-rounded);flex-shrink:0}.b6oLUa_root[data-orientation=horizontal]{--direction:to right;width:100%;height:1px}.b6oLUa_root[data-orientation=vertical]{--direction:to bottom;align-self:stretch;width:1px}.b6oLUa_variant-glass{background:#b4bcd01a}.b6oLUa_variant-skeuo{background:var(--color-bg-primary);box-shadow:0 1px 0 var(--color-border-secondary)}.b6oLUa_variant-fading{--color:rgba(var(--color-alpha), var(--color-alpha), var(--color-alpha), .1);background:linear-gradient(var(--direction), transparent, var(--color) 50%, transparent)}.b6oLUa_variant-border{background:var(--color-border-primary)}

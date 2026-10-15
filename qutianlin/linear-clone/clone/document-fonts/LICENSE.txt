@@ -1,0 +1,9 @@
+0: Copyright 2016 The Inter Project Authors
+
+8: rsms
+
+9: Rasmus Andersson
+
+13: This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL
+
+14: http://scripts.sil.org/OFL

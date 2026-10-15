@@ -1,0 +1,3 @@
+@charset "UTF-8";
+@layer reset, base, app.base;
+.eWt9IG_root{width:100%}@supports (container-type:inline-size){.eWt9IG_root{container-type:inline-size}}.eWt9IG_overlay{width:22cqw;height:4.4cqw;color:var(--color-text-secondary);white-space:nowrap;pointer-events:none;background-color:#1f2123;align-content:center;justify-items:center;padding:0 1.2cqw;font-size:1.65cqw;font-weight:500;display:flex;position:absolute;top:50.4%;left:57%}@supports (container-type:inline-size){.eWt9IG_overlay{display:block}}
