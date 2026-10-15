@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="850px" viewBox="0 0 1440 850" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 60.1 (101010) - https://sketch.com -->
+    <title>5FACE71C-6DEE-4AD1-BA84-D63FC9C83BF0@3x</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1440" height="850"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pm-guide-02-03" transform="translate(-1.000000, 0.000000)">
+            <g id="Header" transform="translate(0.000000, -1.000000)">
+                <g id="pm-guide-header-background" transform="translate(1.000000, 1.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                    <path d="M868,987 C868,987 828,750 879.626,582.874 C883.045,570.759 871.831,559.61 859.759,563.178 C777.56,587.47 537.048,650.477 321.22,639.599 C105.479,628.725 -63,483 -63,483 L-67,982 L868,987 Z" id="Fill-1" fill="#A3DFFC" mask="url(#mask-2)"></path>
+                    <path d="M1693.02344,105.992187 C1415.70052,100.429688 1216.46875,144.557292 1095.32813,238.375 C959.610677,323.184896 763.167969,226.161458 506,-52.6953125 L1705.9375,-87 L1693.02344,105.992187 Z" id="Path-3" fill="#FFEAB6" mask="url(#mask-2)"></path>
+                    <path d="M1671.51563,209 C1197.88021,160.177083 958.375,364.346354 953,821.507813 C947.625,1278.66927 1247.71615,1215.17969 1853.27344,631.039063 L1671.51563,209 Z" id="Path-2" fill="#C3CFFA" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

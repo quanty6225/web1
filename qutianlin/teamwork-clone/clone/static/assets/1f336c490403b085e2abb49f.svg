@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="6px" viewBox="0 0 10 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/small/ chevron/ down chevron/ down/</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="main-menu" transform="translate(-387.000000, -36.000000)">
+            <g id="header">
+                <g id="text-links" transform="translate(315.000000, 31.000000)">
+                    <g id="Group">
+                        <g id="small/-chevron/-down/" transform="translate(69.000000, 0.000000)">
+                            <g id="icon/small/-chevron/-down-chevron/-down/">
+                                <polygon id="icon-container" fill="#FFFFFF" opacity="0" points="0 16 16 16 16 0 0 0"></polygon>
+                                <path d="M11.7047401,5.23503235 C11.9891489,4.93389364 12.4638289,4.92033136 12.7649676,5.20474014 C13.0661064,5.48914892 13.0796686,5.96382894 12.7952599,6.26496765 L8.54525986,10.7649676 C8.2492932,11.0783441 7.7507068,11.0783441 7.45474014,10.7649676 L3.20474014,6.26496765 C2.92033136,5.96382894 2.93389364,5.48914892 3.23503235,5.20474014 C3.53617106,4.92033136 4.01085108,4.93389364 4.29525986,5.23503235 L8,9.15769838 L11.7047401,5.23503235 Z" id="icon-shape" fill="#727491" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="Page"></g>
+    </g>
+</svg>

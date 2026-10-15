@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="10px" viewBox="0 0 13 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Mask</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="checkboxSelected" transform="translate(-2.000000, -4.000000)" fill="#FFFFFF">
+            <g id="selected">
+                <polygon id="Mask" points="12.8436667 4 6.83733333 9.7862892 4.48866667 7.52262004 2.66666667 9.30113794 6.83333333 13.3333333 14.6666667 5.7785179"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,4171 @@
+/* ==================================== ARTICLE BASELINE ==================================== */
+/* Base text */
+.article--structure .article-body {
+   font-size: 16px;
+   line-height: 1.6em;
+   color: #0B0F1E;
+
+}
+
+/* h2: big pink section heading */
+.article-body h2 {
+   font-size: 34px;
+   color: #FF22B1;
+   letter-spacing: -0.2px;
+   margin: 28px 0 12px;
+   /* cap before + small gap after */
+}
+
+/* h3: purple subheading */
+.article-body h3 {
+   font-size: 22px;
+   color: #895EF7;
+   letter-spacing: -0.1px;
+   margin: 22px 0 8px;
+
+}
+
+/* h4: supporting subsection heading */
+.article-body h4 {
+   font-size: 18px;
+   color: #5A4FCF;
+   letter-spacing: 0;
+   margin: 18px 0 8px;
+
+}
+
+/* Preserve heading styling when links are embedded in heading text */
+.article-body :is(h2, h3, h4) a {
+   color: inherit;
+   text-decoration-color: currentColor;
+   text-decoration-thickness: 1.5px;
+   text-underline-offset: 0.15em;
+}
+
+.article-body :is(h2, h3, h4) a:hover,
+.article-body :is(h2, h3, h4) a:focus,
+.article-body :is(h2, h3, h4) a:visited {
+   color: inherit;
+   text-decoration-color: currentColor;
+}
+
+/* Link destination icon for linked headings */
+.article-body :is(h2, h3, h4) a::after {
+   content: "â†—";
+   display: inline-block;
+   margin-left: 0.28em;
+   line-height: 1;
+   opacity: 0.42;
+   transform: translateY(-0.02em);
+   transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+/* Slight scaling per level */
+.article-body h2 a::after {
+   font-size: 0.68em;
+}
+
+.article-body h3 a::after {
+   font-size: 0.72em;
+}
+
+.article-body h4 a::after {
+   font-size: 0.76em;
+}
+
+/* Interactive link cue */
+.article-body :is(h2, h3, h4) a:hover::after,
+.article-body :is(h2, h3, h4) a:focus-visible::after {
+   opacity: 0.82;
+   transform: translate(1px, -0.02em);
+}
+
+/* --- Headings â†’ first block gap (small, consistent) --- */
+
+:root {
+  --head-next-gap: 0.45rem;   /* tweak: 0.35â€“0.6rem */
+}
+
+/* Reduce bottom margin on headings so spacing is controlled by the next block */
+.article-body :is(h2, h3, h4, h5, h6) {
+  margin-bottom: 0.15rem;   /* keep tiny cap under the heading */
+}
+
+/* Add a small top margin to the very next element after a heading */
+.article-body :is(h2, h3, h4, h5, h6) + :not(.callout-banner, .callout, .intro-table-label) {
+  margin-top: var(--head-next-gap);
+}
+
+/* If the next thing is a list, keep it a touch tighter than paragraphs */
+.article-body :is(h2, h3, h4, h5, h6) + :is(ul, ol) {
+  margin-top: calc(var(--head-next-gap) - 0.1rem);
+}
+
+/* If an image or figure follows immediately, donâ€™t add extra space (handled elsewhere) */
+.article-body :is(h2, h3, h4, h5, h6) + :is(img, figure, .screenshot-wrap) {
+  margin-top: 0;
+}
+
+/* Mobile: nudge down slightly for readability */
+@media (max-width: 640px) {
+  :root { --head-next-gap: 0.5rem; }
+}
+
+
+/* --- Global knobs --- */
+:root {
+  /* small, even gap after any heading */
+  --head-next-gap: 0.45rem;
+  /* gap between a larger heading immediately followed by a smaller heading */
+  --head-subhead-gap: var(--head-next-gap); /* keep same; change if you want a different feel */
+}
+
+/* Keep headingsâ€™ own bottom margin tiny so the next-sibling controls spacing */
+.article-body :is(h2, h3, h4, h5, h6) {
+  margin-bottom: 0.15rem;
+}
+
+/* 1) Heading â†’ first block (paragraph, div, list, etc.) */
+.article-body :is(h2, h3, h4, h5, h6)
+  + :not(.callout-banner, .callout, .intro-table-label) {
+  margin-top: var(--head-next-gap);
+}
+
+/* Lists right after a heading: a hair tighter */
+.article-body :is(h2, h3, h4, h5, h6) + :is(ul, ol) {
+  margin-top: calc(var(--head-next-gap) - 0.1rem);
+}
+
+/* 2) Bigger heading â†’ smaller heading (e.g., h2 followed by h3/h4â€¦) */
+.article-body :is(h2, h3, h4, h5) + :is(h3, h4, h5, h6) {
+  margin-top: var(--head-subhead-gap);
+}
+
+/* If an image/figure follows, don't add extra space (your image rules take over) */
+.article-body :is(h2, h3, h4, h5, h6) + :is(img, figure, .screenshot-wrap) {
+  margin-top: 0;
+}
+
+/* Mobile nudge */
+@media (max-width: 640px) {
+  :root { --head-next-gap: 0.5rem; }
+}
+
+/* ===== Headings â†’ first content (p/ul/ol) ===== */
+.article-body :is(h1, h2, h3, h4) + :is(p, ul, ol) {
+  margin-top: 10px;           /* small lead-in after any heading */
+}
+
+/* Bigger â†’ smaller heading immediately after (e.g., H2 then H3) */
+.article-body h2 + h3,
+.article-body h1 + h2 {
+  margin-top: 12px;           /* keep them visually connected */
+}
+
+/* Default heading margins to anchor vertical rhythm */
+.article-body h1 {
+  margin: 32px 0 14px;        /* section open + lead-in handled above */
+}
+.article-body h2 {
+  margin: 28px 0 12px;
+}
+.article-body h3 {
+  margin: 22px 0 10px;
+}
+
+/* ===== Procedure lists (OL) with sub-points ===== */
+/* Lead-in when a list directly follows an intro sentence */
+.article-body p + ol,
+.article-body p + ul {
+  margin-top: 10px;
+}
+
+/* Nested lists inside a step: small top nudge, no tail puff */
+.article-body li > :is(ul, ol) {
+  margin-top: 6px;            /* was ~8â€“12px in many themes */
+  margin-bottom: 0;           /* prevent extra gap after last sub-sub point */
+}
+
+/* Remove trailing gap on the final item of any list */
+.article-body :is(ul, ol) > li:last-child {
+  margin-bottom: 0;
+}
+
+/* Even out step list rhythm (outer OL only) */
+.article-body :is(ol, ul) > li {
+  margin-bottom: 0.45em;      /* light cadence between top-level bullets */
+}
+
+/* Keep â€œdefinition-styleâ€ bullets tight when using a bold label + sentence */
+.article-body li > b + :is(span, em, i) {
+  margin-left: 0;             /* no accidental indent */
+}
+
+/* ===== â€œStep X: â€¦â€ subhead breathing room ===== */
+.article-body h3[id^="step-"] {
+  margin-top: 22px;           /* not too far from preceding H2 paragraph */
+  margin-bottom: 10px;        /* let the first bullet sit close */
+}
+
+/* ===== Callouts near lists (for your Tips block alignment) ===== */
+.article-body .callout {
+  margin: 18px 0;             /* consistent section gap */
+}
+.article-body .callout .styled-list,
+.article-body .callout ul {
+  margin-top: 6px;            /* subtle space under the callout title */
+}
+
+/* ===== Mobile tweaks (keeps scan-ability on small screens) ===== */
+@media (max-width: 640px) {
+  .article-body h1 { margin: 28px 0 12px; }
+  .article-body h2 { margin: 24px 0 10px; }
+  .article-body h3 { margin: 20px 0 8px; }
+  .article-body h4 { margin: 18px 0 8px; }
+
+  .article-body :is(h1, h2, h3, h4) + :is(p, ul, ol) { margin-top: 8px; }
+  .article-body li > :is(ul, ol) { margin-top: 5px; }
+  .article-body :is(ol, ul) > li { margin-bottom: 0.4em; }
+}
+
+
+/* Callout gaps */
+
+/* Gating banner â†’ Feature overview label spacing */
+.callout-banner + .intro-table-label {
+   margin-top: 0;
+
+}
+ /* label has its own margin */
+.callout-banner {
+   margin-bottom: 16px;
+
+}
+ /* desktop gap */
+@media (max-width: 640px) {
+   .callout-banner {
+     margin-bottom: 14px;
+
+  }
+   /* mobile gap */
+}
+
+/* Gating banner â†’ Feature overview label spacing (tuned) */
+.article-body .callout-banner + .intro-table-label {
+   margin-top: 8px;
+   /* small breath above the label */
+}
+
+.article-body .callout-banner {
+   margin-bottom: 20px;
+   /* more space below the banner */
+}
+
+@media (max-width: 640px) {
+   .article-body .callout-banner {
+     margin-bottom: 16px;
+
+  }
+
+}
+
+/* Modern spacer handling */
+.article-body div:has(> br) + :is(h3, h4) {
+   margin-top: 16px;
+
+}
+
+/* When h3 follows h2 */
+.article-body h2 + h3 {
+   margin-top: 12px;
+
+}
+
+/* Prevent anchored headings from hiding under the sticky header */
+.article-body [id] {
+   scroll-margin-top: 88px;
+
+}
+
+@media (max-width: 640px) {
+
+  .article-body [id] {
+     scroll-margin-top: 72px;
+
+  }
+
+  .article-body h2 {
+     margin: 24px 0 10px;
+
+  }
+
+  .article-body h3 {
+     margin: 18px 0 8px;
+
+  }
+
+  .article-body :is(p, ul, ol, table, .callout, .content-table-wrapper, .intro-table-wrapper, .responsive-table) + :is(h3, h4) {
+     margin-top: 26px;
+
+  }
+
+}
+
+/* Helper kept */
+ul + :is(h3, h4), div + :is(h3, h4) {
+   margin-top: 14px;
+
+}
+
+/* ==================================== INTRO TABLE â€” final replacement ==================================== */
+
+/* Wrapper: no scroll by default (desktop/laptop) */
+.intro-table-wrapper {
+   overflow: visible;
+   -webkit-overflow-scrolling: touch;
+   /* harmless when not scrolling */
+}
+
+/* Label above the table */
+.intro-table-label {
+   font-size: 17px;
+   font-weight: 500;
+   color: #666;
+   margin: 10px 0 6px 0;
+   letter-spacing: 0.2px;
+
+}
+
+.intro-table-label-icon {
+   font-size: 14px;
+   opacity: .6;
+   margin-right: 4px;
+
+}
+
+/* Base table â€” wrap by default */
+.intro-table {
+   width: 100%;
+   table-layout: auto;
+   /* allow wrapping on wider screens */ min-width: 0;
+   /* don't force scroll at laptop widths */ border-collapse: collapse;
+   border-spacing: 0;
+   border: 0;
+   margin: 0 0 22px 0;
+
+}
+
+/* Divider under every row */
+.intro-table tr {
+   border-bottom: 1px solid #E6E9F5;
+
+}
+
+/* Global cell styles */
+.intro-table th, .intro-table td {
+   padding: 12px 10px;
+   vertical-align: top;
+   font-size: 16px;
+   color: #0B0F1E;
+   line-height: 1.55;
+   background: transparent;
+   border: 0 !important;
+   white-space: normal;
+   word-break: normal;
+   overflow-wrap: anywhere;
+
+}
+
+/* Label column (left) */
+.intro-table th[scope="row"], .intro-table td:first-child {
+   font-size: 18px;
+   font-weight: 700;
+   color: #2A2953;
+   line-height: 1.3;
+   width: 13%;
+   min-width: 72px;
+   max-width: 88px;
+   white-space: nowrap;
+   vertical-align: top;
+   padding: 14px 8px 12px 0;
+
+}
+
+/* Content column (right) */
+.intro-table th[scope="row"] + td, .intro-table td:last-child {
+   width: 87%;
+   word-wrap: break-word;
+   padding: 12px 0;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 1.55;
+
+}
+
+/* Lists inside INTRO table cells */
+.intro-table td ul, .intro-table td ol {
+   margin: 0;
+   padding-left: 1.25em;
+   list-style-position: outside;
+
+}
+
+.intro-table td li {
+   margin-bottom: 0.4em;
+   line-height: 1.5;
+
+}
+
+.intro-table td li:last-child {
+   margin-bottom: 0 !important;
+
+}
+
+.intro-table td li > br:last-child {
+   display: none !important;
+
+}
+
+.intro-table td li > p, .intro-table td li > div {
+   margin: 0 !important;
+
+}
+
+/* Robust sublist handling + lead-in spacing */
+.intro-table td ul ul, .intro-table td ol ul, .intro-table td ul ol, .intro-table td ol ol {
+   margin: 0.35em 0 0.25em 1.5em;
+   padding-left: 1.25em;
+   list-style-position: outside;
+
+}
+
+.intro-table td ul ul li, .intro-table td ol ul li, .intro-table td ul ol li, .intro-table td ol ol li {
+   margin-bottom: 0.22em;
+   line-height: 1.38;
+
+}
+
+.intro-table td ul ul li:last-child, .intro-table td ol ul li:last-child, .intro-table td ul ol li:last-child, .intro-table td ol ol li:last-child {
+   margin-bottom: 0;
+
+}
+
+.intro-table td :is(p, div) + ul, .intro-table td :is(p, div) + ol {
+   margin-top: 0.45em;
+
+}
+
+/* Intro tables are informational, not interactive */
+.intro-table tr:hover {
+   background-color: transparent;
+
+}
+
+/* Scroll helper text â€” hidden by default */
+.scroll-helper-text {
+   display: none;
+   text-align: center;
+   font-size: 13px;
+   color: #666;
+   margin-top: 6px;
+   font-style: italic;
+
+}
+
+/* Intro tables: enable scroll and show helper at â‰¤860px */
+@media (max-width: 860px) {
+
+  .intro-table-wrapper {
+     overflow-x: auto;
+     -webkit-overflow-scrolling: touch;
+     scrollbar-gutter: stable both-edges;
+     /* prevent yo-yo reflow */
+  }
+
+  .intro-table {
+     table-layout: fixed;
+     /* stable columns while scrolled */ min-width: 700px;
+     /* guarantees a reason to scroll */
+  }
+
+  /* Show helper whether it's inside OR immediately after the wrapper */
+  .intro-table-wrapper .scroll-helper-text, .intro-table-wrapper + .scroll-helper-text {
+     display: block !important;
+
+  }
+
+}
+
+/* Optional tighter floor for very small phones */
+@media (max-width: 480px) {
+   .intro-table {
+     min-width: 620px;
+
+  }
+
+}
+
+/* --- Trim trailing gaps & editor spacers (incl. WHO last sub-point) --- */
+.intro-table td > :last-child {
+   margin-bottom: 0 !important;
+
+}
+
+.intro-table td > :last-child > :last-child {
+   margin-bottom: 0 !important;
+
+}
+
+.intro-table td :is(ul, ol) > li:last-child {
+   margin-bottom: 0 !important;
+
+}
+
+.intro-table td :is(p, div, li) > br:last-child {
+   display: none !important;
+
+}
+
+.intro-table td ul + ul:last-child {
+   margin-bottom: 0 !important;
+
+}
+
+.intro-table td ul + ul:last-child > li:last-child {
+   margin-bottom: 0 !important;
+
+}
+
+/* Use this and add class="spacer" to real spacer divs in the editor */
+.intro-table td > .spacer:last-child {
+   display: none !important;
+
+}
+
+/* 2) Reduce â€œyo-yoâ€ layout when scrollbars appear/disappear */
+.intro-table-wrapper, .content-table-wrapper {
+   scrollbar-gutter: stable both-edges;
+   overscroll-behavior-x: contain;
+
+}
+
+/* Optional: subtle edge-fade hint when scrolled */
+@media (max-width: 860px) {
+   .intro-table-wrapper {
+     position: relative;
+     -webkit-mask-image: linear-gradient(to right, #000 92%, transparent);
+     mask-image: linear-gradient(to right, #000 92%, transparent);
+
+  }
+
+}
+
+/* WHO row: remove spacing after the last sub-point */
+.intro-table td :is(ul, ol):last-child {
+   margin-bottom: 0 !important;
+
+}
+
+.intro-table td :is(ul, ol):last-child > li:last-child {
+   margin-bottom: 0 !important;
+
+}
+
+/* If the editor wraps list text in <p> or <div>, trim those too */
+.intro-table td li > p {
+   margin: 0 !important;
+
+}
+
+.intro-table td li > :last-child {
+   margin-bottom: 0 !important;
+
+}
+
+/* Belt-and-braces: hide trailing spacers/brs if any slipped in */
+.intro-table td :is(p, div, li) > br:last-child {
+   display: none !important;
+
+}
+
+.intro-table td div:empty:last-child {
+   display: none !important;
+
+}
+
+/* --- Schedule doc: small helpers --- */
+.cell-subnote {
+  margin-top:4px
+}
+
+.cell-subnote sub,.cell-subnote small {
+  font-size:85%;
+  opacity:.9
+}
+
+.intro-table li,.content-table li {
+  margin-bottom:6px
+}
+
+.intro-table li:last-child,.content-table li:last-child {
+  margin-bottom:0
+}
+
+.responsive-table {
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch
+}
+
+.intro-table th,.intro-table td,.content-table th,.content-table td {
+  vertical-align:top
+}
+
+.align-center {
+  text-align:center
+}
+
+.scroll-helper-text {
+  font-size:12px;
+  opacity:.7
+}
+
+.spacer {
+  height:16px
+}
+
+/* ================== TABLE CELLS THAT END WITH AN IMAGE (+ trailing <br/>) ================== */
+/* Works for BOTH .content-table and .intro-table. Put this at the very end of your CSS. */
+
+/* Case A: bare <img> is actually last child */
+.intro-table td > img:last-child,
+.content-table td > img:last-child {
+
+  display:block !important;
+
+  margin:8px 0 0 !important;
+     /* space above, none below */
+}
+
+/* Case B: wrapper (div/span/figure) is last, first child is <img>, then <br/> */
+.intro-table td > :is(div,span,figure):last-child > img:first-child,
+.content-table td > :is(div,span,figure):last-child > img:first-child {
+
+  display:block !important;
+
+  margin:8px 0 0 !important;
+
+}
+
+/* Hide the trailing spacer br when it follows that first image and is itself last */
+.intro-table td > :is(div,span,figure):last-child > img:first-child + br:last-child,
+.content-table td > :is(div,span,figure):last-child > img:first-child + br:last-child {
+
+  display:none !important;
+
+}
+
+/* Same logic when this happens inside list items within table cells */
+.intro-table td li > :is(div,span,figure):last-child > img:first-child + br:last-child,
+.content-table td li > :is(div,span,figure):last-child > img:first-child + br:last-child {
+
+  display:none !important;
+
+}
+
+.intro-table td li > :is(div,span,figure):last-child > img:first-child,
+.content-table td li > :is(div,span,figure):last-child > img:first-child {
+
+  display:block !important;
+
+  margin:8px 0 0 !important;
+
+}
+
+/* Finally, if the cell literally ends with a stray <br>, kill it */
+.intro-table td > br:last-child,
+.content-table td > br:last-child {
+
+  display:none !important;
+
+}
+
+.cell-meta {
+  font-size: 0.85em;
+  color: #6b7280;   /* muted grey */
+  line-height: 1.3;
+  margin-top: 2px;
+}
+
+/* ===== TOC â€” Softer Card + Compact, Hierarchical Spacing (Option 1) ===== */
+:root {
+  /* Colors */
+  --toc-bg: #FAF9FF;
+  --toc-border: #EDEBFF;
+  --toc-title: #6E5ACF;
+  --toc-link: #6E5ACF;
+  --toc-link-hover: #5A48C7;
+  --toc-text: #0B0F1E;
+
+  /* Layout */
+  --toc-radius: 10px;
+  --toc-pad-y: 8px;           /* card padding Y */
+  --toc-pad-x: 16px;          /* card padding X */
+  --toc-title-gap: 12px;      /* space after title */
+  --toc-bottom-gap: 20px;     /* space below the card */
+
+  /* Item rhythm */
+  --toc-l1-gap: 10px;         /* gap between L1 links */
+  --toc-l2-gap: 6px;          /* gap between L2 links */
+}
+
+.toc {
+  background: var(--toc-bg);
+  border: 1px solid var(--toc-border);
+  border-radius: var(--toc-radius);
+  color: var(--toc-text);
+  padding: var(--toc-pad-y) var(--toc-pad-x);
+  padding-bottom: calc(var(--toc-pad-y) + 2px);
+  margin: 16px 0 var(--toc-bottom-gap);
+
+  /* ensure non-sticky */
+  position: static !important;
+  top: auto !important;
+  bottom: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* Title */
+.toc .toc-title {
+  margin: 0 0 var(--toc-title-gap);
+  font-weight: 600;
+  color: var(--toc-title);
+  line-height: 1.25;
+  font-size: 13px;
+  letter-spacing: .02em;
+}
+
+/* Base list reset */
+.toc .toc-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+/* Level 1 spacing */
+.toc .toc-list > li { margin-top: var(--toc-l1-gap); }
+.toc .toc-list > li:first-child { margin-top: 0; }
+
+/* Level 2 container (nested UL under L1) */
+.toc .toc-list > li > ul {
+  list-style: none;           /* set to 'disc' if you want bullets */
+  margin: 6px 0 8px 16px;     /* indent + tight rhythm */
+  padding-left: 0;
+}
+
+/* Level 2 items */
+.toc .toc-list > li > ul > li { margin-top: var(--toc-l2-gap); }
+.toc .toc-list > li > ul > li:first-child { margin-top: 0; }
+
+/* Links */
+.toc .toc-list a {
+  display: inline-block;      /* compact hover target */
+  color: var(--toc-link);
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 2px 4px;
+  transition: background .15s ease, color .15s ease;
+}
+.toc .toc-list a:hover {
+  background: rgba(11, 15, 30, .04);
+  color: var(--toc-link-hover);
+  text-decoration: none;
+}
+.toc .toc-list a:focus-visible {
+  outline: 2px solid var(--toc-link);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Kill stray <br> the editor injects */
+.toc .toc-list br { display: none !important; }
+
+/* ===== Compact behaviour: top-level only by default; reveal subs on intent ===== */
+
+/* 1) Hide nested lists by default when .compact is present */
+.toc.compact .toc-list > li > ul {
+  display: block;             /* keep in flow */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height .18s ease, opacity .18s ease;
+}
+
+/* 2) Reveal on hover (pointer) and keyboard focus */
+@media (hover: hover) {
+  .toc.compact .toc-list > li:hover > ul {
+    max-height: 1000px;
+    opacity: 1;
+    overflow: visible;
+  }
+}
+.toc.compact .toc-list > li:focus-within > ul {
+  max-height: 1000px;
+  opacity: 1;
+  overflow: visible;
+}
+
+/* 3) Always-on mode if you add .show-sub on .toc */
+.toc.show-sub .toc-list > li > ul {
+  max-height: 1000px;
+  opacity: 1;
+  overflow: visible;
+}
+
+/* Reduce â€œcollapse gapâ€ when pointer moves between L1 and its UL */
+.toc.compact .toc-list > li { position: relative; }
+.toc.compact .toc-list > li > ul { position: relative; }
+.toc.compact .toc-list > li > ul::after {
+  content: "";
+  display: block;
+  height: 12px;               /* hover bridge */
+  margin-top: -12px;
+}
+
+/* ===== Chevron indicator (parent items) ===== */
+/* Assumes LI > DIV > A + UL (your current markup) */
+.toc.compact .toc-list > li:has(> ul) > div > a::after {
+  content: "â–¸";               /* closed */
+  display: inline-block;
+  width: 1em;                 /* reserve space */
+  margin-left: 6px;
+  line-height: 1;
+  opacity: .7;
+  transition: transform .18s ease, opacity .18s ease;
+}
+@media (hover: hover) {
+  .toc.compact .toc-list > li:has(> ul):hover > div > a::after {
+    content: "â–¾";             /* open on hover */
+    opacity: 1;
+  }
+}
+.toc.compact .toc-list > li:focus-within > div > a::after,
+.toc.compact .toc-list > li.hold:has(> ul) > div > a::after {
+  content: "â–¾";               /* open when keyboard focusing */
+  opacity: 1;
+}
+
+/* Tidy end spacing */
+.toc .toc-list li:last-child { margin-bottom: 0; }
+
+/* Respect motion prefs */
+@media (prefers-reduced-motion: reduce) {
+  .toc.compact .toc-list > li > ul { transition: none; }
+}
+
+
+/* FAQ item containers */
+.article-body .faq-item {
+  background: #FCFCFE;
+  border: 1px solid #EDEBFF;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 10px 0;
+}
+
+/* Remove extra spacing on final FAQ item */
+.article-body .faq-item:last-child {
+  margin-bottom: 0;
+}
+
+/* FAQ question headings */
+.article-body .faq-item h3 {
+  margin: 0 0 8px !important;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+/* FAQ answer content */
+.article-body .faq-item div {
+  margin: 0 !important;
+  max-width: 900px;
+}
+
+/* Remove inherited spacing from final child */
+.article-body .faq-item > :last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Mobile spacing refinement */
+@media (max-width: 640px) {
+  .article-body .faq-item {
+    padding: 14px 16px;
+    margin: 8px 0;
+  }
+
+  .article-body .faq-item h3 {
+    font-size: 17px;
+  }
+}
+
+/* =========================
+   BACK TO TOP (purple circle)
+   ========================= */
+
+/* =========================
+   HEADING COPY CHIP (left)
+   ========================= */
+
+/* Headings act as positioning context; no indent, no clipping */
+.article-body h2,
+.article-body h3,
+.article-body h4{
+  position: relative !important;
+  overflow: visible;
+  padding-left: 0;
+}
+
+/* Default sizing knobs (per-doc); per-level values below win */
+.article-body{ --hl-badge-left:-28px; --hl-badge-size:26px; }
+.article-body h2{ --hl-badge-size:26px; --hl-badge-left:-30px; --hl-badge-nudge:-2px; }
+.article-body h3{ --hl-badge-size:22px; --hl-badge-left:-28px; --hl-badge-nudge:-1px; }
+.article-body h4{ --hl-badge-size:20px; --hl-badge-left:-26px; --hl-badge-nudge:-1px; }
+
+/* The chip itself: sits in the left gutter, perfectly centered to the heading line */
+.article-body .heading-copy{
+  position: absolute;
+  left: var(--hl-badge-left);
+  top: 50%;
+  transform: translateY(calc(-50% + var(--hl-badge-nudge)));
+  width: var(--hl-badge-size);
+  height: var(--hl-badge-size);
+
+  display: grid;               /* clean centering */
+  place-items: center;
+  line-height: 1;
+
+  background: #fff;            /* visual style */
+  border: 2px solid #CFC4FF;   /* soft purple outline */
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px rgba(137,94,247,.18) inset;
+
+  cursor: pointer;
+  opacity: 0;                  /* hidden until intent */
+  transition: opacity .15s ease, border-color .15s ease, box-shadow .15s ease;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+/* Reveal on intent (hover on desktop / keyboard focus) */
+@media (hover:hover) and (pointer:fine){
+  .article-body :is(h2,h3,h4):hover > .heading-copy,
+  .article-body .heading-copy:focus-visible{
+    opacity: 1;
+    border-color: #895EF7;
+    box-shadow: 0 0 0 2px rgba(137,94,247,.28);
+  }
+}
+
+/* SVG link icon inside the chip (purple stroke) */
+.article-body h2 > .heading-copy::before,
+.article-body h3 > .heading-copy::before,
+.article-body h4 > .heading-copy::before{
+  content: "";
+  display: inline-block;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236E5ACF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M10 14l-2 2a3 3 0 1 1-4-4l3-3a3 3 0 0 1 4 0'/><path d='M14 10l2-2a3 3 0 1 1 4 4l-3 3a3 3 0 0 1-4 0'/></svg>") no-repeat center / contain;
+  opacity: .95;
+}
+
+/* Per-level icon sizes to match chip sizes */
+.article-body h2 > .heading-copy::before{ width:16px; height:16px; }
+.article-body h3 > .heading-copy::before{ width:14px; height:14px; }
+.article-body h4 > .heading-copy::before{ width:13px; height:13px; }
+
+/* =========================
+   TOOLTIP (left of chip)
+   ========================= */
+
+/* JS sets data-tip = "Copy link" / "Copied!".
+   Bubble sits to the LEFT of the chip; no layout impact */
+.heading-copy::after{
+  content: attr(data-tip);
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 10px);    /* left side of chip */
+  left: auto;
+  transform: translateY(-50%) translateX(-4px);
+
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: rgba(17,19,26,.94);
+  color: #fff;
+  font: 500 12px/1.1 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(0,0,0,.18);
+
+  opacity: 0;
+  pointer-events: none;         /* prevents hover flicker */
+  z-index: 3;
+  transition: opacity .15s ease, transform .15s ease;
+}
+
+/* Show tooltip on intent (desktop hover/focus) and when JS toggles .show-tip */
+@media (hover:hover) and (pointer:fine){
+  .article-body :is(h2,h3,h4):hover > .heading-copy::after,
+  .heading-copy:focus-visible::after,
+  .heading-copy.show-tip::after{
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+/* Optional: small arrow on the left bubble */
+.heading-copy::after::before{
+  content:"";
+  position:absolute;
+  width:8px; height:8px;
+  background: inherit;
+  top:50%; right:-4px;
+  transform: translateY(-50%) rotate(45deg);
+  box-shadow: 0 6px 18px rgba(0,0,0,.18);
+}
+
+/* =========================
+   MOBILE TWEAKS (optional)
+   ========================= */
+
+@media (max-width: 640px){
+  .article-body{ --hl-badge-left:-24px; }  /* pull chip in a touch on narrow screens */
+}
+
+
+/* If an H2 wraps to two+ lines, this keeps the badge centered on the whole block. */
+
+/* ==================================== CONTENT TABLE (non-intro) ==================================== */
+
+/* Default: wrap text, no forced horizontal scroll */
+.content-table-wrapper {
+   overflow: visible;
+
+}
+
+.content-table {
+   width: 100%;
+   border-collapse: collapse;
+   border-spacing: 0;
+   margin-bottom: 22px;
+   table-layout: auto;
+   /* better wrapping */ color: #0B0F1E;
+
+}
+
+/* Header cells */
+.content-table thead th {
+   background-color: #F5F6FC;
+   color: #2A2953;
+   padding: 12px 10px;
+   border-bottom: 1px solid #CFD4F3;
+   vertical-align: top;
+   font-weight: 700;
+   text-align: left;
+
+}
+
+/* Optional helper if you center some headers */
+.content-table thead th.align-center, .content-table tbody td.align-center {
+   text-align: center;
+
+}
+.content-table tr.coming-soon-row td {
+    background: #FBFAFF;
+}
+/* Body cells */
+.content-table td {
+   padding: 12px 10px;
+   border-bottom: 1px solid #CFD4F3;
+   vertical-align: top;
+   white-space: normal;
+   word-break: normal;
+   overflow-wrap: break-word;
+   background: #FFFFFF;
+   font-weight: 400;
+   /* wrap nicely on desktop */ hyphens: none;
+
+}
+
+/* True row headers when you intentionally use <th scope="row"> */
+.content-table tbody th[scope="row"] {
+   background-color: #FFFFFF;
+   color: #0B0F1E;
+   font-weight: 600;
+   text-align: left;
+   padding: 12px 10px;
+   border-bottom: 1px solid #CFD4F3;
+   vertical-align: top;
+
+}
+
+/* Lists inside table cells: slightly tighter */
+.content-table td ul, .content-table td ol {
+   margin: 6px 0 0 18px;
+
+}
+
+/* Remove any generic first-column styling */
+.content-table tbody td:first-child {
+   background: transparent;
+   color: inherit;
+
+}
+
+/* Feature access table tweaks */
+.content-table.feature-access thead th {
+   text-align: center;
+
+}
+
+.content-table.feature-access thead th:first-child {
+   text-align: left;
+
+}
+
+.plan-head {
+   font-weight: 700;
+
+}
+
+.plan-sub  {
+   display:block;
+   font-size: 12.5px;
+   line-height: 1.2;
+   opacity:.85;
+   white-space: nowrap;
+
+}
+
+/* Swipe helper: hidden by default;
+ shown when scroll is active below */
+.content-table-wrapper .scroll-helper-text {
+   display: none;
+
+}
+
+/* Glossary-specific safeguards (no HTML change needed) */
+#schedule-glossary + .content-table-wrapper .content-table td:first-child, #schedule-glossary + .content-table-wrapper .content-table th:first-child {
+   white-space: nowrap;
+
+}
+
+@media (max-width: 360px) {
+   #schedule-glossary + .content-table-wrapper .content-table td:first-child, #schedule-glossary + .content-table-wrapper .content-table th:first-child {
+     white-space: normal;
+
+  }
+
+}
+
+/* Content tables: enable scroll earlier (â‰¤1024px) and show helper */
+@media (max-width: 1024px) {
+
+  .content-table-wrapper {
+     overflow-x: auto;
+     -webkit-overflow-scrolling: touch;
+     scrollbar-gutter: stable both-edges;
+
+  }
+
+  .content-table {
+     table-layout: fixed;
+     min-width: 800px;
+     /* trigger horizontal scroll sooner */
+  }
+
+  .content-table-wrapper + .scroll-helper-text, .content-table-wrapper .scroll-helper-text {
+     display: block !important;
+
+  }
+
+}
+
+.plan-head {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.plan-sub {
+  font-size: 0.85em;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+
+/* Optional: subtle edge-fade hint when scrolled */
+@media (max-width: 1024px) {
+   .content-table-wrapper {
+     position: relative;
+     -webkit-mask-image: linear-gradient(to right, #000 92%, transparent);
+     mask-image: linear-gradient(to right, #000 92%, transparent);
+
+  }
+
+}
+
+
+
+/* Tighten last-bullet and trailing-space cleanup inside tables */
+.content-table td :is(ul,ol)>li:last-child {
+  margin-bottom:0
+}
+
+.content-table td> :last-child {
+  margin-bottom:0!important
+}
+
+.content-table td> :last-child> :last-child {
+  margin-bottom:0!important
+}
+
+.content-table td li> :last-child {
+  margin-bottom:0!important
+}
+
+.content-table td li>br:last-child,
+.content-table td>br:last-child {
+  display:none!important
+}
+
+.content-table td div:empty:last-child {
+  display:none!important
+}
+
+/* ==== Content-table: tidy spacing when an image is the last child ==== */
+
+/* 1) A naked <img> as the final node in the cell */
+.content-table td > img:last-child {
+
+  display: block;
+               /* avoid inline baseline gaps */
+  max-width: 100%;
+
+  height: auto;
+
+  margin-top: 8px;
+              /* breathing room above */
+  margin-bottom: 0;
+             /* no extra tail space */
+}
+
+/* 2) A wrapper <div> that only contains an <img>, and that wrapper is last */
+.content-table td > div:last-child > img:only-child,
+.content-table td > span:last-child > img:only-child,
+.content-table td > figure:last-child > img:only-child {
+
+  display: block;
+
+  max-width: 100%;
+
+  height: auto;
+
+  margin-top: 8px;
+
+  margin-bottom: 0;
+
+}
+
+/* 3) Same cleanup inside list items living in table cells */
+.content-table td li > img:last-child,
+.content-table td li > div:last-child > img:only-child,
+.content-table td li > span:last-child > img:only-child,
+.content-table td li > figure:last-child > img:only-child {
+
+  display: block;
+
+  max-width: 100%;
+
+  height: auto;
+
+  margin-top: 8px;
+
+  margin-bottom: 0;
+
+}
+
+/* 4) Hide stray spacers that stop the image being the true last node */
+.content-table td > br:last-child,
+.content-table td li > br:last-child,
+.content-table td > div:empty:last-child,
+.content-table td li > div:empty:last-child {
+   display: none !important;
+
+}
+
+/* Only affect 2nd-level bullets inside the intro table */
+.intro-table td ul ul {
+   margin: .35em 0 .25em 1.5em;
+   padding-left: 1.25em;
+   list-style-position: outside;
+
+}
+
+.intro-table td ul ul li {
+   margin-bottom: .22em;
+
+}
+
+.intro-table td ul ul li:last-child {
+   margin-bottom: 0;
+
+}
+
+/* Reduce the gap between the lead-in line and its nested list */
+.intro-table td :is(p, div) + ul {
+   margin-top: .45em;
+}
+
+/* If a list follows a main-body image (or <figure>), don't auto add a gap. */
+.article-body > img + ul, .article-body > img + ol, .article-body > figure + ul, .article-body > figure + ol {
+   margin-top: 0 !important;
+
+}
+
+/* Neutralize left-drag offsets the editor may inject */
+.article-body img.ui-draggable, .article-body img[style*="margin-left"] {
+   margin-left: 0 !important;
+
+}
+
+/* Make a screenshot right after a list look the same as a screenshot inside a list item */
+.article-body ul + img, .article-body ul + div > img, .article-body ul + p > img, .article-body ol + img, .article-body ol + div > img, .article-body ol + p > img {
+   margin: .8em 0 1.1em !important;
+   box-shadow: 0 1px 2px rgba(11, 15, 30, .06);
+
+}
+
+/* === Images inside nested bullets (UL inside an OL step) === */
+.article-body ol li ul li > img, .article-body ol li ul li > div > img, .article-body ol li ul li > p > img, .article-body ul li > img, .article-body ul li > div > img, .article-body ul li > p > img {
+   display: block;
+   margin: 0.7em 0 1.0em !important;
+
+}
+
+/* The editor often adds a <br/> after the image â€” hide it */
+.article-body li img + br {
+   display: none;
+
+}
+
+/* If an image is immediately followed by another list, keep a small nudge */
+.article-body li > img + ul, .article-body li > img + ol, .article-body li > div > img + ul, .article-body li > div > img + ol, .article-body li > p > img + ul, .article-body li > p > img + ol {
+   margin-top: 0.25em !important;
+
+}
+
+/* List rhythm override */
+.article-body :is(ul, ol) > li {
+
+  margin-bottom: .5em;
+      /* was .4em */
+  line-height: 1.5;
+
+}
+
+/* ==================== LIST TEST SPACING SUB POINTS ==================== */
+/* Step 1 only: the OL immediately after the H3 */
+#step-1-create-quote + ol .styled-list {
+
+  /* kill the big tail gap after nested lists */
+  margin-bottom: 0 !important;
+
+}
+
+/* compact the bullets within each nested list */
+#step-1-create-quote + ol .styled-list > li {
+
+  margin-bottom: 0.3em !important;
+     /* tweak if you want tighter/looser */
+}
+
+#step-1-create-quote + ol .styled-list > li:last-child {
+
+  margin-bottom: 0 !important;
+         /* no extra space after the last sub-point */
+}
+
+/* remove stray <br> nodes that add â€œmysteryâ€ space */
+#step-1-create-quote + ol li > br:last-child,
+#step-1-create-quote + ol li > *:last-child > br:last-child,
+#step-1-create-quote + ol .styled-list > li > br:last-child {
+
+  display: none !important;
+
+}
+
+/* optional: if you want the intro lines ("Create from:", "Pricing:", "Apply tax:")
+   tight to the nested list beneath them */
+#step-1-create-quote + ol li > div:has(> b) {
+
+  margin-bottom: 0.25em;
+                /* keeps the label close to its bullets */
+}
+
+#step-1-create-quote + ol li > ul.styled-list:last-of-type {
+
+  margin-bottom: 0.15em;
+
+}
+
+#step-1-create-quote + ol > li > ul + b {
+
+  margin-top: 0.3em;
+
+}
+
+#step-1-create-quote + ol li br:last-child {
+   display: none;
+
+}
+
+/* ==================== END LIST TEST SPACING SUB POINTS ==================== */
+
+/* ==================== Gating chips / pills (single-hyphen) ==================== */
+
+/* Small inline badge (inside sentences/lists) */
+.inline-gate {
+
+  display:inline-flex;
+   align-items:center;
+   gap:6px;
+
+  font-size:12px;
+   opacity:.9;
+   margin:0 0 6px 0;
+
+}
+
+.inline-gate .ic {
+   display:inline-block;
+   line-height:1;
+   font-size:14px;
+
+}
+
+
+
+/* Linked chip and static pill */
+.gate-chip,
+.pill {
+
+  display:inline-flex;
+   align-items:center;
+   gap:6px;
+
+  padding:3px 8px;
+   border-radius:999px;
+   font-size:12.5px;
+   line-height:1.2;
+
+  font-weight:600;
+   white-space:nowrap;
+   vertical-align:baseline;
+
+  border:1px solid #E9ECF8;
+   background:#F7F8FD;
+   color:#5D4DB1;
+   text-decoration:none;
+
+}
+
+.gate-chip:hover, .gate-chip:focus {
+   background:#F0F2FC;
+   color:#5D4DB1;
+   text-decoration:none;
+
+}
+
+.gate-chip .ic, .pill .ic {
+   display:inline-block;
+   line-height:1;
+   font-size:16px;
+
+}
+
+/* Larger variant placed under headings */
+.gate-chip-lg, .pill-lg {
+   font-size:16px;
+   padding:8px 14px;
+
+}
+
+.gate-under-title {
+   display:block;
+   margin:6px 0 10px;
+
+}
+
+/* Headings that include an inline pill/chip */
+.h-inline {
+   display:inline-flex;
+   align-items:baseline;
+   gap:.42rem;
+   margin:1.25rem 0 .5rem;
+
+}
+
+.h-inline .h-title {
+   color:inherit;
+   font:inherit;
+
+}
+
+.h-inline .pill {
+
+  padding:.26rem .58rem;
+   border:1px solid #E2E8F0;
+   border-radius:999px;
+
+  background:#F8FAFC;
+   color:#334155;
+   font:500 11.5px/1 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+
+  vertical-align:baseline;
+
+}
+
+.h-inline .pill .ic {
+   line-height:1;
+
+}
+
+..widget-card-heading {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    margin-bottom: 12px;
+}
+
+.widget-card-heading .resource-title {
+    margin: 0 !important;
+}
+
+.widget-card-pills {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.widget-card-pills .pill {
+    margin: 0;
+}
+
+/* Heading + CTA row */
+.section-head {
+
+  display:flex;
+
+  align-items:center;
+            /* aligns text and button nicely */
+  justify-content:space-between;
+
+  flex-wrap:wrap;
+
+  gap:10px 12px;
+                 /* small breathing room when it wraps */
+  margin: 0 0 8px;
+
+}
+
+.section-head h2 {
+
+  margin:0;
+                      /* use global h3 color/size */
+  flex: 1 1 auto;
+                /* lets the title claim space first */
+}
+
+.section-head .pendobtn {
+  margin-left: auto; /* keep */
+  line-height: 1; /* keep */
+  white-space: nowrap; /* keep */
+
+  padding: 8px 18px; /* slightly stronger than 8x14 */
+  font-size: 16px; /* bump from 15px for clarity */
+  font-weight: 600; /* NEW: improves prominence */
+
+  border-radius: 999px; /* keep */
+}
+
+.cta-after-intro {
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+/* Mobile: stack cleanly with a gentle nudge */
+@media (max-width: 640px) {
+
+  .section-head {
+
+    align-items:flex-start;
+        /* heading top-aligns with CTA below */
+  }
+
+  .section-head .pendobtn {
+
+    margin-left:0;
+
+  }
+
+}
+
+/* Slightly reduce space between this block and following content */
+.section-head + * {
+   margin-top: 6px;
+
+}
+
+/* If a copy-link badge sits on the h3, keep it centered */
+.section-head h2 {
+   position: relative;
+
+}
+
+/* Table placement (left term column) */
+.content-table tbody td.term-cell {
+
+  width:25%;
+   white-space:nowrap;
+   vertical-align:top;
+   color:#2a2953;
+   font-weight:400;
+
+}
+
+@media (max-width:360px) {
+   .content-table tbody td.term-cell {
+     white-space:normal;
+
+  }
+
+}
+
+.content-table .term-cell .gate-chip,
+.content-table .term-cell .pill {
+   align-items:center;
+   line-height:1.2;
+
+}
+
+.content-table .term-cell .gate-chip .ic,
+.content-table .term-cell .pill .ic {
+   font-size:16px;
+   line-height:1;
+
+}
+
+/* Wrap-friendly heading chips on small screens */
+@media (max-width:640px) {
+
+  .h-inline {
+     flex-wrap:wrap;
+
+  }
+
+  .h-inline .pill {
+     order:2;
+     margin-top:.35rem;
+     white-space:normal;
+
+  }
+
+}
+
+/* Back-to-top: match TOC/link purple (text link version, if you use it) */
+.back-to-top a {
+  color: var(--toc-link, #6E5ACF);
+  text-decoration: none;
+  font-weight: 500;
+}
+.back-to-top a:hover,
+.back-to-top a:focus-visible {
+  color: var(--toc-link-hover, #6E5ACF);
+  text-decoration: none;
+  outline: none;
+}
+
+/* Back-to-top floating action button (fixed) */
+/* Back-to-top floating action button (fixed) */
+.back-to-top-fab{
+  position: fixed;
+  bottom: clamp(12px, 3vw, 22px);
+  left: max(12px, calc(env(safe-area-inset-left, 0px) + 8px));
+  right: auto;
+  z-index: 1000;
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid rgba(11,15,30,.15);
+  box-shadow: 0 6px 18px rgba(11,15,30,.18);
+  color: var(--toc-link, #6E5ACF);
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s ease,
+              transform .12s ease,
+              box-shadow .15s ease,
+              background-color .15s ease,
+              color .15s ease;
+}
+
+.back-to-top-fab.is-visible{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.back-to-top-fab,
+.back-to-top-fab:visited,
+.back-to-top-fab:active,
+.back-to-top-fab:focus,
+.back-to-top-fab:focus-visible{
+  color: var(--toc-link, #6E5ACF);
+  text-decoration: none;
+}
+
+.back-to-top-fab:focus-visible{
+  outline: 2px solid #895EF7;
+  outline-offset: 2px;
+}
+
+@media (hover:hover) and (pointer:fine){
+  .back-to-top-fab:hover{
+    background: #6E5ACF;
+    color: #fff;
+    box-shadow: 0 8px 22px rgba(11,15,30,.20);
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .back-to-top-fab { transition: none; }
+}
+}
+
+
+
+
+/* ==================================== CALLOUTS ==================================== */
+
+/* Base wrapper for ALL non-gating callouts */
+.callout {
+   display: flex;
+   align-items: flex-start;
+   border-radius: 10px;
+   padding: 24px 28px 24px 36px;
+   margin: 24px 0;
+   color: #0B0F1E;
+}
+
+/* Content hygiene inside callouts */
+.callout :is(ul, ol) {
+   margin-bottom: 0;
+}
+
+.callout .styled-list li:last-child {
+   margin-bottom: 0;
+}
+
+.callout .styled-list > li {
+   margin-bottom: 0.4em;
+}
+
+.callout .styled-list > li:last-child {
+   margin-bottom: 0;
+}
+
+.callout > :last-child > :last-child {
+   margin-bottom: 0;
+}
+
+.callout :is(p, li, div) > br:last-child {
+   display: none;
+}
+
+/* Shared icon + text for non-gating */
+.callout .callout-icon {
+   width: 34px;
+   height: 34px;
+   font-size: 28px;
+   line-height: 1;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   margin-right: 18px;
+   flex-shrink: 0;
+   transform: translateY(2px);
+}
+
+.callout .callout-content,
+.callout .callout-text {
+   display: block;
+   flex: 1 1 auto;
+   min-width: 0;
+   line-height: 1.55;
+}
+
+.callout .callout-content > :first-child,
+.callout .callout-text > :first-child {
+   margin-top: 0;
+}
+
+.callout .callout-content > :last-child,
+.callout .callout-text > :last-child {
+   margin-bottom: 0;
+}
+
+.callout .callout-content > div,
+.callout .callout-text > div {
+   margin: 0;
+}
+
+.callout .callout-content > div + div,
+.callout .callout-text > div + div {
+   margin-top: 18px;
+}
+
+.callout-early-access {
+   background: #F9F9FB;
+   border-top: 3px solid #895EF7;
+}
+
+/* ====================================
+   STANDARDIZED PLAN AVAILABILITY CALLOUT
+   ==================================== */
+
+/* Hide accidental old manually entered icon content in standardized gating banners */
+.callout-banner.callout-gating .callout-icon {
+  font-size: 0;
+}
+
+/* Standard gating icon */
+.callout-banner.callout-gating .callout-icon::before {
+  content: "ðŸ“‹";
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Keep gating link styled consistently */
+.callout-banner.callout-gating .callout-text a {
+  color: #5D4DB1;
+  text-decoration: underline;
+}
+
+.callout-banner.callout-gating .callout-text a:hover,
+.callout-banner.callout-gating .callout-text a:focus {
+  text-decoration: none;
+}
+
+/* ====================================
+   STANDARDIZED PLAN AVAILABILITY CALLOUT
+   ==================================== */
+   
+/* Type variants (non-gating) */
+.callout-tip {
+   border-left: 4px solid #895EF7;
+   background: #F5F4FB;
+}
+
+.callout-permissions {
+   border-left: 4px solid #C5C9D6;
+   background: #F6F7F9;
+}
+
+.callout-user {
+   border-left: 4px solid #4A90E2;
+   background: #E8F0FA;
+}
+
+.callout-restricted {
+   border-left: 4px solid #F45721;
+   background: #FFF4EE;
+}
+
+.callout-beta {
+   border-left: 4px solid #895EF7;
+   background: #F5F4FB;
+}
+
+.callout-note {
+   border-left: 4px solid #4A90E2;
+   background: #EEF4FF;
+}
+
+.callout-caution {
+   border-left: 4px solid #FFB300;
+   background: #FFF8E1;
+}
+
+.callout-warning {
+   border-left: 4px solid #E53935;
+   background: #FDECEA;
+}
+
+.callout-privacy {
+   border-left: 4px solid #B0BEC5;
+   background: #F5F7F8;
+}
+
+.callout-scenario {
+   border-left: 4px solid #c7c7c7;
+   background: #F9F9F9;
+}
+
+/* Experience variation / account differences */
+.callout-variation {
+   background: #F9FAFB;
+   border-top: 3px solid #C5C9D6;
+}
+
+/* Insight (neutral-positive info) */
+.callout-insight {
+   border-left: 4px solid #0288D1;
+   background: #E3F2FD;
+}
+
+.callout-learn {
+   border-left: 4px solid #1E857C;
+   background-color: #E6F4F3;
+   display: flex;
+   align-items: flex-start;
+}
+
+.related-overview-link {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #5F647A;
+  padding-bottom: 12px;
+  margin: 0 0 20px;
+  border-bottom: 1px solid #E7E7EF;
+}
+
+.related-overview-link a {
+  color: #5A48C7;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.related-overview-link a:hover,
+.related-overview-link a:focus {
+  color: #4B3FB0;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* Inline/one-liner formulas */
+.callout-formula {
+   display: inline-block;
+   border: 1px solid #E0E0E0;
+   background: #FAFAFA;
+   border-radius: 4px;
+   margin: 6px 0;
+   padding: 6px 10px;
+   font-family: ui-monospace, Menlo, Consolas, "Liberation Mono", monospace;
+   line-height: 1.4;
+   max-width: 100%;
+   overflow-wrap: anywhere;
+   white-space: normal;
+}
+
+.callout-formula.block {
+   display: block;
+   padding: 8px 12px;
+   margin: 8px 0;
+}
+
+.callout-formula.center {
+   text-align: center;
+}
+
+.callout-formula .op {
+   white-space: nowrap;
+}
+
+/* ============ */
+/* Banner callouts (top-of-article) */
+/* ============ */
+
+.callout-banner {
+   display: flex;
+   align-items: baseline;
+   padding: 12px 16px;
+   margin-bottom: 10px;
+   border-radius: 0 0 6px 6px;
+   color: #0B0F1E;
+}
+
+.callout-banner .callout-text {
+   line-height: 1.5;
+   flex: 1 1 auto;
+   min-width: 0;
+}
+
+.callout-banner .callout-icon {
+   width: 20px;
+   height: 20px;
+   font-size: 18px;
+   line-height: 1;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   margin-right: 10px;
+   flex-shrink: 0;
+   transform: translateY(1px);
+}
+
+.callout-banner + .crosslink {
+   margin-top: 4px;
+}
+
+.callout-gating {
+   background: #F9F9FB;
+   border-top: 3px solid #5D4DB1;
+}
+
+.callout-workflow {
+   background-color: #E6F4F3;
+   border-top: 4px solid #1E857C;
+}
+
+.callout-gating .callout-text a {
+   color: #5D4DB1;
+   text-decoration: underline;
+}
+
+.callout-deprecation {
+   background: #FFF8E1;
+   border-top: 3px solid #FF9800;
+}
+
+.callout-deprecation .callout-text a {
+   color: #F57C00;
+   text-decoration: underline;
+}
+
+.callout-deprecation .callout-text strong:first-child {
+   display: block;
+   margin-bottom: 4px;
+}
+
+.callout-legacy {
+   font-size: 13px;
+   color: #555;
+}
+
+/* Safari-specific tiny nudge */
+@supports (-webkit-hyphens: none) {
+   .callout-banner .callout-icon {
+      transform: translateY(2px);
+   }
+
+   .callout-deprecation .callout-icon {
+      transform: translateY(3px);
+   }
+
+   .callout-gating .callout-icon {
+      transform: translateY(2px);
+   }
+}
+
+.callout-banner .callout-text br + a {
+   margin-top: 4px;
+}
+
+.callout-banner .callout-text a:hover,
+.callout-banner .callout-text a:focus {
+   text-decoration: none;
+}
+
+/* Themes (duplicates kept intentionally for legacy selectors) */
+.callout-gating {
+   background-color: #F9F9FB;
+   border-top: 3px solid #5D4DB1;
+}
+
+.callout-gating .callout-text a {
+   color: #5D4DB1;
+}
+
+/* Reusable resource cards */
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 16px 0 28px;
+}
+
+.resource-card {
+  padding: 22px;
+  border: 1px solid #E9E6FF;
+  border-radius: 14px;
+  background: #FCFCFE;
+}
+
+.resource-card:hover .resource-title a {
+  color: #5A48C7 !important;
+}
+
+.resource-title {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.resource-title a {
+  color: #23233F !important;
+  text-decoration: none !important;
+}
+
+.resource-card:hover .resource-title a,
+.resource-title a:hover,
+.resource-title a:focus {
+  color: #5A48C7 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 0.15em;
+}
+
+.resource-icon {
+  color: #7B61FF;
+  font-size: 0.72em;
+  opacity: 0.65;
+  margin-left: 0.18rem;
+  vertical-align: text-top;
+}
+
+.resource-description {
+  color: #4A4F5E;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.resource-description a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.resource-description a:hover,
+.resource-description a:focus {
+  text-decoration: underline !important;
+  text-underline-offset: 0.12em;
+}
+
+.resource-card-secondary .resource-title a {
+  color: #23233F !important;
+}
+
+.resource-card-secondary .resource-title a:hover,
+.resource-card-secondary .resource-title a:focus {
+  color: #5A48C7 !important;
+}
+
+
+.resource-card-guides {
+    margin-top: 18px;
+}
+
+.resource-card-guides-title {
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.resource-card-guides a {
+    display: block;
+    margin-top: 4px;
+}
+
+/* Workflow cards */
+.article-body .workflow-stack {
+  margin-top: 18px;
+}
+
+.article-body .workflow-card {
+  width: 100%;
+  max-width: none;
+}
+
+.article-body .workflow-card .resource-title {
+  margin-bottom: 14px;
+  color: #23233F;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.article-body .workflow-card .resource-description {
+  max-width: none;
+}
+
+.article-body .workflow-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0 14px;
+  color: #23233F;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.article-body .workflow-flow span {
+  white-space: nowrap;
+}
+
+.article-body .workflow-arrow {
+  color: #A08CF8;
+  opacity: 0.9;
+  font-weight: 700;
+}
+
+.article-body .workflow-down-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 14px;
+  color: #A08CF8;
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* Prompt sequence cards */
+.mcp-sequence-intro {
+  margin: 18px 0 10px;
+  color: #6B7280;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.mcp-sequence {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin: 12px 0 24px;
+}
+
+.mcp-sequence-step {
+  flex: 1 1 0;
+  min-width: 0;
+  background: #FCFCFE;
+  border: 1px solid #EDEBFF;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.mcp-sequence-label {
+  margin-bottom: 8px;
+  color: #8A80C7;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.mcp-sequence-text {
+  color: #0B0F1E;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.mcp-sequence-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 22px;
+  color: #7B61FF;
+  font-size: 18px;
+  font-weight: 700;
+  opacity: 0.28;
+}
+
+@media (max-width: 760px) {
+  .mcp-sequence {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .mcp-sequence-arrow {
+    flex: 0 0 auto;
+    transform: rotate(90deg);
+    align-self: center;
+    height: 18px;
+  }
+}
+
+.platform-setup-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin: 18px 0 24px;
+}
+
+.platform-setup-card {
+  padding: 18px;
+  border: 1px solid #EDEBFF;
+  border-radius: 12px;
+  background: #FCFCFE;
+}
+
+.platform-setup-title {
+  margin-bottom: 8px;
+  color: #7B61FF;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.platform-setup-description {
+  color: #4A4F5E;
+  font-size: 16px;
+  font-weight:400;
+  line-height: 1.55;
+  margin-bottom:4px;
+}
+
+.platform-setup-list {
+  margin: 8px 0 0;
+  padding-left: 1.2em;
+  color: #4A4F5E;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.platform-setup-list li {
+  margin-bottom: 0.35em;
+}
+
+.platform-setup-list li:last-child {
+  margin-bottom: 0;
+}
+/* ==================================== IMAGES ==================================== */
+
+/* Standalone images in the main body */
+.article-body img {
+   display: block;
+   max-width: 100%;
+   height: auto;
+   margin: 0;
+   border-radius: 6px;
+   box-shadow: 0 1px 2px rgba(11, 15, 30, .06);
+
+}
+
+/* Absolute overflow guard â€” fights any inline width attr from the CMS */
+.article-body img {
+
+  max-width: 100% !important;
+
+  height: auto;
+
+}
+
+/* Make screenshots read naturally next to body text â€” cap to column, not viewport */
+.article-body img[alt*="Screenshot"],
+.article-body img[src*="Screenshot"],
+.article-body img[alt*="screenshot"],
+.article-body img[src*="screenshot"] {
+
+  display:block;
+
+  margin-inline:auto;
+
+  /* never overflow the column, but don't exceed our intended large size */
+  max-inline-size: min(100%, 980px);
+
+  /* keep natural aspect */
+  height:auto;
+
+  box-shadow: 0 1px 2px rgba(11,15,30,.06);
+
+  border-radius: 6px;
+
+}
+
+/* Slightly tighter cap when screenshots live inside list steps */
+.article-body ol li > :is(img, div > img) {
+
+  max-inline-size: min(100%, 900px);
+
+}
+
+/* --- Gentle gap when a paragraph/intro is followed by a list --- */
+/* Scope to the article only so it doesn't leak into nav/footers */
+.article-body :is(p, div, .lead, .intro) + :is(ul, ol) {
+  /* small, responsive nudge; tweak the middle value to taste */
+  margin-top: clamp(0.35rem, 0.6vw, 0.6rem);
+}
+
+/* If the list is the very first thing in a section, keep it tight */
+.article-body :is(ul, ol):first-child {
+  margin-top: 0;
+}
+
+/* Donâ€™t affect nested lists */
+.article-body :is(ul, ol) :is(ul, ol) {
+  margin-top: 0;
+}
+
+.article-body li > b {
+  display: inline-block;
+  margin-top: 0.2em;
+}
+
+/* Optional: a hair less gap on small screens */
+@media (max-width: 640px) {
+  .article-body :is(p, div, .lead, .intro) + :is(ul, ol) {
+    margin-top: 0.4rem;
+  }
+}
+
+
+.media-card {
+
+  margin: 1.5rem 0 2rem;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow: 0 1px 2px rgba(0,0,0,.06),
+              0 4px 14px rgba(0,0,0,.05);
+
+}
+
+.media-card .video-embed {
+
+  margin-bottom: 0 !important;
+
+  border-radius: 0;
+
+  overflow: hidden;
+
+}
+
+.media-card .video-embed iframe {
+
+  display: block;
+
+  border-radius: 0 !important;
+
+}
+
+.media-img {
+
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  margin: 0 !important;
+
+  background: #f7f8fa;
+
+}
+
+.media-caption {
+
+  line-height: 1.45;
+
+  padding: .8rem 1rem;
+
+  font-size: .9rem;
+
+  color: #374151;
+
+  background: #f2f4f7;
+
+  border: 1px solid #e5e7eb;
+
+  border-top: 0;
+
+}
+
+/* Teammate profile intro */
+.article-body .teammate-profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.article-body .teammate-profile-text {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.article-body .teammate-profile-avatar-wrap {
+    flex: 0 0 112px;
+    width: 112px;
+    height: 112px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0;
+    box-shadow: 0 1px 2px rgba(11, 15, 30, .06);
+}
+
+.article-body .teammate-profile-avatar-wrap .teammate-profile-avatar {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    border-radius: 0 !important;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 !important;
+    box-shadow: none !important;
+}
+
+@media (max-width: 640px) {
+    .article-body .teammate-profile {
+        display: block;
+    }
+
+    .article-body .teammate-profile-avatar-wrap {
+        width: 72px;
+        height: 72px;
+        border-radius: 14px;
+        margin: 12px 0 0;
+    }
+}
+
+/* ==================================== AVAILABILITY ICONS ==================================== */ :root {
+   --tw-purple: #895EF7;
+   --tw-pink: #FF22B1;
+
+}
+ .content-table td.availability-cell {
+   padding-top: 8px;
+   padding-bottom: 8px;
+
+}
+ .icon-available, .icon-unavailable {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   font-size: clamp(18px, 1.25vw, 20px);
+   font-weight: 800;
+   line-height: 1;
+   min-width: 1.4em;
+   min-height: 1.2em;
+
+}
+ .icon-available::before {
+   content: "âœ”";
+   color: var(--tw-purple);
+
+}
+.icon-unavailable::before {
+  content: "â€”";
+  color: inherit;
+  font-weight: 400;
+}
+
+/* WYSIWYG wrappers â€” keep tight */
+.article-body p > img, .article-body div > img, .article-body figure, .article-body figure > img {
+   margin: 0;
+
+}
+
+/* âœ… List-item images: give screenshots block spacing anywhere in the <li>
+   (no :has/@supports). Icons stay inline. */
+.article-body li > img:not(.icon-inline, .icon-inline-text, .icon-inline-tight, .icon-inline-flush),
+.article-body li > p:only-child > img:only-child,
+.article-body li > div:only-child > img:only-child,
+.article-body li > figure:only-child > img:only-child {
+
+  display: block !important;
+
+  margin: .8em 0 1.1em !important;
+
+  box-shadow: 0 1px 2px rgba(11, 15, 30, .06);
+
+  border-radius: 6px;
+
+}
+
+/* Keep mid-sentence icons tight */
+.article-body li img.icon-inline,
+.article-body li img.icon-inline-text,
+.article-body li img.icon-inline-tight,
+.article-body li img.icon-inline-flush {
+
+  display: inline-block !important;
+
+  margin: 0 4px !important;
+     /* -tight/-flush can zero this */
+  vertical-align: -0.12em !important;
+
+  box-shadow: none !important;
+
+  border-radius: 0 !important;
+
+}
+
+/* Old pages heuristic where icons lack classes */
+.article-body li img[src*="icon"],
+.article-body li img[alt*="icon"] {
+
+  display: inline-block !important;
+
+  margin: 0 4px !important;
+
+  vertical-align: -0.12em !important;
+
+  box-shadow: none !important;
+
+  border-radius: 0 !important;
+
+}
+
+/* âœ… NEW: inline icons inside list steps never get block margins */
+.article-body li img.icon-inline,
+.article-body li img.icon-inline-text,
+.article-body li img.icon-inline-tight,
+.article-body li img.icon-inline-flush {
+
+  display: inline-block !important;
+
+  margin: 0 4px !important;
+   /* -tight/-flush will zero/adjust as needed */
+  vertical-align: -0.12em !important;
+
+  box-shadow: none !important;
+
+  border-radius: 0 !important;
+
+}
+
+/* âœ… NEW: optional heuristic for old pages with 'icon' in src/alt */
+.article-body li img[src*="icon"],
+.article-body li img[alt*="icon"] {
+
+  display: inline-block !important;
+
+  margin: 0 4px !important;
+
+  vertical-align: -0.12em !important;
+
+  box-shadow: none !important;
+
+  border-radius: 0 !important;
+
+}
+
+/* âœ… Screenshots inside list itemsâ€”block spacing even when wrapped */
+.article-body li img:not(.icon-inline, .icon-inline-text, .icon-inline-tight, .icon-inline-flush) {
+
+  display: block !important;
+
+  margin: .8em 0 1.1em !important;
+     /* space above & below */
+  box-shadow: 0 1px 2px rgba(11, 15, 30, .06);
+
+  border-radius: 6px;
+
+}
+
+/* Keep mid-sentence icons tight (no block spacing) */
+.article-body li img.icon-inline,
+.article-body li img.icon-inline-text,
+.article-body li img.icon-inline-tight,
+.article-body li img.icon-inline-flush {
+
+  display: inline-block !important;
+
+  margin: 0 4px !important;
+     /* -tight/-flush may zero this */
+  vertical-align: -0.12em !important;
+
+  box-shadow: none !important;
+
+  border-radius: 0 !important;
+
+}
+
+/* Old pages heuristic where icons lack classes */
+.article-body li img[src*="icon"],
+.article-body li img[alt*="icon"] {
+
+  display: inline-block !important;
+
+  margin: 0 4px !important;
+
+  vertical-align: -0.12em !important;
+
+  box-shadow: none !important;
+
+  border-radius: 0 !important;
+
+}
+
+/* Images inside tables */
+.intro-table td img, .content-table td img {
+   margin: .5em 0 !important;
+   border-radius: 6px;
+   box-shadow: 0 1px 2px rgba(11, 15, 30, .06);
+
+}
+
+/* ================== content-table: cells that end with an image ================== */
+
+/* 1) Bare <img> as the true last child */
+.content-table td > img:last-child {
+
+  display:block !important;
+                   /* avoid inline baseline gap */
+  margin: 8px 0 0 !important;
+                 /* space above, none below */
+}
+
+/* 2) Wrapper (div/span/figure) is last and contains only an <img> */
+.content-table td > div:last-child > img:only-child,
+.content-table td > span:last-child > img:only-child,
+.content-table td > figure:last-child > img:only-child {
+
+  display:block !important;
+
+  margin: 8px 0 0 !important;
+
+}
+
+/* 3) Same logic inside list items within table cells */
+.content-table td li > img:last-child,
+.content-table td li > div:last-child > img:only-child,
+.content-table td li > span:last-child > img:only-child,
+.content-table td li > figure:last-child > img:only-child {
+
+  display:block !important;
+
+  margin: 8px 0 0 !important;
+
+}
+
+/* 4) Hide stray spacers that stop the image being the true last node */
+.content-table td > br:last-child,
+.content-table td li > br:last-child,
+.content-table td > div:empty:last-child,
+.content-table td li > div:empty:last-child {
+   display: none !important;
+
+}
+
+/* Only affect 2nd-level bullets inside the intro table */
+.intro-table td ul ul {
+   margin: .35em 0 .25em 1.5em;
+   padding-left: 1.25em;
+   list-style-position: outside;
+
+}
+
+.intro-table td ul ul li {
+   margin-bottom: .22em;
+
+}
+
+.intro-table td ul ul li:last-child {
+   margin-bottom: 0;
+
+}
+
+/* Reduce the gap between the lead-in line and its nested list */
+.intro-table td :is(p, div) + ul {
+   margin-top: .45em;
+
+}
+
+/* If a list follows a main-body image (or <figure>), don't auto add a gap. */
+.article-body > img + ul, .article-body > img + ol, .article-body > figure + ul, .article-body > figure + ol {
+   margin-top: 0 !important;
+
+}
+
+/* Neutralize left-drag offsets the editor may inject */
+.article-body img.ui-draggable, .article-body img[style*="margin-left"] {
+   margin-left: 0 !important;
+
+}
+
+/* Make a screenshot right after a list look the same as a screenshot inside a list item */
+.article-body ul + img, .article-body ul + div > img, .article-body ul + p > img, .article-body ol + img, .article-body ol + div > img, .article-body ol + p > img {
+   margin: .8em 0 1.1em !important;
+   box-shadow: 0 1px 2px rgba(11, 15, 30, .06);
+
+}
+
+/* === Images inside nested bullets (UL inside an OL step) === */
+.article-body ol li ul li > img, .article-body ol li ul li > div > img, .article-body ol li ul li > p > img, .article-body ul li > img, .article-body ul li > div > img, .article-body ul li > p > img {
+   display: block;
+   margin: 0.7em 0 1.0em !important;
+
+}
+
+/* The editor often adds a <br/> after the image â€” hide it */
+.article-body li img + br {
+   display: none;
+
+}
+
+/* If an image is immediately followed by another list, keep a small nudge */
+.article-body li > img + ul, .article-body li > img + ol, .article-body li > div > img + ul, .article-body li > div > img + ol, .article-body li > p > img + ul, .article-body li > p > img + ol {
+   margin-top: 0.25em !important;
+
+}
+
+/* First list after a section intro: add a small top nudge
+   (handles <h2>/<h3> directly followed by a list, or heading â†’ <div> intro â†’ list) */
+.article-body h2 + ul.styled-list,
+.article-body h2 + div + ul.styled-list,
+.article-body h3 + ul.styled-list,
+.article-body h3 + div + ul.styled-list,
+.article-body h4 + ul.styled-list,
+.article-body h4 + div + ul.styled-list,
+.article-body h2 + ol.styled-list,
+.article-body h2 + div + ol.styled-list,
+.article-body h3 + ol.styled-list,
+.article-body h3 + div + ol.styled-list,
+.article-body h4 + ol.styled-list,
+.article-body h4 + div + ol.styled-list {
+  margin-top: 0.5em;
+}
+
+/* Keep nested lists tight so sub-bullets feel attached */
+.article-body li > ul.styled-list,
+.article-body li > ol.styled-list {
+  margin-top: 0.25em;
+}
+
+/* Clear break from a list to the NEXT subheading */
+.article-body ul.styled-list + :is(h3, h4),
+.article-body ol.styled-list + :is(h3, h4) {
+  margin-top: 1.4em;
+}
+
+/* === Section list spacing: resilient to blank DIVs === */
+/* 1) First list after a section intro (handles h2/h3 + any blank <div>s) */
+.article-body :is(h2,h3,h4) ~ ul.styled-list,
+.article-body :is(h2,h3,h4) ~ ol.styled-list {
+  margin-top: 0.6em !important;
+}
+
+/* 2) Keep nested sub-bullets tight (donâ€™t inherit the bigger gap) */
+.article-body li > ul.styled-list,
+.article-body li > ol.styled-list {
+  margin-top: 0.25em !important;
+}
+
+/* 3) Even cadence between top-level bullets */
+.article-body .styled-list > li {
+  margin-bottom: 0.45em !important;
+}
+
+/* 4) Clear break from any list to the next subheading */
+.article-body :is(ul.styled-list, ol.styled-list) + :is(h3, h4) {
+  margin-top: 1.4em !important;
+}
+
+/* Slight breathing room before the first list under a section intro */
+.article-body :is(h2,h3,h4) ~ ul.styled-list:first-of-type,
+.article-body :is(h2,h3,h4) ~ ol.styled-list:first-of-type {
+  margin-top: 0.75em !important;
+}
+
+/* Tighten nested sub-bullets so they feel connected */
+.article-body li > ul.styled-list,
+.article-body li > ol.styled-list {
+  margin-top: 0.25em !important;
+}
+
+/* Ensure a clear break before the next subheading */
+.article-body :is(ul.styled-list, ol.styled-list) + :is(h3, h4) {
+  margin-top: 1.6em !important;
+}
+
+/* Consistent rhythm between list items */
+.article-body .styled-list > li {
+  margin-bottom: 0.45em !important;
+}
+
+
+
+/* ==================================== VIDEOS ==================================== */
+
+.video-embed {
+  width: 100%;
+  max-width: 960px;
+  margin-inline: auto;
+  aspect-ratio: 16/9;
+  border-radius: 16px;
+  overflow: hidden;          /* clip video cleanly */
+  background: transparent;   /* no framing */
+  box-shadow: 0 1px 3px rgba(0,0,0,.08);
+  margin-bottom: 24px;       /* separation does the work */
+}
+
+
+/* Fallback for browsers without aspect-ratio */
+@supports not (aspect-ratio: 16 / 9) {
+
+  .video-embed {
+     padding-bottom: 56.25%;
+     height: 0;
+
+  }
+
+  .video-embed > iframe, .video-embed > img {
+     position: absolute;
+     inset: 0;
+     width: 100%;
+     height: 100%;
+
+  }
+
+}
+
+/* When the iframe is in, it just fills the box */
+.video-embed iframe {
+   display: block;
+   width: 100%;
+   height: 100%;
+   border: 0;
+
+}
+
+/* Caption */
+.video-caption {
+  margin-top: 0;
+   font-size: .9rem;
+   line-height: 1.4;
+   color: #6b7280;
+
+}
+
+@media print {
+   .video-embed iframe {
+     display: none !important;
+
+  }
+   .video-caption, .video-caption a {
+     display: inline !important;
+
+  }
+
+}
+
+/* Thumbnail behavior */
+.video-embed-thumb img {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+   /* prevents cropping */ background: #f5f6fc;
+   /* shows behind any letterboxing */
+}
+
+/* If you ever want edge-to-edge crop instead, add .fit-cover */
+.video-embed.fit-cover img {
+   object-fit: cover;
+
+}
+
+/* Subtle scrim so the badge always reads;
+ stronger on hover */
+.video-embed-thumb::after {
+   content: "";
+   position: absolute;
+   inset: 0;
+   background: radial-gradient( ellipse at center, rgba(11, 15, 30, .06) 0%, rgba(11, 15, 30, .22) 100% );
+   opacity: .22;
+   transition: opacity .18s ease-out;
+   pointer-events: none;
+
+}
+
+.video-embed-thumb:hover::after {
+   opacity: .36;
+
+}
+
+/* TEAMWORK-BRANDED PLAY BADGE */
+:root {
+   --tw-purple: #895EF7;
+   --tw-pink: #FF22B1;
+
+}
+
+.video-play, .video-thumb__play {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   width: clamp(56px, 9vw, 96px);
+   height: clamp(56px, 9vw, 96px);
+   border-radius: 50%;
+   display: grid;
+   place-items: center;
+   background: radial-gradient(120% 120% at 30% 30%, var(--tw-pink) 0%, var(--tw-purple) 65%);
+   box-shadow: 0 8px 24px rgba(137, 94, 247, .35), 0 3px 10px rgba(11, 15, 30, .18), inset 0 0 0 6px rgba(255, 255, 255, .75);
+   font-size: 0;
+   line-height: 0;
+   color: transparent;
+   transition: transform .12s ease-out, box-shadow .12s ease-out;
+
+}
+
+/* Crisp white triangle */
+.video-play::before, .video-thumb__play::before {
+   content: "";
+   width: 0;
+   height: 0;
+   border-left: clamp(16px, 2.4vw, 24px) solid #fff;
+   border-top: clamp(10px, 1.6vw, 14px) solid transparent;
+   border-bottom: clamp(10px, 1.6vw, 14px) solid transparent;
+   transform: translateX(2px);
+
+}
+
+.video-embed-thumb:hover .video-play, .video-embed-thumb:hover .video-thumb__play {
+   transform: translate(-50%, -50%) scale(1.06);
+
+}
+
+/* Keyboard focus ring for a11y if the thumb is focusable */
+.video-embed-thumb:focus-visible {
+   outline: 2px solid (var(--tw-purple));
+   outline-offset: 4px;
+   border-radius: 16px;
+
+}
+
+/* Small screens: grow badge slightly so it still pops */
+@media (max-width: 640px) {
+   .video-play, .video-thumb__play {
+     width: clamp(64px, 14vw, 104px);
+     height: clamp(64px, 14vw, 104px);
+
+  }
+
+}
+
+/* ==================================== END â€” Your remaining site/header styles follow unchanged ==================================== */
+
+.search-inner {
+   background: transparent url("/static/assets/269a75e8a547e586bdf8e7c1.jpg") center top repeat-x;
+
+}
+
+.search--row {
+   padding: 100px 0;
+
+}
+
+.search--row, .site--header {
+   background: #1d1c39;
+
+}
+
+.site--header .row {
+   box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.2);
+
+}
+
+.search--row.search-inner {
+   padding: 90px 0;
+
+}
+
+.custom-site-header-color {
+   height: 60px;
+   background: transparent;
+   margin-bottom: -60px;
+
+}
+
+.search--row {
+   padding-top: 160px;
+
+}
+
+.search--row .row-title a, .search-inner h1, .history-path a {
+   color: #fff !important;
+
+}
+
+.search--row.search-inner .search_input {
+   border: none;
+
+}
+
+.header--nav a {
+   color: #fff !important;
+   padding: 0 15px;
+   border: 1px solid #fff;
+   border-radius: 4px;
+
+}
+
+.container {
+   margin: 0 auto;
+   padding: 0 50px;
+
+}
+
+.note {
+   padding: 20px;
+   text-align: left;
+   border-radius: 3px;
+   background-color: #EEF1F6;
+   color: #005C6F;
+
+}
+
+/* Category images (kept) */
+.category-img-463 {
+   background: url("/static/assets/2d6f73898610c95d4c1fb9c2.svg") no-repeat center;
+
+}
+
+.category-img-465 {
+   background: url("/static/assets/4d9e8e4006dfdd78677b2b62.svg") no-repeat center;
+
+}
+
+.category-img-3672 {
+   background: url("/static/assets/7e3696b9e8e6b5746481ee77.svg") no-repeat center;
+
+}
+
+.category-img-475 {
+   background: url("/static/assets/a78765c7daa69dbab139e17a.svg") no-repeat center;
+
+}
+
+.category-img-467 {
+   background: url("/static/assets/734d478037213ce38860056f.svg") no-repeat center;
+
+}
+
+.category-img-1146 {
+   background: url("/static/assets/d6d1ae503e644f5e4a30a824.svg") no-repeat center;
+
+}
+
+.category-img-486 {
+   background: url("/static/assets/d6800221e0b9d9a531c06606.svg") no-repeat center;
+
+}
+
+.category-img-1141 {
+   background: url("/static/assets/2384f14e0fade946a8368299.svg") no-repeat center;
+
+}
+
+.category-img-1145 {
+   background: url("/static/assets/35acd52db7bd614a181e4c3b.svg") no-repeat center;
+
+}
+
+.category-img-3399 {
+   background: url("/static/assets/738b7e5b83268c18708c0988.svg") no-repeat center;
+
+}
+
+.category-img-6246 {
+   background: url("/static/assets/65dd481f393bee134d0f3af4.svg") no-repeat center;
+
+}
+
+.category-img-6462 {
+   background: url("/static/assets/266256899dda336a23e3221c.svg") no-repeat center;
+   background-size: 100px 100px;
+   background-repeat: no-repeat;
+}
+
+/* ===== Fix only the injected top anchor + <br> combo ===== */
+
+/* 1) Neutralize the hidden anchor block itself (keeps #top as a scroll target) */
+.article--structure .article-body a#top.visually-hidden{
+  display:block;           /* create a block we can zero out */
+  height:0 !important;
+  margin:0 !important;
+  padding:0 !important;
+  line-height:0 !important;
+}
+
+/* 2) Kill the spacer <br> that the editor re-inserts after the anchor */
+.article--structure .article-body a#top.visually-hidden + br{
+  display:none !important;
+}
+
+/* 3) If the CMS wraps that pair in a div, collapse that wrapper too */
+.article--structure .article-body > div:first-child:has(> a#top.visually-hidden){
+  margin:0 !important;
+  padding:0 !important;
+  line-height:0 !important;
+}
+
+/* 4) Guarantee the first banner sits tight whether the wrapper exists or not */
+.article--structure .article-body :is(a#top.visually-hidden,
+  div:has(> a#top.visually-hidden)) + .callout-banner{
+  margin-top:8px !important;      /* adjust to taste (6â€“10px) */
+}
+
+/* Fallback for browsers without :has() â€” still removes the <br> and tightens the banner */
+.article--structure .article-body > a#top.visually-hidden + br{ display:none !important; }
+.article--structure .article-body > a#top.visually-hidden + .callout-banner{ margin-top:8px !important; }
+.article--structure .article-body > div:first-child > a#top.visually-hidden + br + .callout-banner{ margin-top:8px !important; }
+
+
+/* Lots of bubbles & badges â€” all retained */
+.th-curriculum {
+   color: #0390a5;
+
+}
+
+.kbd {
+   background: #fff;
+   border: 1px #b5b5b5 solid;
+   border-radius: 4px;
+   color: #808080;
+   padding: 2px 6px;
+
+}
+
+.kbdslate {
+   background: #1d1c39;
+   border: 1px #b5b5b5 solid;
+   border-radius: 4px;
+   color: #fff;
+   padding: 2px 6px;
+
+}
+
+.kbdgrey {
+   background: #eaeaea;
+   border-radius: 4px;
+   padding: 2px 6px;
+   color: #000;
+
+}
+
+.kbdindigo {
+   background: #dbe2fb;
+   border-radius: 4px;
+   padding: 2px 6px;
+   color: #000;
+
+}
+
+.kbdblue {
+   background: #EDF0FB;
+   border: 1px #48468f solid;
+   border-radius: 4px;
+   color: #48468f;
+   padding: 2px 6px;
+
+}
+
+.hr {
+   margin-top: 30px;
+   margin-bottom: 30px;
+   color: #CFD4F3;
+
+}
+
+.notebox {
+   background-color: #eef0fb;
+   padding: 15px;
+
+}
+
+.noteboxlight {
+   background-color: #f5f6f6;
+   padding: 10px;
+   margin: auto;
+   width: 80%;
+
+}
+
+.noteboxlightpurple {
+   background-color: #f0f1f9;
+   padding: 10px;
+   margin: auto;
+   width: 80%;
+
+}
+
+.gatingbannerfl {
+   float: left;
+
+}
+
+.gatingbannerfr {
+   float: right;
+   font-size: 15px;
+
+}
+
+.highlightbubblefitcontent {
+   background: #fff3d8;
+   width: fit-content;
+   padding: 5px 15px;
+   border-radius: 15px;
+   vertical-align: middle;
+
+}
+
+.standard {
+   background: #98E9F0;
+   width: fit-content;
+   margin: 5px 0;
+   padding: 5px 10px;
+   border-radius: 15px;
+   vertical-align: middle;
+
+}
+
+.client {
+   background: #FF9EDD;
+   width: fit-content;
+   margin: 5px 0;
+   padding: 5px 10px;
+   border-radius: 15px;
+   vertical-align: middle;
+
+}
+
+.collaborator {
+   background: #FFA885;
+   width: fit-content;
+   margin: 5px 0;
+   padding: 5px 10px;
+   border-radius: 15px;
+   vertical-align: middle;
+
+}
+
+.contact {
+   background: #BEA3FF;
+   width: fit-content;
+   margin: 5px 0;
+   padding: 5px 10px;
+   border-radius: 15px;
+   vertical-align: middle;
+
+}
+
+.gatingbubblefitcontent {
+   background: #eef0fb;
+   width: fit-content;
+   margin: 15px 0;
+   padding: 5px 15px;
+   border-radius: 15px;
+   vertical-align: middle;
+
+}
+
+.gatingbubblemax {
+   background: #eef0fb;
+   width: 100%;
+   padding: 10px 20px;
+   border-radius: 25px;
+   vertical-align: middle;
+
+}
+
+.gatingbubblemaxmobile {
+   background: #eef0fb;
+   width: 100%;
+   padding: 10px 20px;
+   border-radius: 25px;
+   vertical-align: middle;
+
+}
+
+.gatingbubbletable {
+   background: #eef0fb;
+   width: 100%;
+   margin: 10px 0;
+   padding: 5px 15px;
+   border-radius: 15px;
+   vertical-align: middle;
+
+}
+
+.bulbbubblefitcontent {
+   background: #f3eefe;
+   width: fit-content;
+   margin: 15px 0;
+   padding: 5px 15px;
+   border-radius: 15px;
+   vertical-align: middle;
+
+}
+
+.bulbbubblemax {
+   background: #f3eefe;
+   width: 100%;
+   margin: 10px 0;
+   padding: 5px 15px;
+   border-radius: 15px;
+   vertical-align: middle;
+
+}
+
+.warningbubblefitcontent {
+   background: #fff3d8;
+   width: fit-content;
+   margin: 15px 0;
+   padding: 5px 15px;
+   border-radius: 15px;
+   vertical-align: middle;
+
+}
+
+.warningbubblemax {
+   background: #fff3d8;
+   width: 100%;
+   margin: 10px 0;
+   padding: 5px 15px;
+   border-radius: 15px;
+   vertical-align: middle;
+
+}
+
+.keybubblefitcontent {
+   background: #fff1ec;
+   width: fit-content;
+   margin: 15px 0;
+   padding: 5px 15px;
+   border-radius: 15px;
+   vertical-align: middle;
+
+}
+
+.keybubblemax {
+   background: #fff1ec;
+   width: 100%;
+   margin: 10px 0;
+   padding: 5px 15px;
+   border-radius: 15px;
+   vertical-align: middle;
+
+}
+
+.pendobubblefitcontent {
+   background: rgba(197, 242, 242, .5);
+   width: fit-content;
+   margin: 15px 0;
+   padding: 5px 15px;
+   border-radius: 15px;
+   vertical-align: middle;
+
+}
+
+.pendobubblemax {
+   background: rgba(197, 242, 242, .5);
+   width: 100%;
+   padding: 10px 20px;
+   border-radius: 25px;
+   vertical-align: middle;
+
+}
+
+.learnbubblemax {
+   background: rgba(197, 242, 242, .5);
+   width: 100%;
+   margin: 10px 0;
+   padding: 5px 15px;
+   border-radius: 15px;
+
+}
+
+.learnbubblefitcontent {
+   background: rgba(197, 242, 242, .5);
+   width: fit-content;
+   margin: 15px 0;
+   padding: 5px 15px;
+   border-radius: 15px;
+   vertical-align: middle;
+
+}
+
+.formulabubblefitcontent {
+   background: #ebebeb;
+   width: fit-content;
+   margin: 15px 0;
+   padding: 5px 15px;
+   border-radius: 15px;
+   vertical-align: middle;
+
+}
+
+.formulabubblemax {
+   background: #ebebeb;
+   width: 100%;
+   margin: 10px 0;
+   padding: 5px 15px;
+   border-radius: 15px;
+   vertical-align: middle;
+
+}
+
+.formulareports {
+   background: #ebebeb;
+   width: 100%;
+   margin: 5px 0;
+   padding: 10px 15px;
+   border-radius: 15px;
+
+}
+
+.emailbubblefitcontent {
+   background: #f5f5f5;
+   width: fit-content;
+   margin: 15px 0;
+   padding: 5px 15px;
+   border-radius: 15px;
+
+}
+
+.emailbubblemax {
+   background: #f5f5f5;
+   width: 100%;
+   margin: 10px 0;
+   padding: 5px 15px;
+   border-radius: 15px;
+
+}
+
+.notebubblefitcontent {
+   background: #e4f1fe;
+   width: fit-content;
+   margin: 15px 0;
+   padding: 5px 15px;
+   border-radius: 15px;
+
+}
+
+.notebubblemax {
+   background: #e4f1fe;
+   width: 100%;
+   margin: 10px 0;
+   padding: 5px 15px;
+   border-radius: 15px;
+
+}
+
+.featurebubblefitcontent {
+   background: #ebfbf2;
+   width: fit-content;
+   margin: 15px 0;
+   padding: 5px 15px;
+   border-radius: 15px;
+
+}
+
+.featurebubblemax {
+   background: #ebfbf2;
+   width: 100%;
+   margin: 10px 0;
+   padding: 5px 15px;
+   border-radius: 15px;
+
+}
+
+.academybutton {
+   background: #895EF7 !important;
+   border: none;
+   border-radius: 25px;
+   color: #fff !important;
+   padding: 10px 20px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   transition: .4s;
+
+}
+
+.academybuttonfr {
+   background: #895EF7;
+   float: right;
+   border: none;
+   border-radius: 25px;
+   color: #fff;
+   padding: 5px 15px;
+   text-align: center;
+   vertical-align: bottom;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   transition: .4s;
+
+}
+
+.pendobtn {
+   margin-bottom: 0;
+   background: #895EF7 !important;
+   border: none;
+   border-radius: 25px;
+   color: #fff !important;
+   padding: 5px 15px;
+   text-align: center;
+   vertical-align: bottom;
+   text-decoration: none !important;
+   display: inline-block;
+   font-size: 16px;
+   cursor: pointer;
+   transition: .4s;
+
+}
+
+.academybtn {
+   background: #895EF7;
+   border: none;
+   border-radius: 25px;
+   color: #fff;
+   padding: 10px 20px;
+   text-align: center;
+   vertical-align: bottom;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   transition: .4s;
+
+}
+
+.h3withbutton {
+   width: 100%;
+   height: auto;
+   padding: 10px;
+   padding-right: 5px;
+   border-radius: 25px;
+   display: table-cell;
+
+}
+
+.h3fl {
+   margin-left: 0px;
+
+}
+
+.h3withbuttonmobile {
+   height: auto;
+   width: 100%;
+   padding: 10px 20px;
+   border-radius: 25px;
+   vertical-align: middle;
+
+}
+
+.academybutton:hover {
+   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.12), 0 17px 50px 0 rgba(0, 0, 0, 0.12);
+
+}
+
+.float-container {
+   border: 3px solid #fff;
+   padding: 20px;
+
+}
+
+.float-child-right {
+   width: 5%;
+   float: left;
+   padding: 20px;
+   border: 2px solid red;
+
+}
+
+.float-child-right {
+   width: 95%;
+   float: right;
+   padding: 20px;
+   border: 2px solid red;
+
+}
+
+.codeno {
+   background: #FDD6E0;
+   border: none;
+   border-radius: 4px;
+   color: #F13063;
+   padding: 2px 6px;
+
+}
+
+.codeyes {
+   background: #DEF4EA;
+   border: none;
+   border-radius: 4px;
+   color: #59C895;
+   padding: 2px 6px;
+
+}
+
+.mention {
+   background: #A3E0FC;
+   border: 1px #1d1c39 solid;
+   border-radius: 4px;
+   color: #808080;
+   padding: 2px 6px;
+
+}
+
+/* Responsive visibility helpers */
+@media only screen and (max-width: 500px) {
+
+  .table-bordered-rw {
+     display: none;
+
+  }
+
+  .table-bordered-mobile-rw {
+     display: block;
+     overflow: scroll;
+
+  }
+
+  .gating-bubble-max {
+     display: none;
+
+  }
+
+  .gating-bubble-max-mobile {
+     display: block;
+
+  }
+
+}
+
+@media only screen and (min-width: 500px) {
+
+  .table-bordered-rw {
+     display: block;
+
+  }
+
+  .table-bordered-rw-in-app {
+     display: block;
+     overflow: scroll;
+
+  }
+
+  .table-bordered-mobile-rw {
+     display: none;
+
+  }
+
+  .gating-bubble-max {
+     display: block;
+
+  }
+
+  .gating-bubble-max-mobile {
+     display: none;
+
+  }
+
+}
+
+.docs--sections .sections-links>li:hover {
+   border: 2px #eaeaea solid;
+
+}
+
+.docs--sections .sections-links>li {
+   border: 2px transparent solid;
+   padding-bottom: 30px;
+   border-radius: 4px;
+
+}
+
+.icon-images {
+   height: 100%;
+   width: 100%;
+
+}
+
+.docs--sections .sections-links .icon-hold:after {
+   border: 0px;
+
+}
+
+
+
+/* Tabs */
+.tab {
+   overflow: hidden;
+   border: 1px solid #ccc;
+   background-color: #f1f1f1;
+
+}
+
+.tab button {
+   background-color: inherit;
+   float: left;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   padding: 14px 16px;
+   transition: 0.3s;
+   font-size: 17px;
+
+}
+
+.tab button:hover {
+   background-color: #ddd;
+
+}
+
+.tab button.active {
+   background-color: #ccc;
+
+}
+
+.tabcontent {
+   display: none;
+   padding: 6px 12px;
+   border: 1px solid #ccc;
+   border-top: none;
+
+}
+
+.testcolor {
+   color: red !important;
+
+}
+
+.pubble-form-frame-poweredby {
+   display: none !important;
+
+}
+
+.pubble-sb-clientbgcolor>* {
+   display: block;
+
+}
+
+.pubble-sb-logo {
+   background: #3b93f7 url("/static/assets/0f53e4f9fbb8b21f11a7934e.svg") center center no-repeat !important;
+   background-size: auto auto;
+   background-size: 30px !important;
+   top: 0 !important;
+   left: 0 !important;
+   width: 60px !important;
+   height: 60px !important;
+   border-radius: 30px !important;
+   z-index: 6;
+
+}
+
+.pubble-sb-clientbgcolor {
+   background: #3b93f7 !important;
+
+}
+
+.pubble-form-frame-poweredby {
+  display:none !important;
+
+}
+
+.pubble-sb-clientbgcolor > * {
+  display:block;
+
+}
+
+.pubble-sb-logo {
+   background: #3b93f7 url("/static/assets/0f53e4f9fbb8b21f11a7934e.svg") center center no-repeat !important;
+   background-size: auto auto;
+   background-size: 30px !important;
+   top: 0 !important;
+   left: 0 !important;
+   width: 60px !important;
+   height: 60px !important;
+   border-radius: 30px !important;
+   z-index:6;
+
+}
+
+.pubble-sb-clientbgcolor {
+   background: #3b93f7 !important;
+
+}
+
+/* ==================================== FINAL CALLOUT LAYOUT OVERRIDE ==================================== */
+/* Canonical non-gating callout layout override */
+
+.article--structure .article-body .callout:not(.callout-banner) {
+   display: flex !important;
+   align-items: flex-start !important;
+   gap: 12px !important;
+   width: 100%;
+   box-sizing: border-box;
+   border-radius: 10px !important;
+   padding: 16px 20px !important;
+   margin: 24px 0 !important;
+}
+
+.article--structure .article-body .callout:not(.callout-banner) .callout-icon {
+   display: flex !important;
+   align-items: flex-start !important;
+   justify-content: center !important;
+   flex: 0 0 24px !important;
+   width: 24px !important;
+   min-width: 24px !important;
+   height: auto !important;
+   min-height: 24px !important;
+   margin: 0 !important;
+   font-size: 20px !important;
+   line-height: 1 !important;
+   position: relative;
+   top: 2px;
+   transform: none !important;
+}
+
+.article--structure .article-body .callout:not(.callout-banner) .callout-text,
+.article--structure .article-body .callout:not(.callout-banner) .callout-content {
+   display: block !important;
+   flex: 1 1 auto !important;
+   width: auto !important;
+   min-width: 0;
+   margin: 0 !important;
+   padding: 0 !important;
+   line-height: 1.5 !important;
+}
+
+.article--structure .article-body .callout:not(.callout-banner) .callout-text > :first-child,
+.article--structure .article-body .callout:not(.callout-banner) .callout-content > :first-child {
+   margin-top: 0 !important;
+}
+
+.article--structure .article-body .callout:not(.callout-banner) .callout-text > :last-child,
+.article--structure .article-body .callout:not(.callout-banner) .callout-content > :last-child {
+   margin-bottom: 0 !important;
+}
+
+.article--structure .article-body .callout:not(.callout-banner) .callout-text > * + *,
+.article--structure .article-body .callout:not(.callout-banner) .callout-content > * + * {
+   margin-top: 10px !important;
+}
+
+.article--structure .article-body .callout:not(.callout-banner) .callout-text > div,
+.article--structure .article-body .callout:not(.callout-banner) .callout-content > div {
+   margin: 0 !important;
+}
+
+.article--structure .article-body .callout:not(.callout-banner) .callout-text > br:last-child,
+.article--structure .article-body .callout:not(.callout-banner) .callout-content > br:last-child,
+.article--structure .article-body .callout:not(.callout-banner) :is(p, li, div) > br:last-child {
+   display: none !important;
+}
+
+.article--structure .article-body .callout:not(.callout-banner) .callout-label {
+   display: block;
+   font-weight: 700;
+   line-height: 1.4;
+   margin: 0 0 4px 0 !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+   .article--structure .article-body .callout:not(.callout-banner) {
+      gap: 10px !important;
+      padding: 14px 16px !important;
+      margin: 20px 0 !important;
+   }
+
+   .article--structure .article-body .callout:not(.callout-banner) .callout-icon {
+      flex: 0 0 22px !important;
+      width: 22px !important;
+      min-width: 22px !important;
+      min-height: 22px !important;
+      font-size: 18px !important;
+      top: 1px;
+   }
+
+   .article--structure .article-body .callout:not(.callout-banner) .callout-text,
+   .article--structure .article-body .callout:not(.callout-banner) .callout-content {
+      line-height: 1.5 !important;
+   }
+}
+
+/* ====================================
+   MCP RESOURCE CARD ALIGNMENT OVERRIDES
+   Keep at end of stylesheet so these win cascade.
+   ==================================== */
+
+.article-body .resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 16px 0 28px;
+}
+
+.article-body .resource-card {
+  padding: 22px;
+  border: 1px solid #E9E6FF;
+  border-radius: 14px;
+  background: #FCFCFE;
+}
+
+.article-body .resource-title {
+  margin-bottom: 10px !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  color: #23233F !important;
+}
+
+.article-body .resource-title a {
+  color: #23233F !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+}
+
+.article-body .resource-card:hover .resource-title a,
+.article-body .resource-title a:hover,
+.article-body .resource-title a:focus {
+  color: #5A48C7 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 0.15em;
+}
+
+.article-body .resource-icon {
+  color: #7B61FF !important;
+  font-size: 0.72em !important;
+  opacity: 0.65 !important;
+  margin-left: 0.18rem !important;
+  vertical-align: text-top !important;
+}
+
+.article-body .resource-description {
+  color: #4A4F5E !important;
+  font-size: 15px !important;
+  line-height: 1.55 !important;
+  font-weight: 400 !important;
+}
+
+.article-body .resource-description a {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-weight: 400 !important;
+}
+
+.article-body .resource-description a:hover,
+.article-body .resource-description a:focus {
+  text-decoration: underline !important;
+  text-underline-offset: 0.12em;
+}
+
+/* Teammate overview cards */
+.article-body .teammate-card-grid {
+    display: grid;
+    gap: 16px;
+    margin: 16px 0 28px;
+}
+
+.article-body .teammate-card-grid.available {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+}
+
+.article-body .teammate-card-grid.upcoming {
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+}
+
+.article-body .teammate-card {
+    padding: 22px;
+    border: 1px solid #E9E6FF;
+    border-radius: 14px;
+    background: #FCFCFE;
+}
+
+.article-body .teammate-card:hover {
+    border-color: #DCD4FF;
+    background: #FBFAFF;
+}
+
+.article-body .teammate-card-avatar-wrap {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(11, 15, 30, .06);
+}
+
+.article-body .teammate-card-avatar-wrap img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.article-body .teammate-card-name {
+    margin-bottom: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.article-body .teammate-card-name a {
+    color: #23233F !important;
+    text-decoration: none !important;
+}
+
+.article-body .teammate-card:hover .teammate-card-name a,
+.article-body .teammate-card-name a:hover,
+.article-body .teammate-card-name a:focus {
+    color: #5A48C7 !important;
+    text-decoration: underline !important;
+    text-underline-offset: 0.15em;
+}
+
+.article-body .teammate-card-role {
+    color: #5F647A;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.article-body .teammate-card-focus {
+    margin-top: 8px;
+    color: #4A4F5E;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.article-body .teammate-card .pill {
+    margin: 8px 0 0;
+}
+
+@media (max-width: 860px) {
+    .article-body .teammate-card-grid.available,
+    .article-body .teammate-card-grid.upcoming {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .article-body .teammate-card-grid.available,
+    .article-body .teammate-card-grid.upcoming {
+        grid-template-columns: 1fr;
+    }
+}

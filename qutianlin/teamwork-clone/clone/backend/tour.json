@@ -1,0 +1,394 @@
+{
+  "/tour/cmd4ry09l000004l4hjk9eemn/0": {
+    "route": "/tour/cmd4ry09l000004l4hjk9eemn/0",
+    "file": "frontend/tour/cmd4ry09l000004l4hjk9eemn/0.html",
+    "flow": "cmd4ry09l000004l4hjk9eemn",
+    "step": 0,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4ry09l000004l4hjk9eemn&s=0",
+    "name": "Streamline work intro"
+  },
+  "/tour/cmd381syt000104jrc22k32vt/0": {
+    "route": "/tour/cmd381syt000104jrc22k32vt/0",
+    "file": "frontend/tour/cmd381syt000104jrc22k32vt/0.html",
+    "flow": "cmd381syt000104jrc22k32vt",
+    "step": 0,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd381syt000104jrc22k32vt&s=0",
+    "name": "Streamline work 1"
+  },
+  "/tour/cmd381syt000104jrc22k32vt/2": {
+    "route": "/tour/cmd381syt000104jrc22k32vt/2",
+    "file": "frontend/tour/cmd381syt000104jrc22k32vt/2.html",
+    "flow": "cmd381syt000104jrc22k32vt",
+    "step": 2,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd381syt000104jrc22k32vt&s=2",
+    "name": "Streamline work 3"
+  },
+  "/tour/cmd381syt000104jrc22k32vt/1": {
+    "route": "/tour/cmd381syt000104jrc22k32vt/1",
+    "file": "frontend/tour/cmd381syt000104jrc22k32vt/1.html",
+    "flow": "cmd381syt000104jrc22k32vt",
+    "step": 1,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd381syt000104jrc22k32vt&s=1",
+    "name": "Streamline work 2"
+  },
+  "/tour/cmd381syt000104jrc22k32vt/4": {
+    "route": "/tour/cmd381syt000104jrc22k32vt/4",
+    "file": "frontend/tour/cmd381syt000104jrc22k32vt/4.html",
+    "flow": "cmd381syt000104jrc22k32vt",
+    "step": 4,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd381syt000104jrc22k32vt&s=4",
+    "name": "Streamline work 6"
+  },
+  "/tour/cmd381syt000104jrc22k32vt/3": {
+    "route": "/tour/cmd381syt000104jrc22k32vt/3",
+    "file": "frontend/tour/cmd381syt000104jrc22k32vt/3.html",
+    "flow": "cmd381syt000104jrc22k32vt",
+    "step": 3,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd381syt000104jrc22k32vt&s=3",
+    "name": "Streamline work 4"
+  },
+  "/tour/cmd381syt000104jrc22k32vt/6": {
+    "route": "/tour/cmd381syt000104jrc22k32vt/6",
+    "file": "frontend/tour/cmd381syt000104jrc22k32vt/6.html",
+    "flow": "cmd381syt000104jrc22k32vt",
+    "step": 6,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd381syt000104jrc22k32vt&s=6",
+    "name": "Streamline work 8"
+  },
+  "/tour/cmd381syt000104jrc22k32vt/5": {
+    "route": "/tour/cmd381syt000104jrc22k32vt/5",
+    "file": "frontend/tour/cmd381syt000104jrc22k32vt/5.html",
+    "flow": "cmd381syt000104jrc22k32vt",
+    "step": 5,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd381syt000104jrc22k32vt&s=5",
+    "name": "Streamline work 7"
+  },
+  "/tour/cmd4nv5ha000o04lea4v5bqk0/0": {
+    "route": "/tour/cmd4nv5ha000o04lea4v5bqk0/0",
+    "file": "frontend/tour/cmd4nv5ha000o04lea4v5bqk0/0.html",
+    "flow": "cmd4nv5ha000o04lea4v5bqk0",
+    "step": 0,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4nv5ha000o04lea4v5bqk0&s=0",
+    "name": "Automate manual work 1"
+  },
+  "/tour/cmd4nv5ha000o04lea4v5bqk0/1": {
+    "route": "/tour/cmd4nv5ha000o04lea4v5bqk0/1",
+    "file": "frontend/tour/cmd4nv5ha000o04lea4v5bqk0/1.html",
+    "flow": "cmd4nv5ha000o04lea4v5bqk0",
+    "step": 1,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4nv5ha000o04lea4v5bqk0&s=1",
+    "name": "Automate manual work 2"
+  },
+  "/tour/cmd4nv5ha000o04lea4v5bqk0/2": {
+    "route": "/tour/cmd4nv5ha000o04lea4v5bqk0/2",
+    "file": "frontend/tour/cmd4nv5ha000o04lea4v5bqk0/2.html",
+    "flow": "cmd4nv5ha000o04lea4v5bqk0",
+    "step": 2,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4nv5ha000o04lea4v5bqk0&s=2",
+    "name": "Automate manual work 3"
+  },
+  "/tour/cmd4nv5ha000o04lea4v5bqk0/3": {
+    "route": "/tour/cmd4nv5ha000o04lea4v5bqk0/3",
+    "file": "frontend/tour/cmd4nv5ha000o04lea4v5bqk0/3.html",
+    "flow": "cmd4nv5ha000o04lea4v5bqk0",
+    "step": 3,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4nv5ha000o04lea4v5bqk0&s=3",
+    "name": "Automate manual work 4"
+  },
+  "/tour/cmd4nv5ha000o04lea4v5bqk0/4": {
+    "route": "/tour/cmd4nv5ha000o04lea4v5bqk0/4",
+    "file": "frontend/tour/cmd4nv5ha000o04lea4v5bqk0/4.html",
+    "flow": "cmd4nv5ha000o04lea4v5bqk0",
+    "step": 4,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4nv5ha000o04lea4v5bqk0&s=4",
+    "name": "Automate manual work 5"
+  },
+  "/tour/cmd4ohsf3001o04l59fio4yz6/0": {
+    "route": "/tour/cmd4ohsf3001o04l59fio4yz6/0",
+    "file": "frontend/tour/cmd4ohsf3001o04l59fio4yz6/0.html",
+    "flow": "cmd4ohsf3001o04l59fio4yz6",
+    "step": 0,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4ohsf3001o04l59fio4yz6&s=0",
+    "name": "View project statuses 1"
+  },
+  "/tour/cmd4ohsf3001o04l59fio4yz6/1": {
+    "route": "/tour/cmd4ohsf3001o04l59fio4yz6/1",
+    "file": "frontend/tour/cmd4ohsf3001o04l59fio4yz6/1.html",
+    "flow": "cmd4ohsf3001o04l59fio4yz6",
+    "step": 1,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4ohsf3001o04l59fio4yz6&s=1",
+    "name": "View project statuses 2"
+  },
+  "/tour/cmd4ohsf3001o04l59fio4yz6/2": {
+    "route": "/tour/cmd4ohsf3001o04l59fio4yz6/2",
+    "file": "frontend/tour/cmd4ohsf3001o04l59fio4yz6/2.html",
+    "flow": "cmd4ohsf3001o04l59fio4yz6",
+    "step": 2,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4ohsf3001o04l59fio4yz6&s=2",
+    "name": "View project statuses 3"
+  },
+  "/tour/cmd4ohsf3001o04l59fio4yz6/3": {
+    "route": "/tour/cmd4ohsf3001o04l59fio4yz6/3",
+    "file": "frontend/tour/cmd4ohsf3001o04l59fio4yz6/3.html",
+    "flow": "cmd4ohsf3001o04l59fio4yz6",
+    "step": 3,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4ohsf3001o04l59fio4yz6&s=3",
+    "name": "View project statuses 4"
+  },
+  "/tour/cmd4ohsf3001o04l59fio4yz6/4": {
+    "route": "/tour/cmd4ohsf3001o04l59fio4yz6/4",
+    "file": "frontend/tour/cmd4ohsf3001o04l59fio4yz6/4.html",
+    "flow": "cmd4ohsf3001o04l59fio4yz6",
+    "step": 4,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4ohsf3001o04l59fio4yz6&s=4",
+    "name": "View project statuses 5"
+  },
+  "/tour/cmd4ohsf3001o04l59fio4yz6/5": {
+    "route": "/tour/cmd4ohsf3001o04l59fio4yz6/5",
+    "file": "frontend/tour/cmd4ohsf3001o04l59fio4yz6/5.html",
+    "flow": "cmd4ohsf3001o04l59fio4yz6",
+    "step": 5,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4ohsf3001o04l59fio4yz6&s=5",
+    "name": "Automate manual work 5"
+  },
+  "/tour/cmd4r5mgn000004ky7qnh39gp/0": {
+    "route": "/tour/cmd4r5mgn000004ky7qnh39gp/0",
+    "file": "frontend/tour/cmd4r5mgn000004ky7qnh39gp/0.html",
+    "flow": "cmd4r5mgn000004ky7qnh39gp",
+    "step": 0,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4r5mgn000004ky7qnh39gp&s=0",
+    "name": "RM1 - Workload - Welcome"
+  },
+  "/tour/cmd4r5mgn000004ky7qnh39gp/1": {
+    "route": "/tour/cmd4r5mgn000004ky7qnh39gp/1",
+    "file": "frontend/tour/cmd4r5mgn000004ky7qnh39gp/1.html",
+    "flow": "cmd4r5mgn000004ky7qnh39gp",
+    "step": 1,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4r5mgn000004ky7qnh39gp&s=1",
+    "name": "RM2 - Workload - Problem"
+  },
+  "/tour/cmd4r5mgn000004ky7qnh39gp/2": {
+    "route": "/tour/cmd4r5mgn000004ky7qnh39gp/2",
+    "file": "frontend/tour/cmd4r5mgn000004ky7qnh39gp/2.html",
+    "flow": "cmd4r5mgn000004ky7qnh39gp",
+    "step": 2,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4r5mgn000004ky7qnh39gp&s=2",
+    "name": "RM3 - Workload - Move task"
+  },
+  "/tour/cmd4r5mgn000004ky7qnh39gp/3": {
+    "route": "/tour/cmd4r5mgn000004ky7qnh39gp/3",
+    "file": "frontend/tour/cmd4r5mgn000004ky7qnh39gp/3.html",
+    "flow": "cmd4r5mgn000004ky7qnh39gp",
+    "step": 3,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4r5mgn000004ky7qnh39gp&s=3",
+    "name": "RM4 - Workload - Problem solved"
+  },
+  "/tour/cmd4r5mgn000004ky7qnh39gp/4": {
+    "route": "/tour/cmd4r5mgn000004ky7qnh39gp/4",
+    "file": "frontend/tour/cmd4r5mgn000004ky7qnh39gp/4.html",
+    "flow": "cmd4r5mgn000004ky7qnh39gp",
+    "step": 4,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4r5mgn000004ky7qnh39gp&s=4",
+    "name": "RM9 - Schedule - Demo complete"
+  },
+  "/tour/cmd4r5ps4000a04lcbh8tdft4/0": {
+    "route": "/tour/cmd4r5ps4000a04lcbh8tdft4/0",
+    "file": "frontend/tour/cmd4r5ps4000a04lcbh8tdft4/0.html",
+    "flow": "cmd4r5ps4000a04lcbh8tdft4",
+    "step": 0,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4r5ps4000a04lcbh8tdft4&s=0",
+    "name": "RM5 - Schedule - Intro"
+  },
+  "/tour/cmd4r5ps4000a04lcbh8tdft4/1": {
+    "route": "/tour/cmd4r5ps4000a04lcbh8tdft4/1",
+    "file": "frontend/tour/cmd4r5ps4000a04lcbh8tdft4/1.html",
+    "flow": "cmd4r5ps4000a04lcbh8tdft4",
+    "step": 1,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4r5ps4000a04lcbh8tdft4&s=1",
+    "name": "RM6 - Schedule - Problem"
+  },
+  "/tour/cmd4r5ps4000a04lcbh8tdft4/2": {
+    "route": "/tour/cmd4r5ps4000a04lcbh8tdft4/2",
+    "file": "frontend/tour/cmd4r5ps4000a04lcbh8tdft4/2.html",
+    "flow": "cmd4r5ps4000a04lcbh8tdft4",
+    "step": 2,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4r5ps4000a04lcbh8tdft4&s=2",
+    "name": "Schedule - add allocation"
+  },
+  "/tour/cmd4r5ps4000a04lcbh8tdft4/3": {
+    "route": "/tour/cmd4r5ps4000a04lcbh8tdft4/3",
+    "file": "frontend/tour/cmd4r5ps4000a04lcbh8tdft4/3.html",
+    "flow": "cmd4r5ps4000a04lcbh8tdft4",
+    "step": 3,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4r5ps4000a04lcbh8tdft4&s=3",
+    "name": "RM7 - Schedule - More details"
+  },
+  "/tour/cmd4r5ps4000a04lcbh8tdft4/4": {
+    "route": "/tour/cmd4r5ps4000a04lcbh8tdft4/4",
+    "file": "frontend/tour/cmd4r5ps4000a04lcbh8tdft4/4.html",
+    "flow": "cmd4r5ps4000a04lcbh8tdft4",
+    "step": 4,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4r5ps4000a04lcbh8tdft4&s=4",
+    "name": "RM8 - Schedule - Reiterate value"
+  },
+  "/tour/cmd4r5ps4000a04lcbh8tdft4/5": {
+    "route": "/tour/cmd4r5ps4000a04lcbh8tdft4/5",
+    "file": "frontend/tour/cmd4r5ps4000a04lcbh8tdft4/5.html",
+    "flow": "cmd4r5ps4000a04lcbh8tdft4",
+    "step": 5,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmd4r5ps4000a04lcbh8tdft4&s=5",
+    "name": "RM9 - Schedule - Demo complete"
+  },
+  "/tour/cmfo1yrk2000004if7wk46xml/0": {
+    "route": "/tour/cmfo1yrk2000004if7wk46xml/0",
+    "file": "frontend/tour/cmfo1yrk2000004if7wk46xml/0.html",
+    "flow": "cmfo1yrk2000004if7wk46xml",
+    "step": 0,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmfo1yrk2000004if7wk46xml&s=0",
+    "name": "Create budget"
+  },
+  "/tour/cmfo1yrk2000004if7wk46xml/1": {
+    "route": "/tour/cmfo1yrk2000004if7wk46xml/1",
+    "file": "frontend/tour/cmfo1yrk2000004if7wk46xml/1.html",
+    "flow": "cmfo1yrk2000004if7wk46xml",
+    "step": 1,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmfo1yrk2000004if7wk46xml&s=1",
+    "name": "Set alerts"
+  },
+  "/tour/cmfo1yrk2000004if7wk46xml/2": {
+    "route": "/tour/cmfo1yrk2000004if7wk46xml/2",
+    "file": "frontend/tour/cmfo1yrk2000004if7wk46xml/2.html",
+    "flow": "cmfo1yrk2000004if7wk46xml",
+    "step": 2,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmfo1yrk2000004if7wk46xml&s=2",
+    "name": "Track usage"
+  },
+  "/tour/cmfo1yrk2000004if7wk46xml/3": {
+    "route": "/tour/cmfo1yrk2000004if7wk46xml/3",
+    "file": "frontend/tour/cmfo1yrk2000004if7wk46xml/3.html",
+    "flow": "cmfo1yrk2000004if7wk46xml",
+    "step": 3,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmfo1yrk2000004if7wk46xml&s=3",
+    "name": "Log expenses"
+  },
+  "/tour/cmfo1yrk2000004if7wk46xml/4": {
+    "route": "/tour/cmfo1yrk2000004if7wk46xml/4",
+    "file": "frontend/tour/cmfo1yrk2000004if7wk46xml/4.html",
+    "flow": "cmfo1yrk2000004if7wk46xml",
+    "step": 4,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmfo1yrk2000004if7wk46xml&s=4",
+    "name": "Analyze profit"
+  },
+  "/tour/cmfo1yrk2000004if7wk46xml/5": {
+    "route": "/tour/cmfo1yrk2000004if7wk46xml/5",
+    "file": "frontend/tour/cmfo1yrk2000004if7wk46xml/5.html",
+    "flow": "cmfo1yrk2000004if7wk46xml",
+    "step": 5,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmfo1yrk2000004if7wk46xml&s=5",
+    "name": "Next steps"
+  },
+  "/tour/cmewzka1t000004l251u304as/0": {
+    "route": "/tour/cmewzka1t000004l251u304as/0",
+    "file": "frontend/tour/cmewzka1t000004l251u304as/0.html",
+    "flow": "cmewzka1t000004l251u304as",
+    "step": 0,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmewzka1t000004l251u304as&s=0",
+    "name": "AI step 1 "
+  },
+  "/tour/cmewzka1t000004l251u304as/1": {
+    "route": "/tour/cmewzka1t000004l251u304as/1",
+    "file": "frontend/tour/cmewzka1t000004l251u304as/1.html",
+    "flow": "cmewzka1t000004l251u304as",
+    "step": 1,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmewzka1t000004l251u304as&s=1",
+    "name": "AI step 2"
+  },
+  "/tour/cmewzka1t000004l251u304as/2": {
+    "route": "/tour/cmewzka1t000004l251u304as/2",
+    "file": "frontend/tour/cmewzka1t000004l251u304as/2.html",
+    "flow": "cmewzka1t000004l251u304as",
+    "step": 2,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmewzka1t000004l251u304as&s=2",
+    "name": "AI step 3"
+  },
+  "/tour/cmewzka1t000004l251u304as/3": {
+    "route": "/tour/cmewzka1t000004l251u304as/3",
+    "file": "frontend/tour/cmewzka1t000004l251u304as/3.html",
+    "flow": "cmewzka1t000004l251u304as",
+    "step": 3,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmewzka1t000004l251u304as&s=3",
+    "name": "AI step 4"
+  },
+  "/tour/cmewzka1t000004l251u304as/4": {
+    "route": "/tour/cmewzka1t000004l251u304as/4",
+    "file": "frontend/tour/cmewzka1t000004l251u304as/4.html",
+    "flow": "cmewzka1t000004l251u304as",
+    "step": 4,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmewzka1t000004l251u304as&s=4",
+    "name": "AI step 5"
+  },
+  "/tour/cmewzka1t000004l251u304as/5": {
+    "route": "/tour/cmewzka1t000004l251u304as/5",
+    "file": "frontend/tour/cmewzka1t000004l251u304as/5.html",
+    "flow": "cmewzka1t000004l251u304as",
+    "step": 5,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmewzka1t000004l251u304as&s=5",
+    "name": "AI step 6"
+  },
+  "/tour/cmewzka1t000004l251u304as/6": {
+    "route": "/tour/cmewzka1t000004l251u304as/6",
+    "file": "frontend/tour/cmewzka1t000004l251u304as/6.html",
+    "flow": "cmewzka1t000004l251u304as",
+    "step": 6,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmewzka1t000004l251u304as&s=6",
+    "name": "AI step 7 (optional)"
+  },
+  "/tour/cmo9z3wsi001104l2hy8yfon5/0": {
+    "route": "/tour/cmo9z3wsi001104l2hy8yfon5/0",
+    "file": "frontend/tour/cmo9z3wsi001104l2hy8yfon5/0.html",
+    "flow": "cmo9z3wsi001104l2hy8yfon5",
+    "step": 0,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmo9z3wsi001104l2hy8yfon5&s=0",
+    "name": "Clients - Teamwork_demo_acc"
+  },
+  "/tour/cmo9z3wsi001104l2hy8yfon5/1": {
+    "route": "/tour/cmo9z3wsi001104l2hy8yfon5/1",
+    "file": "frontend/tour/cmo9z3wsi001104l2hy8yfon5/1.html",
+    "flow": "cmo9z3wsi001104l2hy8yfon5",
+    "step": 1,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmo9z3wsi001104l2hy8yfon5&s=1",
+    "name": "Rombaut quotes - Teamwork_demo_acc"
+  },
+  "/tour/cmo9z3wsi001104l2hy8yfon5/2": {
+    "route": "/tour/cmo9z3wsi001104l2hy8yfon5/2",
+    "file": "frontend/tour/cmo9z3wsi001104l2hy8yfon5/2.html",
+    "flow": "cmo9z3wsi001104l2hy8yfon5",
+    "step": 2,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmo9z3wsi001104l2hy8yfon5&s=2",
+    "name": "Rombaut quotes - Teamwork_demo_acc"
+  },
+  "/tour/cmo9z3wsi001104l2hy8yfon5/3": {
+    "route": "/tour/cmo9z3wsi001104l2hy8yfon5/3",
+    "file": "frontend/tour/cmo9z3wsi001104l2hy8yfon5/3.html",
+    "flow": "cmo9z3wsi001104l2hy8yfon5",
+    "step": 3,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmo9z3wsi001104l2hy8yfon5&s=3",
+    "name": "Project schedule - Rombaut - Promotions website section launch - Teamwork_demo_acc"
+  },
+  "/tour/cmo9z3wsi001104l2hy8yfon5/4": {
+    "route": "/tour/cmo9z3wsi001104l2hy8yfon5/4",
+    "file": "frontend/tour/cmo9z3wsi001104l2hy8yfon5/4.html",
+    "flow": "cmo9z3wsi001104l2hy8yfon5",
+    "step": 4,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmo9z3wsi001104l2hy8yfon5&s=4",
+    "name": "Project schedule - Rombaut - Promotions website section launch - Teamwork_demo_acc"
+  },
+  "/tour/cmo9z3wsi001104l2hy8yfon5/5": {
+    "route": "/tour/cmo9z3wsi001104l2hy8yfon5/5",
+    "file": "frontend/tour/cmo9z3wsi001104l2hy8yfon5/5.html",
+    "flow": "cmo9z3wsi001104l2hy8yfon5",
+    "step": 5,
+    "source": "https://capture.navattic.com/cmbigicdj038b04if59858y5k?g=cmo9z3wsi001104l2hy8yfon5&s=5",
+    "name": "Project schedule - Rombaut - Promotions website section launch - Teamwork_demo_acc"
+  }
+}

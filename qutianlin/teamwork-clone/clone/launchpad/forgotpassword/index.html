@@ -1,0 +1,22 @@
+<!doctype html>
+<html><head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noindex">
+        <link rel="icon" href="/static/assets/68d365f039ec7026a52eadb9.png">
+        <title>Recover password - Teamwork.com</title>
+      <link rel="stylesheet" href="/static/assets/2449e941ee085a69574820f4.css">
+    <link rel="stylesheet" href="/static/clone.css"><script src="/static/clone.js" defer></script></head>
+    <body data-clone-auth="false" data-route="/launchpad/forgotpassword" data-frame="false" data-region="main">
+        <div id="app" data-v-app=""><div class="b-app-structure"><div class="b-app-structure__main"><section class="b-login-holder"><div class="w-app-login-logo"><img class="w-app-login-logo__image" src="/static/assets/2660b7b53dd94ab2922eee49.svg" alt="Teamwork.com" loading="eager"></div><!----><div class="content"><!----><!----><!----><div class="page-forgot-password"><!----><div class="content"><div class="w-page-header no-subtitle hideable"><h1 class="w-page-header__title">Recover password</h1><p class="w-page-header__description"><span></span><!----></p></div><form class="w-login-form" action="/api/forms" method="post"><div class="w-login-form__row w-login-form__row--email"><div class="w-input is-moved"><label class="w-input__label" for="loginemail">Email address</label><input class="w-input__input" id="loginemail" type="email" placehoder="" autocomplete="username" required=""></div></div><div class="w-login-form__row w-login-form__row--action"><button class="w-button w-button--gray" type="submit" disabled><span class="w-button__label">Recover password</span></button></div></form><!----><div class="w-page-footer"><a href="/launchpad/login?email=" class="w-button w-button--link" tag="button" type="button"><span class="w-button__label">Return to login</span></a></div></div></div></div></section></div><div class="b-app-structure__secondary"><div class="b-app-structure__secondary-content"><p>Don't have an account yet?</p><a class="w-button" href="/signup"><span class="w-button__label">Sign up</span></a></div><div data-v-ca39d892="" class="marketing-content"><div data-v-ca39d892="" class="marketing-content__bg"></div><div data-v-ca39d892="" class="marketing-content__wrap"><h3 data-v-ca39d892="" class="marketing-content__title">📅 Have you used My Calendar?</h3><img data-v-ca39d892="" width="500" height="347" alt="" src="/static/assets/88336a9164d65d3869fc1e42.bin" class="marketing-content__picture" loading="eager"><div data-v-ca39d892="" class="marketing-content__text"><p data-v-ca39d892="">Take the stress out of planning and prioritizing your day.</p><ul data-v-ca39d892=""><li data-v-ca39d892="">Get one clear view of your tasks and meetings 
+</li><li data-v-ca39d892="">Use time blocks to plan your day and log time
+</li><li data-v-ca39d892="">Easily sync your Google Calendar for more visibility
+</li></ul><p data-v-ca39d892="">Log in and click the My Calendar tab to check it out now!</p></div></div></div></div></div></div>
+        <!--
+            globalThis is Chrome 71+, but Teamwork Timer embeds this page in
+            Electron 4 (Chromium 69). Dependencies such as zod touch it at module
+            load, so the bundle throws before the app mounts (blank login).
+            build.target only lowers syntax, not runtime APIs, so shim it here
+            in a classic script that runs before the module bundle.
+        -->
+        </body></html>

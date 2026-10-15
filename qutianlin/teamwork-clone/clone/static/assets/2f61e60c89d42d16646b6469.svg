@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="51" height="58" viewBox="0 0 51 58">
+  <g fill="none" fill-rule="evenodd" transform="translate(0 7)">
+    <path stroke="#141523" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M1.5013,12.3905 L1.5013,42.2735 L44.4323,42.2735 C46.8003,42.2735 48.7383,40.3365 48.7383,37.9665 L48.7383,12.3905 L1.5013,12.3905 Z"/>
+    <polygon points="0 43.773 50.238 43.773 50.238 .001 0 .001"/>
+    <polygon stroke="#141523" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" points="1.501 12.393 48.738 12.393 48.738 1.5 1.501 1.5"/>
+    <line x1="8.357" x2="22.793" y1="6.944" y2="6.944" stroke="#879DF2" stroke-dasharray=".152 6.077" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.814"/>
+    <line x1="28.945" x2="34.955" y1="26.756" y2="26.756" stroke="#101222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.758"/>
+    <path fill="#101222" d="M14.8167 25.8455L8.8067 25.8455C8.0457 25.8455 7.4277 25.2285 7.4277 24.4665 7.4277 23.7045 8.0457 23.0875 8.8067 23.0875L14.8167 23.0875C15.5787 23.0875 16.1957 23.7045 16.1957 24.4665 16.1957 25.2285 15.5787 25.8455 14.8167 25.8455M13.8577 30.5926L8.8477 30.5926C8.0867 30.5926 7.4687 29.9756 7.4687 29.2136 7.4687 28.4516 8.0867 27.8346 8.8477 27.8346L13.8577 27.8346C14.6197 27.8346 15.2367 28.4516 15.2367 29.2136 15.2367 29.9756 14.6197 30.5926 13.8577 30.5926M14.8577 35.5057L8.8477 35.5057C8.0867 35.5057 7.4687 34.8887 7.4687 34.1267 7.4687 33.3647 8.0867 32.7477 8.8477 32.7477L14.8577 32.7477C15.6197 32.7477 16.2367 33.3647 16.2367 34.1267 16.2367 34.8887 15.6197 35.5057 14.8577 35.5057"/>
+    <line x1="28.945" x2="40.955" y1="19.655" y2="19.655" stroke="#101222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.758"/>
+    <path fill="#101222" d="M12.9456,21.034 L8.9346,21.034 C8.1736,21.034 7.5556,20.417 7.5556,19.655 C7.5556,18.893 8.1736,18.276 8.9346,18.276 L12.9456,18.276 C13.7076,18.276 14.3246,18.893 14.3246,19.655 C14.3246,20.417 13.7076,21.034 12.9456,21.034"/>
+    <line x1="28.945" x2="40.486" y1="34.476" y2="34.476" stroke="#101222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.758"/>
+    <line x1="22.302" x2="24.313" y1="26.756" y2="26.756" stroke="#879DF2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.758"/>
+    <line x1="22.302" x2="24.313" y1="19.655" y2="19.655" stroke="#879DF2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.758"/>
+    <line x1="22.302" x2="23.844" y1="34.476" y2="34.476" stroke="#879DF2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.758"/>
+  </g>
+</svg>

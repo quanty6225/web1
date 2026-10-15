@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Teamwork.com Status - Incident History</title>
+    <link>/status</link>
+    <description>Statuspage</description>
+    <pubDate>Tue, 13 Oct 2026 20:39:08 +0000</pubDate>
+    <item>
+      <title>Database Maintenance in our EU region</title>
+      <description>&lt;p&gt; &lt;small&gt;Oct &lt;var data-var="date"&gt;13&lt;/var&gt;, &lt;var data-var="time"&gt;06:50&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Completed&lt;/strong&gt; - The scheduled maintenance has been completed. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Oct &lt;var data-var="date"&gt;13&lt;/var&gt;, &lt;var data-var="time"&gt;06:40&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;In progress&lt;/strong&gt; - Scheduled maintenance is currently in progress. We will provide updates as necessary. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Oct &lt;var data-var="date"&gt;12&lt;/var&gt;, &lt;var data-var="time"&gt;11:59&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Scheduled&lt;/strong&gt; - We will be undergoing scheduled maintenance. During this period Some Projects service will be affected and performance degradation maybe expected. &lt;/p&gt;      </description>
+      <pubDate>Tue, 13 Oct 2026 06:50:07 +0000</pubDate>
+      <maintenanceEndDate>Tue, 13 Oct 2026 06:50:00 +0000</maintenanceEndDate>
+      <link>/status/incidents/xcmywz0n1lfw</link>
+      <guid>/status/incidents/xcmywz0n1lfw</guid>
+    </item>
+    <item>
+      <title>Database Maintenance in our EU region</title>
+      <description>&lt;p&gt; &lt;small&gt;Oct &lt;var data-var="date"&gt; 6&lt;/var&gt;, &lt;var data-var="time"&gt;06:55&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Completed&lt;/strong&gt; - The scheduled maintenance has been completed. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Oct &lt;var data-var="date"&gt; 6&lt;/var&gt;, &lt;var data-var="time"&gt;06:45&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;In progress&lt;/strong&gt; - Scheduled maintenance is currently in progress. We will provide updates as necessary. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Oct &lt;var data-var="date"&gt; 5&lt;/var&gt;, &lt;var data-var="time"&gt;12:25&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Scheduled&lt;/strong&gt; - We will be undergoing scheduled maintenance. During this period Crm service will be affected and some performance degradation maybe expected. &lt;/p&gt;      </description>
+      <pubDate>Tue, 06 Oct 2026 06:55:11 +0000</pubDate>
+      <maintenanceEndDate>Tue, 06 Oct 2026 06:55:00 +0000</maintenanceEndDate>
+      <link>/status/incidents/xk6nr1q8vq93</link>
+      <guid>/status/incidents/xk6nr1q8vq93</guid>
+    </item>
+    <item>
+      <title>Database Maintenance in our EU region</title>
+      <description>&lt;p&gt; &lt;small&gt;Oct &lt;var data-var="date"&gt; 1&lt;/var&gt;, &lt;var data-var="time"&gt;06:55&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Completed&lt;/strong&gt; - The scheduled maintenance has been completed. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Oct &lt;var data-var="date"&gt; 1&lt;/var&gt;, &lt;var data-var="time"&gt;06:45&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;In progress&lt;/strong&gt; - Scheduled maintenance is currently in progress. We will provide updates as necessary. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Sep &lt;var data-var="date"&gt;30&lt;/var&gt;, &lt;var data-var="time"&gt;12:25&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Scheduled&lt;/strong&gt; - We will be undergoing scheduled maintenance. During this period Spaces service will be affected and some performance degradation maybe expected. &lt;/p&gt;      </description>
+      <pubDate>Thu, 01 Oct 2026 06:55:07 +0000</pubDate>
+      <maintenanceEndDate>Thu, 01 Oct 2026 06:55:00 +0000</maintenanceEndDate>
+      <link>/status/incidents/klf5syds83vj</link>
+      <guid>/status/incidents/klf5syds83vj</guid>
+    </item>
+    <item>
+      <title>Database Maintenance in our EU region</title>
+      <description>&lt;p&gt; &lt;small&gt;Sep &lt;var data-var="date"&gt;29&lt;/var&gt;, &lt;var data-var="time"&gt;06:40&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Completed&lt;/strong&gt; - The scheduled maintenance has been completed. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Sep &lt;var data-var="date"&gt;29&lt;/var&gt;, &lt;var data-var="time"&gt;06:30&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;In progress&lt;/strong&gt; - Scheduled maintenance is currently in progress. We will provide updates as necessary. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Sep &lt;var data-var="date"&gt;28&lt;/var&gt;, &lt;var data-var="time"&gt;12:06&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Scheduled&lt;/strong&gt; - We will be undergoing scheduled maintenance. During this period AI features will be affected and some performance degradation maybe expected. &lt;/p&gt;      </description>
+      <pubDate>Tue, 29 Sep 2026 06:40:07 +0000</pubDate>
+      <maintenanceEndDate>Tue, 29 Sep 2026 06:40:00 +0000</maintenanceEndDate>
+      <link>/status/incidents/3g7rw99vd3t0</link>
+      <guid>/status/incidents/3g7rw99vd3t0</guid>
+    </item>
+    <item>
+      <title>Issue with tasks creation in Projects</title>
+      <description>&lt;p&gt; &lt;small&gt;Sep &lt;var data-var="date"&gt;24&lt;/var&gt;, &lt;var data-var="time"&gt;11:22&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Sep &lt;var data-var="date"&gt;24&lt;/var&gt;, &lt;var data-var="time"&gt;10:48&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Sep &lt;var data-var="date"&gt;24&lt;/var&gt;, &lt;var data-var="time"&gt;10:42&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue. &lt;/p&gt;      </description>
+      <pubDate>Thu, 24 Sep 2026 11:22:04 +0000</pubDate>
+      <link>/status/incidents/z6q1wrjr15vb</link>
+      <guid>/status/incidents/z6q1wrjr15vb</guid>
+    </item>
+    <item>
+      <title>Database Maintenance in our US region</title>
+      <description>&lt;p&gt; &lt;small&gt;Sep &lt;var data-var="date"&gt; 1&lt;/var&gt;, &lt;var data-var="time"&gt;07:20&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Completed&lt;/strong&gt; - The scheduled maintenance has been completed. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Sep &lt;var data-var="date"&gt; 1&lt;/var&gt;, &lt;var data-var="time"&gt;07:00&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;In progress&lt;/strong&gt; - Scheduled maintenance is currently in progress. We will provide updates as necessary. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Aug &lt;var data-var="date"&gt;31&lt;/var&gt;, &lt;var data-var="time"&gt;10:25&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Scheduled&lt;/strong&gt; - We will be undergoing scheduled maintenance. During this period desk services will be affected. &lt;/p&gt;      </description>
+      <pubDate>Tue, 01 Sep 2026 07:20:07 +0000</pubDate>
+      <maintenanceEndDate>Tue, 01 Sep 2026 07:20:00 +0000</maintenanceEndDate>
+      <link>/boundary/90992974d372c3b0c81f</link>
+      <guid>/boundary/90992974d372c3b0c81f</guid>
+    </item>
+    <item>
+      <title>Database Maintenance in our US region</title>
+      <description>&lt;p&gt; &lt;small&gt;Aug &lt;var data-var="date"&gt;26&lt;/var&gt;, &lt;var data-var="time"&gt;07:20&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Completed&lt;/strong&gt; - The scheduled maintenance has been completed. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Aug &lt;var data-var="date"&gt;26&lt;/var&gt;, &lt;var data-var="time"&gt;07:00&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;In progress&lt;/strong&gt; - Scheduled maintenance is currently in progress. We will provide updates as necessary. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Aug &lt;var data-var="date"&gt;25&lt;/var&gt;, &lt;var data-var="time"&gt;10:35&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Scheduled&lt;/strong&gt; - We will be undergoing scheduled maintenance. During this period automations services and some AI features will be affected. &lt;/p&gt;      </description>
+      <pubDate>Wed, 26 Aug 2026 07:20:09 +0000</pubDate>
+      <maintenanceEndDate>Wed, 26 Aug 2026 07:20:00 +0000</maintenanceEndDate>
+      <link>/boundary/0fb0463938658b38b9bb</link>
+      <guid>/boundary/0fb0463938658b38b9bb</guid>
+    </item>
+    <item>
+      <title>Database Maintenance in our US region</title>
+      <description>&lt;p&gt; &lt;small&gt;Aug &lt;var data-var="date"&gt;19&lt;/var&gt;, &lt;var data-var="time"&gt;07:20&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Completed&lt;/strong&gt; - The scheduled maintenance has been completed. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Aug &lt;var data-var="date"&gt;19&lt;/var&gt;, &lt;var data-var="time"&gt;07:00&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;In progress&lt;/strong&gt; - Scheduled maintenance is currently in progress. We will provide updates as necessary. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Aug &lt;var data-var="date"&gt;18&lt;/var&gt;, &lt;var data-var="time"&gt;10:36&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Scheduled&lt;/strong&gt; - We will be undergoing scheduled maintenance. During this period AI features will be affected and some performance degradation maybe expected. &lt;/p&gt;      </description>
+      <pubDate>Wed, 19 Aug 2026 07:20:07 +0000</pubDate>
+      <maintenanceEndDate>Wed, 19 Aug 2026 07:20:00 +0000</maintenanceEndDate>
+      <link>/boundary/78084627989aad6e225a</link>
+      <guid>/boundary/78084627989aad6e225a</guid>
+    </item>
+    <item>
+      <title>Database Maintenance in our US region</title>
+      <description>&lt;p&gt; &lt;small&gt;Aug &lt;var data-var="date"&gt;12&lt;/var&gt;, &lt;var data-var="time"&gt;07:20&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Completed&lt;/strong&gt; - The scheduled maintenance has been completed. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Aug &lt;var data-var="date"&gt;12&lt;/var&gt;, &lt;var data-var="time"&gt;07:00&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;In progress&lt;/strong&gt; - Scheduled maintenance is currently in progress. We will provide updates as necessary. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Aug &lt;var data-var="date"&gt;11&lt;/var&gt;, &lt;var data-var="time"&gt;12:15&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Scheduled&lt;/strong&gt; - We will be undergoing scheduled maintenance. During this period some performance degradation maybe expected. &lt;/p&gt;      </description>
+      <pubDate>Wed, 12 Aug 2026 07:20:07 +0000</pubDate>
+      <maintenanceEndDate>Wed, 12 Aug 2026 07:20:00 +0000</maintenanceEndDate>
+      <link>/boundary/f02dd346aa4e4993a111</link>
+      <guid>/boundary/f02dd346aa4e4993a111</guid>
+    </item>
+    <item>
+      <title>Database Maintenance in our EU region</title>
+      <description>&lt;p&gt; &lt;small&gt;Aug &lt;var data-var="date"&gt; 5&lt;/var&gt;, &lt;var data-var="time"&gt;07:20&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Completed&lt;/strong&gt; - The scheduled maintenance has been completed. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Aug &lt;var data-var="date"&gt; 5&lt;/var&gt;, &lt;var data-var="time"&gt;07:00&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;In progress&lt;/strong&gt; - Scheduled maintenance is currently in progress. We will provide updates as necessary. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Aug &lt;var data-var="date"&gt; 4&lt;/var&gt;, &lt;var data-var="time"&gt;10:03&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Scheduled&lt;/strong&gt; - We will be undergoing scheduled maintenance. During this period AI features will be affected and some performance degradation maybe expected. &lt;/p&gt;      </description>
+      <pubDate>Wed, 05 Aug 2026 07:20:07 +0000</pubDate>
+      <maintenanceEndDate>Wed, 05 Aug 2026 07:20:00 +0000</maintenanceEndDate>
+      <link>/boundary/70a1ad365957422fcf73</link>
+      <guid>/boundary/70a1ad365957422fcf73</guid>
+    </item>
+    <item>
+      <title>Database Maintenance in our EU region</title>
+      <description>&lt;p&gt; &lt;small&gt;Jul &lt;var data-var="date"&gt;29&lt;/var&gt;, &lt;var data-var="time"&gt;07:20&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Completed&lt;/strong&gt; - The scheduled maintenance has been completed. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Jul &lt;var data-var="date"&gt;29&lt;/var&gt;, &lt;var data-var="time"&gt;07:00&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;In progress&lt;/strong&gt; - Scheduled maintenance is currently in progress. We will provide updates as necessary. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Jul &lt;var data-var="date"&gt;28&lt;/var&gt;, &lt;var data-var="time"&gt;10:28&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Scheduled&lt;/strong&gt; - We will be undergoing scheduled maintenance. During this period automations services and some AI features will be affected. &lt;/p&gt;      </description>
+      <pubDate>Wed, 29 Jul 2026 07:20:07 +0000</pubDate>
+      <maintenanceEndDate>Wed, 29 Jul 2026 07:20:00 +0000</maintenanceEndDate>
+      <link>/boundary/6bfdcd24a31251c4fab2</link>
+      <guid>/boundary/6bfdcd24a31251c4fab2</guid>
+    </item>
+    <item>
+      <title>Database Maintenance in our EU region</title>
+      <description>&lt;p&gt; &lt;small&gt;Jul &lt;var data-var="date"&gt;22&lt;/var&gt;, &lt;var data-var="time"&gt;07:20&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Completed&lt;/strong&gt; - The scheduled maintenance has been completed. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Jul &lt;var data-var="date"&gt;22&lt;/var&gt;, &lt;var data-var="time"&gt;07:00&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;In progress&lt;/strong&gt; - Scheduled maintenance is currently in progress. We will provide updates as necessary. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Jul &lt;var data-var="date"&gt;21&lt;/var&gt;, &lt;var data-var="time"&gt;12:37&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Scheduled&lt;/strong&gt; - We will be undergoing scheduled maintenance during this period and some performance degradation maybe expected. &lt;/p&gt;      </description>
+      <pubDate>Wed, 22 Jul 2026 07:20:07 +0000</pubDate>
+      <maintenanceEndDate>Wed, 22 Jul 2026 07:20:00 +0000</maintenanceEndDate>
+      <link>/boundary/312598b43b9467c739be</link>
+      <guid>/boundary/312598b43b9467c739be</guid>
+    </item>
+    <item>
+      <title>Database Maintenance in our EU region</title>
+      <description>&lt;p&gt; &lt;small&gt;Jul &lt;var data-var="date"&gt;15&lt;/var&gt;, &lt;var data-var="time"&gt;07:15&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Completed&lt;/strong&gt; - The scheduled maintenance has been completed. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Jul &lt;var data-var="date"&gt;15&lt;/var&gt;, &lt;var data-var="time"&gt;07:00&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;In progress&lt;/strong&gt; - Scheduled maintenance is currently in progress. We will provide updates as necessary. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Jul &lt;var data-var="date"&gt;14&lt;/var&gt;, &lt;var data-var="time"&gt;12:16&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Scheduled&lt;/strong&gt; - We will be undergoing scheduled maintenance during this period and some performance degradation maybe expected. &lt;/p&gt;      </description>
+      <pubDate>Wed, 15 Jul 2026 07:15:07 +0000</pubDate>
+      <maintenanceEndDate>Wed, 15 Jul 2026 07:15:00 +0000</maintenanceEndDate>
+      <link>/boundary/d34d738eb6e7dd9b6465</link>
+      <guid>/boundary/d34d738eb6e7dd9b6465</guid>
+    </item>
+    <item>
+      <title>Slow loading issue</title>
+      <description>&lt;p&gt; &lt;small&gt;Jun &lt;var data-var="date"&gt;22&lt;/var&gt;, &lt;var data-var="time"&gt;18:32&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Jun &lt;var data-var="date"&gt;22&lt;/var&gt;, &lt;var data-var="time"&gt;17:59&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Jun &lt;var data-var="date"&gt;22&lt;/var&gt;, &lt;var data-var="time"&gt;17:58&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Update&lt;/strong&gt; - We are continuing to work on a fix for this issue. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Jun &lt;var data-var="date"&gt;22&lt;/var&gt;, &lt;var data-var="time"&gt;17:13&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Identified&lt;/strong&gt; - The issue has been identified and a fix is being implemented. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Jun &lt;var data-var="date"&gt;22&lt;/var&gt;, &lt;var data-var="time"&gt;15:48&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Investigating&lt;/strong&gt; - We are seeing slow loading for some customers. We are investigating. &lt;/p&gt;      </description>
+      <pubDate>Mon, 22 Jun 2026 18:32:56 +0000</pubDate>
+      <link>/boundary/895bb8bf707d604c88e8</link>
+      <guid>/boundary/895bb8bf707d604c88e8</guid>
+    </item>
+    <item>
+      <title>We are investigating issues with Teamwork application performance in the EU region</title>
+      <description>&lt;p&gt; &lt;small&gt;May &lt;var data-var="date"&gt;28&lt;/var&gt;, &lt;var data-var="time"&gt;15:21&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved. &lt;/p&gt; &lt;p&gt; &lt;small&gt;May &lt;var data-var="date"&gt;28&lt;/var&gt;, &lt;var data-var="time"&gt;12:21&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results. &lt;/p&gt; &lt;p&gt; &lt;small&gt;May &lt;var data-var="date"&gt;28&lt;/var&gt;, &lt;var data-var="time"&gt;09:39&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue. &lt;/p&gt; &lt;p&gt; &lt;small&gt;May &lt;var data-var="date"&gt;28&lt;/var&gt;, &lt;var data-var="time"&gt;09:37&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Update&lt;/strong&gt; - We are continuing to monitor for any further issues. &lt;/p&gt; &lt;p&gt; &lt;small&gt;May &lt;var data-var="date"&gt;28&lt;/var&gt;, &lt;var data-var="time"&gt;09:02&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results. &lt;/p&gt; &lt;p&gt; &lt;small&gt;May &lt;var data-var="date"&gt;28&lt;/var&gt;, &lt;var data-var="time"&gt;08:40&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Investigating&lt;/strong&gt; - We are investigating performance issues affecting the Teamwork application in the EU region. &lt;/p&gt;      </description>
+      <pubDate>Thu, 28 May 2026 15:21:18 +0000</pubDate>
+      <link>/boundary/2f865107b98d59a994b6</link>
+      <guid>/boundary/2f865107b98d59a994b6</guid>
+    </item>
+    <item>
+      <title>Teamwork Desk - delay in data appearing in search results and reports</title>
+      <description>&lt;p&gt; &lt;small&gt;May &lt;var data-var="date"&gt; 1&lt;/var&gt;, &lt;var data-var="time"&gt;14:07&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved. &lt;/p&gt; &lt;p&gt; &lt;small&gt;May &lt;var data-var="date"&gt; 1&lt;/var&gt;, &lt;var data-var="time"&gt;11:10&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results. &lt;/p&gt; &lt;p&gt; &lt;small&gt;May &lt;var data-var="date"&gt; 1&lt;/var&gt;, &lt;var data-var="time"&gt;08:04&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue. &lt;/p&gt;      </description>
+      <pubDate>Fri, 01 May 2026 14:07:42 +0000</pubDate>
+      <link>/boundary/e2a1ada1eeea116a6a28</link>
+      <guid>/boundary/e2a1ada1eeea116a6a28</guid>
+    </item>
+    <item>
+      <title>Teamwork Projects - Service Degradation in the US region</title>
+      <description>&lt;p&gt; &lt;small&gt;Apr &lt;var data-var="date"&gt;20&lt;/var&gt;, &lt;var data-var="time"&gt;20:23&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Apr &lt;var data-var="date"&gt;20&lt;/var&gt;, &lt;var data-var="time"&gt;17:41&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Apr &lt;var data-var="date"&gt;20&lt;/var&gt;, &lt;var data-var="time"&gt;15:49&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue. &lt;/p&gt;      </description>
+      <pubDate>Mon, 20 Apr 2026 20:23:34 +0000</pubDate>
+      <link>/boundary/5c51343887d7f92e2571</link>
+      <guid>/boundary/5c51343887d7f92e2571</guid>
+    </item>
+    <item>
+      <title>Investigating issues creating and cloning projects in the EU Region</title>
+      <description>&lt;p&gt; &lt;small&gt;Mar &lt;var data-var="date"&gt;24&lt;/var&gt;, &lt;var data-var="time"&gt;21:31&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Mar &lt;var data-var="date"&gt;24&lt;/var&gt;, &lt;var data-var="time"&gt;20:41&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue. &lt;/p&gt;      </description>
+      <pubDate>Tue, 24 Mar 2026 21:31:40 +0000</pubDate>
+      <link>/boundary/cb7c75fa4998ca8852a5</link>
+      <guid>/boundary/cb7c75fa4998ca8852a5</guid>
+    </item>
+    <item>
+      <title>Chat Issue in US region</title>
+      <description>&lt;p&gt; &lt;small&gt;Mar &lt;var data-var="date"&gt;16&lt;/var&gt;, &lt;var data-var="time"&gt;17:32&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Mar &lt;var data-var="date"&gt;16&lt;/var&gt;, &lt;var data-var="time"&gt;14:37&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Mar &lt;var data-var="date"&gt;16&lt;/var&gt;, &lt;var data-var="time"&gt;14:15&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Identified&lt;/strong&gt; - The issue has been identified and a fix is being implemented. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Mar &lt;var data-var="date"&gt;16&lt;/var&gt;, &lt;var data-var="time"&gt;14:06&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue. &lt;/p&gt;      </description>
+      <pubDate>Mon, 16 Mar 2026 17:32:42 +0000</pubDate>
+      <link>/boundary/c2e37c0156bd90243b2e</link>
+      <guid>/boundary/c2e37c0156bd90243b2e</guid>
+    </item>
+    <item>
+      <title>Intermittent issues with Projects Application</title>
+      <description>&lt;p&gt; &lt;small&gt;Mar &lt;var data-var="date"&gt;12&lt;/var&gt;, &lt;var data-var="time"&gt;09:33&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Mar &lt;var data-var="date"&gt;12&lt;/var&gt;, &lt;var data-var="time"&gt;09:24&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Mar &lt;var data-var="date"&gt;12&lt;/var&gt;, &lt;var data-var="time"&gt;09:16&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Identified&lt;/strong&gt; - The issue has been identified and a fix is being implemented. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Mar &lt;var data-var="date"&gt;12&lt;/var&gt;, &lt;var data-var="time"&gt;08:55&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue. &lt;/p&gt;      </description>
+      <pubDate>Thu, 12 Mar 2026 09:33:15 +0000</pubDate>
+      <link>/boundary/de12700d66fcf5049f21</link>
+      <guid>/boundary/de12700d66fcf5049f21</guid>
+    </item>
+    <item>
+      <title>Investing reports of loading Issues</title>
+      <description>&lt;p&gt; &lt;small&gt;Mar &lt;var data-var="date"&gt;11&lt;/var&gt;, &lt;var data-var="time"&gt;19:23&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Mar &lt;var data-var="date"&gt;11&lt;/var&gt;, &lt;var data-var="time"&gt;18:37&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Mar &lt;var data-var="date"&gt;11&lt;/var&gt;, &lt;var data-var="time"&gt;17:29&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue. &lt;/p&gt;      </description>
+      <pubDate>Wed, 11 Mar 2026 19:23:59 +0000</pubDate>
+      <link>/boundary/2e40bc5be90931babed7</link>
+      <guid>/boundary/2e40bc5be90931babed7</guid>
+    </item>
+    <item>
+      <title>Projects load issues</title>
+      <description>&lt;p&gt; &lt;small&gt;Mar &lt;var data-var="date"&gt; 4&lt;/var&gt;, &lt;var data-var="time"&gt;18:10&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Mar &lt;var data-var="date"&gt; 4&lt;/var&gt;, &lt;var data-var="time"&gt;17:51&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Mar &lt;var data-var="date"&gt; 4&lt;/var&gt;, &lt;var data-var="time"&gt;17:42&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Identified&lt;/strong&gt; - The issue has been identified and a fix is being implemented. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Mar &lt;var data-var="date"&gt; 4&lt;/var&gt;, &lt;var data-var="time"&gt;17:19&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue. &lt;/p&gt;      </description>
+      <pubDate>Wed, 04 Mar 2026 18:10:00 +0000</pubDate>
+      <link>/boundary/22aa9bbd5f0ae14638d4</link>
+      <guid>/boundary/22aa9bbd5f0ae14638d4</guid>
+    </item>
+    <item>
+      <title>Service Disruption: Slack Integration Unavailable</title>
+      <description>&lt;p&gt; &lt;small&gt;Mar &lt;var data-var="date"&gt; 3&lt;/var&gt;, &lt;var data-var="time"&gt;15:00&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Resolved&lt;/strong&gt; - We've worked with our partners at Slack to address the availability of our Slack Integration on the Slack Marketplace. You may need to re-authenticate your Slack account to resume connectivity. No further action is required. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Feb &lt;var data-var="date"&gt;28&lt;/var&gt;, &lt;var data-var="time"&gt;08:47&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Update&lt;/strong&gt; - We are continuing to investigate this issue. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Feb &lt;var data-var="date"&gt;28&lt;/var&gt;, &lt;var data-var="time"&gt;08:47&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Investigating&lt;/strong&gt; - The Teamwork.com Slack integration is currently unavailable. Users may experience failures when sending notifications to Slack or using Slack-based functionality. Our engineering team is actively investigating and working toward resolution. &lt;/p&gt;      </description>
+      <pubDate>Tue, 03 Mar 2026 15:00:24 +0000</pubDate>
+      <link>/boundary/8f66a9e3aca8e6ce34d3</link>
+      <guid>/boundary/8f66a9e3aca8e6ce34d3</guid>
+    </item>
+    <item>
+      <title>Investigating: Email Delivery Delays to Microsoft Email Addresses</title>
+      <description>&lt;p&gt; &lt;small&gt;Feb &lt;var data-var="date"&gt;26&lt;/var&gt;, &lt;var data-var="time"&gt;14:28&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Feb &lt;var data-var="date"&gt;26&lt;/var&gt;, &lt;var data-var="time"&gt;14:28&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Update&lt;/strong&gt; - We are continuing to investigate this issue. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Feb &lt;var data-var="date"&gt;25&lt;/var&gt;, &lt;var data-var="time"&gt;10:19&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating an issue affecting the delivery of Teamwork Desk messages and Projects notifications to free Microsoft email addresses, including @live, @hotmail, and @outlook domains.&lt;br&gt;&lt;br&gt;Emails to these addresses may be delayed or not delivered. Our team is actively working with our email delivery provider to resolve this as quickly as possible.&lt;br&gt;&lt;br&gt;Emails to other providers and custom domains are unaffected.&lt;br&gt;&lt;br&gt;We will provide an update as soon as we have more information. We apologise for any inconvenience. &lt;/p&gt;      </description>
+      <pubDate>Thu, 26 Feb 2026 14:28:52 +0000</pubDate>
+      <link>/boundary/eb6b7c2cc25a64ca8d88</link>
+      <guid>/boundary/eb6b7c2cc25a64ca8d88</guid>
+    </item>
+    <item>
+      <title>Investigating delayed processing of emails in Teamwork Desk</title>
+      <description>&lt;p&gt; &lt;small&gt;Feb &lt;var data-var="date"&gt;16&lt;/var&gt;, &lt;var data-var="time"&gt;15:53&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Resolved&lt;/strong&gt; - This incident has been resolved. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Feb &lt;var data-var="date"&gt;16&lt;/var&gt;, &lt;var data-var="time"&gt;15:21&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Monitoring&lt;/strong&gt; - A fix has been implemented and we are monitoring the results. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Feb &lt;var data-var="date"&gt;16&lt;/var&gt;, &lt;var data-var="time"&gt;15:17&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Identified&lt;/strong&gt; - The issue has been identified and a fix is being implemented. &lt;/p&gt; &lt;p&gt; &lt;small&gt;Feb &lt;var data-var="date"&gt;16&lt;/var&gt;, &lt;var data-var="time"&gt;15:14&lt;/var&gt; UTC&lt;/small&gt;&lt;br&gt; &lt;strong&gt;Investigating&lt;/strong&gt; - We are currently investigating this issue. &lt;/p&gt;      </description>
+      <pubDate>Mon, 16 Feb 2026 15:53:35 +0000</pubDate>
+      <link>/boundary/53de9f1c81b4c67842bb</link>
+      <guid>/boundary/53de9f1c81b4c67842bb</guid>
+    </item>
+  </channel>
+</rss>

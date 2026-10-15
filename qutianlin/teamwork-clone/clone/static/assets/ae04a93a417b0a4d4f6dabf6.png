@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html data-teamwork-twa-version="12.34.40" data-teamwork-twa-branch="HEAD" data-teamwork-twa-commit="1071fb848d1e661f3923aa73960d6721b944b627">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Teamwork Projects</title>
+  <meta name="robots" content="noindex, nofollow, noarchive, none, noodp, nosnippet">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/okekkfbjgdmfmogicbhdechdmkfhfphc">
+  <link id="favicon" rel="apple-touch-icon" href="https://twa-prod.teamwork.com/tko-hybrid/app/static/teamwork-com-apple-icon-114x114.png">
+  <link rel="shortcut icon" href="https://twa-prod.teamwork.com/tko-hybrid/app/static/favicon.ico" type="image/x-icon">
+
+  <link id="favicon" rel="apple-touch-icon" href="https://twa-prod.teamwork.com/tko-hybrid/app/static/teamwork-com-apple-icon-114x114.png">
+  <link id="ShortcutIcon" rel="shortcut icon" href="https://twa-prod.teamwork.com/tko-hybrid/app/static/favicon.ico" type="image/x-icon">
+
+  <script>
+    var appVersionId = document.documentElement.getAttribute('data-teamwork-twa-version');
+    var devMode = false;
+
+    var webpackPublicPath = 'https://twa-prod.teamwork.com/tko-hybrid/app/';
+
+    var cdnConfig = {
+      baseUrl: 'https://twa-prod.teamwork.com/tko-hybrid/app/',
+      failoverUrl: 'https://teamwork-web-app-prod.s3.amazonaws.com/tko-hybrid/app/',
+    };
+
+    
+    var cdnFailOver = (el) => {
+  let newEl;
+  // if the core css fails to load, try directly from the CDN.
+  if (el.type === 'text/css') {
+    newEl = document.createElement('link');
+    newEl.type = 'text/css';
+    newEl.rel = 'stylesheet';
+    newEl.media = 'all';
+    document.head.append(newEl);
+    newEl.href = el.href.replace(cdnConfig.baseUrl, cdnConfig.failoverUrl);
+  }
+
+  // If the core js fails to load, try directly from the CDN.
+  // Then tell webpack to use the CDN for all subsequent requests.
+  if (el.type === 'application/javascript') {
+    window.webpackPublicPath = cdnConfig.failoverUrl;
+
+    newEl = document.createElement('script');
+    document.body.append(newEl);
+    newEl.src = el.src.replace(cdnConfig.baseUrl, cdnConfig.failoverUrl);
+  }
+
+  if (newEl) {
+    newEl.onerror = () => {
+      console.error('Trouble connecting to CDN');
+    };
+  }
+};
+    
+
+    // Remove double slash in pathname
+    if (document.location.pathname === '//') {
+      document.location.pathname = '/';
+    }
+
+    
+    (() => {
+  const inIframe = window.parent !== window;
+  const inLightspeed =
+    window.parent.location.origin === window.location.origin && /^\/app(\/|$)/.test(window.parent.location.pathname);
+  const inLightspeedIframe = inIframe && inLightspeed;
+  // Embedded view is a special case where we do not want to redirect to the correct Lightspeed path
+  // we need a solution for this view within Lightspeed istelf longer term
+  const isEmbeddedView = window.location.search.includes('embeddedView') && window.location.pathname === '/';
+  const isCDN = ['twa-prod.teamwork.com', 'cdn-projects.staging.teamwork.com'].includes(window.location.hostname);
+
+  if (!inLightspeedIframe && !isEmbeddedView && !isCDN) {
+    // if the hash is empty, return the origin + /app/
+    // This is to support old, pre-tko URLs which we still have in emails and potentially some other locations too.
+    if (window.location.hash === '') {
+      if (!window.location.pathname.startsWith('/app')) {
+        window.location.replace(`${window.location.origin}/app${window.location.pathname}${window.location.search}`);
+      }
+      return;
+    }
+
+    // Its a comment hash, so we need to redirect to the correct path by replacing the hash with a querystring
+    // This is to support old, pre-tko URLs which we still have in emails and potentially some other locations too.
+    if (/^#comment\d+$/.test(window.location.hash)) {
+      window.location.replace(
+        `${window.location.origin}/app${window.location.pathname}?c=${window.location.hash.replace('#comment', '')}`,
+      );
+      return;
+    }
+
+    // to get the correct Lightspeed pathname (it uses) replace the TWA hash with /app/ and remove the # from the beginning
+    const lsPathName = window.location.hash.replace(/^#\/?|^$/, '/app/');
+
+    // the hash path may also include a querystring
+    // in this case swap the "?" for an "&" on the window.location.search string
+    const queryString = window.location.hash.includes('?')
+      ? window.location.search.replace('?', '&')
+      : window.location.search;
+
+    // redirect to the correct Lightspeed path
+    window.location.replace(`${window.location.origin}${lsPathName}${queryString}`);
+  }
+})()
+    
+  </script>
+
+  <link type="text/css" rel="stylesheet" href="https://twa-prod.teamwork.com/tko-hybrid/app/static/css/styles-core.334590d46051b9b2ca8ada4c9562518e.css" onerror="cdnFailOver(this)">
+    
+    <link type="text/css" rel="stylesheet" href="https://twa-prod.teamwork.com/tko-hybrid/app/app.91e9709d.css" onerror="cdnFailOver(this)">
+  
+</head>
+
+<body>
+  <div id="teamwork-web-app"></div>
+
+  
+  <script type="application/javascript" preload src="https://twa-prod.teamwork.com/tko-hybrid/app/app.d554aa0052ab812d645e.js" onerror="cdnFailOver(this)"></script>
+  
+</body>
+</html>

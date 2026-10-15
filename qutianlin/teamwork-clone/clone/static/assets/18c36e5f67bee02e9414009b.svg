@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="62px" viewBox="0 0 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 63.1 (101010) - https://sketch.com -->
+    <title>002B376A-D251-4CBF-914B-09278319C693</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="02-Templates-Landing-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="marketing-campaign-template-04" transform="translate(-108.000000, -286.000000)">
+            <g id="Header">
+                <g id="Marketing-campaign" transform="translate(108.000000, 286.000000)">
+                    <rect id="Rectangle" fill="#4DA2F8" x="0" y="0" width="62" height="62" rx="8"></rect>
+                    <g id="poll" transform="translate(31.000000, 31.000000) scale(-1, 1) translate(-31.000000, -31.000000) translate(17.000000, 17.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <path d="M25,0 L3,0 C1.34375,0 0,1.34375 0,3 L0,25 C0,26.65625 1.34375,28 3,28 L25,28 C26.65625,28 28,26.65625 28,25 L28,3 C28,1.34375 26.65625,0 25,0 Z M25,25 L3,25 L3,3 L25,3 L25,25 Z M7.5,22 L8.5,22 C9.0525,22 9.5,21.5525 9.5,21 L9.5,13 C9.5,12.4475 9.0525,12 8.5,12 L7.5,12 C6.9475,12 6.5,12.4475 6.5,13 L6.5,21 C6.5,21.5525 6.9475,22 7.5,22 Z M13.5,22 L14.5,22 C15.0525,22 15.5,21.5525 15.5,21 L15.5,7 C15.5,6.4475 15.0525,6 14.5,6 L13.5,6 C12.9475,6 12.5,6.4475 12.5,7 L12.5,21 C12.5,21.5525 12.9475,22 13.5,22 Z M19.5,22 L20.5,22 C21.0525,22 21.5,21.5525 21.5,21 L21.5,17 C21.5,16.4475 21.0525,16 20.5,16 L19.5,16 C18.9475,16 18.5,16.4475 18.5,17 L18.5,21 C18.5,21.5525 18.9475,22 19.5,22 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

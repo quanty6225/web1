@@ -1,0 +1,12 @@
+(()=>{'use strict';
+const path=location.pathname.replace(/\/$/,'')||'/';const selector={'/resources':'a.resource-card','/templates':'a.tw-template-card','/integrations':'a.integrations-card'}[path];if(!selector)return;
+const input=document.querySelector('input[name=search]');if(!input)return;const source=[...document.querySelectorAll(selector)];if(!source.length)return;const host=source[0].parentElement;let catalog=null;const original=host.innerHTML;const q=new URLSearchParams(location.search);input.value=q.get('search')||'';
+for(const name of ['type','topic','industry']){const value=q.get(name);if(value)for(const radio of document.querySelectorAll(`input[name=${name}]`))radio.checked=radio.id.replace(/^\d+-/,'')===value;}
+let status=document.createElement('p');status.className='local-list-status';status.setAttribute('role','status');input.closest('form')?.after(status);if(!status.isConnected)input.parentElement.after(status);
+async function update(write=true){catalog=catalog||(await(await fetch('/static/public-catalog.json')).json())[path];const term=input.value.trim().toLowerCase();const filters={};for(const name of ['type','topic','industry']){const radio=document.querySelector(`input[name=${name}]:checked`);if(radio&&!radio.id.startsWith('0-'))filters[name]=radio.id.replace(/^\d+-/,'');}
+const active=!!term||Object.keys(filters).length>0;const found=catalog.filter(c=>c.text.toLowerCase().includes(term)&&Object.entries(filters).every(([k,v])=>[].concat(c.filters[k]||[]).includes(v)));
+if(path==='/integrations'){for(const card of source)card.hidden=active&&!card.textContent.toLowerCase().includes(term)}else host.innerHTML=active?found.map(c=>c.html).join(''):original;
+status.textContent=active?(found.length?`${found.length} results`:'No results found'):'';for(const n of document.querySelectorAll('.tw-pagination'))n.hidden=active;
+if(write){const params=new URLSearchParams(location.search);params.delete('search');for(const name of ['type','topic','industry'])params.delete(name);if(term)params.set('search',input.value.trim());for(const [k,v] of Object.entries(filters))params.set(k,v);history.replaceState(null,'',path+(params.size?'?'+params:''));}}
+input.addEventListener('input',()=>update());input.closest('form')?.addEventListener('submit',e=>{e.preventDefault();e.stopImmediatePropagation();update()});for(const radio of document.querySelectorAll('input[name=type],input[name=topic],input[name=industry]'))radio.addEventListener('change',()=>update());update(false);
+})();

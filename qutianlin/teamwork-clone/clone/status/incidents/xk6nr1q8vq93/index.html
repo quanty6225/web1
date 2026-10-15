@@ -1,0 +1,953 @@
+<!doctype html><html lang="en"><head><!-- force IE browsers in compatibility mode to use their most aggressive rendering engine -->
+
+    <meta charset="utf-8">
+    <title>Teamwork.com Status - Database Maintenance in our EU region</title>
+    <meta name="description" content="Teamwork.com's Status Page - Database Maintenance in our EU region.">
+
+    <!-- Mobile viewport optimization -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <!-- Time this page was rendered - http://purl.org/dc/terms/issued -->
+    <meta name="issued" content="1791931919">
+
+    <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+    <!-- Atlassian Sans & Mono Fonts -->
+<style>
+  /* Dynamic Font Stack based on Feature Flag */
+    /* Using Atlassian Sans & Mono */
+    :root {
+      --font-stack-a: "Atlassian Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+      --font-stack-b: "Atlassian Mono", "SFMono-Medium", "SF Mono", "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Consolas, Courier, monospace;
+    }
+</style>
+
+
+      <link rel="shortcut icon" href="/static/assets/64be64b83b209b72497029c0.png">
+
+    <!-- Canonical Link to ensure that only the custom domain is indexed when present -->
+      <meta name="_globalsign-domain-verification" content="y_VzfckMy4iePo5oDJNivyYIjh8LffYa4jzUndm_bZ">
+
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/static/assets/b9033b4c34110c7fe5c42089.css" media="screen">
+    <link rel="stylesheet" href="/static/assets/d6750d5346b682d67fb6cac9.css" media="all">
+
+    <style>
+  /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */
+  body,
+  .layout-content.status.status-api .section .example-container .example-opener .color-secondary,
+  .grouped-items-selector,
+  .layout-content.status.status-full-history .history-nav a.current,
+  div[id^="subscribe-modal"] .modal-footer,
+  div[id^="subscribe-modal"],
+  div[id^="updates-dropdown"] .updates-dropdown-section,
+  #uptime-tooltip .tooltip-box {
+    background-color:#ffffff;
+  }
+
+  #uptime-tooltip .pointer-container .pointer-smaller {
+    border-bottom-color:#ffffff;
+  }
+
+
+
+
+  /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */
+  body.status,
+  .color-primary,
+  .color-primary:hover,
+  .layout-content.status-index .status-day .update-title.impact-none a,
+  .layout-content.status-index .status-day .update-title.impact-none a:hover,
+  .layout-content.status-index .timeframes-container .timeframe.active,
+  .layout-content.status-full-history .month .incident-container .impact-none,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-none a,
+  .incident-history .impact-none,
+  .layout-content.status .grouped-items-selector.inline .grouped-item.active,
+  .layout-content.status.status-full-history .history-nav a.current,
+  .layout-content.status.status-full-history .history-nav a:not(.current):hover,
+  div[id^="subscribe-modal"] .modal-header .close,
+  .grouped-item-label,
+  #uptime-tooltip .tooltip-box .tooltip-content .related-events .related-event a.related-event-link {
+    color:#333333;
+  }
+
+  .layout-content.status.status-index .components-statuses .component-container .name {
+    color:#333333;
+    color:rgba(51,51,51,.8);
+  }
+
+
+
+
+  /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */
+  small,
+  .layout-content.status .table-row .date,
+  .color-secondary,
+  .layout-content.status .grouped-items-selector.inline .grouped-item,
+  .layout-content.status.status-full-history .history-footer .pagination a.disabled,
+  .layout-content.status.status-full-history .history-nav a,
+  #uptime-tooltip .tooltip-box .tooltip-content .related-events #related-event-header {
+    color:#AAAAAA;
+  }
+
+
+
+
+  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */
+  body.status .layout-content.status .border-color,
+  hr,
+  .tooltip-base,
+  .markdown-display table,
+  div[id^="subscribe-modal"],
+  #uptime-tooltip .tooltip-box {
+    border-color:#E0E0E0;
+  }
+
+  div[id^="subscribe-modal"] .modal-footer,
+  .markdown-display table td {
+    border-top-color:#E0E0E0;
+  }
+
+  .markdown-display table td + td, .markdown-display table th + th {
+    border-left-color:#E0E0E0;
+  }
+
+  div[id^="subscribe-modal"] .modal-header,
+  #uptime-tooltip .pointer-container .pointer-larger {
+    border-bottom-color:#E0E0E0;
+  }
+
+  #uptime-tooltip .tooltip-box .outage-field {
+    /*
+      Generate the background-color for the outage-field from the css_body_background_color and css_border_color.
+
+      For the default background (#ffffff) and default css_border_color (#e0e0e0), use the luminosity of the default background with a magic number to arrive at
+      the original outage-field background color (#f4f5f7). I used the formula Target Color = Color * alpha + Background * (1 - alpha) to find the magic number of ~0.08.
+
+      For darker css_body_background_color, luminosity values are lower so alpha trends toward becoming transparent (thus outage-field background becomes same as css_body_background_color).
+    */
+    background-color: rgba(224,224,224,0.31);
+
+    /*
+      outage-field border-color alpha is inverse to the luminosity of css_body_background_color.
+      That is to say, with a default white background this border is transparent, but on a black background, it's opaque css_border_color.
+    */
+    border-color: rgba(224,224,224,0.0);
+  }
+
+
+
+
+  /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */
+  .layout-content.status.status-index .status-day .update-title.impact-critical a,
+  .layout-content.status.status-index .status-day .update-title.impact-critical a:hover,
+  .layout-content.status.status-index .page-status.status-critical,
+  .layout-content.status.status-index .unresolved-incident.impact-critical .incident-title,
+  .flat-button.background-red {
+    background-color:#e74c3c;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-red:after,
+  .layout-content.status-full-history .month .incident-container .impact-critical,
+  .layout-content.status-incident .incident-name.impact-critical,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-critical a,
+  .status-red .icon-indicator,
+  .incident-history .impact-critical,
+  .components-container .component-inner-container.status-red .component-status,
+  .components-container .component-inner-container.status-red .icon-indicator {
+    color:#e74c3c;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-critical .updates {
+    border-color:#e74c3c;
+  }
+
+
+
+
+  /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */
+  .layout-content.status.status-index .status-day .update-title.impact-major a,
+  .layout-content.status.status-index .status-day .update-title.impact-major a:hover,
+  .layout-content.status.status-index .page-status.status-major,
+  .layout-content.status.status-index .unresolved-incident.impact-major .incident-title {
+    background-color:#e67e22;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-orange:after,
+  .layout-content.status-full-history .month .incident-container .impact-major,
+  .layout-content.status-incident .incident-name.impact-major,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-major a,
+  .status-orange .icon-indicator,
+  .incident-history .impact-major,
+  .components-container .component-inner-container.status-orange .component-status,
+  .components-container .component-inner-container.status-orange .icon-indicator {
+    color:#e67e22;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-major .updates {
+    border-color:#e67e22;
+  }
+
+
+
+
+  /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */
+  .layout-content.status.status-index .status-day .update-title.impact-minor a,
+  .layout-content.status.status-index .status-day .update-title.impact-minor a:hover,
+  .layout-content.status.status-index .page-status.status-minor,
+  .layout-content.status.status-index .unresolved-incident.impact-minor .incident-title,
+  .layout-content.status.status-index .scheduled-incidents-container .tab {
+    background-color:#f1c40f;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-yellow:after,
+  .layout-content.status-full-history .month .incident-container .impact-minor,
+  .layout-content.status-incident .incident-name.impact-minor,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-minor a,
+  .status-yellow .icon-indicator,
+  .incident-history .impact-minor,
+  .components-container .component-inner-container.status-yellow .component-status,
+  .components-container .component-inner-container.status-yellow .icon-indicator,
+  .layout-content.status.manage-subscriptions .confirmation-infobox .fa {
+    color:#f1c40f;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-minor .updates,
+  .layout-content.status.status-index .scheduled-incidents-container {
+    border-color:#f1c40f;
+  }
+
+
+
+
+  /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */
+  .layout-content.status.status-index .status-day .update-title.impact-maintenance a,
+  .layout-content.status.status-index .status-day .update-title.impact-maintenance a:hover,
+  .layout-content.status.status-index .page-status.status-maintenance,
+  .layout-content.status.status-index .unresolved-incident.impact-maintenance .incident-title,
+  .layout-content.status.status-index .scheduled-incidents-container .tab {
+    background-color:#3498DB;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-blue:after,
+  .layout-content.status-full-history .month .incident-container .impact-maintenance,
+  .layout-content.status-incident .incident-name.impact-maintenance,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-maintenance a,
+  .status-blue .icon-indicator,
+  .incident-history .impact-maintenance,
+  .components-container .component-inner-container.status-blue .component-status,
+  .components-container .component-inner-container.status-blue .icon-indicator {
+    color:#3498DB;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-maintenance .updates,
+  .layout-content.status.status-index .scheduled-incidents-container {
+    border-color:#3498DB;
+  }
+
+
+
+
+  /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */
+  .layout-content.status.status-index .page-status.status-none {
+    background-color:#2fcc66;
+  }
+  .layout-content.status-index .components-statuses .component-container.status-green:after,
+  .status-green .icon-indicator,
+  .components-container .component-inner-container.status-green .component-status,
+  .components-container .component-inner-container.status-green .icon-indicator {
+    color:#2fcc66;
+  }
+
+
+
+
+  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */
+  a,
+  a:hover,
+  .layout-content.status-index .page-footer span a:hover,
+  .layout-content.status-index .timeframes-container .timeframe:not(.active):hover,
+  .layout-content.status-incident .subheader a:hover {
+    color:#3498db;
+  }
+
+  .flat-button,
+  .masthead .updates-dropdown-container .show-updates-dropdown,
+  .layout-content.status-full-history .show-filter.open  {
+    background-color:#3498db;
+  }
+
+
+
+
+  /* CUSTOM COLOR OVERRIDES FOR UPTIME SHOWCASE */
+  .components-section .components-uptime-link {
+    color: #aaaaaa;
+  }
+
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .legend-item {
+    color: #aaaaaa;
+    opacity: 1;
+  }
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .legend-item.light {
+    color: #aaaaaa;
+    opacity: 1;
+  }
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .spacer {
+    background: #aaaaaa;
+    opacity: 1;
+  }
+</style>
+
+
+    <!-- custom css -->
+
+      <!-- polyfills -->
+        <!-- Le HTML5 shim -->
+    <!-- injection for static -->
+
+      <meta name="twitter:card" content="summary">
+  <meta name="twitter:site">
+  <meta name="twitter:creator">
+  <meta name="robots" content="noindex,nofollow">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://status.teamwork.com/incidents/xk6nr1q8vq93">
+  <meta property="og:image" content="https://dka575ofm4ao0.cloudfront.net/assets/logos/favicon-2b86ed00cfa6258307d4a3d0c482fd733c7973f82de213143b24fc062c540367.png">
+  <meta property="og:title" content="Database Maintenance in our EU region">
+  <meta property="og:description">
+
+  <link rel="stylesheet" href="/static/clone.css"><script src="/static/clone.js" defer></script><script src="/static/status.js" defer></script></head>
+
+
+  <body class="status incident status-none sp-a11y-status-focus-visibility a11y-focus-indicators" data-breakpoint-reached="false" data-clone-auth="false" data-route="/status/incidents/xk6nr1q8vq93" data-frame="false" data-region="main">
+
+    
+
+<style>
+  /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */
+  body,
+  .layout-content.status.status-api .section .example-container .example-opener .color-secondary,
+  .grouped-items-selector,
+  .layout-content.status.status-full-history .history-nav a.current,
+  div[id^="subscribe-modal"] .modal-footer,
+  div[id^="subscribe-modal"],
+  div[id^="updates-dropdown"] .updates-dropdown-section,
+  #uptime-tooltip .tooltip-box {
+    background-color:#ffffff;
+  }
+
+  #uptime-tooltip .pointer-container .pointer-smaller {
+    border-bottom-color:#ffffff;
+  }
+
+
+
+
+  /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */
+  body.status,
+  .color-primary,
+  .color-primary:hover,
+  .layout-content.status-index .status-day .update-title.impact-none a,
+  .layout-content.status-index .status-day .update-title.impact-none a:hover,
+  .layout-content.status-index .timeframes-container .timeframe.active,
+  .layout-content.status-full-history .month .incident-container .impact-none,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-none a,
+  .incident-history .impact-none,
+  .layout-content.status .grouped-items-selector.inline .grouped-item.active,
+  .layout-content.status.status-full-history .history-nav a.current,
+  .layout-content.status.status-full-history .history-nav a:not(.current):hover,
+  div[id^="subscribe-modal"] .modal-header .close,
+  .grouped-item-label,
+  #uptime-tooltip .tooltip-box .tooltip-content .related-events .related-event a.related-event-link {
+    color:#333333;
+  }
+
+  .layout-content.status.status-index .components-statuses .component-container .name {
+    color:#333333;
+    color:rgba(51,51,51,.8);
+  }
+
+
+
+
+  /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */
+  small,
+  .layout-content.status .table-row .date,
+  .color-secondary,
+  .layout-content.status .grouped-items-selector.inline .grouped-item,
+  .layout-content.status.status-full-history .history-footer .pagination a.disabled,
+  .layout-content.status.status-full-history .history-nav a,
+  #uptime-tooltip .tooltip-box .tooltip-content .related-events #related-event-header {
+    color:#AAAAAA;
+  }
+
+
+
+
+  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */
+  body.status .layout-content.status .border-color,
+  hr,
+  .tooltip-base,
+  .markdown-display table,
+  div[id^="subscribe-modal"],
+  #uptime-tooltip .tooltip-box {
+    border-color:#E0E0E0;
+  }
+
+  div[id^="subscribe-modal"] .modal-footer,
+  .markdown-display table td {
+    border-top-color:#E0E0E0;
+  }
+
+  .markdown-display table td + td, .markdown-display table th + th {
+    border-left-color:#E0E0E0;
+  }
+
+  div[id^="subscribe-modal"] .modal-header,
+  #uptime-tooltip .pointer-container .pointer-larger {
+    border-bottom-color:#E0E0E0;
+  }
+
+  #uptime-tooltip .tooltip-box .outage-field {
+    /*
+      Generate the background-color for the outage-field from the css_body_background_color and css_border_color.
+
+      For the default background (#ffffff) and default css_border_color (#e0e0e0), use the luminosity of the default background with a magic number to arrive at
+      the original outage-field background color (#f4f5f7). I used the formula Target Color = Color * alpha + Background * (1 - alpha) to find the magic number of ~0.08.
+
+      For darker css_body_background_color, luminosity values are lower so alpha trends toward becoming transparent (thus outage-field background becomes same as css_body_background_color).
+    */
+    background-color: rgba(224,224,224,0.31);
+
+    /*
+      outage-field border-color alpha is inverse to the luminosity of css_body_background_color.
+      That is to say, with a default white background this border is transparent, but on a black background, it's opaque css_border_color.
+    */
+    border-color: rgba(224,224,224,0.0);
+  }
+
+
+
+
+  /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */
+  .layout-content.status.status-index .status-day .update-title.impact-critical a,
+  .layout-content.status.status-index .status-day .update-title.impact-critical a:hover,
+  .layout-content.status.status-index .page-status.status-critical,
+  .layout-content.status.status-index .unresolved-incident.impact-critical .incident-title,
+  .flat-button.background-red {
+    background-color:#e74c3c;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-red:after,
+  .layout-content.status-full-history .month .incident-container .impact-critical,
+  .layout-content.status-incident .incident-name.impact-critical,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-critical a,
+  .status-red .icon-indicator,
+  .incident-history .impact-critical,
+  .components-container .component-inner-container.status-red .component-status,
+  .components-container .component-inner-container.status-red .icon-indicator {
+    color:#e74c3c;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-critical .updates {
+    border-color:#e74c3c;
+  }
+
+
+
+
+  /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */
+  .layout-content.status.status-index .status-day .update-title.impact-major a,
+  .layout-content.status.status-index .status-day .update-title.impact-major a:hover,
+  .layout-content.status.status-index .page-status.status-major,
+  .layout-content.status.status-index .unresolved-incident.impact-major .incident-title {
+    background-color:#e67e22;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-orange:after,
+  .layout-content.status-full-history .month .incident-container .impact-major,
+  .layout-content.status-incident .incident-name.impact-major,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-major a,
+  .status-orange .icon-indicator,
+  .incident-history .impact-major,
+  .components-container .component-inner-container.status-orange .component-status,
+  .components-container .component-inner-container.status-orange .icon-indicator {
+    color:#e67e22;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-major .updates {
+    border-color:#e67e22;
+  }
+
+
+
+
+  /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */
+  .layout-content.status.status-index .status-day .update-title.impact-minor a,
+  .layout-content.status.status-index .status-day .update-title.impact-minor a:hover,
+  .layout-content.status.status-index .page-status.status-minor,
+  .layout-content.status.status-index .unresolved-incident.impact-minor .incident-title,
+  .layout-content.status.status-index .scheduled-incidents-container .tab {
+    background-color:#f1c40f;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-yellow:after,
+  .layout-content.status-full-history .month .incident-container .impact-minor,
+  .layout-content.status-incident .incident-name.impact-minor,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-minor a,
+  .status-yellow .icon-indicator,
+  .incident-history .impact-minor,
+  .components-container .component-inner-container.status-yellow .component-status,
+  .components-container .component-inner-container.status-yellow .icon-indicator,
+  .layout-content.status.manage-subscriptions .confirmation-infobox .fa {
+    color:#f1c40f;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-minor .updates,
+  .layout-content.status.status-index .scheduled-incidents-container {
+    border-color:#f1c40f;
+  }
+
+
+
+
+  /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */
+  .layout-content.status.status-index .status-day .update-title.impact-maintenance a,
+  .layout-content.status.status-index .status-day .update-title.impact-maintenance a:hover,
+  .layout-content.status.status-index .page-status.status-maintenance,
+  .layout-content.status.status-index .unresolved-incident.impact-maintenance .incident-title,
+  .layout-content.status.status-index .scheduled-incidents-container .tab {
+    background-color:#3498DB;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-blue:after,
+  .layout-content.status-full-history .month .incident-container .impact-maintenance,
+  .layout-content.status-incident .incident-name.impact-maintenance,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-maintenance a,
+  .status-blue .icon-indicator,
+  .incident-history .impact-maintenance,
+  .components-container .component-inner-container.status-blue .component-status,
+  .components-container .component-inner-container.status-blue .icon-indicator {
+    color:#3498DB;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-maintenance .updates,
+  .layout-content.status.status-index .scheduled-incidents-container {
+    border-color:#3498DB;
+  }
+
+
+
+
+  /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */
+  .layout-content.status.status-index .page-status.status-none {
+    background-color:#2fcc66;
+  }
+  .layout-content.status-index .components-statuses .component-container.status-green:after,
+  .status-green .icon-indicator,
+  .components-container .component-inner-container.status-green .component-status,
+  .components-container .component-inner-container.status-green .icon-indicator {
+    color:#2fcc66;
+  }
+
+
+
+
+  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */
+  a,
+  a:hover,
+  .layout-content.status-index .page-footer span a:hover,
+  .layout-content.status-index .timeframes-container .timeframe:not(.active):hover,
+  .layout-content.status-incident .subheader a:hover {
+    color:#3498db;
+  }
+
+  .flat-button,
+  .masthead .updates-dropdown-container .show-updates-dropdown,
+  .layout-content.status-full-history .show-filter.open  {
+    background-color:#3498db;
+  }
+
+
+
+
+  /* CUSTOM COLOR OVERRIDES FOR UPTIME SHOWCASE */
+  .components-section .components-uptime-link {
+    color: #aaaaaa;
+  }
+
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .legend-item {
+    color: #aaaaaa;
+    opacity: 1;
+  }
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .legend-item.light {
+    color: #aaaaaa;
+    opacity: 1;
+  }
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .spacer {
+    background: #aaaaaa;
+    opacity: 1;
+  }
+</style>
+
+
+<div class="layout-content status status-incident">
+  
+
+  <div class="container default-spacing">
+    <div class="page-title">
+      <h1 class="color-primary incident-name whitespace-pre-wrap impact-maintenance">Database Maintenance in our EU region</h1>
+      <div class="font-largest color-secondary subheader ">
+            Scheduled Maintenance
+
+          Report for <a class="color-secondary" href="/status">Teamwork.com</a>
+      </div>
+    </div>
+
+    <div class="incident-updates-container">
+      <!-- postmortem if it's published -->
+
+      <!-- incident updates in reverse order -->
+        <div class="row update-row">
+          <h2 class="update-title span3 font-large">
+            Completed
+          </h2>
+          <div class="update-container span9">
+            <div class="update-body font-regular">
+              <span class="whitespace-pre-wrap">The scheduled maintenance has been completed.</span>
+            </div>
+            <div class="update-timestamp font-small color-secondary">
+              Posted <span class="ago" data-datetime-unix="1791269711000"><var data-var="num">8</var> days ago. </span>Oct <var data-var="date">06</var>, <var data-var="year">2026</var> - <var data-var="time">06:55</var> UTC
+            </div>
+          </div>
+        </div>
+        <div class="row update-row">
+          <h2 class="update-title span3 font-large">
+            In progress
+          </h2>
+          <div class="update-container span9">
+            <div class="update-body font-regular">
+              <span class="whitespace-pre-wrap">Scheduled maintenance is currently in progress. We will provide updates as necessary.</span>
+            </div>
+            <div class="update-timestamp font-small color-secondary">
+              Posted <span class="ago" data-datetime-unix="1791269107000"><var data-var="num">8</var> days ago. </span>Oct <var data-var="date">06</var>, <var data-var="year">2026</var> - <var data-var="time">06:45</var> UTC
+            </div>
+          </div>
+        </div>
+        <div class="row update-row">
+          <h2 class="update-title span3 font-large">
+            Scheduled
+          </h2>
+          <div class="update-container span9">
+            <div class="update-body font-regular">
+              <span class="whitespace-pre-wrap">We will be undergoing scheduled maintenance. During this period Crm service will be affected and some performance degradation maybe expected.</span>
+            </div>
+            <div class="update-timestamp font-small color-secondary">
+              Posted <span class="ago" data-datetime-unix="1791203154000"><var data-var="num">8</var> days ago. </span>Oct <var data-var="date">05</var>, <var data-var="year">2026</var> - <var data-var="time">12:25</var> UTC
+            </div>
+          </div>
+        </div>
+
+      <!-- affected components -->
+        <div class="components-affected font-small color-secondary border-color">
+          This scheduled maintenance affected: Teamwork CRM (Teamwork CRM - EU Region).
+        </div>
+    </div>
+
+    <div class="page-footer border-color font-small">
+      <a href="/status"><span style="font-family:arial">←</span> Current Status</a>
+      <span class="color-secondary powered-by" style="display: inline !important; visibility:visible !important; opacity: 1 !important; position:static !important; text-indent:0px !important; transform:scale(1) !important"><a class="color-secondary" rel="noopener noreferrer nofollow" href="/external/fc1b802ab29ff8401be9">Powered by Atlassian Statuspage</a></span>
+    </div>
+  </div>
+
+  
+</div>
+
+
+
+  <div class="modal hide fade modal-open-incident-subscribe" id="subscribe-modal-xk6nr1q8vq93" style="display: none" data-js-hook="incident-subscription-modal" role="dialog" aria-labelledby="incident-subscription-dialog-header" aria-describedby="incident-subscription-dialog-description" aria-modal="true">
+    <form class="modal-content" id="subscribe-form-xk6nr1q8vq93" action="/api/forms" accept-charset="UTF-8" data-remote="true" method="post"><input type="hidden" name="incident_code" id="incident_code" value="xk6nr1q8vq93" autocomplete="off">
+      <div class="modal-header">
+        <a href="#" data-dismiss="modal" class="close" data-js-hook="incident-modal-close" aria-label="close" role="button">×</a>
+<h1 id="incident-subscription-dialog-header"> Subscribe to Incident </h1>
+      </div>
+      <div class="modal-body">
+        <p style="margin-bottom:25px" id="incident-subscription-dialog-description">
+          Subscribe to updates for <strong>Database Maintenance in our EU region</strong> via email and/or text message. You'll receive email notifications when incidents are updated, and text message notifications whenever Teamwork.com <strong>creates</strong> or <strong>resolves</strong> an incident.
+        </p>
+          <div class="control-group">
+            <label for="email-xk6nr1q8vq93">VIA EMAIL:</label>
+              <div class="controls">
+                  <input type="text" name="email" id="email-xk6nr1q8vq93" data-js-hook="email" class="full-width">
+              </div>
+          </div>
+
+          <div class="control-group">
+            <label class="phone-country-code" for="phone-country-xk6nr1q8vq93">VIA SMS:</label>
+            <div class="controls phone-number">
+              <div class="row">
+                <div id="phone-number-code-xk6nr1q8vq93" class="phone-country-wrapper" data-otp-enabled="false">
+                  <select name="phone_country" id="phone-country-xk6nr1q8vq93" data-js-hook="phone-country" class="span6 phone-country-dropdown"><option value="af" data-otp-enabled="false">Afghanistan (+93)</option>
+<option value="al" data-otp-enabled="false">Albania (+355)</option>
+<option value="dz" data-otp-enabled="false">Algeria (+213)</option>
+<option value="as" data-otp-enabled="false">American Samoa (+1)</option>
+<option value="ad" data-otp-enabled="false">Andorra (+376)</option>
+<option value="ao" data-otp-enabled="false">Angola (+244)</option>
+<option value="ai" data-otp-enabled="false">Anguilla (+1)</option>
+<option value="ag" data-otp-enabled="false">Antigua and Barbuda (+1)</option>
+<option value="ar" data-otp-enabled="false">Argentina (+54)</option>
+<option value="am" data-otp-enabled="false">Armenia (+374)</option>
+<option value="aw" data-otp-enabled="false">Aruba (+297)</option>
+<option value="au" data-otp-enabled="false">Australia/Cocos/Christmas Island (+61)</option>
+<option value="at" data-otp-enabled="false">Austria (+43)</option>
+<option value="az" data-otp-enabled="false">Azerbaijan (+994)</option>
+<option value="bs" data-otp-enabled="false">Bahamas (+1)</option>
+<option value="bh" data-otp-enabled="false">Bahrain (+973)</option>
+<option value="bd" data-otp-enabled="false">Bangladesh (+880)</option>
+<option value="bb" data-otp-enabled="false">Barbados (+1)</option>
+<option value="by" data-otp-enabled="false">Belarus (+375)</option>
+<option value="be" data-otp-enabled="false">Belgium (+32)</option>
+<option value="bz" data-otp-enabled="false">Belize (+501)</option>
+<option value="bj" data-otp-enabled="false">Benin (+229)</option>
+<option value="bm" data-otp-enabled="false">Bermuda (+1)</option>
+<option value="bo" data-otp-enabled="false">Bolivia (+591)</option>
+<option value="ba" data-otp-enabled="false">Bosnia and Herzegovina (+387)</option>
+<option value="bw" data-otp-enabled="false">Botswana (+267)</option>
+<option value="br" data-otp-enabled="false">Brazil (+55)</option>
+<option value="bn" data-otp-enabled="false">Brunei (+673)</option>
+<option value="bg" data-otp-enabled="false">Bulgaria (+359)</option>
+<option value="bf" data-otp-enabled="false">Burkina Faso (+226)</option>
+<option value="bi" data-otp-enabled="false">Burundi (+257)</option>
+<option value="kh" data-otp-enabled="false">Cambodia (+855)</option>
+<option value="cm" data-otp-enabled="false">Cameroon (+237)</option>
+<option value="ca" data-otp-enabled="false">Canada (+1)</option>
+<option value="cv" data-otp-enabled="false">Cape Verde (+238)</option>
+<option value="ky" data-otp-enabled="false">Cayman Islands (+1)</option>
+<option value="cf" data-otp-enabled="false">Central Africa (+236)</option>
+<option value="td" data-otp-enabled="false">Chad (+235)</option>
+<option value="cl" data-otp-enabled="false">Chile (+56)</option>
+<option value="cn" data-otp-enabled="false">China (+86)</option>
+<option value="co" data-otp-enabled="false">Colombia (+57)</option>
+<option value="km" data-otp-enabled="false">Comoros (+269)</option>
+<option value="cg" data-otp-enabled="false">Congo (+242)</option>
+<option value="cd" data-otp-enabled="false">Congo, Dem Rep (+243)</option>
+<option value="cr" data-otp-enabled="false">Costa Rica (+506)</option>
+<option value="hr" data-otp-enabled="false">Croatia (+385)</option>
+<option value="cy" data-otp-enabled="false">Cyprus (+357)</option>
+<option value="cz" data-otp-enabled="false">Czech Republic (+420)</option>
+<option value="dk" data-otp-enabled="false">Denmark (+45)</option>
+<option value="dj" data-otp-enabled="false">Djibouti (+253)</option>
+<option value="dm" data-otp-enabled="false">Dominica (+1)</option>
+<option value="do" data-otp-enabled="false">Dominican Republic (+1)</option>
+<option value="eg" data-otp-enabled="false">Egypt (+20)</option>
+<option value="sv" data-otp-enabled="false">El Salvador (+503)</option>
+<option value="gq" data-otp-enabled="false">Equatorial Guinea (+240)</option>
+<option value="ee" data-otp-enabled="false">Estonia (+372)</option>
+<option value="et" data-otp-enabled="false">Ethiopia (+251)</option>
+<option value="fo" data-otp-enabled="false">Faroe Islands (+298)</option>
+<option value="fj" data-otp-enabled="false">Fiji (+679)</option>
+<option value="fi" data-otp-enabled="false">Finland/Aland Islands (+358)</option>
+<option value="fr" data-otp-enabled="false">France (+33)</option>
+<option value="gf" data-otp-enabled="false">French Guiana (+594)</option>
+<option value="pf" data-otp-enabled="false">French Polynesia (+689)</option>
+<option value="ga" data-otp-enabled="false">Gabon (+241)</option>
+<option value="gm" data-otp-enabled="false">Gambia (+220)</option>
+<option value="ge" data-otp-enabled="false">Georgia (+995)</option>
+<option value="de" data-otp-enabled="false">Germany (+49)</option>
+<option value="gh" data-otp-enabled="false">Ghana (+233)</option>
+<option value="gi" data-otp-enabled="false">Gibraltar (+350)</option>
+<option value="gr" data-otp-enabled="false">Greece (+30)</option>
+<option value="gl" data-otp-enabled="false">Greenland (+299)</option>
+<option value="gd" data-otp-enabled="false">Grenada (+1)</option>
+<option value="gp" data-otp-enabled="false">Guadeloupe (+590)</option>
+<option value="gu" data-otp-enabled="false">Guam (+1)</option>
+<option value="gt" data-otp-enabled="false">Guatemala (+502)</option>
+<option value="gn" data-otp-enabled="false">Guinea (+224)</option>
+<option value="gy" data-otp-enabled="false">Guyana (+592)</option>
+<option value="ht" data-otp-enabled="false">Haiti (+509)</option>
+<option value="hn" data-otp-enabled="false">Honduras (+504)</option>
+<option value="hk" data-otp-enabled="false">Hong Kong (+852)</option>
+<option value="hu" data-otp-enabled="false">Hungary (+36)</option>
+<option value="is" data-otp-enabled="false">Iceland (+354)</option>
+<option value="in" data-otp-enabled="false">India (+91)</option>
+<option value="id" data-otp-enabled="false">Indonesia (+62)</option>
+<option value="iq" data-otp-enabled="false">Iraq (+964)</option>
+<option value="ie" data-otp-enabled="false" selected>Ireland (+353)</option>
+<option value="il" data-otp-enabled="false">Israel (+972)</option>
+<option value="it" data-otp-enabled="false">Italy (+39)</option>
+<option value="jm" data-otp-enabled="false">Jamaica (+1)</option>
+<option value="jp" data-otp-enabled="false">Japan (+81)</option>
+<option value="jo" data-otp-enabled="false">Jordan (+962)</option>
+<option value="ke" data-otp-enabled="false">Kenya (+254)</option>
+<option value="kr" data-otp-enabled="false">Korea, Republic of (+82)</option>
+<option value="xk" data-otp-enabled="false">Kosovo (+383)</option>
+<option value="kw" data-otp-enabled="false">Kuwait (+965)</option>
+<option value="kg" data-otp-enabled="false">Kyrgyzstan (+996)</option>
+<option value="la" data-otp-enabled="false">Laos (+856)</option>
+<option value="lv" data-otp-enabled="false">Latvia (+371)</option>
+<option value="lb" data-otp-enabled="false">Lebanon (+961)</option>
+<option value="ls" data-otp-enabled="false">Lesotho (+266)</option>
+<option value="lr" data-otp-enabled="false">Liberia (+231)</option>
+<option value="ly" data-otp-enabled="false">Libya (+218)</option>
+<option value="li" data-otp-enabled="false">Liechtenstein (+423)</option>
+<option value="lt" data-otp-enabled="false">Lithuania (+370)</option>
+<option value="lu" data-otp-enabled="false">Luxembourg (+352)</option>
+<option value="mo" data-otp-enabled="false">Macao (+853)</option>
+<option value="mk" data-otp-enabled="false">Macedonia (+389)</option>
+<option value="mg" data-otp-enabled="false">Madagascar (+261)</option>
+<option value="mw" data-otp-enabled="false">Malawi (+265)</option>
+<option value="my" data-otp-enabled="false">Malaysia (+60)</option>
+<option value="mv" data-otp-enabled="false">Maldives (+960)</option>
+<option value="ml" data-otp-enabled="false">Mali (+223)</option>
+<option value="mt" data-otp-enabled="false">Malta (+356)</option>
+<option value="mq" data-otp-enabled="false">Martinique (+596)</option>
+<option value="mr" data-otp-enabled="false">Mauritania (+222)</option>
+<option value="mu" data-otp-enabled="false">Mauritius (+230)</option>
+<option value="mx" data-otp-enabled="false">Mexico (+52)</option>
+<option value="mc" data-otp-enabled="false">Monaco (+377)</option>
+<option value="mn" data-otp-enabled="false">Mongolia (+976)</option>
+<option value="me" data-otp-enabled="false">Montenegro (+382)</option>
+<option value="ms" data-otp-enabled="false">Montserrat (+1)</option>
+<option value="ma" data-otp-enabled="false">Morocco/Western Sahara (+212)</option>
+<option value="mz" data-otp-enabled="false">Mozambique (+258)</option>
+<option value="na" data-otp-enabled="false">Namibia (+264)</option>
+<option value="np" data-otp-enabled="false">Nepal (+977)</option>
+<option value="nl" data-otp-enabled="false">Netherlands (+31)</option>
+<option value="nz" data-otp-enabled="false">New Zealand (+64)</option>
+<option value="ni" data-otp-enabled="false">Nicaragua (+505)</option>
+<option value="ne" data-otp-enabled="false">Niger (+227)</option>
+<option value="ng" data-otp-enabled="false">Nigeria (+234)</option>
+<option value="no" data-otp-enabled="false">Norway (+47)</option>
+<option value="om" data-otp-enabled="false">Oman (+968)</option>
+<option value="pk" data-otp-enabled="false">Pakistan (+92)</option>
+<option value="ps" data-otp-enabled="false">Palestinian Territory (+970)</option>
+<option value="pa" data-otp-enabled="false">Panama (+507)</option>
+<option value="py" data-otp-enabled="false">Paraguay (+595)</option>
+<option value="pe" data-otp-enabled="false">Peru (+51)</option>
+<option value="ph" data-otp-enabled="false">Philippines (+63)</option>
+<option value="pl" data-otp-enabled="false">Poland (+48)</option>
+<option value="pt" data-otp-enabled="false">Portugal (+351)</option>
+<option value="pr" data-otp-enabled="false">Puerto Rico (+1)</option>
+<option value="qa" data-otp-enabled="false">Qatar (+974)</option>
+<option value="re" data-otp-enabled="false">Reunion/Mayotte (+262)</option>
+<option value="ro" data-otp-enabled="false">Romania (+40)</option>
+<option value="ru" data-otp-enabled="false">Russia/Kazakhstan (+7)</option>
+<option value="rw" data-otp-enabled="false">Rwanda (+250)</option>
+<option value="ws" data-otp-enabled="false">Samoa (+685)</option>
+<option value="sm" data-otp-enabled="false">San Marino (+378)</option>
+<option value="sa" data-otp-enabled="false">Saudi Arabia (+966)</option>
+<option value="sn" data-otp-enabled="false">Senegal (+221)</option>
+<option value="rs" data-otp-enabled="false">Serbia (+381)</option>
+<option value="sc" data-otp-enabled="false">Seychelles (+248)</option>
+<option value="sl" data-otp-enabled="false">Sierra Leone (+232)</option>
+<option value="sg" data-otp-enabled="false">Singapore (+65)</option>
+<option value="sk" data-otp-enabled="false">Slovakia (+421)</option>
+<option value="si" data-otp-enabled="false">Slovenia (+386)</option>
+<option value="za" data-otp-enabled="false">South Africa (+27)</option>
+<option value="es" data-otp-enabled="false">Spain (+34)</option>
+<option value="lk" data-otp-enabled="false">Sri Lanka (+94)</option>
+<option value="kn" data-otp-enabled="false">St Kitts and Nevis (+1)</option>
+<option value="lc" data-otp-enabled="false">St Lucia (+1)</option>
+<option value="vc" data-otp-enabled="false">St Vincent Grenadines (+1)</option>
+<option value="sd" data-otp-enabled="false">Sudan (+249)</option>
+<option value="sr" data-otp-enabled="false">Suriname (+597)</option>
+<option value="sz" data-otp-enabled="false">Swaziland (+268)</option>
+<option value="se" data-otp-enabled="false">Sweden (+46)</option>
+<option value="ch" data-otp-enabled="false">Switzerland (+41)</option>
+<option value="tw" data-otp-enabled="false">Taiwan (+886)</option>
+<option value="tj" data-otp-enabled="false">Tajikistan (+992)</option>
+<option value="tz" data-otp-enabled="false">Tanzania (+255)</option>
+<option value="th" data-otp-enabled="false">Thailand (+66)</option>
+<option value="tg" data-otp-enabled="false">Togo (+228)</option>
+<option value="to" data-otp-enabled="false">Tonga (+676)</option>
+<option value="tt" data-otp-enabled="false">Trinidad and Tobago (+1)</option>
+<option value="tn" data-otp-enabled="false">Tunisia (+216)</option>
+<option value="tr" data-otp-enabled="false">Turkey (+90)</option>
+<option value="tc" data-otp-enabled="false">Turks and Caicos Islands (+1)</option>
+<option value="ug" data-otp-enabled="false">Uganda (+256)</option>
+<option value="ua" data-otp-enabled="false">Ukraine (+380)</option>
+<option value="ae" data-otp-enabled="false">United Arab Emirates (+971)</option>
+<option value="gb" data-otp-enabled="false">United Kingdom (+44)</option>
+<option value="us" data-otp-enabled="false">United States (+1)</option>
+<option value="uy" data-otp-enabled="false">Uruguay (+598)</option>
+<option value="uz" data-otp-enabled="false">Uzbekistan (+998)</option>
+<option value="ve" data-otp-enabled="false">Venezuela (+58)</option>
+<option value="vn" data-otp-enabled="false">Vietnam (+84)</option>
+<option value="vg" data-otp-enabled="false">Virgin Islands, British (+1)</option>
+<option value="vi" data-otp-enabled="false">Virgin Islands, U.S. (+1)</option>
+<option value="ye" data-otp-enabled="false">Yemen (+967)</option>
+<option value="zm" data-otp-enabled="false">Zambia (+260)</option>
+<option value="zw" data-otp-enabled="false">Zimbabwe (+263)</option></select>
+                </div>
+              </div>
+            </div>
+            <label class="sub-label" for="phone-number-xk6nr1q8vq93">Enter mobile number</label>
+            <div class="controls phone-number" data-js-hook="modal-open-incident-subscribe-phone-number">
+              <div class="flex-container">
+                <input type="text" name="phone_number" id="phone-number-xk6nr1q8vq93" data-js-hook="phone-number">
+                <input type="hidden" name="incident-code-xk6nr1q8vq93" id="incident-code-xk6nr1q8vq93" value="xk6nr1q8vq93" autocomplete="off">
+                <a class="btn-change-number-incident" id="btn-change-number-incident-xk6nr1q8vq93" style="display: none;" data-incident-code="xk6nr1q8vq93" href="#">
+                  Edit number
+</a>                <a class="btn-subcriber-send-otp" id="btn-subcriber-send-otp-xk6nr1q8vq93" style="display: none;" data-incident-code="xk6nr1q8vq93" href="#">
+                  Send OTP
+</a>              </div>
+            </div>
+            <div class="sms-atl-error" id="sms-atl-error-xk6nr1q8vq93"></div>
+            <div class="opt-container-section" id="otp-container-incident-xk6nr1q8vq93" style="display:none">
+              <label class="sub-label" for="otp">Enter the OTP sent</label>
+              <div class="flex-container">
+                <input name="otp" id="otp-field-xk6nr1q8vq93" type="text" class="prepend" disabled>
+                <a class="resend-otp" id="resend-otp-xk6nr1q8vq93" style="display: none;" data-incident-code="xk6nr1q8vq93" href="#">
+                  Resend OTP
+</a>                <span class="timer-incident" id="timer-incident-xk6nr1q8vq93" style="display:none"> in <span id="countdown-incident-xk6nr1q8vq93">30</span> seconds</span>
+              </div>
+              <div class="info-row flex-container">
+                <div class="info-icon"><svg width="2vh" height="2vh" viewbox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="status-embed-svg-info-icon">
+    <defs>
+        <path d="M2,12 C2,6.47666667 6.47666667,2 12,2 C17.5233333,2 22,6.47666667 22,12 C22,17.5233333 17.5233333,22 12,22 C6.47666667,22 2,17.5233333 2,12 Z M4,12 C4,16.4187638 7.58123617,20 12,20 C16.4187638,20 20,16.4187638 20,12 C20,7.58123617 16.4187638,4 12,4 C7.58123617,4 4,7.58123617 4,12 Z M11,11.0029293 C11,10.4490268 11.4438648,10 12,10 C12.5522847,10 13,10.4378814 13,11.0029293 L13,15.9970707 C13,16.5509732 12.5561352,17 12,17 C11.4477153,17 11,16.5621186 11,15.9970707 L11,11.0029293 Z M12,9 C11.4477153,9 11,8.55228475 11,8 C11,7.44771525 11.4477153,7 12,7 C12.5522847,7 13,7.44771525 13,8 C13,8.55228475 12.5522847,9 12,9 Z" id="path-info"></path>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-702.000000, -945.000000)">
+            <g id="global/info" transform="translate(700.500000, 943.500000)">
+                <mask id="mask-info" fill="white">
+                    <use xlink:href="#path-info"></use>
+                </mask>
+                <use id="Combined-Shape" fill="#42526E" fill-rule="nonzero" xlink:href="#path-info"></use>
+                <g id="Neutral-/-N000" mask="url(#mask-info)" fill-rule="evenodd">
+                    <polygon points="0 24 24 24 24 0 0 0"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+</div>
+                <div>To receive SMS updates, please verify your number. To proceed with just email click ‘Subscribe’ </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="modal-footer incident-subscribe">
+        <!-- tests fail if static width isn't present  ¯\_(ツ)_/¯ -->
+          <button name="button" type="submit" class="flat-button cpt-button incident-subscribe-btn-captcha" id="subscribe-btn-xk6nr1q8vq93">Subscribe to Incident</button>
+          <input type="hidden" name="captcha_error" id="captcha_error" value="false" autocomplete="off">
+          <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response" value="false" autocomplete="off">
+            <div class="terms_and_privacy_information left small">Message and data rates may apply. By subscribing you agree to our <a rel="noopener" class="accessible-link" href="/boundary/527d22783c1944b4f78d">Privacy Policy</a>, the Atlassian <a rel="noopener" class="accessible-link" href="/external/32612158d65e1efab8f5">Terms of Service</a>, and the Atlassian <a rel="noopener" class="accessible-link" href="/external/817c83b27420a11eb700">Privacy Policy</a>. This site is protected by reCAPTCHA and the Google <a rel="noopener" class="accessible-link" href="/external/47330706f5e77b8da361">Privacy Policy</a> and <a rel="noopener" class="accessible-link" data-js-hook="captcha-terms-of-service-link" href="/external/dc53493de88c4829c406">Terms of Service</a> apply.</div>
+      </div>
+</form>  </div>
+
+<div id="cpt-notification-container" role="status" aria-live="polite" aria-atomic="true"></div>
+    
+
+
+
+
+    <!-- all of the content_for stuff -->
+      <!-- FOR FLASH NOTICES -->
+
+<!-- FOR ERROR -->
+
+
+    <svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><div id="subscribe-incident-recaptcha" class="g-recaptcha" data-sitekey="6LcZ-b0UAAAAAENi956aWzynTT2ZJ80dGU3F80Op" data-callback="submitIncidentSubscriberSuccess" data-error-callback="submitIncidentSubscriberError" data-size="invisible"><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; position: fixed; visibility: hidden; display: block; transition: right 0.3s; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div><input type="hidden" id="submit_incident_code"><div style="visibility: hidden; position: absolute; width: 100%; top: -10000px; left: 0px; right: 0px; transition: visibility linear 0.3s, opacity 0.3s linear; opacity: 0;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.5;"></div><div style="margin: 0px auto; top: 0px; left: 0px; right: 0px; position: fixed; border: 1px solid rgb(204, 204, 204); z-index: 2000000000; background-color: rgb(255, 255, 255);"><iframe title="recaptcha" name="c-t30a4iudeg1n" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="/external/38f7361693e01d30befe" style="width: 100%; height: 100%;"></iframe></div></div></body></html>

@@ -1,0 +1,2164 @@
+<!doctype html><html lang="en"><head>
+    <!-- force IE browsers in compatibility mode to use their most aggressive rendering engine -->
+
+    <meta charset="utf-8">
+    <title>Teamwork.com Status</title>
+    <meta name="description" content="Welcome to Teamwork.com's home for real-time and historical data on system performance.">
+
+    <!-- Mobile viewport optimization -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <!-- Time this page was rendered - http://purl.org/dc/terms/issued -->
+    <meta name="issued" content="1791894492">
+
+    <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+    <!-- Atlassian Sans & Mono Fonts -->
+<style>
+  /* Dynamic Font Stack based on Feature Flag */
+    /* Using Atlassian Sans & Mono */
+    :root {
+      --font-stack-a: "Atlassian Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+      --font-stack-b: "Atlassian Mono", "SFMono-Medium", "SF Mono", "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Consolas, Courier, monospace;
+    }
+</style>
+
+
+      <link rel="shortcut icon" href="/static/assets/64be64b83b209b72497029c0.png">
+
+    <!-- Canonical Link to ensure that only the custom domain is indexed when present -->
+      <meta name="_globalsign-domain-verification" content="y_VzfckMy4iePo5oDJNivyYIjh8LffYa4jzUndm_bZ">
+
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/static/assets/b9033b4c34110c7fe5c42089.css" media="screen">
+    <link rel="stylesheet" href="/static/assets/d6750d5346b682d67fb6cac9.css" media="all">
+
+    <style>
+  /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */
+  body,
+  .layout-content.status.status-api .section .example-container .example-opener .color-secondary,
+  .grouped-items-selector,
+  .layout-content.status.status-full-history .history-nav a.current,
+  div[id^="subscribe-modal"] .modal-footer,
+  div[id^="subscribe-modal"],
+  div[id^="updates-dropdown"] .updates-dropdown-section,
+  #uptime-tooltip .tooltip-box {
+    background-color:#ffffff;
+  }
+
+  #uptime-tooltip .pointer-container .pointer-smaller {
+    border-bottom-color:#ffffff;
+  }
+
+
+
+
+  /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */
+  body.status,
+  .color-primary,
+  .color-primary:hover,
+  .layout-content.status-index .status-day .update-title.impact-none a,
+  .layout-content.status-index .status-day .update-title.impact-none a:hover,
+  .layout-content.status-index .timeframes-container .timeframe.active,
+  .layout-content.status-full-history .month .incident-container .impact-none,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-none a,
+  .incident-history .impact-none,
+  .layout-content.status .grouped-items-selector.inline .grouped-item.active,
+  .layout-content.status.status-full-history .history-nav a.current,
+  .layout-content.status.status-full-history .history-nav a:not(.current):hover,
+  div[id^="subscribe-modal"] .modal-header .close,
+  .grouped-item-label,
+  #uptime-tooltip .tooltip-box .tooltip-content .related-events .related-event a.related-event-link {
+    color:#333333;
+  }
+
+  .layout-content.status.status-index .components-statuses .component-container .name {
+    color:#333333;
+    color:rgba(51,51,51,.8);
+  }
+
+
+
+
+  /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */
+  small,
+  .layout-content.status .table-row .date,
+  .color-secondary,
+  .layout-content.status .grouped-items-selector.inline .grouped-item,
+  .layout-content.status.status-full-history .history-footer .pagination a.disabled,
+  .layout-content.status.status-full-history .history-nav a,
+  #uptime-tooltip .tooltip-box .tooltip-content .related-events #related-event-header {
+    color:#AAAAAA;
+  }
+
+
+
+
+  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */
+  body.status .layout-content.status .border-color,
+  hr,
+  .tooltip-base,
+  .markdown-display table,
+  div[id^="subscribe-modal"],
+  #uptime-tooltip .tooltip-box {
+    border-color:#E0E0E0;
+  }
+
+  div[id^="subscribe-modal"] .modal-footer,
+  .markdown-display table td {
+    border-top-color:#E0E0E0;
+  }
+
+  .markdown-display table td + td, .markdown-display table th + th {
+    border-left-color:#E0E0E0;
+  }
+
+  div[id^="subscribe-modal"] .modal-header,
+  #uptime-tooltip .pointer-container .pointer-larger {
+    border-bottom-color:#E0E0E0;
+  }
+
+  #uptime-tooltip .tooltip-box .outage-field {
+    /*
+      Generate the background-color for the outage-field from the css_body_background_color and css_border_color.
+
+      For the default background (#ffffff) and default css_border_color (#e0e0e0), use the luminosity of the default background with a magic number to arrive at
+      the original outage-field background color (#f4f5f7). I used the formula Target Color = Color * alpha + Background * (1 - alpha) to find the magic number of ~0.08.
+
+      For darker css_body_background_color, luminosity values are lower so alpha trends toward becoming transparent (thus outage-field background becomes same as css_body_background_color).
+    */
+    background-color: rgba(224,224,224,0.31);
+
+    /*
+      outage-field border-color alpha is inverse to the luminosity of css_body_background_color.
+      That is to say, with a default white background this border is transparent, but on a black background, it's opaque css_border_color.
+    */
+    border-color: rgba(224,224,224,0.0);
+  }
+
+
+
+
+  /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */
+  .layout-content.status.status-index .status-day .update-title.impact-critical a,
+  .layout-content.status.status-index .status-day .update-title.impact-critical a:hover,
+  .layout-content.status.status-index .page-status.status-critical,
+  .layout-content.status.status-index .unresolved-incident.impact-critical .incident-title,
+  .flat-button.background-red {
+    background-color:#e74c3c;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-red:after,
+  .layout-content.status-full-history .month .incident-container .impact-critical,
+  .layout-content.status-incident .incident-name.impact-critical,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-critical a,
+  .status-red .icon-indicator,
+  .incident-history .impact-critical,
+  .components-container .component-inner-container.status-red .component-status,
+  .components-container .component-inner-container.status-red .icon-indicator {
+    color:#e74c3c;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-critical .updates {
+    border-color:#e74c3c;
+  }
+
+
+
+
+  /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */
+  .layout-content.status.status-index .status-day .update-title.impact-major a,
+  .layout-content.status.status-index .status-day .update-title.impact-major a:hover,
+  .layout-content.status.status-index .page-status.status-major,
+  .layout-content.status.status-index .unresolved-incident.impact-major .incident-title {
+    background-color:#e67e22;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-orange:after,
+  .layout-content.status-full-history .month .incident-container .impact-major,
+  .layout-content.status-incident .incident-name.impact-major,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-major a,
+  .status-orange .icon-indicator,
+  .incident-history .impact-major,
+  .components-container .component-inner-container.status-orange .component-status,
+  .components-container .component-inner-container.status-orange .icon-indicator {
+    color:#e67e22;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-major .updates {
+    border-color:#e67e22;
+  }
+
+
+
+
+  /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */
+  .layout-content.status.status-index .status-day .update-title.impact-minor a,
+  .layout-content.status.status-index .status-day .update-title.impact-minor a:hover,
+  .layout-content.status.status-index .page-status.status-minor,
+  .layout-content.status.status-index .unresolved-incident.impact-minor .incident-title,
+  .layout-content.status.status-index .scheduled-incidents-container .tab {
+    background-color:#f1c40f;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-yellow:after,
+  .layout-content.status-full-history .month .incident-container .impact-minor,
+  .layout-content.status-incident .incident-name.impact-minor,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-minor a,
+  .status-yellow .icon-indicator,
+  .incident-history .impact-minor,
+  .components-container .component-inner-container.status-yellow .component-status,
+  .components-container .component-inner-container.status-yellow .icon-indicator,
+  .layout-content.status.manage-subscriptions .confirmation-infobox .fa {
+    color:#f1c40f;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-minor .updates,
+  .layout-content.status.status-index .scheduled-incidents-container {
+    border-color:#f1c40f;
+  }
+
+
+
+
+  /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */
+  .layout-content.status.status-index .status-day .update-title.impact-maintenance a,
+  .layout-content.status.status-index .status-day .update-title.impact-maintenance a:hover,
+  .layout-content.status.status-index .page-status.status-maintenance,
+  .layout-content.status.status-index .unresolved-incident.impact-maintenance .incident-title,
+  .layout-content.status.status-index .scheduled-incidents-container .tab {
+    background-color:#3498DB;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-blue:after,
+  .layout-content.status-full-history .month .incident-container .impact-maintenance,
+  .layout-content.status-incident .incident-name.impact-maintenance,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-maintenance a,
+  .status-blue .icon-indicator,
+  .incident-history .impact-maintenance,
+  .components-container .component-inner-container.status-blue .component-status,
+  .components-container .component-inner-container.status-blue .icon-indicator {
+    color:#3498DB;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-maintenance .updates,
+  .layout-content.status.status-index .scheduled-incidents-container {
+    border-color:#3498DB;
+  }
+
+
+
+
+  /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */
+  .layout-content.status.status-index .page-status.status-none {
+    background-color:#2fcc66;
+  }
+  .layout-content.status-index .components-statuses .component-container.status-green:after,
+  .status-green .icon-indicator,
+  .components-container .component-inner-container.status-green .component-status,
+  .components-container .component-inner-container.status-green .icon-indicator {
+    color:#2fcc66;
+  }
+
+
+
+
+  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */
+  a,
+  a:hover,
+  .layout-content.status-index .page-footer span a:hover,
+  .layout-content.status-index .timeframes-container .timeframe:not(.active):hover,
+  .layout-content.status-incident .subheader a:hover {
+    color:#3498db;
+  }
+
+  .flat-button,
+  .masthead .updates-dropdown-container .show-updates-dropdown,
+  .layout-content.status-full-history .show-filter.open  {
+    background-color:#3498db;
+  }
+
+
+
+
+  /* CUSTOM COLOR OVERRIDES FOR UPTIME SHOWCASE */
+  .components-section .components-uptime-link {
+    color: #aaaaaa;
+  }
+
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .legend-item {
+    color: #aaaaaa;
+    opacity: 1;
+  }
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .legend-item.light {
+    color: #aaaaaa;
+    opacity: 1;
+  }
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .spacer {
+    background: #aaaaaa;
+    opacity: 1;
+  }
+</style>
+
+
+    <!-- custom css -->
+
+      <!-- polyfills -->
+        <!-- Le HTML5 shim -->
+    
+
+    <!-- injection for static -->
+
+      <link rel="stylesheet" href="/static/clone.css"><script src="/static/clone.js" defer></script><script defer src="/static/status.js"></script><script src="/static/status-subscriptions.js" defer></script><script defer src="/static/status-channels.js"></script></head>
+
+
+  <body class="status index status-none sp-a11y-status-focus-visibility a11y-focus-indicators" data-breakpoint-reached="false" data-clone-auth="false" data-route="/status" data-frame="false" data-region="main">
+
+    
+
+
+
+  <div class="layout-content status status-index premium">
+      <div class="masthead-container premium">
+    <div class="masthead">
+      <div class="images-container" id="cover-image-container" data-js-hook="images-container" style="height: 315px;"></div>
+      <style>
+          #cover-image-container {
+            background-image:url("/static/assets/448eb1a1f69b0861c083e831.png");
+          }
+
+          @media only screen and (-webkit-min-device-pixel-ratio: 2),
+                 only screen and (min-resolution: 192dpi) {
+            #cover-image-container {
+              background-image:url("/static/assets/59887feed196211f8c948c1d.png") !important;
+            }
+          }
+      </style>
+
+      <div class="text-container">
+        <span class="page-name font-largest">
+            <a href="/">Teamwork.com</a>
+        </span>
+          
+  <div class="updates-dropdown-container" data-js-hook="updates-dropdown-container">
+    <a href="#" data-js-hook="show-updates-dropdown" id="show-updates-dropdown" class="show-updates-dropdown" aria-label="Subscribe to updates" aria-expanded="false" aria-haspopup="dialog" role="button">
+      <span class="subscribe-text-full">Subscribe to Updates</span><span class="subscribe-text-short">Subscribe</span>
+    </a>
+
+<!--    Accessibility guidelines for tabs: https://www.w3.org/TR/wai-aria-practices-1.1/examples/tabs/tabs-1/tabs.html -->
+    <div class="updates-dropdown" data-js-hook="updates-dropdown" id="updates-dropdown" style="display:none" role="dialog" aria-modal="false" aria-label="Subscribe to updates">
+      <div class="updates-dropdown-nav nav-items-7" role="tablist" aria-label="Subscribe to updates">
+          <a href="#updates-dropdown-email" aria-controls="updates-dropdown-email" aria-label="Subscribe via email" role="tab" id="updates-dropdown-email-btn" class="active" aria-selected="true">
+            <span class="icon-container email">
+          </span></a>
+          <a href="#updates-dropdown-sms" aria-controls="updates-dropdown-sms" aria-label="Subscribe via SMS" role="tab" id="updates-dropdown-sms-btn" tabindex="-1">
+            <span class="icon-container sms">
+          </span></a>
+          <a href="#updates-dropdown-slack" aria-controls="updates-dropdown-slack" aria-label="Subscribe via slack" role="tab" id="updates-dropdown-slack-btn" tabindex="-1">
+            <span class="icon-container slack">
+          </span></a>
+          <a href="#updates-dropdown-webhook" aria-controls="updates-dropdown-webhook" aria-label="Subscribe via webhook" role="tab" id="updates-dropdown-webhook-btn" tabindex="-1">
+            <span class="icon-container webhook">
+          </span></a>
+          <a href="#updates-dropdown-support" aria-controls="updates-dropdown-support" aria-label="Contact support" role="tab" id="updates-dropdown-support-btn" tabindex="-1">
+            <span class="icon-container support">
+          </span></a>
+          <a href="#updates-dropdown-atom" aria-controls="updates-dropdown-atom" aria-label="Subscribe via RSS" role="tab" id="updates-dropdown-atom-btn" tabindex="-1">
+            <span class="icon-container rss">
+          </span></a>
+        <button data-js-hook="updates-dropdown-close" aria-label="Close subscribe form" id="updates-dropdown-close-btn">
+          x
+        </button>
+      </div>
+      <div class="updates-dropdown-sections-container">
+          <div class="updates-dropdown-section email" id="updates-dropdown-email" style="" role="tabpanel" aria-labelledby="updates-dropdown-email-btn">
+            <div class="directions">
+              Get email notifications whenever Teamwork.com <strong>creates</strong>,  <strong>updates</strong> or <strong>resolves</strong> an incident.
+            </div>
+            <form id="subscribe-form-email" action="/api/forms" accept-charset="UTF-8" data-remote="true" method="post"><input type="hidden" name="email_otp_verify_flow" id="email_otp_verify_flow" value="false" autocomplete="off">
+                <!-- make sure not to put cookie values in here since this gets cached -->
+                <label for="email">Email address:</label>
+                <input name="email" id="email" type="text" class="full-width" data-js-hook="email-notification-field" autocomplete="email">
+                <input name="email_otp_auth_token" type="hidden" id="email-otp-token-field" value="">
+                <div class="opt-container-section" id="email-otp-container" ,="" style="display:none">
+                  <label for="email-otp">Enter OTP:</label>
+                  <input name="otp" id="email-otp" type="text" value="" class="prepend full-width">
+                  <p id="email-otp-timer">Resend OTP in: <span id="email-otp-countdown"></span> seconds </p>
+                  <p id="resend-email-otp">
+                    Didn't receive the OTP?
+                    <a href="#" id="resend-email-otp-btn">Resend OTP </a>
+                  </p>
+                </div>
+                  <input type="hidden" name="captcha_error" id="captcha_error" value="true" autocomplete="off">
+                  <div></div><input type="submit" value="Subscribe via Email" class="flat-button full-width g-recaptcha disabled" id="subscribe-btn-email" data-disabled-text="Subscribing..." data-original-text="">
+                  <div class="terms_and_privacy_information bottom small"><div class="privacy_policy_information small">By subscribing you agree to our <a rel="noopener" class="accessible-link" href="/boundary/527d22783c1944b4f78d">Privacy Policy</a>.</div> This site is protected by reCAPTCHA and the Google <a rel="noopener" class="accessible-link" href="/external/47330706f5e77b8da361">Privacy Policy</a> and <a rel="noopener" class="accessible-link" data-js-hook="captcha-terms-of-service-link" href="/external/dc53493de88c4829c406">Terms of Service</a> apply.</div>
+</form>          </div>
+
+          <div class="updates-dropdown-section phone" id="updates-dropdown-sms" style="display:none" role="tabpanel" aria-labelledby="updates-dropdown-sms-btn">
+            <div class="directions">
+                Get text message notifications whenever Teamwork.com <strong>creates</strong> or <strong>resolves</strong> an incident.
+            </div>
+            <form id="subscribe-form-sms" action="/api/forms" accept-charset="UTF-8" data-remote="true" method="post"><input type="hidden" name="otp_verify_flow" id="otp_verify_flow" value="false" autocomplete="off">
+              <input type="hidden" name="subscriber_code" id="subscriber_code" value="" autocomplete="off">
+              <div class="control-group">
+                <div class="controls externalities-sms-container">
+                  <!-- make sure not to put cookie values in here since this gets cached -->
+                  <label for="phone-country">Country code:</label>
+                  <div id="phone-number-country-code" class="phone-country-wrapper" data-otp-enabled="false">
+                      <select name="phone_country" id="phone-country" data-js-hook="phone-country" class="phone-country"><option value="af" data-otp-enabled="false">Afghanistan (+93)</option>
+<option value="al" data-otp-enabled="false">Albania (+355)</option>
+<option value="dz" data-otp-enabled="false">Algeria (+213)</option>
+<option value="as" data-otp-enabled="false">American Samoa (+1)</option>
+<option value="ad" data-otp-enabled="false">Andorra (+376)</option>
+<option value="ao" data-otp-enabled="false">Angola (+244)</option>
+<option value="ai" data-otp-enabled="false">Anguilla (+1)</option>
+<option value="ag" data-otp-enabled="false">Antigua and Barbuda (+1)</option>
+<option value="ar" data-otp-enabled="false">Argentina (+54)</option>
+<option value="am" data-otp-enabled="false">Armenia (+374)</option>
+<option value="aw" data-otp-enabled="false">Aruba (+297)</option>
+<option value="au" data-otp-enabled="false">Australia/Cocos/Christmas Island (+61)</option>
+<option value="at" data-otp-enabled="false">Austria (+43)</option>
+<option value="az" data-otp-enabled="false">Azerbaijan (+994)</option>
+<option value="bs" data-otp-enabled="false">Bahamas (+1)</option>
+<option value="bh" data-otp-enabled="false">Bahrain (+973)</option>
+<option value="bd" data-otp-enabled="false">Bangladesh (+880)</option>
+<option value="bb" data-otp-enabled="false">Barbados (+1)</option>
+<option value="by" data-otp-enabled="false">Belarus (+375)</option>
+<option value="be" data-otp-enabled="false">Belgium (+32)</option>
+<option value="bz" data-otp-enabled="false">Belize (+501)</option>
+<option value="bj" data-otp-enabled="false">Benin (+229)</option>
+<option value="bm" data-otp-enabled="false">Bermuda (+1)</option>
+<option value="bo" data-otp-enabled="false">Bolivia (+591)</option>
+<option value="ba" data-otp-enabled="false">Bosnia and Herzegovina (+387)</option>
+<option value="bw" data-otp-enabled="false">Botswana (+267)</option>
+<option value="br" data-otp-enabled="false">Brazil (+55)</option>
+<option value="bn" data-otp-enabled="false">Brunei (+673)</option>
+<option value="bg" data-otp-enabled="false">Bulgaria (+359)</option>
+<option value="bf" data-otp-enabled="false">Burkina Faso (+226)</option>
+<option value="bi" data-otp-enabled="false">Burundi (+257)</option>
+<option value="kh" data-otp-enabled="false">Cambodia (+855)</option>
+<option value="cm" data-otp-enabled="false">Cameroon (+237)</option>
+<option value="ca" data-otp-enabled="false">Canada (+1)</option>
+<option value="cv" data-otp-enabled="false">Cape Verde (+238)</option>
+<option value="ky" data-otp-enabled="false">Cayman Islands (+1)</option>
+<option value="cf" data-otp-enabled="false">Central Africa (+236)</option>
+<option value="td" data-otp-enabled="false">Chad (+235)</option>
+<option value="cl" data-otp-enabled="false">Chile (+56)</option>
+<option value="cn" data-otp-enabled="false">China (+86)</option>
+<option value="co" data-otp-enabled="false">Colombia (+57)</option>
+<option value="km" data-otp-enabled="false">Comoros (+269)</option>
+<option value="cg" data-otp-enabled="false">Congo (+242)</option>
+<option value="cd" data-otp-enabled="false">Congo, Dem Rep (+243)</option>
+<option value="cr" data-otp-enabled="false">Costa Rica (+506)</option>
+<option value="hr" data-otp-enabled="false">Croatia (+385)</option>
+<option value="cy" data-otp-enabled="false">Cyprus (+357)</option>
+<option value="cz" data-otp-enabled="false">Czech Republic (+420)</option>
+<option value="dk" data-otp-enabled="false">Denmark (+45)</option>
+<option value="dj" data-otp-enabled="false">Djibouti (+253)</option>
+<option value="dm" data-otp-enabled="false">Dominica (+1)</option>
+<option value="do" data-otp-enabled="false">Dominican Republic (+1)</option>
+<option value="eg" data-otp-enabled="false">Egypt (+20)</option>
+<option value="sv" data-otp-enabled="false">El Salvador (+503)</option>
+<option value="gq" data-otp-enabled="false">Equatorial Guinea (+240)</option>
+<option value="ee" data-otp-enabled="false">Estonia (+372)</option>
+<option value="et" data-otp-enabled="false">Ethiopia (+251)</option>
+<option value="fo" data-otp-enabled="false">Faroe Islands (+298)</option>
+<option value="fj" data-otp-enabled="false">Fiji (+679)</option>
+<option value="fi" data-otp-enabled="false">Finland/Aland Islands (+358)</option>
+<option value="fr" data-otp-enabled="false">France (+33)</option>
+<option value="gf" data-otp-enabled="false">French Guiana (+594)</option>
+<option value="pf" data-otp-enabled="false">French Polynesia (+689)</option>
+<option value="ga" data-otp-enabled="false">Gabon (+241)</option>
+<option value="gm" data-otp-enabled="false">Gambia (+220)</option>
+<option value="ge" data-otp-enabled="false">Georgia (+995)</option>
+<option value="de" data-otp-enabled="false">Germany (+49)</option>
+<option value="gh" data-otp-enabled="false">Ghana (+233)</option>
+<option value="gi" data-otp-enabled="false">Gibraltar (+350)</option>
+<option value="gr" data-otp-enabled="false">Greece (+30)</option>
+<option value="gl" data-otp-enabled="false">Greenland (+299)</option>
+<option value="gd" data-otp-enabled="false">Grenada (+1)</option>
+<option value="gp" data-otp-enabled="false">Guadeloupe (+590)</option>
+<option value="gu" data-otp-enabled="false">Guam (+1)</option>
+<option value="gt" data-otp-enabled="false">Guatemala (+502)</option>
+<option value="gn" data-otp-enabled="false">Guinea (+224)</option>
+<option value="gy" data-otp-enabled="false">Guyana (+592)</option>
+<option value="ht" data-otp-enabled="false">Haiti (+509)</option>
+<option value="hn" data-otp-enabled="false">Honduras (+504)</option>
+<option value="hk" data-otp-enabled="false">Hong Kong (+852)</option>
+<option value="hu" data-otp-enabled="false">Hungary (+36)</option>
+<option value="is" data-otp-enabled="false">Iceland (+354)</option>
+<option value="in" data-otp-enabled="false">India (+91)</option>
+<option value="id" data-otp-enabled="false">Indonesia (+62)</option>
+<option value="iq" data-otp-enabled="false">Iraq (+964)</option>
+<option value="ie" data-otp-enabled="false" selected>Ireland (+353)</option>
+<option value="il" data-otp-enabled="false">Israel (+972)</option>
+<option value="it" data-otp-enabled="false">Italy (+39)</option>
+<option value="jm" data-otp-enabled="false">Jamaica (+1)</option>
+<option value="jp" data-otp-enabled="false">Japan (+81)</option>
+<option value="jo" data-otp-enabled="false">Jordan (+962)</option>
+<option value="ke" data-otp-enabled="false">Kenya (+254)</option>
+<option value="kr" data-otp-enabled="false">Korea, Republic of (+82)</option>
+<option value="xk" data-otp-enabled="false">Kosovo (+383)</option>
+<option value="kw" data-otp-enabled="false">Kuwait (+965)</option>
+<option value="kg" data-otp-enabled="false">Kyrgyzstan (+996)</option>
+<option value="la" data-otp-enabled="false">Laos (+856)</option>
+<option value="lv" data-otp-enabled="false">Latvia (+371)</option>
+<option value="lb" data-otp-enabled="false">Lebanon (+961)</option>
+<option value="ls" data-otp-enabled="false">Lesotho (+266)</option>
+<option value="lr" data-otp-enabled="false">Liberia (+231)</option>
+<option value="ly" data-otp-enabled="false">Libya (+218)</option>
+<option value="li" data-otp-enabled="false">Liechtenstein (+423)</option>
+<option value="lt" data-otp-enabled="false">Lithuania (+370)</option>
+<option value="lu" data-otp-enabled="false">Luxembourg (+352)</option>
+<option value="mo" data-otp-enabled="false">Macao (+853)</option>
+<option value="mk" data-otp-enabled="false">Macedonia (+389)</option>
+<option value="mg" data-otp-enabled="false">Madagascar (+261)</option>
+<option value="mw" data-otp-enabled="false">Malawi (+265)</option>
+<option value="my" data-otp-enabled="false">Malaysia (+60)</option>
+<option value="mv" data-otp-enabled="false">Maldives (+960)</option>
+<option value="ml" data-otp-enabled="false">Mali (+223)</option>
+<option value="mt" data-otp-enabled="false">Malta (+356)</option>
+<option value="mq" data-otp-enabled="false">Martinique (+596)</option>
+<option value="mr" data-otp-enabled="false">Mauritania (+222)</option>
+<option value="mu" data-otp-enabled="false">Mauritius (+230)</option>
+<option value="mx" data-otp-enabled="false">Mexico (+52)</option>
+<option value="mc" data-otp-enabled="false">Monaco (+377)</option>
+<option value="mn" data-otp-enabled="false">Mongolia (+976)</option>
+<option value="me" data-otp-enabled="false">Montenegro (+382)</option>
+<option value="ms" data-otp-enabled="false">Montserrat (+1)</option>
+<option value="ma" data-otp-enabled="false">Morocco/Western Sahara (+212)</option>
+<option value="mz" data-otp-enabled="false">Mozambique (+258)</option>
+<option value="na" data-otp-enabled="false">Namibia (+264)</option>
+<option value="np" data-otp-enabled="false">Nepal (+977)</option>
+<option value="nl" data-otp-enabled="false">Netherlands (+31)</option>
+<option value="nz" data-otp-enabled="false">New Zealand (+64)</option>
+<option value="ni" data-otp-enabled="false">Nicaragua (+505)</option>
+<option value="ne" data-otp-enabled="false">Niger (+227)</option>
+<option value="ng" data-otp-enabled="false">Nigeria (+234)</option>
+<option value="no" data-otp-enabled="false">Norway (+47)</option>
+<option value="om" data-otp-enabled="false">Oman (+968)</option>
+<option value="pk" data-otp-enabled="false">Pakistan (+92)</option>
+<option value="ps" data-otp-enabled="false">Palestinian Territory (+970)</option>
+<option value="pa" data-otp-enabled="false">Panama (+507)</option>
+<option value="py" data-otp-enabled="false">Paraguay (+595)</option>
+<option value="pe" data-otp-enabled="false">Peru (+51)</option>
+<option value="ph" data-otp-enabled="false">Philippines (+63)</option>
+<option value="pl" data-otp-enabled="false">Poland (+48)</option>
+<option value="pt" data-otp-enabled="false">Portugal (+351)</option>
+<option value="pr" data-otp-enabled="false">Puerto Rico (+1)</option>
+<option value="qa" data-otp-enabled="false">Qatar (+974)</option>
+<option value="re" data-otp-enabled="false">Reunion/Mayotte (+262)</option>
+<option value="ro" data-otp-enabled="false">Romania (+40)</option>
+<option value="ru" data-otp-enabled="false">Russia/Kazakhstan (+7)</option>
+<option value="rw" data-otp-enabled="false">Rwanda (+250)</option>
+<option value="ws" data-otp-enabled="false">Samoa (+685)</option>
+<option value="sm" data-otp-enabled="false">San Marino (+378)</option>
+<option value="sa" data-otp-enabled="false">Saudi Arabia (+966)</option>
+<option value="sn" data-otp-enabled="false">Senegal (+221)</option>
+<option value="rs" data-otp-enabled="false">Serbia (+381)</option>
+<option value="sc" data-otp-enabled="false">Seychelles (+248)</option>
+<option value="sl" data-otp-enabled="false">Sierra Leone (+232)</option>
+<option value="sg" data-otp-enabled="false">Singapore (+65)</option>
+<option value="sk" data-otp-enabled="false">Slovakia (+421)</option>
+<option value="si" data-otp-enabled="false">Slovenia (+386)</option>
+<option value="za" data-otp-enabled="false">South Africa (+27)</option>
+<option value="es" data-otp-enabled="false">Spain (+34)</option>
+<option value="lk" data-otp-enabled="false">Sri Lanka (+94)</option>
+<option value="kn" data-otp-enabled="false">St Kitts and Nevis (+1)</option>
+<option value="lc" data-otp-enabled="false">St Lucia (+1)</option>
+<option value="vc" data-otp-enabled="false">St Vincent Grenadines (+1)</option>
+<option value="sd" data-otp-enabled="false">Sudan (+249)</option>
+<option value="sr" data-otp-enabled="false">Suriname (+597)</option>
+<option value="sz" data-otp-enabled="false">Swaziland (+268)</option>
+<option value="se" data-otp-enabled="false">Sweden (+46)</option>
+<option value="ch" data-otp-enabled="false">Switzerland (+41)</option>
+<option value="tw" data-otp-enabled="false">Taiwan (+886)</option>
+<option value="tj" data-otp-enabled="false">Tajikistan (+992)</option>
+<option value="tz" data-otp-enabled="false">Tanzania (+255)</option>
+<option value="th" data-otp-enabled="false">Thailand (+66)</option>
+<option value="tg" data-otp-enabled="false">Togo (+228)</option>
+<option value="to" data-otp-enabled="false">Tonga (+676)</option>
+<option value="tt" data-otp-enabled="false">Trinidad and Tobago (+1)</option>
+<option value="tn" data-otp-enabled="false">Tunisia (+216)</option>
+<option value="tr" data-otp-enabled="false">Turkey (+90)</option>
+<option value="tc" data-otp-enabled="false">Turks and Caicos Islands (+1)</option>
+<option value="ug" data-otp-enabled="false">Uganda (+256)</option>
+<option value="ua" data-otp-enabled="false">Ukraine (+380)</option>
+<option value="ae" data-otp-enabled="false">United Arab Emirates (+971)</option>
+<option value="gb" data-otp-enabled="false">United Kingdom (+44)</option>
+<option value="us" data-otp-enabled="false">United States (+1)</option>
+<option value="uy" data-otp-enabled="false">Uruguay (+598)</option>
+<option value="uz" data-otp-enabled="false">Uzbekistan (+998)</option>
+<option value="ve" data-otp-enabled="false">Venezuela (+58)</option>
+<option value="vn" data-otp-enabled="false">Vietnam (+84)</option>
+<option value="vg" data-otp-enabled="false">Virgin Islands, British (+1)</option>
+<option value="vi" data-otp-enabled="false">Virgin Islands, U.S. (+1)</option>
+<option value="ye" data-otp-enabled="false">Yemen (+967)</option>
+<option value="zm" data-otp-enabled="false">Zambia (+260)</option>
+<option value="zw" data-otp-enabled="false">Zimbabwe (+263)</option></select>
+                  </div>
+                  <label for="phone-number">Phone number:</label>
+                  <input name="phone_number" id="phone-number" type="text" class="prepend full-width" data-js-hook="sms-notification-field">
+                  <div class="sms-atl-error" id="sms-atl-error"></div>
+                  <div class="clearfix"></div>
+                  <div class="opt-container-section" id="otp-container" style="display:none">
+                    <a href="#" id="btn-subcriber-change-number">Change number</a>
+                    <label for="otp">Enter OTP:</label>
+                    <input name="otp" id="otp" type="text" class="prepend full-width">
+                    <p id="timer">Resend OTP in: <span id="countdown">30</span> seconds </p>
+                    <p id="resend">
+                      Didn't receive the OTP?
+                      <a href="#" id="resend-otp-btn">Resend OTP </a>
+                    </p>
+                    </div>
+                </div>
+              </div>
+
+                <input type="hidden" name="captcha_error" id="captcha_error" value="true" autocomplete="off">
+                <div></div><input type="submit" value="Subscribe via Text Message" class="flat-button full-width g-recaptcha disabled" id="subscribe-btn-sms" data-disabled-text="Subscribing..." data-original-text="">
+              <div class="terms_and_privacy_information bottom small">Message and data rates may apply. By subscribing you agree to our <a rel="noopener" class="accessible-link" href="/boundary/527d22783c1944b4f78d">Privacy Policy</a>, the Atlassian <a rel="noopener" class="accessible-link" href="/external/32612158d65e1efab8f5">Terms of Service</a>, and the Atlassian <a rel="noopener" class="accessible-link" href="/external/817c83b27420a11eb700">Privacy Policy</a>. This site is protected by reCAPTCHA and the Google <a rel="noopener" class="accessible-link" href="/external/47330706f5e77b8da361">Privacy Policy</a> and <a rel="noopener" class="accessible-link" data-js-hook="captcha-terms-of-service-link" href="/external/dc53493de88c4829c406">Terms of Service</a> apply.</div>
+</form>          </div>
+
+          <div class="updates-dropdown-section slack" id="updates-dropdown-slack" style="display:none" role="tabpanel" aria-labelledby="updates-dropdown-slack-btn">
+            <div class="directions">
+              Get incident updates and maintenance status messages in Slack.
+            </div>
+            <a value="Subscribe via Slack" class="flat-button full-width" id="subscribe-btn-slack" data-disabled-text="Subscribing..." data-revert-on-success="true" style="margin-top:.75rem" href="/external/95f200fab407b089e5e4">Subscribe via Slack</a>
+            <div class="terms_and_privacy_information bottom small">By subscribing you acknowledge our <a rel="noopener" class="accessible-link" href="/boundary/527d22783c1944b4f78d">Privacy Policy</a>. In addition, you agree to the Atlassian <a rel="noopener" class="accessible-link" href="/external/602329198e4935aa42c9">Cloud Terms of Service</a> and acknowledge Atlassian's <a rel="noopener" class="accessible-link" href="/external/817c83b27420a11eb700">Privacy Policy</a>.</div>
+          </div>
+
+
+          <div class="updates-dropdown-section webhook" id="updates-dropdown-webhook" style="display:none" role="tabpanel" aria-labelledby="updates-dropdown-webhook-btn">
+            <div class="directions">
+              Get webhook notifications whenever Teamwork.com <strong>creates</strong> an incident, <strong>updates</strong> an incident, <strong>resolves</strong> an incident or <strong>changes</strong> a component status.
+            </div>
+            <form id="subscribe-form-webhook" action="/api/forms" accept-charset="UTF-8" data-remote="true" method="post"><div class="control-group">
+                <div class="controls">
+                  <label for="endpoint-webhooks">Webhook URL:</label>
+                  <input type="text" name="endpoint" id="endpoint-webhooks" data-js-hook="endpoint" class="full-width" aria-describedby="url-help-block">
+                  <p class="help-block" id="url-help-block">The URL we should send the webhooks to</p>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <div class="controls">
+                  <label for="email-webhooks">Email address:</label>
+                  <input type="text" name="email" id="email-webhooks" data-js-hook="email" class="full-width" aria-describedby="email-help-block">
+                  <p class="help-block" id="email-help-block">We'll send you email if your endpoint fails</p>
+                </div>
+              </div>
+
+                <input type="hidden" name="captcha_error" id="captcha_error" value="true" autocomplete="off">
+                <div></div><input type="submit" value="Subscribe" to="" notifications="" class="flat-button full-width g-recaptcha" id="subscribe-btn-webhook" data-disabled-text="Subscribing..." data-original-text="">
+                <div class="terms_and_privacy_information bottom small"><div class="privacy_policy_information small">By subscribing you agree to our <a rel="noopener" class="accessible-link" href="/boundary/527d22783c1944b4f78d">Privacy Policy</a>.</div> This site is protected by reCAPTCHA and the Google <a rel="noopener" class="accessible-link" href="/external/47330706f5e77b8da361">Privacy Policy</a> and <a rel="noopener" class="accessible-link" data-js-hook="captcha-terms-of-service-link" href="/external/dc53493de88c4829c406">Terms of Service</a> apply.</div>
+
+</form>          </div>
+
+
+          <div class="updates-dropdown-section support" id="updates-dropdown-support" style="display:none" role="tabpanel" aria-labelledby="updates-dropdown-support-btn">
+            Visit our <a href="/boundary/0db79e5e59b9fea3eb6e">support site</a>.
+          </div>
+
+          <div class="updates-dropdown-section atom" id="updates-dropdown-atom" role="tabpanel" aria-labelledby="updates-dropdown-atom-btn" style="display: none;">
+            Get the <a href="/boundary/77d9f2a295c5477cf43c">Atom Feed</a> or <a href="/boundary/743cbcdbf691893c6437">RSS Feed</a>.
+          </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+    </div>
+
+</div>
+ <!-- this is outside of the .container so that the cover photo can go full width on mobile -->
+
+    <div class="container" role="main">
+        <div class="page-status status-none">
+          <h2 class="status font-large">
+            All Systems Operational
+          </h2>
+          <span class="last-updated-stamp  font-small"></span>
+        </div>
+
+
+
+        <div class="components-section font-regular">
+      <i class="component-status hidden major_outage"></i>
+      <div class="components-uptime-link history-footer-link">
+        Uptime over the past <var data-var="num" data-pluralize="90">90</var> days. <a href="/status/uptime">View historical uptime.</a>
+      </div>
+    <div class="components-container one-column">
+          <div class="component-container border-color is-group ">
+  
+<div data-component-id="mq77zy384hvj" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="component-group-opener">
+
+   <span class="name" role="heading" aria-level="2">
+       <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o" role="button" aria-expanded="false" aria-label="Toggle Teamwork Projects" tabindex="0"></span>
+       <span>
+         Teamwork Projects
+       </span>
+   </span>
+
+
+  <span class="component-status " role="button" tabindex="0" data-js-hook="tooltip" data-original-title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children.">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="shared-partial uptime-90-days-wrapper">
+  <svg class="availability-time-line-graphic" id="uptime-component-mq77zy384hvj" preserveaspectratio="none" height="34" viewbox="0 0 448 34">
+
+      <rect height="34" width="3" x="0" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-0" data-html="true" tabindex="0" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="5" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-1" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="10" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-2" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="15" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-3" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="20" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-4" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="25" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-5" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="30" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-6" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="35" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-7" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="40" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-8" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="45" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-9" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="50" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-10" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="55" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-11" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="60" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-12" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="65" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-13" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="70" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-14" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="75" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-15" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="80" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-16" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="85" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-17" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="90" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-18" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="95" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-19" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="100" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-20" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="105" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-21" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="110" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-22" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="115" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-23" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="120" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-24" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="125" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-25" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="130" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-26" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="135" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-27" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="140" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-28" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="145" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-29" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="150" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-30" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="155" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-31" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="160" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-32" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="165" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-33" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="170" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-34" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="175" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-35" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="180" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-36" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="185" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-37" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="190" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-38" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="195" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-39" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="200" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-40" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="205" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-41" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="210" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-42" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="215" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-43" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="220" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-44" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="225" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-45" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="230" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-46" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="235" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-47" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="240" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-48" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="245" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-49" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="250" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-50" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="255" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-51" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="260" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-52" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="265" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-53" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="270" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-54" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="275" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-55" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="280" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-56" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="285" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-57" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="290" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-58" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="295" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-59" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="300" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-60" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="305" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-61" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="310" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-62" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="315" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-63" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="320" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-64" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="325" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-65" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="330" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-66" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="335" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-67" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="340" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-68" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="345" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-69" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="350" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-70" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="355" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-71" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="360" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-72" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="365" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-73" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="370" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-74" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="375" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-75" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="380" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-76" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="385" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-77" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="390" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-78" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="395" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-79" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="400" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-80" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="405" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-81" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="410" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-82" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="415" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-83" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="420" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-84" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="425" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-85" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="430" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-86" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="435" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-87" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="440" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-88" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="445" y="0" fill="#2fcc66" role="tab" class="uptime-day component-mq77zy384hvj day-89" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+</svg>
+  <div class="legend legend-group">
+  <div class="legend-item light legend-item-date-range"><span class="availability-time-line-legend-day-count">90</span> days ago</div>
+  <div class="spacer"></div>
+  <div class="legend-item legend-item-uptime-value legend-item-mq77zy384hvj"><span id="uptime-percent-mq77zy384hvj">100</span> % uptime</div>
+  <div class="spacer"></div>
+  <div class="legend-item light legend-item-date-range">Today</div>
+</div>
+
+</div>
+</div>
+
+
+  <!-- children components -->
+  <div class="child-components-container ">
+      
+<div data-component-id="wx2m21xhwc6b" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="">
+
+   <span class="name" role="heading" aria-level="2">
+      Teamwork Projects - US region
+   </span>
+
+
+  <span class="component-status " title="">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="uptime-lazy-placeholder" data-uptime-lazy="wx2m21xhwc6b" aria-hidden="true"></div>
+</div>
+
+      
+<div data-component-id="8pbd4fzpzkpm" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="">
+
+   <span class="name" role="heading" aria-level="2">
+      Teamwork Projects - EU Region
+   </span>
+
+
+  <span class="component-status " title="">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="uptime-lazy-placeholder" data-uptime-lazy="8pbd4fzpzkpm" aria-hidden="true"></div>
+</div>
+
+  </div>
+</div>
+
+          <div class="component-container border-color is-group ">
+  
+<div data-component-id="pn15r30s4ltp" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="component-group-opener">
+
+   <span class="name" role="heading" aria-level="2">
+       <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o" role="button" aria-expanded="false" aria-label="Toggle Teamwork Desk" tabindex="0"></span>
+       <span>
+         Teamwork Desk
+       </span>
+   </span>
+
+
+  <span class="component-status " role="button" tabindex="0" data-js-hook="tooltip" data-original-title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children.">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="shared-partial uptime-90-days-wrapper">
+  <svg class="availability-time-line-graphic" id="uptime-component-pn15r30s4ltp" preserveaspectratio="none" height="34" viewbox="0 0 448 34">
+
+      <rect height="34" width="3" x="0" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-0" data-html="true" tabindex="0" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="5" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-1" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="10" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-2" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="15" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-3" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="20" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-4" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="25" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-5" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="30" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-6" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="35" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-7" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="40" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-8" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="45" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-9" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="50" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-10" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="55" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-11" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="60" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-12" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="65" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-13" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="70" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-14" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="75" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-15" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="80" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-16" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="85" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-17" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="90" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-18" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="95" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-19" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="100" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-20" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="105" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-21" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="110" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-22" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="115" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-23" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="120" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-24" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="125" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-25" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="130" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-26" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="135" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-27" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="140" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-28" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="145" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-29" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="150" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-30" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="155" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-31" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="160" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-32" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="165" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-33" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="170" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-34" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="175" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-35" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="180" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-36" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="185" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-37" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="190" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-38" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="195" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-39" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="200" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-40" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="205" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-41" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="210" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-42" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="215" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-43" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="220" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-44" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="225" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-45" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="230" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-46" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="235" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-47" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="240" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-48" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="245" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-49" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="250" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-50" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="255" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-51" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="260" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-52" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="265" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-53" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="270" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-54" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="275" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-55" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="280" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-56" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="285" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-57" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="290" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-58" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="295" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-59" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="300" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-60" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="305" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-61" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="310" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-62" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="315" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-63" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="320" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-64" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="325" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-65" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="330" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-66" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="335" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-67" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="340" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-68" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="345" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-69" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="350" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-70" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="355" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-71" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="360" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-72" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="365" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-73" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="370" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-74" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="375" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-75" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="380" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-76" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="385" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-77" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="390" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-78" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="395" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-79" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="400" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-80" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="405" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-81" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="410" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-82" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="415" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-83" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="420" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-84" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="425" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-85" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="430" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-86" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="435" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-87" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="440" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-88" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="445" y="0" fill="#2fcc66" role="tab" class="uptime-day component-pn15r30s4ltp day-89" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+</svg>
+  <div class="legend legend-group">
+  <div class="legend-item light legend-item-date-range"><span class="availability-time-line-legend-day-count">90</span> days ago</div>
+  <div class="spacer"></div>
+  <div class="legend-item legend-item-uptime-value legend-item-pn15r30s4ltp"><span id="uptime-percent-pn15r30s4ltp">100</span> % uptime</div>
+  <div class="spacer"></div>
+  <div class="legend-item light legend-item-date-range">Today</div>
+</div>
+
+</div>
+</div>
+
+
+  <!-- children components -->
+  <div class="child-components-container ">
+      
+<div data-component-id="nptl08sy059w" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="">
+
+   <span class="name" role="heading" aria-level="2">
+      Teamwork Desk - US Region
+   </span>
+
+
+  <span class="component-status " title="">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="uptime-lazy-placeholder" data-uptime-lazy="nptl08sy059w" aria-hidden="true"></div>
+</div>
+
+      
+<div data-component-id="4f3ffj6xm8qf" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="">
+
+   <span class="name" role="heading" aria-level="2">
+      Teamwork Desk - EU Region
+   </span>
+
+
+  <span class="component-status " title="">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="uptime-lazy-placeholder" data-uptime-lazy="4f3ffj6xm8qf" aria-hidden="true"></div>
+</div>
+
+  </div>
+</div>
+
+          <div class="component-container border-color is-group ">
+  
+<div data-component-id="5gyxy2mqq1f8" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="component-group-opener">
+
+   <span class="name" role="heading" aria-level="2">
+       <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o" role="button" aria-expanded="false" aria-label="Toggle Teamwork Chat" tabindex="0"></span>
+       <span>
+         Teamwork Chat
+       </span>
+   </span>
+
+
+  <span class="component-status " role="button" tabindex="0" data-js-hook="tooltip" data-original-title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children.">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="shared-partial uptime-90-days-wrapper">
+  <svg class="availability-time-line-graphic" id="uptime-component-5gyxy2mqq1f8" preserveaspectratio="none" height="34" viewbox="0 0 448 34">
+
+      <rect height="34" width="3" x="0" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-0" data-html="true" tabindex="0" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="5" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-1" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="10" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-2" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="15" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-3" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="20" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-4" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="25" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-5" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="30" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-6" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="35" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-7" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="40" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-8" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="45" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-9" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="50" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-10" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="55" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-11" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="60" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-12" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="65" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-13" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="70" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-14" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="75" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-15" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="80" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-16" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="85" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-17" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="90" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-18" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="95" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-19" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="100" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-20" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="105" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-21" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="110" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-22" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="115" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-23" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="120" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-24" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="125" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-25" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="130" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-26" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="135" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-27" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="140" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-28" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="145" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-29" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="150" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-30" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="155" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-31" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="160" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-32" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="165" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-33" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="170" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-34" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="175" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-35" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="180" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-36" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="185" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-37" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="190" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-38" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="195" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-39" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="200" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-40" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="205" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-41" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="210" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-42" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="215" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-43" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="220" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-44" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="225" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-45" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="230" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-46" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="235" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-47" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="240" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-48" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="245" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-49" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="250" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-50" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="255" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-51" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="260" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-52" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="265" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-53" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="270" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-54" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="275" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-55" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="280" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-56" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="285" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-57" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="290" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-58" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="295" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-59" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="300" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-60" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="305" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-61" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="310" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-62" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="315" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-63" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="320" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-64" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="325" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-65" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="330" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-66" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="335" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-67" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="340" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-68" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="345" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-69" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="350" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-70" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="355" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-71" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="360" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-72" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="365" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-73" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="370" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-74" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="375" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-75" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="380" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-76" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="385" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-77" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="390" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-78" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="395" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-79" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="400" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-80" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="405" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-81" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="410" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-82" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="415" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-83" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="420" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-84" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="425" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-85" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="430" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-86" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="435" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-87" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="440" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-88" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="445" y="0" fill="#2fcc66" role="tab" class="uptime-day component-5gyxy2mqq1f8 day-89" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+</svg>
+  <div class="legend legend-group">
+  <div class="legend-item light legend-item-date-range"><span class="availability-time-line-legend-day-count">90</span> days ago</div>
+  <div class="spacer"></div>
+  <div class="legend-item legend-item-uptime-value legend-item-5gyxy2mqq1f8"><span id="uptime-percent-5gyxy2mqq1f8">100</span> % uptime</div>
+  <div class="spacer"></div>
+  <div class="legend-item light legend-item-date-range">Today</div>
+</div>
+
+</div>
+</div>
+
+
+  <!-- children components -->
+  <div class="child-components-container ">
+      
+<div data-component-id="jj4yzwwmrkfh" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="">
+
+   <span class="name" role="heading" aria-level="2">
+      Teamwork Chat - US Region
+   </span>
+
+
+  <span class="component-status " title="">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="uptime-lazy-placeholder" data-uptime-lazy="jj4yzwwmrkfh" aria-hidden="true"></div>
+</div>
+
+      
+<div data-component-id="56n57kvb910j" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="">
+
+   <span class="name" role="heading" aria-level="2">
+      Teamwork Chat - EU Region
+   </span>
+
+
+  <span class="component-status " title="">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="uptime-lazy-placeholder" data-uptime-lazy="56n57kvb910j" aria-hidden="true"></div>
+</div>
+
+  </div>
+</div>
+
+          <div class="component-container border-color is-group ">
+  
+<div data-component-id="ltsxwljz1bgp" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="component-group-opener">
+
+   <span class="name" role="heading" aria-level="2">
+       <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o" role="button" aria-expanded="false" aria-label="Toggle Teamwork Spaces" tabindex="0"></span>
+       <span>
+         Teamwork Spaces
+       </span>
+   </span>
+
+
+  <span class="component-status " role="button" tabindex="0" data-js-hook="tooltip" data-original-title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children.">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="shared-partial uptime-90-days-wrapper">
+  <svg class="availability-time-line-graphic" id="uptime-component-ltsxwljz1bgp" preserveaspectratio="none" height="34" viewbox="0 0 448 34">
+
+      <rect height="34" width="3" x="0" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-0" data-html="true" tabindex="0" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="5" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-1" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="10" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-2" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="15" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-3" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="20" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-4" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="25" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-5" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="30" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-6" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="35" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-7" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="40" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-8" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="45" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-9" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="50" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-10" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="55" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-11" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="60" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-12" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="65" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-13" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="70" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-14" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="75" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-15" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="80" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-16" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="85" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-17" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="90" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-18" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="95" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-19" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="100" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-20" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="105" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-21" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="110" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-22" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="115" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-23" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="120" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-24" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="125" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-25" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="130" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-26" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="135" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-27" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="140" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-28" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="145" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-29" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="150" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-30" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="155" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-31" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="160" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-32" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="165" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-33" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="170" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-34" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="175" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-35" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="180" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-36" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="185" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-37" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="190" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-38" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="195" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-39" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="200" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-40" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="205" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-41" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="210" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-42" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="215" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-43" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="220" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-44" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="225" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-45" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="230" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-46" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="235" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-47" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="240" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-48" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="245" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-49" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="250" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-50" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="255" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-51" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="260" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-52" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="265" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-53" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="270" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-54" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="275" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-55" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="280" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-56" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="285" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-57" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="290" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-58" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="295" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-59" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="300" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-60" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="305" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-61" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="310" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-62" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="315" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-63" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="320" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-64" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="325" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-65" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="330" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-66" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="335" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-67" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="340" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-68" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="345" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-69" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="350" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-70" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="355" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-71" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="360" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-72" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="365" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-73" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="370" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-74" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="375" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-75" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="380" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-76" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="385" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-77" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="390" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-78" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="395" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-79" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="400" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-80" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="405" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-81" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="410" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-82" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="415" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-83" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="420" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-84" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="425" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-85" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="430" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-86" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="435" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-87" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="440" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-88" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="445" y="0" fill="#2fcc66" role="tab" class="uptime-day component-ltsxwljz1bgp day-89" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+</svg>
+  <div class="legend legend-group">
+  <div class="legend-item light legend-item-date-range"><span class="availability-time-line-legend-day-count">90</span> days ago</div>
+  <div class="spacer"></div>
+  <div class="legend-item legend-item-uptime-value legend-item-ltsxwljz1bgp"><span id="uptime-percent-ltsxwljz1bgp">100</span> % uptime</div>
+  <div class="spacer"></div>
+  <div class="legend-item light legend-item-date-range">Today</div>
+</div>
+
+</div>
+</div>
+
+
+  <!-- children components -->
+  <div class="child-components-container ">
+      
+<div data-component-id="5jj51g883xkv" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="">
+
+   <span class="name" role="heading" aria-level="2">
+      Teamwork Spaces - US Region
+   </span>
+
+
+  <span class="component-status " title="">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="uptime-lazy-placeholder" data-uptime-lazy="5jj51g883xkv" aria-hidden="true"></div>
+</div>
+
+      
+<div data-component-id="nf0xn204jtpc" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="">
+
+   <span class="name" role="heading" aria-level="2">
+      Teamwork Spaces - EU Region
+   </span>
+
+
+  <span class="component-status " title="">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="uptime-lazy-placeholder" data-uptime-lazy="nf0xn204jtpc" aria-hidden="true"></div>
+</div>
+
+  </div>
+</div>
+
+          <div class="component-container border-color is-group ">
+  
+<div data-component-id="n251y0gfl21w" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="component-group-opener">
+
+   <span class="name" role="heading" aria-level="2">
+       <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o" role="button" aria-expanded="false" aria-label="Toggle Teamwork CRM" tabindex="0"></span>
+       <span>
+         Teamwork CRM
+       </span>
+   </span>
+
+
+  <span class="component-status " role="button" tabindex="0" data-js-hook="tooltip" data-original-title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children.">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="shared-partial uptime-90-days-wrapper">
+  <svg class="availability-time-line-graphic" id="uptime-component-n251y0gfl21w" preserveaspectratio="none" height="34" viewbox="0 0 448 34">
+
+      <rect height="34" width="3" x="0" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-0" data-html="true" tabindex="0" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="5" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-1" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="10" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-2" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="15" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-3" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="20" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-4" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="25" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-5" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="30" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-6" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="35" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-7" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="40" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-8" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="45" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-9" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="50" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-10" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="55" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-11" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="60" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-12" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="65" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-13" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="70" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-14" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="75" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-15" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="80" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-16" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="85" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-17" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="90" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-18" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="95" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-19" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="100" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-20" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="105" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-21" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="110" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-22" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="115" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-23" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="120" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-24" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="125" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-25" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="130" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-26" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="135" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-27" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="140" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-28" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="145" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-29" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="150" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-30" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="155" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-31" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="160" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-32" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="165" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-33" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="170" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-34" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="175" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-35" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="180" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-36" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="185" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-37" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="190" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-38" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="195" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-39" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="200" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-40" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="205" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-41" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="210" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-42" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="215" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-43" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="220" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-44" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="225" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-45" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="230" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-46" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="235" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-47" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="240" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-48" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="245" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-49" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="250" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-50" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="255" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-51" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="260" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-52" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="265" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-53" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="270" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-54" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="275" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-55" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="280" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-56" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="285" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-57" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="290" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-58" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="295" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-59" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="300" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-60" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="305" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-61" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="310" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-62" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="315" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-63" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="320" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-64" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="325" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-65" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="330" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-66" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="335" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-67" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="340" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-68" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="345" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-69" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="350" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-70" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="355" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-71" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="360" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-72" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="365" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-73" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="370" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-74" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="375" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-75" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="380" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-76" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="385" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-77" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="390" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-78" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="395" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-79" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="400" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-80" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="405" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-81" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="410" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-82" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="415" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-83" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="420" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-84" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="425" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-85" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="430" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-86" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="435" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-87" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="440" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-88" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="445" y="0" fill="#2fcc66" role="tab" class="uptime-day component-n251y0gfl21w day-89" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+</svg>
+  <div class="legend legend-group">
+  <div class="legend-item light legend-item-date-range"><span class="availability-time-line-legend-day-count">90</span> days ago</div>
+  <div class="spacer"></div>
+  <div class="legend-item legend-item-uptime-value legend-item-n251y0gfl21w"><span id="uptime-percent-n251y0gfl21w">100</span> % uptime</div>
+  <div class="spacer"></div>
+  <div class="legend-item light legend-item-date-range">Today</div>
+</div>
+
+</div>
+</div>
+
+
+  <!-- children components -->
+  <div class="child-components-container ">
+      
+<div data-component-id="lrf74j8qlygn" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="">
+
+   <span class="name" role="heading" aria-level="2">
+      Teamwork CRM - US region
+   </span>
+
+
+  <span class="component-status " title="">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="uptime-lazy-placeholder" data-uptime-lazy="lrf74j8qlygn" aria-hidden="true"></div>
+</div>
+
+      
+<div data-component-id="6nn6ht191h6s" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="">
+
+   <span class="name" role="heading" aria-level="2">
+      Teamwork CRM - EU Region
+   </span>
+
+
+  <span class="component-status " title="">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="uptime-lazy-placeholder" data-uptime-lazy="6nn6ht191h6s" aria-hidden="true"></div>
+</div>
+
+  </div>
+</div>
+
+          <div class="component-container border-color is-group ">
+  
+<div data-component-id="56qn6vr3yqqj" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="component-group-opener">
+
+   <span class="name" role="heading" aria-level="2">
+       <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o" role="button" aria-expanded="false" aria-label="Toggle Teamwork Websites" tabindex="0"></span>
+       <span>
+         Teamwork Websites
+       </span>
+   </span>
+
+
+  <span class="component-status " role="button" tabindex="0" data-js-hook="tooltip" data-original-title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children.">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="shared-partial uptime-90-days-wrapper">
+  <svg class="availability-time-line-graphic" id="uptime-component-56qn6vr3yqqj" preserveaspectratio="none" height="34" viewbox="0 0 448 34">
+
+      <rect height="34" width="3" x="0" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-0" data-html="true" tabindex="0" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="5" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-1" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="10" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-2" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="15" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-3" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="20" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-4" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="25" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-5" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="30" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-6" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="35" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-7" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="40" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-8" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="45" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-9" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="50" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-10" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="55" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-11" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="60" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-12" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="65" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-13" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="70" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-14" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="75" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-15" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="80" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-16" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="85" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-17" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="90" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-18" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="95" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-19" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="100" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-20" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="105" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-21" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="110" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-22" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="115" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-23" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="120" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-24" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="125" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-25" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="130" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-26" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="135" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-27" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="140" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-28" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="145" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-29" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="150" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-30" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="155" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-31" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="160" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-32" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="165" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-33" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="170" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-34" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="175" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-35" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="180" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-36" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="185" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-37" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="190" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-38" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="195" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-39" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="200" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-40" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="205" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-41" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="210" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-42" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="215" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-43" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="220" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-44" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="225" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-45" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="230" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-46" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="235" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-47" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="240" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-48" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="245" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-49" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="250" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-50" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="255" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-51" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="260" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-52" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="265" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-53" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="270" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-54" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="275" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-55" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="280" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-56" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="285" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-57" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="290" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-58" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="295" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-59" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="300" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-60" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="305" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-61" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="310" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-62" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="315" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-63" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="320" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-64" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="325" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-65" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="330" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-66" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="335" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-67" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="340" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-68" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="345" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-69" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="350" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-70" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="355" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-71" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="360" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-72" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="365" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-73" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="370" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-74" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="375" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-75" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="380" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-76" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="385" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-77" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="390" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-78" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="395" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-79" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="400" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-80" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="405" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-81" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="410" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-82" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="415" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-83" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="420" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-84" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="425" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-85" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="430" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-86" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="435" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-87" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="440" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-88" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+      <rect height="34" width="3" x="445" y="0" fill="#2fcc66" role="tab" class="uptime-day component-56qn6vr3yqqj day-89" data-html="true" tabindex="-1" aria-describedby="uptime-tooltip"></rect>
+</svg>
+  <div class="legend legend-group">
+  <div class="legend-item light legend-item-date-range"><span class="availability-time-line-legend-day-count">90</span> days ago</div>
+  <div class="spacer"></div>
+  <div class="legend-item legend-item-uptime-value legend-item-56qn6vr3yqqj"><span id="uptime-percent-56qn6vr3yqqj">100</span> % uptime</div>
+  <div class="spacer"></div>
+  <div class="legend-item light legend-item-date-range">Today</div>
+</div>
+
+</div>
+</div>
+
+
+  <!-- children components -->
+  <div class="child-components-container ">
+      
+<div data-component-id="fwmdcj0p157p" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="">
+
+   <span class="name" role="heading" aria-level="2">
+      Teamwork.com
+   </span>
+
+    <button type="button" class="tooltip-base tool tooltipstered" data-js-hook="tooltip" tabindex="0" aria-label="More information about Teamwork.com" aria-describedby="tooltip-fwmdcj0p157p" data-original-title="teamwork.com">?</button>
+
+  <span class="component-status " title="">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="uptime-lazy-placeholder" data-uptime-lazy="fwmdcj0p157p" aria-hidden="true"></div>
+</div>
+
+      
+<div data-component-id="sybzzfxq89m3" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="">
+
+   <span class="name" role="heading" aria-level="2">
+      Teamwork Academy
+   </span>
+
+    <button type="button" class="tooltip-base tool tooltipstered" data-js-hook="tooltip" tabindex="0" aria-label="More information about Teamwork Academy" aria-describedby="tooltip-sybzzfxq89m3" data-original-title="academy.teamwork.com">?</button>
+
+  <span class="component-status " title="">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="uptime-lazy-placeholder" data-uptime-lazy="sybzzfxq89m3" aria-hidden="true"></div>
+</div>
+
+      
+<div data-component-id="v2pdsxlt7jmp" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="">
+
+   <span class="name" role="heading" aria-level="2">
+      Teamwork API Docs
+   </span>
+
+    <button type="button" class="tooltip-base tool tooltipstered" data-js-hook="tooltip" tabindex="0" aria-label="More information about Teamwork API Docs" aria-describedby="tooltip-v2pdsxlt7jmp" data-original-title="apidocs.teamwork.com">?</button>
+
+  <span class="component-status " title="">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="uptime-lazy-placeholder" data-uptime-lazy="v2pdsxlt7jmp" aria-hidden="true"></div>
+</div>
+
+      
+<div data-component-id="0xgrr8j3jxg2" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="">
+
+   <span class="name" role="heading" aria-level="2">
+      Teamwork Blog
+   </span>
+
+    <button type="button" class="tooltip-base tool tooltipstered" data-js-hook="tooltip" tabindex="0" aria-label="More information about Teamwork Blog" aria-describedby="tooltip-0xgrr8j3jxg2" data-original-title="teamwork.com/blog">?</button>
+
+  <span class="component-status " title="">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="uptime-lazy-placeholder" data-uptime-lazy="0xgrr8j3jxg2" aria-hidden="true"></div>
+</div>
+
+      
+<div data-component-id="kb9040xvhtbb" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="">
+
+   <span class="name" role="heading" aria-level="2">
+      Teamwork Developer Portal
+   </span>
+
+    <button type="button" class="tooltip-base tool tooltipstered" data-js-hook="tooltip" tabindex="0" aria-label="More information about Teamwork Developer Portal" aria-describedby="tooltip-kb9040xvhtbb" data-original-title="developer.teamwork.com">?</button>
+
+  <span class="component-status " title="">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="uptime-lazy-placeholder" data-uptime-lazy="kb9040xvhtbb" aria-hidden="true"></div>
+</div>
+
+      
+<div data-component-id="3wxzr8l7qcp8" class="component-inner-container status-green showcased" data-component-status="operational" data-js-hook="">
+
+   <span class="name" role="heading" aria-level="2">
+      Teamwork Support Center
+   </span>
+
+    <button type="button" class="tooltip-base tool tooltipstered" data-js-hook="tooltip" tabindex="0" aria-label="More information about Teamwork Support Center" aria-describedby="tooltip-3wxzr8l7qcp8" data-original-title="teamwork.com/support">?</button>
+
+  <span class="component-status " title="">
+
+    Operational
+
+  </span>
+
+  <button type="button" class="tool icon-indicator fa fa-check status-icon-button tooltipstered" aria-label="Operational" data-js-hook="tooltip" data-original-title="Operational"></button>
+
+    <div class="uptime-lazy-placeholder" data-uptime-lazy="3wxzr8l7qcp8" aria-hidden="true"></div>
+</div>
+
+  </div>
+</div>
+
+    </div>
+    <div class="component-statuses-legend font-small">
+  <div class="legend-item status-green">
+    <span class="icon-indicator fa fa-check"></span>
+    Operational
+  </div>
+  <div class="legend-item status-yellow">
+    <span class="icon-indicator fa fa-minus-square"></span>
+    Degraded Performance
+  </div>
+  <div class="legend-item status-orange">
+    <span class="icon-indicator fa fa-exclamation-triangle"></span>
+    Partial Outage
+  </div>
+  <div class="breaker"></div>
+  <div class="legend-item status-red">
+    <span class="icon-indicator fa fa-times"></span>
+    Major Outage
+  </div>
+  <div class="legend-item status-blue">
+    <span class="icon-indicator fa fa-wrench"></span>
+    Maintenance
+  </div>
+</div>
+
+  </div>
+
+    <div id="uptime-tooltip">
+  <div class="pointer-container">
+    <div class="pointer-larger"></div>
+    <div class="pointer-smaller"></div>
+  </div>
+  <div class="tooltip-box">
+    <div class="tooltip-content">
+      <div class="tooltip-close hidden">
+        <i class="fa fa-times"></i>
+      </div>
+      <div class="date"></div>
+      <div class="outages">
+        <div class="outage-field major">
+          <span class="label">
+            <i class="component-status page-colors text-color major_outage"></i>
+            Major outage
+          </span>
+          <span class="value-hrs"></span>
+          <span class="value-mins"></span>
+        </div>
+        <div class="outage-field partial">
+          <span class="label">
+            <i class="component-status page-colors text-color partial_outage"></i>
+            Partial outage
+          </span>
+          <span class="value-hrs"></span>
+          <span class="value-mins"></span>
+        </div>
+        <div class="no-outages-msg">
+          No downtime recorded on this day.
+        </div>
+        <div class="no-data-msg">
+          No data exists for this day.
+        </div>
+        <div id="major-outage-group-count" class="outage-count">
+          <i class="component-status page-colors text-color major_outage"></i>
+          <span class="count"></span>
+          had a major outage.
+        </div>
+        <div id="partial-outage-group-count" class="outage-count">
+          <i class="component-status page-colors text-color partial_outage"></i>
+          <span class="count"></span>
+          had a partial outage.
+        </div>
+      </div>
+      <div class="related-events">
+        <h3 id="related-event-header">Related</h3>
+        <ul id="related-events-list"></ul>
+      </div>
+      <div class="no-related-msg">
+        <p>No incidents or maintenance related to this downtime.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="incidents-list format-expanded">
+        <h2 class="font-largest no-link" id="past-incidents">Past Incidents</h2>
+          
+  <div class="status-day font-regular ">
+    <h3 class="date border-color font-large">Oct <var data-var="date">13</var>, <var data-var="year">2026</var></h3>
+          <div class="incident-container">
+  <div class="incident-title impact-maintenance font-large">
+    <a class="whitespace-pre-wrap" href="/status/incidents/xcmywz0n1lfw">Database Maintenance in our EU region</a>
+  </div>
+
+  <div class="updates-container">
+    <!-- postmortem -->
+
+    <!-- incident updates -->
+      <div class="update font-regular completed">
+        <strong>Completed</strong> -
+      	<span class="whitespace-pre-wrap">The scheduled maintenance has been completed.</span>
+
+        <br>
+
+        <small>
+            Oct <var data-var="date">13</var>, <var data-var="time">06:50</var> UTC
+        </small>
+      </div>
+      <div class="update font-regular in progress">
+        <strong>In progress</strong> -
+      	<span class="whitespace-pre-wrap">Scheduled maintenance is currently in progress. We will provide updates as necessary.</span>
+
+        <br>
+
+        <small>
+            Oct <var data-var="date">13</var>, <var data-var="time">06:40</var> UTC
+        </small>
+      </div>
+      <div class="update font-regular scheduled">
+        <strong>Scheduled</strong> -
+      	<span class="whitespace-pre-wrap">We will be undergoing scheduled maintenance. During this period Some Projects service will be affected and performance degradation maybe expected.</span>
+
+        <br>
+
+        <small>
+            Oct <var data-var="date">12</var>, <var data-var="time">11:59</var> UTC
+        </small>
+      </div>
+  </div>
+
+</div>
+
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <h3 class="date border-color font-large">Oct <var data-var="date">12</var>, <var data-var="year">2026</var></h3>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <h3 class="date border-color font-large">Oct <var data-var="date">11</var>, <var data-var="year">2026</var></h3>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <h3 class="date border-color font-large">Oct <var data-var="date">10</var>, <var data-var="year">2026</var></h3>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <h3 class="date border-color font-large">Oct <var data-var="date"> 9</var>, <var data-var="year">2026</var></h3>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <h3 class="date border-color font-large">Oct <var data-var="date"> 8</var>, <var data-var="year">2026</var></h3>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <h3 class="date border-color font-large">Oct <var data-var="date"> 7</var>, <var data-var="year">2026</var></h3>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular ">
+    <h3 class="date border-color font-large">Oct <var data-var="date"> 6</var>, <var data-var="year">2026</var></h3>
+          <div class="incident-container">
+  <div class="incident-title impact-maintenance font-large">
+    <a class="whitespace-pre-wrap" href="/status/incidents/xk6nr1q8vq93">Database Maintenance in our EU region</a>
+  </div>
+
+  <div class="updates-container">
+    <!-- postmortem -->
+
+    <!-- incident updates -->
+      <div class="update font-regular completed">
+        <strong>Completed</strong> -
+      	<span class="whitespace-pre-wrap">The scheduled maintenance has been completed.</span>
+
+        <br>
+
+        <small>
+            Oct <var data-var="date"> 6</var>, <var data-var="time">06:55</var> UTC
+        </small>
+      </div>
+      <div class="update font-regular in progress">
+        <strong>In progress</strong> -
+      	<span class="whitespace-pre-wrap">Scheduled maintenance is currently in progress. We will provide updates as necessary.</span>
+
+        <br>
+
+        <small>
+            Oct <var data-var="date"> 6</var>, <var data-var="time">06:45</var> UTC
+        </small>
+      </div>
+      <div class="update font-regular scheduled">
+        <strong>Scheduled</strong> -
+      	<span class="whitespace-pre-wrap">We will be undergoing scheduled maintenance. During this period Crm service will be affected and some performance degradation maybe expected.</span>
+
+        <br>
+
+        <small>
+            Oct <var data-var="date"> 5</var>, <var data-var="time">12:25</var> UTC
+        </small>
+      </div>
+  </div>
+
+</div>
+
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <h3 class="date border-color font-large">Oct <var data-var="date"> 5</var>, <var data-var="year">2026</var></h3>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <h3 class="date border-color font-large">Oct <var data-var="date"> 4</var>, <var data-var="year">2026</var></h3>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <h3 class="date border-color font-large">Oct <var data-var="date"> 3</var>, <var data-var="year">2026</var></h3>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <h3 class="date border-color font-large">Oct <var data-var="date"> 2</var>, <var data-var="year">2026</var></h3>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular ">
+    <h3 class="date border-color font-large">Oct <var data-var="date"> 1</var>, <var data-var="year">2026</var></h3>
+          <div class="incident-container">
+  <div class="incident-title impact-maintenance font-large">
+    <a class="whitespace-pre-wrap" href="/status/incidents/klf5syds83vj">Database Maintenance in our EU region</a>
+  </div>
+
+  <div class="updates-container">
+    <!-- postmortem -->
+
+    <!-- incident updates -->
+      <div class="update font-regular completed">
+        <strong>Completed</strong> -
+      	<span class="whitespace-pre-wrap">The scheduled maintenance has been completed.</span>
+
+        <br>
+
+        <small>
+            Oct <var data-var="date"> 1</var>, <var data-var="time">06:55</var> UTC
+        </small>
+      </div>
+      <div class="update font-regular in progress">
+        <strong>In progress</strong> -
+      	<span class="whitespace-pre-wrap">Scheduled maintenance is currently in progress. We will provide updates as necessary.</span>
+
+        <br>
+
+        <small>
+            Oct <var data-var="date"> 1</var>, <var data-var="time">06:45</var> UTC
+        </small>
+      </div>
+      <div class="update font-regular scheduled">
+        <strong>Scheduled</strong> -
+      	<span class="whitespace-pre-wrap">We will be undergoing scheduled maintenance. During this period Spaces service will be affected and some performance degradation maybe expected.</span>
+
+        <br>
+
+        <small>
+            Sep <var data-var="date">30</var>, <var data-var="time">12:25</var> UTC
+        </small>
+      </div>
+  </div>
+
+</div>
+
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <h3 class="date border-color font-large">Sep <var data-var="date">30</var>, <var data-var="year">2026</var></h3>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular ">
+    <h3 class="date border-color font-large">Sep <var data-var="date">29</var>, <var data-var="year">2026</var></h3>
+          <div class="incident-container">
+  <div class="incident-title impact-maintenance font-large">
+    <a class="whitespace-pre-wrap" href="/status/incidents/3g7rw99vd3t0">Database Maintenance in our EU region</a>
+  </div>
+
+  <div class="updates-container">
+    <!-- postmortem -->
+
+    <!-- incident updates -->
+      <div class="update font-regular completed">
+        <strong>Completed</strong> -
+      	<span class="whitespace-pre-wrap">The scheduled maintenance has been completed.</span>
+
+        <br>
+
+        <small>
+            Sep <var data-var="date">29</var>, <var data-var="time">06:40</var> UTC
+        </small>
+      </div>
+      <div class="update font-regular in progress">
+        <strong>In progress</strong> -
+      	<span class="whitespace-pre-wrap">Scheduled maintenance is currently in progress. We will provide updates as necessary.</span>
+
+        <br>
+
+        <small>
+            Sep <var data-var="date">29</var>, <var data-var="time">06:30</var> UTC
+        </small>
+      </div>
+      <div class="update font-regular scheduled">
+        <strong>Scheduled</strong> -
+      	<span class="whitespace-pre-wrap">We will be undergoing scheduled maintenance. During this period AI features will be affected and some performance degradation maybe expected.</span>
+
+        <br>
+
+        <small>
+            Sep <var data-var="date">28</var>, <var data-var="time">12:06</var> UTC
+        </small>
+      </div>
+  </div>
+
+</div>
+
+  </div>
+
+      </div>
+
+
+      <div class="page-footer border-color font-small">
+          <a href="/status/history" class="history-footer-link"><span style="font-family:arial" aria-hidden="true">←</span> Incident History</a>
+
+        <span class="color-secondary powered-by" style="display: inline !important; visibility:visible !important; opacity: 1 !important; position:static !important; text-indent:0px !important; transform:scale(1) !important"><a class="color-secondary" rel="noopener noreferrer nofollow" href="/external/fc1b802ab29ff8401be9">Powered by Atlassian Statuspage</a></span>
+      </div>
+    </div>
+
+    
+
+  </div>
+
+
+
+
+
+
+
+    <div id="cpt-notification-container" role="status" aria-live="polite" aria-atomic="true"></div>
+    
+
+
+
+
+    <!-- all of the content_for stuff -->
+      <!-- FOR FLASH NOTICES -->
+
+<!-- FOR ERROR -->
+
+
+    <svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg></body></html>

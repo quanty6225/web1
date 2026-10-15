@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>pricing-and-billing</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Teamwrok-Spaces" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Spaces-help-docs-home" transform="translate(-1150.000000, -702.000000)">
+            <g id="Welcome-Section" transform="translate(215.000000, 422.000000)">
+                <g id="Reports" transform="translate(800.000000, 260.000000)">
+                    <g id="IMG" transform="translate(135.000000, 20.000000)">
+                        <g id="Card-Copy" transform="translate(0.000000, 16.000000)">
+                            <rect id="Rectangle-20" stroke="#895EF7" stroke-width="2" fill="#DDD3FC" x="1" y="1" width="72" height="48" rx="4"></rect>
+                            <path d="M8,16 C7.44771525,16 7,16.4477153 7,17 L7,22 C7,22.5522847 7.44771525,23 8,23 L16,23 C16.5522847,23 17,22.5522847 17,22 L17,17 C17,16.4477153 16.5522847,16 16,16 L8,16 Z" id="Rectangle-20-Copy" stroke="#895EF7" stroke-width="2" fill="#FFFFFF"></path>
+                            <path d="M8,6 L39,6 C40.1045695,6 41,6.8954305 41,8 L41,8 C41,9.1045695 40.1045695,10 39,10 L8,10 C6.8954305,10 6,9.1045695 6,8 L6,8 C6,6.8954305 6.8954305,6 8,6 Z" id="Rectangle-20-Copy-2" fill="#C3AFFA"></path>
+                            <path d="M7,32 L15.4166667,32 C15.9689514,32 16.4166667,32.4477153 16.4166667,33 C16.4166667,33.5522847 15.9689514,34 15.4166667,34 L7,34 C6.44771525,34 6,33.5522847 6,33 C6,32.4477153 6.44771525,32 7,32 Z M7,40 L25.8333333,40 C26.3856181,40 26.8333333,40.4477153 26.8333333,41 C26.8333333,41.5522847 26.3856181,42 25.8333333,42 L7,42 C6.44771525,42 6,41.5522847 6,41 C6,40.4477153 6.44771525,40 7,40 Z M19.5,32 L30,32 C30.5522847,32 31,32.4477153 31,33 C31,33.5522847 30.5522847,34 30,34 L19.5,34 C18.9477153,34 18.5,33.5522847 18.5,33 C18.5,32.4477153 18.9477153,32 19.5,32 Z" id="Combined-Shape" fill="#C3AFFA"></path>
+                            <rect id="Rectangle-21-Copy" fill="#B2EDAA" x="58" y="36" width="11" height="8" rx="2"></rect>
+                        </g>
+                        <g id="Card" transform="translate(26.000000, 36.000000)">
+                            <rect id="Rectangle-20" stroke="#895EF7" stroke-width="2" fill="#FFFFFF" x="1" y="1" width="72" height="48" rx="4"></rect>
+                            <rect id="Rectangle-21" fill="#C3AFFA" x="2" y="11" width="70" height="8"></rect>
+                            <rect id="Rectangle-21-Copy" fill="#DDD3FC" x="7" y="33" width="13" height="3" rx="1.5"></rect>
+                            <rect id="Rectangle-21-Copy-2" fill="#DDD3FC" x="7" y="39" width="23" height="3" rx="1.5"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

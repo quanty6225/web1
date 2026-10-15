@@ -1,0 +1,246 @@
+[
+  {
+    "name": "Assignee",
+    "kind": "set",
+    "operators": [
+      "is any of",
+      "is all of",
+      "is not any of",
+      "is not all of",
+      "is set",
+      "is not set"
+    ]
+  },
+  {
+    "name": "Priority",
+    "kind": "set",
+    "operators": [
+      "is any of",
+      "is not any of",
+      "is set",
+      "is not set"
+    ]
+  },
+  {
+    "name": "Tag",
+    "kind": "set",
+    "operators": [
+      "is any of",
+      "is all of",
+      "is not any of",
+      "is not all of",
+      "is set",
+      "is not set"
+    ]
+  },
+  {
+    "name": "Progress",
+    "kind": "number",
+    "operators": [
+      "is equal to",
+      "is not equal to",
+      "is less than",
+      "is greater than",
+      "is less than or equal to",
+      "is greater than or equal to",
+      "is set",
+      "is not set"
+    ]
+  },
+  {
+    "name": "Time estimate",
+    "kind": "number",
+    "operators": [
+      "is equal to",
+      "is not equal to",
+      "is less than",
+      "is greater than",
+      "is less than or equal to",
+      "is greater than or equal to",
+      "is set",
+      "is not set"
+    ]
+  },
+  {
+    "name": "Logged time",
+    "kind": "number",
+    "operators": [
+      "is equal to",
+      "is not equal to",
+      "is less than",
+      "is greater than",
+      "is less than or equal to",
+      "is greater than or equal to",
+      "is added",
+      "is not added"
+    ]
+  },
+  {
+    "name": "Follower",
+    "kind": "set",
+    "operators": [
+      "is any of",
+      "is all of",
+      "is not any of",
+      "is not all of",
+      "is set",
+      "is not set"
+    ]
+  },
+  {
+    "name": "Trigger user",
+    "kind": "set",
+    "operators": [
+      "is any of",
+      "is not any of"
+    ]
+  },
+  {
+    "name": "Task list",
+    "kind": "set",
+    "operators": [
+      "is any of",
+      "is not any of"
+    ]
+  },
+  {
+    "name": "Start date",
+    "kind": "date",
+    "operators": [
+      "is equal to",
+      "is not equal to",
+      "is less than",
+      "is greater than",
+      "is less than or equal to",
+      "is greater than or equal to",
+      "is set",
+      "is not set",
+      "has passed",
+      "has not passed"
+    ]
+  },
+  {
+    "name": "Due date",
+    "kind": "date",
+    "operators": [
+      "is equal to",
+      "is not equal to",
+      "is less than",
+      "is greater than",
+      "is less than or equal to",
+      "is greater than or equal to",
+      "is set",
+      "is not set",
+      "has passed",
+      "has not passed"
+    ]
+  },
+  {
+    "name": "Stage",
+    "kind": "set",
+    "operators": [
+      "is any of",
+      "is not any of",
+      "is set",
+      "is not set"
+    ]
+  },
+  {
+    "name": "Task name",
+    "kind": "text",
+    "operators": [
+      "Contains"
+    ]
+  },
+  {
+    "name": "Task description",
+    "kind": "text",
+    "operators": [
+      "Contains"
+    ]
+  },
+  {
+    "name": "Project name",
+    "kind": "text",
+    "operators": [
+      "Contains"
+    ]
+  },
+  {
+    "name": "Is blocked",
+    "kind": "boolean",
+    "operators": [
+      "is equal to"
+    ]
+  },
+  {
+    "name": "Is completed",
+    "kind": "boolean",
+    "operators": [
+      "is equal to"
+    ]
+  },
+  {
+    "name": "Is subtask",
+    "kind": "boolean",
+    "operators": [
+      "is equal to"
+    ]
+  },
+  {
+    "name": "Has Desk tickets",
+    "kind": "boolean",
+    "operators": [
+      "is equal to"
+    ]
+  },
+  {
+    "name": "Has reminders",
+    "kind": "boolean",
+    "operators": [
+      "is equal to"
+    ]
+  },
+  {
+    "name": "Created by",
+    "kind": "person",
+    "operators": [
+      "is equal to",
+      "is not equal to"
+    ]
+  },
+  {
+    "name": "Task list name",
+    "kind": "text",
+    "operators": [
+      "Contains"
+    ]
+  },
+  {
+    "name": "Comments",
+    "kind": "comments",
+    "operators": [
+      "any contains text",
+      "last contains text",
+      "has any comments",
+      "has no comments",
+      "has more than",
+      "has less than",
+      "has comments from"
+    ]
+  },
+  {
+    "name": "Attachments",
+    "kind": "attachments",
+    "operators": [
+      "has any attachments"
+    ]
+  },
+  {
+    "name": "Custom field",
+    "kind": "custom",
+    "operators": [
+      "is equal to"
+    ]
+  }
+]

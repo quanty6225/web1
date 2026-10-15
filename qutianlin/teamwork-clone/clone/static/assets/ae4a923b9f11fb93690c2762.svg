@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="51" height="58" viewBox="0 0 51 58">
+  <g fill="none" fill-rule="evenodd" transform="translate(0 6)">
+    <g transform="translate(0 .773)">
+      <path stroke="#141523" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M1.5008,12.6172 L1.5008,42.5002 L44.4318,42.5002 C46.7998,42.5002 48.7388,40.5632 48.7388,38.1932 L48.7388,12.6172 L1.5008,12.6172 Z"/>
+      <polygon points="0 44 50.238 44 50.238 .227 0 .227"/>
+      <polygon stroke="#141523" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" points="1.5 12.62 48.738 12.62 48.738 1.727 1.5 1.727"/>
+      <line x1="8.357" x2="22.793" y1="7.171" y2="7.171" stroke="#879DF2" stroke-dasharray=".152 6.077" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.814"/>
+    </g>
+    <line x1="20.945" x2="29.955" y1="27.756" y2="27.756" stroke="#101222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.758"/>
+    <line x1="20.945" x2="35.955" y1="20.655" y2="20.655" stroke="#101222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.758"/>
+    <line x1="20.945" x2="35.486" y1="35.477" y2="35.477" stroke="#101222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.758"/>
+    <line x1="12.302" x2="15.312" y1="27.756" y2="27.756" stroke="#879DF2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.758"/>
+    <line x1="12.302" x2="15.312" y1="20.655" y2="20.655" stroke="#879DF2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.758"/>
+    <line x1="12.302" x2="14.844" y1="35.477" y2="35.477" stroke="#879DF2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.758"/>
+  </g>
+</svg>

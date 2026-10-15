@@ -1,0 +1,262 @@
+{
+  "User menu": {
+    "file": "frontend/states/00.html",
+    "auth": true,
+    "source_route": "/app/home"
+  },
+  "Search": {
+    "file": "frontend/states/01.html",
+    "auth": true,
+    "source_route": "/app/home"
+  },
+  "Quick add": {
+    "file": "frontend/states/02.html",
+    "auth": true,
+    "source_route": "/app/home"
+  },
+  "Notifications": {
+    "file": "frontend/states/03.html",
+    "auth": true,
+    "source_route": "/app/home"
+  },
+  "Help": {
+    "file": "frontend/states/04.html",
+    "auth": true,
+    "source_route": "/app/home"
+  },
+  "Other apps": {
+    "file": "frontend/states/05.html",
+    "auth": true,
+    "source_route": "/app/home"
+  },
+  "Recent": {
+    "file": "frontend/states/06.html",
+    "auth": true,
+    "source_route": "/app/home"
+  },
+  "Templates": {
+    "file": "frontend/states/07.html",
+    "auth": true,
+    "source_route": "/app/home"
+  },
+  "More": {
+    "file": "frontend/states/08.html",
+    "auth": true,
+    "source_route": "/app/home"
+  },
+  "Add widget": {
+    "file": "frontend/states/09.html",
+    "auth": true,
+    "source_route": "/app/home"
+  },
+  "Upgrade now": {
+    "file": "frontend/states/10.html",
+    "auth": true,
+    "source_route": "/app/home"
+  },
+  "Add your team": {
+    "file": "frontend/states/11.html",
+    "auth": true,
+    "source_route": "/app/home"
+  },
+  "More...": {
+    "file": "frontend/states/12.html",
+    "auth": true,
+    "source_route": "/app/projects/372311/tasks/list"
+  },
+  "Project options": {
+    "file": "frontend/states/13.html",
+    "auth": true,
+    "source_route": "/app/projects/372311/tasks/list"
+  },
+  "Filter": {
+    "file": "frontend/states/14.html",
+    "auth": true,
+    "source_route": "/app/projects/372311/tasks/list"
+  },
+  "Add task list": {
+    "file": "frontend/states/15.html",
+    "auth": true,
+    "source_route": "/app/projects/372311/tasks/list"
+  },
+  "Add a task": {
+    "file": "frontend/states/16.html",
+    "auth": true,
+    "source_route": "/app/projects/372311/tasks/list"
+  },
+  "List options": {
+    "file": "frontend/states/17.html",
+    "auth": true,
+    "source_route": "/app/projects/372311/tasks/list"
+  },
+  "Options": {
+    "file": "frontend/states/18.html",
+    "auth": true,
+    "source_route": "/app/projects/372311/tasks/list"
+  },
+  "Log in": {
+    "file": "frontend/states/19.html",
+    "auth": false,
+    "source_route": "/launchpad/login"
+  },
+  "Single Sign On (SSO)": {
+    "file": "frontend/states/20.html",
+    "auth": false,
+    "source_route": "/launchpad/login"
+  },
+  "home-video-0": {
+    "file": "frontend/states/home-video-0.html",
+    "auth": false,
+    "source_route": "/"
+  },
+  "project-template-4": {
+    "file": "frontend/states/project-template-4.html",
+    "auth": true,
+    "source_route": "/app/projects/templates/projects/teamwork"
+  },
+  "home-video-2": {
+    "file": "frontend/states/home-video-2.html",
+    "auth": false,
+    "source_route": "/"
+  },
+  "home-video-4": {
+    "file": "frontend/states/home-video-4.html",
+    "auth": false,
+    "source_route": "/"
+  },
+  "home-video-3": {
+    "file": "frontend/states/home-video-3.html",
+    "auth": false,
+    "source_route": "/"
+  },
+  "project-template-1": {
+    "file": "frontend/states/project-template-1.html",
+    "auth": true,
+    "source_route": "/app/projects/templates/projects/teamwork"
+  },
+  "project-template-2": {
+    "file": "frontend/states/project-template-2.html",
+    "auth": true,
+    "source_route": "/app/projects/templates/projects/teamwork"
+  },
+  "product-tour": {
+    "file": "frontend/states/product-tour.html",
+    "auth": false,
+    "source_route": "/product-tour"
+  },
+  "project-template-3": {
+    "file": "frontend/states/project-template-3.html",
+    "auth": true,
+    "source_route": "/app/projects/templates/projects/teamwork"
+  },
+  "home-video-1": {
+    "file": "frontend/states/home-video-1.html",
+    "auth": false,
+    "source_route": "/"
+  },
+  "project-template-0": {
+    "file": "frontend/states/project-template-0.html",
+    "auth": true,
+    "source_route": "/app/projects/templates/projects/teamwork"
+  },
+  "Automations": {
+    "file": "frontend/states/completion-3.html",
+    "auth": true,
+    "source_route": "/app/home"
+  },
+  "Edit site name": {
+    "file": "frontend/states/completion-4.html",
+    "auth": true,
+    "source_route": "/app/settings/general"
+  },
+  "billing-monthly": {
+    "file": "frontend/states/billing-monthly.html",
+    "auth": true,
+    "source_route": "/app/settings/subscription/plans"
+  },
+  "billing-annual": {
+    "file": "frontend/states/billing-annual.html",
+    "auth": true,
+    "source_route": "/app/settings/subscription/plans"
+  },
+  "billing-upgrade": {
+    "file": "frontend/states/billing-upgrade.html",
+    "auth": true,
+    "source_route": "/app/settings/subscription/plans"
+  },
+  "billing-payment": {
+    "file": "frontend/states/billing-payment.html",
+    "auth": true,
+    "source_route": "/app/settings/subscription/billing"
+  },
+  "advanced-Set a reminder for yourself": {
+    "file": "frontend/states/advanced-0.html",
+    "auth": true,
+    "source_route": "/app/tasks/18438851"
+  },
+  "advanced-Recurring tasks": {
+    "file": "frontend/states/advanced-1.html",
+    "auth": true,
+    "source_route": "/app/tasks/18438851"
+  },
+  "advanced-Custom fields": {
+    "file": "frontend/states/advanced-4.html",
+    "auth": true,
+    "source_route": "/app/tasks/18438851"
+  },
+  "advanced-Dependencies": {
+    "file": "frontend/states/advanced-5.html",
+    "auth": true,
+    "source_route": "/app/tasks/18438851"
+  },
+  "advanced-Notify by email": {
+    "file": "frontend/states/advanced-6.html",
+    "auth": true,
+    "source_route": "/app/tasks/18438851"
+  },
+  "advanced-Change task layout": {
+    "file": "frontend/states/advanced-7.html",
+    "auth": true,
+    "source_route": "/app/tasks/18438851"
+  },
+  "advanced-Choose columns to display": {
+    "file": "frontend/states/advanced-11.html",
+    "auth": true,
+    "source_route": "/app/projects/372311/tasks/table"
+  },
+  "advanced-Automations": {
+    "file": "frontend/states/advanced-12.html",
+    "auth": true,
+    "source_route": "/app/home"
+  },
+  "Delete account introduction": {
+    "file": "frontend/states/account-0.html",
+    "auth": true,
+    "source_route": "https://tenspo.eu.teamwork.com/app/settings/subscription/plans"
+  },
+  "Empty dashboard": {
+    "file": "frontend/states/account-3.html",
+    "auth": true,
+    "source_route": "https://tenspo.eu.teamwork.com/app/home"
+  },
+  "Delete account confirmation": {
+    "file": "frontend/states/account-4.html",
+    "auth": true,
+    "source_route": "https://tenspo.eu.teamwork.com/app/settings/subscription/plans"
+  },
+  "Feedback": {
+    "file": "frontend/states/account-feedback-network.html",
+    "auth": true,
+    "source_route": "https://tenspo.eu.teamwork.com/app/home"
+  },
+  "Ask AI": {
+    "file": "frontend/states/ai-entry.html",
+    "auth": true,
+    "source_route": "/app/home"
+  },
+  "Settings more": {
+    "file": "frontend/states/settings-more.html",
+    "auth": true,
+    "source_route": "/app/settings/projects"
+  }
+}

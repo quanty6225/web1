@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>reports</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="370" height="260" rx="5"></rect>
+        <filter x="-2.2%" y="-2.7%" width="104.3%" height="106.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M11,53.787234 L17,53.787234 L17,53.787234 C19.209139,53.787234 21,55.578095 21,57.787234 L21,80 L7,80 L7,57.787234 C7,55.578095 8.790861,53.787234 11,53.787234 L11,53.787234 Z M55,36 L61,36 C63.209139,36 65,37.790861 65,40 L65,80 L51,80 L51,40 L51,40 C51,37.790861 52.790861,36 55,36 Z" id="path-3"></path>
+        <path d="M33,17.8823529 L39,17.8823529 L39,17.8823529 C41.209139,17.8823529 43,19.6732139 43,21.8823529 L43,80 L29,80 L29,21.8823529 L29,21.8823529 C29,19.6732139 30.790861,17.8823529 33,17.8823529 L33,17.8823529 Z M77,0 L83,0 C85.209139,-4.05812251e-16 87,1.790861 87,4 L87,80 L73,80 L73,4 L73,4 C73,1.790861 74.790861,4.05812251e-16 77,0 Z" id="path-4"></path>
+    </defs>
+    <g id="Teamwork-Desk" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desk-Home" transform="translate(-1150.000000, -702.000000)">
+            <g id="Welcome-Section" transform="translate(215.000000, 422.000000)">
+                <g id="Reports" transform="translate(800.000000, 260.000000)">
+                    <g id="Rectangle-15">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <rect stroke="#E6E6E6" stroke-width="1" x="0.5" y="0.5" width="369" height="259" rx="5"></rect>
+                    </g>
+                    <g id="Img" transform="translate(137.000000, 31.000000)">
+                        <g id="Combined-Shape">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                            <path stroke="#4EB276" stroke-width="2" d="M8,79 L20,79 L20,57.787234 C20,56.1303798 18.6568542,54.787234 17,54.787234 L11,54.787234 C9.34314575,54.787234 8,56.1303798 8,57.787234 L8,79 Z M52,79 L64,79 L64,40 C64,38.3431458 62.6568542,37 61,37 L55,37 C53.3431458,37 52,38.3431458 52,40 L52,79 Z"></path>
+                        </g>
+                        <g id="Combined-Shape">
+                            <use fill="#EDF6F3" fill-rule="evenodd" xlink:href="#path-4"></use>
+                            <path stroke="#4EB276" stroke-width="2" d="M30,79 L42,79 L42,21.8823529 C42,20.2254987 40.6568542,18.8823529 39,18.8823529 L33,18.8823529 C31.3431458,18.8823529 30,20.2254987 30,21.8823529 L30,79 Z M74,79 L86,79 L86,4 C86,2.34314575 84.6568542,1 83,1 L77,1 C75.3431458,1 74,2.34314575 74,4 L74,79 Z"></path>
+                        </g>
+                        <rect id="Rectangle-12" fill="#4EB276" x="0" y="78" width="96" height="2" rx="1"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <rect id="video-calls-a" width="35" height="26" x="0" y="0" rx="2"/>
+    <rect id="video-calls-c" width="35" height="26" x="0" y="0" rx="2"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <g transform="translate(6 14)">
+      <path fill="#FCE4E9" d="M5,1 L83,1 C85.209139,1 87,2.790861 87,5 L87,13 L87,13 L1,13 L1,5 C1,2.790861 2.790861,1 5,1 Z"/>
+      <rect width="88" height="2" y="12" fill="#ED496C" rx="1"/>
+      <rect width="86" height="68" x="1" y="1" stroke="#ED496C" stroke-width="2" rx="4"/>
+      <path fill="#F8B6C4" d="M7,5 C8.1045695,5 9,5.8954305 9,7 C9,8.1045695 8.1045695,9 7,9 C5.8954305,9 5,8.1045695 5,7 C5,5.8954305 5.8954305,5 7,5 Z M13,5 C14.1045695,5 15,5.8954305 15,7 C15,8.1045695 14.1045695,9 13,9 C11.8954305,9 11,8.1045695 11,7 C11,5.8954305 11.8954305,5 13,5 Z M19,5 C20.1045695,5 21,5.8954305 21,7 C21,8.1045695 20.1045695,9 19,9 C17.8954305,9 17,8.1045695 17,7 C17,5.8954305 17.8954305,5 19,5 Z"/>
+      <g fill="#FCE4E9" transform="translate(31 54)">
+        <circle cx="23.5" cy="3.5" r="3.5"/>
+        <circle cx="13.5" cy="3.5" r="2.5" stroke="#FCE4E9" stroke-width="2"/>
+        <circle cx="3.5" cy="3.5" r="2.5" stroke="#FCE4E9" stroke-width="2"/>
+      </g>
+    </g>
+    <g transform="translate(13 36)">
+      <mask id="video-calls-b" fill="#fff">
+        <use xlink:href="#video-calls-a"/>
+      </mask>
+      <use fill="#FCE4E9" xlink:href="#video-calls-a"/>
+      <g stroke="#ED496C" stroke-width="2" mask="url(#video-calls-b)">
+        <g transform="translate(8 6)">
+          <circle cx="9.237" cy="4.737" r="4.737"/>
+          <path d="M18,20 C18,15.0294373 13.9705627,11 9,11 C4.02943725,11 0,15.0294373 0,20 C0,24.9705627 18,24.9705627 18,20 Z"/>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(52 36)">
+      <mask id="video-calls-d" fill="#fff">
+        <use xlink:href="#video-calls-c"/>
+      </mask>
+      <use fill="#FCE4E9" xlink:href="#video-calls-c"/>
+      <g stroke="#ED496C" stroke-width="2" mask="url(#video-calls-d)">
+        <g transform="translate(8 6)">
+          <circle cx="9.237" cy="4.737" r="4.737"/>
+          <path d="M18,20 C18,15.0294373 13.9705627,11 9,11 C4.02943725,11 0,15.0294373 0,20 C0,24.9705627 18,24.9705627 18,20 Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,38 @@
+{
+  "initial": "cmd4ry09l000004l4hjk9eemn",
+  "title": "Pick a topic to start exploring",
+  "tasks": [
+    {
+      "title": "Deliver projects faster",
+      "flow": "cmd381syt000104jrc22k32vt"
+    },
+    {
+      "title": "Automate manual work",
+      "flow": "cmd4nv5ha000o04lea4v5bqk0"
+    },
+    {
+      "title": "View project statuses",
+      "flow": "cmd4ohsf3001o04l59fio4yz6"
+    },
+    {
+      "title": "See workloads in real time",
+      "flow": "cmd4r5mgn000004ky7qnh39gp"
+    },
+    {
+      "title": "Forecast resources",
+      "flow": "cmd4r5ps4000a04lcbh8tdft4"
+    },
+    {
+      "title": "Budgeting & profitability",
+      "flow": "cmfo1yrk2000004if7wk46xml"
+    },
+    {
+      "title": "Work smarter with AI",
+      "flow": "cmewzka1t000004l251u304as"
+    },
+    {
+      "title": "Pipeline to project execution",
+      "flow": "cmo9z3wsi001104l2hy8yfon5"
+    }
+  ]
+}

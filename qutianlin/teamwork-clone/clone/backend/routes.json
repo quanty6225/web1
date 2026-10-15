@@ -1,0 +1,4126 @@
+{
+  "/launchpad/login": {
+    "file": "launchpad/login/index.html",
+    "auth": false,
+    "title": "Log in - Teamwork.com"
+  },
+  "/signup": {
+    "file": "signup/index.html",
+    "auth": false,
+    "title": "Sign Up Free | Teamwork.com"
+  },
+  "/": {
+    "file": "index.html",
+    "auth": false,
+    "title": "AI-Powered PSA Software Built for Profitability | Teamwork.com"
+  },
+  "/launchpad/forgotpassword": {
+    "file": "launchpad/forgotpassword/index.html",
+    "auth": false,
+    "title": "Recover password - Teamwork.com"
+  },
+  "/legal/privacy-notice": {
+    "file": "legal/privacy-notice/index.html",
+    "auth": false,
+    "title": "Privacy Notice | Teamwork.com"
+  },
+  "/legal/cookie-policy": {
+    "file": "legal/cookie-policy/index.html",
+    "auth": false,
+    "title": "Cookie Policy | Teamwork.com"
+  },
+  "/legal/terms-of-service": {
+    "file": "legal/terms-of-service/index.html",
+    "auth": false,
+    "title": "Teamwork.com Terms of Service | Teamwork.com"
+  },
+  "/ai": {
+    "file": "ai/index.html",
+    "auth": false,
+    "title": "TeamworkAI | Teamwork.com"
+  },
+  "/product/client-management": {
+    "file": "product/client-management/index.html",
+    "auth": false,
+    "title": "Client project management software | Teamwork.com"
+  },
+  "/product/forms": {
+    "file": "product/forms/index.html",
+    "auth": false,
+    "title": "Turn Requests into Work: Forms Software | Teamwork.com"
+  },
+  "/product/project-management": {
+    "file": "product/project-management/index.html",
+    "auth": false,
+    "title": "Project Management Software | Teamwork.com"
+  },
+  "/desk": {
+    "file": "desk/index.html",
+    "auth": false,
+    "title": "Help Desk Software | Teamwork.com"
+  },
+  "/product/automations": {
+    "file": "product/automations/index.html",
+    "auth": false,
+    "title": "Cut Busywork: Task Automation Software | Teamwork.com"
+  },
+  "/product/proofs": {
+    "file": "product/proofs/index.html",
+    "auth": false,
+    "title": "Approve Creative Work Faster: Proofs | Teamwork.com"
+  },
+  "/product": {
+    "file": "product/index.html",
+    "auth": false,
+    "title": "Every Feature Built for Client Work | Teamwork.com"
+  },
+  "/product/resource-management": {
+    "file": "product/resource-management/index.html",
+    "auth": false,
+    "title": "Balance Workloads: Resource Management | Teamwork.com"
+  },
+  "/product/resource-management/capacity-planning": {
+    "file": "product/resource-management/capacity-planning/index.html",
+    "auth": false,
+    "title": "Capacity Planning - Resource Management | Teamwork.com"
+  },
+  "/product/resource-management/resource-forecasting": {
+    "file": "product/resource-management/resource-forecasting/index.html",
+    "auth": false,
+    "title": "Resource Forecasting - Resource Management | Teamwork.com"
+  },
+  "/product/reporting": {
+    "file": "product/reporting/index.html",
+    "auth": false,
+    "title": "Project Reporting Software | Teamwork.com"
+  },
+  "/product/my-calendar": {
+    "file": "product/my-calendar/index.html",
+    "auth": false,
+    "title": "My Calendar | Teamwork.com"
+  },
+  "/product/resource-management/team-utilization": {
+    "file": "product/resource-management/team-utilization/index.html",
+    "auth": false,
+    "title": "Team Utilization - Resource Management | Teamwork.com"
+  },
+  "/product/cost-profitability-management/time-tracking": {
+    "file": "product/cost-profitability-management/time-tracking/index.html",
+    "auth": false,
+    "title": "Time Tracking - Cost Management | Teamwork.com"
+  },
+  "/product/cost-profitability-management": {
+    "file": "product/cost-profitability-management/index.html",
+    "auth": false,
+    "title": "Project Cost Management Software | Teamwork.com"
+  },
+  "/product/cost-profitability-management/budgeting-profitability": {
+    "file": "product/cost-profitability-management/budgeting-profitability/index.html",
+    "auth": false,
+    "title": "Budgeting & Profitability - Cost Management | Teamwork.com"
+  },
+  "/product/cost-profitability-management/quoting-costing-work": {
+    "file": "product/cost-profitability-management/quoting-costing-work/index.html",
+    "auth": false,
+    "title": "Quoting & Costing Work - Cost Management | Teamwork.com"
+  },
+  "/product/retainers": {
+    "file": "product/retainers/index.html",
+    "auth": false,
+    "title": "Retainer Management for Agencies | Teamwork"
+  },
+  "/integrations/categories/accounting": {
+    "file": "integrations/categories/accounting/index.html",
+    "auth": false,
+    "title": "Project and Team Management Software | Teamwork.com"
+  },
+  "/integrations/categories/sales-marketing": {
+    "file": "integrations/categories/sales-marketing/index.html",
+    "auth": false,
+    "title": "Project and Team Management Software | Teamwork.com"
+  },
+  "/integrations/categories/reporting": {
+    "file": "integrations/categories/reporting/index.html",
+    "auth": false,
+    "title": "Project and Team Management Software | Teamwork.com"
+  },
+  "/integrations/categories/productivity": {
+    "file": "integrations/categories/productivity/index.html",
+    "auth": false,
+    "title": "Project and Team Management Software | Teamwork.com"
+  },
+  "/integrations/categories/time-tracking": {
+    "file": "integrations/categories/time-tracking/index.html",
+    "auth": false,
+    "title": "Project and Team Management Software | Teamwork.com"
+  },
+  "/integrations": {
+    "file": "integrations/index.html",
+    "auth": false,
+    "title": "Apps and Integrations for Client Work | Teamwork.com"
+  },
+  "/product-tour": {
+    "file": "product-tour/index.html",
+    "auth": false,
+    "title": "Product Tour"
+  },
+  "/contact/sales": {
+    "file": "contact/sales/index.html",
+    "auth": false,
+    "title": "Get a personalized walk through and see how Teamwork.com solves challenges like."
+  },
+  "/teams/agencies": {
+    "file": "teams/agencies/index.html",
+    "auth": false,
+    "title": "#1 Agency Project Management Software | Teamwork.com"
+  },
+  "/teams/it-services": {
+    "file": "teams/it-services/index.html",
+    "auth": false,
+    "title": "Profitable Projects for IT Services | Teamwork.com"
+  },
+  "/teams/consulting": {
+    "file": "teams/consulting/index.html",
+    "auth": false,
+    "title": "Profitable Projects for Consulting Firms | Teamwork.com"
+  },
+  "/teams/professional-services": {
+    "file": "teams/professional-services/index.html",
+    "auth": false,
+    "title": "The PSA for Professional Services Firms | Teamwork.com"
+  },
+  "/teams/accounting-and-financial-services": {
+    "file": "teams/accounting-and-financial-services/index.html",
+    "auth": false,
+    "title": "Project Management for Accounting Firms | Teamwork.com"
+  },
+  "/teams": {
+    "file": "teams/index.html",
+    "auth": false,
+    "title": "The project management solution for businesses delivering client work | Teamwork.com"
+  },
+  "/teams/implementation-onboarding-teams": {
+    "file": "teams/implementation-onboarding-teams/index.html",
+    "auth": false,
+    "title": "Software Implementation & Onboarding Teams | Teamwork.com"
+  },
+  "/teams/delivery-teams": {
+    "file": "teams/delivery-teams/index.html",
+    "auth": false,
+    "title": "Client management for delivery teams | Teamwork.com"
+  },
+  "/teams/operations-managers": {
+    "file": "teams/operations-managers/index.html",
+    "auth": false,
+    "title": "Operations Management Software | Teamwork.com"
+  },
+  "/teams/pmo-teams": {
+    "file": "teams/pmo-teams/index.html",
+    "auth": false,
+    "title": "Project Portfolio Management Software"
+  },
+  "/solutions/resource-scheduling": {
+    "file": "solutions/resource-scheduling/index.html",
+    "auth": false,
+    "title": "Balance Team Workloads: Resource Scheduling | Teamwork.com"
+  },
+  "/teams/marketing-teams": {
+    "file": "teams/marketing-teams/index.html",
+    "auth": false,
+    "title": "The Best Marketing Project Management Software"
+  },
+  "/solutions/project-planning": {
+    "file": "solutions/project-planning/index.html",
+    "auth": false,
+    "title": "The Best Project Planning Software | Teamwork"
+  },
+  "/solutions/project-collaboration": {
+    "file": "solutions/project-collaboration/index.html",
+    "auth": false,
+    "title": "Align Your Team: Team Collaboration Software | Teamwork.com"
+  },
+  "/solutions/product-development": {
+    "file": "solutions/product-development/index.html",
+    "auth": false,
+    "title": "Product Development Software | Teamwork.com"
+  },
+  "/compare/productive-vs-teamwork": {
+    "file": "compare/productive-vs-teamwork/index.html",
+    "auth": false,
+    "title": "Productive vs Teamwork.com - Feature Comparison for Client Work (2026)"
+  },
+  "/solutions/pipeline-to-project": {
+    "file": "solutions/pipeline-to-project/index.html",
+    "auth": false,
+    "title": "Turn Deals into Projects: Pipeline Management | Teamwork.com"
+  },
+  "/compare/accelo-vs-teamwork": {
+    "file": "compare/accelo-vs-teamwork/index.html",
+    "auth": false,
+    "title": "Accelo vs Teamwork.com - Feature Comparison for Client Work (2026)"
+  },
+  "/compare/monday-vs-teamwork": {
+    "file": "compare/monday-vs-teamwork/index.html",
+    "auth": false,
+    "title": "Monday.com vs Teamwork.com - Feature Comparison for Client Work (2026)"
+  },
+  "/compare/asana-vs-teamwork": {
+    "file": "compare/asana-vs-teamwork/index.html",
+    "auth": false,
+    "title": "Asana vs Teamwork.com - Feature Comparison for Client Work (2026)"
+  },
+  "/compare": {
+    "file": "compare/index.html",
+    "auth": false,
+    "title": "How does Teamwork.com compare?"
+  },
+  "/templates": {
+    "file": "templates/index.html",
+    "auth": false,
+    "title": "Free project management templates for every team | Teamwork.com"
+  },
+  "/compare/clickup-vs-teamwork": {
+    "file": "compare/clickup-vs-teamwork/index.html",
+    "auth": false,
+    "title": "Teamwork.com Vs Clickup: Compare All Features"
+  },
+  "/psa-software-guide": {
+    "file": "psa-software-guide/index.html",
+    "auth": false,
+    "title": "The Complete PSA Software Guide (2026) | Teamwork.com"
+  },
+  "/services": {
+    "file": "services/index.html",
+    "auth": false,
+    "title": "Support services | Teamwork.com"
+  },
+  "/academy": {
+    "file": "academy/index.html",
+    "auth": false,
+    "title": "Academy | Teamwork.com"
+  },
+  "/support": {
+    "file": "support/index.html",
+    "auth": false,
+    "title": "Support Center | Teamwork.com"
+  },
+  "/partners/find-partners": {
+    "file": "partners/find-partners/index.html",
+    "auth": false,
+    "title": "Find a Teamwork Solution Partner!"
+  },
+  "/resource-management-hub": {
+    "file": "resource-management-hub/index.html",
+    "auth": false,
+    "title": "Resource Management Hub | Teamwork.com"
+  },
+  "/client-management-hub": {
+    "file": "client-management-hub/index.html",
+    "auth": false,
+    "title": "Client Management Hub | Teamwork.com"
+  },
+  "/profitability-hub": {
+    "file": "profitability-hub/index.html",
+    "auth": false,
+    "title": "Profitability Hub | Teamwork.com"
+  },
+  "/agile-hub": {
+    "file": "agile-hub/index.html",
+    "auth": false,
+    "title": "Agile Project Management Hub | Teamwork.com"
+  },
+  "/time-tracking-hub": {
+    "file": "time-tracking-hub/index.html",
+    "auth": false,
+    "title": "Time tracking hub | Teamwork.com"
+  },
+  "/customer-stories": {
+    "file": "customer-stories/index.html",
+    "auth": false,
+    "title": "Project Management Testimonials, Reviews & Customer Stories"
+  },
+  "/webinars": {
+    "file": "webinars/index.html",
+    "auth": false,
+    "title": "Join our Webinars to learn about features and best practices"
+  },
+  "/project-management-guide": {
+    "file": "project-management-guide/index.html",
+    "auth": false,
+    "title": "The Ultimate Project Management Guide"
+  },
+  "/blog": {
+    "file": "blog/index.html",
+    "auth": false,
+    "title": "Teamwork.com Blog | Product Updates, Customer Stories & Company News"
+  },
+  "/resources": {
+    "file": "resources/index.html",
+    "auth": false,
+    "title": "Resources Hub | Teamwork.com"
+  },
+  "/2026-strategic-shifts": {
+    "file": "2026-strategic-shifts/index.html",
+    "auth": false,
+    "title": "6 Strategic Shifts for 2026 | Teamwork.com"
+  },
+  "/pricing": {
+    "file": "pricing/index.html",
+    "auth": false,
+    "title": "Pricing Plans | Teamwork.com"
+  },
+  "/about": {
+    "file": "about/index.html",
+    "auth": false,
+    "title": "About Teamwork: Our Story, Our Mission, Our Core Values"
+  },
+  "/compare/scoro-vs-teamwork": {
+    "file": "compare/scoro-vs-teamwork/index.html",
+    "auth": false,
+    "title": "Scoro vs Teamwork.com - Feature Comparison for Client Work (2026)"
+  },
+  "/compare/rocketlane-vs-teamwork": {
+    "file": "compare/rocketlane-vs-teamwork/index.html",
+    "auth": false,
+    "title": "Rocketlane vs Teamwork.com - Feature Comparison for Client Work (2026)"
+  },
+  "/leadership": {
+    "file": "leadership/index.html",
+    "auth": false,
+    "title": "Leadership Team | Teamwork.com"
+  },
+  "/partners": {
+    "file": "partners/index.html",
+    "auth": false,
+    "title": "Partner with us | Teamwork.com"
+  },
+  "/about/press": {
+    "file": "about/press/index.html",
+    "auth": false,
+    "title": "Press & News | Teamwork.com"
+  },
+  "/security": {
+    "file": "security/index.html",
+    "auth": false,
+    "title": "Safe Project Management Solutions | Teamwork.com Security Protocols"
+  },
+  "/careers": {
+    "file": "careers/index.html",
+    "auth": false,
+    "title": "Careers | Teamwork.com"
+  },
+  "/brand": {
+    "file": "brand/index.html",
+    "auth": false,
+    "title": "Project and Team Management Software | Teamwork"
+  },
+  "/contact": {
+    "file": "contact/index.html",
+    "auth": false,
+    "title": "Contact Us | Teamwork.com"
+  },
+  "/startups": {
+    "file": "startups/index.html",
+    "auth": false,
+    "title": "Teamwork for Startups | All Teamwork products free for one year"
+  },
+  "/chat": {
+    "file": "chat/index.html",
+    "auth": false,
+    "title": "Team Chat App: Better Communication & Collaboration | Teamwork"
+  },
+  "/spaces": {
+    "file": "spaces/index.html",
+    "auth": false,
+    "title": "Best place to keep your team & company content | Teamwork Spaces"
+  },
+  "/developers": {
+    "file": "developers/index.html",
+    "auth": false,
+    "title": "Teamwork.com Developer Portal | Teamwork.com"
+  },
+  "/products": {
+    "file": "products/index.html",
+    "auth": false,
+    "title": "One Platform to Run Client Work | Teamwork.com"
+  },
+  "/teams/architecture-engineering": {
+    "file": "teams/architecture-engineering/index.html",
+    "auth": false,
+    "title": "Project management for Architecture and Engineering firms | Teamwork.com"
+  },
+  "/teams/product-teams": {
+    "file": "teams/product-teams/index.html",
+    "auth": false,
+    "title": "Build Great Products Faster | Teamwork.com for Product Teams"
+  },
+  "/solutions/work-management-software": {
+    "file": "solutions/work-management-software/index.html",
+    "auth": false,
+    "title": "Get More Done: Work Management Software | Teamwork.com"
+  },
+  "/agencylife": {
+    "file": "agencylife/index.html",
+    "auth": false,
+    "title": "Benchmark your business against 500+ agencies"
+  },
+  "/roadmap": {
+    "file": "roadmap/index.html",
+    "auth": false,
+    "title": "Recent Release and Future Features Roadmap | Teamwork.com"
+  },
+  "/glossary": {
+    "file": "glossary/index.html",
+    "auth": false,
+    "title": "Project Management Glossary: Key Terms Explained"
+  },
+  "/compare/wrike-vs-teamwork": {
+    "file": "compare/wrike-vs-teamwork/index.html",
+    "auth": false,
+    "title": "Why Teamwork.com is a better alternative to Wrike"
+  },
+  "/compare/kantata-vs-teamwork": {
+    "file": "compare/kantata-vs-teamwork/index.html",
+    "auth": false,
+    "title": "Why Teamwork.com is a better alternative to Kantata"
+  },
+  "/compare/smartsheet-vs-teamwork": {
+    "file": "compare/smartsheet-vs-teamwork/index.html",
+    "auth": false,
+    "title": "Why Teamwork is a better alternative to Smartsheet"
+  },
+  "/legal": {
+    "file": "legal/index.html",
+    "auth": false,
+    "title": "Legal documentation | Teamwork.com"
+  },
+  "/compare/ms-planner-vs-teamwork": {
+    "file": "compare/ms-planner-vs-teamwork/index.html",
+    "auth": false,
+    "title": "Why Teamwork is a better alternative to MS Planner"
+  },
+  "/customer-stories/oic-advisors": {
+    "file": "customer-stories/oic-advisors/index.html",
+    "auth": false,
+    "title": "OIC Advisors customer story | Teamwork.com"
+  },
+  "/customer-stories/community-link-consulting": {
+    "file": "customer-stories/community-link-consulting/index.html",
+    "auth": false,
+    "title": "Community Link Consulting customer story | Teamwork.com"
+  },
+  "/templates/client-onboarding-checklist": {
+    "file": "templates/client-onboarding-checklist/index.html",
+    "auth": false,
+    "title": "Capture client requests and kick off work automatically with forms that turn every submission into a trackable task in Teamwork.com."
+  },
+  "/customer-stories/sugarcrm": {
+    "file": "customer-stories/sugarcrm/index.html",
+    "auth": false,
+    "title": "SugarCRM customer story | Teamwork.com"
+  },
+  "/ai/mcp": {
+    "file": "ai/mcp/index.html",
+    "auth": false,
+    "title": "TeamworkAI MCP server | Teamwork.com"
+  },
+  "/templates/project-management": {
+    "file": "templates/project-management/index.html",
+    "auth": false,
+    "title": "Use Our Free Project Management Templates"
+  },
+  "/ai/teammates": {
+    "file": "ai/teammates/index.html",
+    "auth": false,
+    "title": "AI Teammates | Teamwork.com"
+  },
+  "/legal/teamwork-com-ai-policy": {
+    "file": "legal/teamwork-com-ai-policy/index.html",
+    "auth": false,
+    "title": "Teamwork.com AI policy | Teamwork.com"
+  },
+  "/desk/features": {
+    "file": "desk/features/index.html",
+    "auth": false,
+    "title": "Help Desk Software Features | Teamwork.com"
+  },
+  "/desk/pricing": {
+    "file": "desk/pricing/index.html",
+    "auth": false,
+    "title": "Desk Pricing Plans | Teamwork.com"
+  },
+  "/solutions/support-teams": {
+    "file": "solutions/support-teams/index.html",
+    "auth": false,
+    "title": "Software to Keep Support Teams on Track | Teamwork.com"
+  },
+  "/solutions/marketing-agency-desk": {
+    "file": "solutions/marketing-agency-desk/index.html",
+    "auth": false,
+    "title": "Help desk software for marketing agencies"
+  },
+  "/solutions/teamwork-teamwork-desk-integration": {
+    "file": "solutions/teamwork-teamwork-desk-integration/index.html",
+    "auth": false,
+    "title": "Client management with Teamwork and Teamwork Desk"
+  },
+  "/signup/desk": {
+    "file": "signup/desk/index.html",
+    "auth": false,
+    "title": "Sign Up for Desk | Teamwork.com"
+  },
+  "/desk.md": {
+    "file": "desk.md/index.html",
+    "auth": false,
+    "title": ""
+  },
+  "/product/resource-management/tentative-projects": {
+    "file": "product/resource-management/tentative-projects/index.html",
+    "auth": false,
+    "title": "Tentative Projects - Resource Management | Teamwork.com"
+  },
+  "/product/board-view": {
+    "file": "product/board-view/index.html",
+    "auth": false,
+    "title": "Use kanban boards to track your work with Board View in Teamwork.com"
+  },
+  "/product/gantt-chart": {
+    "file": "product/gantt-chart/index.html",
+    "auth": false,
+    "title": "Online Gantt Chart Maker | Try For Free | Teamwork.com"
+  },
+  "/resources/resource-management-guide": {
+    "file": "resources/resource-management-guide/index.html",
+    "auth": false,
+    "title": "Master Resource Management—Without the Chaos"
+  },
+  "/product/reporting/teamwork-connect": {
+    "file": "product/reporting/teamwork-connect/index.html",
+    "auth": false,
+    "title": "Teamwork Connect | Teamwork.com"
+  },
+  "/resources/calculators/billable-utilization-rate": {
+    "file": "resources/calculators/billable-utilization-rate/index.html",
+    "auth": false,
+    "title": "Utilization Rate calculator | Teamwork.com"
+  },
+  "/integrations/products/teamworkai": {
+    "file": "integrations/products/teamworkai/index.html",
+    "auth": false,
+    "title": "TeamworkAI Integrations for Client Work | Teamwork.com"
+  },
+  "/integrations/products/projects": {
+    "file": "integrations/products/projects/index.html",
+    "auth": false,
+    "title": "Teamwork Projects Integrations for Agencies | Teamwork.com"
+  },
+  "/integrations/products/desk": {
+    "file": "integrations/products/desk/index.html",
+    "auth": false,
+    "title": "Teamwork Desk Integrations for Support Teams | Teamwork.com"
+  },
+  "/integrations/products/chat": {
+    "file": "integrations/products/chat/index.html",
+    "auth": false,
+    "title": "Teamwork Chat Integrations for Project Teams | Teamwork.com"
+  },
+  "/integrations/products/spaces": {
+    "file": "integrations/products/spaces/index.html",
+    "auth": false,
+    "title": "Teamwork Spaces Integrations for Teams | Teamwork.com"
+  },
+  "/integrations/categories/connectors": {
+    "file": "integrations/categories/connectors/index.html",
+    "auth": false,
+    "title": "Project and Team Management Software | Teamwork.com"
+  },
+  "/integrations/categories/file-storage": {
+    "file": "integrations/categories/file-storage/index.html",
+    "auth": false,
+    "title": "Project and Team Management Software | Teamwork.com"
+  },
+  "/integrations/categories/importers": {
+    "file": "integrations/categories/importers/index.html",
+    "auth": false,
+    "title": "Project and Team Management Software | Teamwork.com"
+  },
+  "/integrations/categories/developer-tools": {
+    "file": "integrations/categories/developer-tools/index.html",
+    "auth": false,
+    "title": "Project and Team Management Software | Teamwork.com"
+  },
+  "/integrations/categories/project-management": {
+    "file": "integrations/categories/project-management/index.html",
+    "auth": false,
+    "title": "Project and Team Management Software | Teamwork.com"
+  },
+  "/integrations/categories/communications": {
+    "file": "integrations/categories/communications/index.html",
+    "auth": false,
+    "title": "Project and Team Management Software | Teamwork.com"
+  },
+  "/integrations/apps/desktop-apps": {
+    "file": "integrations/apps/desktop-apps/index.html",
+    "auth": false,
+    "title": "Desktop Apps for Project Management Teams | Teamwork.com"
+  },
+  "/integrations/apps/mobile-apps": {
+    "file": "integrations/apps/mobile-apps/index.html",
+    "auth": false,
+    "title": "Mobile Apps for Project Management Teams | Teamwork.com"
+  },
+  "/services/implementation": {
+    "file": "services/implementation/index.html",
+    "auth": false,
+    "title": "Faster Onboarding for Client Services Businesses (50+ Employees) | Teamwork.com"
+  },
+  "/teams/creative-project-management-software": {
+    "file": "teams/creative-project-management-software/index.html",
+    "auth": false,
+    "title": "The Best Creative Project Management Software. Made For Agencies"
+  },
+  "/teams/project-management-seo": {
+    "file": "teams/project-management-seo/index.html",
+    "auth": false,
+    "title": "Manage SEO Projects & Resources | Teamwork.com"
+  },
+  "/solutions/remote-work": {
+    "file": "solutions/remote-work/index.html",
+    "auth": false,
+    "title": "Remote Working Software for Teams | Teamwork"
+  },
+  "/solutions/task-management-software": {
+    "file": "solutions/task-management-software/index.html",
+    "auth": false,
+    "title": "Keep Every Task on Track: Task Management | Teamwork.com"
+  },
+  "/teams/project-management-hr": {
+    "file": "teams/project-management-hr/index.html",
+    "auth": false,
+    "title": "Project Management Software for HR Teams | Teamwork.com"
+  },
+  "/product/client-users": {
+    "file": "product/client-users/index.html",
+    "auth": false,
+    "title": "New to Teamwork: Unlimited Client Users for better collaboration"
+  },
+  "/compare/basecamp-vs-teamwork": {
+    "file": "compare/basecamp-vs-teamwork/index.html",
+    "auth": false,
+    "title": "Why Teamwork is a better alternative to Basecamp"
+  },
+  "/compare/harvest-vs-teamwork": {
+    "file": "compare/harvest-vs-teamwork/index.html",
+    "auth": false,
+    "title": "Harvest vs Teamwork.com - Feature Comparison for Client Work (2026)"
+  },
+  "/compare/trello-vs-teamwork": {
+    "file": "compare/trello-vs-teamwork/index.html",
+    "auth": false,
+    "title": "Why Teamwork is a better alternative to Trello"
+  },
+  "/about/author/ben-brigden": {
+    "file": "about/author/ben-brigden/index.html",
+    "auth": false,
+    "title": "Content Marketing Manager"
+  },
+  "/psa-software-guide/what-is-psa-software": {
+    "file": "psa-software-guide/what-is-psa-software/index.html",
+    "auth": false,
+    "title": "What Is PSA Software? Definition & Guide | Teamwork.com"
+  },
+  "/psa-software-guide/psa-vs-project-management-software": {
+    "file": "psa-software-guide/psa-vs-project-management-software/index.html",
+    "auth": false,
+    "title": "PSA vs. Project Management Software: The Real Difference | Teamwork.com"
+  },
+  "/psa-software-guide/when-to-choose-psa-software": {
+    "file": "psa-software-guide/when-to-choose-psa-software/index.html",
+    "auth": false,
+    "title": "When to Choose PSA Software: 6 Signals + Cloud Deployment"
+  },
+  "/psa-software-guide/how-to-choose-the-best-psa-software": {
+    "file": "psa-software-guide/how-to-choose-the-best-psa-software/index.html",
+    "auth": false,
+    "title": "How to Choose the Best PSA Software (Evaluation Framework) | Teamwork.com"
+  },
+  "/psa-software-guide/psa-features-and-requirements": {
+    "file": "psa-software-guide/psa-features-and-requirements/index.html",
+    "auth": false,
+    "title": "Core Professional Services Automation (PSA) Features & Requirements | Teamwork.com"
+  },
+  "/psa-software-guide/psa-software-examples-and-comparison": {
+    "file": "psa-software-guide/psa-software-examples-and-comparison/index.html",
+    "auth": false,
+    "title": "PSA Software Examples & Comparison: The Three Categories | Teamwork.com"
+  },
+  "/psa-software-guide/psa-for-agencies-and-consulting-firms": {
+    "file": "psa-software-guide/psa-for-agencies-and-consulting-firms/index.html",
+    "auth": false,
+    "title": "Professional Services Project Management Software for Agencies | Teamwork.com"
+  },
+  "/psa-software-guide/benefits-and-roi-of-psa-software": {
+    "file": "psa-software-guide/benefits-and-roi-of-psa-software/index.html",
+    "auth": false,
+    "title": "Benefits & ROI of PSA Software: What It Actually Returns | Teamwork.com"
+  },
+  "/academy/get-started/plan-resources": {
+    "file": "academy/get-started/plan-resources/index.html",
+    "auth": false,
+    "title": "Getting Started: Plan Resources"
+  },
+  "/psa-software-guide/psa-software-statistics": {
+    "file": "psa-software-guide/psa-software-statistics/index.html",
+    "auth": false,
+    "title": "PSA Software Statistics 2026: Every Data Point in One Place | Teamwork.com"
+  },
+  "/academy/get-started/project-delivery": {
+    "file": "academy/get-started/project-delivery/index.html",
+    "auth": false,
+    "title": "Getting Started: Project Delivery"
+  },
+  "/academy/set-up-clients-video": {
+    "file": "academy/set-up-clients-video/index.html",
+    "auth": false,
+    "title": "Set Up Clients Video | Teamwork.com"
+  },
+  "/academy/organize-your-projects-video": {
+    "file": "academy/organize-your-projects-video/index.html",
+    "auth": false,
+    "title": "Organize Your Projects Video | Teamwork.com"
+  },
+  "/academy/teamwork-hierarchy-video": {
+    "file": "academy/teamwork-hierarchy-video/index.html",
+    "auth": false,
+    "title": "Teamwork Hierarchy Video | Teamwork.com"
+  },
+  "/academy/project-templates-video": {
+    "file": "academy/project-templates-video/index.html",
+    "auth": false,
+    "title": "Project Templates Video | Teamwork.com"
+  },
+  "/academy/time-tracking-video": {
+    "file": "academy/time-tracking-video/index.html",
+    "auth": false,
+    "title": "Time Tracking Video | Teamwork.com"
+  },
+  "/academy/capacity-planning-video": {
+    "file": "academy/capacity-planning-video/index.html",
+    "auth": false,
+    "title": "Capacity Planning Video | Teamwork.com"
+  },
+  "/academy/budgets-profitability-video": {
+    "file": "academy/budgets-profitability-video/index.html",
+    "auth": false,
+    "title": "Budgets & Profitability Video | Teamwork.com"
+  },
+  "/academy/reporting-video": {
+    "file": "academy/reporting-video/index.html",
+    "auth": false,
+    "title": "Reporting Video | Teamwork.com"
+  },
+  "/academy/project-structure-video": {
+    "file": "academy/project-structure-video/index.html",
+    "auth": false,
+    "title": "Project Structure Video | Teamwork.com"
+  },
+  "/academy/work-on-tasks-video": {
+    "file": "academy/work-on-tasks-video/index.html",
+    "auth": false,
+    "title": "Work on Tasks Video | Teamwork.com"
+  },
+  "/academy/introduce-my-work-video": {
+    "file": "academy/introduce-my-work-video/index.html",
+    "auth": false,
+    "title": "Introduction to My Work Video | Teamwork.com"
+  },
+  "/academy/visualize-your-workload-video": {
+    "file": "academy/visualize-your-workload-video/index.html",
+    "auth": false,
+    "title": "Visualize Your Workload Video | Teamwork.com"
+  },
+  "/academy/ways-to-log-time-video": {
+    "file": "academy/ways-to-log-time-video/index.html",
+    "auth": false,
+    "title": "Ways to Log Time Video | Teamwork.com"
+  },
+  "/academy/use-your-inbox-video": {
+    "file": "academy/use-your-inbox-video/index.html",
+    "auth": false,
+    "title": "Use Your Inbox Video | Teamwork.com"
+  },
+  "/academy/category/fundamentals": {
+    "file": "academy/category/fundamentals/index.html",
+    "auth": false,
+    "title": "Fundamentals"
+  },
+  "/academy/create-work-course": {
+    "file": "academy/create-work-course/index.html",
+    "auth": false,
+    "title": "Create Work Course | Teamwork.com"
+  },
+  "/academy/change-management-video": {
+    "file": "academy/change-management-video/index.html",
+    "auth": false,
+    "title": "Change Management Video | Teamwork.com"
+  },
+  "/academy/communication-video": {
+    "file": "academy/communication-video/index.html",
+    "auth": false,
+    "title": "Team Communication Video | Teamwork.com"
+  },
+  "/academy/consistency-video": {
+    "file": "academy/consistency-video/index.html",
+    "auth": false,
+    "title": "Building Consistency Video | Teamwork.com"
+  },
+  "/academy/get-started-fundamentals-pdf": {
+    "file": "academy/get-started-fundamentals-pdf/index.html",
+    "auth": false,
+    "title": "Get Started: Fundamentals | Teamwork.com"
+  },
+  "/academy/invite-users-guide": {
+    "file": "academy/invite-users-guide/index.html",
+    "auth": false,
+    "title": "How to Invite Users | Teamwork.com"
+  },
+  "/academy/set-up-clients-guide": {
+    "file": "academy/set-up-clients-guide/index.html",
+    "auth": false,
+    "title": "Set Up Clients Guide | Teamwork.com"
+  },
+  "/academy/communicate-on-work-guide": {
+    "file": "academy/communicate-on-work-guide/index.html",
+    "auth": false,
+    "title": "Communicate on Work Guide | Teamwork.com"
+  },
+  "/academy/set-up-workflows-guide": {
+    "file": "academy/set-up-workflows-guide/index.html",
+    "auth": false,
+    "title": "Set Up Workflows Guide | Teamwork.com"
+  },
+  "/academy/daily-work-management-guide": {
+    "file": "academy/daily-work-management-guide/index.html",
+    "auth": false,
+    "title": "Daily Work Management Guide | Teamwork.com"
+  },
+  "/academy/create-work-guide": {
+    "file": "academy/create-work-guide/index.html",
+    "auth": false,
+    "title": "Create Work Guide | Teamwork.com"
+  },
+  "/academy/project-formula-guide": {
+    "file": "academy/project-formula-guide/index.html",
+    "auth": false,
+    "title": "The Project Formula Guide | Teamwork.com"
+  },
+  "/academy/site-setup-guide": {
+    "file": "academy/site-setup-guide/index.html",
+    "auth": false,
+    "title": "Site Setup Guide | Teamwork.com"
+  },
+  "/academy/end-user-handout-pdf": {
+    "file": "academy/end-user-handout-pdf/index.html",
+    "auth": false,
+    "title": "End User Handout | Teamwork.com"
+  },
+  "/academy/communicate-work-course": {
+    "file": "academy/communicate-work-course/index.html",
+    "auth": false,
+    "title": "Communicate on Work Course | Teamwork.com"
+  },
+  "/academy/set-up-workflows-course": {
+    "file": "academy/set-up-workflows-course/index.html",
+    "auth": false,
+    "title": "Set Up Workflows Course | Teamwork.com"
+  },
+  "/academy/daily-work-management-course": {
+    "file": "academy/daily-work-management-course/index.html",
+    "auth": false,
+    "title": "Daily Work Management Course | Teamwork.com"
+  },
+  "/academy/category/resource-management": {
+    "file": "academy/category/resource-management/index.html",
+    "auth": false,
+    "title": "Resource Management"
+  },
+  "/academy/get-started-resource-management-pdf": {
+    "file": "academy/get-started-resource-management-pdf/index.html",
+    "auth": false,
+    "title": "Get Started: Resource Management"
+  },
+  "/academy/track-billable-time-video": {
+    "file": "academy/track-billable-time-video/index.html",
+    "auth": false,
+    "title": "Track Billable Time Video | Teamwork.com"
+  },
+  "/academy/workload-planner-guide": {
+    "file": "academy/workload-planner-guide/index.html",
+    "auth": false,
+    "title": "Workload Planner Guide | Teamwork.com"
+  },
+  "/academy/track-your-time-guide": {
+    "file": "academy/track-your-time-guide/index.html",
+    "auth": false,
+    "title": "How to Track Your Time | Teamwork.com"
+  },
+  "/academy/planning-overview-guide": {
+    "file": "academy/planning-overview-guide/index.html",
+    "auth": false,
+    "title": "Planning Overview Guide | Teamwork.com"
+  },
+  "/academy/resource-scheduler-guide": {
+    "file": "academy/resource-scheduler-guide/index.html",
+    "auth": false,
+    "title": "Resource Scheduler Guide | Teamwork.com"
+  },
+  "/academy/planning-chart-video": {
+    "file": "academy/planning-chart-video/index.html",
+    "auth": false,
+    "title": "Planning: Chart Video | Teamwork.com"
+  },
+  "/academy/time-tracking-change-management-course": {
+    "file": "academy/time-tracking-change-management-course/index.html",
+    "auth": false,
+    "title": "Time Tracking: Change Management"
+  },
+  "/academy/planning-overview-video": {
+    "file": "academy/planning-overview-video/index.html",
+    "auth": false,
+    "title": "Planning: Overview Video | Teamwork.com"
+  },
+  "/academy/planning-workload-video": {
+    "file": "academy/planning-workload-video/index.html",
+    "auth": false,
+    "title": "Planning: Workload Video | Teamwork.com"
+  },
+  "/academy/user-rates-guide": {
+    "file": "academy/user-rates-guide/index.html",
+    "auth": false,
+    "title": "User Rates Guide | Teamwork.com"
+  },
+  "/academy/category/budgets-profitability": {
+    "file": "academy/category/budgets-profitability/index.html",
+    "auth": false,
+    "title": "Budgets & Profitability Hub | Teamwork.com"
+  },
+  "/academy/standard-budgets-guide": {
+    "file": "academy/standard-budgets-guide/index.html",
+    "auth": false,
+    "title": "Standard Budgets Guide | Teamwork.com"
+  },
+  "/academy/retainer-budgets-guide": {
+    "file": "academy/retainer-budgets-guide/index.html",
+    "auth": false,
+    "title": "Retainer Budgets Guide | Teamwork.com"
+  },
+  "/academy/invoice-your-clients-video": {
+    "file": "academy/invoice-your-clients-video/index.html",
+    "auth": false,
+    "title": "Invoice Your Clients Video | Teamwork.com"
+  },
+  "/academy/expenses-video": {
+    "file": "academy/expenses-video/index.html",
+    "auth": false,
+    "title": "Tracking Expenses Video | Teamwork.com"
+  },
+  "/academy/retainer-budget-video": {
+    "file": "academy/retainer-budget-video/index.html",
+    "auth": false,
+    "title": "Retainer Budget Video | Teamwork.com"
+  },
+  "/academy/time-materials-budget-video": {
+    "file": "academy/time-materials-budget-video/index.html",
+    "auth": false,
+    "title": "Time & Materials Budgets | Teamwork.com"
+  },
+  "/academy/fixed-fee-budget-video": {
+    "file": "academy/fixed-fee-budget-video/index.html",
+    "auth": false,
+    "title": "Fixed Fee Budgets Video | Teamwork.com"
+  },
+  "/academy/set-up-user-rates-video": {
+    "file": "academy/set-up-user-rates-video/index.html",
+    "auth": false,
+    "title": "Set Up User Rates Video | Teamwork.com"
+  },
+  "/academy/category/reporting-analytics": {
+    "file": "academy/category/reporting-analytics/index.html",
+    "auth": false,
+    "title": "Reporting & Analytics"
+  },
+  "/academy/3-numbers-you-should-know-video": {
+    "file": "academy/3-numbers-you-should-know-video/index.html",
+    "auth": false,
+    "title": "3 Numbers You Should Know | Teamwork.com"
+  },
+  "/academy/report-profitability-video": {
+    "file": "academy/report-profitability-video/index.html",
+    "auth": false,
+    "title": "Profitability Report Video | Teamwork.com"
+  },
+  "/academy/custom-reports-guide": {
+    "file": "academy/custom-reports-guide/index.html",
+    "auth": false,
+    "title": "Custom Reports Guide | Teamwork.com"
+  },
+  "/academy/report-utilization-video": {
+    "file": "academy/report-utilization-video/index.html",
+    "auth": false,
+    "title": "Utilization Report Video | Teamwork.com"
+  },
+  "/academy/report-time-video": {
+    "file": "academy/report-time-video/index.html",
+    "auth": false,
+    "title": "Time Reporting Video | Teamwork.com"
+  },
+  "/academy/report-project-health-video": {
+    "file": "academy/report-project-health-video/index.html",
+    "auth": false,
+    "title": "Project Health Report Video | Teamwork.com"
+  },
+  "/academy/category/efficiency": {
+    "file": "academy/category/efficiency/index.html",
+    "auth": false,
+    "title": "Efficiency"
+  },
+  "/academy/category/teamwork-desk": {
+    "file": "academy/category/teamwork-desk/index.html",
+    "auth": false,
+    "title": "Teamwork Desk"
+  },
+  "/academy/category/teamworkers-corner": {
+    "file": "academy/category/teamworkers-corner/index.html",
+    "auth": false,
+    "title": "Teamworker’s Corner"
+  },
+  "/resources/capacity-planning-guide": {
+    "file": "resources/capacity-planning-guide/index.html",
+    "auth": false,
+    "title": "The ultimate guide to capacity planning"
+  },
+  "/resources/utilization-report": {
+    "file": "resources/utilization-report/index.html",
+    "auth": false,
+    "title": "Measuring And Improving Billable Utilization Ebook | Teamwork.com"
+  },
+  "/resources/state-of-agency-operations": {
+    "file": "resources/state-of-agency-operations/index.html",
+    "auth": false,
+    "title": "The State of Agency Operations"
+  },
+  "/resources/state-of-it-services-operations": {
+    "file": "resources/state-of-it-services-operations/index.html",
+    "auth": false,
+    "title": "The State of IT Services Operations"
+  },
+  "/agencylife/webinars/3-steps-to-simplify-capacity-planning": {
+    "file": "agencylife/webinars/3-steps-to-simplify-capacity-planning/index.html",
+    "auth": false,
+    "title": "3 Steps to Simplify Your Capacity Planning"
+  },
+  "/agencylife/webinars/how-to-avoid-unprofitable-client-work-a-guide-to-mastering-utilization-rates": {
+    "file": "agencylife/webinars/how-to-avoid-unprofitable-client-work-a-guide-to-mastering-utilization-rates/index.html",
+    "auth": false,
+    "title": "How to Avoid Unprofitable Client Work: A Guide to Mastering Utilization Rates"
+  },
+  "/agencylife/webinars/capacity-management-for-your-agency": {
+    "file": "agencylife/webinars/capacity-management-for-your-agency/index.html",
+    "auth": false,
+    "title": "Capacity Management: How To Do Time Tracking Your Team Won't Hate"
+  },
+  "/agencylife/podcast/3-keys-to-capacity-management": {
+    "file": "agencylife/podcast/3-keys-to-capacity-management/index.html",
+    "auth": false,
+    "title": "3 Keys to Capacity Management - Agency Life Podcast"
+  },
+  "/agencylife/podcast/3-ways-to-manage-client-ey-clients": {
+    "file": "agencylife/podcast/3-ways-to-manage-client-ey-clients/index.html",
+    "auth": false,
+    "title": "3 Ways to Manage \"Client-ey\" Clients"
+  },
+  "/agencylife/podcast/3-steps-to-avoid-furious-clients": {
+    "file": "agencylife/podcast/3-steps-to-avoid-furious-clients/index.html",
+    "auth": false,
+    "title": "3 Steps to Avoid Furious Clients - Agency Life Podcast"
+  },
+  "/agencylife/webinars/client-overservicing": {
+    "file": "agencylife/webinars/client-overservicing/index.html",
+    "auth": false,
+    "title": "How To Stop Overservicing Clients For Good"
+  },
+  "/agencylife/podcast/the-surprising-way-to-combat-client-churn": {
+    "file": "agencylife/podcast/the-surprising-way-to-combat-client-churn/index.html",
+    "auth": false,
+    "title": "The Surprising Way to Combat Client Churn - Agency Life Podcast"
+  },
+  "/agencylife/webinars/teamwork-hubspot-leadtoloyalty-webinar": {
+    "file": "agencylife/webinars/teamwork-hubspot-leadtoloyalty-webinar/index.html",
+    "auth": false,
+    "title": "Lead to Loyalty: Optimize the Client Lifecycle with HubSpot & Teamwork.com"
+  },
+  "/project-management-guide/how-to-prepare-a-project-management-report": {
+    "file": "project-management-guide/how-to-prepare-a-project-management-report/index.html",
+    "auth": false,
+    "title": "How To Write A Great Project Management Report | Teamwork.com"
+  },
+  "/agencylife/podcast/the-5-financial-metrics-top-agencies-get-right": {
+    "file": "agencylife/podcast/the-5-financial-metrics-top-agencies-get-right/index.html",
+    "auth": false,
+    "title": "The 5 Financial Metrics Top Agencies Get Right - Agency Life Podcast"
+  },
+  "/agencylife/webinars/increasing-agency-margins": {
+    "file": "agencylife/webinars/increasing-agency-margins/index.html",
+    "auth": false,
+    "title": "Increasing Agency Margins - Agency Life Webinar"
+  },
+  "/agencylife/podcast/41-profit-margins-with-a-results-only-comp-model": {
+    "file": "agencylife/podcast/41-profit-margins-with-a-results-only-comp-model/index.html",
+    "auth": false,
+    "title": "41% Profit Margins With a Results-Only Comp Model - Agency Life Podcast"
+  },
+  "/agencylife/webinars/how-to-command-higher-fees-for-your-agency": {
+    "file": "agencylife/webinars/how-to-command-higher-fees-for-your-agency/index.html",
+    "auth": false,
+    "title": "How to Command Higher Fees for Your Agency - Agency Life Webinar"
+  },
+  "/agencylife/webinars/when-to-grow": {
+    "file": "agencylife/webinars/when-to-grow/index.html",
+    "auth": false,
+    "title": "Everything to Know About Growing Your Agency - Agency Life Webinar"
+  },
+  "/agencylife/podcast/5-steps-to-fix-your-pipeline-the-dead-lead-reviver": {
+    "file": "agencylife/podcast/5-steps-to-fix-your-pipeline-the-dead-lead-reviver/index.html",
+    "auth": false,
+    "title": "5 Steps to Fix Your Pipeline (The Dead Lead Reviver) - Agency Life Podcast"
+  },
+  "/agencylife/podcast/the-must-have-forecast-model-to-grow-your-agency": {
+    "file": "agencylife/podcast/the-must-have-forecast-model-to-grow-your-agency/index.html",
+    "auth": false,
+    "title": "The Must-Have Forecast Model to Grow Your Agency - Agency Life Podcast"
+  },
+  "/agencylife/webinars/mastering-agency-profitability": {
+    "file": "agencylife/webinars/mastering-agency-profitability/index.html",
+    "auth": false,
+    "title": "Mastering Agency Profitability - Agency Life Webinar"
+  },
+  "/agencylife/webinars/value-based-pricing-myth": {
+    "file": "agencylife/webinars/value-based-pricing-myth/index.html",
+    "auth": false,
+    "title": "The Value-Based Pricing Myth - Agency Life Webinar"
+  },
+  "/agencylife/podcast/how-to-maximize-agency-profitability-next-year": {
+    "file": "agencylife/podcast/how-to-maximize-agency-profitability-next-year/index.html",
+    "auth": false,
+    "title": "How to Maximize Agency Profitability - Agency Life Podcast"
+  },
+  "/resources/mastering-agency-profitability-guidebook": {
+    "file": "resources/mastering-agency-profitability-guidebook/index.html",
+    "auth": false,
+    "title": "Mastering Agency Profitability Guidebook | Teamwork"
+  },
+  "/resources/guide-to-scaling-your-agency": {
+    "file": "resources/guide-to-scaling-your-agency/index.html",
+    "auth": false,
+    "title": "The Ultimate Guide to Scaling Your Agency | Teamwork"
+  },
+  "/resources/calculators/revenue-gain": {
+    "file": "resources/calculators/revenue-gain/index.html",
+    "auth": false,
+    "title": "Revenue gain calculator | Teamwork.com"
+  },
+  "/resources/time-management-benchmarking-report": {
+    "file": "resources/time-management-benchmarking-report/index.html",
+    "auth": false,
+    "title": "Agency Time Management Report | Teamwork"
+  },
+  "/agencylife/webinars/a-time-tracking-framework-to-keep-your-team-engaged": {
+    "file": "agencylife/webinars/a-time-tracking-framework-to-keep-your-team-engaged/index.html",
+    "auth": false,
+    "title": "A time-tracking framework to keep your team engaged webinar"
+  },
+  "/project-management-guide/agile-project-management": {
+    "file": "project-management-guide/agile-project-management/index.html",
+    "auth": false,
+    "title": "What Is Agile Project Management? The Agile Methodology Guide"
+  },
+  "/agencylife/podcast/the-4-p-s-of-time-tracking-your-team-won-t-hate": {
+    "file": "agencylife/podcast/the-4-p-s-of-time-tracking-your-team-won-t-hate/index.html",
+    "auth": false,
+    "title": "The 4 P’s of Time-Tracking Your Team Won’t Hate - Agency Life Podcast"
+  },
+  "/agencylife/webinars/time-autonomy-in-your-agency": {
+    "file": "agencylife/webinars/time-autonomy-in-your-agency/index.html",
+    "auth": false,
+    "title": "Changing Your Agency’s Relationship with Time - Agency Life Webinar"
+  },
+  "/project-management-guide/why-is-project-management-important": {
+    "file": "project-management-guide/why-is-project-management-important/index.html",
+    "auth": false,
+    "title": "Why Is Project Management Important? | Teamwork.com"
+  },
+  "/project-management-guide/what-does-a-project-manager-do": {
+    "file": "project-management-guide/what-does-a-project-manager-do/index.html",
+    "auth": false,
+    "title": "What Does A Project Manager Do | Teamwork.com"
+  },
+  "/project-management-guide/how-to-become-a-project-manager": {
+    "file": "project-management-guide/how-to-become-a-project-manager/index.html",
+    "auth": false,
+    "title": "How To Become A Project Manager: The 2026 Guide"
+  },
+  "/project-management-guide/project-management-skills": {
+    "file": "project-management-guide/project-management-skills/index.html",
+    "auth": false,
+    "title": "The 6 Key & Essential Project Management Skills Every PM Needs | Teamwork.com"
+  },
+  "/project-management-guide/project-stakeholders": {
+    "file": "project-management-guide/project-stakeholders/index.html",
+    "auth": false,
+    "title": "Project Stakeholders - Who Are They & Why Are They Important? | Teamwork.com"
+  },
+  "/project-management-guide/project-management-methodologies": {
+    "file": "project-management-guide/project-management-methodologies/index.html",
+    "auth": false,
+    "title": "Project Management Methodologies Examples & Overview | Teamwork.com"
+  },
+  "/project-management-guide/project-charter": {
+    "file": "project-management-guide/project-charter/index.html",
+    "auth": false,
+    "title": "What is a Project Charter? Project Charter Meaning, Purpose & Definition | Teamwork.com"
+  },
+  "/project-management-guide/faq": {
+    "file": "project-management-guide/faq/index.html",
+    "auth": false,
+    "title": "Your FAQs about project management, answered | Teamwork.com"
+  },
+  "/blog/category/client-management": {
+    "file": "blog/category/client-management/index.html",
+    "auth": false,
+    "title": "See all client management blogs | Teamwork.com"
+  },
+  "/project-management-guide/project-management-plan": {
+    "file": "project-management-guide/project-management-plan/index.html",
+    "auth": false,
+    "title": "How to Create a Project Plan: Samples & Free Template"
+  },
+  "/blog/category/resource-management": {
+    "file": "blog/category/resource-management/index.html",
+    "auth": false,
+    "title": "See all resource management blogs | Teamwork.com"
+  },
+  "/blog/category/expert-views": {
+    "file": "blog/category/expert-views/index.html",
+    "auth": false,
+    "title": "See all expert views blogs | Teamwork.com"
+  },
+  "/blog/category/product-news": {
+    "file": "blog/category/product-news/index.html",
+    "auth": false,
+    "title": "See all product news blogs | Teamwork.com"
+  },
+  "/blog/category/marketing": {
+    "file": "blog/category/marketing/index.html",
+    "auth": false,
+    "title": "See all marketing blogs | Teamwork.com"
+  },
+  "/blog/category/company-news": {
+    "file": "blog/category/company-news/index.html",
+    "auth": false,
+    "title": "See all company news blogs | Teamwork.com"
+  },
+  "/blog/category/comparisons": {
+    "file": "blog/category/comparisons/index.html",
+    "auth": false,
+    "title": "See all comparisons blogs | Teamwork.com"
+  },
+  "/blog/category/it-services": {
+    "file": "blog/category/it-services/index.html",
+    "auth": false,
+    "title": "See all IT services blogs | Teamwork.com"
+  },
+  "/blog/category/project-management": {
+    "file": "blog/category/project-management/index.html",
+    "auth": false,
+    "title": "See all project management blogs | Teamwork.com"
+  },
+  "/blog/category/all": {
+    "file": "blog/category/all/index.html",
+    "auth": false,
+    "title": "See all blogs | Teamwork.com"
+  },
+  "/blog/page/2": {
+    "file": "blog/page/2/index.html",
+    "auth": false,
+    "title": "Teamwork.com Blog - Page 2 | Product Updates, Customer Stories & Company News"
+  },
+  "/blog/page/3": {
+    "file": "blog/page/3/index.html",
+    "auth": false,
+    "title": "Teamwork.com Blog - Page 3 | Product Updates, Customer Stories & Company News"
+  },
+  "/blog/page/5": {
+    "file": "blog/page/5/index.html",
+    "auth": false,
+    "title": "Teamwork.com Blog - Page 5 | Product Updates, Customer Stories & Company News"
+  },
+  "/blog/page/4": {
+    "file": "blog/page/4/index.html",
+    "auth": false,
+    "title": "Teamwork.com Blog - Page 4 | Product Updates, Customer Stories & Company News"
+  },
+  "/agencylife/discover": {
+    "file": "agencylife/discover/index.html",
+    "auth": false,
+    "title": "Discover All Agency Life Content Presented by Teamwork.com"
+  },
+  "/agencylife/podcast/the-culture-killing-habit-youve-gotta-stop": {
+    "file": "agencylife/podcast/the-culture-killing-habit-youve-gotta-stop/index.html",
+    "auth": false,
+    "title": "The Culture Killing Habit You’ve Gotta Stop w/ Cas Majid"
+  },
+  "/agencylife/webinars/state-of-agency-operations-roundtable": {
+    "file": "agencylife/webinars/state-of-agency-operations-roundtable/index.html",
+    "auth": false,
+    "title": "State of Agency Operations | Teamwork.com"
+  },
+  "/agencylife/podcast/small-habits-killing-your-pitch-based-on-science": {
+    "file": "agencylife/podcast/small-habits-killing-your-pitch-based-on-science/index.html",
+    "auth": false,
+    "title": "Small Habits KILLING Your Pitch (Based on Science) w/ Tom Martin"
+  },
+  "/agencylife/podcast/300-percent-higher-lead-conversion-after-this-change": {
+    "file": "agencylife/podcast/300-percent-higher-lead-conversion-after-this-change/index.html",
+    "auth": false,
+    "title": "300% Higher Lead Conversion After This Change w/ Sean Sweet"
+  },
+  "/agencylife/podcast/the-hire-you-cant-afford-to-get-wrong": {
+    "file": "agencylife/podcast/the-hire-you-cant-afford-to-get-wrong/index.html",
+    "auth": false,
+    "title": "The Hire You Can’t Afford to Get Wrong w/ Galen Low"
+  },
+  "/agencylife/podcast/the-lead-magnet-that-pays-for-itself": {
+    "file": "agencylife/podcast/the-lead-magnet-that-pays-for-itself/index.html",
+    "auth": false,
+    "title": "The Lead Magnet That Pays for Itself w/ Chris DuBois"
+  },
+  "/agencylife/podcast/the-real-reason-clients-are-unhappy": {
+    "file": "agencylife/podcast/the-real-reason-clients-are-unhappy/index.html",
+    "auth": false,
+    "title": "The Real Reason Clients Are UNHAPPY w/ Guy Bauer"
+  },
+  "/agencylife/podcast/the-ai-opportunity-your-agency-is-missing": {
+    "file": "agencylife/podcast/the-ai-opportunity-your-agency-is-missing/index.html",
+    "auth": false,
+    "title": "The AI Opportunity Your Agency Is Missing w/ Richard Banfield"
+  },
+  "/agencylife/podcast/the-only-5-things-agency-owners-should-be-doing": {
+    "file": "agencylife/podcast/the-only-5-things-agency-owners-should-be-doing/index.html",
+    "auth": false,
+    "title": "The ONLY 5 Things Agency Owners Should Be Doing w/ Jason Swenk"
+  },
+  "/resources/operational-maturity-score": {
+    "file": "resources/operational-maturity-score/index.html",
+    "auth": false,
+    "title": "Operational Maturity Assessment | Teamwork.com"
+  },
+  "/resources/profitability-audit": {
+    "file": "resources/profitability-audit/index.html",
+    "auth": false,
+    "title": "Agency Profitability Audit | Teamwork.com"
+  },
+  "/resources/agency-operations-benchmarking-report": {
+    "file": "resources/agency-operations-benchmarking-report/index.html",
+    "auth": false,
+    "title": "The State of Agency Operations Report | Teamwork"
+  },
+  "/resources/psa-buyers-guide": {
+    "file": "resources/psa-buyers-guide/index.html",
+    "auth": false,
+    "title": "Buyer's Guide for Professional Services Automation"
+  },
+  "/agencylife/podcast/5-steps-to-win-more-clients-using-benchmark-data": {
+    "file": "agencylife/podcast/5-steps-to-win-more-clients-using-benchmark-data/index.html",
+    "auth": false,
+    "title": "5 Steps to Win More Clients Using Benchmark Data - Agency Life Podcast"
+  },
+  "/resources/guide-to-project-management-download": {
+    "file": "resources/guide-to-project-management-download/index.html",
+    "auth": false,
+    "title": "The Teamwork.com guide to project management"
+  },
+  "/resources/productivity-report": {
+    "file": "resources/productivity-report/index.html",
+    "auth": false,
+    "title": "The State of Productivity Report | Teamwork.com"
+  },
+  "/the-sprint-to-ai": {
+    "file": "the-sprint-to-ai/index.html",
+    "auth": false,
+    "title": "The Sprint To AI | Teamwork.com"
+  },
+  "/agencylife/podcast/hiring-secrets-from-an-8-figure-agency-ceo": {
+    "file": "agencylife/podcast/hiring-secrets-from-an-8-figure-agency-ceo/index.html",
+    "auth": false,
+    "title": "Hiring Secrets from an 8-Figure Agency CEO"
+  },
+  "/pricing.md": {
+    "file": "pricing.md/index.html",
+    "auth": false,
+    "title": ""
+  },
+  "/2026-strategic-shifts/value-beyond-price": {
+    "file": "2026-strategic-shifts/value-beyond-price/index.html",
+    "auth": false,
+    "title": "How To Prove Value Beyond Price | Teamwork.com"
+  },
+  "/partners/solution-partners": {
+    "file": "partners/solution-partners/index.html",
+    "auth": false,
+    "title": "Solution Partners | Teamwork.com"
+  },
+  "/partners/integration-partners": {
+    "file": "partners/integration-partners/index.html",
+    "auth": false,
+    "title": "Integration Partner Program for App Makers | Teamwork.com"
+  },
+  "/security/physical-security": {
+    "file": "security/physical-security/index.html",
+    "auth": false,
+    "title": "Physical Security | Teamwork.com"
+  },
+  "/security/continuous-backup": {
+    "file": "security/continuous-backup/index.html",
+    "auth": false,
+    "title": "Continuous backup | Teamwork.com"
+  },
+  "/security/uptime": {
+    "file": "security/uptime/index.html",
+    "auth": false,
+    "title": "Uptime over 99.9% | Teamwork.com"
+  },
+  "/security/iso": {
+    "file": "security/iso/index.html",
+    "auth": false,
+    "title": "ISO Certification | Teamwork.com"
+  },
+  "/security/soc-2-certification": {
+    "file": "security/soc-2-certification/index.html",
+    "auth": false,
+    "title": "SOC 2 Certification | Teamwork.com"
+  },
+  "/careers/7e.271": {
+    "file": "careers/7e.271/index.html",
+    "auth": false,
+    "title": "Account Executive | Teamwork.com"
+  },
+  "/careers/96.27d": {
+    "file": "careers/96.27d/index.html",
+    "auth": false,
+    "title": "Content Marketing Manager | Teamwork.com"
+  },
+  "/careers/6f.078": {
+    "file": "careers/6f.078/index.html",
+    "auth": false,
+    "title": "Presales Engineer | Teamwork.com"
+  },
+  "/careers/96.17e": {
+    "file": "careers/96.17e/index.html",
+    "auth": false,
+    "title": "Customer Success Manager | Teamwork.com"
+  },
+  "/careers/d3.f66": {
+    "file": "careers/d3.f66/index.html",
+    "auth": false,
+    "title": "Senior Product Marketing Manager | Teamwork.com"
+  },
+  "/chat/features": {
+    "file": "chat/features/index.html",
+    "auth": false,
+    "title": "Chat Features for Better Team Communication | Teamwork"
+  },
+  "/chat/apps": {
+    "file": "chat/apps/index.html",
+    "auth": false,
+    "title": "Chat Apps for iOS and Android | Teamwork"
+  },
+  "/careers/24.f6d": {
+    "file": "careers/24.f6d/index.html",
+    "auth": false,
+    "title": "Senior Segment Product Marketing Manager - Consulting | Teamwork.com"
+  },
+  "/customer-stories/exposure-ninja": {
+    "file": "customer-stories/exposure-ninja/index.html",
+    "auth": false,
+    "title": "How Exposure Ninja manages a remote team using Teamwork"
+  },
+  "/blog/project-schedule": {
+    "file": "blog/project-schedule/index.html",
+    "auth": false,
+    "title": "How to Create a Project Schedule | Teamwork.com"
+  },
+  "/blog/project-timeline": {
+    "file": "blog/project-timeline/index.html",
+    "auth": false,
+    "title": "Project Timeline: How to Create, Manage, and Optimize"
+  },
+  "/templates/website-project-plan": {
+    "file": "templates/website-project-plan/index.html",
+    "auth": false,
+    "title": "Website Project Plan Template | Teamwork.com"
+  },
+  "/spaces/features": {
+    "file": "spaces/features/index.html",
+    "auth": false,
+    "title": "Unique Document Management Software Features | Teamwork Spaces"
+  },
+  "/solutions/teamwork-teamwork-spaces-integration": {
+    "file": "solutions/teamwork-teamwork-spaces-integration/index.html",
+    "auth": false,
+    "title": "Align planning & project work with Teamwork & Teamwork Spaces"
+  },
+  "/spaces/templates": {
+    "file": "spaces/templates/index.html",
+    "auth": false,
+    "title": "Work smarter by using Teamwork Spaces templates"
+  },
+  "/signup/spaces": {
+    "file": "signup/spaces/index.html",
+    "auth": false,
+    "title": "Sign Up for Spaces | Teamwork.com"
+  },
+  "/launchpad/login/developer": {
+    "file": "launchpad/login/developer/index.html",
+    "auth": false,
+    "title": "Log in - Teamwork.com"
+  },
+  "/customer-stories/pravda-media-group": {
+    "file": "customer-stories/pravda-media-group/index.html",
+    "auth": false,
+    "title": "How Pravda Media Group increased team productivity by over 40% with Teamwork"
+  },
+  "/customer-stories/ymtech": {
+    "file": "customer-stories/ymtech/index.html",
+    "auth": false,
+    "title": "How Teamwork Spaces transformed YMtech’s communication"
+  },
+  "/product/apps": {
+    "file": "product/apps/index.html",
+    "auth": false,
+    "title": "Run Projects Anywhere: Project Management App | Teamwork.com"
+  },
+  "/agencylife/podcast": {
+    "file": "agencylife/podcast/index.html",
+    "auth": false,
+    "title": "Agency Life Presented by Teamwork.com"
+  },
+  "/agencylife/podcast/5-steps-to-better-change-management-for-agencies": {
+    "file": "agencylife/podcast/5-steps-to-better-change-management-for-agencies/index.html",
+    "auth": false,
+    "title": "5 Steps to Better Change Management for Agencies w/ Rob Sayles"
+  },
+  "/agencylife/webinars/saas-implementation": {
+    "file": "agencylife/webinars/saas-implementation/index.html",
+    "auth": false,
+    "title": "SaaS Implementation: The Two Biggest Mistakes To Avoid"
+  },
+  "/agencylife/webinars/ai-agency-growth": {
+    "file": "agencylife/webinars/ai-agency-growth/index.html",
+    "auth": false,
+    "title": "AI for Agencies: Growth Tool or Threat?"
+  },
+  "/agencylife/webinars/agency-operations-roundtable": {
+    "file": "agencylife/webinars/agency-operations-roundtable/index.html",
+    "auth": false,
+    "title": "Agency Operations Roundtable | Teamwork.com"
+  },
+  "/agency-burnout-expert-roundup": {
+    "file": "agency-burnout-expert-roundup/index.html",
+    "auth": false,
+    "title": "Agency Burnout: 40 Agency Owners Share Insights & Advice"
+  },
+  "/legal/data-transfer-addendum-uk": {
+    "file": "legal/data-transfer-addendum-uk/index.html",
+    "auth": false,
+    "title": "Data Transfer Addendum (UK) | Teamwork.com"
+  },
+  "/legal/data-transfer-addendum-us": {
+    "file": "legal/data-transfer-addendum-us/index.html",
+    "auth": false,
+    "title": "Data Transfer Addendum (US) | Teamwork.com"
+  },
+  "/legal/teamwork-com-ai-sub-processors": {
+    "file": "legal/teamwork-com-ai-sub-processors/index.html",
+    "auth": false,
+    "title": "Teamwork.com AI Sub-processors | Teamwork.com"
+  },
+  "/legal/environmental-social-and-governance": {
+    "file": "legal/environmental-social-and-governance/index.html",
+    "auth": false,
+    "title": "Environmental, Social, and Governance | Teamwork.com"
+  },
+  "/legal/teamwork-com-data-processing-agreement": {
+    "file": "legal/teamwork-com-data-processing-agreement/index.html",
+    "auth": false,
+    "title": "Teamwork.com Data Processing Agreement | Teamwork.com"
+  },
+  "/legal/teamwork-calendar-sync-privacy-policy": {
+    "file": "legal/teamwork-calendar-sync-privacy-policy/index.html",
+    "auth": false,
+    "title": "Teamwork.com Calendar Sync Privacy Policy | Teamwork.com"
+  },
+  "/legal/gmail-apps-privacy-policy": {
+    "file": "legal/gmail-apps-privacy-policy/index.html",
+    "auth": false,
+    "title": "Gmail Apps Privacy Policy | Teamwork.com"
+  },
+  "/legal/teamwork-com-google-drive-privacy-policy": {
+    "file": "legal/teamwork-com-google-drive-privacy-policy/index.html",
+    "auth": false,
+    "title": "Teamwork.com Google Drive Privacy Policy | Teamwork.com"
+  },
+  "/app/projects/372311/tasks/list": {
+    "file": "app/projects/372311/tasks/list/index.html",
+    "auth": true,
+    "title": "Task lists - 789 - Studio"
+  },
+  "/app/home": {
+    "file": "app/home/index.html",
+    "auth": true,
+    "title": "Home - Home - Studio"
+  },
+  "/app/projects/372311/tasks/board": {
+    "file": "app/projects/372311/tasks/board/index.html",
+    "auth": true,
+    "title": "Task board - 789 - Studio"
+  },
+  "/app/projects/372311/tasks/timeline": {
+    "file": "app/projects/372311/tasks/timeline/index.html",
+    "auth": true,
+    "title": "Timeline - 789 - Studio"
+  },
+  "/app/tasks/18438853": {
+    "file": "app/tasks/18438853/index.html",
+    "auth": true,
+    "title": "23 - 789 - Studio"
+  },
+  "/app/projects/372311/messages": {
+    "file": "app/projects/372311/messages/index.html",
+    "auth": true,
+    "title": "Messages - 789 - Studio"
+  },
+  "/app/projects/372311/settings/general": {
+    "file": "app/projects/372311/settings/general/index.html",
+    "auth": true,
+    "title": "Settings - 789 - Studio"
+  },
+  "/app/projects/list": {
+    "file": "app/projects/list/index.html",
+    "auth": true,
+    "title": "Project list - Studio"
+  },
+  "/app/projects/372311/schedule/schedule": {
+    "file": "app/projects/372311/schedule/schedule/index.html",
+    "auth": true,
+    "title": "Project schedule - 789 - Studio"
+  },
+  "/app/projects/372311/notebooks": {
+    "file": "app/projects/372311/notebooks/index.html",
+    "auth": true,
+    "title": "Notebooks - 789 - Studio"
+  },
+  "/app/tasks/18438852": {
+    "file": "app/tasks/18438852/index.html",
+    "auth": true,
+    "title": "2 - 789 - Studio"
+  },
+  "/app/projects/372311/tasks/table": {
+    "file": "app/projects/372311/tasks/table/index.html",
+    "auth": true,
+    "title": "Tasks - 789 - Studio"
+  },
+  "/app/projects/372311/files": {
+    "file": "app/projects/372311/files/index.html",
+    "auth": true,
+    "title": "Files - 789 - Studio"
+  },
+  "/app/tasks/18438851": {
+    "file": "app/tasks/18438851/index.html",
+    "auth": true,
+    "title": "1 - 789 - Studio"
+  },
+  "/app/projects/372311/overview/summary": {
+    "file": "app/projects/372311/overview/summary/index.html",
+    "auth": true,
+    "title": "Summary - Dashboard - 789 - Studio"
+  },
+  "/app/work/tasks": {
+    "file": "app/work/tasks/index.html",
+    "auth": true,
+    "title": "My tasks - Home - Studio"
+  },
+  "/app/inbox": {
+    "file": "app/inbox/index.html",
+    "auth": true,
+    "title": "Inbox - Studio"
+  },
+  "/app/ai/ask": {
+    "file": "app/ai/ask/index.html",
+    "auth": true,
+    "title": "Ask AI - Studio"
+  },
+  "/app/welcome/the-fundamentals": {
+    "file": "app/welcome/the-fundamentals/index.html",
+    "auth": true,
+    "title": "Welcome - Welcome - Studio"
+  },
+  "/app/time/all": {
+    "file": "app/time/all/index.html",
+    "auth": true,
+    "title": "All time - Studio"
+  },
+  "/app/tasks/tasks": {
+    "file": "app/tasks/tasks/index.html",
+    "auth": true,
+    "title": "All active tasks - Studio"
+  },
+  "/app/clients/clients": {
+    "file": "app/clients/clients/index.html",
+    "auth": true,
+    "title": "Clients - Studio"
+  },
+  "/app/people/people": {
+    "file": "app/people/people/index.html",
+    "auth": true,
+    "title": "People - People - Studio"
+  },
+  "/app/planning/workload": {
+    "file": "app/planning/workload/index.html",
+    "auth": true,
+    "title": "Workload - Resourcing - Studio"
+  },
+  "/app/reports/all": {
+    "file": "app/reports/all/index.html",
+    "auth": true,
+    "title": "All - Reporting - Studio"
+  },
+  "/app/finance/quotes/table": {
+    "file": "app/finance/quotes/table/index.html",
+    "auth": true,
+    "title": "Quotes - Studio"
+  },
+  "/app/projects/372311/time": {
+    "file": "app/projects/372311/time/index.html",
+    "auth": true,
+    "title": "Time - 789 - Studio"
+  },
+  "/app/projects/372311/finance/budgets": {
+    "file": "app/projects/372311/finance/budgets/index.html",
+    "auth": true,
+    "title": "Budgets - Finance - 789 - Studio"
+  },
+  "/app/tasklists/1404857/list": {
+    "file": "app/tasklists/1404857/list/index.html",
+    "auth": true,
+    "title": "My List - 789 - Studio"
+  },
+  "/app/projects/372311/settings/integrations": {
+    "file": "app/projects/372311/settings/integrations/index.html",
+    "auth": true,
+    "title": "Settings - 789 - Studio"
+  },
+  "/app/projects/372311/settings/notifications": {
+    "file": "app/projects/372311/settings/notifications/index.html",
+    "auth": true,
+    "title": "Settings - 789 - Studio"
+  },
+  "/app/projects/372311/settings/tags": {
+    "file": "app/projects/372311/settings/tags/index.html",
+    "auth": true,
+    "title": "Settings - 789 - Studio"
+  },
+  "/app/projects/372311/settings/customfields": {
+    "file": "app/projects/372311/settings/customfields/index.html",
+    "auth": true,
+    "title": "Settings - 789 - Studio"
+  },
+  "/app/projects/templates/projects/teamwork": {
+    "file": "app/projects/templates/projects/teamwork/index.html",
+    "auth": true,
+    "title": "Project templates - Studio"
+  },
+  "/app/clients/202387/overview": {
+    "file": "app/clients/202387/overview/index.html",
+    "auth": true,
+    "title": "Overview - Studio"
+  },
+  "/app/tasklists/1404857/table": {
+    "file": "app/tasklists/1404857/table/index.html",
+    "auth": true,
+    "title": "My List - Tasks - 789 - Studio"
+  },
+  "/app/projects/372311/report": {
+    "file": "app/projects/372311/report/index.html",
+    "auth": true,
+    "title": "789 - Report - Studio"
+  },
+  "/app/projects/372311/overview/activity": {
+    "file": "app/projects/372311/overview/activity/index.html",
+    "auth": true,
+    "title": "Activity - Dashboard - 789 - Studio"
+  },
+  "/app/work/calendar": {
+    "file": "app/work/calendar/index.html",
+    "auth": true,
+    "title": "My calendar - Home - Studio"
+  },
+  "/app/work/timesheet": {
+    "file": "app/work/timesheet/index.html",
+    "auth": true,
+    "title": "My timesheet - Home - Studio"
+  },
+  "/app/work/projects": {
+    "file": "app/work/projects/index.html",
+    "auth": true,
+    "title": "Projects - Home - Studio"
+  },
+  "/app/work/activity": {
+    "file": "app/work/activity/index.html",
+    "auth": true,
+    "title": "Activity - Home - Studio"
+  },
+  "/app/ai/teammates/customJobs/onboard": {
+    "file": "app/ai/teammates/customJobs/onboard/index.html",
+    "auth": true,
+    "title": "Teammate onboarding - Studio"
+  },
+  "/app/time/user": {
+    "file": "app/time/user/index.html",
+    "auth": true,
+    "title": "Timesheet - Studio"
+  },
+  "/app/time/company": {
+    "file": "app/time/company/index.html",
+    "auth": true,
+    "title": "Company timesheet - Studio"
+  },
+  "/app/time/approvals": {
+    "file": "app/time/approvals/index.html",
+    "auth": true,
+    "title": "Time approvals - Studio"
+  },
+  "/app/tasks/board": {
+    "file": "app/tasks/board/index.html",
+    "auth": true,
+    "title": "Board - Studio"
+  },
+  "/app/tasks/table": {
+    "file": "app/tasks/table/index.html",
+    "auth": true,
+    "title": "Table - Studio"
+  },
+  "/app/tasks/completedTasks": {
+    "file": "app/tasks/completedTasks/index.html",
+    "auth": true,
+    "title": "All completed tasks - Studio"
+  },
+  "/app/people/roles": {
+    "file": "app/people/roles/index.html",
+    "auth": true,
+    "title": "Roles - People - Studio"
+  },
+  "/app/people/skills": {
+    "file": "app/people/skills/index.html",
+    "auth": true,
+    "title": "Skills - People - Studio"
+  },
+  "/app/people/teams": {
+    "file": "app/people/teams/index.html",
+    "auth": true,
+    "title": "Teams - People - Studio"
+  },
+  "/app/people/statuses": {
+    "file": "app/people/statuses/index.html",
+    "auth": true,
+    "title": "Statuses - People - Studio"
+  },
+  "/app/people/people/placeholders": {
+    "file": "app/people/people/placeholders/index.html",
+    "auth": true,
+    "title": "Placeholders - People - Studio"
+  },
+  "/app/people/611549/details": {
+    "file": "app/people/611549/details/index.html",
+    "auth": true,
+    "title": "Details - Sam Yu - Studio"
+  },
+  "/app/planning/overview": {
+    "file": "app/planning/overview/index.html",
+    "auth": true,
+    "title": "Overview - Resourcing - Studio"
+  },
+  "/app/planning/schedule/projects": {
+    "file": "app/planning/schedule/projects/index.html",
+    "auth": true,
+    "title": "Projects - Resourcing - Studio"
+  },
+  "/app/planning/portfolio/boards": {
+    "file": "app/planning/portfolio/boards/index.html",
+    "auth": true,
+    "title": "Boards - Portfolio - Resourcing - Studio"
+  },
+  "/app/planning/chart": {
+    "file": "app/planning/chart/index.html",
+    "auth": true,
+    "title": "Chart - Resourcing - Studio"
+  },
+  "/app/reports/custom-reports": {
+    "file": "app/reports/custom-reports/index.html",
+    "auth": true,
+    "title": "Custom Reports - Reporting - Studio"
+  },
+  "/app/reports/scheduled": {
+    "file": "app/reports/scheduled/index.html",
+    "auth": true,
+    "title": "Scheduled - Reporting - Studio"
+  },
+  "/app/reports/health": {
+    "file": "app/reports/health/index.html",
+    "auth": true,
+    "title": "Project health - Reporting - Studio"
+  },
+  "/app/reports/utilization": {
+    "file": "app/reports/utilization/index.html",
+    "auth": true,
+    "title": "Utilization - Reporting - Studio"
+  },
+  "/app/reports/time": {
+    "file": "app/reports/time/index.html",
+    "auth": true,
+    "title": "Time - Reporting - Studio"
+  },
+  "/app/reports/plannedvsactual/tasks": {
+    "file": "app/reports/plannedvsactual/tasks/index.html",
+    "auth": true,
+    "title": "Tasks - Planned vs actual - Reporting - Studio"
+  },
+  "/app/reports/invoices": {
+    "file": "app/reports/invoices/index.html",
+    "auth": true,
+    "title": "Invoices - Reporting - Studio"
+  },
+  "/app/reports/budget-insights": {
+    "file": "app/reports/budget-insights/index.html",
+    "auth": true,
+    "title": "Budget Insights - Reporting - Studio"
+  },
+  "/app/finance/rates/people": {
+    "file": "app/finance/rates/people/index.html",
+    "auth": true,
+    "title": "People rates - Rates - Studio"
+  },
+  "/app/finance/budgets": {
+    "file": "app/finance/budgets/index.html",
+    "auth": true,
+    "title": "Budgets - Studio"
+  },
+  "/app/finance/invoices/table": {
+    "file": "app/finance/invoices/table/index.html",
+    "auth": true,
+    "title": "Invoices - Studio"
+  },
+  "/app/finance/expenses": {
+    "file": "app/finance/expenses/index.html",
+    "auth": true,
+    "title": "Expenses - Studio"
+  },
+  "/app/projects/372311/finance/rates": {
+    "file": "app/projects/372311/finance/rates/index.html",
+    "auth": true,
+    "title": "Rates - Finance - 789 - Studio"
+  },
+  "/app/projects/372311/finance/time": {
+    "file": "app/projects/372311/finance/time/index.html",
+    "auth": true,
+    "title": "Time - Finance - 789 - Studio"
+  },
+  "/app/projects/372311/finance/expenses": {
+    "file": "app/projects/372311/finance/expenses/index.html",
+    "auth": true,
+    "title": "Expenses - Finance - 789 - Studio"
+  },
+  "/app/projects/372311/finance/invoices": {
+    "file": "app/projects/372311/finance/invoices/index.html",
+    "auth": true,
+    "title": "Invoices - Finance - 789 - Studio"
+  },
+  "/status": {
+    "file": "status/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status"
+  },
+  "/help/projects/technical/eu-hosting": {
+    "file": "help/projects/technical/eu-hosting/index.html",
+    "auth": false,
+    "title": "EU Hosting - Teamwork.com Support"
+  },
+  "/help/projects/planning/skills": {
+    "file": "help/projects/planning/skills/index.html",
+    "auth": false,
+    "title": "Skills - Teamwork.com Support"
+  },
+  "/help/projects/getting-started/milestones-overview": {
+    "file": "help/projects/getting-started/milestones-overview/index.html",
+    "auth": false,
+    "title": "Milestones - Teamwork.com Support"
+  },
+  "/help/projects/project-sections/project-list-view": {
+    "file": "help/projects/project-sections/project-list-view/index.html",
+    "auth": false,
+    "title": "Projects List View - Teamwork.com Support"
+  },
+  "/help/projects/table-view/using-table-view-for-tasks": {
+    "file": "help/projects/table-view/using-table-view-for-tasks/index.html",
+    "auth": false,
+    "title": "Using Table View for Tasks - Teamwork.com Support"
+  },
+  "/help/projects/using-teamwork/using-the-my-work-list-view": {
+    "file": "help/projects/using-teamwork/using-the-my-work-list-view/index.html",
+    "auth": false,
+    "title": "Teamwork Desk - Nothing Found"
+  },
+  "/help/projects/everything/everything-all-active-tasks": {
+    "file": "help/projects/everything/everything-all-active-tasks/index.html",
+    "auth": false,
+    "title": "Teamwork Desk - Nothing Found"
+  },
+  "/help/projects/security/enabling-two-factor-authentication-on-your-profile": {
+    "file": "help/projects/security/enabling-two-factor-authentication-on-your-profile/index.html",
+    "auth": false,
+    "title": "Teamwork Desk - Nothing Found"
+  },
+  "/help/projects/using-teamwork/working-with-client-users": {
+    "file": "help/projects/using-teamwork/working-with-client-users/index.html",
+    "auth": false,
+    "title": "Client Users - Teamwork.com Support"
+  },
+  "/help/projects/using-teamwork/working-with-collaborators": {
+    "file": "help/projects/using-teamwork/working-with-collaborators/index.html",
+    "auth": false,
+    "title": "Collaborators - Teamwork.com Support"
+  },
+  "/help/projects/search": {
+    "file": "help/projects/search/index.html",
+    "auth": false,
+    "title": "Teamwork.com Support"
+  },
+  "/help/projects/agency-professional-services/understanding-user-permissions-and-access": {
+    "file": "help/projects/agency-professional-services/understanding-user-permissions-and-access/index.html",
+    "auth": false,
+    "title": "User Permissions and Access - Teamwork.com Support"
+  },
+  "/help/projects/general-settings/using-a-custom-domain-name": {
+    "file": "help/projects/general-settings/using-a-custom-domain-name/index.html",
+    "auth": false,
+    "title": "Use a Custom Domain for Your Site - Teamwork.com Support"
+  },
+  "/help/projects/agency-professional-services/adding-a-site-logo": {
+    "file": "help/projects/agency-professional-services/adding-a-site-logo/index.html",
+    "auth": false,
+    "title": "Adding Logos to your site - Teamwork.com Support"
+  },
+  "/help/projects/project-sections/adding-a-project-logo": {
+    "file": "help/projects/project-sections/adding-a-project-logo/index.html",
+    "auth": false,
+    "title": "Teamwork Desk - Nothing Found"
+  },
+  "/help/projects/teams/adding-a-team": {
+    "file": "help/projects/teams/adding-a-team/index.html",
+    "auth": false,
+    "title": "Adding a Team - Teamwork.com Support"
+  },
+  "/help/projects/teams/adding-a-subteam": {
+    "file": "help/projects/teams/adding-a-subteam/index.html",
+    "auth": false,
+    "title": "Adding a Subteam - Teamwork.com Support"
+  },
+  "/help/projects/project-options/project-owner": {
+    "file": "help/projects/project-options/project-owner/index.html",
+    "auth": false,
+    "title": "Choosing a Project Owner - Teamwork.com Support"
+  },
+  "/help/projects/project-sections/adding-followers-to-various-project-items": {
+    "file": "help/projects/project-sections/adding-followers-to-various-project-items/index.html",
+    "auth": false,
+    "title": "Adding Followers to Project Items - Teamwork.com Support"
+  },
+  "/help/projects/using-teamwork/exporting-an-invoice-to-a-xero-file": {
+    "file": "help/projects/using-teamwork/exporting-an-invoice-to-a-xero-file/index.html",
+    "auth": false,
+    "title": "Exporting an Invoice to a Xero File - Teamwork.com Support"
+  },
+  "/help/projects/addons-and-integrations/exporting-an-invoice-to-xero-online": {
+    "file": "help/projects/addons-and-integrations/exporting-an-invoice-to-xero-online/index.html",
+    "auth": false,
+    "title": "Exporting an Invoice to Xero Online - Teamwork.com Support"
+  },
+  "/help/projects/addons-and-integrations/enabling-the-freshbooks-integration": {
+    "file": "help/projects/addons-and-integrations/enabling-the-freshbooks-integration/index.html",
+    "auth": false,
+    "title": "Enabling the FreshBooks Integration for Your Site - Teamwork.com Support"
+  },
+  "/help/projects/quickbooks-online/quickbooks-basic": {
+    "file": "help/projects/quickbooks-online/quickbooks-basic/index.html",
+    "auth": false,
+    "title": "QuickBooks Online Basic - Teamwork.com Support"
+  },
+  "/help/projects/addons-and-integrations/exporting-an-invoice-to-blinksale": {
+    "file": "help/projects/addons-and-integrations/exporting-an-invoice-to-blinksale/index.html",
+    "auth": false,
+    "title": "Teamwork Desk - Nothing Found"
+  },
+  "/help/desk/stripe/enabling-the-stripe-integration": {
+    "file": "help/desk/stripe/enabling-the-stripe-integration/index.html",
+    "auth": false,
+    "title": "Enabling the Stripe Integration - Teamwork Desk Support"
+  },
+  "/help/desk/mailchimp/enabling-the-mailchimp-integration": {
+    "file": "help/desk/mailchimp/enabling-the-mailchimp-integration/index.html",
+    "auth": false,
+    "title": "Enabling the Mailchimp Integration - Teamwork Desk Support"
+  },
+  "/help/desk/churnzero/using-the-churnzero-integration": {
+    "file": "help/desk/churnzero/using-the-churnzero-integration/index.html",
+    "auth": false,
+    "title": "Using the ChurnZero Integration - Teamwork Desk Support"
+  },
+  "/help/projects/churnzero/using-the-churnzero-integration": {
+    "file": "help/projects/churnzero/using-the-churnzero-integration/index.html",
+    "auth": false,
+    "title": "Using the ChurnZero Integration - Teamwork.com Support"
+  },
+  "/help/projects/microsoft-teams/connecting-to-teamwork-in-microsoft-teams": {
+    "file": "help/projects/microsoft-teams/connecting-to-teamwork-in-microsoft-teams/index.html",
+    "auth": false,
+    "title": "Microsoft Teams Integration - Teamwork.com Support"
+  },
+  "/help/desk/delighted/enabling-the-delighted-integration": {
+    "file": "help/desk/delighted/enabling-the-delighted-integration/index.html",
+    "auth": false,
+    "title": "Enabling the Delighted Integration - Teamwork Desk Support"
+  },
+  "/help/desk/integrations/integrating-teamwork-desk-with-chatify": {
+    "file": "help/desk/integrations/integrating-teamwork-desk-with-chatify/index.html",
+    "auth": false,
+    "title": "Integrating Teamwork Desk with Chatify - Teamwork Desk Support"
+  },
+  "/help/projects/addons-and-integrations/using-the-google-sheets-add-on": {
+    "file": "help/projects/addons-and-integrations/using-the-google-sheets-add-on/index.html",
+    "auth": false,
+    "title": "Using the Google Sheets Add-on - Teamwork.com Support"
+  },
+  "/help/projects/calendar/viewing-your-teamwork-calendar-in-google-calendar": {
+    "file": "help/projects/calendar/viewing-your-teamwork-calendar-in-google-calendar/index.html",
+    "auth": false,
+    "title": "Create an iCal Feed from Teamwork.com to Google Calendar - Teamwork.com Support"
+  },
+  "/help/projects/lambdatest/using-the-lambdatest-integration": {
+    "file": "help/projects/lambdatest/using-the-lambdatest-integration/index.html",
+    "auth": false,
+    "title": "Using the LambdaTest Integration - Teamwork.com Support"
+  },
+  "/help/projects/microsoft-office/microsoft-office-add-in": {
+    "file": "help/projects/microsoft-office/microsoft-office-add-in/index.html",
+    "auth": false,
+    "title": "Microsoft Office Add-in - Teamwork.com Support"
+  },
+  "/help/desk/desk-data-viewer/using-the-desk-data-viewer": {
+    "file": "help/desk/desk-data-viewer/using-the-desk-data-viewer/index.html",
+    "auth": false,
+    "title": "Using the Desk Data Viewer Integration - Teamwork Desk Support"
+  },
+  "/help/projects/finance/manage-quotes": {
+    "file": "help/projects/finance/manage-quotes/index.html",
+    "auth": false,
+    "title": "Manage Quotes - Teamwork.com Support"
+  },
+  "/help/projects/planning-managing-work/tentative-work-overview": {
+    "file": "help/projects/planning-managing-work/tentative-work-overview/index.html",
+    "auth": false,
+    "title": "Tentative Work Overview - Teamwork.com Support"
+  },
+  "/help/projects/import/importing-your-projects-from-monday": {
+    "file": "help/projects/import/importing-your-projects-from-monday/index.html",
+    "auth": false,
+    "title": "Monday.com Importer - Teamwork.com Support"
+  },
+  "/help/projects/import/importing-your-projects-from-asana": {
+    "file": "help/projects/import/importing-your-projects-from-asana/index.html",
+    "auth": false,
+    "title": "Asana Importer - Teamwork.com Support"
+  },
+  "/help/projects/import/clickup-importer": {
+    "file": "help/projects/import/clickup-importer/index.html",
+    "auth": false,
+    "title": "ClickUp Importer - Teamwork.com Support"
+  },
+  "/help/projects/security/teamwork-advanced-security-add-on": {
+    "file": "help/projects/security/teamwork-advanced-security-add-on/index.html",
+    "auth": false,
+    "title": "Teamwork.com Advanced Security Add-on - Teamwork.com Support"
+  },
+  "/help/projects": {
+    "file": "help/projects/index.html",
+    "auth": false,
+    "title": "Teamwork.com Support"
+  },
+  "/help/desk": {
+    "file": "help/desk/index.html",
+    "auth": false,
+    "title": "Teamwork Desk Support"
+  },
+  "/help/chat": {
+    "file": "help/chat/index.html",
+    "auth": false,
+    "title": "Teamwork Chat Support"
+  },
+  "/help/spaces": {
+    "file": "help/spaces/index.html",
+    "auth": false,
+    "title": "Teamwork Spaces Support"
+  },
+  "/help/projects/single-sign-on-sso": {
+    "file": "help/projects/single-sign-on-sso/index.html",
+    "auth": false,
+    "title": "Single Sign-on (SSO) - Teamwork.com Support"
+  },
+  "/help/projects/security/notes-about-our-security-protocols": {
+    "file": "help/projects/security/notes-about-our-security-protocols/index.html",
+    "auth": false,
+    "title": "Notes About Our Security Protocols - Teamwork.com Support"
+  },
+  "/developer-docs/guides": {
+    "file": "developer-docs/guides/index.html",
+    "auth": false,
+    "title": "Teamwork.com API guides — Teamwork.com"
+  },
+  "/developer-docs/docs/teamwork": {
+    "file": "developer-docs/docs/teamwork/index.html",
+    "auth": false,
+    "title": "Teamwork.com API — Teamwork.com"
+  },
+  "/developer-docs/docs/desk": {
+    "file": "developer-docs/docs/desk/index.html",
+    "auth": false,
+    "title": "Teamwork Desk API — Teamwork.com"
+  },
+  "/developer-docs/docs/spaces": {
+    "file": "developer-docs/docs/spaces/index.html",
+    "auth": false,
+    "title": "Teamwork Spaces API — Teamwork.com"
+  },
+  "/developer-docs/docs": {
+    "file": "developer-docs/docs/index.html",
+    "auth": false,
+    "title": "Our API’s — Teamwork.com"
+  },
+  "/developer-docs/guides/teamwork/getting-started-with-the-teamwork-com-api": {
+    "file": "developer-docs/guides/teamwork/getting-started-with-the-teamwork-com-api/index.html",
+    "auth": false,
+    "title": "Getting Started with the Teamwork.com API — Teamwork.com"
+  },
+  "/developer-docs/guides/spaces/getting-started-with-the-teamwork-spaces-api": {
+    "file": "developer-docs/guides/spaces/getting-started-with-the-teamwork-spaces-api/index.html",
+    "auth": false,
+    "title": "Getting started with the Teamwork Spaces API — Teamwork.com"
+  },
+  "/help/projects/schedule/navigate-the-schedule": {
+    "file": "help/projects/schedule/navigate-the-schedule/index.html",
+    "auth": false,
+    "title": "Navigate the Schedule - Teamwork.com Support"
+  },
+  "/help/projects/tasks/assign-tasks-to-roles": {
+    "file": "help/projects/tasks/assign-tasks-to-roles/index.html",
+    "auth": false,
+    "title": "Assign Tasks to Roles - Teamwork.com Support"
+  },
+  "/help/projects/finance-hub/quote-templates": {
+    "file": "help/projects/finance-hub/quote-templates/index.html",
+    "auth": false,
+    "title": "Quote Templates - Teamwork.com Support"
+  },
+  "/help/projects/finance-hub/custom-exchange-rates": {
+    "file": "help/projects/finance-hub/custom-exchange-rates/index.html",
+    "auth": false,
+    "title": "Custom Exchange Rates - Teamwork.com Support"
+  },
+  "/help/desk/tickets/shareable-tickets": {
+    "file": "help/desk/tickets/shareable-tickets/index.html",
+    "auth": false,
+    "title": "Shareable Tickets - Teamwork Desk Support"
+  },
+  "/help/projects/finance/client-rates": {
+    "file": "help/projects/finance/client-rates/index.html",
+    "auth": false,
+    "title": "Client Role Rates - Teamwork.com Support"
+  },
+  "/help/projects/planning/plan-capacity-with-outlook-calendar-events": {
+    "file": "help/projects/planning/plan-capacity-with-outlook-calendar-events/index.html",
+    "auth": false,
+    "title": "Plan Capacity with Outlook Calendar Events - Teamwork.com Support"
+  },
+  "/help/projects/finance/role-rates": {
+    "file": "help/projects/finance/role-rates/index.html",
+    "auth": false,
+    "title": "Role Rates - Teamwork.com Support"
+  },
+  "/help/projects/time-tracking/set-up-time-approvals": {
+    "file": "help/projects/time-tracking/set-up-time-approvals/index.html",
+    "auth": false,
+    "title": "Teamwork Desk - Nothing Found"
+  },
+  "/help/desk/sla/sla-policies": {
+    "file": "help/desk/sla/sla-policies/index.html",
+    "auth": false,
+    "title": "SLA Policies - Teamwork Desk Support"
+  },
+  "/help/projects/finance/add-a-quote": {
+    "file": "help/projects/finance/add-a-quote/index.html",
+    "auth": false,
+    "title": "Add a Quote - Teamwork.com Support"
+  },
+  "/help/desk/triggers/create-a-trigger": {
+    "file": "help/desk/triggers/create-a-trigger/index.html",
+    "auth": false,
+    "title": "Create a Trigger - Teamwork Desk Support"
+  },
+  "/help/projects/project-sections/adding-an-expense": {
+    "file": "help/projects/project-sections/adding-an-expense/index.html",
+    "auth": false,
+    "title": "Create an Expense on a Project - Teamwork.com Support"
+  },
+  "/help/projects/import/importing-your-projects-from-wrike": {
+    "file": "help/projects/import/importing-your-projects-from-wrike/index.html",
+    "auth": false,
+    "title": "Wrike Importer - Teamwork.com Support"
+  },
+  "/help/projects/schedule/schedule-introduction": {
+    "file": "help/projects/schedule/schedule-introduction/index.html",
+    "auth": false,
+    "title": "Resource Schedule Introduction - Teamwork.com Support"
+  },
+  "/help/projects/workload/workload-planner-overview": {
+    "file": "help/projects/workload/workload-planner-overview/index.html",
+    "auth": false,
+    "title": "Workload Planner Overview - Teamwork.com Support"
+  },
+  "/help/projects/time-tracking/multiple-timers": {
+    "file": "help/projects/time-tracking/multiple-timers/index.html",
+    "auth": false,
+    "title": "Track Time with Timers - Teamwork.com Support"
+  },
+  "/help/projects/calendar/my-calendar": {
+    "file": "help/projects/calendar/my-calendar/index.html",
+    "auth": false,
+    "title": "My Calendar - Teamwork.com Support"
+  },
+  "/help/projects/reports/utilization-report": {
+    "file": "help/projects/reports/utilization-report/index.html",
+    "auth": false,
+    "title": "Utilization Report - Teamwork.com Support"
+  },
+  "/help/projects/reports/time-report": {
+    "file": "help/projects/reports/time-report/index.html",
+    "auth": false,
+    "title": "Time Report - Teamwork.com Support"
+  },
+  "/app/clients/202387/activity": {
+    "file": "app/clients/202387/activity/index.html",
+    "auth": true,
+    "title": "Activity - Studio"
+  },
+  "/app/clients/202387/projects": {
+    "file": "app/clients/202387/projects/index.html",
+    "auth": true,
+    "title": "Studio"
+  },
+  "/app/clients/202387/loggedtime": {
+    "file": "app/clients/202387/loggedtime/index.html",
+    "auth": true,
+    "title": "Studio"
+  },
+  "/app/clients/202387/people": {
+    "file": "app/clients/202387/people/index.html",
+    "auth": true,
+    "title": "Studio"
+  },
+  "/app/clients/202387/reports/gallery": {
+    "file": "app/clients/202387/reports/gallery/index.html",
+    "auth": true,
+    "title": "Reports - Studio"
+  },
+  "/app/home/calendar": {
+    "file": "app/home/calendar/index.html",
+    "auth": true,
+    "title": "My calendar - Home - Studio"
+  },
+  "/app/home/timesheet": {
+    "file": "app/home/timesheet/index.html",
+    "auth": true,
+    "title": "My timesheet - Home - Studio"
+  },
+  "/app/home/activity": {
+    "file": "app/home/activity/index.html",
+    "auth": true,
+    "title": "Activity - Home - Studio"
+  },
+  "/app/people/611549/events": {
+    "file": "app/people/611549/events/index.html",
+    "auth": true,
+    "title": "Events - Sam Yu - Studio"
+  },
+  "/app/people/611549/projects": {
+    "file": "app/people/611549/projects/index.html",
+    "auth": true,
+    "title": "Projects - Sam Yu - Studio"
+  },
+  "/app/people/611549/tasks": {
+    "file": "app/people/611549/tasks/index.html",
+    "auth": true,
+    "title": "Tasks - Sam Yu - Studio"
+  },
+  "/app/people/611549/teams": {
+    "file": "app/people/611549/teams/index.html",
+    "auth": true,
+    "title": "Teams - Sam Yu - Studio"
+  },
+  "/app/people/611549/completed": {
+    "file": "app/people/611549/completed/index.html",
+    "auth": true,
+    "title": "Completed tasks - Sam Yu - Studio"
+  },
+  "/app/people/611549/milestones": {
+    "file": "app/people/611549/milestones/index.html",
+    "auth": true,
+    "title": "Milestones - Sam Yu - Studio"
+  },
+  "/app/people/611549/time": {
+    "file": "app/people/611549/time/index.html",
+    "auth": true,
+    "title": "Time - Sam Yu - Studio"
+  },
+  "/app/people/611549/activity": {
+    "file": "app/people/611549/activity/index.html",
+    "auth": true,
+    "title": "Activity - Sam Yu - Studio"
+  },
+  "/app/people/611549/integrations/all": {
+    "file": "app/people/611549/integrations/all/index.html",
+    "auth": true,
+    "title": "Integrations - Sam Yu - Studio"
+  },
+  "/app/reports/plannedvsactual/milestones": {
+    "file": "app/reports/plannedvsactual/milestones/index.html",
+    "auth": true,
+    "title": "Milestones - Planned vs actual - Reporting - Studio"
+  },
+  "/app/finance/rates/roles": {
+    "file": "app/finance/rates/roles/index.html",
+    "auth": true,
+    "title": "Role rates - Rates - Studio"
+  },
+  "/app/search/all": {
+    "file": "app/search/all/index.html",
+    "auth": true,
+    "title": "Search - Studio"
+  },
+  "/workspace/chat/channels/44055": {
+    "file": "workspace/chat/channels/44055/index.html",
+    "auth": true,
+    "title": "Teamwork Chat",
+    "dynamic_handler": "chat_local.chat_page"
+  },
+  "/workspace/spaces/home/all": {
+    "file": "workspace/spaces/home/all/index.html",
+    "auth": true,
+    "title": "All spaces - Teamwork Spaces"
+  },
+  "/app/everything/milestones/all": {
+    "file": "app/everything/milestones/all/index.html",
+    "auth": true,
+    "title": "All milestones - Studio"
+  },
+  "/app/calendar": {
+    "file": "app/calendar/index.html",
+    "auth": true,
+    "title": "Calendar - Studio"
+  },
+  "/app/proofs": {
+    "file": "app/proofs/index.html",
+    "auth": true,
+    "title": "Proofs - Studio"
+  },
+  "/app/settings/integrations/all": {
+    "file": "app/settings/integrations/all/index.html",
+    "auth": true,
+    "title": "Integrations - Settings - Studio"
+  },
+  "/app/settings/subscription/plans": {
+    "file": "app/settings/subscription/plans/index.html",
+    "auth": true,
+    "title": "Subscription - Settings - Studio"
+  },
+  "/app/projects/372311/forms": {
+    "file": "app/projects/372311/forms/index.html",
+    "auth": true,
+    "title": "Forms - 789 - Studio"
+  },
+  "/app/projects/372311/tickets": {
+    "file": "app/projects/372311/tickets/index.html",
+    "auth": true,
+    "title": ""
+  },
+  "/app/projects/372311/milestones/all": {
+    "file": "app/projects/372311/milestones/all/index.html",
+    "auth": true,
+    "title": "Milestones - 789 - Studio"
+  },
+  "/app/projects/372311/tasks/gantt": {
+    "file": "app/projects/372311/tasks/gantt/index.html",
+    "auth": true,
+    "title": "Gantt - 789 - Studio"
+  },
+  "/app/projects/372311/comments": {
+    "file": "app/projects/372311/comments/index.html",
+    "auth": true,
+    "title": "Comments - 789 - Studio"
+  },
+  "/app/projects/372311/links": {
+    "file": "app/projects/372311/links/index.html",
+    "auth": true,
+    "title": "Links - 789 - Studio"
+  },
+  "/app/projects/372311/people/people": {
+    "file": "app/projects/372311/people/people/index.html",
+    "auth": true,
+    "title": "People - People - 789 - Studio"
+  },
+  "/app/projects/372311/proofs": {
+    "file": "app/projects/372311/proofs/index.html",
+    "auth": true,
+    "title": "Proofs - 789 - Studio"
+  },
+  "/integrations/netsuite": {
+    "file": "integrations/netsuite/index.html",
+    "auth": false,
+    "title": "NetSuite Integration for Client Billing | Teamwork.com"
+  },
+  "/integrations/salesforce": {
+    "file": "integrations/salesforce/index.html",
+    "auth": false,
+    "title": "Salesforce Integration for Sales Teams | Teamwork.com"
+  },
+  "/integrations/harvest": {
+    "file": "integrations/harvest/index.html",
+    "auth": false,
+    "title": "Harvest Integration for Time Tracking | Teamwork.com"
+  },
+  "/integrations/advanced-quickbooks-integration": {
+    "file": "integrations/advanced-quickbooks-integration/index.html",
+    "auth": false,
+    "title": "QuickBooks Integration for Client Billing | Teamwork.com"
+  },
+  "/integrations/slack": {
+    "file": "integrations/slack/index.html",
+    "auth": false,
+    "title": "Slack Integration for Project Teams | Teamwork.com"
+  },
+  "/integrations/microsoft-office-add-in": {
+    "file": "integrations/microsoft-office-add-in/index.html",
+    "auth": false,
+    "title": "Microsoft Office Add-In for Project Teams | Teamwork.com"
+  },
+  "/integrations/hubspot": {
+    "file": "integrations/hubspot/index.html",
+    "auth": false,
+    "title": "HubSpot Integration for Sales to Delivery | Teamwork.com"
+  },
+  "/integrations/teamwork-timer": {
+    "file": "integrations/teamwork-timer/index.html",
+    "auth": false,
+    "title": "Time Tracking Timer App for Client Work | Teamwork.com"
+  },
+  "/templates/weekly-team-workload-planner": {
+    "file": "templates/weekly-team-workload-planner/index.html",
+    "auth": false,
+    "title": "Weekly Team Workload Planner Template - Teamwork.com"
+  },
+  "/templates/project-capacity-forecast": {
+    "file": "templates/project-capacity-forecast/index.html",
+    "auth": false,
+    "title": "Project Capacity Forecast Template - Teamwork.com"
+  },
+  "/templates/project-portfolio-performance": {
+    "file": "templates/project-portfolio-performance/index.html",
+    "auth": false,
+    "title": "Project Portfolio Performance Template - Teamwork.com"
+  },
+  "/templates/monthly-reporting-review-cycle": {
+    "file": "templates/monthly-reporting-review-cycle/index.html",
+    "auth": false,
+    "title": "Monthly Reporting & Review Cycle Template - Teamwork.com"
+  },
+  "/partners/find-partners/beyond-the-chaos": {
+    "file": "partners/find-partners/beyond-the-chaos/index.html",
+    "auth": false,
+    "title": "Beyond the Chaos | Partner | Teamwork.com"
+  },
+  "/partners/find-partners/shiningorbit": {
+    "file": "partners/find-partners/shiningorbit/index.html",
+    "auth": false,
+    "title": "ShiningorbIT | Partner | Teamwork.com"
+  },
+  "/partners/find-partners/how-to-project": {
+    "file": "partners/find-partners/how-to-project/index.html",
+    "auth": false,
+    "title": "How to Project | Partner | Teamwork.com"
+  },
+  "/partners/find-partners/stratus-impact-consulting-llc": {
+    "file": "partners/find-partners/stratus-impact-consulting-llc/index.html",
+    "auth": false,
+    "title": "Stratus Impact Consulting, LLC"
+  },
+  "/partners/find-partners/launchy-io": {
+    "file": "partners/find-partners/launchy-io/index.html",
+    "auth": false,
+    "title": "Launchy.io | Partner | Teamwork.com"
+  },
+  "/customer-stories/beyond-the-chaos": {
+    "file": "customer-stories/beyond-the-chaos/index.html",
+    "auth": false,
+    "title": "Beyond the Chaos customer story | Teamwork.com"
+  },
+  "/customer-stories/the-brand-leader": {
+    "file": "customer-stories/the-brand-leader/index.html",
+    "auth": false,
+    "title": "The Brand Leader™ customer story | Teamwork.com"
+  },
+  "/customer-stories/threesixtyeight": {
+    "file": "customer-stories/threesixtyeight/index.html",
+    "auth": false,
+    "title": "How ThreeSixtyEight traded in pen and paper for seamless workflows"
+  },
+  "/customer-stories/invanity": {
+    "file": "customer-stories/invanity/index.html",
+    "auth": false,
+    "title": "Invanity customer story | Teamwork.com"
+  },
+  "/webinars/work-smarter-with-teamworkai": {
+    "file": "webinars/work-smarter-with-teamworkai/index.html",
+    "auth": false,
+    "title": "Work Smarter With TeamworkAI | Teamwork.com"
+  },
+  "/webinars/q3-2026-product-roadmap": {
+    "file": "webinars/q3-2026-product-roadmap/index.html",
+    "auth": false,
+    "title": "Q3 2026 Product Roadmap | Teamwork.com"
+  },
+  "/webinars/q2-2026-product-roadmap": {
+    "file": "webinars/q2-2026-product-roadmap/index.html",
+    "auth": false,
+    "title": "Q2 2026 Product Roadmap | Teamwork.com"
+  },
+  "/webinars/proving-value-masterclass": {
+    "file": "webinars/proving-value-masterclass/index.html",
+    "auth": false,
+    "title": "Your Client’s Budget is Shrinking: How to Prove Your Value & Profit | Teamwork.com"
+  },
+  "/webinars/modern-resource-management": {
+    "file": "webinars/modern-resource-management/index.html",
+    "auth": false,
+    "title": "Modern Resource Management Webinar | Teamwork.com"
+  },
+  "/blog/claude-cowork-teamwork": {
+    "file": "blog/claude-cowork-teamwork/index.html",
+    "auth": false,
+    "title": "How Claude Works With Teamwork.com: Setup Guide"
+  },
+  "/blog/professional-services-automation-software": {
+    "file": "blog/professional-services-automation-software/index.html",
+    "auth": false,
+    "title": "7 Best PSA Software Tools for Profitability (2026)"
+  },
+  "/blog/workforce-capacity-planning": {
+    "file": "blog/workforce-capacity-planning/index.html",
+    "auth": false,
+    "title": "Workforce Capacity Planning: Formula, KPIs, and 4B Framework"
+  },
+  "/blog/sales-pipeline-management": {
+    "file": "blog/sales-pipeline-management/index.html",
+    "auth": false,
+    "title": "Sales Pipeline Management: Stages, Metrics, and Framework"
+  },
+  "/blog/teamwork-ai-credits": {
+    "file": "blog/teamwork-ai-credits/index.html",
+    "auth": false,
+    "title": "Teamwork.com AI Credits: How They Work, Plans and Pricing"
+  },
+  "/glossary/advertising-budget": {
+    "file": "glossary/advertising-budget/index.html",
+    "auth": false,
+    "title": "What is an advertising budget?"
+  },
+  "/glossary/agency-account-management": {
+    "file": "glossary/agency-account-management/index.html",
+    "auth": false,
+    "title": "What is agency account management?"
+  },
+  "/glossary/agency-collaboration": {
+    "file": "glossary/agency-collaboration/index.html",
+    "auth": false,
+    "title": "What Is Agency Collaboration? | Teamwork.com"
+  },
+  "/glossary/agency-fees": {
+    "file": "glossary/agency-fees/index.html",
+    "auth": false,
+    "title": "What are agency fee structures?"
+  },
+  "/glossary/agency-management": {
+    "file": "glossary/agency-management/index.html",
+    "auth": false,
+    "title": "What Is Agency Management? | Teamwork.com"
+  },
+  "/integrations/softsync-for-jira": {
+    "file": "integrations/softsync-for-jira/index.html",
+    "auth": false,
+    "title": "SoftSync for Jira Integration for Agencies | Teamwork.com"
+  },
+  "/integrations/unito-io": {
+    "file": "integrations/unito-io/index.html",
+    "auth": false,
+    "title": "Unito Two-Way Sync for Connected Teams | Teamwork.com"
+  },
+  "/integrations/document-editor": {
+    "file": "integrations/document-editor/index.html",
+    "auth": false,
+    "title": "Online Document Editor for Client Work | Teamwork.com"
+  },
+  "/integrations/google-drive": {
+    "file": "integrations/google-drive/index.html",
+    "auth": false,
+    "title": "Google Drive Integration for Client Files | Teamwork.com"
+  },
+  "/integrations/teamwork-chat-desktop": {
+    "file": "integrations/teamwork-chat-desktop/index.html",
+    "auth": false,
+    "title": "Teamwork Chat Desktop App for Teams | Teamwork.com"
+  },
+  "/integrations/gmail-add-on": {
+    "file": "integrations/gmail-add-on/index.html",
+    "auth": false,
+    "title": "Gmail Add-On for Project Management | Teamwork.com"
+  },
+  "/integrations/teamwork-chat-mobile": {
+    "file": "integrations/teamwork-chat-mobile/index.html",
+    "auth": false,
+    "title": "Teamwork Chat Mobile App for Client Teams | Teamwork.com"
+  },
+  "/blog/price-professional-services-projects": {
+    "file": "blog/price-professional-services-projects/index.html",
+    "auth": false,
+    "title": "How to Price Professional Services Projects Profitably"
+  },
+  "/blog/service-business-profitability": {
+    "file": "blog/service-business-profitability/index.html",
+    "auth": false,
+    "title": "Service business profitability: 5 levers that move margin"
+  },
+  "/blog/how-to-bill-a-client": {
+    "file": "blog/how-to-bill-a-client/index.html",
+    "auth": false,
+    "title": "How to Bill a Client: A Profitable Step-by-Step Guide"
+  },
+  "/blog/how-to-choose-a-billing-model": {
+    "file": "blog/how-to-choose-a-billing-model/index.html",
+    "auth": false,
+    "title": "How to Choose a Billing Model That Protects Your Margin"
+  },
+  "/blog/cost-to-serve": {
+    "file": "blog/cost-to-serve/index.html",
+    "auth": false,
+    "title": "Cost to serve: the hidden price of your client delivery"
+  },
+  "/blog/agency-resource-management": {
+    "file": "blog/agency-resource-management/index.html",
+    "auth": false,
+    "title": "Agency resource management: the Weekly Capacity Ledger"
+  },
+  "/blog/calculate-team-utilisation-rate": {
+    "file": "blog/calculate-team-utilisation-rate/index.html",
+    "auth": false,
+    "title": "How to calculate your team's utilization rate the right way"
+  },
+  "/blog/capacity-model": {
+    "file": "blog/capacity-model/index.html",
+    "auth": false,
+    "title": "Capacity Model Guide for Client Services Teams"
+  },
+  "/blog/poor-agency-resource-management": {
+    "file": "blog/poor-agency-resource-management/index.html",
+    "auth": false,
+    "title": "Poor Resource Management: Signs and Costs"
+  },
+  "/blog/resource-scheduling": {
+    "file": "blog/resource-scheduling/index.html",
+    "auth": false,
+    "title": "Resource scheduling: a practical guide for client work"
+  },
+  "/blog/ai-shrinks-the-work-not-your-overhead": {
+    "file": "blog/ai-shrinks-the-work-not-your-overhead/index.html",
+    "auth": false,
+    "title": "How to protect consulting margins as AI cuts billable hours"
+  },
+  "/blog/consulting-team-tool-fatigue-signs": {
+    "file": "blog/consulting-team-tool-fatigue-signs/index.html",
+    "auth": false,
+    "title": "Signs your consulting team is suffering from tool fatigue"
+  },
+  "/blog/psa-software-integration": {
+    "file": "blog/psa-software-integration/index.html",
+    "auth": false,
+    "title": "PSA software integrations: margin-safe connections"
+  },
+  "/blog/psa-software-pricing": {
+    "file": "blog/psa-software-pricing/index.html",
+    "auth": false,
+    "title": "PSA software pricing: what seat rates hide in 2026"
+  },
+  "/blog/ai-roi-professional-services-capacity": {
+    "file": "blog/ai-roi-professional-services-capacity/index.html",
+    "auth": false,
+    "title": "AI ROI in Professional Services: Why Capacity Isn't Converting to Margin"
+  },
+  "/blog/ai-time-logging": {
+    "file": "blog/ai-time-logging/index.html",
+    "auth": false,
+    "title": "AI Time Logging in Teamwork.com: Timesheet, Already Written"
+  },
+  "/blog/ask-ai": {
+    "file": "blog/ask-ai/index.html",
+    "auth": false,
+    "title": "Ask AI: From Question to Done, in One Conversation"
+  },
+  "/blog/simplified-time-logging-is-here": {
+    "file": "blog/simplified-time-logging-is-here/index.html",
+    "auth": false,
+    "title": "Simplified Time Logging: A Cleaner Way to Track Time in Teamwork.com"
+  },
+  "/blog/whats-new-in-teamwork-com-summer-2026": {
+    "file": "blog/whats-new-in-teamwork-com-summer-2026/index.html",
+    "auth": false,
+    "title": "What's new in Teamwork.com | Summer 2026"
+  },
+  "/blog/creative-project-management": {
+    "file": "blog/creative-project-management/index.html",
+    "auth": false,
+    "title": "Creative delivery management: A practical guide"
+  },
+  "/blog/marketing-agency-software": {
+    "file": "blog/marketing-agency-software/index.html",
+    "auth": false,
+    "title": "Best marketing agency software for 2026 (15 tools)"
+  },
+  "/blog/marketing-project-management-software": {
+    "file": "blog/marketing-project-management-software/index.html",
+    "auth": false,
+    "title": "Best Marketing Project Management Software (2026)"
+  },
+  "/blog/marketing-campaign-management-guide": {
+    "file": "blog/marketing-campaign-management-guide/index.html",
+    "auth": false,
+    "title": "Marketing Campaign Management: Plan, Execute, Optimize"
+  },
+  "/blog/marketing-resource-management": {
+    "file": "blog/marketing-resource-management/index.html",
+    "auth": false,
+    "title": "Marketing resource management: How To Guide & The Best MRM Software"
+  },
+  "/blog/first-growth-investment": {
+    "file": "blog/first-growth-investment/index.html",
+    "auth": false,
+    "title": "We just raised $70m — our first-ever investment | Teamwork.com"
+  },
+  "/blog/why-the-people-make-teamwork": {
+    "file": "blog/why-the-people-make-teamwork/index.html",
+    "auth": false,
+    "title": "Why the people make Teamwork, Teamwork!"
+  },
+  "/blog/teamwork-achieves-iso-iec-27001-2013-certification": {
+    "file": "blog/teamwork-achieves-iso-iec-27001-2013-certification/index.html",
+    "auth": false,
+    "title": "Teamwork achieves the ISO/IEC 27001:2013 certification"
+  },
+  "/blog/teamwork-free-for-schools": {
+    "file": "blog/teamwork-free-for-schools/index.html",
+    "auth": false,
+    "title": "Free for Schools | Teamwork.com"
+  },
+  "/blog/meet-the-team-daniel-mackey-founderdeveloper": {
+    "file": "blog/meet-the-team-daniel-mackey-founderdeveloper/index.html",
+    "auth": false,
+    "title": "Meet the Team – Daniel Mackey, Founder/Developer"
+  },
+  "/blog/smartsheet-alternatives": {
+    "file": "blog/smartsheet-alternatives/index.html",
+    "auth": false,
+    "title": "10 Best Smartsheet Alternatives for Agencies (2026)"
+  },
+  "/blog/project-invoicing-software": {
+    "file": "blog/project-invoicing-software/index.html",
+    "auth": false,
+    "title": "Project Invoicing Software: 7 Best Tools to Compare"
+  },
+  "/blog/monday-alternatives": {
+    "file": "blog/monday-alternatives/index.html",
+    "auth": false,
+    "title": "10 best monday.com alternatives for client delivery"
+  },
+  "/blog/project-budgeting-software": {
+    "file": "blog/project-budgeting-software/index.html",
+    "auth": false,
+    "title": "Best project budgeting software: 9 tools compared (2026)"
+  },
+  "/blog/best-psa-software-creative-digital-agencies": {
+    "file": "blog/best-psa-software-creative-digital-agencies/index.html",
+    "auth": false,
+    "title": "Best PSA Software for Creative and Digital Agencies"
+  },
+  "/blog/it-resource-management": {
+    "file": "blog/it-resource-management/index.html",
+    "auth": false,
+    "title": "IT resource management: plan capacity, avoid overload"
+  },
+  "/blog/it-project-management": {
+    "file": "blog/it-project-management/index.html",
+    "auth": false,
+    "title": "What is IT Project Management & What Do IT Project Managers Do?"
+  },
+  "/blog/it-challenges": {
+    "file": "blog/it-challenges/index.html",
+    "auth": false,
+    "title": "8 new IT challenges businesses face in 2026"
+  },
+  "/blog/it-capacity-planning": {
+    "file": "blog/it-capacity-planning/index.html",
+    "auth": false,
+    "title": "IT Capacity Planning: A Complete Guide for 2026 | Teamwork.com"
+  },
+  "/blog/it-process-automation": {
+    "file": "blog/it-process-automation/index.html",
+    "auth": false,
+    "title": "IT Process Automation in 2026: The Key Benefits"
+  },
+  "/blog/project-profitability-variance-analysis": {
+    "file": "blog/project-profitability-variance-analysis/index.html",
+    "auth": false,
+    "title": "Project profitability analysis: find out why margin moved"
+  },
+  "/blog/reduce-cost-overruns-mid-project": {
+    "file": "blog/reduce-cost-overruns-mid-project/index.html",
+    "auth": false,
+    "title": "How to reduce cost overruns on projects already in flight"
+  },
+  "/blog/agency-management-platform": {
+    "file": "blog/agency-management-platform/index.html",
+    "auth": false,
+    "title": "Agency management platform: what it is and how to choose"
+  },
+  "/blog/agency-financial-management": {
+    "file": "blog/agency-financial-management/index.html",
+    "auth": false,
+    "title": "Agency financial management: stop your margin leaks"
+  },
+  "/blog/pipeline-to-project-handoff": {
+    "file": "blog/pipeline-to-project-handoff/index.html",
+    "auth": false,
+    "title": "Pipeline to Project Handoff: A Guide for Delivery Teams"
+  },
+  "/app/projects/372311/people/people/placeholders": {
+    "file": "app/projects/372311/people/people/placeholders/index.html",
+    "auth": true,
+    "title": "Placeholders - People - 789 - Studio"
+  },
+  "/app/projects/372311/people/teams": {
+    "file": "app/projects/372311/people/teams/index.html",
+    "auth": true,
+    "title": "Teams - People - 789 - Studio"
+  },
+  "/app/settings/general": {
+    "file": "app/settings/general/index.html",
+    "auth": true,
+    "title": "General - Settings - Studio"
+  },
+  "/app/settings/projects": {
+    "file": "app/settings/projects/index.html",
+    "auth": true,
+    "title": "Projects - Settings - Studio"
+  },
+  "/app/settings/currencies": {
+    "file": "app/settings/currencies/index.html",
+    "auth": true,
+    "title": "Currencies - Settings - Studio"
+  },
+  "/app/settings/time": {
+    "file": "app/settings/time/index.html",
+    "auth": true,
+    "title": "Time - Settings - Studio"
+  },
+  "/app/settings/logo": {
+    "file": "app/settings/logo/index.html",
+    "auth": true,
+    "title": "Logo - Settings - Studio"
+  },
+  "/app/settings/workinghours": {
+    "file": "app/settings/workinghours/index.html",
+    "auth": true,
+    "title": "My working hours - Settings - Studio"
+  },
+  "/app/settings/appearance": {
+    "file": "app/settings/appearance/index.html",
+    "auth": true,
+    "title": "Appearance - Settings - Studio"
+  },
+  "/app/clients/undefined/loggedtime": {
+    "file": "app/clients/undefined/loggedtime/index.html",
+    "auth": true,
+    "title": "Studio"
+  },
+  "/app/clients/undefined/activity": {
+    "file": "app/clients/undefined/activity/index.html",
+    "auth": true,
+    "title": "Activity - Studio"
+  },
+  "/app/search": {
+    "file": "app/search/index.html",
+    "auth": true,
+    "title": "Search - Studio"
+  },
+  "/app/clients/202387/reports/health": {
+    "file": "app/clients/202387/reports/health/index.html",
+    "auth": true,
+    "title": "Project health - Studio"
+  },
+  "/app/clients/202387/reports/estimated-vs-logged-time-per-task": {
+    "file": "app/clients/202387/reports/estimated-vs-logged-time-per-task/index.html",
+    "auth": true,
+    "title": "Estimated vs logged time per task - Studio"
+  },
+  "/app/clients/202387/reports/time": {
+    "file": "app/clients/202387/reports/time/index.html",
+    "auth": true,
+    "title": "Time - Studio"
+  },
+  "/app/clients/202387/reports/plannedvsactual/tasks": {
+    "file": "app/clients/202387/reports/plannedvsactual/tasks/index.html",
+    "auth": true,
+    "title": "Tasks - Planned vs actual - Studio"
+  },
+  "/app/clients/202387/reports/logged-time-per-project": {
+    "file": "app/clients/202387/reports/logged-time-per-project/index.html",
+    "auth": true,
+    "title": "Logged time per project - Studio"
+  },
+  "/app/clients/202387/reports/logged-time-per-user": {
+    "file": "app/clients/202387/reports/logged-time-per-user/index.html",
+    "auth": true,
+    "title": "Logged time per user - Studio"
+  },
+  "/app/clients/202387/reports/profitability/projects": {
+    "file": "app/clients/202387/reports/profitability/projects/index.html",
+    "auth": true,
+    "title": "Profitability - Studio"
+  },
+  "/app/clients/202387/reports/invoices": {
+    "file": "app/clients/202387/reports/invoices/index.html",
+    "auth": true,
+    "title": "Invoices - Studio"
+  },
+  "/app/clients/202387/reports/expenses": {
+    "file": "app/clients/202387/reports/expenses/index.html",
+    "auth": true,
+    "title": "Expenses - Studio"
+  },
+  "/app/clients/202387/reports/task-completion-per-user": {
+    "file": "app/clients/202387/reports/task-completion-per-user/index.html",
+    "auth": true,
+    "title": "Task completion per user - Studio"
+  },
+  "/app/settings/subscription/billing": {
+    "file": "app/settings/subscription/billing/index.html",
+    "auth": true,
+    "title": "Subscription - Settings - Studio"
+  },
+  "/app/settings/subscription/invoices": {
+    "file": "app/settings/subscription/invoices/index.html",
+    "auth": true,
+    "title": "Subscription - Settings - Studio"
+  },
+  "/app/everything/comments": {
+    "file": "app/everything/comments/index.html",
+    "auth": true,
+    "title": "All comments - Studio"
+  },
+  "/app/everything/forms": {
+    "file": "app/everything/forms/index.html",
+    "auth": true,
+    "title": "Forms - Studio"
+  },
+  "/app/everything/risks": {
+    "file": "app/everything/risks/index.html",
+    "auth": true,
+    "title": "All risks - Studio"
+  },
+  "/app/everything/notebooks": {
+    "file": "app/everything/notebooks/index.html",
+    "auth": true,
+    "title": "All notebooks - Studio"
+  },
+  "/app/everything/files": {
+    "file": "app/everything/files/index.html",
+    "auth": true,
+    "title": "All files - Studio"
+  },
+  "/app/everything/messages": {
+    "file": "app/everything/messages/index.html",
+    "auth": true,
+    "title": "All messages - Studio"
+  },
+  "/app/everything/links": {
+    "file": "app/everything/links/index.html",
+    "auth": true,
+    "title": "All links - Studio"
+  },
+  "/app/settings/referral/about": {
+    "file": "app/settings/referral/about/index.html",
+    "auth": true,
+    "title": "Referral - Settings - Studio"
+  },
+  "/app/clients/undefined/overview": {
+    "file": "app/clients/undefined/overview/index.html",
+    "auth": true,
+    "title": "Overview - Studio"
+  },
+  "/app/clients/202387/reports/plannedvsactual/milestones": {
+    "file": "app/clients/202387/reports/plannedvsactual/milestones/index.html",
+    "auth": true,
+    "title": "Milestones - Planned vs actual - Studio"
+  },
+  "/app/settings/referral/latest": {
+    "file": "app/settings/referral/latest/index.html",
+    "auth": true,
+    "title": "Referral - Settings - Studio"
+  },
+  "/app/settings/referral/banners": {
+    "file": "app/settings/referral/banners/index.html",
+    "auth": true,
+    "title": "Referral - Settings - Studio"
+  },
+  "/app/settings/referral/tips": {
+    "file": "app/settings/referral/tips/index.html",
+    "auth": true,
+    "title": "Referral - Settings - Studio"
+  },
+  "/app/settings/referral/terms": {
+    "file": "app/settings/referral/terms/index.html",
+    "auth": true,
+    "title": "Referral - Settings - Studio"
+  },
+  "/blog/microsoft-teams-project-management-apps": {
+    "file": "blog/microsoft-teams-project-management-apps/index.html",
+    "auth": false,
+    "title": "Best Microsoft Teams Project Management Apps (2026)"
+  },
+  "/templates/product-launch-plan": {
+    "file": "templates/product-launch-plan/index.html",
+    "auth": false,
+    "title": "Product Launch Plan Template | Teamwork.com"
+  },
+  "/login": {
+    "redirect": "/launchpad/login",
+    "auth": false
+  },
+  "/product/time-tracking": {
+    "redirect": "/product/cost-profitability-management/time-tracking",
+    "auth": false
+  },
+  "/product/profitability": {
+    "redirect": "/product/cost-profitability-management/budgeting-profitability",
+    "auth": false
+  },
+  "/project-management-software/project-time-tracking-software": {
+    "redirect": "/product/cost-profitability-management/time-tracking",
+    "auth": false
+  },
+  "/resource/teamwork-projects-business-case-guide": {
+    "redirect": "/resources",
+    "auth": false
+  },
+  "/project-management-software/features": {
+    "redirect": "/product",
+    "auth": false
+  },
+  "/project-management-software/gantt-chart": {
+    "redirect": "/product/gantt-chart",
+    "auth": false
+  },
+  "/resource/the-realists-guide-to-big-picture-project-management-ebook-2": {
+    "redirect": "/resources",
+    "auth": false
+  },
+  "/solutions": {
+    "redirect": "/teams",
+    "auth": false
+  },
+  "/desk/apps": {
+    "redirect": "/desk",
+    "auth": false
+  },
+  "/resource/utilization-report": {
+    "redirect": "/resources/utilization-report",
+    "auth": false
+  },
+  "/resource/guide-to-scaling-your-agency": {
+    "redirect": "/resources/guide-to-scaling-your-agency",
+    "auth": false
+  },
+  "/resource/time-management-benchmarking-report": {
+    "redirect": "/resources/time-management-benchmarking-report",
+    "auth": false
+  },
+  "/resource/mastering-agency-profitability-guidebook": {
+    "redirect": "/resources/mastering-agency-profitability-guidebook",
+    "auth": false
+  },
+  "/api/redirect-to-app": {
+    "redirect": "/launchpad/login",
+    "auth": false
+  },
+  "/resource/teamwork-tei": {
+    "redirect": "/resources",
+    "auth": false
+  },
+  "/signup/templates": {
+    "redirect": "/signup",
+    "auth": false
+  },
+  "/app/work": {
+    "redirect": "/app/work/tasks",
+    "auth": true
+  },
+  "/app/welcome": {
+    "redirect": "/app/welcome/the-fundamentals",
+    "auth": true
+  },
+  "/app/projects": {
+    "redirect": "/app/projects/list",
+    "auth": true
+  },
+  "/app/time": {
+    "redirect": "/app/time/all",
+    "auth": true
+  },
+  "/app/tasks": {
+    "redirect": "/app/tasks/tasks",
+    "auth": true
+  },
+  "/app/clients": {
+    "redirect": "/app/clients/clients",
+    "auth": true
+  },
+  "/app/people": {
+    "redirect": "/app/people/people",
+    "auth": true
+  },
+  "/app/planning": {
+    "redirect": "/app/planning/workload",
+    "auth": true
+  },
+  "/app/finance": {
+    "redirect": "/app/finance/quotes/table",
+    "auth": true
+  },
+  "/app/projects/372311": {
+    "redirect": "/app/projects/372311/tasks/list",
+    "auth": true
+  },
+  "/app/projects/372311/overview": {
+    "redirect": "/app/projects/372311/overview/summary",
+    "auth": true
+  },
+  "/app/projects/372311/finance": {
+    "redirect": "/app/projects/372311/finance/budgets",
+    "auth": true
+  },
+  "/app/projects/372311/schedule": {
+    "redirect": "/app/projects/372311/schedule/schedule",
+    "auth": true
+  },
+  "/app/tasklists/1404857": {
+    "redirect": "/app/tasklists/1404857/list",
+    "auth": true
+  },
+  "/app/projects/372311/settings": {
+    "redirect": "/app/projects/372311/settings/general",
+    "auth": true
+  },
+  "/app/projects/templates": {
+    "redirect": "/app/projects/templates/projects/teamwork",
+    "auth": true
+  },
+  "/app/ai/teammates": {
+    "redirect": "/app/ai/teammates/customJobs/onboard",
+    "auth": true
+  },
+  "/app/planning/schedule": {
+    "redirect": "/app/planning/schedule/projects",
+    "auth": true
+  },
+  "/app/planning/portfolio": {
+    "redirect": "/app/planning/portfolio/boards",
+    "auth": true
+  },
+  "/app/reports/plannedvsactual": {
+    "redirect": "/app/reports/plannedvsactual/tasks",
+    "auth": true
+  },
+  "/app/finance/quotes": {
+    "redirect": "/app/finance/quotes/table",
+    "auth": true
+  },
+  "/app/finance/rates": {
+    "redirect": "/app/finance/rates/people",
+    "auth": true
+  },
+  "/app/finance/invoices": {
+    "redirect": "/app/finance/invoices/table",
+    "auth": true
+  },
+  "/integration-marketplace": {
+    "redirect": "/integrations",
+    "auth": false
+  },
+  "/help/projects/addons-and-integrations/enabling-freshbooks-classic-integration": {
+    "redirect": "/help/projects/addons-and-integrations/enabling-the-freshbooks-integration",
+    "auth": false
+  },
+  "/help/projects/addons-and-integrations/can-i-integrate-with-blinksale": {
+    "redirect": "/help/projects/addons-and-integrations/exporting-an-invoice-to-blinksale",
+    "auth": false
+  },
+  "/blog-archive/3-ways-to-use-the-new-teamwork-projects-for-google-docs-add-on": {
+    "redirect": "/blog",
+    "auth": false
+  },
+  "/help/projects/calendar/viewing-your-teamwork-projects-calendar-in-google-calendar": {
+    "redirect": "/help/projects/calendar/viewing-your-teamwork-calendar-in-google-calendar",
+    "auth": false
+  },
+  "/academy-hub": {
+    "redirect": "/academy",
+    "auth": false
+  },
+  "/developer-docs/guides/teamwork": {
+    "redirect": "/developer-docs/guides/teamwork/getting-started-with-the-teamwork-com-api",
+    "auth": false
+  },
+  "/developer-docs/guides/spaces": {
+    "redirect": "/developer-docs/guides/spaces/getting-started-with-the-teamwork-spaces-api",
+    "auth": false
+  },
+  "/help/projects/finance/creating-and-managing-quotes": {
+    "redirect": "/help/projects/finance/add-a-quote",
+    "auth": false
+  },
+  "/app/clients/202387/reports": {
+    "redirect": "/app/clients/202387/reports/gallery",
+    "auth": true
+  },
+  "/app/home/projects": {
+    "redirect": "/app/work/projects",
+    "auth": true
+  },
+  "/app/clients/202387": {
+    "redirect": "/app/clients/202387/people",
+    "auth": true
+  },
+  "/app/ai/teammates/customJobs": {
+    "redirect": "/app/ai/teammates/customJobs/onboard",
+    "auth": true
+  },
+  "/app/people/611549": {
+    "redirect": "/app/people/611549/details",
+    "auth": true
+  },
+  "/app/people/611549/integrations": {
+    "redirect": "/app/people/611549/integrations/all",
+    "auth": true
+  },
+  "/workspace/chat": {
+    "redirect": "/workspace/chat/channels/44055",
+    "auth": true
+  },
+  "/workspace/spaces": {
+    "redirect": "/workspace/spaces/home/all",
+    "auth": true
+  },
+  "/app/everything": {
+    "redirect": "/app/everything/milestones/all",
+    "auth": true
+  },
+  "/app/settings": {
+    "redirect": "/app/settings/integrations/all",
+    "auth": true
+  },
+  "/app/settings/subscription": {
+    "redirect": "/app/settings/subscription/plans",
+    "auth": true
+  },
+  "/app/settings/integrations": {
+    "redirect": "/app/settings/integrations/all",
+    "auth": true
+  },
+  "/app/projects/372311/milestones": {
+    "redirect": "/app/projects/372311/milestones/all",
+    "auth": true
+  },
+  "/app/projects/372311/people": {
+    "redirect": "/app/projects/372311/people/people",
+    "auth": true
+  },
+  "/app/projects/372311/gantt": {
+    "redirect": "/app/projects/372311/tasks/gantt",
+    "auth": true
+  },
+  "/app/projects/comments": {
+    "redirect": "/app/projects/list",
+    "auth": true
+  },
+  "/app/clients/202387/reports/plannedvsactual": {
+    "redirect": "/app/clients/202387/reports/plannedvsactual/tasks",
+    "auth": true
+  },
+  "/app/clients/202387/reports/profitability": {
+    "redirect": "/app/clients/202387/reports/profitability/projects",
+    "auth": true
+  },
+  "/app/everything/milestones": {
+    "redirect": "/app/everything/milestones/all",
+    "auth": true
+  },
+  "/app/settings/referral": {
+    "redirect": "/app/settings/referral/about",
+    "auth": true
+  },
+  "/blog/new-in-teamwork-june-2025": {
+    "redirect": "/blog",
+    "auth": false
+  },
+  "/help/projects/tasks/privacy-on-task-lists": {
+    "file": "help/projects/tasks/privacy-on-task-lists/index.html",
+    "auth": false,
+    "title": "Setting Privacy on Task Lists - Teamwork.com Support"
+  },
+  "/help/projects/project-sections/setting-privacy-on-files": {
+    "file": "help/projects/project-sections/setting-privacy-on-files/index.html",
+    "auth": false,
+    "title": "Setting and Editing Privacy on Files - Teamwork.com Support"
+  },
+  "/help/projects/notebooks/setting-privacy-on-notebooks": {
+    "file": "help/projects/notebooks/setting-privacy-on-notebooks/index.html",
+    "auth": false,
+    "title": "Setting Privacy on Notebooks - Teamwork.com Support"
+  },
+  "/help/projects/links/setting-privacy-on-links": {
+    "file": "help/projects/links/setting-privacy-on-links/index.html",
+    "auth": false,
+    "title": "Setting Privacy on Links - Teamwork.com Support"
+  },
+  "/help/projects/using-teamwork/filtering-project-files": {
+    "file": "help/projects/using-teamwork/filtering-project-files/index.html",
+    "auth": false,
+    "title": "Project Filtering - Files - Teamwork.com Support"
+  },
+  "/help/projects/privacy/setting-privacy-on-messages": {
+    "file": "help/projects/privacy/setting-privacy-on-messages/index.html",
+    "auth": false,
+    "title": "Setting Privacy on Messages - Teamwork.com Support"
+  },
+  "/help/projects/using-teamwork/filtering-saved-filters": {
+    "file": "help/projects/using-teamwork/filtering-saved-filters/index.html",
+    "auth": false,
+    "title": "Saving Filters - Teamwork.com Support"
+  },
+  "/help/projects/using-teamwork/filtering-editing-saved-filters": {
+    "file": "help/projects/using-teamwork/filtering-editing-saved-filters/index.html",
+    "auth": false,
+    "title": "Filtering - Editing Saved Filters - Teamwork.com Support"
+  },
+  "/help/projects/project-sections/filtering-tasks-by-desk-ticket": {
+    "file": "help/projects/project-sections/filtering-tasks-by-desk-ticket/index.html",
+    "auth": false,
+    "title": "Filtering Tasks by Desk Ticket - Teamwork.com Support"
+  },
+  "/help/projects/project-sections/custom-ordering-saved-filters": {
+    "file": "help/projects/project-sections/custom-ordering-saved-filters/index.html",
+    "auth": false,
+    "title": "Custom Ordering Saved Filters - Teamwork.com Support"
+  },
+  "/help/projects/project-sections/setting-defaults-from-a-task": {
+    "file": "help/projects/project-sections/setting-defaults-from-a-task/index.html",
+    "auth": false,
+    "title": "Setting Defaults from an Existing Task - Teamwork.com Support"
+  },
+  "/help/projects/project-sections/defaults-for-task-lists": {
+    "file": "help/projects/project-sections/defaults-for-task-lists/index.html",
+    "auth": false,
+    "title": "Setting Defaults for Tasks in a Task List - Teamwork.com Support"
+  },
+  "/help/projects/settings-administrator-only/setting-default-projects-for-new-users": {
+    "file": "help/projects/settings-administrator-only/setting-default-projects-for-new-users/index.html",
+    "auth": false,
+    "title": "Setting Default Projects for New Users - Teamwork.com Support"
+  },
+  "/help/projects/project-sections/default-permissions-for-new-users": {
+    "file": "help/projects/project-sections/default-permissions-for-new-users/index.html",
+    "auth": false,
+    "title": "Default Project Permissions for New Users - Teamwork.com Support"
+  },
+  "/help/projects/settings-administrator-only/templates-section": {
+    "file": "help/projects/settings-administrator-only/templates-section/index.html",
+    "auth": false,
+    "title": "Using Templates and Default Settings for Your Site - Teamwork.com Support"
+  },
+  "/app/settings/templates": {
+    "file": "app/settings/templates/index.html",
+    "auth": true,
+    "title": "Templates - Settings - Studio"
+  },
+  "/app/settings/workflows": {
+    "file": "app/settings/workflows/index.html",
+    "auth": true,
+    "title": "Workflows - Settings - Studio"
+  },
+  "/app/settings/timeoff": {
+    "file": "app/settings/timeoff/index.html",
+    "auth": true,
+    "title": "Time off - Settings - Studio"
+  },
+  "/app/settings/ai": {
+    "file": "app/settings/ai/index.html",
+    "auth": true,
+    "title": "AI - Settings - Studio"
+  },
+  "/app/settings/customfields": {
+    "file": "app/settings/customfields/index.html",
+    "auth": true,
+    "title": "Custom fields - Settings - Studio"
+  },
+  "/app/settings/forms": {
+    "file": "app/settings/forms/index.html",
+    "auth": true,
+    "title": "Forms - Settings - Studio"
+  },
+  "/app/settings/beta": {
+    "file": "app/settings/beta/index.html",
+    "auth": true,
+    "title": "Beta - Settings - Studio"
+  },
+  "/app/settings/import": {
+    "file": "app/settings/import/index.html",
+    "auth": true,
+    "title": "Import - Settings - Studio"
+  },
+  "/app/settings/export": {
+    "file": "app/settings/export/index.html",
+    "auth": true,
+    "title": "Export - Settings - Studio"
+  },
+  "/app/settings/email": {
+    "file": "app/settings/email/index.html",
+    "auth": true,
+    "title": "Email - Settings - Studio"
+  },
+  "/app/settings/tags": {
+    "file": "app/settings/tags/index.html",
+    "auth": true,
+    "title": "Tags - Settings - Studio"
+  },
+  "/app/settings/webhooks": {
+    "file": "app/settings/webhooks/index.html",
+    "auth": true,
+    "title": "Webhooks - Settings - Studio"
+  },
+  "/app/settings/sso": {
+    "file": "app/settings/sso/index.html",
+    "auth": true,
+    "title": "SSO - Settings - Studio"
+  },
+  "/workspace/chat/channels/discover": {
+    "file": "workspace/chat/channels/discover/index.html",
+    "auth": true,
+    "title": "Teamwork Chat",
+    "dynamic_handler": "chat_local.chat_page"
+  },
+  "/workspace/chat/channels/joined": {
+    "file": "workspace/chat/channels/joined/index.html",
+    "auth": true,
+    "title": "Teamwork Chat",
+    "dynamic_handler": "chat_local.chat_page"
+  },
+  "/workspace/chat/highlights/bookmarked": {
+    "file": "workspace/chat/highlights/bookmarked/index.html",
+    "auth": true,
+    "title": "Teamwork Chat",
+    "dynamic_handler": "chat_local.chat_page"
+  },
+  "/workspace/chat/highlights/mentions": {
+    "file": "workspace/chat/highlights/mentions/index.html",
+    "auth": true,
+    "title": "Teamwork Chat",
+    "dynamic_handler": "chat_local.chat_page"
+  },
+  "/workspace/chat/people": {
+    "file": "workspace/chat/people/index.html",
+    "auth": true,
+    "title": "Teamwork Chat",
+    "dynamic_handler": "chat_local.chat_page"
+  },
+  "/workspace/chat/channels/44055/messages/8132602": {
+    "file": "workspace/chat/channels/44055/messages/8132602/index.html",
+    "auth": true,
+    "title": "Teamwork Chat",
+    "dynamic_handler": "chat_local.chat_page"
+  },
+  "/workspace/chat/search": {
+    "file": "workspace/chat/search/index.html",
+    "auth": true,
+    "title": "Teamwork Chat",
+    "dynamic_handler": "chat_local.chat_page"
+  },
+  "/boundary/35a9cb3527d53071f785": {
+    "redirect": "/workspace/chat/highlights/bookmarked",
+    "auth": true
+  },
+  "/boundary/1ec059d784dc596c7578": {
+    "redirect": "/workspace/chat/channels/discover",
+    "auth": true
+  },
+  "/boundary/3056047df590640134a8": {
+    "redirect": "/workspace/chat/people",
+    "auth": true
+  },
+  "/boundary/7e83a64935a964ff96d8": {
+    "redirect": "/workspace/chat/channels/44055/messages/8132602",
+    "auth": true
+  },
+  "/boundary/3d98b651967ff1a6705c": {
+    "redirect": "/product/resource-management",
+    "auth": false
+  },
+  "/boundary/527d22783c1944b4f78d": {
+    "redirect": "/legal/privacy-notice",
+    "auth": false
+  },
+  "/boundary/0db79e5e59b9fea3eb6e": {
+    "redirect": "/support",
+    "auth": false
+  },
+  "/boundary/4b3f4a166a7caac0ad9a": {
+    "redirect": "/product/resource-management",
+    "auth": false
+  },
+  "/status/incidents/xcmywz0n1lfw": {
+    "file": "status/incidents/xcmywz0n1lfw/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Database Maintenance in our EU region"
+  },
+  "/status/uptime": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History"
+  },
+  "/status/incidents/xk6nr1q8vq93": {
+    "file": "status/incidents/xk6nr1q8vq93/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Database Maintenance in our EU region"
+  },
+  "/status/incidents/klf5syds83vj": {
+    "file": "status/incidents/klf5syds83vj/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Database Maintenance in our EU region"
+  },
+  "/status/incidents/3g7rw99vd3t0": {
+    "file": "status/incidents/3g7rw99vd3t0/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Database Maintenance in our EU region"
+  },
+  "/status/history": {
+    "file": "status/history/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Incident History"
+  },
+  "/status/incidents/z6q1wrjr15vb": {
+    "file": "status/incidents/z6q1wrjr15vb/index.html",
+    "auth": false,
+    "title": "Issue with tasks creation in Projects"
+  },
+  "/boundary/308142dfe74a3ce800b1": {
+    "redirect": "/status/incidents/xcmywz0n1lfw",
+    "auth": false
+  },
+  "/boundary/8e89156805bf5e7e0f0a": {
+    "redirect": "/status/uptime",
+    "auth": false
+  },
+  "/boundary/6ed07fd27e01041972c9": {
+    "redirect": "/status/incidents/xk6nr1q8vq93",
+    "auth": false
+  },
+  "/boundary/5fae9f6b098953b3f6fc": {
+    "redirect": "/status/incidents/klf5syds83vj",
+    "auth": false
+  },
+  "/boundary/2e520e2717779feb201e": {
+    "redirect": "/status/incidents/3g7rw99vd3t0",
+    "auth": false
+  },
+  "/boundary/fe61ae7f27e91a5b57f3": {
+    "redirect": "/status/history",
+    "auth": false
+  },
+  "/status/history.atom": {
+    "resource": "backend/status-feeds/history.atom",
+    "auth": false,
+    "content_type": "application/atom+xml"
+  },
+  "/status/history.rss": {
+    "resource": "backend/status-feeds/history.rss",
+    "auth": false,
+    "content_type": "application/rss+xml"
+  },
+  "/boundary/77d9f2a295c5477cf43c": {
+    "redirect": "/status/history.atom",
+    "auth": false
+  },
+  "/boundary/743cbcdbf691893c6437": {
+    "redirect": "/status/history.rss",
+    "auth": false
+  },
+  "/status/uptime/n251y0gfl21w": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/lrf74j8qlygn": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/6nn6ht191h6s": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/5gyxy2mqq1f8": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/jj4yzwwmrkfh": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/56n57kvb910j": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/pn15r30s4ltp": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/nptl08sy059w": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/4f3ffj6xm8qf": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/mq77zy384hvj": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/wx2m21xhwc6b": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/8pbd4fzpzkpm": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/ltsxwljz1bgp": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/5jj51g883xkv": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/nf0xn204jtpc": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/56qn6vr3yqqj": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/fwmdcj0p157p": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/sybzzfxq89m3": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/v2pdsxlt7jmp": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/0xgrr8j3jxg2": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/kb9040xvhtbb": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/status/uptime/3wxzr8l7qcp8": {
+    "file": "status/uptime/index.html",
+    "auth": false,
+    "title": "Teamwork.com Status - Uptime History",
+    "dynamic_handler": "status_local.component_page"
+  },
+  "/help/projects/reports/using-project-health-reports": {
+    "file": "help/projects/reports/using-project-health-reports/index.html",
+    "auth": false,
+    "title": "Using Project Health Reports - Teamwork.com Support"
+  },
+  "/project-management-guide/project-milestones": {
+    "file": "project-management-guide/project-milestones/index.html",
+    "auth": false,
+    "title": "What are project milestones and how to use them | Teamwork.com"
+  },
+  "/about/author/gary-dhother": {
+    "file": "about/author/gary-dhother/index.html",
+    "auth": false,
+    "title": "Senior Marketing & GTM Program Manager"
+  },
+  "/about/author/micheal-brennan": {
+    "file": "about/author/micheal-brennan/index.html",
+    "auth": false,
+    "title": "Mícheál Brennan"
+  },
+  "/product/teams": {
+    "file": "product/teams/index.html",
+    "auth": false,
+    "title": "Team Collaboration Software | Teamwork.com"
+  },
+  "/blog/project-proposal": {
+    "file": "blog/project-proposal/index.html",
+    "auth": false,
+    "title": "How to create a simple project proposal (free outline included)]"
+  },
+  "/blog/digital-project-management": {
+    "file": "blog/digital-project-management/index.html",
+    "auth": false,
+    "title": "The Ultimate Guide to Digital Project Management"
+  },
+  "/blog/portfolio-management": {
+    "file": "blog/portfolio-management/index.html",
+    "auth": false,
+    "title": "A project manager’s guide to portfolio management | Teamwork.com"
+  },
+  "/blog/project-life-cycle": {
+    "file": "blog/project-life-cycle/index.html",
+    "auth": false,
+    "title": "5 phases of the project life cycle: An end-to-end guide | Teamwork.com"
+  },
+  "/blog/time-tracking-software-for-consultants": {
+    "file": "blog/time-tracking-software-for-consultants/index.html",
+    "auth": false,
+    "title": "Time Tracking Software for Consultants"
+  },
+  "/blog/agile-project-planning": {
+    "file": "blog/agile-project-planning/index.html",
+    "auth": false,
+    "title": "Agile Planning Made Easy: A Step-by-Step Guide | Teamwork.com"
+  },
+  "/boundary/ac42fa47f9b0899e3602": {
+    "redirect": "/help/projects/reports/using-project-health-reports",
+    "auth": false
+  },
+  "/boundary/f34e37b3c3b2c1e4c596": {
+    "redirect": "/project-management-guide/project-milestones",
+    "auth": false
+  },
+  "/boundary/e8283ebf49fede6e6db9": {
+    "redirect": "/about/author/gary-dhother",
+    "auth": false
+  },
+  "/boundary/03729382d90fe3c95cf2": {
+    "redirect": "/about/author/micheal-brennan",
+    "auth": false
+  },
+  "/boundary/f8ceaf9273d36951c363": {
+    "redirect": "/product/teams",
+    "auth": false
+  },
+  "/boundary/2e1dd7008c416973c6f1": {
+    "redirect": "/blog/digital-project-management",
+    "auth": false
+  },
+  "/boundary/dbaed9b0168a99cd245c": {
+    "redirect": "/blog/portfolio-management",
+    "auth": false
+  },
+  "/boundary/304c1d21d020edfa2e84": {
+    "redirect": "/blog/project-life-cycle",
+    "auth": false
+  },
+  "/boundary/69fc06058814be93b861": {
+    "redirect": "/blog/time-tracking-software-for-consultants",
+    "auth": false
+  },
+  "/boundary/c97c85f172e8ca3322f1": {
+    "redirect": "/blog/agile-project-planning",
+    "auth": false
+  },
+  "/status/unsubscribe": {
+    "local_equivalent": true,
+    "auth": false,
+    "title": "Teamwork.com status subscription"
+  },
+  "/status/confirm": {
+    "local_equivalent": true,
+    "auth": false,
+    "title": "Confirm status subscription",
+    "adapter_kind": "local-authentication"
+  },
+  "/status/sms-inbox": {
+    "local_equivalent": true,
+    "auth": false,
+    "title": "Local SMS inbox",
+    "adapter_kind": "local-delivery-adapter"
+  },
+  "/workspace/chat/settings/localization": {
+    "auth": true,
+    "file": "workspace/chat/settings/localization/index.html",
+    "title": "Teamwork Chat Localization",
+    "dynamic_handler": "chat_local.chat_page"
+  },
+  "/workspace/chat/settings/profile": {
+    "auth": true,
+    "file": "workspace/chat/settings/profile/index.html",
+    "title": "Teamwork Chat Profile",
+    "dynamic_handler": "chat_local.chat_page"
+  },
+  "/workspace/chat/settings/notifications": {
+    "auth": true,
+    "file": "workspace/chat/settings/notifications/index.html",
+    "title": "Teamwork Chat Notifications",
+    "dynamic_handler": "chat_local.chat_page"
+  },
+  "/workspace/chat/settings/preferences": {
+    "auth": true,
+    "file": "workspace/chat/settings/preferences/index.html",
+    "title": "Teamwork Chat Preferences",
+    "dynamic_handler": "chat_local.chat_page"
+  },
+  "/help/chat/people/understanding-user-permissions-and-access": {
+    "file": "help/chat/people/understanding-user-permissions-and-access/index.html",
+    "auth": false,
+    "title": "Understanding User Permissions and Access - Teamwork Chat Support"
+  },
+  "/workspace/chat/settings/users": {
+    "auth": true,
+    "file": "workspace/chat/settings/users/index.html",
+    "title": "Teamwork Chat Users",
+    "dynamic_handler": "chat_local.chat_page"
+  },
+  "/help/chat/advanced/using-incoming-hooks": {
+    "file": "help/chat/advanced/using-incoming-hooks/index.html",
+    "auth": false,
+    "title": "Using Incoming Hooks - Teamwork Chat Support"
+  },
+  "/workspace/chat/settings/hooks": {
+    "auth": true,
+    "file": "workspace/chat/settings/hooks/index.html",
+    "title": "Teamwork Chat Hooks",
+    "dynamic_handler": "chat_local.chat_page"
+  },
+  "/help/chat/embedded-chat/using-embedded-chat": {
+    "file": "help/chat/embedded-chat/using-embedded-chat/index.html",
+    "auth": false,
+    "title": "Embedded Chat - Teamwork Chat Support"
+  },
+  "/workspace/chat/embedded": {
+    "auth": true,
+    "file": "workspace/chat/channels/44055/index.html",
+    "title": "Embedded Teamwork Chat",
+    "dynamic_handler": "chat_local.chat_page"
+  },
+  "/workspace/chat/settings/integrations": {
+    "auth": true,
+    "file": "workspace/chat/settings/integrations/index.html",
+    "title": "Teamwork Chat Integrations",
+    "dynamic_handler": "chat_local.chat_page"
+  }
+}

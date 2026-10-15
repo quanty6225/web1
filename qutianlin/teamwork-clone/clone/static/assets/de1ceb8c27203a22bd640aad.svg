@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="392px" height="200px" viewBox="0 0 392 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>03-99percent-uptime</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="security-page-03" transform="translate(-957.000000, -1016.000000)">
+            <g id="Features-Section" transform="translate(0.000000, 709.000000)">
+                <g id="card-3" transform="translate(957.000000, 307.000000)">
+                    <g id="background">
+                        <g id="03-99percent-uptime">
+                            <rect id="Rectangle" fill="#C3CFFA" x="0" y="0" width="392" height="200"></rect>
+                            <g id="Teamwork-Icons_SECURITY_99-uptime-service-level-32px" transform="translate(163.000000, 55.000000)" fill="#895FF7" fill-rule="nonzero">
+                                <path d="M50.0457139,39.0630088 C50.0457139,88.0238029 51.6223203,90.3743796 45.8032095,90.3743796 C23.358068,90.3743796 17.1376392,91.950986 17.1376392,86.1032096 C17.1376392,37.1424156 18.68558,34.7918388 12.8664692,34.7918388 C12.5798135,34.7918388 -6.68344973,35.9957927 2.4608672,27.4247872 C31.4704244,0.192495424 32.0724013,-2.33007476 35.9709189,1.31045267 C43.4812983,9.91012376 78.6539531,34.7918388 61.5692732,34.7918388 L54.3168839,34.7918388 C51.9579819,34.7918388 50.0457139,36.7041067 50.0457139,39.0630088 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

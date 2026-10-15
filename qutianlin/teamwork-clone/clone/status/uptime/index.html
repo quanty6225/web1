@@ -1,0 +1,714 @@
+<!doctype html><html lang="en"><head><!-- force IE browsers in compatibility mode to use their most aggressive rendering engine -->
+
+    <meta charset="utf-8">
+    <title>Teamwork.com Status - Uptime History</title>
+    <meta name="description" content="Teamwork.com's Uptime History">
+
+    <!-- Mobile viewport optimization -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <!-- Time this page was rendered - http://purl.org/dc/terms/issued -->
+    <meta name="issued" content="1791931916">
+
+    <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+    <!-- Atlassian Sans & Mono Fonts -->
+<style>
+  /* Dynamic Font Stack based on Feature Flag */
+    /* Using Atlassian Sans & Mono */
+    :root {
+      --font-stack-a: "Atlassian Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+      --font-stack-b: "Atlassian Mono", "SFMono-Medium", "SF Mono", "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Consolas, Courier, monospace;
+    }
+</style>
+
+
+      <link rel="shortcut icon" href="/static/assets/64be64b83b209b72497029c0.png">
+
+    <!-- Canonical Link to ensure that only the custom domain is indexed when present -->
+      <meta name="_globalsign-domain-verification" content="y_VzfckMy4iePo5oDJNivyYIjh8LffYa4jzUndm_bZ">
+
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/static/assets/b9033b4c34110c7fe5c42089.css" media="screen"><link rel="stylesheet" href="/static/assets/6918e578161cc66c28434fec.css" media="screen"><link rel="stylesheet" href="/static/assets/2915d1a4f6773494e50a1834.css" media="screen">
+    <link rel="stylesheet" href="/static/assets/d6750d5346b682d67fb6cac9.css" media="all">
+
+    <style>
+  /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */
+  body,
+  .layout-content.status.status-api .section .example-container .example-opener .color-secondary,
+  .grouped-items-selector,
+  .layout-content.status.status-full-history .history-nav a.current,
+  div[id^="subscribe-modal"] .modal-footer,
+  div[id^="subscribe-modal"],
+  div[id^="updates-dropdown"] .updates-dropdown-section,
+  #uptime-tooltip .tooltip-box {
+    background-color:#ffffff;
+  }
+
+  #uptime-tooltip .pointer-container .pointer-smaller {
+    border-bottom-color:#ffffff;
+  }
+
+
+
+
+  /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */
+  body.status,
+  .color-primary,
+  .color-primary:hover,
+  .layout-content.status-index .status-day .update-title.impact-none a,
+  .layout-content.status-index .status-day .update-title.impact-none a:hover,
+  .layout-content.status-index .timeframes-container .timeframe.active,
+  .layout-content.status-full-history .month .incident-container .impact-none,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-none a,
+  .incident-history .impact-none,
+  .layout-content.status .grouped-items-selector.inline .grouped-item.active,
+  .layout-content.status.status-full-history .history-nav a.current,
+  .layout-content.status.status-full-history .history-nav a:not(.current):hover,
+  div[id^="subscribe-modal"] .modal-header .close,
+  .grouped-item-label,
+  #uptime-tooltip .tooltip-box .tooltip-content .related-events .related-event a.related-event-link {
+    color:#333333;
+  }
+
+  .layout-content.status.status-index .components-statuses .component-container .name {
+    color:#333333;
+    color:rgba(51,51,51,.8);
+  }
+
+
+
+
+  /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */
+  small,
+  .layout-content.status .table-row .date,
+  .color-secondary,
+  .layout-content.status .grouped-items-selector.inline .grouped-item,
+  .layout-content.status.status-full-history .history-footer .pagination a.disabled,
+  .layout-content.status.status-full-history .history-nav a,
+  #uptime-tooltip .tooltip-box .tooltip-content .related-events #related-event-header {
+    color:#AAAAAA;
+  }
+
+
+
+
+  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */
+  body.status .layout-content.status .border-color,
+  hr,
+  .tooltip-base,
+  .markdown-display table,
+  div[id^="subscribe-modal"],
+  #uptime-tooltip .tooltip-box {
+    border-color:#E0E0E0;
+  }
+
+  div[id^="subscribe-modal"] .modal-footer,
+  .markdown-display table td {
+    border-top-color:#E0E0E0;
+  }
+
+  .markdown-display table td + td, .markdown-display table th + th {
+    border-left-color:#E0E0E0;
+  }
+
+  div[id^="subscribe-modal"] .modal-header,
+  #uptime-tooltip .pointer-container .pointer-larger {
+    border-bottom-color:#E0E0E0;
+  }
+
+  #uptime-tooltip .tooltip-box .outage-field {
+    /*
+      Generate the background-color for the outage-field from the css_body_background_color and css_border_color.
+
+      For the default background (#ffffff) and default css_border_color (#e0e0e0), use the luminosity of the default background with a magic number to arrive at
+      the original outage-field background color (#f4f5f7). I used the formula Target Color = Color * alpha + Background * (1 - alpha) to find the magic number of ~0.08.
+
+      For darker css_body_background_color, luminosity values are lower so alpha trends toward becoming transparent (thus outage-field background becomes same as css_body_background_color).
+    */
+    background-color: rgba(224,224,224,0.31);
+
+    /*
+      outage-field border-color alpha is inverse to the luminosity of css_body_background_color.
+      That is to say, with a default white background this border is transparent, but on a black background, it's opaque css_border_color.
+    */
+    border-color: rgba(224,224,224,0.0);
+  }
+
+
+
+
+  /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */
+  .layout-content.status.status-index .status-day .update-title.impact-critical a,
+  .layout-content.status.status-index .status-day .update-title.impact-critical a:hover,
+  .layout-content.status.status-index .page-status.status-critical,
+  .layout-content.status.status-index .unresolved-incident.impact-critical .incident-title,
+  .flat-button.background-red {
+    background-color:#e74c3c;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-red:after,
+  .layout-content.status-full-history .month .incident-container .impact-critical,
+  .layout-content.status-incident .incident-name.impact-critical,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-critical a,
+  .status-red .icon-indicator,
+  .incident-history .impact-critical,
+  .components-container .component-inner-container.status-red .component-status,
+  .components-container .component-inner-container.status-red .icon-indicator {
+    color:#e74c3c;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-critical .updates {
+    border-color:#e74c3c;
+  }
+
+
+
+
+  /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */
+  .layout-content.status.status-index .status-day .update-title.impact-major a,
+  .layout-content.status.status-index .status-day .update-title.impact-major a:hover,
+  .layout-content.status.status-index .page-status.status-major,
+  .layout-content.status.status-index .unresolved-incident.impact-major .incident-title {
+    background-color:#e67e22;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-orange:after,
+  .layout-content.status-full-history .month .incident-container .impact-major,
+  .layout-content.status-incident .incident-name.impact-major,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-major a,
+  .status-orange .icon-indicator,
+  .incident-history .impact-major,
+  .components-container .component-inner-container.status-orange .component-status,
+  .components-container .component-inner-container.status-orange .icon-indicator {
+    color:#e67e22;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-major .updates {
+    border-color:#e67e22;
+  }
+
+
+
+
+  /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */
+  .layout-content.status.status-index .status-day .update-title.impact-minor a,
+  .layout-content.status.status-index .status-day .update-title.impact-minor a:hover,
+  .layout-content.status.status-index .page-status.status-minor,
+  .layout-content.status.status-index .unresolved-incident.impact-minor .incident-title,
+  .layout-content.status.status-index .scheduled-incidents-container .tab {
+    background-color:#f1c40f;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-yellow:after,
+  .layout-content.status-full-history .month .incident-container .impact-minor,
+  .layout-content.status-incident .incident-name.impact-minor,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-minor a,
+  .status-yellow .icon-indicator,
+  .incident-history .impact-minor,
+  .components-container .component-inner-container.status-yellow .component-status,
+  .components-container .component-inner-container.status-yellow .icon-indicator,
+  .layout-content.status.manage-subscriptions .confirmation-infobox .fa {
+    color:#f1c40f;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-minor .updates,
+  .layout-content.status.status-index .scheduled-incidents-container {
+    border-color:#f1c40f;
+  }
+
+
+
+
+  /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */
+  .layout-content.status.status-index .status-day .update-title.impact-maintenance a,
+  .layout-content.status.status-index .status-day .update-title.impact-maintenance a:hover,
+  .layout-content.status.status-index .page-status.status-maintenance,
+  .layout-content.status.status-index .unresolved-incident.impact-maintenance .incident-title,
+  .layout-content.status.status-index .scheduled-incidents-container .tab {
+    background-color:#3498DB;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-blue:after,
+  .layout-content.status-full-history .month .incident-container .impact-maintenance,
+  .layout-content.status-incident .incident-name.impact-maintenance,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-maintenance a,
+  .status-blue .icon-indicator,
+  .incident-history .impact-maintenance,
+  .components-container .component-inner-container.status-blue .component-status,
+  .components-container .component-inner-container.status-blue .icon-indicator {
+    color:#3498DB;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-maintenance .updates,
+  .layout-content.status.status-index .scheduled-incidents-container {
+    border-color:#3498DB;
+  }
+
+
+
+
+  /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */
+  .layout-content.status.status-index .page-status.status-none {
+    background-color:#2fcc66;
+  }
+  .layout-content.status-index .components-statuses .component-container.status-green:after,
+  .status-green .icon-indicator,
+  .components-container .component-inner-container.status-green .component-status,
+  .components-container .component-inner-container.status-green .icon-indicator {
+    color:#2fcc66;
+  }
+
+
+
+
+  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */
+  a,
+  a:hover,
+  .layout-content.status-index .page-footer span a:hover,
+  .layout-content.status-index .timeframes-container .timeframe:not(.active):hover,
+  .layout-content.status-incident .subheader a:hover {
+    color:#3498db;
+  }
+
+  .flat-button,
+  .masthead .updates-dropdown-container .show-updates-dropdown,
+  .layout-content.status-full-history .show-filter.open  {
+    background-color:#3498db;
+  }
+
+
+
+
+  /* CUSTOM COLOR OVERRIDES FOR UPTIME SHOWCASE */
+  .components-section .components-uptime-link {
+    color: #aaaaaa;
+  }
+
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .legend-item {
+    color: #aaaaaa;
+    opacity: 1;
+  }
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .legend-item.light {
+    color: #aaaaaa;
+    opacity: 1;
+  }
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .spacer {
+    background: #aaaaaa;
+    opacity: 1;
+  }
+</style>
+
+
+    <!-- custom css -->
+
+      <!-- polyfills -->
+        <!-- Le HTML5 shim -->
+    <!-- injection for static -->
+
+      <style data-emotion="css" data-s=""></style><style data-emotion="css" data-s=""></style><style data-emotion="css"></style><style data-styled-components=""></style><link rel="stylesheet" href="/static/clone.css"><script src="/static/clone.js" defer></script><script src="/static/status.js" defer></script><script src="/static/status-subscriptions.js" defer></script><script defer src="/static/status-channels.js"></script></head>
+
+
+  <body class="status uptime status-none sp-a11y-status-focus-visibility a11y-focus-indicators" data-breakpoint-reached="false" data-clone-auth="false" data-route="/status/uptime" data-frame="false" data-region="main">
+
+    
+<div class="layout-content status status-full-history premium">
+
+    <div class="masthead-container premium">
+    <div class="masthead">
+      <div class="images-container" id="cover-image-container" data-js-hook="images-container" style="height: 315px;"></div>
+      <style>
+          #cover-image-container {
+            background-image:url("/static/assets/448eb1a1f69b0861c083e831.png");
+          }
+
+          @media only screen and (-webkit-min-device-pixel-ratio: 2),
+                 only screen and (min-resolution: 192dpi) {
+            #cover-image-container {
+              background-image:url("/static/assets/59887feed196211f8c948c1d.png") !important;
+            }
+          }
+      </style>
+
+      <div class="text-container">
+        <span class="page-name font-largest">
+            <a href="/">Teamwork.com</a>
+        </span>
+          
+  <div class="updates-dropdown-container" data-js-hook="updates-dropdown-container">
+    <a href="#" data-js-hook="show-updates-dropdown" id="show-updates-dropdown" class="show-updates-dropdown" aria-label="Subscribe to updates" aria-expanded="false" aria-haspopup="dialog" role="button">
+      <span class="subscribe-text-full">Subscribe to Updates</span><span class="subscribe-text-short">Subscribe</span>
+    </a>
+
+<!--    Accessibility guidelines for tabs: https://www.w3.org/TR/wai-aria-practices-1.1/examples/tabs/tabs-1/tabs.html -->
+    <div class="updates-dropdown" data-js-hook="updates-dropdown" id="updates-dropdown" style="display:none" role="dialog" aria-modal="false" aria-label="Subscribe to updates">
+      <div class="updates-dropdown-nav nav-items-7" role="tablist" aria-label="Subscribe to updates">
+          <a href="#updates-dropdown-email" aria-controls="updates-dropdown-email" aria-label="Subscribe via email" role="tab" aria-selected="true" id="updates-dropdown-email-btn">
+            <span class="icon-container email">
+          </span></a>
+          <a href="#updates-dropdown-sms" aria-controls="updates-dropdown-sms" aria-label="Subscribe via SMS" role="tab" id="updates-dropdown-sms-btn">
+            <span class="icon-container sms">
+          </span></a>
+          <a href="#updates-dropdown-slack" aria-controls="updates-dropdown-slack" aria-label="Subscribe via slack" role="tab" id="updates-dropdown-slack-btn">
+            <span class="icon-container slack">
+          </span></a>
+          <a href="#updates-dropdown-webhook" aria-controls="updates-dropdown-webhook" aria-label="Subscribe via webhook" role="tab" id="updates-dropdown-webhook-btn">
+            <span class="icon-container webhook">
+          </span></a>
+          <a href="#updates-dropdown-support" aria-controls="updates-dropdown-support" aria-label="Contact support" role="tab" id="updates-dropdown-support-btn">
+            <span class="icon-container support">
+          </span></a>
+          <a href="#updates-dropdown-atom" aria-controls="updates-dropdown-atom" aria-label="Subscribe via RSS" role="tab" id="updates-dropdown-atom-btn">
+            <span class="icon-container rss">
+          </span></a>
+        <button data-js-hook="updates-dropdown-close" aria-label="Close subscribe form" id="updates-dropdown-close-btn">
+          x
+        </button>
+      </div>
+      <div class="updates-dropdown-sections-container">
+          <div class="updates-dropdown-section email" id="updates-dropdown-email" style="display:none" role="tabpanel" aria-labelledby="updates-dropdown-email-btn">
+            <div class="directions">
+              Get email notifications whenever Teamwork.com <strong>creates</strong>,  <strong>updates</strong> or <strong>resolves</strong> an incident.
+            </div>
+            <form id="subscribe-form-email" action="/api/forms" accept-charset="UTF-8" data-remote="true" method="post"><input type="hidden" name="email_otp_verify_flow" id="email_otp_verify_flow" value="false" autocomplete="off">
+                <!-- make sure not to put cookie values in here since this gets cached -->
+                <label for="email">Email address:</label>
+                <input name="email" id="email" type="text" class="full-width" data-js-hook="email-notification-field" autocomplete="email">
+                <input name="email_otp_auth_token" type="hidden" id="email-otp-token-field">
+                <div class="opt-container-section" id="email-otp-container" ,="" style="display:none">
+                  <label for="email-otp">Enter OTP:</label>
+                  <input name="otp" id="email-otp" type="text" value="" class="prepend full-width">
+                  <p id="email-otp-timer">Resend OTP in: <span id="email-otp-countdown"></span> seconds </p>
+                  <p id="resend-email-otp">
+                    Didn't receive the OTP?
+                    <a href="#" id="resend-email-otp-btn">Resend OTP </a>
+                  </p>
+                </div>
+                  <input type="hidden" name="captcha_error" id="captcha_error" value="false" autocomplete="off">
+                  <div></div><input type="submit" value="Subscribe via Email" class="flat-button full-width g-recaptcha" id="subscribe-btn-email" data-disabled-text="Subscribing...">
+                  <div class="terms_and_privacy_information bottom small"><div class="privacy_policy_information small">By subscribing you agree to our <a rel="noopener" class="accessible-link" href="/boundary/527d22783c1944b4f78d">Privacy Policy</a>.</div> This site is protected by reCAPTCHA and the Google <a rel="noopener" class="accessible-link" href="/external/47330706f5e77b8da361">Privacy Policy</a> and <a rel="noopener" class="accessible-link" data-js-hook="captcha-terms-of-service-link" href="/external/dc53493de88c4829c406">Terms of Service</a> apply.</div>
+</form>          </div>
+
+          <div class="updates-dropdown-section phone" id="updates-dropdown-sms" style="display:none" role="tabpanel" aria-labelledby="updates-dropdown-sms-btn">
+            <div class="directions">
+                Get text message notifications whenever Teamwork.com <strong>creates</strong> or <strong>resolves</strong> an incident.
+            </div>
+            <form id="subscribe-form-sms" action="/api/forms" accept-charset="UTF-8" data-remote="true" method="post"><input type="hidden" name="otp_verify_flow" id="otp_verify_flow" value="false" autocomplete="off">
+              <input type="hidden" name="subscriber_code" id="subscriber_code" value="" autocomplete="off">
+              <div class="control-group">
+                <div class="controls externalities-sms-container">
+                  <!-- make sure not to put cookie values in here since this gets cached -->
+                  <label for="phone-country">Country code:</label>
+                  <div id="phone-number-country-code" class="phone-country-wrapper" data-otp-enabled="false">
+                      <select name="phone_country" id="phone-country" data-js-hook="phone-country" class="phone-country"><option value="af" data-otp-enabled="false">Afghanistan (+93)</option>
+<option value="al" data-otp-enabled="false">Albania (+355)</option>
+<option value="dz" data-otp-enabled="false">Algeria (+213)</option>
+<option value="as" data-otp-enabled="false">American Samoa (+1)</option>
+<option value="ad" data-otp-enabled="false">Andorra (+376)</option>
+<option value="ao" data-otp-enabled="false">Angola (+244)</option>
+<option value="ai" data-otp-enabled="false">Anguilla (+1)</option>
+<option value="ag" data-otp-enabled="false">Antigua and Barbuda (+1)</option>
+<option value="ar" data-otp-enabled="false">Argentina (+54)</option>
+<option value="am" data-otp-enabled="false">Armenia (+374)</option>
+<option value="aw" data-otp-enabled="false">Aruba (+297)</option>
+<option value="au" data-otp-enabled="false">Australia/Cocos/Christmas Island (+61)</option>
+<option value="at" data-otp-enabled="false">Austria (+43)</option>
+<option value="az" data-otp-enabled="false">Azerbaijan (+994)</option>
+<option value="bs" data-otp-enabled="false">Bahamas (+1)</option>
+<option value="bh" data-otp-enabled="false">Bahrain (+973)</option>
+<option value="bd" data-otp-enabled="false">Bangladesh (+880)</option>
+<option value="bb" data-otp-enabled="false">Barbados (+1)</option>
+<option value="by" data-otp-enabled="false">Belarus (+375)</option>
+<option value="be" data-otp-enabled="false">Belgium (+32)</option>
+<option value="bz" data-otp-enabled="false">Belize (+501)</option>
+<option value="bj" data-otp-enabled="false">Benin (+229)</option>
+<option value="bm" data-otp-enabled="false">Bermuda (+1)</option>
+<option value="bo" data-otp-enabled="false">Bolivia (+591)</option>
+<option value="ba" data-otp-enabled="false">Bosnia and Herzegovina (+387)</option>
+<option value="bw" data-otp-enabled="false">Botswana (+267)</option>
+<option value="br" data-otp-enabled="false">Brazil (+55)</option>
+<option value="bn" data-otp-enabled="false">Brunei (+673)</option>
+<option value="bg" data-otp-enabled="false">Bulgaria (+359)</option>
+<option value="bf" data-otp-enabled="false">Burkina Faso (+226)</option>
+<option value="bi" data-otp-enabled="false">Burundi (+257)</option>
+<option value="kh" data-otp-enabled="false">Cambodia (+855)</option>
+<option value="cm" data-otp-enabled="false">Cameroon (+237)</option>
+<option value="ca" data-otp-enabled="false">Canada (+1)</option>
+<option value="cv" data-otp-enabled="false">Cape Verde (+238)</option>
+<option value="ky" data-otp-enabled="false">Cayman Islands (+1)</option>
+<option value="cf" data-otp-enabled="false">Central Africa (+236)</option>
+<option value="td" data-otp-enabled="false">Chad (+235)</option>
+<option value="cl" data-otp-enabled="false">Chile (+56)</option>
+<option value="cn" data-otp-enabled="false">China (+86)</option>
+<option value="co" data-otp-enabled="false">Colombia (+57)</option>
+<option value="km" data-otp-enabled="false">Comoros (+269)</option>
+<option value="cg" data-otp-enabled="false">Congo (+242)</option>
+<option value="cd" data-otp-enabled="false">Congo, Dem Rep (+243)</option>
+<option value="cr" data-otp-enabled="false">Costa Rica (+506)</option>
+<option value="hr" data-otp-enabled="false">Croatia (+385)</option>
+<option value="cy" data-otp-enabled="false">Cyprus (+357)</option>
+<option value="cz" data-otp-enabled="false">Czech Republic (+420)</option>
+<option value="dk" data-otp-enabled="false">Denmark (+45)</option>
+<option value="dj" data-otp-enabled="false">Djibouti (+253)</option>
+<option value="dm" data-otp-enabled="false">Dominica (+1)</option>
+<option value="do" data-otp-enabled="false">Dominican Republic (+1)</option>
+<option value="eg" data-otp-enabled="false">Egypt (+20)</option>
+<option value="sv" data-otp-enabled="false">El Salvador (+503)</option>
+<option value="gq" data-otp-enabled="false">Equatorial Guinea (+240)</option>
+<option value="ee" data-otp-enabled="false">Estonia (+372)</option>
+<option value="et" data-otp-enabled="false">Ethiopia (+251)</option>
+<option value="fo" data-otp-enabled="false">Faroe Islands (+298)</option>
+<option value="fj" data-otp-enabled="false">Fiji (+679)</option>
+<option value="fi" data-otp-enabled="false">Finland/Aland Islands (+358)</option>
+<option value="fr" data-otp-enabled="false">France (+33)</option>
+<option value="gf" data-otp-enabled="false">French Guiana (+594)</option>
+<option value="pf" data-otp-enabled="false">French Polynesia (+689)</option>
+<option value="ga" data-otp-enabled="false">Gabon (+241)</option>
+<option value="gm" data-otp-enabled="false">Gambia (+220)</option>
+<option value="ge" data-otp-enabled="false">Georgia (+995)</option>
+<option value="de" data-otp-enabled="false">Germany (+49)</option>
+<option value="gh" data-otp-enabled="false">Ghana (+233)</option>
+<option value="gi" data-otp-enabled="false">Gibraltar (+350)</option>
+<option value="gr" data-otp-enabled="false">Greece (+30)</option>
+<option value="gl" data-otp-enabled="false">Greenland (+299)</option>
+<option value="gd" data-otp-enabled="false">Grenada (+1)</option>
+<option value="gp" data-otp-enabled="false">Guadeloupe (+590)</option>
+<option value="gu" data-otp-enabled="false">Guam (+1)</option>
+<option value="gt" data-otp-enabled="false">Guatemala (+502)</option>
+<option value="gn" data-otp-enabled="false">Guinea (+224)</option>
+<option value="gy" data-otp-enabled="false">Guyana (+592)</option>
+<option value="ht" data-otp-enabled="false">Haiti (+509)</option>
+<option value="hn" data-otp-enabled="false">Honduras (+504)</option>
+<option value="hk" data-otp-enabled="false">Hong Kong (+852)</option>
+<option value="hu" data-otp-enabled="false">Hungary (+36)</option>
+<option value="is" data-otp-enabled="false">Iceland (+354)</option>
+<option value="in" data-otp-enabled="false">India (+91)</option>
+<option value="id" data-otp-enabled="false">Indonesia (+62)</option>
+<option value="iq" data-otp-enabled="false">Iraq (+964)</option>
+<option value="ie" data-otp-enabled="false" selected>Ireland (+353)</option>
+<option value="il" data-otp-enabled="false">Israel (+972)</option>
+<option value="it" data-otp-enabled="false">Italy (+39)</option>
+<option value="jm" data-otp-enabled="false">Jamaica (+1)</option>
+<option value="jp" data-otp-enabled="false">Japan (+81)</option>
+<option value="jo" data-otp-enabled="false">Jordan (+962)</option>
+<option value="ke" data-otp-enabled="false">Kenya (+254)</option>
+<option value="kr" data-otp-enabled="false">Korea, Republic of (+82)</option>
+<option value="xk" data-otp-enabled="false">Kosovo (+383)</option>
+<option value="kw" data-otp-enabled="false">Kuwait (+965)</option>
+<option value="kg" data-otp-enabled="false">Kyrgyzstan (+996)</option>
+<option value="la" data-otp-enabled="false">Laos (+856)</option>
+<option value="lv" data-otp-enabled="false">Latvia (+371)</option>
+<option value="lb" data-otp-enabled="false">Lebanon (+961)</option>
+<option value="ls" data-otp-enabled="false">Lesotho (+266)</option>
+<option value="lr" data-otp-enabled="false">Liberia (+231)</option>
+<option value="ly" data-otp-enabled="false">Libya (+218)</option>
+<option value="li" data-otp-enabled="false">Liechtenstein (+423)</option>
+<option value="lt" data-otp-enabled="false">Lithuania (+370)</option>
+<option value="lu" data-otp-enabled="false">Luxembourg (+352)</option>
+<option value="mo" data-otp-enabled="false">Macao (+853)</option>
+<option value="mk" data-otp-enabled="false">Macedonia (+389)</option>
+<option value="mg" data-otp-enabled="false">Madagascar (+261)</option>
+<option value="mw" data-otp-enabled="false">Malawi (+265)</option>
+<option value="my" data-otp-enabled="false">Malaysia (+60)</option>
+<option value="mv" data-otp-enabled="false">Maldives (+960)</option>
+<option value="ml" data-otp-enabled="false">Mali (+223)</option>
+<option value="mt" data-otp-enabled="false">Malta (+356)</option>
+<option value="mq" data-otp-enabled="false">Martinique (+596)</option>
+<option value="mr" data-otp-enabled="false">Mauritania (+222)</option>
+<option value="mu" data-otp-enabled="false">Mauritius (+230)</option>
+<option value="mx" data-otp-enabled="false">Mexico (+52)</option>
+<option value="mc" data-otp-enabled="false">Monaco (+377)</option>
+<option value="mn" data-otp-enabled="false">Mongolia (+976)</option>
+<option value="me" data-otp-enabled="false">Montenegro (+382)</option>
+<option value="ms" data-otp-enabled="false">Montserrat (+1)</option>
+<option value="ma" data-otp-enabled="false">Morocco/Western Sahara (+212)</option>
+<option value="mz" data-otp-enabled="false">Mozambique (+258)</option>
+<option value="na" data-otp-enabled="false">Namibia (+264)</option>
+<option value="np" data-otp-enabled="false">Nepal (+977)</option>
+<option value="nl" data-otp-enabled="false">Netherlands (+31)</option>
+<option value="nz" data-otp-enabled="false">New Zealand (+64)</option>
+<option value="ni" data-otp-enabled="false">Nicaragua (+505)</option>
+<option value="ne" data-otp-enabled="false">Niger (+227)</option>
+<option value="ng" data-otp-enabled="false">Nigeria (+234)</option>
+<option value="no" data-otp-enabled="false">Norway (+47)</option>
+<option value="om" data-otp-enabled="false">Oman (+968)</option>
+<option value="pk" data-otp-enabled="false">Pakistan (+92)</option>
+<option value="ps" data-otp-enabled="false">Palestinian Territory (+970)</option>
+<option value="pa" data-otp-enabled="false">Panama (+507)</option>
+<option value="py" data-otp-enabled="false">Paraguay (+595)</option>
+<option value="pe" data-otp-enabled="false">Peru (+51)</option>
+<option value="ph" data-otp-enabled="false">Philippines (+63)</option>
+<option value="pl" data-otp-enabled="false">Poland (+48)</option>
+<option value="pt" data-otp-enabled="false">Portugal (+351)</option>
+<option value="pr" data-otp-enabled="false">Puerto Rico (+1)</option>
+<option value="qa" data-otp-enabled="false">Qatar (+974)</option>
+<option value="re" data-otp-enabled="false">Reunion/Mayotte (+262)</option>
+<option value="ro" data-otp-enabled="false">Romania (+40)</option>
+<option value="ru" data-otp-enabled="false">Russia/Kazakhstan (+7)</option>
+<option value="rw" data-otp-enabled="false">Rwanda (+250)</option>
+<option value="ws" data-otp-enabled="false">Samoa (+685)</option>
+<option value="sm" data-otp-enabled="false">San Marino (+378)</option>
+<option value="sa" data-otp-enabled="false">Saudi Arabia (+966)</option>
+<option value="sn" data-otp-enabled="false">Senegal (+221)</option>
+<option value="rs" data-otp-enabled="false">Serbia (+381)</option>
+<option value="sc" data-otp-enabled="false">Seychelles (+248)</option>
+<option value="sl" data-otp-enabled="false">Sierra Leone (+232)</option>
+<option value="sg" data-otp-enabled="false">Singapore (+65)</option>
+<option value="sk" data-otp-enabled="false">Slovakia (+421)</option>
+<option value="si" data-otp-enabled="false">Slovenia (+386)</option>
+<option value="za" data-otp-enabled="false">South Africa (+27)</option>
+<option value="es" data-otp-enabled="false">Spain (+34)</option>
+<option value="lk" data-otp-enabled="false">Sri Lanka (+94)</option>
+<option value="kn" data-otp-enabled="false">St Kitts and Nevis (+1)</option>
+<option value="lc" data-otp-enabled="false">St Lucia (+1)</option>
+<option value="vc" data-otp-enabled="false">St Vincent Grenadines (+1)</option>
+<option value="sd" data-otp-enabled="false">Sudan (+249)</option>
+<option value="sr" data-otp-enabled="false">Suriname (+597)</option>
+<option value="sz" data-otp-enabled="false">Swaziland (+268)</option>
+<option value="se" data-otp-enabled="false">Sweden (+46)</option>
+<option value="ch" data-otp-enabled="false">Switzerland (+41)</option>
+<option value="tw" data-otp-enabled="false">Taiwan (+886)</option>
+<option value="tj" data-otp-enabled="false">Tajikistan (+992)</option>
+<option value="tz" data-otp-enabled="false">Tanzania (+255)</option>
+<option value="th" data-otp-enabled="false">Thailand (+66)</option>
+<option value="tg" data-otp-enabled="false">Togo (+228)</option>
+<option value="to" data-otp-enabled="false">Tonga (+676)</option>
+<option value="tt" data-otp-enabled="false">Trinidad and Tobago (+1)</option>
+<option value="tn" data-otp-enabled="false">Tunisia (+216)</option>
+<option value="tr" data-otp-enabled="false">Turkey (+90)</option>
+<option value="tc" data-otp-enabled="false">Turks and Caicos Islands (+1)</option>
+<option value="ug" data-otp-enabled="false">Uganda (+256)</option>
+<option value="ua" data-otp-enabled="false">Ukraine (+380)</option>
+<option value="ae" data-otp-enabled="false">United Arab Emirates (+971)</option>
+<option value="gb" data-otp-enabled="false">United Kingdom (+44)</option>
+<option value="us" data-otp-enabled="false">United States (+1)</option>
+<option value="uy" data-otp-enabled="false">Uruguay (+598)</option>
+<option value="uz" data-otp-enabled="false">Uzbekistan (+998)</option>
+<option value="ve" data-otp-enabled="false">Venezuela (+58)</option>
+<option value="vn" data-otp-enabled="false">Vietnam (+84)</option>
+<option value="vg" data-otp-enabled="false">Virgin Islands, British (+1)</option>
+<option value="vi" data-otp-enabled="false">Virgin Islands, U.S. (+1)</option>
+<option value="ye" data-otp-enabled="false">Yemen (+967)</option>
+<option value="zm" data-otp-enabled="false">Zambia (+260)</option>
+<option value="zw" data-otp-enabled="false">Zimbabwe (+263)</option></select>
+                  </div>
+                  <label for="phone-number">Phone number:</label>
+                  <input name="phone_number" id="phone-number" type="text" class="prepend full-width" data-js-hook="sms-notification-field">
+                  <div class="sms-atl-error" id="sms-atl-error"></div>
+                  <div class="clearfix"></div>
+                  <div class="opt-container-section" id="otp-container" style="display:none">
+                    <a href="#" id="btn-subcriber-change-number">Change number</a>
+                    <label for="otp">Enter OTP:</label>
+                    <input name="otp" id="otp" type="text" class="prepend full-width">
+                    <p id="timer">Resend OTP in: <span id="countdown">30</span> seconds </p>
+                    <p id="resend">
+                      Didn't receive the OTP?
+                      <a href="#" id="resend-otp-btn">Resend OTP </a>
+                    </p>
+                    </div>
+                </div>
+              </div>
+
+                <input type="hidden" name="captcha_error" id="captcha_error" value="false" autocomplete="off">
+                <div></div><input type="submit" value="Subscribe via Text Message" class="flat-button full-width g-recaptcha" id="subscribe-btn-sms" data-disabled-text="Subscribing...">
+              <div class="terms_and_privacy_information bottom small">Message and data rates may apply. By subscribing you agree to our <a rel="noopener" class="accessible-link" href="/boundary/527d22783c1944b4f78d">Privacy Policy</a>, the Atlassian <a rel="noopener" class="accessible-link" href="/external/32612158d65e1efab8f5">Terms of Service</a>, and the Atlassian <a rel="noopener" class="accessible-link" href="/external/817c83b27420a11eb700">Privacy Policy</a>. This site is protected by reCAPTCHA and the Google <a rel="noopener" class="accessible-link" href="/external/47330706f5e77b8da361">Privacy Policy</a> and <a rel="noopener" class="accessible-link" data-js-hook="captcha-terms-of-service-link" href="/external/dc53493de88c4829c406">Terms of Service</a> apply.</div>
+</form>          </div>
+
+          <div class="updates-dropdown-section slack" id="updates-dropdown-slack" style="display:none" role="tabpanel" aria-labelledby="updates-dropdown-slack-btn">
+            <div class="directions">
+              Get incident updates and maintenance status messages in Slack.
+            </div>
+            <a value="Subscribe via Slack" class="flat-button full-width" id="subscribe-btn-slack" data-disabled-text="Subscribing..." data-revert-on-success="true" style="margin-top:.75rem" href="/external/95f200fab407b089e5e4">Subscribe via Slack</a>
+            <div class="terms_and_privacy_information bottom small">By subscribing you acknowledge our <a rel="noopener" class="accessible-link" href="/boundary/527d22783c1944b4f78d">Privacy Policy</a>. In addition, you agree to the Atlassian <a rel="noopener" class="accessible-link" href="/external/602329198e4935aa42c9">Cloud Terms of Service</a> and acknowledge Atlassian's <a rel="noopener" class="accessible-link" href="/external/817c83b27420a11eb700">Privacy Policy</a>.</div>
+          </div>
+
+
+          <div class="updates-dropdown-section webhook" id="updates-dropdown-webhook" style="display:none" role="tabpanel" aria-labelledby="updates-dropdown-webhook-btn">
+            <div class="directions">
+              Get webhook notifications whenever Teamwork.com <strong>creates</strong> an incident, <strong>updates</strong> an incident, <strong>resolves</strong> an incident or <strong>changes</strong> a component status.
+            </div>
+            <form id="subscribe-form-webhook" action="/api/forms" accept-charset="UTF-8" data-remote="true" method="post"><div class="control-group">
+                <div class="controls">
+                  <label for="endpoint-webhooks">Webhook URL:</label>
+                  <input type="text" name="endpoint" id="endpoint-webhooks" data-js-hook="endpoint" class="full-width" aria-describedby="url-help-block">
+                  <p class="help-block" id="url-help-block">The URL we should send the webhooks to</p>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <div class="controls">
+                  <label for="email-webhooks">Email address:</label>
+                  <input type="text" name="email" id="email-webhooks" data-js-hook="email" class="full-width" aria-describedby="email-help-block">
+                  <p class="help-block" id="email-help-block">We'll send you email if your endpoint fails</p>
+                </div>
+              </div>
+
+                <input type="hidden" name="captcha_error" id="captcha_error" value="false" autocomplete="off">
+                <div></div><input type="submit" value="Subscribe" to="" notifications="" class="flat-button full-width g-recaptcha" id="subscribe-btn-webhook" data-disabled-text="Subscribing...">
+                <div class="terms_and_privacy_information bottom small"><div class="privacy_policy_information small">By subscribing you agree to our <a rel="noopener" class="accessible-link" href="/boundary/527d22783c1944b4f78d">Privacy Policy</a>.</div> This site is protected by reCAPTCHA and the Google <a rel="noopener" class="accessible-link" href="/external/47330706f5e77b8da361">Privacy Policy</a> and <a rel="noopener" class="accessible-link" data-js-hook="captcha-terms-of-service-link" href="/external/dc53493de88c4829c406">Terms of Service</a> apply.</div>
+
+</form>          </div>
+
+
+          <div class="updates-dropdown-section support" id="updates-dropdown-support" style="display:none" role="tabpanel" aria-labelledby="updates-dropdown-support-btn">
+            Visit our <a href="/boundary/0db79e5e59b9fea3eb6e">support site</a>.
+          </div>
+
+          <div class="updates-dropdown-section atom" id="updates-dropdown-atom" role="tabpanel" aria-labelledby="updates-dropdown-atom-btn">
+            Get the <a href="/status/history.atom">Atom Feed</a> or <a href="/status/history.rss">RSS Feed</a>.
+          </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+    </div>
+
+</div>
+ <!-- this is outside of the .container so that the cover photo can go full width on mobile -->
+
+
+  <div class="container history-container">
+    <div class="history-nav border-color">
+  <ul>
+    <li>
+      <a class="button border-color" href="/status/history" aria-label="Incidents">Incidents</a>
+    </li>
+    <li>
+      <a class="button current border-color" href="/status/uptime" aria-label="Uptime" aria-current="page">Uptime</a>
+    </li>
+  </ul>
+</div>
+
+
+    <div data-react-class="UptimeCalendar" data-react-props='{"component":{"status":"operational","name":"Teamwork Projects","created_at":"2018-10-13T20:30:13.688Z","updated_at":"2018-10-13T20:30:13.688Z","position":1,"description":null,"showcase":false,"start_date":null,"id":"mq77zy384hvj","group_id":null,"page_id":"gbvg14byz4n5","components":["wx2m21xhwc6b","8pbd4fzpzkpm"]},"component_select_list":[{"name":"Teamwork CRM","value":"n251y0gfl21w"},{"name":"Teamwork CRM - Teamwork CRM - US region","value":"lrf74j8qlygn"},{"name":"Teamwork CRM - Teamwork CRM - EU Region","value":"6nn6ht191h6s"},{"name":"Teamwork Chat","value":"5gyxy2mqq1f8"},{"name":"Teamwork Chat - Teamwork Chat - US Region","value":"jj4yzwwmrkfh"},{"name":"Teamwork Chat - Teamwork Chat - EU Region","value":"56n57kvb910j"},{"name":"Teamwork Desk","value":"pn15r30s4ltp"},{"name":"Teamwork Desk - Teamwork Desk - US Region","value":"nptl08sy059w"},{"name":"Teamwork Desk - Teamwork Desk - EU Region","value":"4f3ffj6xm8qf"},{"name":"Teamwork Projects","value":"mq77zy384hvj"},{"name":"Teamwork Projects - Teamwork Projects - US region","value":"wx2m21xhwc6b"},{"name":"Teamwork Projects - Teamwork Projects - EU Region","value":"8pbd4fzpzkpm"},{"name":"Teamwork Spaces","value":"ltsxwljz1bgp"},{"name":"Teamwork Spaces - Teamwork Spaces - US Region","value":"5jj51g883xkv"},{"name":"Teamwork Spaces - Teamwork Spaces - EU Region","value":"nf0xn204jtpc"},{"name":"Teamwork Websites","value":"56qn6vr3yqqj"},{"name":"Teamwork Websites - Teamwork.com","value":"fwmdcj0p157p"},{"name":"Teamwork Websites - Teamwork Academy","value":"sybzzfxq89m3"},{"name":"Teamwork Websites - Teamwork API Docs","value":"v2pdsxlt7jmp"},{"name":"Teamwork Websites - Teamwork Blog","value":"0xgrr8j3jxg2"},{"name":"Teamwork Websites - Teamwork Developer Portal","value":"kb9040xvhtbb"},{"name":"Teamwork Websites - Teamwork Support Center","value":"3wxzr8l7qcp8"}],"is_group":true,"months":[{"name":"August","year":2026,"start_offset":6,"uptime_percentage":1.0,"days":[{"color":"#2fcc66","date":"2026-08-01T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-02T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-03T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-04T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-05T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-06T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-07T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-08T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-09T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-10T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-11T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-12T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-13T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-14T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-15T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-16T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-17T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-18T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-19T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-20T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-21T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-22T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-23T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-24T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-25T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-26T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-27T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-28T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-29T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-30T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-08-31T00:00:00.000Z","mc":0,"pc":0}]},{"name":"September","year":2026,"start_offset":2,"uptime_percentage":1.0,"days":[{"color":"#2fcc66","date":"2026-09-01T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-02T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-03T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-04T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-05T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-06T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-07T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-08T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-09T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-10T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-11T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-12T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-13T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-14T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-15T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-16T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-17T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-18T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-19T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-20T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-21T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-22T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-23T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-24T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-25T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-26T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-27T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-28T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-29T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-09-30T00:00:00.000Z","mc":0,"pc":0}]},{"name":"October","year":2026,"start_offset":4,"uptime_percentage":1.0,"days":[{"color":"#2fcc66","date":"2026-10-01T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-10-02T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-10-03T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-10-04T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-10-05T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-10-06T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-10-07T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-10-08T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-10-09T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-10-10T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-10-11T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-10-12T00:00:00.000Z","mc":0,"pc":0},{"color":"#2fcc66","date":"2026-10-13T00:00:00.000Z","mc":0,"pc":0},{"color":"#EAEAEA"},{"color":"#EAEAEA"},{"color":"#EAEAEA"},{"color":"#EAEAEA"},{"color":"#EAEAEA"},{"color":"#EAEAEA"},{"color":"#EAEAEA"},{"color":"#EAEAEA"},{"color":"#EAEAEA"},{"color":"#EAEAEA"},{"color":"#EAEAEA"},{"color":"#EAEAEA"},{"color":"#EAEAEA"},{"color":"#EAEAEA"},{"color":"#EAEAEA"},{"color":"#EAEAEA"},{"color":"#EAEAEA"},{"color":"#EAEAEA"}]}],"group_component_data":[{"code":"wx2m21xhwc6b","start_date":null,"is_showcased":true},{"code":"8pbd4fzpzkpm","start_date":null,"is_showcased":true}],"renderUptimePatternFF":false,"a11ySeptHeadings":true}'><div class="uptime-calendar"><div class="uptime-header"><div class="component-selector"><div class="control-group"><div class="css-164r41r"><div class=" css-5a7vsu-container"><span aria-live="assertive" aria-atomic="false" aria-relevant="additions text" class="css-7pg0cj-a11yText"></span><div class="select-input__control css-wjj10o-control"><div class="select-input__value-container select-input__value-container--has-value css-1b6odlt"><div class="select-input__single-value css-hkzqy0-singleValue">Teamwork Projects</div><input id="react-select-2-input" readonly tabindex="0" aria-autocomplete="list" aria-label="Select Component" class="css-62g3xt-dummyInput" value=""></div><div class="select-input__indicators css-t5ibhw"><div class="select-input__indicator select-input__dropdown-indicator css-1bhtqla-indicatorContainer" aria-hidden="true"><span role="img" aria-label="open" class="css-pxzk9z" style="--icon-primary-color: currentColor; --icon-secondary-color: var(--ds-surface, #FFFFFF);"><svg width="24" height="24" viewbox="0 0 24 24" role="presentation"><path d="M8.292 10.293a1.009 1.009 0 000 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955a1.01 1.01 0 000-1.419.987.987 0 00-1.406 0l-2.298 2.317-2.307-2.327a.99.99 0 00-1.406 0z" fill="currentColor" fill-rule="evenodd"></path></svg></span></div></div></div><input name="component" type="hidden" value="mq77zy384hvj"></div></div></div></div><div class="pagination-container"><div class="pagination"><a href="#back" class="previous-page border-color color-secondary" aria-label="Previous page" aria-disabled="false"><i class="left-arrow"></i></a><span class="current"><span>August</span><var data-var="start-date-year"> 2026</var> to <span>October</span><var data-var="end-date-year"> 2026</var></span><a href="#forward" class="next-page border-color color-secondary disabled" aria-label="Next page" aria-disabled="true" tabindex="-1"><i class="right-arrow"></i></a></div></div></div><div class="uptime-calendar-display"><div class="calendar-month"><div class="month-header"><h2 class="month-name">August <var data-var="year">2026</var></h2><small class="month-uptime">100%</small></div><div class="days"><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect class="hide" width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect class="hide" width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect class="hide" width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect class="hide" width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect class="hide" width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect class="hide" width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg></div></div><div class="calendar-month"><div class="month-header"><h2 class="month-name">September <var data-var="year">2026</var></h2><small class="month-uptime">100%</small></div><div class="days"><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect class="hide" width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect class="hide" width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg></div></div><div class="calendar-month"><div class="month-header"><h2 class="month-name">October <var data-var="year">2026</var></h2><small class="month-uptime">100%</small></div><div class="days"><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect class="hide" width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect class="hide" width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect class="hide" width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect class="hide" width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day active" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#2fcc66"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#EAEAEA"></rect></svg><svg class="day" width="32" height="32" xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="uptime-tooltip"><rect width="32" height="32" fill="#EAEAEA"></rect></svg></div></div></div></div></div>
+
+    <div class="page-footer border-color font-small">
+  <a href="/status" aria-label="Back to current status">
+    <span class="current-status-arrow">←</span> Current Status
+  </a>
+  <span class="color-secondary powered-by" style="display: inline !important; visibility:visible !important; opacity: 1 !important; position:static !important; text-indent:0px !important; transform:scale(1) !important"><a class="color-secondary" rel="noopener noreferrer nofollow" href="/external/fc1b802ab29ff8401be9">Powered by Atlassian Statuspage</a></span>
+</div>
+
+  </div>
+
+
+  
+</div>
+
+
+    <div id="cpt-notification-container" role="status" aria-live="polite" aria-atomic="true"></div>
+    
+
+
+
+
+    <!-- all of the content_for stuff -->
+      <!-- FOR FLASH NOTICES -->
+
+<!-- FOR ERROR -->
+
+
+    <svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><div style="visibility: hidden; position: absolute; width: 100%; top: -10000px; left: 0px; right: 0px; transition: visibility linear 0.3s, opacity 0.3s linear; opacity: 0;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.5;"></div><div style="margin: 0px auto; top: 0px; left: 0px; right: 0px; position: fixed; border: 1px solid rgb(204, 204, 204); z-index: 2000000000; background-color: rgb(255, 255, 255);"><iframe title="recaptcha" name="c-yaqtmobuzd5x" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="/external/7aa99e4bb231ceab9697" style="width: 100%; height: 100%;"></iframe></div></div><div style="visibility: hidden; position: absolute; width: 100%; top: -10000px; left: 0px; right: 0px; transition: visibility linear 0.3s, opacity 0.3s linear; opacity: 0;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.5;"></div><div style="margin: 0px auto; top: 0px; left: 0px; right: 0px; position: fixed; border: 1px solid rgb(204, 204, 204); z-index: 2000000000; background-color: rgb(255, 255, 255);"><iframe title="recaptcha" name="c-nlkoohwogl6p" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="/external/ee457ec48b828edd03a2" style="width: 100%; height: 100%;"></iframe></div></div><div style="visibility: hidden; position: absolute; width: 100%; top: -10000px; left: 0px; right: 0px; transition: visibility linear 0.3s, opacity 0.3s linear; opacity: 0;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.5;"></div><div style="margin: 0px auto; top: 0px; left: 0px; right: 0px; position: fixed; border: 1px solid rgb(204, 204, 204); z-index: 2000000000; background-color: rgb(255, 255, 255);"><iframe title="recaptcha" name="c-en670m1pqoho" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="/external/6cf7e2b5dc0f557f0317" style="width: 100%; height: 100%;"></iframe></div></div></body></html>

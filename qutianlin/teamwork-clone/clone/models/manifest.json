@@ -1,0 +1,9 @@
+{
+  "model": "Qwen/Qwen3-1.7B-GGUF",
+  "revision": "90862c4b9d2787eaed51d12237eafdfe7c5f6077",
+  "file": "Qwen3-1.7B-Q8_0.gguf",
+  "sha256": "061b54daade076b5d3362dac252678d17da8c68f07560be70818cace6590cb1a",
+  "bytes": 1834426016,
+  "source_url": "https://huggingface.co/Qwen/Qwen3-1.7B-GGUF/resolve/90862c4b9d2787eaed51d12237eafdfe7c5f6077/Qwen3-1.7B-Q8_0.gguf",
+  "purpose": "Bundled local CPU inference for editable task/project drafts; no source-site requests."
+}

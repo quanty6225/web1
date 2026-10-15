@@ -1,0 +1,714 @@
+<!doctype html><html lang="en"><head><!-- force IE browsers in compatibility mode to use their most aggressive rendering engine -->
+
+    <meta charset="utf-8">
+    <title>Teamwork.com Status - Incident History</title>
+    <meta name="description" content="Teamwork.com's Incident and Scheduled Maintenance History">
+
+    <!-- Mobile viewport optimization -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <!-- Time this page was rendered - http://purl.org/dc/terms/issued -->
+    <meta name="issued" content="1791931922">
+
+    <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+    <!-- Atlassian Sans & Mono Fonts -->
+<style>
+  /* Dynamic Font Stack based on Feature Flag */
+    /* Using Atlassian Sans & Mono */
+    :root {
+      --font-stack-a: "Atlassian Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+      --font-stack-b: "Atlassian Mono", "SFMono-Medium", "SF Mono", "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Consolas, Courier, monospace;
+    }
+</style>
+
+
+      <link rel="shortcut icon" href="/static/assets/64be64b83b209b72497029c0.png">
+
+    <!-- Canonical Link to ensure that only the custom domain is indexed when present -->
+      <meta name="_globalsign-domain-verification" content="y_VzfckMy4iePo5oDJNivyYIjh8LffYa4jzUndm_bZ">
+
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/static/assets/b9033b4c34110c7fe5c42089.css" media="screen"><link rel="stylesheet" href="/static/assets/6918e578161cc66c28434fec.css" media="screen"><link rel="stylesheet" href="/static/assets/2915d1a4f6773494e50a1834.css" media="screen">
+    <link rel="stylesheet" href="/static/assets/d6750d5346b682d67fb6cac9.css" media="all">
+
+    <style>
+  /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */
+  body,
+  .layout-content.status.status-api .section .example-container .example-opener .color-secondary,
+  .grouped-items-selector,
+  .layout-content.status.status-full-history .history-nav a.current,
+  div[id^="subscribe-modal"] .modal-footer,
+  div[id^="subscribe-modal"],
+  div[id^="updates-dropdown"] .updates-dropdown-section,
+  #uptime-tooltip .tooltip-box {
+    background-color:#ffffff;
+  }
+
+  #uptime-tooltip .pointer-container .pointer-smaller {
+    border-bottom-color:#ffffff;
+  }
+
+
+
+
+  /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */
+  body.status,
+  .color-primary,
+  .color-primary:hover,
+  .layout-content.status-index .status-day .update-title.impact-none a,
+  .layout-content.status-index .status-day .update-title.impact-none a:hover,
+  .layout-content.status-index .timeframes-container .timeframe.active,
+  .layout-content.status-full-history .month .incident-container .impact-none,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-none a,
+  .incident-history .impact-none,
+  .layout-content.status .grouped-items-selector.inline .grouped-item.active,
+  .layout-content.status.status-full-history .history-nav a.current,
+  .layout-content.status.status-full-history .history-nav a:not(.current):hover,
+  div[id^="subscribe-modal"] .modal-header .close,
+  .grouped-item-label,
+  #uptime-tooltip .tooltip-box .tooltip-content .related-events .related-event a.related-event-link {
+    color:#333333;
+  }
+
+  .layout-content.status.status-index .components-statuses .component-container .name {
+    color:#333333;
+    color:rgba(51,51,51,.8);
+  }
+
+
+
+
+  /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */
+  small,
+  .layout-content.status .table-row .date,
+  .color-secondary,
+  .layout-content.status .grouped-items-selector.inline .grouped-item,
+  .layout-content.status.status-full-history .history-footer .pagination a.disabled,
+  .layout-content.status.status-full-history .history-nav a,
+  #uptime-tooltip .tooltip-box .tooltip-content .related-events #related-event-header {
+    color:#AAAAAA;
+  }
+
+
+
+
+  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */
+  body.status .layout-content.status .border-color,
+  hr,
+  .tooltip-base,
+  .markdown-display table,
+  div[id^="subscribe-modal"],
+  #uptime-tooltip .tooltip-box {
+    border-color:#E0E0E0;
+  }
+
+  div[id^="subscribe-modal"] .modal-footer,
+  .markdown-display table td {
+    border-top-color:#E0E0E0;
+  }
+
+  .markdown-display table td + td, .markdown-display table th + th {
+    border-left-color:#E0E0E0;
+  }
+
+  div[id^="subscribe-modal"] .modal-header,
+  #uptime-tooltip .pointer-container .pointer-larger {
+    border-bottom-color:#E0E0E0;
+  }
+
+  #uptime-tooltip .tooltip-box .outage-field {
+    /*
+      Generate the background-color for the outage-field from the css_body_background_color and css_border_color.
+
+      For the default background (#ffffff) and default css_border_color (#e0e0e0), use the luminosity of the default background with a magic number to arrive at
+      the original outage-field background color (#f4f5f7). I used the formula Target Color = Color * alpha + Background * (1 - alpha) to find the magic number of ~0.08.
+
+      For darker css_body_background_color, luminosity values are lower so alpha trends toward becoming transparent (thus outage-field background becomes same as css_body_background_color).
+    */
+    background-color: rgba(224,224,224,0.31);
+
+    /*
+      outage-field border-color alpha is inverse to the luminosity of css_body_background_color.
+      That is to say, with a default white background this border is transparent, but on a black background, it's opaque css_border_color.
+    */
+    border-color: rgba(224,224,224,0.0);
+  }
+
+
+
+
+  /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */
+  .layout-content.status.status-index .status-day .update-title.impact-critical a,
+  .layout-content.status.status-index .status-day .update-title.impact-critical a:hover,
+  .layout-content.status.status-index .page-status.status-critical,
+  .layout-content.status.status-index .unresolved-incident.impact-critical .incident-title,
+  .flat-button.background-red {
+    background-color:#e74c3c;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-red:after,
+  .layout-content.status-full-history .month .incident-container .impact-critical,
+  .layout-content.status-incident .incident-name.impact-critical,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-critical a,
+  .status-red .icon-indicator,
+  .incident-history .impact-critical,
+  .components-container .component-inner-container.status-red .component-status,
+  .components-container .component-inner-container.status-red .icon-indicator {
+    color:#e74c3c;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-critical .updates {
+    border-color:#e74c3c;
+  }
+
+
+
+
+  /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */
+  .layout-content.status.status-index .status-day .update-title.impact-major a,
+  .layout-content.status.status-index .status-day .update-title.impact-major a:hover,
+  .layout-content.status.status-index .page-status.status-major,
+  .layout-content.status.status-index .unresolved-incident.impact-major .incident-title {
+    background-color:#e67e22;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-orange:after,
+  .layout-content.status-full-history .month .incident-container .impact-major,
+  .layout-content.status-incident .incident-name.impact-major,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-major a,
+  .status-orange .icon-indicator,
+  .incident-history .impact-major,
+  .components-container .component-inner-container.status-orange .component-status,
+  .components-container .component-inner-container.status-orange .icon-indicator {
+    color:#e67e22;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-major .updates {
+    border-color:#e67e22;
+  }
+
+
+
+
+  /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */
+  .layout-content.status.status-index .status-day .update-title.impact-minor a,
+  .layout-content.status.status-index .status-day .update-title.impact-minor a:hover,
+  .layout-content.status.status-index .page-status.status-minor,
+  .layout-content.status.status-index .unresolved-incident.impact-minor .incident-title,
+  .layout-content.status.status-index .scheduled-incidents-container .tab {
+    background-color:#f1c40f;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-yellow:after,
+  .layout-content.status-full-history .month .incident-container .impact-minor,
+  .layout-content.status-incident .incident-name.impact-minor,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-minor a,
+  .status-yellow .icon-indicator,
+  .incident-history .impact-minor,
+  .components-container .component-inner-container.status-yellow .component-status,
+  .components-container .component-inner-container.status-yellow .icon-indicator,
+  .layout-content.status.manage-subscriptions .confirmation-infobox .fa {
+    color:#f1c40f;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-minor .updates,
+  .layout-content.status.status-index .scheduled-incidents-container {
+    border-color:#f1c40f;
+  }
+
+
+
+
+  /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */
+  .layout-content.status.status-index .status-day .update-title.impact-maintenance a,
+  .layout-content.status.status-index .status-day .update-title.impact-maintenance a:hover,
+  .layout-content.status.status-index .page-status.status-maintenance,
+  .layout-content.status.status-index .unresolved-incident.impact-maintenance .incident-title,
+  .layout-content.status.status-index .scheduled-incidents-container .tab {
+    background-color:#3498DB;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-blue:after,
+  .layout-content.status-full-history .month .incident-container .impact-maintenance,
+  .layout-content.status-incident .incident-name.impact-maintenance,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-maintenance a,
+  .status-blue .icon-indicator,
+  .incident-history .impact-maintenance,
+  .components-container .component-inner-container.status-blue .component-status,
+  .components-container .component-inner-container.status-blue .icon-indicator {
+    color:#3498DB;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-maintenance .updates,
+  .layout-content.status.status-index .scheduled-incidents-container {
+    border-color:#3498DB;
+  }
+
+
+
+
+  /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */
+  .layout-content.status.status-index .page-status.status-none {
+    background-color:#2fcc66;
+  }
+  .layout-content.status-index .components-statuses .component-container.status-green:after,
+  .status-green .icon-indicator,
+  .components-container .component-inner-container.status-green .component-status,
+  .components-container .component-inner-container.status-green .icon-indicator {
+    color:#2fcc66;
+  }
+
+
+
+
+  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */
+  a,
+  a:hover,
+  .layout-content.status-index .page-footer span a:hover,
+  .layout-content.status-index .timeframes-container .timeframe:not(.active):hover,
+  .layout-content.status-incident .subheader a:hover {
+    color:#3498db;
+  }
+
+  .flat-button,
+  .masthead .updates-dropdown-container .show-updates-dropdown,
+  .layout-content.status-full-history .show-filter.open  {
+    background-color:#3498db;
+  }
+
+
+
+
+  /* CUSTOM COLOR OVERRIDES FOR UPTIME SHOWCASE */
+  .components-section .components-uptime-link {
+    color: #aaaaaa;
+  }
+
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .legend-item {
+    color: #aaaaaa;
+    opacity: 1;
+  }
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .legend-item.light {
+    color: #aaaaaa;
+    opacity: 1;
+  }
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .spacer {
+    background: #aaaaaa;
+    opacity: 1;
+  }
+</style>
+
+
+    <!-- custom css -->
+
+      <!-- polyfills -->
+        <!-- Le HTML5 shim -->
+    <!-- injection for static -->
+
+      <style data-styled-components=""></style><link rel="stylesheet" href="/static/clone.css"><script src="/static/clone.js" defer></script><script src="/static/status.js" defer></script><script src="/static/status-subscriptions.js" defer></script><script defer src="/static/status-channels.js"></script></head>
+
+
+  <body class="status history status-none sp-a11y-status-focus-visibility a11y-focus-indicators" data-breakpoint-reached="false" data-clone-auth="false" data-route="/status/history" data-frame="false" data-region="main">
+
+    
+<div class="layout-content status status-full-history premium">
+
+    <div class="masthead-container premium">
+    <div class="masthead">
+      <div class="images-container" id="cover-image-container" data-js-hook="images-container" style="height: 315px;"></div>
+      <style>
+          #cover-image-container {
+            background-image:url("/static/assets/448eb1a1f69b0861c083e831.png");
+          }
+
+          @media only screen and (-webkit-min-device-pixel-ratio: 2),
+                 only screen and (min-resolution: 192dpi) {
+            #cover-image-container {
+              background-image:url("/static/assets/59887feed196211f8c948c1d.png") !important;
+            }
+          }
+      </style>
+
+      <div class="text-container">
+        <span class="page-name font-largest">
+            <a href="/">Teamwork.com</a>
+        </span>
+          
+  <div class="updates-dropdown-container" data-js-hook="updates-dropdown-container">
+    <a href="#" data-js-hook="show-updates-dropdown" id="show-updates-dropdown" class="show-updates-dropdown" aria-label="Subscribe to updates" aria-expanded="false" aria-haspopup="dialog" role="button">
+      <span class="subscribe-text-full">Subscribe to Updates</span><span class="subscribe-text-short">Subscribe</span>
+    </a>
+
+<!--    Accessibility guidelines for tabs: https://www.w3.org/TR/wai-aria-practices-1.1/examples/tabs/tabs-1/tabs.html -->
+    <div class="updates-dropdown" data-js-hook="updates-dropdown" id="updates-dropdown" style="display:none" role="dialog" aria-modal="false" aria-label="Subscribe to updates">
+      <div class="updates-dropdown-nav nav-items-7" role="tablist" aria-label="Subscribe to updates">
+          <a href="#updates-dropdown-email" aria-controls="updates-dropdown-email" aria-label="Subscribe via email" role="tab" aria-selected="true" id="updates-dropdown-email-btn">
+            <span class="icon-container email">
+          </span></a>
+          <a href="#updates-dropdown-sms" aria-controls="updates-dropdown-sms" aria-label="Subscribe via SMS" role="tab" id="updates-dropdown-sms-btn">
+            <span class="icon-container sms">
+          </span></a>
+          <a href="#updates-dropdown-slack" aria-controls="updates-dropdown-slack" aria-label="Subscribe via slack" role="tab" id="updates-dropdown-slack-btn">
+            <span class="icon-container slack">
+          </span></a>
+          <a href="#updates-dropdown-webhook" aria-controls="updates-dropdown-webhook" aria-label="Subscribe via webhook" role="tab" id="updates-dropdown-webhook-btn">
+            <span class="icon-container webhook">
+          </span></a>
+          <a href="#updates-dropdown-support" aria-controls="updates-dropdown-support" aria-label="Contact support" role="tab" id="updates-dropdown-support-btn">
+            <span class="icon-container support">
+          </span></a>
+          <a href="#updates-dropdown-atom" aria-controls="updates-dropdown-atom" aria-label="Subscribe via RSS" role="tab" id="updates-dropdown-atom-btn">
+            <span class="icon-container rss">
+          </span></a>
+        <button data-js-hook="updates-dropdown-close" aria-label="Close subscribe form" id="updates-dropdown-close-btn">
+          x
+        </button>
+      </div>
+      <div class="updates-dropdown-sections-container">
+          <div class="updates-dropdown-section email" id="updates-dropdown-email" style="display:none" role="tabpanel" aria-labelledby="updates-dropdown-email-btn">
+            <div class="directions">
+              Get email notifications whenever Teamwork.com <strong>creates</strong>,  <strong>updates</strong> or <strong>resolves</strong> an incident.
+            </div>
+            <form id="subscribe-form-email" action="/api/forms" accept-charset="UTF-8" data-remote="true" method="post"><input type="hidden" name="email_otp_verify_flow" id="email_otp_verify_flow" value="false" autocomplete="off">
+                <!-- make sure not to put cookie values in here since this gets cached -->
+                <label for="email">Email address:</label>
+                <input name="email" id="email" type="text" class="full-width" data-js-hook="email-notification-field" autocomplete="email">
+                <input name="email_otp_auth_token" type="hidden" id="email-otp-token-field" value="">
+                <div class="opt-container-section" id="email-otp-container" ,="" style="display:none">
+                  <label for="email-otp">Enter OTP:</label>
+                  <input name="otp" id="email-otp" type="text" value="" class="prepend full-width">
+                  <p id="email-otp-timer">Resend OTP in: <span id="email-otp-countdown"></span> seconds </p>
+                  <p id="resend-email-otp">
+                    Didn't receive the OTP?
+                    <a href="#" id="resend-email-otp-btn">Resend OTP </a>
+                  </p>
+                </div>
+                  <input type="hidden" name="captcha_error" id="captcha_error" value="true" autocomplete="off">
+                  <div></div><input type="submit" value="Subscribe via Email" class="flat-button full-width g-recaptcha disabled" id="subscribe-btn-email" data-disabled-text="Subscribing..." data-original-text="">
+                  <div class="terms_and_privacy_information bottom small"><div class="privacy_policy_information small">By subscribing you agree to our <a rel="noopener" class="accessible-link" href="/boundary/527d22783c1944b4f78d">Privacy Policy</a>.</div> This site is protected by reCAPTCHA and the Google <a rel="noopener" class="accessible-link" href="/external/47330706f5e77b8da361">Privacy Policy</a> and <a rel="noopener" class="accessible-link" data-js-hook="captcha-terms-of-service-link" href="/external/dc53493de88c4829c406">Terms of Service</a> apply.</div>
+</form>          </div>
+
+          <div class="updates-dropdown-section phone" id="updates-dropdown-sms" style="display:none" role="tabpanel" aria-labelledby="updates-dropdown-sms-btn">
+            <div class="directions">
+                Get text message notifications whenever Teamwork.com <strong>creates</strong> or <strong>resolves</strong> an incident.
+            </div>
+            <form id="subscribe-form-sms" action="/api/forms" accept-charset="UTF-8" data-remote="true" method="post"><input type="hidden" name="otp_verify_flow" id="otp_verify_flow" value="false" autocomplete="off">
+              <input type="hidden" name="subscriber_code" id="subscriber_code" value="" autocomplete="off">
+              <div class="control-group">
+                <div class="controls externalities-sms-container">
+                  <!-- make sure not to put cookie values in here since this gets cached -->
+                  <label for="phone-country">Country code:</label>
+                  <div id="phone-number-country-code" class="phone-country-wrapper" data-otp-enabled="false">
+                      <select name="phone_country" id="phone-country" data-js-hook="phone-country" class="phone-country"><option value="af" data-otp-enabled="false">Afghanistan (+93)</option>
+<option value="al" data-otp-enabled="false">Albania (+355)</option>
+<option value="dz" data-otp-enabled="false">Algeria (+213)</option>
+<option value="as" data-otp-enabled="false">American Samoa (+1)</option>
+<option value="ad" data-otp-enabled="false">Andorra (+376)</option>
+<option value="ao" data-otp-enabled="false">Angola (+244)</option>
+<option value="ai" data-otp-enabled="false">Anguilla (+1)</option>
+<option value="ag" data-otp-enabled="false">Antigua and Barbuda (+1)</option>
+<option value="ar" data-otp-enabled="false">Argentina (+54)</option>
+<option value="am" data-otp-enabled="false">Armenia (+374)</option>
+<option value="aw" data-otp-enabled="false">Aruba (+297)</option>
+<option value="au" data-otp-enabled="false">Australia/Cocos/Christmas Island (+61)</option>
+<option value="at" data-otp-enabled="false">Austria (+43)</option>
+<option value="az" data-otp-enabled="false">Azerbaijan (+994)</option>
+<option value="bs" data-otp-enabled="false">Bahamas (+1)</option>
+<option value="bh" data-otp-enabled="false">Bahrain (+973)</option>
+<option value="bd" data-otp-enabled="false">Bangladesh (+880)</option>
+<option value="bb" data-otp-enabled="false">Barbados (+1)</option>
+<option value="by" data-otp-enabled="false">Belarus (+375)</option>
+<option value="be" data-otp-enabled="false">Belgium (+32)</option>
+<option value="bz" data-otp-enabled="false">Belize (+501)</option>
+<option value="bj" data-otp-enabled="false">Benin (+229)</option>
+<option value="bm" data-otp-enabled="false">Bermuda (+1)</option>
+<option value="bo" data-otp-enabled="false">Bolivia (+591)</option>
+<option value="ba" data-otp-enabled="false">Bosnia and Herzegovina (+387)</option>
+<option value="bw" data-otp-enabled="false">Botswana (+267)</option>
+<option value="br" data-otp-enabled="false">Brazil (+55)</option>
+<option value="bn" data-otp-enabled="false">Brunei (+673)</option>
+<option value="bg" data-otp-enabled="false">Bulgaria (+359)</option>
+<option value="bf" data-otp-enabled="false">Burkina Faso (+226)</option>
+<option value="bi" data-otp-enabled="false">Burundi (+257)</option>
+<option value="kh" data-otp-enabled="false">Cambodia (+855)</option>
+<option value="cm" data-otp-enabled="false">Cameroon (+237)</option>
+<option value="ca" data-otp-enabled="false">Canada (+1)</option>
+<option value="cv" data-otp-enabled="false">Cape Verde (+238)</option>
+<option value="ky" data-otp-enabled="false">Cayman Islands (+1)</option>
+<option value="cf" data-otp-enabled="false">Central Africa (+236)</option>
+<option value="td" data-otp-enabled="false">Chad (+235)</option>
+<option value="cl" data-otp-enabled="false">Chile (+56)</option>
+<option value="cn" data-otp-enabled="false">China (+86)</option>
+<option value="co" data-otp-enabled="false">Colombia (+57)</option>
+<option value="km" data-otp-enabled="false">Comoros (+269)</option>
+<option value="cg" data-otp-enabled="false">Congo (+242)</option>
+<option value="cd" data-otp-enabled="false">Congo, Dem Rep (+243)</option>
+<option value="cr" data-otp-enabled="false">Costa Rica (+506)</option>
+<option value="hr" data-otp-enabled="false">Croatia (+385)</option>
+<option value="cy" data-otp-enabled="false">Cyprus (+357)</option>
+<option value="cz" data-otp-enabled="false">Czech Republic (+420)</option>
+<option value="dk" data-otp-enabled="false">Denmark (+45)</option>
+<option value="dj" data-otp-enabled="false">Djibouti (+253)</option>
+<option value="dm" data-otp-enabled="false">Dominica (+1)</option>
+<option value="do" data-otp-enabled="false">Dominican Republic (+1)</option>
+<option value="eg" data-otp-enabled="false">Egypt (+20)</option>
+<option value="sv" data-otp-enabled="false">El Salvador (+503)</option>
+<option value="gq" data-otp-enabled="false">Equatorial Guinea (+240)</option>
+<option value="ee" data-otp-enabled="false">Estonia (+372)</option>
+<option value="et" data-otp-enabled="false">Ethiopia (+251)</option>
+<option value="fo" data-otp-enabled="false">Faroe Islands (+298)</option>
+<option value="fj" data-otp-enabled="false">Fiji (+679)</option>
+<option value="fi" data-otp-enabled="false">Finland/Aland Islands (+358)</option>
+<option value="fr" data-otp-enabled="false">France (+33)</option>
+<option value="gf" data-otp-enabled="false">French Guiana (+594)</option>
+<option value="pf" data-otp-enabled="false">French Polynesia (+689)</option>
+<option value="ga" data-otp-enabled="false">Gabon (+241)</option>
+<option value="gm" data-otp-enabled="false">Gambia (+220)</option>
+<option value="ge" data-otp-enabled="false">Georgia (+995)</option>
+<option value="de" data-otp-enabled="false">Germany (+49)</option>
+<option value="gh" data-otp-enabled="false">Ghana (+233)</option>
+<option value="gi" data-otp-enabled="false">Gibraltar (+350)</option>
+<option value="gr" data-otp-enabled="false">Greece (+30)</option>
+<option value="gl" data-otp-enabled="false">Greenland (+299)</option>
+<option value="gd" data-otp-enabled="false">Grenada (+1)</option>
+<option value="gp" data-otp-enabled="false">Guadeloupe (+590)</option>
+<option value="gu" data-otp-enabled="false">Guam (+1)</option>
+<option value="gt" data-otp-enabled="false">Guatemala (+502)</option>
+<option value="gn" data-otp-enabled="false">Guinea (+224)</option>
+<option value="gy" data-otp-enabled="false">Guyana (+592)</option>
+<option value="ht" data-otp-enabled="false">Haiti (+509)</option>
+<option value="hn" data-otp-enabled="false">Honduras (+504)</option>
+<option value="hk" data-otp-enabled="false">Hong Kong (+852)</option>
+<option value="hu" data-otp-enabled="false">Hungary (+36)</option>
+<option value="is" data-otp-enabled="false">Iceland (+354)</option>
+<option value="in" data-otp-enabled="false">India (+91)</option>
+<option value="id" data-otp-enabled="false">Indonesia (+62)</option>
+<option value="iq" data-otp-enabled="false">Iraq (+964)</option>
+<option value="ie" data-otp-enabled="false" selected>Ireland (+353)</option>
+<option value="il" data-otp-enabled="false">Israel (+972)</option>
+<option value="it" data-otp-enabled="false">Italy (+39)</option>
+<option value="jm" data-otp-enabled="false">Jamaica (+1)</option>
+<option value="jp" data-otp-enabled="false">Japan (+81)</option>
+<option value="jo" data-otp-enabled="false">Jordan (+962)</option>
+<option value="ke" data-otp-enabled="false">Kenya (+254)</option>
+<option value="kr" data-otp-enabled="false">Korea, Republic of (+82)</option>
+<option value="xk" data-otp-enabled="false">Kosovo (+383)</option>
+<option value="kw" data-otp-enabled="false">Kuwait (+965)</option>
+<option value="kg" data-otp-enabled="false">Kyrgyzstan (+996)</option>
+<option value="la" data-otp-enabled="false">Laos (+856)</option>
+<option value="lv" data-otp-enabled="false">Latvia (+371)</option>
+<option value="lb" data-otp-enabled="false">Lebanon (+961)</option>
+<option value="ls" data-otp-enabled="false">Lesotho (+266)</option>
+<option value="lr" data-otp-enabled="false">Liberia (+231)</option>
+<option value="ly" data-otp-enabled="false">Libya (+218)</option>
+<option value="li" data-otp-enabled="false">Liechtenstein (+423)</option>
+<option value="lt" data-otp-enabled="false">Lithuania (+370)</option>
+<option value="lu" data-otp-enabled="false">Luxembourg (+352)</option>
+<option value="mo" data-otp-enabled="false">Macao (+853)</option>
+<option value="mk" data-otp-enabled="false">Macedonia (+389)</option>
+<option value="mg" data-otp-enabled="false">Madagascar (+261)</option>
+<option value="mw" data-otp-enabled="false">Malawi (+265)</option>
+<option value="my" data-otp-enabled="false">Malaysia (+60)</option>
+<option value="mv" data-otp-enabled="false">Maldives (+960)</option>
+<option value="ml" data-otp-enabled="false">Mali (+223)</option>
+<option value="mt" data-otp-enabled="false">Malta (+356)</option>
+<option value="mq" data-otp-enabled="false">Martinique (+596)</option>
+<option value="mr" data-otp-enabled="false">Mauritania (+222)</option>
+<option value="mu" data-otp-enabled="false">Mauritius (+230)</option>
+<option value="mx" data-otp-enabled="false">Mexico (+52)</option>
+<option value="mc" data-otp-enabled="false">Monaco (+377)</option>
+<option value="mn" data-otp-enabled="false">Mongolia (+976)</option>
+<option value="me" data-otp-enabled="false">Montenegro (+382)</option>
+<option value="ms" data-otp-enabled="false">Montserrat (+1)</option>
+<option value="ma" data-otp-enabled="false">Morocco/Western Sahara (+212)</option>
+<option value="mz" data-otp-enabled="false">Mozambique (+258)</option>
+<option value="na" data-otp-enabled="false">Namibia (+264)</option>
+<option value="np" data-otp-enabled="false">Nepal (+977)</option>
+<option value="nl" data-otp-enabled="false">Netherlands (+31)</option>
+<option value="nz" data-otp-enabled="false">New Zealand (+64)</option>
+<option value="ni" data-otp-enabled="false">Nicaragua (+505)</option>
+<option value="ne" data-otp-enabled="false">Niger (+227)</option>
+<option value="ng" data-otp-enabled="false">Nigeria (+234)</option>
+<option value="no" data-otp-enabled="false">Norway (+47)</option>
+<option value="om" data-otp-enabled="false">Oman (+968)</option>
+<option value="pk" data-otp-enabled="false">Pakistan (+92)</option>
+<option value="ps" data-otp-enabled="false">Palestinian Territory (+970)</option>
+<option value="pa" data-otp-enabled="false">Panama (+507)</option>
+<option value="py" data-otp-enabled="false">Paraguay (+595)</option>
+<option value="pe" data-otp-enabled="false">Peru (+51)</option>
+<option value="ph" data-otp-enabled="false">Philippines (+63)</option>
+<option value="pl" data-otp-enabled="false">Poland (+48)</option>
+<option value="pt" data-otp-enabled="false">Portugal (+351)</option>
+<option value="pr" data-otp-enabled="false">Puerto Rico (+1)</option>
+<option value="qa" data-otp-enabled="false">Qatar (+974)</option>
+<option value="re" data-otp-enabled="false">Reunion/Mayotte (+262)</option>
+<option value="ro" data-otp-enabled="false">Romania (+40)</option>
+<option value="ru" data-otp-enabled="false">Russia/Kazakhstan (+7)</option>
+<option value="rw" data-otp-enabled="false">Rwanda (+250)</option>
+<option value="ws" data-otp-enabled="false">Samoa (+685)</option>
+<option value="sm" data-otp-enabled="false">San Marino (+378)</option>
+<option value="sa" data-otp-enabled="false">Saudi Arabia (+966)</option>
+<option value="sn" data-otp-enabled="false">Senegal (+221)</option>
+<option value="rs" data-otp-enabled="false">Serbia (+381)</option>
+<option value="sc" data-otp-enabled="false">Seychelles (+248)</option>
+<option value="sl" data-otp-enabled="false">Sierra Leone (+232)</option>
+<option value="sg" data-otp-enabled="false">Singapore (+65)</option>
+<option value="sk" data-otp-enabled="false">Slovakia (+421)</option>
+<option value="si" data-otp-enabled="false">Slovenia (+386)</option>
+<option value="za" data-otp-enabled="false">South Africa (+27)</option>
+<option value="es" data-otp-enabled="false">Spain (+34)</option>
+<option value="lk" data-otp-enabled="false">Sri Lanka (+94)</option>
+<option value="kn" data-otp-enabled="false">St Kitts and Nevis (+1)</option>
+<option value="lc" data-otp-enabled="false">St Lucia (+1)</option>
+<option value="vc" data-otp-enabled="false">St Vincent Grenadines (+1)</option>
+<option value="sd" data-otp-enabled="false">Sudan (+249)</option>
+<option value="sr" data-otp-enabled="false">Suriname (+597)</option>
+<option value="sz" data-otp-enabled="false">Swaziland (+268)</option>
+<option value="se" data-otp-enabled="false">Sweden (+46)</option>
+<option value="ch" data-otp-enabled="false">Switzerland (+41)</option>
+<option value="tw" data-otp-enabled="false">Taiwan (+886)</option>
+<option value="tj" data-otp-enabled="false">Tajikistan (+992)</option>
+<option value="tz" data-otp-enabled="false">Tanzania (+255)</option>
+<option value="th" data-otp-enabled="false">Thailand (+66)</option>
+<option value="tg" data-otp-enabled="false">Togo (+228)</option>
+<option value="to" data-otp-enabled="false">Tonga (+676)</option>
+<option value="tt" data-otp-enabled="false">Trinidad and Tobago (+1)</option>
+<option value="tn" data-otp-enabled="false">Tunisia (+216)</option>
+<option value="tr" data-otp-enabled="false">Turkey (+90)</option>
+<option value="tc" data-otp-enabled="false">Turks and Caicos Islands (+1)</option>
+<option value="ug" data-otp-enabled="false">Uganda (+256)</option>
+<option value="ua" data-otp-enabled="false">Ukraine (+380)</option>
+<option value="ae" data-otp-enabled="false">United Arab Emirates (+971)</option>
+<option value="gb" data-otp-enabled="false">United Kingdom (+44)</option>
+<option value="us" data-otp-enabled="false">United States (+1)</option>
+<option value="uy" data-otp-enabled="false">Uruguay (+598)</option>
+<option value="uz" data-otp-enabled="false">Uzbekistan (+998)</option>
+<option value="ve" data-otp-enabled="false">Venezuela (+58)</option>
+<option value="vn" data-otp-enabled="false">Vietnam (+84)</option>
+<option value="vg" data-otp-enabled="false">Virgin Islands, British (+1)</option>
+<option value="vi" data-otp-enabled="false">Virgin Islands, U.S. (+1)</option>
+<option value="ye" data-otp-enabled="false">Yemen (+967)</option>
+<option value="zm" data-otp-enabled="false">Zambia (+260)</option>
+<option value="zw" data-otp-enabled="false">Zimbabwe (+263)</option></select>
+                  </div>
+                  <label for="phone-number">Phone number:</label>
+                  <input name="phone_number" id="phone-number" type="text" class="prepend full-width" data-js-hook="sms-notification-field">
+                  <div class="sms-atl-error" id="sms-atl-error"></div>
+                  <div class="clearfix"></div>
+                  <div class="opt-container-section" id="otp-container" style="display:none">
+                    <a href="#" id="btn-subcriber-change-number">Change number</a>
+                    <label for="otp">Enter OTP:</label>
+                    <input name="otp" id="otp" type="text" class="prepend full-width">
+                    <p id="timer">Resend OTP in: <span id="countdown">30</span> seconds </p>
+                    <p id="resend">
+                      Didn't receive the OTP?
+                      <a href="#" id="resend-otp-btn">Resend OTP </a>
+                    </p>
+                    </div>
+                </div>
+              </div>
+
+                <input type="hidden" name="captcha_error" id="captcha_error" value="false" autocomplete="off">
+                <div></div><input type="submit" value="Subscribe via Text Message" class="flat-button full-width g-recaptcha" id="subscribe-btn-sms" data-disabled-text="Subscribing...">
+              <div class="terms_and_privacy_information bottom small">Message and data rates may apply. By subscribing you agree to our <a rel="noopener" class="accessible-link" href="/boundary/527d22783c1944b4f78d">Privacy Policy</a>, the Atlassian <a rel="noopener" class="accessible-link" href="/external/32612158d65e1efab8f5">Terms of Service</a>, and the Atlassian <a rel="noopener" class="accessible-link" href="/external/817c83b27420a11eb700">Privacy Policy</a>. This site is protected by reCAPTCHA and the Google <a rel="noopener" class="accessible-link" href="/external/47330706f5e77b8da361">Privacy Policy</a> and <a rel="noopener" class="accessible-link" data-js-hook="captcha-terms-of-service-link" href="/external/dc53493de88c4829c406">Terms of Service</a> apply.</div>
+</form>          </div>
+
+          <div class="updates-dropdown-section slack" id="updates-dropdown-slack" style="display:none" role="tabpanel" aria-labelledby="updates-dropdown-slack-btn">
+            <div class="directions">
+              Get incident updates and maintenance status messages in Slack.
+            </div>
+            <a value="Subscribe via Slack" class="flat-button full-width" id="subscribe-btn-slack" data-disabled-text="Subscribing..." data-revert-on-success="true" style="margin-top:.75rem" href="/external/95f200fab407b089e5e4">Subscribe via Slack</a>
+            <div class="terms_and_privacy_information bottom small">By subscribing you acknowledge our <a rel="noopener" class="accessible-link" href="/boundary/527d22783c1944b4f78d">Privacy Policy</a>. In addition, you agree to the Atlassian <a rel="noopener" class="accessible-link" href="/external/602329198e4935aa42c9">Cloud Terms of Service</a> and acknowledge Atlassian's <a rel="noopener" class="accessible-link" href="/external/817c83b27420a11eb700">Privacy Policy</a>.</div>
+          </div>
+
+
+          <div class="updates-dropdown-section webhook" id="updates-dropdown-webhook" style="display:none" role="tabpanel" aria-labelledby="updates-dropdown-webhook-btn">
+            <div class="directions">
+              Get webhook notifications whenever Teamwork.com <strong>creates</strong> an incident, <strong>updates</strong> an incident, <strong>resolves</strong> an incident or <strong>changes</strong> a component status.
+            </div>
+            <form id="subscribe-form-webhook" action="/api/forms" accept-charset="UTF-8" data-remote="true" method="post"><div class="control-group">
+                <div class="controls">
+                  <label for="endpoint-webhooks">Webhook URL:</label>
+                  <input type="text" name="endpoint" id="endpoint-webhooks" data-js-hook="endpoint" class="full-width" aria-describedby="url-help-block">
+                  <p class="help-block" id="url-help-block">The URL we should send the webhooks to</p>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <div class="controls">
+                  <label for="email-webhooks">Email address:</label>
+                  <input type="text" name="email" id="email-webhooks" data-js-hook="email" class="full-width" aria-describedby="email-help-block">
+                  <p class="help-block" id="email-help-block">We'll send you email if your endpoint fails</p>
+                </div>
+              </div>
+
+                <input type="hidden" name="captcha_error" id="captcha_error" value="false" autocomplete="off">
+                <div></div><input type="submit" value="Subscribe" to="" notifications="" class="flat-button full-width g-recaptcha" id="subscribe-btn-webhook" data-disabled-text="Subscribing...">
+                <div class="terms_and_privacy_information bottom small"><div class="privacy_policy_information small">By subscribing you agree to our <a rel="noopener" class="accessible-link" href="/boundary/527d22783c1944b4f78d">Privacy Policy</a>.</div> This site is protected by reCAPTCHA and the Google <a rel="noopener" class="accessible-link" href="/external/47330706f5e77b8da361">Privacy Policy</a> and <a rel="noopener" class="accessible-link" data-js-hook="captcha-terms-of-service-link" href="/external/dc53493de88c4829c406">Terms of Service</a> apply.</div>
+
+</form>          </div>
+
+
+          <div class="updates-dropdown-section support" id="updates-dropdown-support" style="display:none" role="tabpanel" aria-labelledby="updates-dropdown-support-btn">
+            Visit our <a href="/boundary/0db79e5e59b9fea3eb6e">support site</a>.
+          </div>
+
+          <div class="updates-dropdown-section atom" id="updates-dropdown-atom" role="tabpanel" aria-labelledby="updates-dropdown-atom-btn">
+            Get the <a href="/status/history.atom">Atom Feed</a> or <a href="/status/history.rss">RSS Feed</a>.
+          </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+    </div>
+
+</div>
+ <!-- this is outside of the .container so that the cover photo can go full width on mobile -->
+
+
+  <div class="container">
+      <div class="history-nav border-color">
+  <ul>
+    <li>
+      <a class="button current border-color" href="/status/history" aria-label="Incidents" aria-current="page">Incidents</a>
+    </li>
+    <li>
+      <a class="button border-color" href="/status/uptime" aria-label="Uptime">Uptime</a>
+    </li>
+  </ul>
+</div>
+
+
+    <div data-react-class="HistoryIndex" data-react-props="{&quot;page_status&quot;:{&quot;page&quot;:{&quot;name&quot;:&quot;Teamwork.com&quot;,&quot;subdomain&quot;:&quot;teamworkcom1&quot;,&quot;domain&quot;:&quot;status.teamwork.com&quot;,&quot;created_at&quot;:&quot;2018-01-16T11:29:16.413Z&quot;,&quot;updated_at&quot;:&quot;2026-10-13T20:39:08.770Z&quot;,&quot;url&quot;:&quot;https://teamwork.com&quot;,&quot;hidden_from_search&quot;:false,&quot;css_body_background_color&quot;:&quot;ffffff&quot;,&quot;css_font_color&quot;:&quot;333333&quot;,&quot;css_light_font_color&quot;:&quot;AAAAAA&quot;,&quot;css_greens&quot;:&quot;2fcc66&quot;,&quot;css_yellows&quot;:&quot;f1c40f&quot;,&quot;css_oranges&quot;:&quot;e67e22&quot;,&quot;css_reds&quot;:&quot;e74c3c&quot;,&quot;allow_page_subscribers&quot;:true,&quot;allow_incident_subscribers&quot;:true,&quot;notifications_from_email&quot;:&quot;support@teamwork.com&quot;,&quot;allow_email_subscribers&quot;:true,&quot;allow_sms_subscribers&quot;:true,&quot;twitter_username&quot;:null,&quot;branding&quot;:&quot;premium&quot;,&quot;support_url&quot;:&quot;https://support.teamwork.com&quot;,&quot;allow_webhook_subscribers&quot;:true,&quot;css_border_color&quot;:&quot;E0E0E0&quot;,&quot;css_graph_color&quot;:&quot;3498db&quot;,&quot;css_link_color&quot;:&quot;3498db&quot;,&quot;page_description&quot;:null,&quot;activity_score&quot;:1134,&quot;headline&quot;:null,&quot;viewers_must_be_team_members&quot;:false,&quot;ip_filters&quot;:null,&quot;css_blues&quot;:&quot;3498DB&quot;,&quot;time_zone&quot;:&quot;UTC&quot;,&quot;notifications_reply_to_email&quot;:null,&quot;notifications_email_footer&quot;:&quot;You received this email because you are subscribed to Teamwork.com's service status notifications.&quot;,&quot;allow_rss_atom_feeds&quot;:true,&quot;black_hole&quot;:null,&quot;over_allocations_cohort&quot;:null,&quot;over_allocations_resolved_at&quot;:null,&quot;custom_components_limit&quot;:null,&quot;allow_slack_subscribers&quot;:true,&quot;css_no_data&quot;:&quot;b3bac5&quot;,&quot;deleted_at&quot;:null,&quot;allow_teams_subscription&quot;:false,&quot;max_maintenance_automation_allowed&quot;:null,&quot;custom_email_template&quot;:false,&quot;hero_cover&quot;:{&quot;updated_at&quot;:&quot;2024-01-22T12:05:26.000+00:00&quot;,&quot;original_url&quot;:&quot;//dka575ofm4ao0.cloudfront.net/pages-hero_covers/original/57049/tw-logo-96e68846-4410-47e0-9b3a-97a1a637cbe4.png&quot;,&quot;size&quot;:30642,&quot;normal_url&quot;:&quot;//dka575ofm4ao0.cloudfront.net/pages-hero_covers/normal/57049/tw-logo-96e68846-4410-47e0-9b3a-97a1a637cbe4.png&quot;,&quot;retina_url&quot;:&quot;//dka575ofm4ao0.cloudfront.net/pages-hero_covers/retina/57049/tw-logo-96e68846-4410-47e0-9b3a-97a1a637cbe4.png&quot;},&quot;transactional_logo&quot;:{&quot;updated_at&quot;:null,&quot;original_url&quot;:&quot;&quot;,&quot;size&quot;:null,&quot;normal_url&quot;:&quot;&quot;,&quot;retina_url&quot;:&quot;&quot;},&quot;favicon_logo&quot;:{&quot;updated_at&quot;:null,&quot;size&quot;:null,&quot;url&quot;:&quot;&quot;},&quot;email_logo&quot;:{&quot;updated_at&quot;:null,&quot;original_url&quot;:&quot;&quot;,&quot;size&quot;:null,&quot;normal_url&quot;:&quot;&quot;,&quot;retina_url&quot;:&quot;&quot;},&quot;twitter_logo&quot;:{&quot;updated_at&quot;:null,&quot;size&quot;:null,&quot;url&quot;:&quot;&quot;},&quot;id&quot;:&quot;gbvg14byz4n5&quot;,&quot;organization_id&quot;:&quot;rf2mvhg91yn1&quot;}},&quot;components&quot;:[{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork Projects&quot;,&quot;created_at&quot;:&quot;2018-10-13T20:30:13.688Z&quot;,&quot;updated_at&quot;:&quot;2018-10-13T20:30:13.688Z&quot;,&quot;position&quot;:1,&quot;description&quot;:null,&quot;showcase&quot;:false,&quot;start_date&quot;:null,&quot;id&quot;:&quot;mq77zy384hvj&quot;,&quot;group_id&quot;:null,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:true,&quot;only_show_if_degraded&quot;:false,&quot;components&quot;:[&quot;wx2m21xhwc6b&quot;,&quot;8pbd4fzpzkpm&quot;]},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork Projects - US region&quot;,&quot;created_at&quot;:&quot;2018-10-13T20:30:13.703Z&quot;,&quot;updated_at&quot;:&quot;2026-08-26T07:20:09.696Z&quot;,&quot;position&quot;:1,&quot;description&quot;:null,&quot;showcase&quot;:true,&quot;start_date&quot;:null,&quot;id&quot;:&quot;wx2m21xhwc6b&quot;,&quot;group_id&quot;:&quot;mq77zy384hvj&quot;,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:false,&quot;only_show_if_degraded&quot;:false},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork Projects - EU Region&quot;,&quot;created_at&quot;:&quot;2018-10-13T20:30:36.174Z&quot;,&quot;updated_at&quot;:&quot;2026-10-13T06:50:07.167Z&quot;,&quot;position&quot;:2,&quot;description&quot;:null,&quot;showcase&quot;:true,&quot;start_date&quot;:null,&quot;id&quot;:&quot;8pbd4fzpzkpm&quot;,&quot;group_id&quot;:&quot;mq77zy384hvj&quot;,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:false,&quot;only_show_if_degraded&quot;:false},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork Desk&quot;,&quot;created_at&quot;:&quot;2018-10-13T20:31:49.501Z&quot;,&quot;updated_at&quot;:&quot;2018-10-13T20:31:49.501Z&quot;,&quot;position&quot;:2,&quot;description&quot;:null,&quot;showcase&quot;:false,&quot;start_date&quot;:null,&quot;id&quot;:&quot;pn15r30s4ltp&quot;,&quot;group_id&quot;:null,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:true,&quot;only_show_if_degraded&quot;:false,&quot;components&quot;:[&quot;nptl08sy059w&quot;,&quot;4f3ffj6xm8qf&quot;]},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork Desk - US Region&quot;,&quot;created_at&quot;:&quot;2018-10-13T20:31:49.518Z&quot;,&quot;updated_at&quot;:&quot;2026-09-01T07:20:07.311Z&quot;,&quot;position&quot;:1,&quot;description&quot;:null,&quot;showcase&quot;:true,&quot;start_date&quot;:null,&quot;id&quot;:&quot;nptl08sy059w&quot;,&quot;group_id&quot;:&quot;pn15r30s4ltp&quot;,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:false,&quot;only_show_if_degraded&quot;:false},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork Desk - EU Region&quot;,&quot;created_at&quot;:&quot;2018-10-13T20:32:08.893Z&quot;,&quot;updated_at&quot;:&quot;2026-07-22T07:20:07.181Z&quot;,&quot;position&quot;:2,&quot;description&quot;:null,&quot;showcase&quot;:true,&quot;start_date&quot;:null,&quot;id&quot;:&quot;4f3ffj6xm8qf&quot;,&quot;group_id&quot;:&quot;pn15r30s4ltp&quot;,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:false,&quot;only_show_if_degraded&quot;:false},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork Chat&quot;,&quot;created_at&quot;:&quot;2018-10-13T20:32:30.400Z&quot;,&quot;updated_at&quot;:&quot;2018-10-13T20:32:30.400Z&quot;,&quot;position&quot;:3,&quot;description&quot;:null,&quot;showcase&quot;:false,&quot;start_date&quot;:null,&quot;id&quot;:&quot;5gyxy2mqq1f8&quot;,&quot;group_id&quot;:null,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:true,&quot;only_show_if_degraded&quot;:false,&quot;components&quot;:[&quot;jj4yzwwmrkfh&quot;,&quot;56n57kvb910j&quot;]},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork Chat - US Region&quot;,&quot;created_at&quot;:&quot;2018-10-13T20:32:30.416Z&quot;,&quot;updated_at&quot;:&quot;2025-11-05T12:26:25.320Z&quot;,&quot;position&quot;:1,&quot;description&quot;:null,&quot;showcase&quot;:true,&quot;start_date&quot;:null,&quot;id&quot;:&quot;jj4yzwwmrkfh&quot;,&quot;group_id&quot;:&quot;5gyxy2mqq1f8&quot;,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:false,&quot;only_show_if_degraded&quot;:false},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork Chat - EU Region&quot;,&quot;created_at&quot;:&quot;2018-10-13T20:32:42.874Z&quot;,&quot;updated_at&quot;:&quot;2026-05-28T15:21:18.331Z&quot;,&quot;position&quot;:2,&quot;description&quot;:null,&quot;showcase&quot;:true,&quot;start_date&quot;:null,&quot;id&quot;:&quot;56n57kvb910j&quot;,&quot;group_id&quot;:&quot;5gyxy2mqq1f8&quot;,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:false,&quot;only_show_if_degraded&quot;:false},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork Spaces&quot;,&quot;created_at&quot;:&quot;2019-06-14T10:09:26.449Z&quot;,&quot;updated_at&quot;:&quot;2019-06-14T10:09:26.449Z&quot;,&quot;position&quot;:6,&quot;description&quot;:null,&quot;showcase&quot;:false,&quot;start_date&quot;:null,&quot;id&quot;:&quot;ltsxwljz1bgp&quot;,&quot;group_id&quot;:null,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:true,&quot;only_show_if_degraded&quot;:false,&quot;components&quot;:[&quot;5jj51g883xkv&quot;,&quot;nf0xn204jtpc&quot;]},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork Spaces - US Region&quot;,&quot;created_at&quot;:&quot;2019-06-14T10:09:26.461Z&quot;,&quot;updated_at&quot;:&quot;2026-08-12T07:20:07.222Z&quot;,&quot;position&quot;:1,&quot;description&quot;:null,&quot;showcase&quot;:true,&quot;start_date&quot;:null,&quot;id&quot;:&quot;5jj51g883xkv&quot;,&quot;group_id&quot;:&quot;ltsxwljz1bgp&quot;,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:false,&quot;only_show_if_degraded&quot;:false},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork Spaces - EU Region&quot;,&quot;created_at&quot;:&quot;2019-06-14T10:10:30.851Z&quot;,&quot;updated_at&quot;:&quot;2026-10-01T06:55:07.211Z&quot;,&quot;position&quot;:2,&quot;description&quot;:null,&quot;showcase&quot;:true,&quot;start_date&quot;:null,&quot;id&quot;:&quot;nf0xn204jtpc&quot;,&quot;group_id&quot;:&quot;ltsxwljz1bgp&quot;,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:false,&quot;only_show_if_degraded&quot;:false},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork CRM&quot;,&quot;created_at&quot;:&quot;2019-06-14T10:16:46.987Z&quot;,&quot;updated_at&quot;:&quot;2019-06-14T10:16:46.987Z&quot;,&quot;position&quot;:7,&quot;description&quot;:null,&quot;showcase&quot;:false,&quot;start_date&quot;:null,&quot;id&quot;:&quot;n251y0gfl21w&quot;,&quot;group_id&quot;:null,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:true,&quot;only_show_if_degraded&quot;:false,&quot;components&quot;:[&quot;lrf74j8qlygn&quot;,&quot;6nn6ht191h6s&quot;]},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork CRM - US region&quot;,&quot;created_at&quot;:&quot;2019-06-14T10:16:46.996Z&quot;,&quot;updated_at&quot;:&quot;2025-11-05T12:26:25.349Z&quot;,&quot;position&quot;:1,&quot;description&quot;:null,&quot;showcase&quot;:true,&quot;start_date&quot;:null,&quot;id&quot;:&quot;lrf74j8qlygn&quot;,&quot;group_id&quot;:&quot;n251y0gfl21w&quot;,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:false,&quot;only_show_if_degraded&quot;:false},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork CRM - EU Region&quot;,&quot;created_at&quot;:&quot;2019-06-14T10:17:48.569Z&quot;,&quot;updated_at&quot;:&quot;2026-10-06T06:55:09.374Z&quot;,&quot;position&quot;:2,&quot;description&quot;:null,&quot;showcase&quot;:true,&quot;start_date&quot;:null,&quot;id&quot;:&quot;6nn6ht191h6s&quot;,&quot;group_id&quot;:&quot;n251y0gfl21w&quot;,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:false,&quot;only_show_if_degraded&quot;:false},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork Websites&quot;,&quot;created_at&quot;:&quot;2023-09-07T13:06:51.094Z&quot;,&quot;updated_at&quot;:&quot;2023-09-07T13:08:31.904Z&quot;,&quot;position&quot;:8,&quot;description&quot;:null,&quot;showcase&quot;:false,&quot;start_date&quot;:null,&quot;id&quot;:&quot;56qn6vr3yqqj&quot;,&quot;group_id&quot;:null,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:true,&quot;only_show_if_degraded&quot;:false,&quot;components&quot;:[&quot;fwmdcj0p157p&quot;,&quot;sybzzfxq89m3&quot;,&quot;v2pdsxlt7jmp&quot;,&quot;0xgrr8j3jxg2&quot;,&quot;kb9040xvhtbb&quot;,&quot;3wxzr8l7qcp8&quot;]},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork.com&quot;,&quot;created_at&quot;:&quot;2023-09-07T13:06:51.124Z&quot;,&quot;updated_at&quot;:&quot;2023-09-11T09:55:58.595Z&quot;,&quot;position&quot;:1,&quot;description&quot;:&quot;teamwork.com&quot;,&quot;showcase&quot;:true,&quot;start_date&quot;:&quot;2023-06-14T00:00:00.000Z&quot;,&quot;id&quot;:&quot;fwmdcj0p157p&quot;,&quot;group_id&quot;:&quot;56qn6vr3yqqj&quot;,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:false,&quot;only_show_if_degraded&quot;:false},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork Academy&quot;,&quot;created_at&quot;:&quot;2023-09-07T13:14:19.990Z&quot;,&quot;updated_at&quot;:&quot;2023-09-11T09:56:19.107Z&quot;,&quot;position&quot;:2,&quot;description&quot;:&quot;academy.teamwork.com&quot;,&quot;showcase&quot;:true,&quot;start_date&quot;:&quot;2023-06-14T00:00:00.000Z&quot;,&quot;id&quot;:&quot;sybzzfxq89m3&quot;,&quot;group_id&quot;:&quot;56qn6vr3yqqj&quot;,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:false,&quot;only_show_if_degraded&quot;:false},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork API Docs&quot;,&quot;created_at&quot;:&quot;2023-09-07T13:17:05.837Z&quot;,&quot;updated_at&quot;:&quot;2023-09-11T09:56:37.372Z&quot;,&quot;position&quot;:3,&quot;description&quot;:&quot;apidocs.teamwork.com&quot;,&quot;showcase&quot;:true,&quot;start_date&quot;:&quot;2023-06-14T00:00:00.000Z&quot;,&quot;id&quot;:&quot;v2pdsxlt7jmp&quot;,&quot;group_id&quot;:&quot;56qn6vr3yqqj&quot;,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:false,&quot;only_show_if_degraded&quot;:false},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork Blog&quot;,&quot;created_at&quot;:&quot;2023-09-07T13:11:41.717Z&quot;,&quot;updated_at&quot;:&quot;2023-09-11T09:56:50.364Z&quot;,&quot;position&quot;:4,&quot;description&quot;:&quot;teamwork.com/blog&quot;,&quot;showcase&quot;:true,&quot;start_date&quot;:&quot;2023-06-14T00:00:00.000Z&quot;,&quot;id&quot;:&quot;0xgrr8j3jxg2&quot;,&quot;group_id&quot;:&quot;56qn6vr3yqqj&quot;,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:false,&quot;only_show_if_degraded&quot;:false},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork Developer Portal&quot;,&quot;created_at&quot;:&quot;2023-09-07T13:13:46.781Z&quot;,&quot;updated_at&quot;:&quot;2023-09-11T09:57:09.965Z&quot;,&quot;position&quot;:5,&quot;description&quot;:&quot;developer.teamwork.com&quot;,&quot;showcase&quot;:true,&quot;start_date&quot;:&quot;2023-06-14T00:00:00.000Z&quot;,&quot;id&quot;:&quot;kb9040xvhtbb&quot;,&quot;group_id&quot;:&quot;56qn6vr3yqqj&quot;,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:false,&quot;only_show_if_degraded&quot;:false},{&quot;status&quot;:&quot;operational&quot;,&quot;name&quot;:&quot;Teamwork Support Center&quot;,&quot;created_at&quot;:&quot;2023-09-07T13:12:20.333Z&quot;,&quot;updated_at&quot;:&quot;2023-09-11T09:57:24.596Z&quot;,&quot;position&quot;:6,&quot;description&quot;:&quot;teamwork.com/support&quot;,&quot;showcase&quot;:true,&quot;start_date&quot;:&quot;2023-06-14T00:00:00.000Z&quot;,&quot;id&quot;:&quot;3wxzr8l7qcp8&quot;,&quot;group_id&quot;:&quot;56qn6vr3yqqj&quot;,&quot;page_id&quot;:&quot;gbvg14byz4n5&quot;,&quot;group&quot;:false,&quot;only_show_if_degraded&quot;:false}],&quot;months&quot;:[{&quot;name&quot;:&quot;October&quot;,&quot;year&quot;:2026,&quot;starts_on&quot;:4,&quot;days&quot;:31,&quot;incidents&quot;:[{&quot;code&quot;:&quot;xcmywz0n1lfw&quot;,&quot;name&quot;:&quot;[Scheduled] Database Maintenance in our EU region&quot;,&quot;message&quot;:&quot;The scheduled maintenance has been completed.&quot;,&quot;impact&quot;:&quot;maintenance&quot;,&quot;timestamp&quot;:&quot;Oct \u003cvar data-var='date'\u003e13\u003c/var\u003e, \u003cvar data-var='time'\u003e06:40\u003c/var\u003e - \u003cvar data-var='time'\u003e06:50\u003c/var\u003e UTC&quot;},{&quot;code&quot;:&quot;xk6nr1q8vq93&quot;,&quot;name&quot;:&quot;[Scheduled] Database Maintenance in our EU region&quot;,&quot;message&quot;:&quot;The scheduled maintenance has been completed.&quot;,&quot;impact&quot;:&quot;maintenance&quot;,&quot;timestamp&quot;:&quot;Oct \u003cvar data-var='date'\u003e6\u003c/var\u003e, \u003cvar data-var='time'\u003e06:45\u003c/var\u003e - \u003cvar data-var='time'\u003e06:55\u003c/var\u003e UTC&quot;},{&quot;code&quot;:&quot;klf5syds83vj&quot;,&quot;name&quot;:&quot;[Scheduled] Database Maintenance in our EU region&quot;,&quot;message&quot;:&quot;The scheduled maintenance has been completed.&quot;,&quot;impact&quot;:&quot;maintenance&quot;,&quot;timestamp&quot;:&quot;Oct \u003cvar data-var='date'\u003e1\u003c/var\u003e, \u003cvar data-var='time'\u003e06:45\u003c/var\u003e - \u003cvar data-var='time'\u003e06:55\u003c/var\u003e UTC&quot;}]},{&quot;name&quot;:&quot;September&quot;,&quot;year&quot;:2026,&quot;starts_on&quot;:2,&quot;days&quot;:30,&quot;incidents&quot;:[{&quot;code&quot;:&quot;3g7rw99vd3t0&quot;,&quot;name&quot;:&quot;[Scheduled] Database Maintenance in our EU region&quot;,&quot;message&quot;:&quot;The scheduled maintenance has been completed.&quot;,&quot;impact&quot;:&quot;maintenance&quot;,&quot;timestamp&quot;:&quot;Sep \u003cvar data-var='date'\u003e29\u003c/var\u003e, \u003cvar data-var='time'\u003e06:30\u003c/var\u003e - \u003cvar data-var='time'\u003e06:40\u003c/var\u003e UTC&quot;},{&quot;code&quot;:&quot;z6q1wrjr15vb&quot;,&quot;name&quot;:&quot;Issue with tasks creation in Projects&quot;,&quot;message&quot;:&quot;This incident has been resolved.&quot;,&quot;impact&quot;:&quot;none&quot;,&quot;timestamp&quot;:&quot;Sep \u003cvar data-var='date'\u003e24\u003c/var\u003e, \u003cvar data-var='time'\u003e10:42\u003c/var\u003e - \u003cvar data-var='time'\u003e11:22\u003c/var\u003e UTC&quot;},{&quot;code&quot;:&quot;9nt7p82fkvwl&quot;,&quot;name&quot;:&quot;[Scheduled] Database Maintenance in our US region&quot;,&quot;message&quot;:&quot;The scheduled maintenance has been completed.&quot;,&quot;impact&quot;:&quot;maintenance&quot;,&quot;timestamp&quot;:&quot;Sep \u003cvar data-var='date'\u003e1\u003c/var\u003e, \u003cvar data-var='time'\u003e07:00\u003c/var\u003e - \u003cvar data-var='time'\u003e07:20\u003c/var\u003e UTC&quot;}]},{&quot;name&quot;:&quot;August&quot;,&quot;year&quot;:2026,&quot;starts_on&quot;:6,&quot;days&quot;:31,&quot;incidents&quot;:[{&quot;code&quot;:&quot;34r5lg926cxy&quot;,&quot;name&quot;:&quot;[Scheduled] Database Maintenance in our US region&quot;,&quot;message&quot;:&quot;The scheduled maintenance has been completed.&quot;,&quot;impact&quot;:&quot;maintenance&quot;,&quot;timestamp&quot;:&quot;Aug \u003cvar data-var='date'\u003e26\u003c/var\u003e, \u003cvar data-var='time'\u003e07:00\u003c/var\u003e - \u003cvar data-var='time'\u003e07:20\u003c/var\u003e UTC&quot;},{&quot;code&quot;:&quot;gpkbblyk41r1&quot;,&quot;name&quot;:&quot;[Scheduled] Database Maintenance in our US region&quot;,&quot;message&quot;:&quot;The scheduled maintenance has been completed.&quot;,&quot;impact&quot;:&quot;maintenance&quot;,&quot;timestamp&quot;:&quot;Aug \u003cvar data-var='date'\u003e19\u003c/var\u003e, \u003cvar data-var='time'\u003e07:00\u003c/var\u003e - \u003cvar data-var='time'\u003e07:20\u003c/var\u003e UTC&quot;},{&quot;code&quot;:&quot;mmdv5nsm918r&quot;,&quot;name&quot;:&quot;[Scheduled] Database Maintenance in our US region&quot;,&quot;message&quot;:&quot;The scheduled maintenance has been completed.&quot;,&quot;impact&quot;:&quot;maintenance&quot;,&quot;timestamp&quot;:&quot;Aug \u003cvar data-var='date'\u003e12\u003c/var\u003e, \u003cvar data-var='time'\u003e07:00\u003c/var\u003e - \u003cvar data-var='time'\u003e07:20\u003c/var\u003e UTC&quot;},{&quot;code&quot;:&quot;l0jtym80sbr2&quot;,&quot;name&quot;:&quot;[Scheduled] Database Maintenance in our EU region&quot;,&quot;message&quot;:&quot;The scheduled maintenance has been completed.&quot;,&quot;impact&quot;:&quot;maintenance&quot;,&quot;timestamp&quot;:&quot;Aug \u003cvar data-var='date'\u003e5\u003c/var\u003e, \u003cvar data-var='time'\u003e07:00\u003c/var\u003e - \u003cvar data-var='time'\u003e07:20\u003c/var\u003e UTC&quot;}]}],&quot;show_component_filter&quot;:false,&quot;show_uptime_calendar&quot;:true,&quot;component_filter&quot;:null,&quot;start_time&quot;:&quot;2026-08-01T00:00:00Z&quot;,&quot;end_time&quot;:&quot;2026-10-31T23:59:59Z&quot;,&quot;a11yHeadings&quot;:true}"><div class="history-backpage"><div class="history-header"><div class="pagination-container"><div class="pagination"><a href="#back" class="previous-page border-color color-secondary" aria-label="Previous page" aria-disabled="false"><i class="left-arrow"></i></a><span class="current"><span>August</span><var data-var="start-date-year"> 2026</var> to <span>October</span><var data-var="end-date-year"> 2026</var></span><a href="#forward" class="next-page border-color color-secondary disabled" aria-label="Next page" aria-disabled="true" tabindex="-1"><i class="right-arrow"></i></a></div></div></div><div class="months-container"><div class="month"><h2 class="month-title font-largest border-color">October <var data-var="year">2026</var></h2><div class="month-content"><div class="incident-history"><div class="incident-list" id="incidents1"><div class="incident-data incident-container"><a href="/status/incidents/xcmywz0n1lfw" class="impact-maintenance incident-title font-large">[Scheduled] Database Maintenance in our EU region</a><div class="message incident-body color-primary">The scheduled maintenance has been completed.</div><div class="secondary font-small color-secondary">Oct <var data-var="date">13</var>, <var data-var="time">06:40</var> - <var data-var="time">06:50</var> UTC</div></div><div class="incident-data incident-container"><a href="/status/incidents/xk6nr1q8vq93" class="impact-maintenance incident-title font-large">[Scheduled] Database Maintenance in our EU region</a><div class="message incident-body color-primary">The scheduled maintenance has been completed.</div><div class="secondary font-small color-secondary">Oct <var data-var="date">6</var>, <var data-var="time">06:45</var> - <var data-var="time">06:55</var> UTC</div></div><div class="incident-data incident-container"><a href="/status/incidents/klf5syds83vj" class="impact-maintenance incident-title font-large">[Scheduled] Database Maintenance in our EU region</a><div class="message incident-body color-primary">The scheduled maintenance has been completed.</div><div class="secondary font-small color-secondary">Oct <var data-var="date">1</var>, <var data-var="time">06:45</var> - <var data-var="time">06:55</var> UTC</div></div></div></div></div></div><div class="month"><h2 class="month-title font-largest border-color">September <var data-var="year">2026</var></h2><div class="month-content"><div class="incident-history"><div class="incident-list" id="incidents1"><div class="incident-data incident-container"><a href="/status/incidents/3g7rw99vd3t0" class="impact-maintenance incident-title font-large">[Scheduled] Database Maintenance in our EU region</a><div class="message incident-body color-primary">The scheduled maintenance has been completed.</div><div class="secondary font-small color-secondary">Sep <var data-var="date">29</var>, <var data-var="time">06:30</var> - <var data-var="time">06:40</var> UTC</div></div><div class="incident-data incident-container"><a href="/status/incidents/z6q1wrjr15vb" class="impact-none incident-title font-large">Issue with tasks creation in Projects</a><div class="message incident-body color-primary">This incident has been resolved.</div><div class="secondary font-small color-secondary">Sep <var data-var="date">24</var>, <var data-var="time">10:42</var> - <var data-var="time">11:22</var> UTC</div></div><div class="incident-data incident-container"><a href="/boundary/90992974d372c3b0c81f" class="impact-maintenance incident-title font-large">[Scheduled] Database Maintenance in our US region</a><div class="message incident-body color-primary">The scheduled maintenance has been completed.</div><div class="secondary font-small color-secondary">Sep <var data-var="date">1</var>, <var data-var="time">07:00</var> - <var data-var="time">07:20</var> UTC</div></div></div></div></div></div><div class="month"><h2 class="month-title font-largest border-color">August <var data-var="year">2026</var></h2><div class="month-content"><div class="incident-history"><div class="incident-list" id="incidents1"><div class="incident-data incident-container"><a href="/boundary/0fb0463938658b38b9bb" class="impact-maintenance incident-title font-large">[Scheduled] Database Maintenance in our US region</a><div class="message incident-body color-primary">The scheduled maintenance has been completed.</div><div class="secondary font-small color-secondary">Aug <var data-var="date">26</var>, <var data-var="time">07:00</var> - <var data-var="time">07:20</var> UTC</div></div><div class="incident-data incident-container"><a href="/boundary/78084627989aad6e225a" class="impact-maintenance incident-title font-large">[Scheduled] Database Maintenance in our US region</a><div class="message incident-body color-primary">The scheduled maintenance has been completed.</div><div class="secondary font-small color-secondary">Aug <var data-var="date">19</var>, <var data-var="time">07:00</var> - <var data-var="time">07:20</var> UTC</div></div><div class="incident-data incident-container"><a href="/boundary/f02dd346aa4e4993a111" class="impact-maintenance incident-title font-large">[Scheduled] Database Maintenance in our US region</a><div class="message incident-body color-primary">The scheduled maintenance has been completed.</div><div class="secondary font-small color-secondary">Aug <var data-var="date">12</var>, <var data-var="time">07:00</var> - <var data-var="time">07:20</var> UTC</div></div></div><div aria-expanded="false" aria-controls="incidents1" class="expand-incidents font-small border-color color-secondary custom-focus" role="button" tabindex="0"><span><var data-var="show-all">+ Show All</var><var data-var="num-incidents"> 4 </var><var data-var="incidents">Incidents</var></span></div></div></div></div></div></div></div>
+
+    <div class="page-footer border-color font-small">
+  <a href="/status" aria-label="Back to current status">
+    <span class="current-status-arrow">←</span> Current Status
+  </a>
+  <span class="color-secondary powered-by" style="display: inline !important; visibility:visible !important; opacity: 1 !important; position:static !important; text-indent:0px !important; transform:scale(1) !important"><a class="color-secondary" rel="noopener noreferrer nofollow" href="/external/fc1b802ab29ff8401be9">Powered by Atlassian Statuspage</a></span>
+</div>
+
+  </div>
+
+
+  
+</div>
+
+
+    <div id="cpt-notification-container" role="status" aria-live="polite" aria-atomic="true"></div>
+    
+
+
+
+
+    <!-- all of the content_for stuff -->
+      <!-- FOR FLASH NOTICES -->
+
+<!-- FOR ERROR -->
+
+
+    <svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><div style="visibility: hidden; position: absolute; width: 100%; top: -10000px; left: 0px; right: 0px; transition: visibility linear 0.3s, opacity 0.3s linear; opacity: 0;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.5;"></div><div style="margin: 0px auto; top: 0px; left: 0px; right: 0px; position: fixed; border: 1px solid rgb(204, 204, 204); z-index: 2000000000; background-color: rgb(255, 255, 255);"><iframe title="recaptcha" name="c-sqsag2wysj6" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="/external/88d444e3054c84208732" style="width: 100%; height: 100%;"></iframe></div></div><div style="visibility: hidden; position: absolute; width: 100%; top: -10000px; left: 0px; right: 0px; transition: visibility linear 0.3s, opacity 0.3s linear; opacity: 0;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.5;"></div><div style="margin: 0px auto; top: 0px; left: 0px; right: 0px; position: fixed; border: 1px solid rgb(204, 204, 204); z-index: 2000000000; background-color: rgb(255, 255, 255);"><iframe title="recaptcha" name="c-318brwyfg36t" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="/external/efae0acb58ffb1ae9e8c" style="width: 100%; height: 100%;"></iframe></div></div></body></html>

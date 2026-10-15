@@ -1,0 +1,31 @@
+<!doctype html>
+<html
+  lang="en"
+  data-teamwork-version="6.2.176"
+  data-teamwork-branch="HEAD"
+  data-teamwork-commit="4a18bbe8f076f7bf056bf678a3a161acc258645d"
+  data-teamwork-build-date="2026-10-13T10:07:31Z"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="https://cdn-lightspeed.teamwork.com/icon/favicon.ico" />
+    <link rel="icon" href="https://cdn-lightspeed.teamwork.com/icon/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="https://cdn-lightspeed.teamwork.com/icon/favicon@2x.png" type="image/png" sizes="64x64" />
+    <link rel="icon" href="https://cdn-lightspeed.teamwork.com/icon/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="https://cdn-lightspeed.teamwork.com/icon/192x192.png" />
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <script type="module" crossorigin src="https://cdn-lightspeed.teamwork.com/static/js/index-CTvFyJx1.js"></script>
+    <link rel="modulepreload" crossorigin href="https://cdn-lightspeed.teamwork.com/static/js/rolldown-runtime-Dd_uD5pT.js">
+    <link rel="modulepreload" crossorigin href="https://cdn-lightspeed.teamwork.com/static/js/__vite-browser-external-5eBdwsFd.js">
+    <link rel="modulepreload" crossorigin href="https://cdn-lightspeed.teamwork.com/static/js/preload-helper-t5ieltxS.js">
+    <link rel="stylesheet" crossorigin href="https://cdn-lightspeed.teamwork.com/static/css/index-Bie5H47r.css">
+    <link rel="manifest" href="/app/manifest.webmanifest" />
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>

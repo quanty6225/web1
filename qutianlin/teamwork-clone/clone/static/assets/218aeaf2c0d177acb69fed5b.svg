@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="220px" height="220px" viewBox="0 0 220 220" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>play-btn copy</title>
+    <defs>
+        <path d="M20,0 C31.045695,0 40,8.954305 40,20 C40,31.045695 31.045695,40 20,40 C8.954305,40 0,31.045695 0,20 C0,8.954305 8.954305,0 20,0 Z" id="path-1"></path>
+        <filter x="-341.2%" y="-333.8%" width="782.5%" height="782.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="45" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home-micro-header-final-2" transform="translate(-73.000000, -594.000000)">
+            <g id="play-btn-copy" transform="translate(163.000000, 681.000000)">
+                <g id="Shape-2">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <path d="M17.6717751,25.6817653 C17.4452155,25.8139996 17.1672521,25.8128119 16.9417737,25.6786461 C16.7162953,25.5444803 16.5772388,25.2975298 16.5765766,25.0300923 L16.5765766,15.605897 C16.5772388,15.3384595 16.7162953,15.0915089 16.9417737,14.9573431 C17.1672521,14.8231773 17.4452155,14.8219896 17.6717751,14.9542239 L25.7073023,19.6663215 C25.9352388,19.7999431 26.0759117,20.0486419 26.0759117,20.3179946 C26.0759117,20.5873473 25.9352388,20.8360462 25.7073023,20.9696677 L17.6717751,25.6817653 Z" id="Shape" fill="#4461D7"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,512 @@
+[
+  {
+    "group": "owner_company",
+    "permissions": [
+      {
+        "name": "Project Administrator",
+        "enabled": false,
+        "locked": false
+      },
+      {
+        "name": "View Risk Register",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Risks",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "View Project Updates",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Project Updates",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "View Tasks & Milestones",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Milestones",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Task Lists",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "View Estimated Time",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Tasks",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Can Edit All Tasks",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "View Messages & Files",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Messages",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Files",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "View Time Log",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Can View Other Peoples Time",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Can Access Billing",
+        "enabled": false,
+        "locked": false
+      },
+      {
+        "name": "Can log time",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "View Notebooks",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Notebooks",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "View Links",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Links",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "View Forms",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Forms",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "View People",
+        "enabled": true,
+        "locked": true
+      },
+      {
+        "name": "Can Set Privacy on Items",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "View Project Budget",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Manage Project Budget",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "View Project Budget Profitability",
+        "enabled": false,
+        "locked": false
+      },
+      {
+        "name": "View Hourly Rates",
+        "enabled": false,
+        "locked": false
+      },
+      {
+        "name": "Edit Hourly Rates",
+        "enabled": false,
+        "locked": false
+      },
+      {
+        "name": "Manage Project's Custom Fields",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Can Manage Board",
+        "enabled": false,
+        "locked": false
+      }
+    ]
+  },
+  {
+    "group": "other_company",
+    "permissions": [
+      {
+        "name": "Project Administrator",
+        "enabled": false,
+        "locked": false
+      },
+      {
+        "name": "View Risk Register",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Risks",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "View Project Updates",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Project Updates",
+        "enabled": false,
+        "locked": false
+      },
+      {
+        "name": "View Tasks & Milestones",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Milestones",
+        "enabled": false,
+        "locked": false
+      },
+      {
+        "name": "Add Task Lists",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "View Estimated Time",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Tasks",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Can Edit All Tasks",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "View Messages & Files",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Messages",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Files",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "View Time Log",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Can View Other Peoples Time",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Can Access Billing",
+        "enabled": false,
+        "locked": false
+      },
+      {
+        "name": "Can log time",
+        "enabled": false,
+        "locked": false
+      },
+      {
+        "name": "View Notebooks",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Notebooks",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "View Links",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Links",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "View Forms",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Forms",
+        "enabled": false,
+        "locked": false
+      },
+      {
+        "name": "View People",
+        "enabled": false,
+        "locked": false
+      },
+      {
+        "name": "Can Set Privacy on Items",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "View Project Budget",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Manage Project Budget",
+        "enabled": false,
+        "locked": false
+      },
+      {
+        "name": "View Project Budget Profitability",
+        "enabled": false,
+        "locked": false
+      },
+      {
+        "name": "View Hourly Rates",
+        "enabled": false,
+        "locked": false
+      },
+      {
+        "name": "Edit Hourly Rates",
+        "enabled": false,
+        "locked": false
+      },
+      {
+        "name": "Manage Project's Custom Fields",
+        "enabled": false,
+        "locked": false
+      },
+      {
+        "name": "Can Manage Board",
+        "enabled": false,
+        "locked": false
+      }
+    ]
+  },
+  {
+    "group": "collaborator",
+    "permissions": [
+      {
+        "name": "Project Administrator",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "View Risk Register",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Risks",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "View Project Updates",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "Add Project Updates",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "View Tasks & Milestones",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Milestones",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "Add Task Lists",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "View Estimated Time",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "Add Tasks",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "Can Edit All Tasks",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "View Messages & Files",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Messages",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Files",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "View Time Log",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "Can View Other Peoples Time",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "Can Access Billing",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "Can log time",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "View Notebooks",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Notebooks",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "View Links",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Links",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "View Forms",
+        "enabled": true,
+        "locked": false
+      },
+      {
+        "name": "Add Forms",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "View People",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "Can Set Privacy on Items",
+        "enabled": false,
+        "locked": false
+      },
+      {
+        "name": "View Project Budget",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "Manage Project Budget",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "View Project Budget Profitability",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "View Hourly Rates",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "Edit Hourly Rates",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "Manage Project's Custom Fields",
+        "enabled": false,
+        "locked": true
+      },
+      {
+        "name": "Can Manage Board",
+        "enabled": false,
+        "locked": true
+      }
+    ]
+  }
+]

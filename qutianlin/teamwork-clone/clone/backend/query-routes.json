@@ -1,0 +1,34 @@
+{
+  "/templates?page=2": {
+    "file": "frontend/queries/8dba9d5695fcc32c4724.html",
+    "auth": false
+  },
+  "/templates?page=3": {
+    "file": "frontend/queries/6eecc0fe71a3ed23b318.html",
+    "auth": false
+  },
+  "/templates?page=4": {
+    "file": "frontend/queries/c6393acbf822f3e6e79d.html",
+    "auth": false
+  },
+  "/templates?page=5": {
+    "file": "frontend/queries/5c765892ef79a73ecdf7.html",
+    "auth": false
+  },
+  "/help/projects/search?page=2&query=defaults": {
+    "file": "frontend/queries/2d7a23187abcbff2847d.html",
+    "auth": false
+  },
+  "/help/projects/search?query=privacy": {
+    "file": "frontend/queries/062c69378c62c9fa4142.html",
+    "auth": false
+  },
+  "/help/projects/search?query=filters": {
+    "file": "frontend/queries/3fc96fba4965512f6c45.html",
+    "auth": false
+  },
+  "/help/projects/search?query=defaults": {
+    "file": "frontend/queries/49b44cd52256795b96ca.html",
+    "auth": false
+  }
+}

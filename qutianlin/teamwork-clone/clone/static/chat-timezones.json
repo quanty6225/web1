@@ -1,0 +1,1002 @@
+[
+  {
+    "id": 1,
+    "name": "Hawaii",
+    "referenceCode": "Pacific/Honolulu"
+  },
+  {
+    "id": 2,
+    "name": "Alaska",
+    "referenceCode": "America/Anchorage"
+  },
+  {
+    "id": 3,
+    "name": "Pacific Time (US & Canada)",
+    "referenceCode": "America/Los_Angeles"
+  },
+  {
+    "id": 4,
+    "name": "Arizona",
+    "referenceCode": "America/Phoenix"
+  },
+  {
+    "id": 5,
+    "name": "Mountain Time (US & Canada)",
+    "referenceCode": "America/Edmonton"
+  },
+  {
+    "id": 6,
+    "name": "Central Time (US & Canada)",
+    "referenceCode": "America/Winnipeg"
+  },
+  {
+    "id": 7,
+    "name": "Eastern Time (US & Canada)",
+    "referenceCode": "America/Toronto"
+  },
+  {
+    "id": 8,
+    "name": "Indiana (East)",
+    "referenceCode": "America/Indiana/Knox"
+  },
+  {
+    "id": 10,
+    "name": "Midway Island",
+    "referenceCode": "Pacific/Pago_Pago"
+  },
+  {
+    "id": 11,
+    "name": "Samoa",
+    "referenceCode": "Pacific/Pago_Pago"
+  },
+  {
+    "id": 12,
+    "name": "Tijuana",
+    "referenceCode": "America/Tijuana"
+  },
+  {
+    "id": 13,
+    "name": "Chihuahua",
+    "referenceCode": "America/Chihuahua"
+  },
+  {
+    "id": 14,
+    "name": "Mazatlan",
+    "referenceCode": "America/Mazatlan"
+  },
+  {
+    "id": 15,
+    "name": "Central America",
+    "referenceCode": "America/Guatemala"
+  },
+  {
+    "id": 16,
+    "name": "Guadalajara",
+    "referenceCode": "America/Chicago"
+  },
+  {
+    "id": 17,
+    "name": "Mexico City",
+    "referenceCode": "America/Mexico_City"
+  },
+  {
+    "id": 18,
+    "name": "Monterrey",
+    "referenceCode": "America/Monterrey"
+  },
+  {
+    "id": 19,
+    "name": "Saskatchewan",
+    "referenceCode": "America/Regina"
+  },
+  {
+    "id": 20,
+    "name": "Bogota",
+    "referenceCode": "America/Bogota"
+  },
+  {
+    "id": 21,
+    "name": "Lima",
+    "referenceCode": "America/Lima"
+  },
+  {
+    "id": 22,
+    "name": "Quito",
+    "referenceCode": "America/Lima"
+  },
+  {
+    "id": 23,
+    "name": "Atlantic Time (Canada)",
+    "referenceCode": "America/Halifax"
+  },
+  {
+    "id": 24,
+    "name": "Caracas",
+    "referenceCode": "America/Caracas"
+  },
+  {
+    "id": 25,
+    "name": "La Paz",
+    "referenceCode": "America/La_Paz"
+  },
+  {
+    "id": 26,
+    "name": "Santiago",
+    "referenceCode": "America/Santiago"
+  },
+  {
+    "id": 27,
+    "name": "Newfoundland",
+    "referenceCode": "America/St_Johns"
+  },
+  {
+    "id": 28,
+    "name": "Brasilia",
+    "referenceCode": "America/Sao_Paulo"
+  },
+  {
+    "id": 29,
+    "name": "Buenos Aires",
+    "referenceCode": "America/Argentina/Buenos_Aires"
+  },
+  {
+    "id": 30,
+    "name": "Georgetown",
+    "referenceCode": "America/Panama"
+  },
+  {
+    "id": 31,
+    "name": "Greenland",
+    "referenceCode": "America/Argentina/Buenos_Aires"
+  },
+  {
+    "id": 32,
+    "name": "Mid-Atlantic",
+    "referenceCode": "Atlantic/Bermuda"
+  },
+  {
+    "id": 33,
+    "name": "Azores",
+    "referenceCode": "Atlantic/Azores"
+  },
+  {
+    "id": 34,
+    "name": "Cape Verde Is.",
+    "referenceCode": "Atlantic/Cape_Verde"
+  },
+  {
+    "id": 35,
+    "name": "Casablanca",
+    "referenceCode": "Africa/Casablanca"
+  },
+  {
+    "id": 36,
+    "name": "Dublin",
+    "referenceCode": "Europe/Dublin"
+  },
+  {
+    "id": 37,
+    "name": "Edinburgh",
+    "referenceCode": "Europe/London"
+  },
+  {
+    "id": 38,
+    "name": "Lisbon",
+    "referenceCode": "Europe/Lisbon"
+  },
+  {
+    "id": 39,
+    "name": "London",
+    "referenceCode": "Europe/London"
+  },
+  {
+    "id": 40,
+    "name": "Monrovia",
+    "referenceCode": "Africa/Monrovia"
+  },
+  {
+    "id": 41,
+    "name": "Amsterdam",
+    "referenceCode": "Europe/Brussels"
+  },
+  {
+    "id": 42,
+    "name": "Belgrade",
+    "referenceCode": "Europe/Belgrade"
+  },
+  {
+    "id": 43,
+    "name": "Berlin",
+    "referenceCode": "Europe/Berlin"
+  },
+  {
+    "id": 44,
+    "name": "Bern",
+    "referenceCode": "Europe/Berlin"
+  },
+  {
+    "id": 45,
+    "name": "Bratislava",
+    "referenceCode": "Europe/Prague"
+  },
+  {
+    "id": 46,
+    "name": "Brussels",
+    "referenceCode": "Europe/Brussels"
+  },
+  {
+    "id": 47,
+    "name": "Budapest",
+    "referenceCode": "Europe/Budapest"
+  },
+  {
+    "id": 48,
+    "name": "Copenhagen",
+    "referenceCode": "Europe/Berlin"
+  },
+  {
+    "id": 49,
+    "name": "Ljubljana",
+    "referenceCode": "Europe/Belgrade"
+  },
+  {
+    "id": 50,
+    "name": "Madrid",
+    "referenceCode": "Europe/Madrid"
+  },
+  {
+    "id": 51,
+    "name": "Paris",
+    "referenceCode": "Europe/Paris"
+  },
+  {
+    "id": 52,
+    "name": "Prague",
+    "referenceCode": "Europe/Prague"
+  },
+  {
+    "id": 53,
+    "name": "Rome",
+    "referenceCode": "Europe/Rome"
+  },
+  {
+    "id": 54,
+    "name": "Sarajevo",
+    "referenceCode": "Europe/Belgrade"
+  },
+  {
+    "id": 55,
+    "name": "Skopje",
+    "referenceCode": "Europe/Belgrade"
+  },
+  {
+    "id": 56,
+    "name": "Stockholm",
+    "referenceCode": "Europe/Berlin"
+  },
+  {
+    "id": 57,
+    "name": "Vienna",
+    "referenceCode": "Europe/Vienna"
+  },
+  {
+    "id": 58,
+    "name": "Warsaw",
+    "referenceCode": "Europe/Warsaw"
+  },
+  {
+    "id": 59,
+    "name": "West Africa Time",
+    "referenceCode": "Africa/Lagos"
+  },
+  {
+    "id": 60,
+    "name": "Zagreb",
+    "referenceCode": "Europe/Belgrade"
+  },
+  {
+    "id": 61,
+    "name": "Athens",
+    "referenceCode": "Europe/Athens"
+  },
+  {
+    "id": 62,
+    "name": "Bucharest",
+    "referenceCode": "Europe/Bucharest"
+  },
+  {
+    "id": 63,
+    "name": "Cairo",
+    "referenceCode": "Africa/Cairo"
+  },
+  {
+    "id": 64,
+    "name": "Harare",
+    "referenceCode": "Africa/Maputo"
+  },
+  {
+    "id": 65,
+    "name": "Helsinki",
+    "referenceCode": "Europe/Helsinki"
+  },
+  {
+    "id": 66,
+    "name": "Istanbul",
+    "referenceCode": "Europe/Istanbul"
+  },
+  {
+    "id": 67,
+    "name": "Jerusalem",
+    "referenceCode": "Asia/Jerusalem"
+  },
+  {
+    "id": 68,
+    "name": "Kyiv",
+    "referenceCode": "Europe/Kiev"
+  },
+  {
+    "id": 69,
+    "name": "Minsk",
+    "referenceCode": "Europe/Minsk"
+  },
+  {
+    "id": 70,
+    "name": "Pretoria",
+    "referenceCode": "Africa/Harare"
+  },
+  {
+    "id": 71,
+    "name": "Riga",
+    "referenceCode": "Europe/Riga"
+  },
+  {
+    "id": 72,
+    "name": "Sofia",
+    "referenceCode": "Europe/Sofia"
+  },
+  {
+    "id": 73,
+    "name": "Tallinn",
+    "referenceCode": "Europe/Tallinn"
+  },
+  {
+    "id": 74,
+    "name": "Vilnius",
+    "referenceCode": "Europe/Vilnius"
+  },
+  {
+    "id": 75,
+    "name": "Baghdad",
+    "referenceCode": "Asia/Baghdad"
+  },
+  {
+    "id": 76,
+    "name": "Kuwait",
+    "referenceCode": "Asia/Kuwait"
+  },
+  {
+    "id": 77,
+    "name": "Moscow",
+    "referenceCode": "Europe/Moscow"
+  },
+  {
+    "id": 78,
+    "name": "Nairobi",
+    "referenceCode": "Africa/Nairobi"
+  },
+  {
+    "id": 79,
+    "name": "Riyadh",
+    "referenceCode": "Asia/Riyadh"
+  },
+  {
+    "id": 80,
+    "name": "St. Petersburg",
+    "referenceCode": "Europe/Moscow"
+  },
+  {
+    "id": 81,
+    "name": "Volgograd",
+    "referenceCode": "Europe/Volgograd"
+  },
+  {
+    "id": 82,
+    "name": "Tehran",
+    "referenceCode": "Asia/Tehran"
+  },
+  {
+    "id": 83,
+    "name": "Abu Dhabi",
+    "referenceCode": "Asia/Dubai"
+  },
+  {
+    "id": 84,
+    "name": "Baku",
+    "referenceCode": "Asia/Baku"
+  },
+  {
+    "id": 85,
+    "name": "Muscat",
+    "referenceCode": "Asia/Dubai"
+  },
+  {
+    "id": 86,
+    "name": "Tbilisi",
+    "referenceCode": "Asia/Tbilisi"
+  },
+  {
+    "id": 87,
+    "name": "Yerevan",
+    "referenceCode": "Asia/Yerevan"
+  },
+  {
+    "id": 88,
+    "name": "Kabul",
+    "referenceCode": "Asia/Kabul"
+  },
+  {
+    "id": 89,
+    "name": "Ekaterinburg",
+    "referenceCode": "Asia/Karachi"
+  },
+  {
+    "id": 90,
+    "name": "Islamabad",
+    "referenceCode": "Asia/Karachi"
+  },
+  {
+    "id": 91,
+    "name": "Karachi",
+    "referenceCode": "Asia/Karachi"
+  },
+  {
+    "id": 92,
+    "name": "Tashkent",
+    "referenceCode": "Asia/Tashkent"
+  },
+  {
+    "id": 93,
+    "name": "Chennai",
+    "referenceCode": "Asia/Kolkata"
+  },
+  {
+    "id": 94,
+    "name": "Kolkata",
+    "referenceCode": "Asia/Kolkata"
+  },
+  {
+    "id": 95,
+    "name": "Mumbai",
+    "referenceCode": "Asia/Kolkata"
+  },
+  {
+    "id": 96,
+    "name": "New Delhi",
+    "referenceCode": "Asia/Kolkata"
+  },
+  {
+    "id": 97,
+    "name": "Kathmandu",
+    "referenceCode": "Asia/Kathmandu"
+  },
+  {
+    "id": 98,
+    "name": "Almaty",
+    "referenceCode": "Asia/Almaty"
+  },
+  {
+    "id": 99,
+    "name": "Astana",
+    "referenceCode": "Asia/Almaty"
+  },
+  {
+    "id": 100,
+    "name": "Dhaka",
+    "referenceCode": "Asia/Dhaka"
+  },
+  {
+    "id": 101,
+    "name": "Novosibirsk",
+    "referenceCode": "Asia/Novosibirsk"
+  },
+  {
+    "id": 102,
+    "name": "Sri Jayawardenepura",
+    "referenceCode": "Asia/Colombo"
+  },
+  {
+    "id": 103,
+    "name": "Rangoon",
+    "referenceCode": "Asia/Yangon"
+  },
+  {
+    "id": 104,
+    "name": "Bangkok",
+    "referenceCode": "Asia/Bangkok"
+  },
+  {
+    "id": 105,
+    "name": "Hanoi",
+    "referenceCode": "Asia/Jakarta"
+  },
+  {
+    "id": 106,
+    "name": "Jakarta",
+    "referenceCode": "Asia/Jakarta"
+  },
+  {
+    "id": 107,
+    "name": "Krasnoyarsk",
+    "referenceCode": "Asia/Krasnoyarsk"
+  },
+  {
+    "id": 108,
+    "name": "Beijing",
+    "referenceCode": "Asia/Shanghai"
+  },
+  {
+    "id": 109,
+    "name": "Chongqing",
+    "referenceCode": "Asia/Shanghai"
+  },
+  {
+    "id": 110,
+    "name": "Hong Kong",
+    "referenceCode": "Asia/Hong_Kong"
+  },
+  {
+    "id": 111,
+    "name": "Irkutsk",
+    "referenceCode": "Asia/Irkutsk"
+  },
+  {
+    "id": 112,
+    "name": "Kuala Lumpur",
+    "referenceCode": "Asia/Singapore"
+  },
+  {
+    "id": 113,
+    "name": "Perth",
+    "referenceCode": "Australia/Perth"
+  },
+  {
+    "id": 114,
+    "name": "Singapore",
+    "referenceCode": "Asia/Singapore"
+  },
+  {
+    "id": 115,
+    "name": "Taipei",
+    "referenceCode": "Asia/Taipei"
+  },
+  {
+    "id": 116,
+    "name": "Ulaan Bataar",
+    "referenceCode": "Asia/Urumqi"
+  },
+  {
+    "id": 117,
+    "name": "Urumqi",
+    "referenceCode": "Asia/Urumqi"
+  },
+  {
+    "id": 118,
+    "name": "Osaka",
+    "referenceCode": "Asia/Seoul"
+  },
+  {
+    "id": 119,
+    "name": "Sapporo",
+    "referenceCode": "Asia/Seoul"
+  },
+  {
+    "id": 120,
+    "name": "Seoul",
+    "referenceCode": "Asia/Seoul"
+  },
+  {
+    "id": 121,
+    "name": "Tokyo",
+    "referenceCode": "Asia/Tokyo"
+  },
+  {
+    "id": 122,
+    "name": "Yakutsk",
+    "referenceCode": "Asia/Yakutsk"
+  },
+  {
+    "id": 123,
+    "name": "Adelaide",
+    "referenceCode": "Australia/Adelaide"
+  },
+  {
+    "id": 124,
+    "name": "Darwin",
+    "referenceCode": "Australia/Darwin"
+  },
+  {
+    "id": 125,
+    "name": "Brisbane",
+    "referenceCode": "Australia/Brisbane"
+  },
+  {
+    "id": 126,
+    "name": "Canberra",
+    "referenceCode": "Australia/Sydney"
+  },
+  {
+    "id": 127,
+    "name": "Guam",
+    "referenceCode": "Pacific/Guam"
+  },
+  {
+    "id": 128,
+    "name": "Hobart",
+    "referenceCode": "Australia/Hobart"
+  },
+  {
+    "id": 129,
+    "name": "Melbourne",
+    "referenceCode": "Australia/Melbourne"
+  },
+  {
+    "id": 130,
+    "name": "Port Moresby",
+    "referenceCode": "Pacific/Port_Moresby"
+  },
+  {
+    "id": 131,
+    "name": "Sydney",
+    "referenceCode": "Australia/Sydney"
+  },
+  {
+    "id": 132,
+    "name": "Vladivostok",
+    "referenceCode": "Asia/Vladivostok"
+  },
+  {
+    "id": 133,
+    "name": "Magadan",
+    "referenceCode": "Asia/Magadan"
+  },
+  {
+    "id": 134,
+    "name": "New Caledonia",
+    "referenceCode": "Pacific/Noumea"
+  },
+  {
+    "id": 135,
+    "name": "Solomon Is.",
+    "referenceCode": "Asia/Magadan"
+  },
+  {
+    "id": 136,
+    "name": "Auckland",
+    "referenceCode": "Pacific/Auckland"
+  },
+  {
+    "id": 137,
+    "name": "Fiji",
+    "referenceCode": "Pacific/Fiji"
+  },
+  {
+    "id": 138,
+    "name": "Kamchatka",
+    "referenceCode": "Asia/Kamchatka"
+  },
+  {
+    "id": 139,
+    "name": "Marshall Is.",
+    "referenceCode": "Asia/Kamchatka"
+  },
+  {
+    "id": 140,
+    "name": "Wellington",
+    "referenceCode": "Pacific/Auckland"
+  },
+  {
+    "id": 141,
+    "name": "Nuku'alofa",
+    "referenceCode": "Pacific/Tongatapu"
+  },
+  {
+    "id": 142,
+    "name": "Chennai, Kolkata, Mumbai, New Delhi",
+    "referenceCode": "Asia/Kolkata"
+  },
+  {
+    "id": 143,
+    "name": "Iceland",
+    "referenceCode": "Atlantic/Reykjavik"
+  },
+  {
+    "id": 144,
+    "name": "Cork",
+    "referenceCode": "Europe/Dublin"
+  },
+  {
+    "id": 145,
+    "name": "Brazil (Acre)",
+    "referenceCode": "America/Rio_Branco"
+  },
+  {
+    "id": 146,
+    "name": "Brazil (DeNoronha)",
+    "referenceCode": "America/Noronha"
+  },
+  {
+    "id": 147,
+    "name": "Brazil (West)",
+    "referenceCode": "America/Manaus"
+  },
+  {
+    "id": 148,
+    "name": "Brazil (East)",
+    "referenceCode": "America/Sao_Paulo"
+  },
+  {
+    "id": 149,
+    "name": "Guatemala",
+    "referenceCode": "America/Guatemala"
+  },
+  {
+    "id": 150,
+    "name": "Oslo",
+    "referenceCode": "Europe/Oslo"
+  },
+  {
+    "id": 151,
+    "name": "Montevideo",
+    "referenceCode": "America/Montevideo"
+  },
+  {
+    "id": 152,
+    "name": "Windhoek",
+    "referenceCode": "Africa/Windhoek"
+  },
+  {
+    "id": 153,
+    "name": "Beirut",
+    "referenceCode": "Asia/Beirut"
+  },
+  {
+    "id": 154,
+    "name": "Kaliningrad",
+    "referenceCode": "Europe/Kaliningrad"
+  },
+  {
+    "id": 155,
+    "name": "Zurich",
+    "referenceCode": "Europe/Zurich"
+  },
+  {
+    "id": 156,
+    "name": "Yukon",
+    "referenceCode": "America/Whitehorse"
+  },
+  {
+    "id": 157,
+    "name": "Atlantic Standard Time (Puerto Rico)",
+    "referenceCode": "America/Puerto_Rico"
+  },
+  {
+    "id": 158,
+    "name": "Abidjan",
+    "referenceCode": "Africa/Abidjan"
+  },
+  {
+    "id": 159,
+    "name": "Algiers",
+    "referenceCode": "Africa/Algiers"
+  },
+  {
+    "id": 160,
+    "name": "Bissau",
+    "referenceCode": "Africa/Bissau"
+  },
+  {
+    "id": 161,
+    "name": "Melilla",
+    "referenceCode": "Africa/Ceuta"
+  },
+  {
+    "id": 162,
+    "name": "Laayoune",
+    "referenceCode": "Africa/El_Aaiun"
+  },
+  {
+    "id": 163,
+    "name": "Johannesburg",
+    "referenceCode": "Africa/Johannesburg"
+  },
+  {
+    "id": 164,
+    "name": "Juba",
+    "referenceCode": "Africa/Juba"
+  },
+  {
+    "id": 165,
+    "name": "Khartoum",
+    "referenceCode": "Africa/Khartoum"
+  },
+  {
+    "id": 166,
+    "name": "N'Djamena",
+    "referenceCode": "Africa/Ndjamena"
+  },
+  {
+    "id": 167,
+    "name": "São Tomé",
+    "referenceCode": "Africa/Sao_Tome"
+  },
+  {
+    "id": 168,
+    "name": "Tripoli",
+    "referenceCode": "Africa/Tripoli"
+  },
+  {
+    "id": 169,
+    "name": "Tunis",
+    "referenceCode": "Africa/Tunis"
+  },
+  {
+    "id": 170,
+    "name": "Adak",
+    "referenceCode": "America/Adak"
+  },
+  {
+    "id": 171,
+    "name": "Palmas",
+    "referenceCode": "America/Araguaina"
+  },
+  {
+    "id": 172,
+    "name": "Catamarca",
+    "referenceCode": "America/Argentina/Catamarca"
+  },
+  {
+    "id": 173,
+    "name": "Córdoba",
+    "referenceCode": "America/Argentina/Cordoba"
+  },
+  {
+    "id": 174,
+    "name": "San Salvador de Jujuy",
+    "referenceCode": "America/Argentina/Jujuy"
+  },
+  {
+    "id": 175,
+    "name": "La Rioja",
+    "referenceCode": "America/Argentina/La_Rioja"
+  },
+  {
+    "id": 176,
+    "name": "San Rafael",
+    "referenceCode": "America/Argentina/Mendoza"
+  },
+  {
+    "id": 177,
+    "name": "Río Gallegos",
+    "referenceCode": "America/Argentina/Rio_Gallegos"
+  },
+  {
+    "id": 178,
+    "name": "Salta",
+    "referenceCode": "America/Argentina/Salta"
+  },
+  {
+    "id": 179,
+    "name": "San Juan",
+    "referenceCode": "America/Argentina/San_Juan"
+  },
+  {
+    "id": 180,
+    "name": "San Luis",
+    "referenceCode": "America/Argentina/San_Luis"
+  },
+  {
+    "id": 181,
+    "name": "San Miguel de Tucumán",
+    "referenceCode": "America/Argentina/Tucuman"
+  },
+  {
+    "id": 182,
+    "name": "Ushuaia",
+    "referenceCode": "America/Argentina/Ushuaia"
+  },
+  {
+    "id": 183,
+    "name": "Asunción",
+    "referenceCode": "America/Asuncion"
+  },
+  {
+    "id": 184,
+    "name": "Salvador",
+    "referenceCode": "America/Bahia"
+  },
+  {
+    "id": 185,
+    "name": "Mezcales",
+    "referenceCode": "America/Bahia_Banderas"
+  },
+  {
+    "id": 186,
+    "name": "Bridgetown",
+    "referenceCode": "America/Barbados"
+  },
+  {
+    "id": 187,
+    "name": "Belém",
+    "referenceCode": "America/Belem"
+  },
+  {
+    "id": 188,
+    "name": "Belize City",
+    "referenceCode": "America/Belize"
+  },
+  {
+    "id": 189,
+    "name": "Boa Vista",
+    "referenceCode": "America/Boa_Vista"
+  },
+  {
+    "id": 190,
+    "name": "Boise",
+    "referenceCode": "America/Boise"
+  },
+  {
+    "id": 191,
+    "name": "Cambridge Bay",
+    "referenceCode": "America/Cambridge_Bay"
+  },
+  {
+    "id": 192,
+    "name": "Campo Grande",
+    "referenceCode": "America/Campo_Grande"
+  },
+  {
+    "id": 193,
+    "name": "Cancún",
+    "referenceCode": "America/Cancun"
+  },
+  {
+    "id": 194,
+    "name": "Cayenne",
+    "referenceCode": "America/Cayenne"
+  },
+  {
+    "id": 195,
+    "name": "Ciudad Juárez",
+    "referenceCode": "America/Ciudad_Juarez"
+  },
+  {
+    "id": 196,
+    "name": "San José",
+    "referenceCode": "America/Costa_Rica"
+  },
+  {
+    "id": 197,
+    "name": "Cuiabá",
+    "referenceCode": "America/Cuiaba"
+  },
+  {
+    "id": 198,
+    "name": "Danmarkshavn",
+    "referenceCode": "America/Danmarkshavn"
+  },
+  {
+    "id": 199,
+    "name": "Dawson",
+    "referenceCode": "America/Dawson"
+  },
+  {
+    "id": 200,
+    "name": "Fort St. John",
+    "referenceCode": "America/Dawson_Creek"
+  },
+  {
+    "id": 201,
+    "name": "Denver",
+    "referenceCode": "America/Denver"
+  }
+]

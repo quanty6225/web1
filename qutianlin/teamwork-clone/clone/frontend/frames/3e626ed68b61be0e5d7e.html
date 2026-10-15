@@ -1,0 +1,139 @@
+<!doctype html>
+<html><head>
+    <meta charset="utf-8">
+    <title>Get in Touch</title>
+    <link rel="stylesheet" href="/static/assets/fcce80520e63c4a607573d92.css">
+    <style>
+        :root {
+            --clr-accent: #ffc334;
+        }
+
+        .btn-success, .btn-success:hover, .btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-success:focus, #progress .bar {
+            background-color: #ffc334;
+        }
+
+        .btn-success:hover, .btn-primary:hover, .btn-success:focus, .btn-primary:focus {
+            opacity: 0.8;
+            filter: alpha(opacity=80);
+        }
+    </style>
+<link rel="stylesheet" href="/static/clone.css"><script src="/static/clone.js" defer></script></head>
+<body style="background:transparent" data-clone-auth="false" data-route="/first-party/digitalcrew/support/contactform.html" data-frame="true" data-region="main">
+    <div class="widget--hold light">
+        <div data-bind="if: !app.coreDataLoaded()"></div>
+        <div class="widget--box" data-bind="if: app.coreDataLoaded">
+
+            <div class="widget-panels-container" data-bind="component: {name: 'contactform'}"><!-- ko ifnot: app.router.currentRoute().hidesearchform --><!-- /ko -->
+
+<!-- ko if: app.router.currentRoute().page != "searchform" || app.router.currentRoute().page == "communicationoptions" -->
+  <!-- ko if: app.router.currentRoute().page == "communicationoptions" --><!-- /ko -->
+  <!-- ko if: app.router.currentRoute().page != "communicationoptions" -->
+    <!-- ko if: app.router.currentRoute().page == "newticket" -->
+      <div class="widget-header">
+        <!-- ko if: isLiveChatDeskEnabled --><!-- /ko -->
+        <h4 class="widget-title"><!--ko text:app.i18n.t('Write a Message')-->Write a Message<!--/ko--></h4>
+      </div><!-- header -->
+    <!-- /ko -->
+    <div class="widget-body" data-bind="css: { 'widget-body--full-height': app.router.currentRoute().page == 'livechat' }">
+      <!-- ko component: { name: 'contactform-' + app.router.currentRoute().page } --><span data-bind="if: app.error"></span>
+<!-- ko component: {name: 'contactform-personaldetails', params: {ticket: ticket}} --><!-- <div class="widget-header">
+    <h4 class="widget-title">Additional details</h4>
+    <a href="#" class="close">Close</a>
+</div><!- header -->
+
+<div class="widget-additionalDetails">
+
+    <div class="fields-hold">
+        <div class="inner-group">
+            <input type="name" class="widget-input" data-bind="textInput: ticket.firstName,attr.placeholder:app.i18n.t('First name')" placeholder="First name"><span class="help-block" style="display: none;"></span>
+        </div>
+
+        <div class="inner-group">
+            <input type="name" class="widget-input" data-bind="textInput: ticket.lastName,attr.placeholder:app.i18n.t('Last name')" placeholder="Last name"><span class="help-block" style="display: none;"></span>
+        </div>
+
+        <div class="inner-group">
+            <input type="email" class="widget-input" data-bind="textInput: ticket.email,attr.placeholder:app.i18n.t('Email address')" placeholder="Email address"><span class="help-block" style="display: none;"></span>
+        </div>
+
+        <div class="inner-group">
+            <input type="text" class="widget-input" data-bind="textInput: ticket.subject,attr.placeholder:app.i18n.t('Subject')" placeholder="Subject"><span class="help-block" style="display: none;"></span>
+        </div>
+
+        <!-- ko if: app.contactform.inboxes().length > 1 --><!-- /ko -->
+    </div><!-- fields -->
+
+</div><!-- body --><!-- /ko -->
+<!-- ko component: {name: 'contactform-message', params: {ticket: ticket}} --><div class="message-textarea-holder">
+    <textarea name="feedBack" id="feedBack" class="widget-input" data-bind="textInput: ticket.body,attr.placeholder:app.i18n.t('Your message ...')" placeholder="Your message ..."></textarea><span class="help-block" style="display: none;"></span>
+</div><!-- body --><!-- /ko -->
+<!-- ko component: {name: 'newattachments', params: {attachments: ticket.attachments}} --><!-- ko component: {
+    name: 'uploader',
+    params: {
+        allowMultiple: true,
+        id: 'ticket-attachments',
+        callback: function(data) { AttachmentsUploaded(data) }
+    }
+} --><!-- ko if: err --><!-- /ko -->
+
+<!-- ko if: showDropField --><!-- /ko -->
+
+<!-- ko if: uploading --><!-- /ko -->
+
+<div data-bind="template: {nodes: $componentTemplateNodes}">
+
+<!-- ko if: $parent.attachments().length > 0 --><!-- /ko -->
+
+</div>
+
+<div class="fileupload-button">
+	<div id="dropzone">
+        <svg class="svgIconPlace" style="fill: #999" width="16px" height="16px">
+            <use xlink:href="/static/assets/4ea55d6f3075ed980e54d747.svg"></use>
+        </svg>
+        <!--ko text:app.i18n.t('Browse or drop files here')-->Browse or drop files here<!--/ko-->
+    </div>
+	<input type="file" name="attachment" data-bind="attr: {multiple: params.allowMultiple},attr.id:id" multiple id="ticket-attachments">
+</div><!-- /ko -->
+<!-- /ko -->
+
+<div class="row">
+	<!-- ko component: {name: 'customfields', params: {ticket: ticket}} --><!-- ko foreach: ticket.fields --><!-- /ko -->
+
+<!-- IMPORTANT - Mark this template loaded -->
+<!-- ko if: $data.readyToShow != null && readyToShow --><!-- /ko -->
+<!-- /ko -->
+</div>
+
+<div class="row ticket-submit-options">
+	<!-- ko if: showSearchHelpdocs --><!-- /ko -->
+
+	<!-- ko ifnot: showSearchHelpdocs -->
+		<div class="col-xs-12 text-right">
+		    <a href="#" id="next-panel" class="btn btn-success" data-bind="click: SubmitTicket"><!--ko text:app.i18n.t('Submit Ticket')-->Submit Ticket<!--/ko--></a>
+		</div>
+	<!-- /ko -->
+</div>
+<!-- /ko -->
+    </div>
+    <!-- ko if: app.router.currentRoute().page != "livechat" -->
+      <div class="widget-footer">
+        <div class="clearfix">
+          <div data-bind="component: {name: 'contactform-start-message-button'}"><!-- ko if: app.router.currentRoute().page != "newticket" --><!-- /ko --></div>
+          <div class="text-center">
+            <span data-bind="visible: app.installation.allowBranding">
+                Powered by <a href="/desk">Teamwork Desk</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    <!-- /ko -->
+  <!-- /ko -->
+<!-- /ko -->
+</div>
+
+        </div>
+
+    </div>
+
+    </body></html>

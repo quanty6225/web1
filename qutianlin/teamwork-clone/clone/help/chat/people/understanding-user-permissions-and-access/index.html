@@ -1,0 +1,916 @@
+<!doctype html>
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" prefix="og: https://ogp.me/ns#" style=""><head>
+    <meta charset="utf-8">
+    <title>Understanding User Permissions and Access - Teamwork Chat Support</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:site_name" content="Teamwork Chat Support">
+
+    
+
+    
+      <link rel="shortcut icon" type="image/png" href="/static/assets/e21cdc4c753b9586103fae17.png">
+    
+
+    <link rel="stylesheet" href="/static/assets/2bdece04197ef76cab49cfd0.css"> 
+    
+    <link rel="stylesheet" href="/static/assets/a1676afb81bcd2701f5d225b.css"> 
+
+
+    <link rel="stylesheet" href="/static/assets/95d5713fe2a0af0452e682d0.css" media="screen, handheld">
+    <link rel="stylesheet" href="/static/assets/ded5db691cc1bfe712830c93.css" media="print">
+    <link rel="stylesheet" href="/static/assets/0c7bfa94674a6066a896c329.css" media="screen, handheld">
+
+    
+
+    
+    <meta name="google-site-verification" content="yjwaFW9V-rNnp-h_4IKuyV4i_qXERXqNqGnpVoLipWo">
+
+
+<style>
+
+.search-inner {
+  background: transparent url("/static/assets/269a75e8a547e586bdf8e7c1.jpg") center top repeat-x;
+}
+
+.search--row {
+  padding: 100px 0;
+}
+
+.search--row,
+.site--header {
+
+background: #1d1c39
+}
+.site--header  .row {
+    box-shadow: inset 0 -1px 0 0 rgba(255,255,255,0.2);
+}
+
+.search--row.search-inner {
+    padding: 90px 0;
+}
+
+.custom-site-header-color{
+    height: 60px;
+    background: transparent;
+    margin-bottom: -60px;
+}
+
+.search--row{
+    padding-top: 160px;
+}
+
+.search--row .row-title a {
+  color: #fff;
+}
+
+.search-inner h1 {
+  color: #fff;
+}
+
+.history-path a {
+  color: #FFF !important;
+}
+
+.search--row.search-inner .search_input {
+  border: none;
+}
+
+.header--nav a {
+  color: #FFF !important;
+  padding: 0px 15px 0px 15px;
+  border: 1px white solid;
+  border-radius: 4px;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.category-img-247 {
+  background: url("/static/assets/2af40b4fe8873a3990781e8f.svg") no-repeat center;
+  background-size: 80%;
+}
+
+.category-img-243 {
+  background: url("/static/assets/0c6147b410993fd145bca0d1.svg") no-repeat center;
+  background-size: 80%;
+}
+
+.category-img-241 {
+  background: url("/static/assets/984b9f6c202756e3320efb20.svg") no-repeat center;
+  background-size: 80%;
+}
+
+.category-img-1560 {
+  background: url("/static/assets/092a3235d4375e9c055ec7e0.svg") no-repeat center;
+  background-size: 80%;
+}
+
+.category-img-948 {
+  background: url("/static/assets/092a3235d4375e9c055ec7e0.svg") no-repeat center;
+  background-size: 80%;
+}
+
+.category-img-1521 {
+  background: url("/static/assets/25f40aadf9dc9d296cc9c159.svg") no-repeat center;
+  background-size: 80%;
+}
+  .category-img-1595 {
+  background: url("/static/assets/5bba7b8fff5060452f29ca60.svg") no-repeat center;
+  background-size: 80%;
+}
+  
+.category-img-3299 {
+  background: url("/static/assets/bf1bcf493a412d0e5840985d.svg") no-repeat center;
+  background-size: 80%;
+}
+  
+.category-img-3192 {
+  background: url("/static/assets/e38b8ee3860361c7cbd75312.svg") no-repeat center;
+  background-size: 80%;
+}
+  
+.category-img-3309 {
+  background: url("/static/assets/8854bdaa5de1aa684ddc8ea4.svg") no-repeat center;
+  background-size: 80%;
+}
+
+  @media only screen and (max-width: 500px) {
+        .table-bordered-rw {
+          display: none;
+        }
+        .table-bordered-mobile-rw {
+          display: block;
+        }
+       .gating-bubble-max {
+         display: none;
+       }
+       .gating-bubble-max-mobile {
+         display: block;
+       }
+      }
+
+      @media only screen and (min-width: 500px) {
+        .table-bordered-rw {
+          display: block;
+        }
+        .table-bordered-mobile-rw {
+          display: none;
+        }
+        .gating-bubble-max {
+          display: block;
+        }
+        .gating-bubble-max-mobile {
+          display: none;
+        }
+      }
+.docs--sections .sections-links>li:hover {
+
+  border: 2px #eaeaea solid;
+
+}
+
+
+
+
+.docs--sections .sections-links>li {
+  border: 2px transparent solid;
+  padding-bottom: 30px;
+  border-radius: 4px;
+}
+
+.icon-images {
+  height: 100%;
+  width: 100%;
+}
+
+.docs--sections .sections-links .icon-hold:after {
+  border: 0px;
+}
+
+.kbd {
+background-color: white;
+border: 1px #b5b5b5 solid;
+border-radius: 4px;
+color: #808080;
+padding: 2px 6px 2px;
+}
+  
+.codechatstatus {
+  border-radius:20px;
+  padding:5px;
+  font-family:sans-serif;
+  font-size:16px;
+  }
+  
+  .th-curriculum {
+color: #0390a5;
+font-size: 18px;
+}
+  
+  .gatingbubblefitcontent{
+    background:#eef0fb;
+      width: fit-content;
+    margin-top:15px;
+    margin-bottom: 15px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  .gatingbubblemax{
+    background:#eef0fb;
+      width: 100%;
+      padding:10px;
+       padding-left:20px;
+    padding-right:20px;
+      border-radius:25px;
+      vertical-align: middle;
+      font-size:18px;
+  }
+  .gatingbubblemaxmobile{
+    background:#eef0fb;
+      width: 100%;
+      padding:10px;
+       padding-left:20px;
+    padding-right:20px;
+      border-radius:25px;
+      vertical-align: middle;
+      font-size:18px;
+  }
+  .bulbbubblefitcontent{
+    background:#f3eefe;
+      width: fit-content;
+    margin-top:15px;
+    margin-bottom: 15px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  .bulbbubblemax{
+    background:#f3eefe;
+      width: 100%;
+    margin-top:2px;
+    margin-bottom: 2px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  
+  .warningbubblefitcontent{
+    background:#fff3d8;
+      width: fit-content;
+    margin-top:15px;
+    margin-bottom: 15px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  .warningbubblemax{
+    background:#fff3d8;
+      width: 100%;
+    margin-top:2px;
+    margin-bottom: 2px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  .keybubblefitcontent{
+    background:#fff1ec;
+      width: fit-content;
+    margin-top:15px;
+    margin-bottom: 15px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  .keybubblemax{
+    background:#fff1ec;
+      width: 100%;
+    margin-top:2px;
+    margin-bottom: 2px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  
+  .formulabubblefitcontent{
+    background:#ebebeb;
+      width: fit-content;
+    margin-top:15px;
+    margin-bottom: 15px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  
+  .formulabubblemax{
+    background:#ebebeb;
+      width: 100%;
+    margin-top:2px;
+    margin-bottom: 2px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+    .emailbubblefitcontent{
+    background:#f5f5f5;
+      width: fit-content;
+    margin-top:15px;
+    margin-bottom: 15px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  
+  .emailbubblemax{
+    background:#f5f5f5;
+      width: 100%;
+    margin-top:2px;
+    margin-bottom: 2px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  .notebubblefitcontent{
+    background:#e4f1fe;
+      width: fit-content;
+    margin-top:15px;
+    margin-bottom:15px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  
+  .notebubblemax{
+    background:#e4f1fe;
+      width: 100%;
+    margin-top:2px;
+    margin-bottom: 2px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+
+
+</style><meta name="google-site-verification" content="yjwaFW9V-rNnp-h_4IKuyV4i_qXERXqNqGnpVoLipWo"><style>.pubble-form-frame-poweredby {
+  display: none !important;
+}
+
+.pubble-sb-clientbgcolor>* {
+  display: block;
+}
+
+.pubble-sb-logo {
+  background: #3b93f7 url("/static/assets/0f53e4f9fbb8b21f11a7934e.svg") center center no-repeat !important;
+  background-size: auto auto;
+  background-size: 30px !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 30px !important;
+  z-index: 6;
+}
+
+.pubble-sb-clientbgcolor {
+  background: #3b93f7 !important;
+}
+
+</style>
+
+
+<style>
+.pubble-form-frame-poweredby{display:none !important;}
+.pubble-sb-clientbgcolor > *{display:block;}
+.pubble-sb-logo
+{
+background: #3b93f7 url("/static/assets/0f53e4f9fbb8b21f11a7934e.svg") center center no-repeat !important;
+    background-size: auto auto;
+background-size: 30px !important;
+top: 0 !important;
+left: 0 !important;
+width: 60px !important;
+height: 60px !important;
+border-radius: 30px !important;
+z-index:6;
+}
+.pubble-sb-clientbgcolor{
+background: #3b93f7 !important;
+}
+</style>
+
+<!-- Start of HubSpot Embed Code -->
+<!-- End of HubSpot Embed Code -->
+
+    
+    <style type="text/css">html.hs-messages-widget-open.hs-messages-mobile,html.hs-messages-widget-open.hs-messages-mobile body{overflow:hidden!important;position:relative!important}html.hs-messages-widget-open.hs-messages-mobile body{height:100%!important;margin:0!important}#hubspot-messages-iframe-container{display:initial!important;z-index:2147483647;position:fixed!important;bottom:0!important}#hubspot-messages-iframe-container:hover .hs-drag-handle--v2--widget-open--left,#hubspot-messages-iframe-container:hover .hs-drag-handle--v2--widget-open--right{display:flex!important}#hubspot-messages-iframe-container.widget-align-left{left:0!important}#hubspot-messages-iframe-container.widget-align-right{right:0!important}#hubspot-messages-iframe-container.widget-align-center{left:50%!important;transform:translateX(-50%)!important;bottom:32px!important}#hubspot-messages-iframe-container.hs-messages-lightbox-expanded{top:0!important;right:0!important;bottom:0!important;left:0!important;width:100%!important;height:100%!important;z-index:2147483647!important;transform:none!important}#hubspot-messages-iframe-container.hs-messages-lightbox-expanded iframe{position:fixed!important;top:0!important;right:0!important;bottom:0!important;left:0!important;width:100%!important;height:100%!important}#hubspot-messages-iframe-container.internal{z-index:1111}#hubspot-messages-iframe-container.internal iframe{min-width:108px}#hubspot-messages-iframe-container .hs-shadow-container{display:initial!important;z-index:-1;position:absolute;width:0;height:0;bottom:0;content:""}#hubspot-messages-iframe-container .hs-shadow-container.internal{display:none!important}#hubspot-messages-iframe-container .hs-shadow-container.active{width:400px;height:400px}#hubspot-messages-iframe-container iframe{display:initial!important;width:100%!important;height:100%!important;border:none!important;position:absolute!important;bottom:0!important;right:0!important;background:transparent!important}#hubspot-messages-iframe-container .hs-drag-handle--v2--widget-open--right{bottom:20px;left:-5px;display:none!important}#hubspot-messages-iframe-container .hs-drag-handle--v2--widget-open--left{bottom:20px;right:-5px;display:none!important}.hs-drag-handle{position:absolute;cursor:grab;height:60px;display:none;align-items:center;transition:opacity .5s ease;transition-delay:.5s;opacity:1}.hs-drag-handle--v1--right{right:82px;bottom:12px}.hs-drag-handle--v1--left{left:82px;bottom:12px}.hs-drag-handle--v2--pill-launcher--right{bottom:20px;left:10px}.hs-drag-handle--v2--pill-launcher--left{bottom:20px;right:10px}.hs-drag-handle--v2--hidden--left,.hs-drag-handle--v2--hidden--right{opacity:0!important;pointer-events:none!important;transition:none!important}.hs-drag-overlay{position:absolute;top:0;left:0;right:0;bottom:0;user-select:none;z-index:999;display:none}@media print{#hubspot-messages-iframe-container.hs-widget-hide-on-print{display:none!important}}</style><style id="_goober"> .go2933276541{position:fixed;display:block;width:100%;height:0px;margin:0px;padding:0px;overflow:visible;transform-style:preserve-3d;background:transparent;backface-visibility:hidden;pointer-events:none;left:0px;z-index:9998;}.go2369186930{top:0px;z-index:9999;height:100%;width:100%;}.go1348078617{bottom:0px;}.go2417249464{position:fixed;z-index:9989;}.go3921366393{left:0;bottom:0;}.go3967842156{right:0;bottom:0;}.go613305155{left:0;top:0;}.go471583506{right:0;top:0;}.go3670563033{position:relative;overflow:hidden;display:none;}.go1041095097{display:block;}.go1632949049{position:absolute;pointer-events:none;width:101vw;height:101vh;background:rgba(0,0,0,0.7);opacity:0;z-index:-1;}.go2512015367{z-index:99998;opacity:0.8;visibility:visible;pointer-events:all;cursor:pointer;}.go1432718904{overflow:hidden;}.go812842568{display:block !important;position:static !important;box-sizing:border-box !important;background:transparent !important;border:none;min-height:0px !important;max-height:none !important;margin:0px;padding:0px !important;height:100% !important;width:1px !important;max-width:100% !important;min-width:100% !important;}.go722322694{transition:none !important;}.go3064412225{z-index:99999;visibility:hidden;position:absolute;inset:50vh auto auto 50%;left:50%;top:50%;transform:translate(-50%,-50%) translateY(100vh);pointer-events:none;max-height:95%;max-width:95%;}.go1656994552{pointer-events:auto !important;visibility:visible;transform:translate(-50%,-50%) translateY(0);transition:transform 0.75s linear(0,0.006,0.023 2.2%,0.096 4.8%,0.532 15.4%,0.72 21%,0.793,0.853 26.7%,0.902,0.941,0.968 36.2%,0.987 39.7%,1 43.7%,1.007 48.3%,1.009 55.3%,1.002 78.2%,1 );}.go456419034{transition:opacity 0.3s ease-in;}.go3128134379{pointer-events:auto !important;visibility:visible !important;max-height:95vh !important;transition:max-height 1s ease-in;}.go494047706{z-index:9999;width:100%;max-height:95%;position:fixed;visibility:hidden;}.go2481764524{z-index:9999;width:100%;max-height:95%;position:fixed;visibility:hidden;bottom:0px;}.go2685733372{visibility:hidden;}.go2985984737{visibility:visible !important;}.go3281949485{pointer-events:auto !important;visibility:visible !important;max-height:95vh !important;transform:none !important;}.go3508454897{z-index:9999;width:100%;max-height:95%;position:fixed;visibility:hidden;transition:transform 1s linear(0,0.006,0.022 2.3%,0.091 5.1%,0.18 7.6%,0.508 16.3%,0.607,0.691,0.762,0.822 28.4%,0.872,0.912 35.1%,0.944 38.9%,0.968 43%,0.985 47.6%,0.996 53.1%,1.001 58.4%,1.003 65.1%,1 );}.go988075951{z-index:9999;position:fixed;left:10px;top:10px;max-height:95vh !important;max-width:95%;visibility:hidden;}.go2699082514{z-index:9999;position:fixed;right:10px;top:10px;max-height:95vh !important;max-width:95%;visibility:hidden;}.go1595992025{z-index:9999;position:fixed;left:10px;bottom:10px;max-height:95vh !important;max-width:95%;visibility:hidden;}.go1222083472{z-index:9999;position:fixed;right:10px;bottom:10px;max-height:95vh !important;max-width:95%;visibility:hidden;}.go26732895{cursor:pointer;}.go2083580917{display:flex;justify-content:center;align-items:center;}</style><link rel="stylesheet" href="/static/clone.css"><script src="/static/clone.js" defer></script><script src="/static/vendor/photoswipe.js" defer></script><script src="/static/vendor/photoswipe-ui-default.js" defer></script><script src="/static/public-content.js" defer></script></head>
+  <body data-clone-auth="false" data-route="/help/chat/people/understanding-user-permissions-and-access" data-frame="false" data-region="main"><div id="hs-web-interactives-top-push-anchor" class="go3670563033"></div>
+    
+      
+          
+<div class="site--wrap">
+  <header class="site--header custom-site-header-color">
+    <div class="container">
+<div class="row">
+
+      <a href="/help/chat" class="brand-logo">
+        
+          <img src="/static/assets/c0c3dab483f42b01b011e218.png" alt="Teamwork Chat Support" loading="eager">
+        
+      </a>
+
+      <a href="#" class="menu-toggle visible-xs" tabindex="1">
+        <span class="text-hide">Menu</span>
+        <span class="menu-lines">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </a>
+
+      <nav class="header--nav">
+        <ul>
+          
+            <li><a href="/chat">Teamwork Chat</a></li>
+          
+          
+            <li><a href="#" data-toggle="modal" data-target="#contact-form">Submit a Request</a></li>
+          
+        </ul>
+      </nav>
+
+</div>
+    </div>
+  </header>
+  <section class="site--main">
+    
+
+    
+
+        
+    
+
+
+
+
+<div class="search--row search-inner">
+	<div class="container">
+
+		<div class="row-content">
+			<h1 class="row-title"><a href="/help/chat">Knowledge Base</a></h1>
+			<ul class="history-path">
+				
+
+				
+					<li><a href="/boundary/818628432f2b38d2ffa0">People</a></li>
+				
+
+				
+					<li><a href="/help/chat/people/understanding-user-permissions-and-access">Understanding User Permissions and Access</a></li>
+				
+			</ul>
+		</div>
+        <form action="/api/forms" method="post" class="search-form" data-cb-wrapper="true">
+            <input type="text" placeholder="Search" class="search_input" name="query" value="" autocomplete="off">
+            <input type="button" value="Search" class="search_submit">
+		<ul class="search-results"></ul></form>
+	</div>
+</div>
+
+
+
+
+
+    <div class="container content-main">
+    <section class="article--structure">
+        <section class="left-content">
+            
+                <div class="article-controls">
+                    <iframe src="/__frames/25271f752ebd7d42f291" style="width: 50px;
+    height: 20px;
+    border: none;
+    float: right;
+    margin-top: 5px;"></iframe>
+                    <ul class="controls">
+                        <li>
+                            <button type="button" class="btn-print" title="Print this article">Print</button>
+                        </li>
+                    </ul>
+                </div>
+                <header class="article-header">
+                    <h2 class="header-title">Understanding User Permissions and Access</h2>
+                    
+                    <small>Last modified on Thu, 24 Oct 2024</small>
+                    
+                </header>
+            
+            <section class="article-body">
+                <article>
+                    <div>Within Teamwork Chat, user permissions and
+    access vary for the different user types on
+    your site.<br></div><div><br></div><div>There are three user roles available
+    in Teamwork Chat:<br></div><div><br></div><ul><li>Guest users - restricted user type that
+        cannot create or initiate conversations
+        themselves. They are also limited in some
+        of the features they can use.<br></li><li>Standard users - main user type that
+        allows creation of conversations and
+        channels and interaction with other
+        users.<br></li><li>Administrators - have full access to
+        settings within Teamwork Chat and can
+        perform all common actions as well as
+        admin-only options such as managing users,
+        incoming hooks, and subscription.<br></li></ul><div>The following breakdown outlines the actions
+    each user type can carry out:<br></div><div><br></div><table style="background-color:white;box-shadow:1px 1px 12px #dddddd;font-size:16px" class="table table-bordered"><tbody><tr style="background-color:#1d1c39;color:#ffffff"><th width="40%"><b>Action</b><br></th><th style="text-align:center" width="20%"><b>Guest
+                    User</b><br></th><th style="text-align:center" width="20%"><b>Standard
+                    User</b><br></th><th style="text-align:center" width="20%"><b>Administrator</b><br></th></tr><tr><td width="100%" style="background-color:#EEEEEE" colspan="4"><b>Conversations and
+                    Channels</b><br></td></tr><tr><td>Create a new
+                conversation <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Create a new channel <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Create a new project
+                channel *<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Self join public channels<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Send messages to other
+                people *<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Send messages in
+                channels <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Add users to a channel or
+                conversation they own <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Remove users from a channel or
+                conversation they own<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Add users to a conversation or
+                channel they are a member of but
+                do not own<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Remove users from a conversation
+                or channel they are a member of
+                but do not own<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Leave a conversation or
+                channel *<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔<br></td></tr><tr><td style="background-color:#EEEEEE" colspan="4"><b>Channel Options</b><br></td></tr><tr><td>Edit a channel they own<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Edit a channel they do not
+                own<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Delete a channel they own<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Delete a channel they do not
+                own<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td style="background-color:#EEEEEE" colspan="4"><b>Message Options</b><br></td></tr><tr><td>Star a message<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>React to messages<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Add attachments to messages<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>View and download message
+                attachments<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Use emoji picker<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Use GIF picker<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Use extended message form<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Use people picker *<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Use commands *<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Edit own messages<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Edit other people's messages<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td></tr><tr><td>Delete own messages<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Delete other people's
+                messages<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Create a task from a message
+                *<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔<br></td></tr><tr><td style="background-color:#EEEEEE" colspan="4"><b>Statuses</b><br></td></tr><tr><td>Set their own status<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>View other people's statuses<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td style="background-color:#EEEEEE" colspan="4"><b>Profile and Settings</b><br></td></tr><tr><td>View and update their own
+                profile<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>- Update their notification
+                settings<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>- Update their preferences<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>- Update their localization
+                settings<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>View another person's
+                profile<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Enable Embedded Chat<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Enable Do Not Disturb<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td style="background-color:#EEEEEE" colspan="4"><b>Admin</b><br></td></tr><tr><td>- Manage users<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>- Manage incoming hooks<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>- Manage subscription<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr></tbody></table><div><br></div><div><b>Notes:</b><br></div><div><br></div><ul><li>To create project channels, standard users
+        or admins must be active in Teamwork and a
+        member of the project.<br></li><li>Guest users cannot send messages to other
+        users until the other person messages them
+        first.<br></li><li>You (any user type) cannot leave direct
+        conversations, project channels,
+        or channels you create.<br></li><li>For guest users, only people in the
+        current channel will be displayed in the
+        people picker.<br></li><li>For guest users, some commands may not be
+        available.<br></li><li>To create a task from a message, standard
+        users or admins must be active in Teamwork
+        and a member of the project. They also
+        cannot be a collaborator user type in
+        Teamwork.<br></li></ul><div><br></div><div>The following breakdown outlines the
+    areas of Teamwork Chat that each user type can
+    access:<br></div><div><br></div><table style="background-color:white;box-shadow:1px 1px 12px #dddddd;font-size:16px" class="table table-bordered"><tbody><tr style="background-color:#1d1c39;color:#ffffff"><th width="40%"><b>Area</b><b></b><br></th><th style="text-align:center" width="20%"><b>Guest
+                    User</b><b></b><br></th><th style="text-align:center" width="20%"><b>Standard
+                    User</b><b></b><br></th><th style="text-align:center" width="20%"><b>Administrator</b><br></th></tr><tr><td>Home<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Highlights<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Channels *<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔<br></td></tr><tr><td>People *<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Search<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Product switcher<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td> - Manage apps<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td style="background-color:#EEEEEE" colspan="4"><b>Settings</b><br></td></tr><tr><td>Profile<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Notifications<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Preferences<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Localization<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Integrations<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td style="background-color:#EEEEEE" colspan="4"><b>Admin</b><br></td></tr><tr><td>Users<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Incoming Hooks<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Subscription<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#F03063">✗ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td style="background-color:#EEEEEE" colspan="4"><b>Info</b><br></td></tr><tr><td>About<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Keyboard shortcuts<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Help &amp; support<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr><tr><td>Leave feedback<br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td><td style="margin:0px 0px 0px 0px;vertical-align:middle;text-align:center;color:#79E3AA">✔ <br></td></tr></tbody></table><div><br></div><div><b>Notes</b><br></div><div><br></div><ul><li>For guest users, the Channels tab will
+        only show channels they are already
+        joined.<br></li><li>For guest users, the People tab will only
+        show people who have already spoken to the
+        user.<br></li></ul><div>For more information, see: <a href="/boundary/cc7491e2bb03cde248d9">Creating a Teamwork Chat
+        Subscription</a> <br></div>
+                </article>
+            </section>
+            
+                <footer class="article-footer">
+                    
+                        <div class="article-helpful">
+                            <div class="row">
+                                <div class="col-sm-6 col-sm-offset-6">
+                                    <ul class="socials-share">
+                                        <li>
+                                            <a href="/external/0ec7930c66b3b589d8c5" class="tw" data-related="teamwork">Twitter</a>
+                                        </li>
+                                        <li><a href="/external/0e7e2590b606a7dde074" class="fb">Facebook</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                        <p>
+                            <span class="help">Still need help? <a href="#" data-toggle="modal" data-target="#contact-form">Contact Us</a></span>
+                        </p>
+                    
+                    
+
+                </footer>
+            
+        </section>
+        
+            <aside class="right-sidebar related-articles">
+                
+                <div class="sidebar-blocks">
+                    <h4 class="block-title">Related Articles</h4>
+                    <ul>
+                        
+                        <li><a href="/boundary/5d1c66be3f9dc7b70546">Managing Users</a></li>
+                        
+                        <li><a href="/boundary/747eae4ab048a2558ab7">Teamwork Chat User Types</a></li>
+                        
+                    </ul>
+                </div>
+                
+
+                
+
+            </aside>
+        
+    </section>
+</div>
+
+
+		
+		
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+		
+						
+					</section>
+					<footer class="site--footer">
+					<div class="container">
+						<p class="copyrights"></p>
+					</div>
+				</footer>
+				</div>
+				<div class="modal fade" id="contact-form" tabindex="-1" role="dialog" aria-labelledby="contact-form-header" aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="/api/forms" method="post" id="contactForm" enctype="multipart/form-data" data-cb-wrapper="true">
+            <input type="hidden" name="timer" value="0" id="ft">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="contact-form-header">Get in Touch</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" name="articleId" value="9245">
+                <div class="form-group">
+                    <div class="col-labels">
+                    <span class="in_label">Your Name</span>
+                    </div>
+
+                    <div class="col-inputs">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" required="true" id="contact-form-name">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-labels">
+                        <span class="in_label">Email</span>
+                    </div>
+
+                    <div class="col-inputs">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" required="true">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-labels">
+                        <span class="in_label">Subject</span>
+                    </div>
+
+                    <div class="col-inputs">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" required="true">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-labels">
+                        <span class="in_label">Message</span>
+                    </div>
+
+                    <div class="col-inputs">
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" required="true" id="contact-message"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-labels">
+                        <span class="in_label">Attachments</span>
+                    </div>
+
+                    <div class="col-inputs">
+                        <div class="form-group">
+                            <input type="file" class="form-control" name="attachment">
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <input type="submit" class="btn btn-primary" value="Send Inquiry">
+            </div>
+        
+    </div></form>
+</div>
+
+			
+			
+		
+
+		<div class="modal fade" id="contact-form" tabindex="-1" role="dialog" aria-labelledby="contact-form-header" aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="/api/forms" method="post" id="contactForm" enctype="multipart/form-data" data-cb-wrapper="true">
+            <input type="hidden" name="timer" value="0" id="ft">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="contact-form-header">Get in Touch</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" name="articleId" value="9245">
+                <div class="form-group">
+                    <div class="col-labels">
+                    <span class="in_label">Your Name</span>
+                    </div>
+
+                    <div class="col-inputs">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" required="true" id="contact-form-name">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-labels">
+                        <span class="in_label">Email</span>
+                    </div>
+
+                    <div class="col-inputs">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" required="true">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-labels">
+                        <span class="in_label">Subject</span>
+                    </div>
+
+                    <div class="col-inputs">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" required="true">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-labels">
+                        <span class="in_label">Message</span>
+                    </div>
+
+                    <div class="col-inputs">
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" required="true" id="contact-message"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-labels">
+                        <span class="in_label">Attachments</span>
+                    </div>
+
+                    <div class="col-inputs">
+                        <div class="form-group">
+                            <input type="file" class="form-control" name="attachment">
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <input type="submit" class="btn btn-primary" value="Send Inquiry">
+            </div>
+        
+    </div></form>
+</div>
+
+		</div></div><div id="batBeacon912927418962" style="width: 0px; height: 0px; display: none; visibility: hidden;"></div>
+<div class="go2933276541 go2369186930" id="hs-web-interactives-top-anchor"><div id="hs-interactives-modal-overlay" class="go1632949049"></div></div>
+<div class="go2933276541 go1348078617" id="hs-web-interactives-bottom-anchor"></div>
+<div id="hs-web-interactives-floating-container">
+  <div id="hs-web-interactives-floating-top-left-anchor" class="go2417249464 go613305155">
+  </div>
+  <div id="hs-web-interactives-floating-top-right-anchor" class="go2417249464 go471583506">
+  </div>
+  <div id="hs-web-interactives-floating-bottom-left-anchor" class="go2417249464 go3921366393">
+  </div>
+  <div id="hs-web-interactives-floating-bottom-right-anchor" class="go2417249464 go3967842156">
+  </div>
+</div>
+</body></html>

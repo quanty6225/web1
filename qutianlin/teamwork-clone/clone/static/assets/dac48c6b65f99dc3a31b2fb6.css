@@ -1,0 +1,1 @@
+@keyframes dots-ba58228c{0%{content:""}25%{content:"."}50%{content:".."}75%{content:"..."}to{content:""}}.dots[data-v-ba58228c]:after{content:"";animation:1s steps(4,end) infinite dots-ba58228c}

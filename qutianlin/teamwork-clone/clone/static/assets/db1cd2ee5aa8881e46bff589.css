@@ -1,0 +1,1 @@
+.cursortext{animation:animated-text 4s linear 1s 1 normal both,animated-cursor .6s linear infinite;border-right:3px solid}@keyframes animated-cursor{0%{border-right-color:var(--tw-slate)}to{border-right-color:transparent}}

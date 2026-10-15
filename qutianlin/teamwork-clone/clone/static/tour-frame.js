@@ -1,0 +1,1 @@
+document.addEventListener('click',e=>{const beacon=e.target.closest('[data-tour-next]');if(beacon){e.preventDefault();e.stopImmediatePropagation();window.top.postMessage({type:'teamwork-tour-next'},location.origin)}},true);

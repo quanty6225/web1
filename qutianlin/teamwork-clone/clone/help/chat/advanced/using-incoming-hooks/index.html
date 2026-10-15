@@ -1,0 +1,982 @@
+<!doctype html>
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" prefix="og: https://ogp.me/ns#" style=""><head>
+    <meta charset="utf-8">
+    <title>Using Incoming Hooks - Teamwork Chat Support</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:site_name" content="Teamwork Chat Support">
+
+    
+
+    
+      <link rel="shortcut icon" type="image/png" href="/static/assets/e21cdc4c753b9586103fae17.png">
+    
+
+    <link rel="stylesheet" href="/static/assets/2bdece04197ef76cab49cfd0.css"> 
+    
+    <link rel="stylesheet" href="/static/assets/a1676afb81bcd2701f5d225b.css"> 
+
+
+    <link rel="stylesheet" href="/static/assets/95d5713fe2a0af0452e682d0.css" media="screen, handheld">
+    <link rel="stylesheet" href="/static/assets/ded5db691cc1bfe712830c93.css" media="print">
+    <link rel="stylesheet" href="/static/assets/0c7bfa94674a6066a896c329.css" media="screen, handheld">
+
+    
+
+    
+    <meta name="google-site-verification" content="yjwaFW9V-rNnp-h_4IKuyV4i_qXERXqNqGnpVoLipWo">
+
+
+<style>
+
+.search-inner {
+  background: transparent url("/static/assets/269a75e8a547e586bdf8e7c1.jpg") center top repeat-x;
+}
+
+.search--row {
+  padding: 100px 0;
+}
+
+.search--row,
+.site--header {
+
+background: #1d1c39
+}
+.site--header  .row {
+    box-shadow: inset 0 -1px 0 0 rgba(255,255,255,0.2);
+}
+
+.search--row.search-inner {
+    padding: 90px 0;
+}
+
+.custom-site-header-color{
+    height: 60px;
+    background: transparent;
+    margin-bottom: -60px;
+}
+
+.search--row{
+    padding-top: 160px;
+}
+
+.search--row .row-title a {
+  color: #fff;
+}
+
+.search-inner h1 {
+  color: #fff;
+}
+
+.history-path a {
+  color: #FFF !important;
+}
+
+.search--row.search-inner .search_input {
+  border: none;
+}
+
+.header--nav a {
+  color: #FFF !important;
+  padding: 0px 15px 0px 15px;
+  border: 1px white solid;
+  border-radius: 4px;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.category-img-247 {
+  background: url("/static/assets/2af40b4fe8873a3990781e8f.svg") no-repeat center;
+  background-size: 80%;
+}
+
+.category-img-243 {
+  background: url("/static/assets/0c6147b410993fd145bca0d1.svg") no-repeat center;
+  background-size: 80%;
+}
+
+.category-img-241 {
+  background: url("/static/assets/984b9f6c202756e3320efb20.svg") no-repeat center;
+  background-size: 80%;
+}
+
+.category-img-1560 {
+  background: url("/static/assets/092a3235d4375e9c055ec7e0.svg") no-repeat center;
+  background-size: 80%;
+}
+
+.category-img-948 {
+  background: url("/static/assets/092a3235d4375e9c055ec7e0.svg") no-repeat center;
+  background-size: 80%;
+}
+
+.category-img-1521 {
+  background: url("/static/assets/25f40aadf9dc9d296cc9c159.svg") no-repeat center;
+  background-size: 80%;
+}
+  .category-img-1595 {
+  background: url("/static/assets/5bba7b8fff5060452f29ca60.svg") no-repeat center;
+  background-size: 80%;
+}
+  
+.category-img-3299 {
+  background: url("/static/assets/bf1bcf493a412d0e5840985d.svg") no-repeat center;
+  background-size: 80%;
+}
+  
+.category-img-3192 {
+  background: url("/static/assets/e38b8ee3860361c7cbd75312.svg") no-repeat center;
+  background-size: 80%;
+}
+  
+.category-img-3309 {
+  background: url("/static/assets/8854bdaa5de1aa684ddc8ea4.svg") no-repeat center;
+  background-size: 80%;
+}
+
+  @media only screen and (max-width: 500px) {
+        .table-bordered-rw {
+          display: none;
+        }
+        .table-bordered-mobile-rw {
+          display: block;
+        }
+       .gating-bubble-max {
+         display: none;
+       }
+       .gating-bubble-max-mobile {
+         display: block;
+       }
+      }
+
+      @media only screen and (min-width: 500px) {
+        .table-bordered-rw {
+          display: block;
+        }
+        .table-bordered-mobile-rw {
+          display: none;
+        }
+        .gating-bubble-max {
+          display: block;
+        }
+        .gating-bubble-max-mobile {
+          display: none;
+        }
+      }
+.docs--sections .sections-links>li:hover {
+
+  border: 2px #eaeaea solid;
+
+}
+
+
+
+
+.docs--sections .sections-links>li {
+  border: 2px transparent solid;
+  padding-bottom: 30px;
+  border-radius: 4px;
+}
+
+.icon-images {
+  height: 100%;
+  width: 100%;
+}
+
+.docs--sections .sections-links .icon-hold:after {
+  border: 0px;
+}
+
+.kbd {
+background-color: white;
+border: 1px #b5b5b5 solid;
+border-radius: 4px;
+color: #808080;
+padding: 2px 6px 2px;
+}
+  
+.codechatstatus {
+  border-radius:20px;
+  padding:5px;
+  font-family:sans-serif;
+  font-size:16px;
+  }
+  
+  .th-curriculum {
+color: #0390a5;
+font-size: 18px;
+}
+  
+  .gatingbubblefitcontent{
+    background:#eef0fb;
+      width: fit-content;
+    margin-top:15px;
+    margin-bottom: 15px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  .gatingbubblemax{
+    background:#eef0fb;
+      width: 100%;
+      padding:10px;
+       padding-left:20px;
+    padding-right:20px;
+      border-radius:25px;
+      vertical-align: middle;
+      font-size:18px;
+  }
+  .gatingbubblemaxmobile{
+    background:#eef0fb;
+      width: 100%;
+      padding:10px;
+       padding-left:20px;
+    padding-right:20px;
+      border-radius:25px;
+      vertical-align: middle;
+      font-size:18px;
+  }
+  .bulbbubblefitcontent{
+    background:#f3eefe;
+      width: fit-content;
+    margin-top:15px;
+    margin-bottom: 15px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  .bulbbubblemax{
+    background:#f3eefe;
+      width: 100%;
+    margin-top:2px;
+    margin-bottom: 2px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  
+  .warningbubblefitcontent{
+    background:#fff3d8;
+      width: fit-content;
+    margin-top:15px;
+    margin-bottom: 15px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  .warningbubblemax{
+    background:#fff3d8;
+      width: 100%;
+    margin-top:2px;
+    margin-bottom: 2px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  .keybubblefitcontent{
+    background:#fff1ec;
+      width: fit-content;
+    margin-top:15px;
+    margin-bottom: 15px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  .keybubblemax{
+    background:#fff1ec;
+      width: 100%;
+    margin-top:2px;
+    margin-bottom: 2px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  
+  .formulabubblefitcontent{
+    background:#ebebeb;
+      width: fit-content;
+    margin-top:15px;
+    margin-bottom: 15px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  
+  .formulabubblemax{
+    background:#ebebeb;
+      width: 100%;
+    margin-top:2px;
+    margin-bottom: 2px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+    .emailbubblefitcontent{
+    background:#f5f5f5;
+      width: fit-content;
+    margin-top:15px;
+    margin-bottom: 15px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  
+  .emailbubblemax{
+    background:#f5f5f5;
+      width: 100%;
+    margin-top:2px;
+    margin-bottom: 2px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  .notebubblefitcontent{
+    background:#e4f1fe;
+      width: fit-content;
+    margin-top:15px;
+    margin-bottom:15px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+  
+  .notebubblemax{
+    background:#e4f1fe;
+      width: 100%;
+    margin-top:2px;
+    margin-bottom: 2px;
+      padding-top:5px;
+      padding-bottom:5px;
+      padding-left:15px;
+      padding-right:15px;
+      border-radius:15px;
+      vertical-align: middle;
+  }
+
+
+</style><meta name="google-site-verification" content="yjwaFW9V-rNnp-h_4IKuyV4i_qXERXqNqGnpVoLipWo"><style>.pubble-form-frame-poweredby {
+  display: none !important;
+}
+
+.pubble-sb-clientbgcolor>* {
+  display: block;
+}
+
+.pubble-sb-logo {
+  background: #3b93f7 url("/static/assets/0f53e4f9fbb8b21f11a7934e.svg") center center no-repeat !important;
+  background-size: auto auto;
+  background-size: 30px !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 30px !important;
+  z-index: 6;
+}
+
+.pubble-sb-clientbgcolor {
+  background: #3b93f7 !important;
+}
+
+</style>
+
+
+<style>
+.pubble-form-frame-poweredby{display:none !important;}
+.pubble-sb-clientbgcolor > *{display:block;}
+.pubble-sb-logo
+{
+background: #3b93f7 url("/static/assets/0f53e4f9fbb8b21f11a7934e.svg") center center no-repeat !important;
+    background-size: auto auto;
+background-size: 30px !important;
+top: 0 !important;
+left: 0 !important;
+width: 60px !important;
+height: 60px !important;
+border-radius: 30px !important;
+z-index:6;
+}
+.pubble-sb-clientbgcolor{
+background: #3b93f7 !important;
+}
+</style>
+
+<!-- Start of HubSpot Embed Code -->
+<!-- End of HubSpot Embed Code -->
+
+    
+    <style id="_goober"> .go2933276541{position:fixed;display:block;width:100%;height:0px;margin:0px;padding:0px;overflow:visible;transform-style:preserve-3d;background:transparent;backface-visibility:hidden;pointer-events:none;left:0px;z-index:9998;}.go2369186930{top:0px;z-index:9999;height:100%;width:100%;}.go1348078617{bottom:0px;}.go2417249464{position:fixed;z-index:9989;}.go3921366393{left:0;bottom:0;}.go3967842156{right:0;bottom:0;}.go613305155{left:0;top:0;}.go471583506{right:0;top:0;}.go3670563033{position:relative;overflow:hidden;display:none;}.go1041095097{display:block;}.go1632949049{position:absolute;pointer-events:none;width:101vw;height:101vh;background:rgba(0,0,0,0.7);opacity:0;z-index:-1;}.go2512015367{z-index:99998;opacity:0.8;visibility:visible;pointer-events:all;cursor:pointer;}.go1432718904{overflow:hidden;}.go812842568{display:block !important;position:static !important;box-sizing:border-box !important;background:transparent !important;border:none;min-height:0px !important;max-height:none !important;margin:0px;padding:0px !important;height:100% !important;width:1px !important;max-width:100% !important;min-width:100% !important;}.go722322694{transition:none !important;}.go3064412225{z-index:99999;visibility:hidden;position:absolute;inset:50vh auto auto 50%;left:50%;top:50%;transform:translate(-50%,-50%) translateY(100vh);pointer-events:none;max-height:95%;max-width:95%;}.go1656994552{pointer-events:auto !important;visibility:visible;transform:translate(-50%,-50%) translateY(0);transition:transform 0.75s linear(0,0.006,0.023 2.2%,0.096 4.8%,0.532 15.4%,0.72 21%,0.793,0.853 26.7%,0.902,0.941,0.968 36.2%,0.987 39.7%,1 43.7%,1.007 48.3%,1.009 55.3%,1.002 78.2%,1 );}.go456419034{transition:opacity 0.3s ease-in;}.go3128134379{pointer-events:auto !important;visibility:visible !important;max-height:95vh !important;transition:max-height 1s ease-in;}.go494047706{z-index:9999;width:100%;max-height:95%;position:fixed;visibility:hidden;}.go2481764524{z-index:9999;width:100%;max-height:95%;position:fixed;visibility:hidden;bottom:0px;}.go2685733372{visibility:hidden;}.go2985984737{visibility:visible !important;}.go3281949485{pointer-events:auto !important;visibility:visible !important;max-height:95vh !important;transform:none !important;}.go3508454897{z-index:9999;width:100%;max-height:95%;position:fixed;visibility:hidden;transition:transform 1s linear(0,0.006,0.022 2.3%,0.091 5.1%,0.18 7.6%,0.508 16.3%,0.607,0.691,0.762,0.822 28.4%,0.872,0.912 35.1%,0.944 38.9%,0.968 43%,0.985 47.6%,0.996 53.1%,1.001 58.4%,1.003 65.1%,1 );}.go988075951{z-index:9999;position:fixed;left:10px;top:10px;max-height:95vh !important;max-width:95%;visibility:hidden;}.go2699082514{z-index:9999;position:fixed;right:10px;top:10px;max-height:95vh !important;max-width:95%;visibility:hidden;}.go1595992025{z-index:9999;position:fixed;left:10px;bottom:10px;max-height:95vh !important;max-width:95%;visibility:hidden;}.go1222083472{z-index:9999;position:fixed;right:10px;bottom:10px;max-height:95vh !important;max-width:95%;visibility:hidden;}.go26732895{cursor:pointer;}.go2083580917{display:flex;justify-content:center;align-items:center;}</style><style type="text/css">html.hs-messages-widget-open.hs-messages-mobile,html.hs-messages-widget-open.hs-messages-mobile body{overflow:hidden!important;position:relative!important}html.hs-messages-widget-open.hs-messages-mobile body{height:100%!important;margin:0!important}#hubspot-messages-iframe-container{display:initial!important;z-index:2147483647;position:fixed!important;bottom:0!important}#hubspot-messages-iframe-container:hover .hs-drag-handle--v2--widget-open--left,#hubspot-messages-iframe-container:hover .hs-drag-handle--v2--widget-open--right{display:flex!important}#hubspot-messages-iframe-container.widget-align-left{left:0!important}#hubspot-messages-iframe-container.widget-align-right{right:0!important}#hubspot-messages-iframe-container.widget-align-center{left:50%!important;transform:translateX(-50%)!important;bottom:32px!important}#hubspot-messages-iframe-container.hs-messages-lightbox-expanded{top:0!important;right:0!important;bottom:0!important;left:0!important;width:100%!important;height:100%!important;z-index:2147483647!important;transform:none!important}#hubspot-messages-iframe-container.hs-messages-lightbox-expanded iframe{position:fixed!important;top:0!important;right:0!important;bottom:0!important;left:0!important;width:100%!important;height:100%!important}#hubspot-messages-iframe-container.internal{z-index:1111}#hubspot-messages-iframe-container.internal iframe{min-width:108px}#hubspot-messages-iframe-container .hs-shadow-container{display:initial!important;z-index:-1;position:absolute;width:0;height:0;bottom:0;content:""}#hubspot-messages-iframe-container .hs-shadow-container.internal{display:none!important}#hubspot-messages-iframe-container .hs-shadow-container.active{width:400px;height:400px}#hubspot-messages-iframe-container iframe{display:initial!important;width:100%!important;height:100%!important;border:none!important;position:absolute!important;bottom:0!important;right:0!important;background:transparent!important}#hubspot-messages-iframe-container .hs-drag-handle--v2--widget-open--right{bottom:20px;left:-5px;display:none!important}#hubspot-messages-iframe-container .hs-drag-handle--v2--widget-open--left{bottom:20px;right:-5px;display:none!important}.hs-drag-handle{position:absolute;cursor:grab;height:60px;display:none;align-items:center;transition:opacity .5s ease;transition-delay:.5s;opacity:1}.hs-drag-handle--v1--right{right:82px;bottom:12px}.hs-drag-handle--v1--left{left:82px;bottom:12px}.hs-drag-handle--v2--pill-launcher--right{bottom:20px;left:10px}.hs-drag-handle--v2--pill-launcher--left{bottom:20px;right:10px}.hs-drag-handle--v2--hidden--left,.hs-drag-handle--v2--hidden--right{opacity:0!important;pointer-events:none!important;transition:none!important}.hs-drag-overlay{position:absolute;top:0;left:0;right:0;bottom:0;user-select:none;z-index:999;display:none}@media print{#hubspot-messages-iframe-container.hs-widget-hide-on-print{display:none!important}}</style><link rel="stylesheet" href="/static/clone.css"><script src="/static/clone.js" defer></script><script src="/static/vendor/photoswipe.js" defer></script><script src="/static/vendor/photoswipe-ui-default.js" defer></script><script src="/static/public-content.js" defer></script></head>
+  <body data-clone-auth="false" data-route="/help/chat/advanced/using-incoming-hooks" data-frame="false" data-region="main"><div id="hs-web-interactives-top-push-anchor" class="go3670563033"></div>
+    
+      
+          
+<div class="site--wrap">
+  <header class="site--header custom-site-header-color">
+    <div class="container">
+<div class="row">
+
+      <a href="/help/chat" class="brand-logo">
+        
+          <img src="/static/assets/c0c3dab483f42b01b011e218.png" alt="Teamwork Chat Support" loading="eager">
+        
+      </a>
+
+      <a href="#" class="menu-toggle visible-xs" tabindex="1">
+        <span class="text-hide">Menu</span>
+        <span class="menu-lines">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </a>
+
+      <nav class="header--nav">
+        <ul>
+          
+            <li><a href="/chat">Teamwork Chat</a></li>
+          
+          
+            <li><a href="#" data-toggle="modal" data-target="#contact-form">Submit a Request</a></li>
+          
+        </ul>
+      </nav>
+
+</div>
+    </div>
+  </header>
+  <section class="site--main">
+    
+
+    
+
+        
+    
+
+
+
+
+<div class="search--row search-inner">
+	<div class="container">
+
+		<div class="row-content">
+			<h1 class="row-title"><a href="/help/chat">Knowledge Base</a></h1>
+			<ul class="history-path">
+				
+
+				
+					<li><a href="/boundary/ce273160a0dd4c51879a">Advanced</a></li>
+				
+
+				
+					<li><a href="/help/chat/advanced/using-incoming-hooks">Using Incoming Hooks</a></li>
+				
+			</ul>
+		</div>
+        <form action="/api/forms" method="post" class="search-form" data-cb-wrapper="true">
+            <input type="text" placeholder="Search" class="search_input" name="query" value="" autocomplete="off">
+            <input type="button" value="Search" class="search_submit">
+		<ul class="search-results"></ul></form>
+	</div>
+</div>
+
+
+
+
+
+    <div class="container content-main">
+    <section class="article--structure">
+        <section class="left-content">
+            
+                <div class="article-controls">
+                    <iframe src="/__frames/51fd27de275d6f9a6dea" style="width: 50px;
+    height: 20px;
+    border: none;
+    float: right;
+    margin-top: 5px;"></iframe>
+                    <ul class="controls">
+                        <li>
+                            <button type="button" class="btn-print" title="Print this article">Print</button>
+                        </li>
+                    </ul>
+                </div>
+                <header class="article-header">
+                    <h2 class="header-title">Using Incoming Hooks</h2>
+                    
+                    <small>Last modified on Mon, 27 May 2024</small>
+                    
+                </header>
+            
+            <section class="article-body">
+                <article>
+                    <div>Within Teamwork Chat, you can set up
+    incoming hooks to send messages
+    from external sources into a channel.<br></div><div><br></div><div>Incoming hooks have two parts:<br></div><div><br></div><ul><li>Web hook - a URL that a HTTP request can
+        be made to that will send a message in a
+        channel that the incoming hook is
+        associated with.<br></li><li>Email hook - an address that an email can
+        be sent to that will send a message in a
+        channel that the incoming hook is
+        associated with.<br></li></ul><div>Every incoming hook will have a web
+    hook URL and email address associated with
+    it.<br></div><div><br></div><div><b>Note: </b>Multiple incoming hooks can
+    be
+    associated with a single channel in Teamwork
+    Chat. However, each incoming hook
+    can only be associated with one channel. <br></div><div><br></div><div><br></div><div><br></div><div><h4><b>Use cases</b><br></h4></div><div><br></div><div>The main purpose for using an
+    incoming hook is to get some
+    information from another system into Teamwork
+    Chat.<br></div><div><br></div><div>For example, you could set up an
+    incoming hook for notification purposes to
+    report adverse weather conditions into a
+    channel when they occur in your local
+    area.<br></div><div><br></div><div><br></div><div><br></div><div><h4><b>How incoming hooks work</b><br></h4></div><div><br></div><div><p><span><span><span><span>When an incoming hook is initially created, the details associated with it (name, description, avatar) will be used as the author details for any messages sent via the incoming hook.</span></span></span></span><br></p><p><span><span><span><span>If the version of the Teamwork Chat client being used does not support incoming hooks, the Teamwork Chat user setting up the incoming hook will be shown as the sender of any messages posted by the hook.</span></span></span></span><br></p><div class="">Messages sent via an incoming hook
+    will include a <i>Bot</i><b> </b>tag next to the
+    message
+    author's name in Teamwork Chat to
+    differentiate them from standard messages the
+    user has written themselves.<br></div></div><div><br></div><div>Incoming hooks can
+    only be created by administrators in Teamwork
+    Chat. Admins can view, create, edit and delete
+    any incoming hook, even ones created by
+    another administrator.<br></div><div><br></div><div>If the channel associated with an
+    incoming hook is deleted, the incoming hook
+    will automatically be deleted.<br></div><div><div><div><br></div><div><br></div></div></div><div><h4><b>Creating a new incoming
+            hook</b><br></h4></div><div><br></div><div>In your Teamwork Chat account, click
+    your profile avatar in the top right and
+    select <b>Incoming Hooks </b>from
+    the dropdown menu.<br></div><div><br></div><div><img src="/static/assets/d99db5da790a7ac2e357d55e.png" style="max-width:100%;width:409.284px;height:auto;margin-left:0%" id="docImg_0" loading="eager"><br></div><div><br></div><div><br></div><div>You will be directed to a page that
+    displays any of the incoming hooks that have
+    been created for your Teamwork Chat
+    installation.<br></div><div><div><br></div></div><div>Click the <b>New Incoming
+        Hook </b>button in the top right and
+    fill out the form details. If you do not have
+    any existing hooks created, you can also click
+    the <b>Add Incoming Hook </b>option
+    in the middle of the screen.<br></div><div><br></div><div><img src="/static/assets/455617d83d378e634094c2f3.png" alt="Image Placeholder" style="max-width:100%" id="docImg_1" loading="eager"><br></div><div><br></div><div><br></div><div><br></div><div><div><div><div><h4><b>Viewing existing incoming
+                        hooks</b><br></h4><div><b></b><br></div><div>In the Incoming Hooks area, a
+                    card for each individual
+                    incoming hook will be
+                    displayed
+                    showing details of the
+                    hook:<br></div><div><div><div><br></div></div></div><ul><li>Name, avatar, description,
+                        associated channel,
+                        creator,
+                        creation date.<br></li></ul></div></div></div></div><div><img src="/static/assets/ff3ac9db5476e267f26a42c7.png" alt="Image Placeholder" style="max-width:100%;width:708.507px;height:auto;margin-left:0%" class="ui-draggable ui-draggable-handle" data-x="0" data-y="0" id="docImg_2" loading="eager"><br></div><div><br></div><div><div><div><div><div><br></div><div>If an incoming hook was
+                    created in a private channel
+                    that you
+                    are not a member of, you will
+                    not be
+                    able to see the name of the
+                    channel
+                    that incoming hook is
+                    associated
+                    with.<br></div><div><div><div><br></div></div></div><ul><li>You can still edit and
+                        delete
+                        these incoming
+                        hooks.<br></li></ul><div><br></div><div><br></div><div><h4><b>Editing an
+                            existing
+                            incoming
+                            hook</b><br></h4></div><div><br></div></div><div>When viewing your existing hooks,
+                go to the relevant hook card and
+                click the options button in the
+                top right. You can then select <b>Edit</b> from the dropdown
+                menu.<br></div><div><div><br></div></div></div></div></div><div><img src="/static/assets/e7b0f5db877ce691c4dac1bd.png" alt="Image Placeholder" style="max-width:100%;width:394.089px;height:auto;margin-left:0%" class="ui-draggable ui-draggable-handle" data-x="0" data-y="0" id="docImg_3" loading="eager"><br></div><div><div><div><div><div><br></div></div><div>The edit option will open a modal
+                where you can edit the incoming
+                hook's properties.<br></div><div><div><br></div></div></div></div></div><div><img src="/static/assets/8b7f9a436bf6ce1ae638bc27.png" alt="Image Placeholder" style="max-width:100%;width:541.233px;height:auto;margin-left:0%" class="ui-draggable ui-draggable-handle" data-x="0" data-y="0" id="docImg_4" loading="eager"><br></div><div><div><div><div><div><br></div></div><div>You cannot change the channel
+                associated with an incoming hook
+                once it has been created. This is
+                to prevent the channel associated
+                with the incoming hook
+                accidentally being changed later
+                by another Teamwork Chat
+                administrator.<br></div><div><div><br></div></div><div>The web hook URL and email hook
+                email address associated with an
+                incoming hook are unique and
+                cannot be edited. These values are
+                fixed and are assigned at the
+                creation date of the incoming
+                hook.<br></div><div><br></div><div><br></div></div></div></div><div><br></div><div><h4><b>Deleting an incoming
+            hook</b><br></h4></div><div><br></div><div>When viewing your existing hooks, go
+    to the relevant hook card and click the
+    options button in the top right. You can then
+    select <b>Delete</b> from the dropdown
+    menu.<br></div><div><br></div><div><img src="/static/assets/f04ebcb9eefbeb66c5220d65.png" alt="Image Placeholder" style="max-width:100%;width:395.955px;height:auto;margin-left:0%" class="ui-draggable ui-draggable-handle" data-x="0" data-y="0" id="docImg_5" loading="eager"><br></div><div><br></div><div>Selecting the delete option will
+    open a modal asking you to confirm deletion of
+    the incoming hook.<br></div><div><br></div><div><img src="/static/assets/e2da63a369b433280966d291.png" alt="Image Placeholder" style="max-width:100%;width:505.495px;height:auto;margin-left:0%" class="ui-draggable ui-draggable-handle" data-x="0" data-y="0" id="docImg_6" loading="eager"><br></div><div><br></div><div>Any Teamwork Chat administrator can
+    delete incoming hooks created by any
+    administrator.<br></div><div><br></div><div>After an incoming hook is deleted,
+    messages will still be visible in the channels
+    they were sent in. <br></div><div><br></div><ul><li>The author of the messages will still
+        display the same name as the incoming
+        hook.<br></li><li>The avatar will be reset to the default
+        avatar, similar to when a normal user is
+        removed from Teamwork Chat.<br></li></ul><div>If a user that created an incoming
+    hook is deleted from your Teamwork Chat site,
+    the incoming hook will still be active and
+    will need to be deleted by another Teamwork
+    Chat administrator.<br></div><div><br></div><div><br></div><div><br></div><div><h4><b>Copying web hook URLs and email
+            hook email addresses</b><br></h4></div><div><br></div><div>The web hook URL and email hook
+    email address properties of an incoming hook
+    can be copied from various areas of
+    the <b></b>Incoming Hooks area.<br></div><div><br></div><div><div><div><div>Click the three dots in the top
+                right of an incoming hook card.
+                You will have options
+                to <b>Copy
+                    URL </b>and <b>Copy
+                    Email </b>in the dropdown
+                menu. Clicking these options will
+                copy the corresponding URL or
+                email address to the
+                clipboard.<br></div><div><div><br></div></div></div></div></div><div><img src="/static/assets/6b48e3b0699cb4e87ed32b51.png" alt="Image Placeholder" style="max-width:100%;width:394.067px;height:auto;margin-left:0%" class="ui-draggable ui-draggable-handle" data-x="0" data-y="0" id="docImg_7" loading="eager"><br></div><div><div><div><div><div><br></div></div><div>When you edit an incoming hook,
+                the web hook URL and email hook
+                email address will be shown in the
+                form. You can copy either to the
+                clipboard by clicking the button
+                at the end of each field.<br></div><div><div><br></div></div></div></div></div><div><img src="/static/assets/3d9bd9f56da6e5832a02f785.png" alt="Image Placeholder" style="max-width:100%;width:568.919px;height:auto;margin-left:0%" class="ui-draggable ui-draggable-handle" data-x="0" data-y="0" id="docImg_8" loading="eager"><br></div><div><div><div><div><div><br></div></div><div>When you create a new incoming
+                hook and are viewing the
+                confirmation modal, it will
+                contain the web hook URL and email
+                hook email address. You can copy
+                these to the clipboard by clicking
+                the button at the end of each
+                field.<br></div><div><div><br></div></div></div></div></div><div><img src="/static/assets/7dd56a4be0c338b83d9669b1.png" alt="Image Placeholder" style="max-width: 100%; width: 406.098px; height: auto; margin-left: 0%;" class="ui-draggable ui-draggable-handle" data-x="0" data-y="0" id="docImg_9" loading="eager"><br></div><div><br></div><div><br></div><div><br></div><div><h4><b>Using incoming hooks to post
+  messages</b><br></h4></div><div><br></div><div class="">The <a href="/boundary/a95b8776799b7efdcedd">Teamwork Chat API documentation</a> contains further details about:<br></div><div class=""><br></div><ul><li>Making <a href="/boundary/16fb527db2241e74c728">HTTP Post</a> requests to the web hook URL associated with the incoming hook.<br></li><li>Sending an <a href="/boundary/16fb527db2241e74c728">email</a> to the email address associated with the incoming hook.<br></li><ul><li>The body of the email will be used for the message content in Teamwork Chat.<br></li><li>The email subject and any attachments will be ignored.<br></li></ul></ul><div>When you post a message to either
+    the URL or the email address, it will be
+    outputted to the associated channel in
+    Teamwork Chat.<br></div><div class=""><br></div><div class=""><img src="/static/assets/c70c83feba7a5f5a683b4570.png" alt="Image Placeholder" style="max-width: 100%; width: 757.309px; height: auto; margin-left: 0%;" class="ui-draggable ui-draggable-handle" data-x="0" data-y="0" id="docImg_10" loading="eager"><br></div><div class=""><br></div><div><div><div><div><br></div><div>For more information,
+                see: <span><span><span><a href="/boundary/a95b8776799b7efdcedd">Teamwork Chat API Documentation</a></span></span></span><br></div></div></div></div>
+                </article>
+            </section>
+            
+                <footer class="article-footer">
+                    
+                        <div class="article-helpful">
+                            <div class="row">
+                                <div class="col-sm-6 col-sm-offset-6">
+                                    <ul class="socials-share">
+                                        <li>
+                                            <a href="/external/db291daeee89290e82f7" class="tw" data-related="teamwork">Twitter</a>
+                                        </li>
+                                        <li><a href="/external/95d30b7e9d19df0d4377" class="fb">Facebook</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                        <p>
+                            <span class="help">Still need help? <a href="#" data-toggle="modal" data-target="#contact-form">Contact Us</a></span>
+                        </p>
+                    
+                    
+
+                </footer>
+            
+        </section>
+        
+            <aside class="right-sidebar related-articles">
+                
+
+                
+
+            </aside>
+        
+    </section>
+</div>
+
+
+		
+		
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+		
+						
+					</section>
+					<footer class="site--footer">
+					<div class="container">
+						<p class="copyrights"></p>
+					</div>
+				</footer>
+				</div>
+				<div class="modal fade" id="contact-form" tabindex="-1" role="dialog" aria-labelledby="contact-form-header" aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="/api/forms" method="post" id="contactForm" enctype="multipart/form-data" data-cb-wrapper="true">
+            <input type="hidden" name="timer" value="0" id="ft">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="contact-form-header">Get in Touch</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" name="articleId" value="8332">
+                <div class="form-group">
+                    <div class="col-labels">
+                    <span class="in_label">Your Name</span>
+                    </div>
+
+                    <div class="col-inputs">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" required="true" id="contact-form-name">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-labels">
+                        <span class="in_label">Email</span>
+                    </div>
+
+                    <div class="col-inputs">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" required="true">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-labels">
+                        <span class="in_label">Subject</span>
+                    </div>
+
+                    <div class="col-inputs">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" required="true">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-labels">
+                        <span class="in_label">Message</span>
+                    </div>
+
+                    <div class="col-inputs">
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" required="true" id="contact-message"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-labels">
+                        <span class="in_label">Attachments</span>
+                    </div>
+
+                    <div class="col-inputs">
+                        <div class="form-group">
+                            <input type="file" class="form-control" name="attachment">
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <input type="submit" class="btn btn-primary" value="Send Inquiry">
+            </div>
+        
+    </div></form>
+</div>
+
+			
+			
+		
+
+		<div class="modal fade" id="contact-form" tabindex="-1" role="dialog" aria-labelledby="contact-form-header" aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="/api/forms" method="post" id="contactForm" enctype="multipart/form-data" data-cb-wrapper="true">
+            <input type="hidden" name="timer" value="0" id="ft">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="contact-form-header">Get in Touch</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" name="articleId" value="8332">
+                <div class="form-group">
+                    <div class="col-labels">
+                    <span class="in_label">Your Name</span>
+                    </div>
+
+                    <div class="col-inputs">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" required="true" id="contact-form-name">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-labels">
+                        <span class="in_label">Email</span>
+                    </div>
+
+                    <div class="col-inputs">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" required="true">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-labels">
+                        <span class="in_label">Subject</span>
+                    </div>
+
+                    <div class="col-inputs">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" required="true">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-labels">
+                        <span class="in_label">Message</span>
+                    </div>
+
+                    <div class="col-inputs">
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" required="true" id="contact-message"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-labels">
+                        <span class="in_label">Attachments</span>
+                    </div>
+
+                    <div class="col-inputs">
+                        <div class="form-group">
+                            <input type="file" class="form-control" name="attachment">
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <input type="submit" class="btn btn-primary" value="Send Inquiry">
+            </div>
+        
+    </div></form>
+</div>
+
+		</div></div><div id="batBeacon593001238092" style="width: 0px; height: 0px; display: none; visibility: hidden;"></div>
+<div class="go2933276541 go2369186930" id="hs-web-interactives-top-anchor"><div id="hs-interactives-modal-overlay" class="go1632949049"></div></div>
+<div class="go2933276541 go1348078617" id="hs-web-interactives-bottom-anchor"></div>
+<div id="hs-web-interactives-floating-container">
+  <div id="hs-web-interactives-floating-top-left-anchor" class="go2417249464 go613305155">
+  </div>
+  <div id="hs-web-interactives-floating-top-right-anchor" class="go2417249464 go471583506">
+  </div>
+  <div id="hs-web-interactives-floating-bottom-left-anchor" class="go2417249464 go3921366393">
+  </div>
+  <div id="hs-web-interactives-floating-bottom-right-anchor" class="go2417249464 go3967842156">
+  </div>
+</div>
+</body></html>

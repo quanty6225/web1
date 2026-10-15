@@ -1,0 +1,33 @@
+{
+  "source": "https://github.com/ggml-org/llama.cpp",
+  "release": "v0.6.0",
+  "revision": "d81235049384534c167caea52b85a694f6103d14",
+  "build_flags": [
+    "CMAKE_BUILD_TYPE=Release",
+    "GGML_NATIVE=OFF",
+    "LLAMA_CURL=OFF"
+  ],
+  "files": {
+    "libggml.so": "a2c5b78ec8e1885c7f97a3764bcbfd8ca47a1aedb1844eac24ec3a94b74cb619",
+    "libmtmd.so": "577205ac82c8a87999a0b4c2dedae4623f921b9aceade9094da41212fdca947f",
+    "libggml-cpu.so": "fc3cff6e4cbe634718e57c02497d4c18cfaca7b518c1e53ff6813e973d9cb9c3",
+    "libggml-cpu.so.0": "fc3cff6e4cbe634718e57c02497d4c18cfaca7b518c1e53ff6813e973d9cb9c3",
+    "libmtmd.so.0.6.0": "577205ac82c8a87999a0b4c2dedae4623f921b9aceade9094da41212fdca947f",
+    "libllama-common.so": "a1a98e1580e6aa53f3b5bc6164682cdb0ecc9254f4a58bc736cdb1e8e3fe40b2",
+    "libllama.so.0.6.0": "90ac9f6778d9f01d1c037c6ae4067623ba488743af7d69b04596a9da448f216a",
+    "libllama-common.so.0.6.0": "a1a98e1580e6aa53f3b5bc6164682cdb0ecc9254f4a58bc736cdb1e8e3fe40b2",
+    "libggml-base.so.0": "331844aefe07658bd7dfe48624f24c016978064f348d0e83e37cccf3f64f0cc4",
+    "libggml-cpu.so.0.26.0": "fc3cff6e4cbe634718e57c02497d4c18cfaca7b518c1e53ff6813e973d9cb9c3",
+    "libggml.so.0": "a2c5b78ec8e1885c7f97a3764bcbfd8ca47a1aedb1844eac24ec3a94b74cb619",
+    "libggml.so.0.26.0": "a2c5b78ec8e1885c7f97a3764bcbfd8ca47a1aedb1844eac24ec3a94b74cb619",
+    "libllama.so": "90ac9f6778d9f01d1c037c6ae4067623ba488743af7d69b04596a9da448f216a",
+    "libllama-common.so.0": "a1a98e1580e6aa53f3b5bc6164682cdb0ecc9254f4a58bc736cdb1e8e3fe40b2",
+    "libllama.so.0": "90ac9f6778d9f01d1c037c6ae4067623ba488743af7d69b04596a9da448f216a",
+    "libggml-base.so.0.26.0": "331844aefe07658bd7dfe48624f24c016978064f348d0e83e37cccf3f64f0cc4",
+    "libggml-base.so": "331844aefe07658bd7dfe48624f24c016978064f348d0e83e37cccf3f64f0cc4",
+    "LICENSE": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d",
+    "llama-server": "7cb7c4f539a61e0fa488ef19b8360a2368463345a65779f56a79a987f5fe7064",
+    "libmtmd.so.0": "577205ac82c8a87999a0b4c2dedae4623f921b9aceade9094da41212fdca947f",
+    "libllama-server-impl.so": "fecbf64683977ad0fd5c2bc4b25102dc73b0e35b0d67f9a095297dbf13d54eff"
+  }
+}

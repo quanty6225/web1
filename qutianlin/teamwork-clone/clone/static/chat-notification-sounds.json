@@ -1,0 +1,47 @@
+[
+  {
+    "id": "classic",
+    "name": "Classic",
+    "url": "/static/chat-notification-audio/classic.mp3"
+  },
+  {
+    "id": "alert",
+    "name": "Alert",
+    "url": "/static/chat-notification-audio/alert.mp3"
+  },
+  {
+    "id": "bottle",
+    "name": "Bottle",
+    "url": "/static/chat-notification-audio/bottle.mp3"
+  },
+  {
+    "id": "bubble",
+    "name": "Bubble",
+    "url": "/static/chat-notification-audio/bubble.mp3"
+  },
+  {
+    "id": "buckle",
+    "name": "Buckle",
+    "url": "/static/chat-notification-audio/buckle.mp3"
+  },
+  {
+    "id": "click",
+    "name": "Click",
+    "url": "/static/chat-notification-audio/click.mp3"
+  },
+  {
+    "id": "mallet",
+    "name": "Mallet",
+    "url": "/static/chat-notification-audio/mallet.mp3"
+  },
+  {
+    "id": "pop",
+    "name": "Pop",
+    "url": "/static/chat-notification-audio/pop.mp3"
+  },
+  {
+    "id": "wood",
+    "name": "Wood",
+    "url": "/static/chat-notification-audio/wood.mp3"
+  }
+]

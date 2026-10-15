@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="87" height="58" viewBox="0 0 87 58">
+  <g fill="none" fill-rule="evenodd" transform="translate(2)">
+    <path stroke="#4DC495" stroke-dasharray="2 8" stroke-linecap="square" stroke-width="2" d="M0,56 C30,54.6666667 51.3333333,49 64,39 C83,24 82,11.0415159 82,3"/>
+    <path fill="#4DC495" d="M79.2931,0.29325 C78.9021,0.68425 78.9021,1.31625 79.2931,1.70725 L82.0001,4.41425 L84.7071,1.70725 C84.9021,1.51225 85.0001,1.25625 85.0001,1.00025 C85.0001,0.74425 84.9021,0.48825 84.7071,0.29325 C84.3161,-0.09775 79.6841,-0.09775 79.2931,0.29325 Z" transform="matrix(1 0 0 -1 0 4.414)"/>
+  </g>
+</svg>
